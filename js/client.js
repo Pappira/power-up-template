@@ -110,9 +110,9 @@ var getBadges = function(t){
   .then(function(card){
     console.log('We just loaded the card for fun: ' + card);
     var badges = [];
-    getIdBadge(t).then(function(idBadge){
-      badges.push(idBadge);
-    });
+    badges.push(getIdBadge(t).then(function(idBadge){
+      return idBadge;
+    }));
     return badges;
   });
 };
