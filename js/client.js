@@ -106,12 +106,12 @@ var getIdBadge = function(t){
 };
 
 var getBadges = function(t){
-  return t.card('name')
-  .get('name')
-  .then(function(cardName){
-    console.log('We just loaded the card name for fun: ' + cardName);
-    
-    return [getIdBadge(t)];
+  return t.card('all')
+  .then(function(card){
+    console.log('We just loaded the card for fun: ' + card);
+    var badges = [];
+    badges.push(getIdBadge(t));
+    return badges;
   });
 };
 
