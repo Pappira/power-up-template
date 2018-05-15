@@ -80,28 +80,22 @@ var ID_ICON = './images/icon-white.svg';
 
 var getIdBadge = function(t, card){
   if(!card.customFieldItems['pappiraId']){
-    return {
-      title: 'Número', // for detail badges only
-      text: t.get('board', 'shared', 'pappiraId').then(function (globalId) {
-        if(!globalId){
-          globalId = 0;
-        }
-        // t.set('board', 'shared', 'pappiraId', globalId + 1);
-        // t.set('card', 'shared', 'pappiraId', globalId + 1);
-        card.customFieldItems['pappiraId'] = globalId + 1;
-        return card.customFieldItems['pappiraId'];
-      }),
-      icon: ID_ICON, // for card front badges only
-      color: null
-    };
-  } else {
-    return {
-      title: 'Número', // for detail badges only
-      text: card.customFieldItems['pappiraId'],
-      icon: ID_ICON, // for card front badges only
-      color: null
-    }
-  };
+    t.get('board', 'shared', 'pappiraId').then(function (globalId) {
+      if(!globalId){
+        globalId = 0;
+      }
+      // t.set('board', 'shared', 'pappiraId', globalId + 1);
+      // t.set('card', 'shared', 'pappiraId', globalId + 1);
+      card.customFieldItems['pappiraId'] = globalId + 1;
+    });
+  }
+
+  return {
+    title: 'Número', // for detail badges only
+    text: card.customFieldItems['pappiraId'],
+    icon: ID_ICON, // for card front badges only
+    color: null
+  }
 };
 
 var getBadges = function(t){
