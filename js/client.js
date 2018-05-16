@@ -82,8 +82,8 @@ var getPappiraGlobalId = function(board){
   return board.customFields['pappira.globalId'];
 };
 
-var setPappiraGlobalId = function(board, id){
-  board.customFields['pappira.globalId'] = id;
+var setPappiraGlobalId = function(t, id){
+  t.set('board', 'shared', 'pappira.globalId', id);
 };
 
 var getIdBadge = function(t, card, board){
