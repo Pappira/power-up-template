@@ -10,6 +10,7 @@ var idEnabled = document.getElementById('idEnabled');
 var idSaveButton = document.getElementById('idSave');
 var idRemoveButton = document.getElementById('idRemove');
 var idEnableButton = document.getElementById('idEnable');
+var idDisableButton = document.getElementById('idDisable');
 
 t.render(function(){
   return Promise.all([
@@ -27,7 +28,9 @@ t.render(function(){
     }
     idEnabled.value = savedEnabled;
     if(savedEnabled){
-      idEnableButton.textContent = "Deshabilitar";
+      idEnableButton.parentNode.removeChild(idEnableButton);
+    } else {
+      idDisableButton.parentNode.removeChild(idDisableButton);
     }
     if(savedStartedNumber && /[0-9]+/.test(savedStartedNumber)){
       idStartNumber.value = savedStartedNumber;
@@ -62,7 +65,16 @@ idRemoveButton.addEventListener('click', function(){
   })
 });
 idEnableButton.addEventListener('click', function(){
-  return t.set('board', 'shared', 'pappira.idEnabled', !idEnabled.value)
+  return t.set('board', 'shared', 'pappira.idEnabled', true)
+  .then(function(){ 
+    return t.set('board', 'shared', 'pappira.idRemove', false);
+  })
+  .then(function(){
+    t.closePopup();
+  })
+});
+idDisableButton.addEventListener('click', function(){
+  return t.set('board', 'shared', 'pappira.idEnabled', false)
   .then(function(){ 
     return t.set('board', 'shared', 'pappira.idRemove', false);
   })
