@@ -79,11 +79,7 @@ t.getAll();
 var ID_ICON = './images/icon-white.svg';
 
 var getPappiraGlobalId = function(t){
-  return t.get('board', 'shared', 'pappira.globalId', 0);
-};
-
-var setPappiraGlobalId = function(t, id){
-  t.set('board', 'shared', 'pappira.globalId', id);
+  return t.get('board', 'shared', 'pappira.idStartNumber', 0);
 };
 var setPappiraCardId = function(t, id){
   t.set('card', 'shared', 'pappira.id', id);
@@ -102,20 +98,30 @@ var getIdBadge = function(){
 }; 
 
 var getBadges = function(t, card){
-  return getPappiraCardId(t).then(function(cardId){
-    return getPappiraGlobalId(t).then(function(id){
-      if(!cardId){
-        var globalId = id;
-        globalId += card.idShort;
-        cardId = globalId;
-        setPappiraCardId(t, globalId);
+  var badges = [];
+  return Promise.all([
+    t.get('board', 'shared', 'pappira.idSuffix'),
+    getPappiraGlobalId(t),
+    t.get('board', 'shared', 'pappira.idSuffix'),
+    getPappiraCardId(t),
+  ])
+  .spread(function(idPrefix, idStartNumber, idSuffix, cardId){
+    var badgeText = "";
+    if(!cardId){
+      if(idPrefix) {
+        badgeText += idPrefix;
       }
-      var idBadge = getIdBadge();
-      idBadge.text = cardId;
-      var badges = [];
-      badges.push(idBadge);
-      return badges;
-    });
+      badgeText += "" + idStartNumber + card.idShort;
+      if(idSuffix) {
+        badgeText += idSuffix;
+      }
+      setPappiraCardId(t, badgeText);
+      cardId = badgeText;
+    }
+    var idBadge = getIdBadge();
+    idBadge.text = cardId;
+    badges.push(idBadge);
+    return badges;
   });
 };
 
@@ -135,7 +141,6 @@ TrelloPowerUp.initialize({
   },
   'on-enable': function(t, options) {
     // This code will get triggered when a user enables your Power-Up
-    setPappiraGlobalId(t, 0);
   },
   'show-settings': function(t, options){
     // when a user clicks the gear icon by your Power-Up in the Power-Ups menu

@@ -3,20 +3,25 @@
 var Promise = TrelloPowerUp.Promise;
 var t = TrelloPowerUp.iframe();
 
-var fruitSelector = document.getElementById('fruit');
-var vegetableSelector = document.getElementById('vegetable');
+var idPrefix = document.getElementById('idPrefix');
+var idStartNumber = document.getElementById('idStartNumber');
+var idSuffix = document.getElementById('idSuffix');
 
 t.render(function(){
   return Promise.all([
-    t.get('board', 'shared', 'fruit'),
-    t.get('board', 'private', 'vegetable')
+    t.get('board', 'shared', 'pappira.idSuffix'),
+    t.get('board', 'shared', 'pappira.idStartNumber'),
+    t.get('board', 'shared', 'pappira.idSuffix')
   ])
-  .spread(function(savedFruit, savedVegetable){
-    if(savedFruit && /[a-z]+/.test(savedFruit)){
-      fruitSelector.value = savedFruit;
+  .spread(function(savedPrefix, savedStartedNumber, savedSuffix){
+    if(savedPrefix){
+      idPrefix.value = savedPrefix;
     }
-    if(savedVegetable && /[a-z]+/.test(savedVegetable)){
-      vegetableSelector.value = savedVegetable;
+    if(savedSuffix){
+      idSuffix.value = savedSuffix;
+    }
+    if(savedStartedNumber && /[0-9]+/.test(savedStartedNumber)){
+      idStartNumber.value = savedStartedNumber;
     }
   })
   .then(function(){
@@ -26,9 +31,12 @@ t.render(function(){
 });
 
 document.getElementById('save').addEventListener('click', function(){
-  return t.set('board', 'private', 'vegetable', vegetableSelector.value)
+  return t.set('board', 'shared', 'pappira.idSuffix', idPrefix.value)
   .then(function(){
-    return t.set('board', 'shared', 'fruit', fruitSelector.value);
+    return t.set('board', 'shared', 'pappira.idStartNumber', idStartNumber.value);
+  })
+  .then(function(){
+    return t.set('board', 'shared', 'pappira.idSuffix', idSuffix.value);
   })
   .then(function(){
     t.closePopup();
