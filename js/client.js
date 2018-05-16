@@ -90,7 +90,9 @@ var getIdBadge = function(t, card, board){
   if(!card.customFieldItems['pappiraId']){
     var globalId = getPappiraGlobalId(board);
     if(!globalId){
-      console.error("no global pappira Id");
+      globalId = 0;
+      console.warn("No global pappira Id. Initializing it.");
+      setPappiraGlobalId(board,globalId);
     }
     gloablId++;
     setPappiraGlobalId(board,globalId);
