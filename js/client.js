@@ -100,8 +100,8 @@ var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId, card){
     if(idPrefix) {
       badgeText += idPrefix;
     }
-    var cardNumber = idStartNumber + card.idShort;
-    badgeText += "" + cardNumber;
+    var cardNumber = Number(idStartNumber) + card.idShort;
+    badgeText += cardNumber.toString();
     if(idSuffix) {
       badgeText += idSuffix;
     } 
