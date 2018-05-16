@@ -129,7 +129,7 @@ var getBadges = function(t, card){
       idBadge.text = getIdBadgeText(idPrefix, idStartNumber, idSuffix, cardId, card);
       if(idBadge.text !== cardId) {
         setPappiraCardId(t, idBadge.text);
-        card.name = idBadge.text + " - " + card.name;
+        Trello.put("/1/cards/"+card.id, {name: idBadge.text + " - " + card.name});
       }
       badges.push(idBadge);
     } 
