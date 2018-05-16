@@ -99,7 +99,7 @@ var getIdBadge = function(){
     icon: ID_ICON, // for card front badges only
     color: null
   };
-};
+}; 
 
 var getBadges = function(t){
   return getPappiraCardId(t).then(function(cardId){
