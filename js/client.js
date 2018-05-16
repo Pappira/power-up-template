@@ -122,7 +122,7 @@ var getBadges = function(t, card){
     var idBadge = getIdBadge();
     idBadge.text = getIdBadgeText(idPrefix, idStartNumber, idSuffix, cardId, card);
     if(idBadge.text !== cardId) {
-      setPappiraCardId(t, badgeText);
+      setPappiraCardId(t, idBadge.text);
     }
     badges.push(idBadge);
     return badges;
