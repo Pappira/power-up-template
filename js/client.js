@@ -101,14 +101,14 @@ var getIdBadge = function(){
   };
 }; 
 
-var getBadges = function(t){
+var getBadges = function(t, card){
   return getPappiraCardId(t).then(function(cardId){
     return getPappiraGlobalId(t).then(function(id){
+      console.log(JSON.stringify(t.getContext(), null, 2));
       if(!cardId){
         var globalId = id;
-        globalId++;
+        globalId += card.idShort;
         cardId = globalId;
-        setPappiraGlobalId(t,globalId);
         setPappiraCardId(t, globalId);
       }
       var idBadge = getIdBadge();
@@ -123,10 +123,16 @@ var getBadges = function(t){
 // We need to call initialize to get all of our capability handles set up and registered with Trello
 TrelloPowerUp.initialize({
   'card-badges': function(t, options){
-    return getBadges(t);
+    return t.card('all')
+    .then(function (card) {
+       return getBadges(t, card);
+    });
   },
   'card-detail-badges': function(t, options) {
-    return getBadges(t);
+    return t.card('all')
+    .then(function (card) {
+       return getBadges(t, card);
+    });
   },
   'on-enable': function(t, options) {
     // This code will get triggered when a user enables your Power-Up
