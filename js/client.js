@@ -94,7 +94,7 @@ var getIdBadge = function(){
   };
 }; 
 
-var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId){
+var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId, card){
   if(!cardId){
     var badgeText = "";
     if(idPrefix) {
@@ -121,7 +121,7 @@ var getBadges = function(t, card){
   ])
   .spread(function(idPrefix, idStartNumber, idSuffix, cardId){
     var idBadge = getIdBadge();
-    idBadge.text = getIdBadgeText(idPrefix, idStartNumber, idSuffix, cardId);
+    idBadge.text = getIdBadgeText(idPrefix, idStartNumber, idSuffix, cardId, card);
     badges.push(idBadge);
     return badges;
   });
