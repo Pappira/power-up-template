@@ -63,7 +63,7 @@ idRemoveButton.addEventListener('click', function(){
 });
 idEnableButton.addEventListener('click', function(){
   return t.set('board', 'shared', 'pappira.idEnabled', !idEnabled.value)
-  .then(function(){
+  .then(function(){ 
     return t.set('board', 'shared', 'pappira.idRemove', false);
   })
   .then(function(){
