@@ -117,15 +117,9 @@ var getIdBadge = function(t){
 };
 
 var getBadges = function(t){
-  return t.card('all')
-  .then(function(card){
-    t.board('all').then(function (board) {
-      console.log('We just loaded the card for fun: ' + card);
-      var badges = [];
-      badges.push(getIdBadge(t));
-      return badges;
-    });
-  });
+  var badges = [];
+  badges.push(getIdBadge(t));
+  return badges;
 };
 
 // We need to call initialize to get all of our capability handles set up and registered with Trello
