@@ -92,34 +92,32 @@ var getPappiraCardId = function(t){
   return t.get('card', 'shared', 'pappira.id');
 };
 
-var getIdBadge = function(t){
-  var idBadge = {
+var getIdBadge = function(){
+  return {
     title: 'Número', // for detail badges only
     text: '',
     icon: ID_ICON, // for card front badges only
     color: null
   };
+};
 
-  getPappiraCardId(t).then(function(cardId){
-    if(!cardId){
-      getPappiraGlobalId(t).then(function(id){
+var getBadges = function(t){
+  return getPappiraCardId(t).then(function(cardId){
+    return getPappiraGlobalId(t).then(function(id){
+      if(!cardId){
         var globalId = id;
         globalId++;
         cardId = globalId;
         setPappiraGlobalId(t,globalId);
         setPappiraCardId(t, globalId);
-      });
-    }
-    idBadge.text = cardId;
+      }
+      var idBadge = getIdBadge();
+      idBadge.text = cardId;
+      var badges = [];
+      badges.push(idBadge);
+      return badges;
+    });
   });
-
-  return idBadge;
-};
-
-var getBadges = function(t){
-  var badges = [];
-  badges.push(getIdBadge(t));
-  return badges;
 };
 
 // We need to call initialize to get all of our capability handles set up and registered with Trello
