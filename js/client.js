@@ -104,10 +104,10 @@ var getIdBadge = function(t){
     if(!cardId){
       getPappiraGlobalId(t).then(function(id){
         var globalId = id;
-        gloablId++;
+        globalId++;
+        cardId = globalId;
         setPappiraGlobalId(t,globalId);
         setPappiraCardId(t, globalId);
-        cardId = globalId;
       });
     }
     idBadge.text = cardId;
