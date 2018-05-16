@@ -104,7 +104,7 @@ var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId, card){
     badgeText += "" + cardNumber;
     if(idSuffix) {
       badgeText += idSuffix;
-    }
+    } 
     setPappiraCardId(t, badgeText);
     cardId = badgeText;
   }
