@@ -78,33 +78,42 @@ t.getAll();
 
 var ID_ICON = './images/icon-white.svg';
 
-var getPappiraGlobalId = function(board){
-  return board.customFields['pappira.globalId'];
+var getPappiraGlobalId = function(t){
+  return t.get('board', 'shared', 'pappira.globalId', 0);
 };
 
 var setPappiraGlobalId = function(t, id){
   t.set('board', 'shared', 'pappira.globalId', id);
 };
+var setPappiraCardId = function(t, id){
+  t.set('card', 'shared', 'pappira.id', id);
+};
+var getPappiraCardId = function(t){
+  return t.get('card', 'shared', 'pappira.id');
+};
 
-var getIdBadge = function(t, card, board){
-  if(!card.customFieldItems['pappiraId']){
-    var globalId = getPappiraGlobalId(board);
-    if(!globalId){
-      globalId = 0;
-      console.warn("No global pappira Id. Initializing it.");
-      setPappiraGlobalId(board,globalId);
-    }
-    gloablId++;
-    setPappiraGlobalId(board,globalId);
-    card.customFieldItems['pappiraId'] = globalId;
-  }
-
-  return {
+var getIdBadge = function(t){
+  var idBadge = {
     title: 'Número', // for detail badges only
-    text: card.customFieldItems['pappiraId'],
+    text: '',
     icon: ID_ICON, // for card front badges only
     color: null
-  }
+  };
+
+  getPappiraCardId(t).then(function(cardId){
+    if(!cardId){
+      getPappiraGlobalId(t).then(function(id){
+        var globalId = id;
+        gloablId++;
+        setPappiraGlobalId(t,globalId);
+        setPappiraCardId(t, globalId);
+        cardId = globalId;
+      });
+    }
+    idBadge.text = cardId;
+  });
+
+  return idBadge;
 };
 
 var getBadges = function(t){
@@ -113,7 +122,7 @@ var getBadges = function(t){
     t.board('all').then(function (board) {
       console.log('We just loaded the card for fun: ' + card);
       var badges = [];
-      badges.push(getIdBadge(t, card, board));
+      badges.push(getIdBadge(t));
       return badges;
     });
   });
@@ -129,10 +138,7 @@ TrelloPowerUp.initialize({
   },
   'on-enable': function(t, options) {
     // This code will get triggered when a user enables your Power-Up
-    t.board('all').then(function (board) {
-      board.customFields['pappira.globalId'] = 1;
-      console.log(JSON.stringify(board, null, 2));
-    });
+    setPappiraGlobalId(t, 0);
   },
   'show-settings': function(t, options){
     // when a user clicks the gear icon by your Power-Up in the Power-Ups menu
