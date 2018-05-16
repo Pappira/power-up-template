@@ -104,7 +104,6 @@ var getIdBadge = function(){
 var getBadges = function(t, card){
   return getPappiraCardId(t).then(function(cardId){
     return getPappiraGlobalId(t).then(function(id){
-      console.log(JSON.stringify(t.getContext(), null, 2));
       if(!cardId){
         var globalId = id;
         globalId += card.idShort;
