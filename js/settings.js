@@ -6,19 +6,28 @@ var t = TrelloPowerUp.iframe();
 var idPrefix = document.getElementById('idPrefix');
 var idStartNumber = document.getElementById('idStartNumber');
 var idSuffix = document.getElementById('idSuffix');
+var idEnabled = document.getElementById('idEnabled');
+var idSaveButton = document.getElementById('idSave');
+var idRemoveButton = document.getElementById('idRemove');
+var idEnableButton = document.getElementById('idEnable');
 
 t.render(function(){
   return Promise.all([
     t.get('board', 'shared', 'pappira.idPrefix'),
     t.get('board', 'shared', 'pappira.idStartNumber'),
-    t.get('board', 'shared', 'pappira.idSuffix')
+    t.get('board', 'shared', 'pappira.idSuffix'),
+    t.get('board', 'shared', 'pappira.idEnabled', false)
   ])
-  .spread(function(savedPrefix, savedStartedNumber, savedSuffix){
+  .spread(function(savedPrefix, savedStartedNumber, savedSuffix, savedEnabled){
     if(savedPrefix){
       idPrefix.value = savedPrefix;
     }
     if(savedSuffix){
       idSuffix.value = savedSuffix;
+    }
+    idEnabled.value = savedEnabled;
+    if(savedEnabled){
+      idEnableButton.textContent = "Deshabilitar";
     }
     if(savedStartedNumber && /[0-9]+/.test(savedStartedNumber)){
       idStartNumber.value = savedStartedNumber;
@@ -30,7 +39,7 @@ t.render(function(){
   })
 });
 
-document.getElementById('save').addEventListener('click', function(){
+idSaveButton.addEventListener('click', function(){
   return t.set('board', 'shared', 'pappira.idPrefix', idPrefix.value)
   .then(function(){
     return t.set('board', 'shared', 'pappira.idStartNumber', idStartNumber.value);
@@ -41,4 +50,23 @@ document.getElementById('save').addEventListener('click', function(){
   .then(function(){
     t.closePopup();
   })
-})
+});
+
+idRemoveButton.addEventListener('click', function(){
+  return t.set('board', 'shared', 'pappira.idEnabled', false)
+  .then(function(){
+    return t.set('board', 'shared', 'pappira.idRemove', true);
+  })
+  .then(function(){
+    t.closePopup();
+  })
+});
+idEnableButton.addEventListener('click', function(){
+  return t.set('board', 'shared', 'pappira.idEnabled', !idEnabled.value)
+  .then(function(){
+    return t.set('board', 'shared', 'pappira.idRemove', false);
+  })
+  .then(function(){
+    t.closePopup();
+  })
+});

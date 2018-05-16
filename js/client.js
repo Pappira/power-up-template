@@ -84,6 +84,9 @@ var setPappiraCardId = function(t, id){
 var getPappiraCardId = function(t){
   return t.get('card', 'shared', 'pappira.id');
 };
+var removePappiraCardId = function(t){
+  return t.remove('card', 'shared', 'pappira.id');
+};
 
 var getIdBadge = function(){
   return {
@@ -116,15 +119,22 @@ var getBadges = function(t, card){
     t.get('board', 'shared', 'pappira.idPrefix'),
     t.get('board', 'shared', 'pappira.idStartNumber', 0),
     t.get('board', 'shared', 'pappira.idSuffix'),
+    t.get('board', 'shared', 'pappira.idEnabled', false),
+    t.get('board', 'shared', 'pappira.idRemove', false),
     getPappiraCardId(t),
   ])
-  .spread(function(idPrefix, idStartNumber, idSuffix, cardId){
-    var idBadge = getIdBadge();
-    idBadge.text = getIdBadgeText(idPrefix, idStartNumber, idSuffix, cardId, card);
-    if(idBadge.text !== cardId) {
-      setPappiraCardId(t, idBadge.text);
+  .spread(function(idPrefix, idStartNumber, idSuffix, idEnabled, idRemove, cardId){
+    if(idEnabled){
+      var idBadge = getIdBadge();
+      idBadge.text = getIdBadgeText(idPrefix, idStartNumber, idSuffix, cardId, card);
+      if(idBadge.text !== cardId) {
+        setPappiraCardId(t, idBadge.text);
+      }
+      badges.push(idBadge);
+    } 
+    if(idRemove){
+      removePappiraCardId(t);
     }
-    badges.push(idBadge);
     return badges;
   });
 };
