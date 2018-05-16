@@ -105,7 +105,6 @@ var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId, card){
     if(idSuffix) {
       badgeText += idSuffix;
     } 
-    setPappiraCardId(t, badgeText);
     cardId = badgeText;
   }
   return cardId;
@@ -122,6 +121,9 @@ var getBadges = function(t, card){
   .spread(function(idPrefix, idStartNumber, idSuffix, cardId){
     var idBadge = getIdBadge();
     idBadge.text = getIdBadgeText(idPrefix, idStartNumber, idSuffix, cardId, card);
+    if(idBadge.text !== cardId) {
+      setPappiraCardId(t, badgeText);
+    }
     badges.push(idBadge);
     return badges;
   });
