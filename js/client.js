@@ -78,9 +78,6 @@ t.getAll();
 
 var ID_ICON = './images/icon-white.svg';
 
-var getPappiraGlobalId = function(t){
-  return t.get('board', 'shared', 'pappira.idStartNumber', 0);
-};
 var setPappiraCardId = function(t, id){
   t.set('card', 'shared', 'pappira.id', id);
 };
@@ -97,29 +94,34 @@ var getIdBadge = function(){
   };
 }; 
 
+var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId){
+  if(!cardId){
+    var badgeText = "";
+    if(idPrefix) {
+      badgeText += idPrefix;
+    }
+    var cardNumber = idStartNumber + card.idShort;
+    badgeText += "" + cardNumber;
+    if(idSuffix) {
+      badgeText += idSuffix;
+    }
+    setPappiraCardId(t, badgeText);
+    cardId = badgeText;
+  }
+  return cardId;
+};
+
 var getBadges = function(t, card){
   var badges = [];
   return Promise.all([
-    t.get('board', 'shared', 'pappira.idSuffix'),
-    getPappiraGlobalId(t),
+    t.get('board', 'shared', 'pappira.idPrefix'),
+    t.get('board', 'shared', 'pappira.idStartNumber', 0),
     t.get('board', 'shared', 'pappira.idSuffix'),
     getPappiraCardId(t),
   ])
   .spread(function(idPrefix, idStartNumber, idSuffix, cardId){
-    var badgeText = "";
-    if(!cardId){
-      if(idPrefix) {
-        badgeText += idPrefix;
-      }
-      badgeText += "" + idStartNumber + card.idShort;
-      if(idSuffix) {
-        badgeText += idSuffix;
-      }
-      setPappiraCardId(t, badgeText);
-      cardId = badgeText;
-    }
     var idBadge = getIdBadge();
-    idBadge.text = cardId;
+    idBadge.text = getIdBadgeText(idPrefix, idStartNumber, idSuffix, cardId);
     badges.push(idBadge);
     return badges;
   });

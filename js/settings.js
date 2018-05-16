@@ -9,7 +9,7 @@ var idSuffix = document.getElementById('idSuffix');
 
 t.render(function(){
   return Promise.all([
-    t.get('board', 'shared', 'pappira.idSuffix'),
+    t.get('board', 'shared', 'pappira.idPrefix'),
     t.get('board', 'shared', 'pappira.idStartNumber'),
     t.get('board', 'shared', 'pappira.idSuffix')
   ])
@@ -31,7 +31,7 @@ t.render(function(){
 });
 
 document.getElementById('save').addEventListener('click', function(){
-  return t.set('board', 'shared', 'pappira.idSuffix', idPrefix.value)
+  return t.set('board', 'shared', 'pappira.idPrefix', idPrefix.value)
   .then(function(){
     return t.set('board', 'shared', 'pappira.idStartNumber', idStartNumber.value);
   })
