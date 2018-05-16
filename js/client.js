@@ -78,16 +78,23 @@ t.getAll();
 
 var ID_ICON = './images/icon-white.svg';
 
-var getIdBadge = function(t, card){
+var getPappiraGlobalId = function(board){
+  return board.customFields['pappira.globalId'];
+};
+
+var setPappiraGlobalId = function(board, id){
+  board.customFields['pappira.globalId'] = id;
+};
+
+var getIdBadge = function(t, card, board){
   if(!card.customFieldItems['pappiraId']){
-    t.get('board', 'shared', 'pappiraId').then(function (globalId) {
-      if(!globalId){
-        globalId = 0;
-      }
-      // t.set('board', 'shared', 'pappiraId', globalId + 1);
-      // t.set('card', 'shared', 'pappiraId', globalId + 1);
-      card.customFieldItems['pappiraId'] = globalId + 1;
-    });
+    var globalId = getPappiraGlobalId(board);
+    if(!globalId){
+      console.error("no global pappira Id");
+    }
+    gloablId++;
+    setPappiraGlobalId(board,globalId);
+    card.customFieldItems['pappiraId'] = globalId;
   }
 
   return {
@@ -101,10 +108,12 @@ var getIdBadge = function(t, card){
 var getBadges = function(t){
   return t.card('all')
   .then(function(card){
-    console.log('We just loaded the card for fun: ' + card);
-    var badges = [];
-    badges.push(getIdBadge(t, card));
-    return badges;
+    t.board('all').then(function (board) {
+      console.log('We just loaded the card for fun: ' + card);
+      var badges = [];
+      badges.push(getIdBadge(t, card, board));
+      return badges;
+    });
   });
 };
 
@@ -115,6 +124,13 @@ TrelloPowerUp.initialize({
   },
   'card-detail-badges': function(t, options) {
     return getBadges(t);
+  },
+  'on-enable': function(t, options) {
+    // This code will get triggered when a user enables your Power-Up
+    t.board('all').then(function (board) {
+      board.customFields['pappira.globalId'] = 1;
+      console.log(JSON.stringify(board, null, 2));
+    });
   },
   'show-settings': function(t, options){
     // when a user clicks the gear icon by your Power-Up in the Power-Ups menu
