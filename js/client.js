@@ -104,7 +104,7 @@ var setTrelloToken = function(token){
 };
 var setTrelloCardName = function(t, card, name){
   return isAuthorized(t).then(function(authorized){
-    if(authorized){
+    if(authorized.authorized){
       return Trello.put("/cards/"+card.id, {name: name});
     }
   });
