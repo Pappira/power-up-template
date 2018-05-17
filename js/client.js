@@ -87,6 +87,35 @@ var getPappiraCardId = function(t){
 var removePappiraCardId = function(t){
   return t.remove('card', 'shared', 'pappira.id');
 };
+var isAuthorized = function(t){
+  return t.get('member', 'private', 'token')
+  .then(function(token){
+    if(token){
+      if(!Trello.token()){
+        setTrelloToken(token);
+      }
+      return { authorized: true };
+    }
+    return { authorized: false };
+  });  
+};
+var setTrelloToken = function(t){
+  return t.get('member', 'private', 'token')
+    .then(function(token){
+      if(token){
+        Trello.setToken(token);
+      } else {
+        console.error("There is no token");
+      }
+    });
+};
+var setTrelloCardName = function(t, card, name){
+  return isAuthorized(t).then(function(authorized){
+    if(authorized){
+      return Trello.put("/cards/"+card.id, {name: name});
+    }
+  });
+};
 
 var getIdBadge = function(){
   return {
@@ -129,7 +158,7 @@ var getBadges = function(t, card){
       idBadge.text = getIdBadgeText(idPrefix, idStartNumber, idSuffix, cardId, card);
       if(idBadge.text !== cardId) {
         setPappiraCardId(t, idBadge.text);
-        Trello.put("/cards/"+card.id, {name: idBadge.text + " - " + card.name});
+        setTrelloCardName(t, card, idBadge.text + " - " + card.name);
       }
       badges.push(idBadge);
     } 
@@ -186,13 +215,7 @@ TrelloPowerUp.initialize({
     // below determines what should happen when the user clicks "Authorize Account"
     
     // For instance, if your Power-Up requires a token to be set for the member you could do the following:
-    return t.get('member', 'private', 'token')
-    .then(function(token){
-      if(token){
-        return { authorized: true };
-      }
-      return { authorized: false };
-    });
+    return isAuthorized(t);
     // You can also return the object synchronously if you know the answer synchronously.
   },
   'show-authorization': function(t, options){

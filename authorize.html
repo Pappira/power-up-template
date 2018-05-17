@@ -30,7 +30,6 @@
         t.authorize(trelloAuthUrl, { height: 680, width: 580, validToken: tokenLooksValid })
         .then(function(token){
           // store the token in Trello private Power-Up storage
-          Trello.setToken(token);
           return t.set('member', 'private', 'token', token);
         })
         .then(function(){
