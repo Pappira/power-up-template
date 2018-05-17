@@ -95,7 +95,7 @@ var isAuthorized = function(t){
         setTrelloToken(token);
       }
       return { authorized: true };
-    }
+    } 
     return { authorized: false };
   });  
 };
