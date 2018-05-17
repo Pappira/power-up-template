@@ -99,15 +99,8 @@ var isAuthorized = function(t){
     return { authorized: false };
   });  
 };
-var setTrelloToken = function(t){
-  return t.get('member', 'private', 'token')
-    .then(function(token){
-      if(token){
-        Trello.setToken(token);
-      } else {
-        console.error("There is no token");
-      }
-    });
+var setTrelloToken = function(token){
+  Trello.setToken(token);
 };
 var setTrelloCardName = function(t, card, name){
   return isAuthorized(t).then(function(authorized){
