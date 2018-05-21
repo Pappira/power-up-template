@@ -117,9 +117,12 @@ var setTrelloCardName = function(t, card, name){
 var validateCard = function(t, cardId){
   var valid = false;
   var invalidations = [];
-  return isAuthorized(t).then(function(authorized){
+  return Promise.all([
+    isAuthorized(t),
+    Trello.get("/cards/"+cardId,{fields: "name,desc,idChecklists",checklists: "all"}, function(retrievedCard){return retrievedCard;})
+  ])
+  .spread(function(authorized, retrievedCard){
     if(authorized.authorized){
-      Trello.get("/cards/"+cardId,{fields: "name,desc,idChecklists",checklists: "all"}, function(retrievedCard){
         if(!retrievedCard.desc){
           invalidations.push("No hay descripción");
         }
@@ -130,10 +133,6 @@ var validateCard = function(t, cardId){
           invalidations.push("No hay terminaciones");
         }
         return invalidations;
-      }, function(error){
-        console.error("Could not get the card "+cardId);
-        return false;
-      });
     } else {
       return false;
     }
