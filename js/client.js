@@ -156,7 +156,7 @@ var getValidationBadge = function(t, card, detailed){
       icon = ERROR_ICON;
       title = 'Errores';
     } else {
-      text = 'Tarjeta completa';
+      text = 'Completa';
     }
     return {
       title: title,
