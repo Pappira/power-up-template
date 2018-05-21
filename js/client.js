@@ -114,25 +114,31 @@ var setTrelloCardName = function(t, card, name){
     }
   });
 };
+var getTrelloCard = function(t, cardId){
+  return isAuthorized(t).then(function(authorized){
+    if(authorized.authorized){
+      return Trello.get("/cards/"+cardId,{fields: "name,desc,idChecklists",checklists: "all"}, function(retrievedCard){return retrievedCard;});
+    }
+  });
+};
 var validateCard = function(t, cardId){
   var valid = false;
   var invalidations = [];
   return Promise.all([
-    isAuthorized(t),
-    Trello.get("/cards/"+cardId,{fields: "name,desc,idChecklists",checklists: "all"}, function(retrievedCard){return retrievedCard;})
+    getTrelloCard(t, cardId)
   ])
-  .spread(function(authorized, retrievedCard){
-    if(authorized.authorized){
-        if(!retrievedCard.desc){
-          invalidations.push("No hay descripción");
-        }
-        if(!retrievedCard.name){
-          invalidations.push("No hay título");
-        }
-        if(!retrievedCard.idChecklists || !retrievedCard.idChecklists.length){
-          invalidations.push("No hay terminaciones");
-        }
-        return invalidations;
+  .spread(function(retrievedCard){
+    if(retrievedCard) {
+      if(!retrievedCard.desc){
+        invalidations.push("No hay descripción");
+      }
+      if(!retrievedCard.name){
+        invalidations.push("No hay título");
+      }
+      if(!retrievedCard.idChecklists || !retrievedCard.idChecklists.length){
+        invalidations.push("No hay terminaciones");
+      }
+      return invalidations;
     } else {
       return false;
     }
