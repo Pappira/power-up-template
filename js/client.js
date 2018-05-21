@@ -143,14 +143,14 @@ var validateCard = function(t, cardId){
 var getValidationBadge = function(t, card, detailed){
   return validateCard(t, card.id, detailed).then(function(invalidations){
     var badge = {}, text = '', refresh = 60, color = SUCCESS_COLOR, icon = OK_ICON, title = 'Validaciones';
-    if(invalidations && invalidations.lenght){
+    if(invalidations && invalidations.length){
       if(detailed) {
-        for(i=0;i<invalidations.lenght;i++){
+        for(i=0;i<invalidations.length;i++){
           text += ' - ' + invalidations[i] + '\n';
         }
         refresh = 10;
       } else {
-        text = invalidations.lenght + ' errores';
+        text = invalidations.length + ' errores';
       }
       color = ERROR_COLOR;
       icon = ERROR_ICON;
