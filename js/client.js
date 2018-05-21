@@ -117,22 +117,25 @@ var setTrelloCardName = function(t, card, name){
 var validateCard = function(cardId){
   var valid = false;
   var invalidations = [];
-  return Trello.get("/cards/"+cardId,{fields: "name,desc,idChecklists",checklists: "all"}, function(retrievedCard){
-    if(!retrievedCard.desc){
-      invalidations.push("No hay descripción");
+  return isAuthorized(t).then(function(authorized){
+    if(authorized.authorized){
+      return Trello.get("/cards/"+cardId,{fields: "name,desc,idChecklists",checklists: "all"}, function(retrievedCard){
+        if(!retrievedCard.desc){
+          invalidations.push("No hay descripción");
+        }
+        if(!retrievedCard.name){
+          invalidations.push("No hay título");
+        }
+        if(!retrievedCard.idChecklists || !retrievedCard.idChecklists.lenght){
+          invalidations.push("No hay terminaciones");
+        }
+        return invalidations;
+      }, function(error){
+        console.error("Could not get the card "+cardId);
+        return false;
+      });
     }
-    if(!retrievedCard.name){
-      invalidations.push("No hay título");
-    }
-    if(!retrievedCard.idChecklists || !retrievedCard.idChecklists.lenght){
-      invalidations.push("No hay terminaciones");
-    }
-    return invalidations;
-  }, function(error){
-    console.error("Could not get the card "+cardId);
-    return false;
   });
-  
 };
 
 var getValidationBadge = function(card, detailed){
@@ -210,14 +213,16 @@ var getBadges = function(t, card, detailed){
     if(idRemove){
       removePappiraCardId(t);
     }
-    if(detailed){
-      badges.push({
-        dynamic: function(){
-          return getValidationBadge(card, detailed);
-        }
-      });
-    } else {
-      badges.push(validationBadge);
+    if(validationBadge){
+      if(detailed){
+        badges.push({
+          dynamic: function(){
+            return getValidationBadge(card, detailed);
+          }
+        });
+      } else {
+        badges.push(validationBadge);
+      }
     }
     return badges;
   });
