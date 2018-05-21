@@ -114,7 +114,7 @@ var setTrelloCardName = function(t, card, name){
     }
   });
 };
-var validateCard = function(cardId){
+var validateCard = function(t, cardId){
   var valid = false;
   var invalidations = [];
   return isAuthorized(t).then(function(authorized){
@@ -138,8 +138,8 @@ var validateCard = function(cardId){
   });
 };
 
-var getValidationBadge = function(card, detailed){
-  return validateCard(card.id, detailed).then(function(invalidations){
+var getValidationBadge = function(t, card, detailed){
+  return validateCard(t, card.id, detailed).then(function(invalidations){
     var badge = {}, text = '', refresh = 60, color = SUCCESS_COLOR, icon = OK_ICON;
     if(invalidations && invalidations.lenght){
       if(detailed) {
@@ -198,7 +198,7 @@ var getBadges = function(t, card, detailed){
     t.get('board', 'shared', 'pappira.idEnabled', false),
     t.get('board', 'shared', 'pappira.idRemove', false),
     getPappiraCardId(t),
-    getValidationBadge(card, detailed)
+    getValidationBadge(t, card, detailed)
   ])
   .spread(function(idPrefix, idStartNumber, idSuffix, idEnabled, idRemove, cardId, validationBadge){
     if(idEnabled){
@@ -217,7 +217,7 @@ var getBadges = function(t, card, detailed){
       if(detailed){
         badges.push({
           dynamic: function(){
-            return getValidationBadge(card, detailed);
+            return getValidationBadge(t, card, detailed);
           }
         });
       } else {
