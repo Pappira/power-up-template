@@ -80,8 +80,8 @@ t.getAll();
 var ID_ICON = './images/fingerprint.svg';
 var ERROR_ICON = './images/error.svg';
 var OK_ICON = './images/check.svg';
-var ERROR_COLOR = '#B00020';
-var SUCCESS_COLOR = '#338D0F';
+var ERROR_COLOR = 'red';
+var SUCCESS_COLOR = 'green';
 
 var setPappiraCardId = function(t, id){
   t.set('card', 'shared', 'pappira.id', id);
