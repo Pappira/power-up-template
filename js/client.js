@@ -134,6 +134,8 @@ var validateCard = function(t, cardId){
         console.error("Could not get the card "+cardId);
         return false;
       });
+    } else {
+      return false;
     }
   });
 };
