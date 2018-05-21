@@ -126,7 +126,7 @@ var validateCard = function(t, cardId){
         if(!retrievedCard.name){
           invalidations.push("No hay título");
         }
-        if(!retrievedCard.idChecklists || !retrievedCard.idChecklists.lenght){
+        if(!retrievedCard.idChecklists || !retrievedCard.idChecklists.length){
           invalidations.push("No hay terminaciones");
         }
         return invalidations;
