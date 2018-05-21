@@ -129,7 +129,7 @@ var validateCard = function(cardId){
     }
     return invalidations;
   }, function(error){
-    console.error("Could not get the card "+card.id);
+    console.error("Could not get the card "+cardId);
     return false;
   });
   
