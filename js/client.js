@@ -119,7 +119,7 @@ var validateCard = function(t, cardId){
   var invalidations = [];
   return isAuthorized(t).then(function(authorized){
     if(authorized.authorized){
-      return Trello.get("/cards/"+cardId,{fields: "name,desc,idChecklists",checklists: "all"}, function(retrievedCard){
+      Trello.get("/cards/"+cardId,{fields: "name,desc,idChecklists",checklists: "all"}, function(retrievedCard){
         if(!retrievedCard.desc){
           invalidations.push("No hay descripción");
         }
