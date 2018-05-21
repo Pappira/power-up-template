@@ -150,12 +150,12 @@ var getValidationBadge = function(t, card, detailed){
     var badge = {}, text = '', refresh = 60, color = SUCCESS_COLOR, icon = OK_ICON, title = 'Validaciones';
     if(invalidations && invalidations.length){
       if(detailed) {
-        for(i=0;i<invalidations.length;i++){
+        for(var i=0;i<invalidations.length;i++){
           text += ' - ' + invalidations[i] + '\n';
         }
         refresh = 10;
       } else {
-        text = invalidations.length + ' errores';
+        text = invalidations.length;
       }
       color = ERROR_COLOR;
       icon = ERROR_ICON;
