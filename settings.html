@@ -20,6 +20,19 @@
         <button id="idRemove" class="mod-danger">Borrar Numeración</button>
       </section>
       <hr/>
+      <section>
+        <h3>Validación de contenido</h3>
+        <label for="validationTitle">Título no vacío</label>
+        <input type="checkbox" id="validationTitle"/>
+        <label for="validationDescription">Descripción no vacía</label>
+        <input type="checkbox" id="validationDescription"/>
+        <label for="validationChecklist">Checklists con nombre</label>
+        <input type="text" id="validationChecklist"/>
+        <input type="hidden" id="validationEnabled"/>
+        <button id="validationSave" class="mod-primary">Guardar</button>
+        <button id="validationEnable" class="mod-primary">Habilitar</button>
+        <button id="validationDisable" class="mod-danger">Deshabilitar</button>
+      </section>
     </div> 
     <script src="./js/settings.js"></script>
   </body>

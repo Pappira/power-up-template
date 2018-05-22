@@ -12,14 +12,27 @@ var idRemoveButton = document.getElementById('idRemove');
 var idEnableButton = document.getElementById('idEnable');
 var idDisableButton = document.getElementById('idDisable');
 
+var validationEnabled = document.getElementById('validationEnabled');
+var validationSaveButton = document.getElementById('validationSave');
+var validationEnableButton = document.getElementById('validationEnable');
+var validationDisableButton = document.getElementById('validationDisable');
+var validationTitle = document.getElementById('validationTitle');
+var validationDescription = document.getElementById('validationDescription');
+var validationChecklist = document.getElementById('validationChecklist');
+
 t.render(function(){
   return Promise.all([
     t.get('board', 'shared', 'pappira.idPrefix'),
     t.get('board', 'shared', 'pappira.idStartNumber'),
     t.get('board', 'shared', 'pappira.idSuffix'),
-    t.get('board', 'shared', 'pappira.idEnabled', false)
+    t.get('board', 'shared', 'pappira.idEnabled', false),
+    t.get('board', 'shared', 'pappira.validationTitle', false),
+    t.get('board', 'shared', 'pappira.validationDescription', false),
+    t.get('board', 'shared', 'pappira.validationChecklist'),
+    t.get('board', 'shared', 'pappira.validationEnabled', false),
   ])
-  .spread(function(savedPrefix, savedStartedNumber, savedSuffix, savedEnabled){
+  .spread(function(savedPrefix, savedStartedNumber, savedSuffix, savedEnabled, 
+                  savedValidationTitle, savedValidationDescription, savedValidationChecklist, savedValidationEnabled){
     if(savedPrefix){
       idPrefix.value = savedPrefix;
     }
@@ -35,11 +48,27 @@ t.render(function(){
     if(savedStartedNumber && /[0-9]+/.test(savedStartedNumber)){
       idStartNumber.value = savedStartedNumber;
     }
+
+    if(savedValidationTitle){
+      validationTitle.checked = savedValidationTitle;
+    }
+    if(savedValidationDescription){
+      validationDescription.checked = savedValidationDescription;
+    }
+    validationEnabled.value = savedValidationEnabled;
+    if(savedValidationEnabled){
+      validationEnableButton.parentNode.removeChild(validationEnableButton);
+    } else {
+      validationDisableButton.parentNode.removeChild(validationDisableButton);
+    }
+    if(savedValidationChecklist){
+      validationChecklist.value = savedValidationChecklist;
+    }
   })
   .then(function(){
     t.sizeTo('#content')
     .done();
-  })
+  });
 });
 
 idSaveButton.addEventListener('click', function(){
@@ -52,7 +81,7 @@ idSaveButton.addEventListener('click', function(){
   })
   .then(function(){
     t.closePopup();
-  })
+  });
 });
 
 idRemoveButton.addEventListener('click', function(){
@@ -62,7 +91,7 @@ idRemoveButton.addEventListener('click', function(){
   })
   .then(function(){
     t.closePopup();
-  })
+  });
 });
 idEnableButton.addEventListener('click', function(){
   return t.set('board', 'shared', 'pappira.idEnabled', true)
@@ -71,7 +100,7 @@ idEnableButton.addEventListener('click', function(){
   })
   .then(function(){
     t.closePopup();
-  })
+  });
 });
 idDisableButton.addEventListener('click', function(){
   return t.set('board', 'shared', 'pappira.idEnabled', false)
@@ -80,5 +109,31 @@ idDisableButton.addEventListener('click', function(){
   })
   .then(function(){
     t.closePopup();
+  });
+});
+
+
+validationSaveButton.addEventListener('click', function(){
+  return t.set('board', 'shared', 'pappira.validationTitle', validationTitle.checked)
+  .then(function(){
+    return t.set('board', 'shared', 'pappira.validationDescription', validationDescription.checked);
   })
+  .then(function(){
+    return t.set('board', 'shared', 'pappira.validationChecklist', validationChecklist.value);
+  })
+  .then(function(){
+    t.closePopup();
+  });
+});
+validationEnableButton.addEventListener('click', function(){
+  return t.set('board', 'shared', 'pappira.validationEnabled', true)
+  .then(function(){
+    t.closePopup();
+  });
+});
+validationDisableButton.addEventListener('click', function(){
+  return t.set('board', 'shared', 'pappira.validationEnabled', false)
+  .then(function(){
+    t.closePopup();
+  });
 });
