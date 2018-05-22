@@ -125,18 +125,34 @@ var validateCard = function(t, cardId){
   var valid = false;
   var invalidations = [];
   return Promise.all([
-    getTrelloCard(t, cardId)
+    getTrelloCard(t, cardId),
+    t.get('board', 'shared', 'pappira.validationTitle', false),
+    t.get('board', 'shared', 'pappira.validationDescription', false),
+    t.get('board', 'shared', 'pappira.validationChecklist'),
+    t.get('board', 'shared', 'pappira.validationEnabled', false),
   ])
-  .spread(function(retrievedCard){
+  .spread(function(retrievedCard,
+    validationTitle, validationDescription, validationChecklist, validationEnabled){
+    if(!validationEnabled){
+      return false;
+    }
     if(retrievedCard) {
-      if(!retrievedCard.desc){
+      if(validationDescription && !retrievedCard.desc){
         invalidations.push("No hay descripción");
       }
-      if(!retrievedCard.name){
+      if(validationTitle && !retrievedCard.name){
         invalidations.push("No hay título");
       }
-      if(!retrievedCard.idChecklists || !retrievedCard.idChecklists.length){
-        invalidations.push("No hay terminaciones");
+      if(validationChecklist && (!retrievedCard.idChecklists || (retrievedCard.idChecklists && !retrievedCard.idChecklists.length))){
+        var found = false;
+        for(var i=0;i<retrievedCard.idChecklists.length;i++){
+          if(retrievedCard.checklists[i].name == validationChecklist){
+            found = true;
+          }
+        }
+        if(!found){
+          invalidations.push("No hay "+validationChecklist);
+        }
       }
       return invalidations;
     } else {
@@ -206,7 +222,7 @@ var getBadges = function(t, card, detailed){
     t.get('board', 'shared', 'pappira.idEnabled', false),
     t.get('board', 'shared', 'pappira.idRemove', false),
     getPappiraCardId(t),
-    getValidationBadge(t, card, detailed)
+    getValidationBadge(t, card, detailed),
   ])
   .spread(function(idPrefix, idStartNumber, idSuffix, idEnabled, idRemove, cardId, validationBadge){
     if(idEnabled){
