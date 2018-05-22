@@ -176,8 +176,10 @@ var getValidationBadge = function(t, card, detailed){
       color = ERROR_COLOR;
       icon = ERROR_ICON;
       title = 'Errores';
-    } else {
+    } else if(invalidations && invalidations.length === 0){
       text = 'Completa';
+    } else {
+      return;
     }
     return {
       title: title,
