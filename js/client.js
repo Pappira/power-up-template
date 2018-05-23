@@ -164,8 +164,8 @@ var validateCard = function(t, card){
       }
       if(validationEmail) {
         var match = retrievedCard.desc.match(/(mail:\*\*\s){1}(.+)/i);
-        if(!match || (match && !match.length) || (match && match.length && !emailRegexp.test(match[match.length-1]))) {
-          invalidations.push("No hay mail");
+        if(!match || (match && !match.length) || (match && match.length && !emailRegexp.test(match[match.length-1].trim()))) {
+          invalidations.push("No hay email");
         }
       }
       if(validationChecklist && (!retrievedCard.idChecklists || (retrievedCard.idChecklists && !retrievedCard.idChecklists.length))){
