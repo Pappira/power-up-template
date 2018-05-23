@@ -4,17 +4,23 @@ var t = TrelloPowerUp.iframe();
 
 var validations = t.arg('validations');
 
+var list = document.getElementById('list');
+
 t.render(function(){
-  t.card('attachments')
-  .get('attachments')
-  .filter(function(attachment){
-    return attachment.url.indexOf('http://www.nps.gov/yell/') == 0;
-  })
-  .then(function(yellowstoneAttachments){
-    var urls = yellowstoneAttachments.map(function(a){ return a.url; });
-    document.getElementById('urls').textContent = urls.join(', ');
+  t.card('all')
+  .get('all')
+  .then(function(card){
+    if(validations && validations.length){
+      for(var i=0;i<validations.length;i++){
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(validations[i]));
+        list.appendChild(li);
+      }
+    }
   })
   .then(function(){
     return t.sizeTo('#content');
   });
 });
+
+
