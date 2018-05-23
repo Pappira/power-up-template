@@ -8,7 +8,6 @@ var list = document.getElementById('list');
 
 t.render(function(){
   t.card('all')
-  .get('all')
   .then(function(card){
     if(validations && validations.length){
       for(var i=0;i<validations.length;i++){

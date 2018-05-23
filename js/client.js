@@ -203,7 +203,8 @@ var getBadges = function(t, card, detailed){
         validationBadge.callback = function(context) { // function to run on click
           return context.popup({
             title: 'Errores',
-            url: './validation.html?validations=pepe&validations=foo&validations=bar',
+            url: './validation.html',
+            args: { validations: ['No hay nada', 'No hay otra', 'No hay ninguna'] },
             height: 184
           });
         };
