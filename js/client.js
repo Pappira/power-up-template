@@ -177,7 +177,7 @@ var getValidationBadge = function(t, card, detailed){
       icon = ERROR_ICON;
       title = 'Errores';
     } else if(invalidations && invalidations.length === 0){
-      text = 'Completa';
+      text = '';
     } else {
       return;
     }
