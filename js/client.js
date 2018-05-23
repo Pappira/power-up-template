@@ -144,14 +144,17 @@ var validateCard = function(t, cardId){
         invalidations.push("No hay título");
       }
       if(validationChecklist && (!retrievedCard.idChecklists || (retrievedCard.idChecklists && !retrievedCard.idChecklists.length))){
+        invalidations.push("No hay " + validationChecklist);
+      } else if(validationChecklist && retrievedCard.idChecklists && retrievedCard.idChecklists.length){
         var found = false;
         for(var i=0;i<retrievedCard.idChecklists.length;i++){
-          if(retrievedCard.checklists[i].name == validationChecklist){
+          if(retrievedCard.checklists[i].checkItems && retrievedCard.checklists[i].checkItems.length && retrievedCard.checklists[i].name == validationChecklist){
             found = true;
+            break;
           }
         }
         if(!found){
-          invalidations.push("No hay "+validationChecklist);
+          invalidations.push("No hay elementos en " + validationChecklist);
         }
       }
       return invalidations;
@@ -177,7 +180,7 @@ var getValidationBadge = function(t, card, detailed){
       icon = ERROR_ICON;
       title = 'Errores';
     } else if(invalidations && invalidations.length === 0){
-      text = '';
+      text = detailed ? 'Completa' : '';
     } else {
       return;
     }
