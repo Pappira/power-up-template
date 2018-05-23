@@ -131,16 +131,16 @@ var validateCard = function(t, card){
     t.get('board', 'shared', 'pappira.validationChecklist'),
     t.get('board', 'shared', 'pappira.validationEnabled', false),
     t.get('board', 'shared', 'pappira.validationWorkOrder', false),
-    t.get('board', 'shared', 'pappira.idStartNumber', 0)
+    getPappiraCardId(t),
   ])
   .spread(function(retrievedCard,
-    validationTitle, validationDescription, validationChecklist, validationEnabled, validationWorkOrder, idStartNumber){
+    validationTitle, validationDescription, validationChecklist, validationEnabled, validationWorkOrder, pappiraCardId){
     if(!validationEnabled){
       return false;
     }
     if(validationWorkOrder) {
       var foundWO = false;
-      var patt = new RegExp("("+idStartNumber+"){1}(\.pdf){1}");
+      var patt = new RegExp("("+pappiraCardId+"){1}(\.pdf){1}");
       if(card.attachments && card.attachments.length){
         for(var i=0;i<card.attachments.length;i++){
           if(patt.test(card.attachments[i].name)) {
