@@ -121,20 +121,37 @@ var getTrelloCard = function(t, cardId){
     }
   });
 };
-var validateCard = function(t, cardId){
+var validateCard = function(t, card){
   var valid = false;
   var invalidations = [];
   return Promise.all([
-    getTrelloCard(t, cardId),
+    getTrelloCard(t, card.id),
     t.get('board', 'shared', 'pappira.validationTitle', false),
     t.get('board', 'shared', 'pappira.validationDescription', false),
     t.get('board', 'shared', 'pappira.validationChecklist'),
     t.get('board', 'shared', 'pappira.validationEnabled', false),
+    t.get('board', 'shared', 'pappira.validationWorkOrder', false),
+    t.get('board', 'shared', 'pappira.idStartNumber', 0)
   ])
   .spread(function(retrievedCard,
-    validationTitle, validationDescription, validationChecklist, validationEnabled){
+    validationTitle, validationDescription, validationChecklist, validationEnabled, validationWorkOrder, idStartNumber){
     if(!validationEnabled){
       return false;
+    }
+    if(validationWorkOrder) {
+      var foundWO = false;
+      var patt = new RegExp("("+idStartNumber+"){1}(\.pdf){1}");
+      if(card.attachments && card.attachments.length){
+        for(var i=0;i<card.attachments.length;i++){
+          if(patt.test(card.attachments[i].name)) {
+            foundWO = true;
+            break;
+          }
+        }
+      }
+      if(!foundWO){
+        invalidations.push("No hay orden de trabajo");
+      }
     }
     if(retrievedCard) {
       if(validationDescription && !retrievedCard.desc){
@@ -165,7 +182,7 @@ var validateCard = function(t, cardId){
 };
 
 var getValidationBadge = function(t, card, detailed){
-  return validateCard(t, card.id, detailed).then(function(invalidations){
+  return validateCard(t, card, detailed).then(function(invalidations){
     var badge = {}, text = '', refresh = 60, color = SUCCESS_COLOR, icon = OK_ICON, title = 'Validaciones';
     if(invalidations && invalidations.length){
       if(detailed) {
