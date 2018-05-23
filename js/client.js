@@ -140,7 +140,7 @@ var validateCard = function(t, card){
     }
     if(validationWorkOrder) {
       var foundWO = false;
-      var patt = new RegExp("("+pappiraCardId+"){1}(\.pdf){1}");
+      var patt = new RegExp("("+pappiraCardId+"){1}(\.pdf){1}", "i");
       if(card.attachments && card.attachments.length){
         for(var i=0;i<card.attachments.length;i++){
           if(patt.test(card.attachments[i].name)) {
