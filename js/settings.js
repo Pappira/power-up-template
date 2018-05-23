@@ -20,6 +20,7 @@ var validationTitle = document.getElementById('validationTitle');
 var validationDescription = document.getElementById('validationDescription');
 var validationChecklist = document.getElementById('validationChecklist');
 var validationWorkOrder = document.getElementById('validationWorkOrder');
+var validationEmail = document.getElementById('validationEmail');
 
 t.render(function(){
   return Promise.all([
@@ -32,9 +33,10 @@ t.render(function(){
     t.get('board', 'shared', 'pappira.validationChecklist'),
     t.get('board', 'shared', 'pappira.validationEnabled', false),
     t.get('board', 'shared', 'pappira.validationWorkOrder', false),
+    t.get('board', 'shared', 'pappira.validationEmail', false),
   ])
   .spread(function(savedPrefix, savedStartedNumber, savedSuffix, savedEnabled, 
-                  savedValidationTitle, savedValidationDescription, savedValidationChecklist, savedValidationEnabled, savedValidationWorkOrder) {
+                  savedValidationTitle, savedValidationDescription, savedValidationChecklist, savedValidationEnabled, savedValidationWorkOrder, savedValidationEmail) {
     if(savedPrefix){
       idPrefix.value = savedPrefix;
     }
@@ -69,6 +71,9 @@ t.render(function(){
     
     if(savedValidationWorkOrder){
       validationWorkOrder.checked = savedValidationWorkOrder;
+    }
+    if(savedValidationEmail){
+      validationEmail.checked = savedValidationEmail;
     }
   })
   .then(function(){
@@ -129,6 +134,9 @@ validationSaveButton.addEventListener('click', function(){
   })
   .then(function(){
     return t.set('board', 'shared', 'pappira.validationWorkOrder', validationWorkOrder.checked);
+  })
+  .then(function(){
+    return t.set('board', 'shared', 'pappira.validationEmail', validationEmail.checked);
   })
   .then(function(){
     t.closePopup();

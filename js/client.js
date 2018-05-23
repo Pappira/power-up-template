@@ -82,6 +82,7 @@ var ERROR_ICON = './images/error.svg';
 var OK_ICON = './images/check.svg';
 var ERROR_COLOR = 'red';
 var SUCCESS_COLOR = 'green';
+var emailRegexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 var setPappiraCardId = function(t, id){
   t.set('card', 'shared', 'pappira.id', id);
@@ -132,9 +133,10 @@ var validateCard = function(t, card){
     t.get('board', 'shared', 'pappira.validationEnabled', false),
     t.get('board', 'shared', 'pappira.validationWorkOrder', false),
     getPappiraCardId(t),
+    t.get('board', 'shared', 'pappira.validationEmail', false),
   ])
   .spread(function(retrievedCard,
-    validationTitle, validationDescription, validationChecklist, validationEnabled, validationWorkOrder, pappiraCardId){
+    validationTitle, validationDescription, validationChecklist, validationEnabled, validationWorkOrder, pappiraCardId, validationEmail){
     if(!validationEnabled){
       return false;
     }
@@ -159,6 +161,12 @@ var validateCard = function(t, card){
       }
       if(validationTitle && !retrievedCard.name){
         invalidations.push("No hay título");
+      }
+      if(validationEmail) {
+        var match = retrievedCard.desc.match(/(mail:\*\*\s){1}(.+)/i);
+        if(!match || (match && !match.length) || (match && match.length && !emailRegexp.test(match[match.length-1]))) {
+          invalidations.push("No hay mail");
+        }
       }
       if(validationChecklist && (!retrievedCard.idChecklists || (retrievedCard.idChecklists && !retrievedCard.idChecklists.length))){
         invalidations.push("No hay " + validationChecklist);
