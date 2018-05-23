@@ -164,8 +164,9 @@ var validateCard = function(t, card){
         invalidations.push("No hay " + validationChecklist);
       } else if(validationChecklist && retrievedCard.idChecklists && retrievedCard.idChecklists.length){
         var found = false;
+        var patt = new RegExp("("+validationChecklist+"){1}", "i");
         for(var i=0;i<retrievedCard.idChecklists.length;i++){
-          if(retrievedCard.checklists[i].checkItems && retrievedCard.checklists[i].checkItems.length && retrievedCard.checklists[i].name == validationChecklist){
+          if(retrievedCard.checklists[i].checkItems && retrievedCard.checklists[i].checkItems.length && patt.test(retrievedCard.checklists[i].name)){
             found = true;
             break;
           }
