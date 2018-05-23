@@ -125,9 +125,7 @@ var getValidationBadge = function(t, card, detailed){
     var badge = {}, text = '', refresh = 60, color = SUCCESS_COLOR, icon = OK_ICON, title = 'Validaciones';
     if(invalidations && invalidations.length){
       if(detailed) {
-        for(var i=0;i<invalidations.length;i++){
-          text += ' - ' + invalidations[i] + '\n';
-        }
+        text = invalidations.length + ' errores';
         refresh = 10;
       } else {
         text = invalidations.length;
@@ -145,7 +143,8 @@ var getValidationBadge = function(t, card, detailed){
       text: text,
       icon: icon,
       color: color,
-      refresh: refresh
+      refresh: refresh,
+      invalidations: invalidations
     };
   });
 };
@@ -200,14 +199,16 @@ var getBadges = function(t, card, detailed){
     }
     if(validationBadge){
       if(detailed){
-        validationBadge.callback = function(context) { // function to run on click
-          return context.popup({
-            title: 'Errores',
-            url: './validation.html',
-            args: { validations: ['No hay nada', 'No hay otra', 'No hay ninguna'] },
-            height: 184
-          });
-        };
+        if(validationBadge.invalidations){
+          validationBadge.callback = function(context) { // function to run on click
+            return context.popup({
+              title: 'Errores',
+              url: './validation.html',
+              args: { invalidations: validationBadge.invalidations },
+              height: 184
+            });
+          };
+        }
         // badges.push({
         //   dynamic: function(){
         //     return getValidationBadge(t, card, detailed);

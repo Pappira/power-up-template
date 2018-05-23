@@ -2,17 +2,17 @@
 
 var t = TrelloPowerUp.iframe();
 
-var validations = t.arg('validations');
+var invalidations = t.arg('invalidations');
 
 var list = document.getElementById('list');
 
 t.render(function(){
   t.card('all')
   .then(function(card){
-    if(validations && validations.length){
-      for(var i=0;i<validations.length;i++){
+    if(invalidations && invalidations.length){
+      for(var i=0;i<invalidations.length;i++){
         var li = document.createElement("li");
-        li.appendChild(document.createTextNode(validations[i]));
+        li.appendChild(document.createTextNode(invalidations[i]));
         list.appendChild(li);
       }
     }
