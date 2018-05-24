@@ -199,21 +199,16 @@ var getBadges = function(t, card, detailed){
     }
     if(validationBadge){
       if(detailed){
-        if(validationBadge.invalidations){
+        if(validationBadge.invalidations && validationBadge.invalidations.length){
           validationBadge.callback = function(context) { // function to run on click
             return context.popup({
               title: 'Errores',
-              url: './validation.html',
+              url: './invalidations.html',
               args: { invalidations: validationBadge.invalidations },
               height: 184
             });
           };
         }
-        // badges.push({
-        //   dynamic: function(){
-        //     return getValidationBadge(t, card, detailed);
-        //   }
-        // });
       }
       badges.push(validationBadge);
     }
