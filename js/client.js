@@ -205,8 +205,7 @@ var getBadges = function(t, card, detailed){
               title: 'Errores',
               url: './invalidations.html',
               args: { invalidations: validationBadge.invalidations },
-              height: 184,
-              accentColor: '#F2D600'
+              height: 82
             });
           };
         }
