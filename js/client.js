@@ -205,7 +205,7 @@ var getBadges = function(t, card, detailed){
               title: 'Errores',
               url: './invalidations.html',
               args: { invalidations: validationBadge.invalidations },
-              height: 82
+              height: 50
             });
           };
         }
