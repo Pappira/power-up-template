@@ -93,7 +93,7 @@ var validateCard = function(t, card){
         invalidations.push("No hay título");
       }
       if(validationEmail) {
-        var match = retrievedCard.desc.match(/(mail:\*\*\s){1}(.+)/i);
+        var match = retrievedCard.desc.match(/(?:mail:\s*\*\*){1}\s*(\S+)(?:\s*\*\*)?/i);
         if(!match || (match && !match.length) || (match && match.length && !emailRegexp.test(match[match.length-1].trim()))) {
           invalidations.push("No hay email");
         }
