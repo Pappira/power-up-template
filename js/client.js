@@ -177,21 +177,22 @@ var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId, card){
 var getSnoozeBadgeText = function(inactivity) {
   var day = 1000*60*60*24, text = '';
   var inactivityInDays = Math.round(inactivity / day);
-    if( inactivityInDays > 6) {
-      var inactivityInWeeks = Math.round(inactivityInDays/7);
-      if(inactivityInWeeks > 4) {
-        var inactivityInMonths = Math.round(inactivityInWeeks/4.52);
-        if(inactivityInMonths > 12) {
-          text = Math.round(inactivityInMonths/12) + ' años';
-        } else {
-          text = inactivityInMonths + ' meses';
-        }
+  if( inactivityInDays > 6) {
+    var inactivityInWeeks = Math.round(inactivityInDays/7);
+    if(inactivityInWeeks > 4) {
+      var inactivityInMonths = Math.round(inactivityInWeeks/4.52);
+      if(inactivityInMonths > 12) {
+        text = Math.round(inactivityInMonths/12) + ' años';
       } else {
-        text = inactivityInWeeks + ' semanas';
+        text = inactivityInMonths + ' meses';
       }
     } else {
-      text = inactivityInDays + ' días';
+      text = inactivityInWeeks + ' semanas';
     }
+  } else {
+    text = inactivityInDays + ' días';
+  }
+  return text;
 };
 
 var getSnoozeBadge = function(card){
