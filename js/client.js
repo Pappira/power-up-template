@@ -198,7 +198,7 @@ var getInactivityBadgeText = function(inactivity, detailed) {
 
 var getInactivityBadge = function(card, inactivityShowDays, inactivityCriticalDays, detailed){
   var day = 1000*60*60*24;
-  var color = 'yellow', refresh = 60, text = '';
+  var color = 'pink', refresh = 60, text = '';
   var badge = {
     title: 'Inactivo',
     text: text,
