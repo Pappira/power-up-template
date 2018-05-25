@@ -183,22 +183,26 @@ var getInactivityBadgeText = function(inactivity, detailed) {
       var inactivityInMonths = Math.round(inactivityInWeeks/4.52);
       if(inactivityInMonths > 12) {
         var inactivityInYears = Math.round(inactivityInMonths / 12);
-        text += inactivityInYears + inactivityInYears > 1 ? ' años' : ' año';
+        text += inactivityInYears;
+        text += inactivityInYears > 1 ? ' años' : ' año';
       } else {
-        text += inactivityInMonths + inactivityInMonths > 1 ? ' meses' : ' mes';
+        text += inactivityInMonths;
+        text += inactivityInMonths > 1 ? ' meses' : ' mes';
       }
     } else {
-      text += inactivityInWeeks + inactivityInWeeks > 1 ? ' semanas' : ' semana';
+      text += inactivityInWeeks;
+      text += inactivityInWeeks > 1 ? ' semanas' : ' semana';
     }
   } else {
-    text += inactivityInDays + inactivityInDays > 1 ? ' días' : ' día';
+    text += inactivityInDays;
+    text += inactivityInDays > 1 ? ' días' : ' día';
   }
   return text;
 };
 
 var getInactivityBadge = function(card, inactivityShowDays, inactivityCriticalDays, detailed){
   var day = 1000*60*60*24;
-  var color = 'pink', refresh = 60, text = '';
+  var color = 'orange', refresh = 60, text = '';
   var badge = {
     title: 'Inactivo',
     text: text,
