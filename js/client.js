@@ -202,6 +202,8 @@ var getInactivityBadgeText = function(inactivity, detailed) {
 
 var getInactivityBadge = function(card, inactivityShowDays, inactivityCriticalDays, detailed){
   var day = 1000*60*60*24;
+  var inactivityCriticalMillis = Number(inactivityCriticalDays) * day;
+  var inactivityShowMillis = Number(inactivityShowDays) * day;
   var color = 'orange', refresh = 60, text = '';
   var badge = {
     title: 'Inactivo',
@@ -217,7 +219,7 @@ var getInactivityBadge = function(card, inactivityShowDays, inactivityCriticalDa
 
   var dateLastActivity = new Date(card.dateLastActivity).getTime();
   var inactivity = Date.now() - dateLastActivity;
-  if(inactivity >= Number(inactivityCriticalDays) * day) {
+  if(inactivity >= inactivityCriticalMillis) {
     badge.color = 'red';
     badge.text = getInactivityBadgeText(inactivity, detailed);
     return {
@@ -225,8 +227,9 @@ var getInactivityBadge = function(card, inactivityShowDays, inactivityCriticalDa
         return badge;
       }
     };
-  } else if(inactivity >= Number(inactivityShowDays) * day) {
+  } else if(inactivity >= inactivityShowMillis) {
     badge.text = getInactivityBadgeText(inactivity, detailed);
+    badge.refresh = (inactivityCriticalMillis - inactivity) / 1000;
     return {
       dynamic: function(){
         return badge;
