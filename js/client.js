@@ -174,12 +174,32 @@ var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId, card){
   return cardId;
 };
 
+var getSnoozeBadgeText = function(inactivity) {
+  var day = 1000*60*60*24, text = '';
+  var inactivityInDays = Math.round(inactivity / day);
+    if( inactivityInDays > 6) {
+      var inactivityInWeeks = Math.round(inactivityInDays/7);
+      if(inactivityInWeeks > 4) {
+        var inactivityInMonths = Math.round(inactivityInWeeks/4.52);
+        if(inactivityInMonths > 12) {
+          text = Math.round(inactivityInMonths/12) + ' años';
+        } else {
+          text = inactivityInMonths + ' meses';
+        }
+      } else {
+        text = inactivityInWeeks + ' semanas';
+      }
+    } else {
+      text = inactivityInDays + ' días';
+    }
+};
+
 var getSnoozeBadge = function(card){
   var day = 1000*60*60*24;
-  var color = 'yellow', refresh = 60, criticalBoundary = 2, showBoundary = 1, snoozeEnabled = true;
+  var color = 'yellow', refresh = 60, criticalBoundary = 2, showBoundary = 1, snoozeEnabled = true, text = '';
   var badge = {
     title: 'Sin actividad',
-    text: '',
+    text: text,
     icon: SNOOZE_ICON,
     color: color,
     refresh: refresh
@@ -193,12 +213,14 @@ var getSnoozeBadge = function(card){
     var inactivity = Date.now() - dateLastActivity;
     if(inactivity >= criticalBoundary * day) {
       badge.color = 'red';
+      badge.text = getSnoozeBadgeText(inactivity);
       return {
         dynamic: function(){
           return badge;
         }
       };
     } else if(inactivity >= showBoundary * day) {
+      badge.text = getSnoozeBadgeText(inactivity);
       return {
         dynamic: function(){
           return badge;
