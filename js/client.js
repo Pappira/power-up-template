@@ -182,15 +182,16 @@ var getInactivityBadgeText = function(inactivity, detailed) {
     if(inactivityInWeeks > 4) {
       var inactivityInMonths = Math.round(inactivityInWeeks/4.52);
       if(inactivityInMonths > 12) {
-        text += Math.round(inactivityInMonths/12) + ' años';
+        var inactivityInYears = Math.round(inactivityInMonths / 12);
+        text += inactivityInYears + inactivityInYears > 1 ? ' años' : ' año';
       } else {
-        text += inactivityInMonths + ' meses';
+        text += inactivityInMonths + inactivityInMonths > 1 ? ' meses' : ' mes';
       }
     } else {
-      text += inactivityInWeeks + ' semanas';
+      text += inactivityInWeeks + inactivityInWeeks > 1 ? ' semanas' : ' semana';
     }
   } else {
-    text += inactivityInDays + ' días';
+    text += inactivityInDays + inactivityInDays > 1 ? ' días' : ' día';
   }
   return text;
 };
