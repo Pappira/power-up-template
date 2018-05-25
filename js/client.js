@@ -280,7 +280,7 @@ var getBadges = function(t, card, detailed){
       }
       badges.push(validationBadge);
     }
-    if(inactivityEnabled) {
+    if(inactivityEnabled && !card.closed) {
       var snoozeBadge = getInactivityBadge(card, inactivityShowDays, inactivityCriticalDays, detailed);
       if(snoozeBadge) {
         badges.push(snoozeBadge);
