@@ -7,6 +7,7 @@ var Promise = TrelloPowerUp.Promise;
 var ID_ICON = './images/fingerprint.svg';
 var ERROR_ICON = './images/error.svg';
 var OK_ICON = './images/check.svg';
+var SNOOZE_ICON = './images/snooze.svg';
 var ERROR_COLOR = 'red';
 var SUCCESS_COLOR = 'green';
 var emailRegexp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -45,7 +46,7 @@ var setTrelloCardName = function(t, card, name){
 var getTrelloCard = function(t, cardId){
   return isAuthorized(t).then(function(authorized){
     if(authorized.authorized){
-      return Trello.get("/cards/"+cardId,{fields: "name,desc,idChecklists",checklists: "all"}, function(retrievedCard){return retrievedCard;});
+      return Trello.get("/cards/"+cardId,{fields: "name,desc,idChecklists,dateLastActivity",checklists: "all"}, function(retrievedCard){return retrievedCard;});
     }
   });
 };
@@ -173,6 +174,40 @@ var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId, card){
   return cardId;
 };
 
+var getSnoozeBadge = function(card){
+  var day = 1000*60*60*24;
+  var color = 'yellow', refresh = 60, criticalBoundary = 2, showBoundary = 1;
+  var badge = {
+    title: 'Sin actividad',
+    text: '',
+    icon: SNOOZE_ICON,
+    color: color,
+    refresh: refresh
+  };
+  if(!card.dateLastActivity) {
+    console.error("No dateLastActivity found on card "+card.id);
+    return;
+  }
+  if(card.dateLastActivity) {
+    var dateLastActivity = new Date(card.dateLastActivity).getTime();
+    var inactivity = Date.now()- dateLastActivity;
+    if(inactivity >= criticalBoundary * day) {
+      badge.color = 'red';
+      return {
+        dynamic: function(){
+          return badge;
+        }
+      };
+    } else if(inactivity >= showBoundary * day) {
+      return {
+        dynamic: function(){
+          return badge;
+        }
+      };
+    }
+  }
+};
+
 var getBadges = function(t, card, detailed){
   var badges = [];
   return Promise.all([
@@ -211,6 +246,10 @@ var getBadges = function(t, card, detailed){
         }
       }
       badges.push(validationBadge);
+    }
+    var snoozeBadge = getSnoozeBadge(card);
+    if(snoozeBadge) {
+      badges.push(snoozeBadge);
     }
     return badges;
   });
