@@ -175,7 +175,7 @@ var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId, card){
 };
 
 var getInactivityBadgeText = function(inactivity, detailed) {
-  var day = 1000*60*60*24, text = detailed ? 'Durante ' : '';
+  var day = 1000*60*60*24, text = detailed ? 'Hace ' : '';
   var inactivityInDays = Math.round(inactivity / day);
   if( inactivityInDays > 6) {
     var inactivityInWeeks = Math.round(inactivityInDays/7);
