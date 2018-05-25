@@ -176,7 +176,7 @@ var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId, card){
 
 var getSnoozeBadge = function(card){
   var day = 1000*60*60*24;
-  var color = 'yellow', refresh = 60, criticalBoundary = 2, showBoundary = 1;
+  var color = 'yellow', refresh = 60, criticalBoundary = 2, showBoundary = 1, snoozeEnabled = true;
   var badge = {
     title: 'Sin actividad',
     text: '',
@@ -188,9 +188,9 @@ var getSnoozeBadge = function(card){
     console.error("No dateLastActivity found on card "+card.id);
     return;
   }
-  if(card.dateLastActivity) {
+  if(snoozeEnabled) {
     var dateLastActivity = new Date(card.dateLastActivity).getTime();
-    var inactivity = Date.now()- dateLastActivity;
+    var inactivity = Date.now() - dateLastActivity;
     if(inactivity >= criticalBoundary * day) {
       badge.color = 'red';
       return {
