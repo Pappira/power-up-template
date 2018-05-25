@@ -22,6 +22,13 @@ var validationChecklist = document.getElementById('validationChecklist');
 var validationWorkOrder = document.getElementById('validationWorkOrder');
 var validationEmail = document.getElementById('validationEmail');
 
+var inactivityEnabled = document.getElementById('inactivityEnabled');
+var inactivitySaveButton = document.getElementById('inactivitySave');
+var inactivityEnableButton = document.getElementById('inactivityEnable');
+var inactivityDisableButton = document.getElementById('inactivityDisable');
+var inactivityShowDays = document.getElementById('inactivityShowDays');
+var inactivityCriticalDays = document.getElementById('inactivityCriticalDays');
+
 t.render(function(){
   return Promise.all([
     t.get('board', 'shared', 'pappira.idPrefix'),
@@ -34,9 +41,13 @@ t.render(function(){
     t.get('board', 'shared', 'pappira.validationEnabled', false),
     t.get('board', 'shared', 'pappira.validationWorkOrder', false),
     t.get('board', 'shared', 'pappira.validationEmail', false),
+    t.get('board', 'shared', 'pappira.inactivityEnabled', false),
+    t.get('board', 'shared', 'pappira.inactivityShowDays'),
+    t.get('board', 'shared', 'pappira.inactivityCriticalDays'),
   ])
   .spread(function(savedPrefix, savedStartedNumber, savedSuffix, savedEnabled, 
-                  savedValidationTitle, savedValidationDescription, savedValidationChecklist, savedValidationEnabled, savedValidationWorkOrder, savedValidationEmail) {
+                  savedValidationTitle, savedValidationDescription, savedValidationChecklist, savedValidationEnabled, savedValidationWorkOrder, savedValidationEmail,
+                  savedInactivityEnabled, savedInactivityShowDays, savedInactivityCriticalDays) {
     if(savedPrefix){
       idPrefix.value = savedPrefix;
     }
@@ -68,12 +79,24 @@ t.render(function(){
     if(savedValidationChecklist){
       validationChecklist.value = savedValidationChecklist;
     }
-    
     if(savedValidationWorkOrder){
       validationWorkOrder.checked = savedValidationWorkOrder;
     }
     if(savedValidationEmail){
       validationEmail.checked = savedValidationEmail;
+    }
+
+    inactivityEnabled.value = savedInactivityEnabled;
+    if(savedInactivityEnabled){
+      inactivityEnableButton.parentNode.removeChild(inactivityEnableButton);
+    } else {
+      inactivityDisableButton.parentNode.removeChild(inactivityDisableButton);
+    }
+    if(savedInactivityShowDays){
+      inactivityShowDays.value = savedInactivityShowDays;
+    }
+    if(savedInactivityCriticalDays){
+      inactivityCriticalDays.value = savedInactivityCriticalDays;
     }
   })
   .then(function(){

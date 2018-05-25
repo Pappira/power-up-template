@@ -174,32 +174,32 @@ var getIdBadgeText = function(idPrefix, idStartNumber, idSuffix, cardId, card){
   return cardId;
 };
 
-var getSnoozeBadgeText = function(inactivity) {
-  var day = 1000*60*60*24, text = '';
+var getInactivityBadgeText = function(inactivity, detailed) {
+  var day = 1000*60*60*24, text = detailed ? 'Durante ' : '';
   var inactivityInDays = Math.round(inactivity / day);
   if( inactivityInDays > 6) {
     var inactivityInWeeks = Math.round(inactivityInDays/7);
     if(inactivityInWeeks > 4) {
       var inactivityInMonths = Math.round(inactivityInWeeks/4.52);
       if(inactivityInMonths > 12) {
-        text = Math.round(inactivityInMonths/12) + ' años';
+        text += Math.round(inactivityInMonths/12) + ' años';
       } else {
-        text = inactivityInMonths + ' meses';
+        text += inactivityInMonths + ' meses';
       }
     } else {
-      text = inactivityInWeeks + ' semanas';
+      text += inactivityInWeeks + ' semanas';
     }
   } else {
-    text = inactivityInDays + ' días';
+    text += inactivityInDays + ' días';
   }
   return text;
 };
 
-var getSnoozeBadge = function(card){
+var getInactivityBadge = function(card, inactivityShowDays, inactivityCriticalDays, detailed){
   var day = 1000*60*60*24;
-  var color = 'yellow', refresh = 60, criticalBoundary = 2, showBoundary = 1, snoozeEnabled = true, text = '';
+  var color = 'yellow', refresh = 60, text = '';
   var badge = {
-    title: 'Sin actividad',
+    title: 'Inactivo',
     text: text,
     icon: SNOOZE_ICON,
     color: color,
@@ -209,25 +209,24 @@ var getSnoozeBadge = function(card){
     console.error("No dateLastActivity found on card "+card.id);
     return;
   }
-  if(snoozeEnabled) {
-    var dateLastActivity = new Date(card.dateLastActivity).getTime();
-    var inactivity = Date.now() - dateLastActivity;
-    if(inactivity >= criticalBoundary * day) {
-      badge.color = 'red';
-      badge.text = getSnoozeBadgeText(inactivity);
-      return {
-        dynamic: function(){
-          return badge;
-        }
-      };
-    } else if(inactivity >= showBoundary * day) {
-      badge.text = getSnoozeBadgeText(inactivity);
-      return {
-        dynamic: function(){
-          return badge;
-        }
-      };
-    }
+
+  var dateLastActivity = new Date(card.dateLastActivity).getTime();
+  var inactivity = Date.now() - dateLastActivity;
+  if(inactivity >= Number(inactivityCriticalDays) * day) {
+    badge.color = 'red';
+    badge.text = getInactivityBadgeText(inactivity, detailed);
+    return {
+      dynamic: function(){
+        return badge;
+      }
+    };
+  } else if(inactivity >= Number(inactivityShowDays) * day) {
+    badge.text = getInactivityBadgeText(inactivity, detailed);
+    return {
+      dynamic: function(){
+        return badge;
+      }
+    };
   }
 };
 
@@ -241,8 +240,11 @@ var getBadges = function(t, card, detailed){
     t.get('board', 'shared', 'pappira.idRemove', false),
     getPappiraCardId(t),
     getValidationBadge(t, card, detailed),
+    t.get('board', 'shared', 'pappira.inactivityEnabled', false),
+    t.get('board', 'shared', 'pappira.inactivityShowDays'),
+    t.get('board', 'shared', 'pappira.inactivityCriticalDays'),
   ])
-  .spread(function(idPrefix, idStartNumber, idSuffix, idEnabled, idRemove, cardId, validationBadge){
+  .spread(function(idPrefix, idStartNumber, idSuffix, idEnabled, idRemove, cardId, validationBadge, inactivityEnabled, inactivityShowDays, inactivityCriticalDays){
     if(idEnabled){
       var idBadge = getIdBadge();
       idBadge.text = getIdBadgeText(idPrefix, idStartNumber, idSuffix, cardId, card);
@@ -270,9 +272,11 @@ var getBadges = function(t, card, detailed){
       }
       badges.push(validationBadge);
     }
-    var snoozeBadge = getSnoozeBadge(card);
-    if(snoozeBadge) {
-      badges.push(snoozeBadge);
+    if(inactivityEnabled) {
+      var snoozeBadge = getInactivityBadge(card, inactivityShowDays, inactivityCriticalDays, detailed);
+      if(snoozeBadge) {
+        badges.push(snoozeBadge);
+      }
     }
     return badges;
   });
