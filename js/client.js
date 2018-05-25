@@ -126,7 +126,11 @@ var getValidationBadge = function(t, card, detailed){
     var badge = {}, text = '', refresh = 60, color = SUCCESS_COLOR, icon = OK_ICON, title = 'Validaciones';
     if(invalidations && invalidations.length){
       if(detailed) {
-        text = invalidations.length + ' errores';
+        if(invalidations.length > 1) {
+          text = invalidations.length + ' errores';
+        } else {
+          text = invalidations[0];
+        }
         refresh = 10;
       } else {
         text = invalidations.length;
@@ -267,7 +271,7 @@ var getBadges = function(t, card, detailed){
     }
     if(validationBadge){
       if(detailed){
-        if(validationBadge.invalidations && validationBadge.invalidations.length){
+        if(validationBadge.invalidations && validationBadge.invalidations.length && validationBadge.invalidations.length > 1){
           validationBadge.callback = function(context) { // function to run on click
             return context.popup({
               title: 'Errores',
