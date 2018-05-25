@@ -15,7 +15,7 @@
         if( params.color )
         {
             var rect = document.getElementsByTagName( "path" )[0];
-            rect.setAttribute( "fill", params.color );
+            rect.setAttribute( "fill", "#"+params.color );
         }
     ]]>
     </script>
