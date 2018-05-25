@@ -177,3 +177,25 @@ validationDisableButton.addEventListener('click', function(){
     t.closePopup();
   });
 });
+
+inactivitySaveButton.addEventListener('click', function(){
+  return t.set('board', 'shared', 'pappira.inactivityShowDays', inactivityShowDays.value)
+  .then(function(){
+    return t.set('board', 'shared', 'pappira.inactivityCriticalDays', inactivityCriticalDays.value);
+  })
+  .then(function(){
+    t.closePopup();
+  });
+});
+inactivityEnableButton.addEventListener('click', function(){
+  return t.set('board', 'shared', 'pappira.inactivityEnabled', true)
+  .then(function(){
+    t.closePopup();
+  });
+});
+inactivityDisableButton.addEventListener('click', function(){
+  return t.set('board', 'shared', 'pappira.inactivityEnabled', false)
+  .then(function(){
+    t.closePopup();
+  });
+});
