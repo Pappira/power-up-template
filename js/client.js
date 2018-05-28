@@ -54,7 +54,6 @@ var validateCard = function(t, card){
   var valid = false;
   var invalidations = [];
   return Promise.all([
-    getTrelloCard(t, card.id),
     t.get('board', 'shared', 'pappira.validationTitle', false),
     t.get('board', 'shared', 'pappira.validationDescription', false),
     t.get('board', 'shared', 'pappira.validationChecklist'),
@@ -65,7 +64,7 @@ var validateCard = function(t, card){
     t.get('board', 'shared', 'pappira.idPrefix'),
     t.get('board', 'shared', 'pappira.idSuffix'),
   ])
-  .spread(function(retrievedCard,
+  .spread(function(
     validationTitle, validationDescription, validationChecklist, validationEnabled, validationWorkOrder, pappiraCardId, validationEmail, idPrefix, idSuffix){
     if(!validationEnabled){
       return false;
@@ -86,26 +85,26 @@ var validateCard = function(t, card){
         invalidations.push("No hay orden de trabajo");
       }
     }
-    if(retrievedCard) {
-      if(validationDescription && !retrievedCard.desc){
+    if(card) {
+      if(validationDescription && !card.desc){
         invalidations.push("No hay descripción");
       }
-      if(validationTitle && !retrievedCard.name){
+      if(validationTitle && !card.name){
         invalidations.push("No hay título");
       }
-      if(validationEmail) {
-        var match = retrievedCard.desc.match(/(?:mail:\s*\*\*){1}\s*(\S+)(?:\s*\*\*)?/i);
+      if(validationEmail && card.desc) {
+        var match = card.desc.match(/(?:mail:\s*\*\*){1}\s*(\S+)(?:\s*\*\*)?/i);
         if(!match || (match && !match.length) || (match && match.length && !emailRegexp.test(match[match.length-1].trim()))) {
           invalidations.push("No hay email");
         }
       }
-      if(validationChecklist && (!retrievedCard.idChecklists || (retrievedCard.idChecklists && !retrievedCard.idChecklists.length))){
+      if(validationChecklist && (!card.checklists || (card.checklists && !card.checklists.length))){
         invalidations.push("No hay " + validationChecklist);
-      } else if(validationChecklist && retrievedCard.idChecklists && retrievedCard.idChecklists.length){
+      } else if(validationChecklist && card.checklists && card.checklists.length){
         var found = false;
         var patt = new RegExp("("+validationChecklist+"){1}", "i");
-        for(var i=0;i<retrievedCard.idChecklists.length;i++){
-          if(retrievedCard.checklists[i].checkItems && retrievedCard.checklists[i].checkItems.length && patt.test(retrievedCard.checklists[i].name)){
+        for(var i=0;i<card.checklists.length;i++){
+          if(card.checklists[i].checkItems && card.checklists[i].checkItems.length && patt.test(card.checklists[i].name)){
             found = true;
             break;
           }
@@ -121,38 +120,51 @@ var validateCard = function(t, card){
   });
 };
 
-var getValidationBadge = function(t, card, detailed){
-  return validateCard(t, card, detailed).then(function(invalidations){
-    var badge = {}, text = '', refresh = 60, color = SUCCESS_COLOR, icon = OK_ICON, title = 'Validaciones';
-    if(invalidations && invalidations.length){
-      if(detailed) {
-        if(invalidations.length > 1) {
-          text = invalidations.length + ' errores';
-        } else {
-          text = invalidations[0];
-        }
-        refresh = 10;
+var createValidationBadge = function(invalidations, detailed) {
+  var badge = {}, text = '', refresh = 60, color = SUCCESS_COLOR, icon = OK_ICON, title = 'Validaciones';
+  if(invalidations && invalidations.length){
+    if(detailed) {
+      if(invalidations.length > 1) {
+        text = invalidations.length + ' errores';
       } else {
-        text = invalidations.length;
+        text = invalidations[0];
       }
-      color = ERROR_COLOR;
-      icon = ERROR_ICON;
-      title = 'Errores';
-    } else if(invalidations && invalidations.length === 0){
-      text = detailed ? 'Completa' : '';
+      refresh = 10;
     } else {
-      return;
+      text = invalidations.length;
     }
-    return {
-      title: title,
-      text: text,
-      icon: icon,
-      color: color,
-      refresh: refresh,
-      invalidations: invalidations
-    };
-  });
+    color = ERROR_COLOR;
+    icon = ERROR_ICON;
+    title = 'Errores';
+  } else if(invalidations && invalidations.length === 0){
+    text = detailed ? 'Completa' : '';
+  } else {
+    return;
+  }
+  return {
+    title: title,
+    text: text,
+    icon: icon,
+    color: color,
+    refresh: refresh,
+    invalidations: invalidations
+  };
 };
+
+var getValidationBadge = function(t, card, detailed) {
+  if(card.badges.checkItems > 0) {
+    return getTrelloCard(t, card.id).then(function(retrievedCard) {
+      card.checklists = retrievedCard.checklists;
+      Promise.all([
+        validateCard(t, card, detailed),
+        detailed,
+      ]).spread(createValidationBadge);
+    });
+  } else {
+    return validateCard(t, card, detailed).then(createValidationBadge);
+  }
+};
+
 var getIdBadge = function(){
   return {
     title: 'Número', // for detail badges only
