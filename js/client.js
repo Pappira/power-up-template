@@ -161,7 +161,10 @@ var getValidationBadge = function(t, card, detailed) {
       ]).spread(createValidationBadge);
     });
   } else {
-    return validateCard(t, card, detailed).then(createValidationBadge);
+    return Promise.all([
+      validateCard(t, card, detailed),
+      detailed,
+    ]).spread(createValidationBadge);
   }
 };
 
