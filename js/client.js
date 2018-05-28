@@ -155,7 +155,7 @@ var getValidationBadge = function(t, card, detailed) {
   if(card.badges.checkItems > 0) {
     return getTrelloCard(t, card.id).then(function(retrievedCard) {
       card.checklists = retrievedCard.checklists;
-      Promise.all([
+      return Promise.all([
         validateCard(t, card, detailed),
         detailed,
       ]).spread(createValidationBadge);
