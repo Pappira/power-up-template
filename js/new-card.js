@@ -48,7 +48,7 @@ itemAddButton.addEventListener('click', function(){
       }
 
       if(value) {
-        return "<span>" + value + "</span>";
+        return document.createElement("span").appendChild(document.createTextNode(value));
       }
     }).join('');
   itemsContainer.appendChild(itemChild);
