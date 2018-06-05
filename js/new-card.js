@@ -37,7 +37,7 @@ t.render(function(){
 });
 
 itemAddButton.addEventListener('click', function(){
-  var itemChild = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
+  var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
     weight, color, inkQuantity, inkDetail, phases, design, finishes]
     .map(function(itemElement){
       var value = undefined;
@@ -50,6 +50,8 @@ itemAddButton.addEventListener('click', function(){
       if(value) {
         return document.createElement("span").appendChild(document.createTextNode(value));
       }
-    }).join('');
-  itemsContainer.appendChild(itemChild);
+    });
+    for(var i=0;i<itemChildren.length;i++) {
+      itemsContainer.appendChild(itemChildren[i]);
+    }
 });
