@@ -59,7 +59,7 @@ itemAddButton.addEventListener('click', function(){
       if(value) {
         var td = document.createElement("td");
         td.appendChild(document.createTextNode(value));
-        return span;
+        return td;
       }
     });
     items.push(item);
