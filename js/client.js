@@ -326,7 +326,7 @@ TrelloPowerUp.initialize({
   },
   'board-buttons': function(t, options){
     return [{
-      text: 'Nuevo Presupuesto',
+      text: 'Nuevo Presupuesto popup',
       callback: function(t){
         return t.popup({
           title: 'Nuevo Presupuesto',
@@ -337,7 +337,7 @@ TrelloPowerUp.initialize({
       }
     },
     {
-      text: 'Nuevo Presupuesto',
+      text: 'Nuevo Presupuesto modal',
       callback: function(t){
         return t.modal({
           url: './new-card.html', // The URL to load for the iframe
