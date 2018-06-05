@@ -325,23 +325,13 @@ TrelloPowerUp.initialize({
     // throw t.NotHandled();
   },
   'board-buttons': function(t, options){
-    return [{
-      text: 'Nuevo Presupuesto popup',
-      callback: function(t){
-        return t.popup({
-          title: 'Nuevo Presupuesto',
-          url: './new-card.html',
-          args: {  },
-          height: 240
-        });
-      }
-    },
+    return [
     {
       text: 'Nuevo Presupuesto modal',
       callback: function(t){
         return t.modal({
           url: './new-card.html', // The URL to load for the iframe
-          args: { text: 'Hello' }, // Optional args to access later with t.arg('text') on './modal.html'
+          args: { }, // Optional args to access later with t.arg('text') on './modal.html'
           accentColor: '#F2D600', // Optional color for the modal header 
           height: 1500, // Initial height for iframe; not used if fullscreen is true
           fullscreen: false, // Whether the modal should stretch to take up the whole screen
