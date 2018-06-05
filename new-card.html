@@ -31,8 +31,27 @@
         <label for="generalFinishes">Terminaciones</label>
         <input type="text" id="generalFinishes"/>
         
-        <div id="items">
+        <div id="itemsContainer" class="hide">
           <h4>Items</h4>
+          <table id="itemsTable">
+            <tr>
+              <th>Nombre</th>
+              <th>Vias</th>
+              <th>Páginas</th>
+              <th>Numerado?</th>
+              <th>Numeración</th>
+              <th>Tamaño abierto</th>
+              <th>Tamaño cerrado</th>
+              <th>Material</th>
+              <th>Peso (gr.)</th>
+              <th>Color</th>
+              <th>Cant. tintas</th>
+              <th>Det. tintas</th>
+              <th>Fases</th>
+              <th>Diseño?</th>
+              <th>Terminaciones</th>
+            </tr>
+          </table>
         </div>
         
         <label for="itemName">Nombre</label>
@@ -42,7 +61,7 @@
         <label for="pages">Páginas</label>
         <input type="number" id="pages"/>
         <label for="numbered"><input type="checkbox" id="numbered"/> Numerado?</label>
-        <div id="numerationDiv">
+        <div id="numerationDiv" class="hide">
           <label for="numeration">Numeración</label>
           <input type="text" id="numeration"/>
         </div>
@@ -52,7 +71,7 @@
         <input type="text" id="closedSize"/>
         <label for="material">Material</label>
         <select id="material">
-          <option value="COT72192">Coteado 72x102</option>
+          <option value="COT72102">Coteado 72x102</option>
           <option value="COT6696">Coteado 66x96</option>
         </select>
         <label for="weight">Peso (gr.)</label>
