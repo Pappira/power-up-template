@@ -331,7 +331,7 @@ TrelloPowerUp.initialize({
         return t.popup({
           title: 'Nuevo Presupuesto',
           url: './new-card.html',
-          args: { invalidations: validationBadge.invalidations },
+          args: {  },
           height: 240
         });
       }
@@ -343,7 +343,7 @@ TrelloPowerUp.initialize({
           url: './new-card.html', // The URL to load for the iframe
           args: { text: 'Hello' }, // Optional args to access later with t.arg('text') on './modal.html'
           accentColor: '#F2D600', // Optional color for the modal header 
-          height: 500, // Initial height for iframe; not used if fullscreen is true
+          height: 1500, // Initial height for iframe; not used if fullscreen is true
           fullscreen: false, // Whether the modal should stretch to take up the whole screen
           callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
           title: 'Nuevo Presupuesto', // Optional title for modal header
