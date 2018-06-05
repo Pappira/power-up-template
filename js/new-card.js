@@ -48,7 +48,7 @@ itemAddButton.addEventListener('click', function(){
     }
     var item = {};
 
-    itemChildren.map(function(itemElement){
+    itemChildren = itemChildren.map(function(itemElement){
       var value = undefined;
       if(itemElement.type !== "checkbox"){
         value = itemElement.value;
