@@ -33,24 +33,35 @@ var finishes = document.getElementById('finishes');
 
 var itemAddButton = document.getElementById('itemAddButton');
 
+var items = [];
+
 t.render(function(){
   return;
 });
 
 itemAddButton.addEventListener('click', function(){
-  var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
-    weight, color, inkQuantity, inkDetail, phases, design, finishes]
-    .map(function(itemElement){
+  var itemChildren = [itemName, vias, pages, numbered, openSize, closedSize, material, 
+    weight, color, inkQuantity, inkDetail, phases, design, finishes];
+
+    if(numbered.checked) {
+      itemChildren.push(numeration);
+    }
+    var item = {};
+
+    itemChildren.map(function(itemElement){
       var value = undefined;
       if(itemElement.type !== "checkbox"){
         value = itemElement.value;
+        item[itemElement.id] = itemElement.value;
       } else {
         value = itemElement.checked ? "Si" : "No";
+        item[itemElement.id] = itemElement.checked;
       }
 
       if(value) {
         var span = document.createElement("span");
         span.appendChild(document.createTextNode(value));
+        items.push(item);
         return span;
       }
     });
