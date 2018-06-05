@@ -61,10 +61,10 @@ itemAddButton.addEventListener('click', function(){
       if(value) {
         var span = document.createElement("span");
         span.appendChild(document.createTextNode(value));
-        items.push(item);
         return span;
       }
     });
+    items.push(item);
     for(var i=0;i<itemChildren.length;i++) {
       itemsContainer.appendChild(itemChildren[i]);
     }
