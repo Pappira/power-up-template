@@ -197,7 +197,7 @@ var boardButtonCallback = function(t){
           doc.setFontSize(40);
           doc.text(35, 25, 'Paranyan loves jsPDF');
           doc.addImage(imgData, 'JPEG', 15, 40, 180, 160);
-          doc.fromHTML('<footer><div style="text-align:center;">Page <span class="pageCounter"></span>/<span class="totalPages">pepe</span></div></footer>');
+          doc.fromHTML('<footer><div style="text-align:center;">Page <span class="pageCounter"></span>/<span class="totalPages"></span></div></footer>');
           doc.save('demo.pdf');
         }
       }
