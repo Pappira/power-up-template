@@ -13,7 +13,8 @@ var tel = document.getElementById('tel');
 var workType = document.getElementById('workType');
 var workQuantity = document.getElementById('workQuantity');
 
-var itemsContainer = document.getElementById('items');
+var itemsContainer = document.getElementById('itemsContainer');
+var itemsTable = document.getElementById('itemsTable');
 var itemName = document.getElementById('itemName');
 var vias = document.getElementById('vias');
 var pages = document.getElementById('pages');
@@ -40,12 +41,9 @@ t.render(function(){
 });
 
 itemAddButton.addEventListener('click', function(){
-  var itemChildren = [itemName, vias, pages, numbered, openSize, closedSize, material, 
+  var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
     weight, color, inkQuantity, inkDetail, phases, design, finishes];
 
-    if(numbered.checked) {
-      itemChildren.push(numeration);
-    }
     var item = {};
 
     itemChildren = itemChildren.map(function(itemElement){
@@ -59,15 +57,17 @@ itemAddButton.addEventListener('click', function(){
       }
 
       if(value) {
-        var span = document.createElement("span");
-        span.appendChild(document.createTextNode(value));
+        var td = document.createElement("td");
+        td.appendChild(document.createTextNode(value));
         return span;
       }
     });
     items.push(item);
+    var tr = document.createElement("tr");
     for(var i=0;i<itemChildren.length;i++) {
-      itemsContainer.appendChild(itemChildren[i]);
+      tr.appendChild(itemChildren[i]);
     }
+    itemsTable.appendChild(tr);
 });
 
 numbered.addEventListener('click', function(){
