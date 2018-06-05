@@ -68,6 +68,7 @@ itemAddButton.addEventListener('click', function(){
       tr.appendChild(itemChildren[i]);
     }
     itemsTable.appendChild(tr);
+    itemsTable.classList.remove("hide");
 });
 
 numbered.addEventListener('click', function(){
