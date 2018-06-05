@@ -19,6 +19,7 @@ var vias = document.getElementById('vias');
 var pages = document.getElementById('pages');
 var numbered = document.getElementById('numbered');
 var numeration = document.getElementById('numeration');
+var numerationDiv = document.getElementById('numerationDiv');
 var openSize = document.getElementById('openSize');
 var closedSize = document.getElementById('closedSize');
 var material = document.getElementById('material');
@@ -56,4 +57,12 @@ itemAddButton.addEventListener('click', function(){
     for(var i=0;i<itemChildren.length;i++) {
       itemsContainer.appendChild(itemChildren[i]);
     }
+});
+
+numbered.addEventListener('click', function(){
+  if(numbered.checked) {
+    numerationDiv.classList.remove("hide");
+  } else {
+    numerationDiv.classList.add("hide");
+  }
 });

@@ -11,3 +11,6 @@ body {
   max-width: 600px;
   max-height: 90%;
 }
+.hide {
+  display: none;
+}
