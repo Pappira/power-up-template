@@ -326,18 +326,39 @@ TrelloPowerUp.initialize({
   },
   'board-buttons': function(t, options){
     return [{
-      // we can either provide a button that has a callback function
-      // that callback function should probably open a popup, overlay, or boardBar
-      icon: WHITE_ICON,
-      text: 'Popup',
-      callback: boardButtonCallback
-    }, {
-      // or we can also have a button that is just a simple url
-      // clicking it will open a new tab at the provided url
-      icon: WHITE_ICON,
-      text: 'URL',
-      url: 'https://trello.com/inspiration',
-      target: 'Inspiring Boards' // optional target for above url
+      text: 'Nuevo Presupuesto',
+      callback: function(t){
+        return t.modal({
+          url: './new-card.html', // The URL to load for the iframe
+          args: { text: 'Hello' }, // Optional args to access later with t.arg('text') on './modal.html'
+          accentColor: '#F2D600', // Optional color for the modal header 
+          height: 500, // Initial height for iframe; not used if fullscreen is true
+          fullscreen: true, // Whether the modal should stretch to take up the whole screen
+          callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
+          title: 'Nuevo Presupuesto', // Optional title for modal header
+          // You can add up to 3 action buttons on the modal header - max 1 on the right side.
+          actions: [{
+            icon: GRAY_ICON,
+            url: 'https://google.com', // Opens the URL passed to it.
+            alt: 'Leftmost',
+            position: 'left',
+          }, {
+            icon: GRAY_ICON,
+            callback: (tr) => tr.popup({ // Callback to be called when user clicks the action button.
+              title: 'Settings',
+              url: 'settings.html',
+              height: 164,
+            }),
+            alt: 'Second from left',
+            position: 'left',
+          }, {
+            icon: GRAY_ICON,
+            callback: () => console.log('🏎'),
+            alt: 'Right side',
+            position: 'right',
+          }],
+        });
+      }
     }];
   },
   'card-badges': function(t, options){
