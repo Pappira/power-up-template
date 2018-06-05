@@ -41,9 +41,9 @@ itemAddButton.addEventListener('click', function(){
     weight, color, inkQuantity, inkDetail, phases, design, finishes]
     .map(function(itemElement){
       var value = undefined;
-      if(itemElement.value){
+      if(itemElement.type !== "checkbox"){
         value = itemElement.value;
-      } else if(itemElement.checked !== undefined) {
+      } else {
         value = itemElement.checked ? "Si" : "No";
       }
 
