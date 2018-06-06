@@ -53,7 +53,10 @@
             </tr>
           </table>
         </div>
-        
+      </section>
+      <hr/>
+      <section>
+        <h4>Agregar Item</h4>
         <label for="itemName">Nombre</label>
         <input type="text" id="itemName" required/>
         <label for="vias">Vias</label>
@@ -88,21 +91,22 @@
           <option value="Doble faz">Doble faz</option>
         </select>
         <label for="design"><input type="checkbox" id="design"/> Incluye diseño?</label>
+        
         <label for="finishes">Terminaciones</label>
-        <input type="textarea" id="finishes"/>
+        <textarea id="finishes"/>
         <label for="hardCoverage"><input type="checkbox" id="hardCoverage"/> Plenos de fondo?</label>
         <label for="printer">Impresora</label>
-        <input type="textarea" id="printer"/>
+        <input type="text" id="printer"/>
         <label for="cutsPerSheet">Cortes por Hoja</label>
-        <input type="textarea" id="cutsPerSheet"/>
+        <input type="number" id="cutsPerSheet"/>
         <label for="quantityPerLayout">Armado por Pliego</label>
-        <input type="textarea" id="quantityPerLayout"/>
+        <input type="number" id="quantityPerLayout"/>
         <label for="layoutSize">Tamaño del Pliego</label>
-        <input type="textarea" id="layoutSize"/>
-        <label for="sheetWaste">Dermasía o Merma</label>
-        <input type="textarea" id="sheetWaste"/>
+        <input type="text" id="layoutSize"/>
+        <label for="sheetWaste">Demasía o Merma</label>
+        <input type="number" id="sheetWaste"/>
         <button id="itemAddButton" class="mod-primary">Agregar item</button>
-      </section>
+      </section>    
       <hr/>
       <section>
         <h3>Notificación de inactividad</h3>
