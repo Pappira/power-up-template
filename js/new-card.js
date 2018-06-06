@@ -39,7 +39,16 @@ var quantityPerLayout = document.getElementById('quantityPerLayout');
 var layoutSize = document.getElementById('layoutSize');
 var sheetWaste = document.getElementById('sheetWaste');
 
+var addItemSection = document.getElementById('addItemSection');
+var itemAddSectionButton = document.getElementById('itemAddSectionButton');
 var itemAddButton = document.getElementById('itemAddButton');
+var createCardButton = document.getElementById('createCardButton');
+
+var price = document.getElementById('price');
+var deliveryDelay = document.getElementById('deliveryDelay');
+var customerComments = document.getElementById('customerComments');
+var paymentWay = document.getElementById('paymentWay');
+var officeComments = document.getElementById('officeComments');
 
 var items = [];
 
@@ -84,4 +93,8 @@ numbered.addEventListener('click', function(){
     numerationDiv.classList.add("hide");
     numeration.value = "";
   }
+});
+
+itemAddSectionButton.addEventListener('click', function(){
+  addItemSection.classList.toggle("hide");
 });

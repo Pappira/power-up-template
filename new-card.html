@@ -59,9 +59,11 @@
             </tr>
           </table>
         </div>
+
+        <button id="itemAddSectionButton" class="mod-secondary">Agregar item</button>
       </section>
       <hr/>
-      <section>
+      <section id="addItemSection" class="hide">
         <h4>Agregar Item</h4>
         <label for="itemName">Nombre</label>
         <input type="text" id="itemName" required/>
@@ -115,15 +117,23 @@
       </section>    
       <hr/>
       <section>
-        <h3>Notificación de inactividad</h3>
-        <label for="inactivityShowDays">Mostrar a partir (en días)</label>
-        <input type="number" id="inactivityShowDays"/>
-        <label for="inactivityCriticalDays">Nivel crítico a partir de (en días)</label>
-        <input type="number" id="inactivityCriticalDays"/>
-        <input type="hidden" id="inactivityEnabled"/>
-        <button id="inactivitySave" class="mod-primary">Guardar</button>
-        <button id="inactivityEnable" class="mod-primary">Habilitar</button>
-        <button id="inactivityDisable" class="mod-danger">Deshabilitar</button>
+        <label for="price">Precio</label>
+        <input type="number" id="price"/>
+        <label for="deliveryDelay">Demora (días)</label>
+        <input type="number" id="deliveryDelay"/>
+        <label for="customerComments">Comentarios al cliente</label>
+        <textarea id="customerComments"></textarea>
+        <label for="paymentWay">Forma de pago</label>
+        <select id="paymentWay">
+            <option value="Seña 40% al confirmar el trabajo y restante contado contra entrega">Seña 40% al confirmar el trabajo y restante contado contra entrega</option>
+            <option value="Seña 50% al confirmar el trabajo y restante contado contra entrega">Seña 50% al confirmar el trabajo y restante contado contra entrega</option>
+            <option value="Contado contra entrega">Contado contra entrega</option>
+            <option value="A 30 días de fehca de factura">A 30 días de fehca de factura</option>
+            <option value="SIIF 30 días">SIIF 30 días</option>
+        </select>
+        <label for="officeComments">Comentarios al taller</label>
+        <textarea id="officeComments"></textarea>
+        <button id="createCardButton" class="mod-primary">Crear</button>
       </section>
     </div> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
