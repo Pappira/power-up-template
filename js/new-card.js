@@ -84,7 +84,7 @@ itemAddButton.addEventListener('click', function(){
     }
     itemsTable.appendChild(tr);
     itemsContainer.classList.remove("hide");
-    goToHashtag("#itemsTable");
+    goToHashtag("#");
 });
 
 numbered.addEventListener('click', function(){
