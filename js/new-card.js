@@ -84,6 +84,7 @@ itemAddButton.addEventListener('click', function(){
     }
     itemsTable.appendChild(tr);
     itemsContainer.classList.remove("hide");
+    location.hash = "#itemsContainer";
 });
 
 numbered.addEventListener('click', function(){
