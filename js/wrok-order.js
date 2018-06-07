@@ -10,7 +10,7 @@ var workOrderPDF = function(){
 
 
     doc.addImage(diagonalLogo, 'JPEG', 10.5, 5, 97, 26); 
-    writeTextInDoc(doc,"Prometido","<Prometido>",132.5,10,67);
+    writeTextInDoc(doc,"Prometido","<Prometido>",132.5,8,67);
     writeTextInDoc(doc,"Orden N°","<Orden n°>",132.5,19,27);
     writeTextInDoc(doc,"Fecha de Ingreso","<Fecha de Ingreso>",172,19,27);
     writeTextInDoc(doc,"Nombre / Empresa","<Nombre / Empresa>",10.5,32,118);
