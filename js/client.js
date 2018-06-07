@@ -192,6 +192,13 @@ var boardButtonCallback = function(t){
   });
 };
 
+var downloadWorkOrderPdf = function(){
+  return  {
+    text: 'WorkOrder PDF',
+    callback: workOrderPDF
+  };
+};
+
 var pdf = function(){
   return  {
     text: 'Download PDF',
@@ -331,6 +338,7 @@ TrelloPowerUp.initialize({
   'board-buttons': function(t, options){
     var buttons = [];
     buttons.push(pdf());
+    buttons.push(downloadWorkOrderPdf());
     buttons.push({
       text: 'Nuevo Presupuesto modal',
       callback: function(t){
