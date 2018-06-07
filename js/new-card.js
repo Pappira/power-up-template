@@ -117,7 +117,12 @@ numbered.addEventListener('click', function(){
 var getTrelloCardDescription = function (estimate){
   var description = "";
   description += "#" + estimate.workType + "\n";
-  description += "Cantidad: **" + estimate.workQuantity + "**\n";
+  if(estimate.workQuantity) {
+    description += estimate.workQuantity + " unidades\n";
+  }
+  if(estimate.deliveryDelay) {
+    description += estimate.deliveryDelay + " días de producción\n";
+  }
   for (var i = 0; i < estimate.items.length; i++){
     var item = estimate.items[i];
     var descriptionObject = {};
@@ -128,10 +133,10 @@ var getTrelloCardDescription = function (estimate){
         (item.weight!=null&&item.weight!=""?(item.weight + "gr. "):"") + item.color;
     }
     if (item.vias != null && item.vias!="" && item.vias==1){
-      descriptionObject.vias = item.vias;
+      descriptionObject.vias = item.vias + " vías";
     }
     if (item.pages != null && item.pages!="" && item.pages==1){
-      descriptionObject.pages = item.pages;
+      descriptionObject.pages = item.pages + " páginas";
     }
     if (item.inkQuantity != null && item.inkQuantity !=""){
       if(item.phases == "Simple faz"){
@@ -144,10 +149,10 @@ var getTrelloCardDescription = function (estimate){
       descriptionObject.size = item.openSize;
     } else {
       if(item.openSize != null) {
-        descriptionObject.openSize = item.openSize;
+        descriptionObject.openSize = item.openSize + " (abierto)";
       }
       if(item.closedSize != null) {
-        descriptionObject.closedSize = item.closedSize;
+        descriptionObject.closedSize = item.closedSize + " (cerrado)";
       }
     }
     
@@ -156,9 +161,40 @@ var getTrelloCardDescription = function (estimate){
 
     var descriptionArray = Object.keys(descriptionObject).map(function(itemKey, index) {
       var value = descriptionObject[itemKey];
-      return convertHeaderToTextInSpanish(itemKey) + ": **" + value + "**";
+      return ">" + value;
     });
     description += "\n##" +name + "\n"+ descriptionArray.join("\n");
+  }
+  if(estimate.customerComments){
+    description += "\n##Comentarios al cliente\n" + estimate.customerComments;
+  }
+  if(estimate.officeComments){
+    description += "\n##Comentarios al taller\n" + estimate.officeComments;
+  }
+
+  if(estimate.price){
+    description += "\n\n---\n\n##Total $ " + estimate.price;
+  }
+  if(estimate.contactName || estimate.companyName || estimate.companyAlias || estimate.rut || estimate.tel || estimate.email){
+    description += "\n\n---\n\n##Datos de contacto";
+    if(estimate.companyAlias){
+      description += "\n>" + estimate.companyAlias;
+    }
+    if(estimate.contactName){
+      description += "\n>" + estimate.contactName;
+    }
+    if(estimate.email){
+      description += "\n>" + estimate.email;
+    }
+    if(estimate.tel){
+      description += "\n>" + estimate.tel;
+    }
+    if(estimate.companyName){
+      description += "\n>" + estimate.companyName;
+    }
+    if(estimate.rut){
+      description += "\n>" + estimate.rut;
+    }
   }
   return description;
 };
@@ -243,6 +279,10 @@ var getTrelloCardName = function(estimate){
 var createCard = function(){
   var estimate = createEstimateObjectFromForm();
   var cardToSave = {idList: listId, desc: getTrelloCardDescription(estimate), name: getTrelloCardName(estimate)};
+  if(estimate.deliveryDelay){
+    //TODO Agregar due date a la tarjeta
+    // due: mm/dd/yyy
+  }
   startLoader();
   createNewTrelloCard(t, cardToSave, function(card) {
     setTimeout(function () {
