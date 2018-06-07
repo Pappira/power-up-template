@@ -251,7 +251,7 @@ var createCard = function(){
           t.showCard(card.id);
           t.closeModal();
         });
-    }, 1000);
+    }, 1500);
   });
 };
 
