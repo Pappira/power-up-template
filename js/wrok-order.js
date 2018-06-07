@@ -14,12 +14,12 @@ var workOrderPDF = function(){
 // margen izquierdo 10
 // largo 28
 // separacion 5,5
-    var firstColumn = (separation+normalBoxLength)+leftMargin;
-    var secondColumn = 2*(separation+normalBoxLength)+leftMargin
-    var thirdColumn = 3*(separation+normalBoxLength)+leftMargin;
-    var fourthColumn = 4*(separation+normalBoxLength)+leftMargin;
-    var fifthColumn = 5*(separation+normalBoxLength)+leftMargin;
-    var sixthColumn = 6*(separation+normalBoxLength)+leftMargin;
+    var firstColumn = leftMargin;
+    var secondColumn = (separation+normalBoxLength)+leftMargin
+    var thirdColumn = 2*(separation+normalBoxLength)+leftMargin;
+    var fourthColumn = 3*(separation+normalBoxLength)+leftMargin;
+    var fifthColumn = 4*(separation+normalBoxLength)+leftMargin;
+    var sixthColumn = 5*(separation+normalBoxLength)+leftMargin;
 
     doc.addImage(diagonalLogo, 'JPEG', leftMargin, 5, 97, 26); 
     writeTextInDoc(doc,"Prometido","<Prometido>",fourthColumn,8,67);
