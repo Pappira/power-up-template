@@ -53,6 +53,11 @@ var officeComments = document.getElementById('officeComments');
 var items = [];
 var cardInfoKey = 'pappira.cardInfo';
 var listId = '5a9ef0ce024c776a21220836';
+var estimateFields = [companyAlias, companyName, rut, contactName, email, tel, 
+  workType, workQuantity, generalFinishes, price, deliveryDelay, customerComments, paymentWay, officeComments];
+var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
+    weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, printer, cutsPerSheet, quantityPerLayout,
+    layoutSize, sheetWaste];
 
 t.render(function(){
   return t.get('card', 'shared', cardInfoKey)
@@ -64,10 +69,6 @@ t.render(function(){
 });
 
 itemAddButton.addEventListener('click', function(){
-  var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
-    weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, printer, cutsPerSheet, quantityPerLayout,
-    layoutSize, sheetWaste];
-
     var item = {};
 
     itemChildren = itemChildren.map(function(itemElement){
@@ -238,13 +239,6 @@ createCardButton.addEventListener('click', function(){
 
 var createEstimateObjectFromForm = function() {
   var estimate = {};
-  var estimateFields = [
-    companyAlias, companyName, rut, contactName, email, tel, 
-    workType, workQuantity, generalFinishes, itemsContainer, itemsTable, itemName, 
-    vias, pages, numbered, numeration, numerationDiv, openSize, closedSize, material, 
-    weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, 
-    printer, cutsPerSheet, quantityPerLayout, layoutSize, sheetWaste, 
-    addItemSection, price, deliveryDelay, customerComments, paymentWay, officeComments];
 
   for(var i=0;i<estimateFields.length;i++){
     var estimateField = estimateFields[i];
@@ -259,14 +253,6 @@ var createEstimateObjectFromForm = function() {
 };
 
 var loadFormFromEstimateObject = function(estimate) {
-  var estimateFields = [
-    companyAlias, companyName, rut, contactName, email, tel, 
-    workType, workQuantity, generalFinishes, itemsContainer, itemsTable, itemName, 
-    vias, pages, numbered, numeration, numerationDiv, openSize, closedSize, material, 
-    weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, 
-    printer, cutsPerSheet, quantityPerLayout, layoutSize, sheetWaste, 
-    addItemSection, price, deliveryDelay, customerComments, paymentWay, officeComments];
-
   for(var i=0;i<estimateFields.length;i++){
     var estimateField = estimateFields[i];
     if(estimateField.type !== "checkbox"){
