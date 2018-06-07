@@ -142,15 +142,20 @@ var getTrelloCardDescription = function (estimate){
     }
     if (item.openSize != null && item.closedSize != null && item.openSize == item.closedSize){
       descriptionObject.size = item.openSize;
+    } else {
+      if(item.openSize != null) {
+        descriptionObject.openSize = item.openSize;
+      }
+      if(item.closedSize != null) {
+        descriptionObject.closedSize = item.closedSize;
+      }
     }
-    // Como pondriamos tamaño abierto y cerrado si no son iguales?
-    if (item.design == false){
-      descriptionObject.design = item.design;
-    }
+    
+    descriptionObject.design = item.design ? "Si" : "No";
     var name = item.itemName;
 
     var descriptionArray = Object.keys(descriptionObject).map(function(itemKey, index) {
-      var value = item[itemKey];
+      var value = descriptionObject[itemKey];
       return convertHeaderToTextInSpanish(itemKey) + ": **" + value + "**";
     });
     description += "\n##" +name + "\n"+ descriptionArray.join("\n");
