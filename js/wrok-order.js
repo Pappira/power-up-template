@@ -2,7 +2,7 @@
 var workOrderPDF = function(){
 
     var pdf = new jsPDF('p', 'pt', 'letter');
-    var source = '<div style="text-align:center;">Page <span class="pageCounter"></span>/<span class="totalPages"></span></div><footer><div style="text-align:center;">Page <span class="pageCounter"></span>/<span class="totalPages"></span></div></footer>';
+    var source = $('#')[0];//'<div style="text-align:center;">Page <span class="pageCounter"></span>/<span class="totalPages"></span></div><footer><div style="text-align:center;">Page <span class="pageCounter"></span>/<span class="totalPages"></span></div></footer>';
 
     specialElementHandlers = {
         '#bypassme': function (element, renderer) {
