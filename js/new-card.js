@@ -265,23 +265,20 @@ var loadFormFromEstimateObject = function(estimate) {
   if(estimate.items && estimate.items.length) {
     for(var i=0;i<estimate.items.length;i++){
       var tr = document.createElement("tr");
-      var itemColumns = estimate.items[i].map(function(item){
+      var itemColumns = estimate.items[i].keys().map(function(itemAttribute){
         var value = "";
-        var itemAttributes = item.keys();
-        for(var i=0;i<itemAttributes.length;i++){
-          var itemElement = eval(itemAttributes[i]);
-          var value = "";
-          if(itemElement.type !== "checkbox"){
-            itemElement.value = item[itemElement];
-            value = item[itemElement];
-          } else {
-            itemElement.checked = item[itemElement];
-            value = itemElement.checked ? "Si" : "No";
-          }
-          var td = document.createElement("td");
-          td.appendChild(document.createTextNode(value));
-          return td;
+        var itemElement = eval(itemAttribute);
+        var value = "";
+        if(itemElement.type !== "checkbox"){
+          itemElement.value = item[itemElement];
+          value = item[itemElement];
+        } else {
+          itemElement.checked = item[itemElement];
+          value = itemElement.checked ? "Si" : "No";
         }
+        var td = document.createElement("td");
+        td.appendChild(document.createTextNode(value));
+        return td;
       });
       for(var j=0;j<itemColumns.length;j++){
         tr.appendChild(itemColumns[j]);
