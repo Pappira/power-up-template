@@ -117,7 +117,7 @@ numbered.addEventListener('click', function(){
 var getTrelloCardDescription = function (estimate){
   var description = "";
   description += "#" + estimate.workType + "\n";
-  description += "Cantidad: **" + trabajo.workQuantity + "**\n";
+  description += "Cantidad: **" + estimate.workQuantity + "**\n";
   for (var i = 1; i < estimate.items.length; i++){
     var item = estimate.items[i];
 
