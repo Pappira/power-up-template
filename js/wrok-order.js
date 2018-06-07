@@ -7,10 +7,19 @@ var workOrderPDF = function(){
 
     doc.setFont("arial");
     doc.setFontSize(10);
-    doc.text(10.5+97+25, 14, 'Prometido');
-    doc.text(10.5+97+25+27+20, 14, '<FechaPrometido>', null, null, 'center');
-    doc.rect(10.5+97+25+27, 10, 40, 5); 
+   
+    writeTextInDoc(doc,"Prometido","<Prometido>",132.5,14,67);
+    writeTextInDoc(doc,"Orden N°","<Orden n°>",132.5,24,27);
     //doc.setFontType("bold");
     //doc.text(35, 25, 'Paranyan loves jsPDF');
     doc.save('demo.pdf');
+};
+
+var writeTextInDoc = function(doc,name,value,leftFirstText,height,boxLength){
+    doc.text(leftFirstText, height, name);
+    doc.setFontType("bold");
+    doc.text(leftFirstText+boxLength/2, height+5, value, null, null, 'center');
+    doc.rect(leftFirstText, height+1, boxLength, 5); 
+    doc.setFontType("normal");
+    return doc;
 };
