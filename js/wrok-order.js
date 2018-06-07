@@ -10,14 +10,19 @@ var workOrderPDF = function(){
 
 
     doc.addImage(diagonalLogo, 'JPEG', 10.5, 5, 97, 26); 
-    writeTextInDoc(doc,"Prometido","<Prometido>",132.5,10,67);
+    writeTextInDoc(doc,"Prometido","<Prometido>",132.5,8,67);
     writeTextInDoc(doc,"Orden N°","<Orden n°>",132.5,19,27);
     writeTextInDoc(doc,"Fecha de Ingreso","<Fecha de Ingreso>",172,19,27);
     writeTextInDoc(doc,"Nombre / Empresa","<Nombre / Empresa>",10.5,32,118);
     writeTextInDoc(doc,"Cantidad","<Cantidad>",132.5,32,67);
-    writeTextInDoc(doc,"Trabajo","<Trabajo>",10.5,47,118);
-    writeTextInDoc(doc,"Páginas","<Páginas>",132.5,47,27);
-    writeTextInDoc(doc,"Vías","<Vías>",172,47,27);
+    writeTextInDoc(doc,"Trabajo","<Trabajo>",10.5,43,118);
+    writeTextInDoc(doc,"Páginas","<Páginas>",132.5,43,27);
+    writeTextInDoc(doc,"Vías","<Vías>",172,43,27);
+    writeTextInDoc(doc,"Armado x Pliego","<Armado>",10.5,54,27);
+    writeTextInDoc(doc,"Faces","<Faces>",41.5,54,27);
+    writeTextInDoc(doc,"Tamaño Abierto","<Abierto>",73,54,27);
+    writeTextInDoc(doc,"Tamaño Cerrado","<Vías>",104.5,54,27);
+    writeTextInDoc(doc,"Numerado","<Numerado>",136,54,27);
     //doc.setFontType("bold");
     //doc.text(35, 25, 'Paranyan loves jsPDF');
     doc.save('demo.pdf');
