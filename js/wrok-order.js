@@ -14,16 +14,19 @@ var workOrderPDF = function(){
     writeTextInDoc(doc,"Orden N°","<Orden n°>",132.5,19,27);
     writeTextInDoc(doc,"Fecha de Ingreso","<Fecha de Ingreso>",172,19,27);
     writeTextInDoc(doc,"Nombre / Empresa","<Nombre / Empresa>",10.5,32,118);
+    writeTextInDoc(doc,"Cantidad","<Cantidad>",132.5,32,67);
     writeTextInDoc(doc,"Trabajo","<Trabajo>",10.5,47,118);
+    writeTextInDoc(doc,"Páginas","<Páginas>",132.5,47,118);
+    writeTextInDoc(doc,"Vías","<Vías>",172,47,118);
     //doc.setFontType("bold");
     //doc.text(35, 25, 'Paranyan loves jsPDF');
     doc.save('demo.pdf');
 };
 
 var writeTextInDoc = function(doc,name,value,x,y,boxLength){
-    doc.text(x, y + rowSize/2, name);
+    doc.text(x, y + rowSize-1.5, name);
     doc.setFontType("bold");
-    doc.text(x+boxLength/2, y+rowSize + rowSize/2, value, null, null, 'center');
+    doc.text(x+boxLength/2, y+rowSize + rowSize-1.5, value, null, null, 'center');
     doc.rect(x, y+rowSize, boxLength, rowSize); 
     doc.setFontType("normal");
     return doc;
