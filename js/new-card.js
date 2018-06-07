@@ -118,44 +118,44 @@ var getTrelloCardDescription = function (estimate){
   var description = "";
   description += "#" + estimate.workType + "\n";
   description += "Cantidad: **" + estimate.workQuantity + "**\n";
-  for (var i = 1; i < estimate.items.length; i++){
+  for (var i = 0; i < estimate.items.length; i++){
     var item = estimate.items[i];
+    var descriptionObject = {};
 
     //El material debe ser material + " " + weight + "gr. " + color
     if (item.material !=null && item.material != ""){
-      item.material = item.material + " " + 
+      descriptionObject.material = item.material + " " + 
         (item.weight!=null&&item.weight!=""?(item.weight + "gr. "):"") + item.color;
-      delete item.weight;
-      delete item.color;
     }
     if (item.vias != null && item.vias!="" && item.vias==1){
-      delete item.vias;
+      descriptionObject.vias = item.vias;
     }
     if (item.pages != null && item.pages!="" && item.pages==1){
-      delete item.pages;
+      descriptionObject.pages = item.pages;
     }
     if (item.inkQuantity != null && item.inkQuantity !=""){
       if(item.phases == "Simple faz"){
-        item.inkDetail = item.inkQuantity + "/0 " + item.inkDetail;
+        descriptionObject.inkDetail = item.inkQuantity + "/0 " + item.inkDetail;
       }else{
-        item.inkDetail = item.inkQuantity + "/" + item.inkQuantity + " " + item.inkDetail;
+        descriptionObject.inkDetail = item.inkQuantity + "/" + item.inkQuantity + " " + item.inkDetail;
       }
-      delete item.inkQuantity;
     }
     if (item.openSize != null && item.closedSize != null && item.openSize == item.closedSize){
-      item.size = item.openSize;
-      delete item.openSize;
-      delete item.closedSize;
+      descriptionObject.size = item.openSize;
+    } else {
+      if(item.openSize != null) {
+        descriptionObject.openSize = item.openSize;
+      }
+      if(item.closedSize != null) {
+        descriptionObject.closedSize = item.closedSize;
+      }
     }
-    delete item.numbered;
-    if (item.design == false){
-      delete item.design;
-    }
+    
+    descriptionObject.design = item.design ? "Si" : "No";
     var name = item.itemName;
-    delete item.itemName;
 
-    var descriptionArray = Object.keys(item).map(function(itemKey, index) {
-      var value = item[itemKey];
+    var descriptionArray = Object.keys(descriptionObject).map(function(itemKey, index) {
+      var value = descriptionObject[itemKey];
       return convertHeaderToTextInSpanish(itemKey) + ": **" + value + "**";
     });
     description += "\n##" +name + "\n"+ descriptionArray.join("\n");
@@ -236,9 +236,13 @@ itemAddSectionButton.addEventListener('click', function(){
   addItemSection.classList.toggle("hide");
 });
 
+var getTrelloCardName = function(estimate){
+  return estimate.workQuantity + "x" + estimate.workType + " - " + estimate.companyAlias;
+};
+
 var createCard = function(){
   var estimate = createEstimateObjectFromForm();
-  var cardToSave = {idList: listId, desc: "Prueba", name: "Prueba"};
+  var cardToSave = {idList: listId, desc: getTrelloCardDescription(estimate), name: getTrelloCardName(estimate)};
   createNewTrelloCard(t, cardToSave).then(function(card) {
     t.set(card.id, 'shared', cardInfoKey, estimate)
       .then(function(){
