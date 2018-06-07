@@ -32,7 +32,7 @@ var workOrderPDF = function(){
     writeTextInDoc(doc,"Tamaño Cerrado","<Vías>",fourthColumn,54, normalBoxLength);
     writeTextInDoc(doc,"Numerado","<Numerado>",fifthColumn, 54, normalBoxLength);
 
-    writeTextInDoc(doc,"","Papel",fifthColumn, 65, normalBoxLength,[0,0,0],[255,255,255]);
+    writeTextInDoc(doc,"","Papel",firstColumn, 65, normalBoxLength,[0,0,0],[255,255,255]);
 
 
 
@@ -40,6 +40,7 @@ var workOrderPDF = function(){
 };
 
 var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fontColor){
+    var fill;
     doc.text(x, y + rowSize-1.5, name);
     doc.setFontType("bold");
     if(fontColor){
@@ -50,7 +51,7 @@ var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fo
         fill = 'F';
         doc.setFillColor(boxBackgroundColor);
     }
-    doc.rect(x, y+rowSize, boxLength, rowSize,'F');
+    doc.rect(x, y+rowSize, boxLength, rowSize,fill);
 
     resetDocProperties(doc);
     return doc;
