@@ -12,6 +12,7 @@ var tel = document.getElementById('tel');
 
 var workType = document.getElementById('workType');
 var workQuantity = document.getElementById('workQuantity');
+var generalFinishes = document.getElementById('generalFinishes');
 
 var itemsContainer = document.getElementById('itemsContainer');
 var itemsTable = document.getElementById('itemsTable');
@@ -31,8 +32,23 @@ var inkDetail = document.getElementById('inkDetail');
 var phases = document.getElementById('phases');
 var design = document.getElementById('design');
 var finishes = document.getElementById('finishes');
+var hardCoverage = document.getElementById('hardCoverage');
+var printer = document.getElementById('printer');
+var cutsPerSheet = document.getElementById('cutsPerSheet');
+var quantityPerLayout = document.getElementById('quantityPerLayout');
+var layoutSize = document.getElementById('layoutSize');
+var sheetWaste = document.getElementById('sheetWaste');
 
+var addItemSection = document.getElementById('addItemSection');
+var itemAddSectionButton = document.getElementById('itemAddSectionButton');
 var itemAddButton = document.getElementById('itemAddButton');
+var createCardButton = document.getElementById('createCardButton');
+
+var price = document.getElementById('price');
+var deliveryDelay = document.getElementById('deliveryDelay');
+var customerComments = document.getElementById('customerComments');
+var paymentWay = document.getElementById('paymentWay');
+var officeComments = document.getElementById('officeComments');
 
 var items = [];
 
@@ -42,12 +58,13 @@ t.render(function(){
 
 itemAddButton.addEventListener('click', function(){
   var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
-    weight, color, inkQuantity, inkDetail, phases, design, finishes];
+    weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, printer, cutsPerSheet, quantityPerLayout,
+    layoutSize, sheetWaste];
 
     var item = {};
 
     itemChildren = itemChildren.map(function(itemElement){
-      var value = undefined;
+      var value = "";
       if(itemElement.type !== "checkbox"){
         value = itemElement.value;
         item[itemElement.id] = itemElement.value;
@@ -56,11 +73,9 @@ itemAddButton.addEventListener('click', function(){
         item[itemElement.id] = itemElement.checked;
       }
 
-      if(value) {
-        var td = document.createElement("td");
-        td.appendChild(document.createTextNode(value));
-        return td;
-      }
+      var td = document.createElement("td");
+      td.appendChild(document.createTextNode(value));
+      return td;
     });
     items.push(item);
     var tr = document.createElement("tr");
@@ -69,6 +84,7 @@ itemAddButton.addEventListener('click', function(){
     }
     itemsTable.appendChild(tr);
     itemsContainer.classList.remove("hide");
+    goToHashtag("#");
 });
 
 numbered.addEventListener('click', function(){
@@ -76,8 +92,10 @@ numbered.addEventListener('click', function(){
     numerationDiv.classList.remove("hide");
   } else {
     numerationDiv.classList.add("hide");
+    numeration.value = "";
   }
 });
+<<<<<<< HEAD
 var createTrelloCardObject = function (estimate){
   var description = "";
   description += "#" + estimate.workType + "\n";
@@ -195,3 +213,9 @@ var convertHeaderToTextInSpaniscase = function (header){
   }
   return "";
 };
+=======
+
+itemAddSectionButton.addEventListener('click', function(){
+  addItemSection.classList.toggle("hide");
+});
+>>>>>>> 5a2361e41540ef53557c888508e5d23c235a8d45
