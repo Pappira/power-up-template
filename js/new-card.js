@@ -244,10 +244,13 @@ var createCard = function(){
   var estimate = createEstimateObjectFromForm();
   var cardToSave = {idList: listId, desc: getTrelloCardDescription(estimate), name: getTrelloCardName(estimate)};
   createNewTrelloCard(t, cardToSave, function(card) {
-    t.set(card.id, 'shared', cardInfoKey, estimate)
-      .then(function(){
-        t.closeModal();
-      });
+    setTimeout(function () {
+      t.set(card.id, 'shared', cardInfoKey, estimate)
+        .then(function(){
+          t.showCard(card.id);
+          t.closeModal();
+        });
+    }, 1000);
   });
 };
 
