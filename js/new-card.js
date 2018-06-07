@@ -151,8 +151,8 @@ var getTrelloCardDescription = function (estimate){
     if (item.design == false){
       delete item.design;
     }
-    var name = item.name;
-    delete item.name;
+    var name = item.itemName;
+    delete item.itemName;
 
     var descriptionArray = Object.keys(item).map(function(itemKey, index) {
       var value = item[itemKey];
@@ -168,7 +168,7 @@ String.prototype.replaceAll = function(search, replacement) {
   return target.replace(new RegExp(search, 'g'), replacement);
 };
 
-var convertHeaderToTextInSpaniscase = function (header){
+var convertHeaderToTextInSpanish = function (header){
   switch (header){
     case "companyAlias":
       return "Nombre Fantasía";
@@ -310,7 +310,7 @@ var loadFormFromEstimateObject = function(estimate) {
       itemsTable.appendChild(tr);
     }
     itemsContainer.classList.remove("hide");
-    
+
     items = estimate.items;
   }
 };
