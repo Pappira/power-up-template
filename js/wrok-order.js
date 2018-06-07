@@ -15,9 +15,14 @@ var workOrderPDF = function(){
     writeTextInDoc(doc,"Fecha de Ingreso","<Fecha de Ingreso>",172,19,27);
     writeTextInDoc(doc,"Nombre / Empresa","<Nombre / Empresa>",10.5,32,118);
     writeTextInDoc(doc,"Cantidad","<Cantidad>",132.5,32,67);
-    writeTextInDoc(doc,"Trabajo","<Trabajo>",10.5,47,118);
-    writeTextInDoc(doc,"Páginas","<Páginas>",132.5,47,27);
-    writeTextInDoc(doc,"Vías","<Vías>",172,47,27);
+    writeTextInDoc(doc,"Trabajo","<Trabajo>",10.5,45,118);
+    writeTextInDoc(doc,"Páginas","<Páginas>",132.5,45,27);
+    writeTextInDoc(doc,"Vías","<Vías>",172,45,27);
+    writeTextInDoc(doc,"Armado x Pliego","<Armado>",10.5,58,27);
+    writeTextInDoc(doc,"Faces","<Faces>",10.5,58,27);
+    writeTextInDoc(doc,"Tamaño Abierto","<Abierto>",10.5,58,27);
+    writeTextInDoc(doc,"Tamaño Cerrado","<Vías>",10.5,58,27);
+    writeTextInDoc(doc,"Numerado","<Numerado>",10.5,58,27);
     //doc.setFontType("bold");
     //doc.text(35, 25, 'Paranyan loves jsPDF');
     doc.save('demo.pdf');
