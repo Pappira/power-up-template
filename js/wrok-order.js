@@ -19,10 +19,10 @@ var workOrderPDF = function(){
     writeTextInDoc(doc,"Páginas","<Páginas>",132.5,43,27);
     writeTextInDoc(doc,"Vías","<Vías>",172,43,27);
     writeTextInDoc(doc,"Armado x Pliego","<Armado>",10.5,54,27);
-    writeTextInDoc(doc,"Faces","<Faces>",10.5,54,27);
-    writeTextInDoc(doc,"Tamaño Abierto","<Abierto>",10.5,54,27);
-    writeTextInDoc(doc,"Tamaño Cerrado","<Vías>",10.5,54,27);
-    writeTextInDoc(doc,"Numerado","<Numerado>",10.5,54,27);
+    writeTextInDoc(doc,"Faces","<Faces>",41.5,54,27);
+    writeTextInDoc(doc,"Tamaño Abierto","<Abierto>",73,54,27);
+    writeTextInDoc(doc,"Tamaño Cerrado","<Vías>",104.5,54,27);
+    writeTextInDoc(doc,"Numerado","<Numerado>",136,54,27);
     //doc.setFontType("bold");
     //doc.text(35, 25, 'Paranyan loves jsPDF');
     doc.save('demo.pdf');
