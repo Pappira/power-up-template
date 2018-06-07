@@ -163,13 +163,13 @@ var getTrelloCardDescription = function (estimate){
       var value = descriptionObject[itemKey];
       return ">" + value;
     });
-    description += "\n##" +name + "\n"+ descriptionArray.join("\n");
+    description += "\n##" +name + "\n"+ descriptionArray.join("\n")+"\n\n";
   }
   if(estimate.customerComments){
-    description += "\n##Comentarios al cliente\n" + estimate.customerComments;
+    description += "\n\n##Comentarios al cliente\n" + estimate.customerComments;
   }
   if(estimate.officeComments){
-    description += "\n##Comentarios al taller\n" + estimate.officeComments;
+    description += "\n\n##Comentarios al taller\n" + estimate.officeComments;
   }
 
   if(estimate.price){
