@@ -67,6 +67,9 @@ t.render(function(){
       saveFunction = updateCard;
       createCardButton.firstChild.data = "Modificar";
     }
+
+    createCardButton.addEventListener('click', saveFunction);
+    
     if(cardInfo){
       loadFormFromEstimateObject(cardInfo);
     }
@@ -230,8 +233,6 @@ var convertHeaderToTextInSpaniscase = function (header){
 itemAddSectionButton.addEventListener('click', function(){
   addItemSection.classList.toggle("hide");
 });
-
-createCardButton.addEventListener('click', saveFunction);
 
 var createCard = function(){
   var estimate = createEstimateObjectFromForm();
