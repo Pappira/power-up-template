@@ -11,7 +11,8 @@ var workOrderPDF = function(){
     writeTextInDoc(doc,"Prometido","<Prometido>",132.5,14,67);
     writeTextInDoc(doc,"Orden N°","<Orden n°>",132.5,24,27);
     writeTextInDoc(doc,"Fecha de Ingreso","<Fecha de Ingreso>",172,24,27);
-    writeTextInDoc(doc,"Nombre / Empresa","<Nombre / Empresa>",10.5,31,27);
+    writeTextInDoc(doc,"Nombre / Empresa","<Nombre / Empresa>",10.5,37,118);
+    writeTextInDoc(doc,"Trabajo","<Trabajo>",10.5,47,118);
     //doc.setFontType("bold");
     //doc.text(35, 25, 'Paranyan loves jsPDF');
     doc.save('demo.pdf');
