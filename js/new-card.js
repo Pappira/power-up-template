@@ -243,6 +243,7 @@ var getTrelloCardName = function(estimate){
 var createCard = function(){
   var estimate = createEstimateObjectFromForm();
   var cardToSave = {idList: listId, desc: getTrelloCardDescription(estimate), name: getTrelloCardName(estimate)};
+  startLoader();
   createNewTrelloCard(t, cardToSave, function(card) {
     setTimeout(function () {
       t.set(card.id, 'shared', cardInfoKey, estimate)
@@ -255,6 +256,7 @@ var createCard = function(){
 };
 
 var updateCard = function() {
+  startLoader();
   t.card('all')
   .then(function(card) {
     var estimate = createEstimateObjectFromForm();
