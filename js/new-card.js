@@ -168,7 +168,7 @@ String.prototype.replaceAll = function(search, replacement) {
   return target.replace(new RegExp(search, 'g'), replacement);
 };
 
-var convertHeaderToTextInSpaniscase = function (header){
+var convertHeaderToTextInSpanish = function (header){
   switch (header){
     case "companyAlias":
       return "Nombre Fantasía";
@@ -310,7 +310,7 @@ var loadFormFromEstimateObject = function(estimate) {
       itemsTable.appendChild(tr);
     }
     itemsContainer.classList.remove("hide");
-    
+
     items = estimate.items;
   }
 };
