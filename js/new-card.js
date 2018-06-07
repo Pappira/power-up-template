@@ -151,8 +151,8 @@ var getTrelloCardDescription = function (estimate){
     if (item.design == false){
       delete item.design;
     }
-    var name = item.name;
-    delete item.name;
+    var name = item.itemName;
+    delete item.itemName;
 
     var descriptionArray = Object.keys(item).map(function(itemKey, index) {
       var value = item[itemKey];
