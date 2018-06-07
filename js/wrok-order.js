@@ -10,10 +10,6 @@ var workOrderPDF = function(){
     var doc = new jsPDF();
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
-//10,44,82,120,158,196
-// margen izquierdo 10
-// largo 28
-// separacion 5,5
     var firstColumn = leftMargin;
     var secondColumn = (separation+normalBoxLength)+leftMargin
     var thirdColumn = 2*(separation+normalBoxLength)+leftMargin;
@@ -27,7 +23,7 @@ var workOrderPDF = function(){
     writeTextInDoc(doc,"Fecha de Ingreso","<Fecha de Ingreso>",sixthColumn,19,normalBoxLength);
     writeTextInDoc(doc,"Nombre / Empresa","<Nombre / Empresa>",firstColumn,32,normalBoxLength*4+separation*3);
     writeTextInDoc(doc,"Cantidad","<Cantidad>",fifthColumn,32,normalBoxLength*2+separation);
-    writeTextInDoc(doc,"Trabajo","<Trabajo>",firstColumn,43,normalBoxLength*4 + separation*3);
+    writeTextInDoc(doc,"Trabajo","<Trabajo>",firstColumn,43,normalBoxLength*4 + separation*3 );
     writeTextInDoc(doc,"Páginas","<Páginas>",fifthColumn,43,normalBoxLength);
     writeTextInDoc(doc,"Vías","<Vías>",sixthColumn,43,normalBoxLength);
     writeTextInDoc(doc,"Armado x Pliego","<Armado>",firstColumn,54,normalBoxLength);
@@ -35,16 +31,37 @@ var workOrderPDF = function(){
     writeTextInDoc(doc,"Tamaño Abierto","<Abierto>",thirdColumn, 54, normalBoxLength);
     writeTextInDoc(doc,"Tamaño Cerrado","<Vías>",fourthColumn,54, normalBoxLength);
     writeTextInDoc(doc,"Numerado","<Numerado>",fifthColumn, 54, normalBoxLength);
-    //doc.setFontType("bold");
-    //doc.text(35, 25, 'Paranyan loves jsPDF');
+
+    writeTextInDoc(doc,"","Papel",firstColumn, 65, normalBoxLength,[0,0,0],[255,255,255]);
+
+
+
     doc.save('demo.pdf');
 };
 
-var writeTextInDoc = function(doc,name,value,x,y,boxLength){
+var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fontColor){
+    var fill;
     doc.text(x, y + rowSize-1.5, name);
+
+    if (boxBackgroundColor){
+        fill = 'F';
+        doc.setFillColor(boxBackgroundColor);
+    }
+    doc.rect(x, y+rowSize, boxLength, rowSize,fill);
+
     doc.setFontType("bold");
+    if(fontColor){
+        doc.setTextColor(fontColor);
+    }
     doc.text(x+boxLength/2, y+rowSize + rowSize-1.5, value, null, null, 'center');
-    doc.rect(x, y+rowSize, boxLength, rowSize); 
-    doc.setFontType("normal");
+
+    resetDocProperties(doc);
     return doc;
 };
+
+var resetDocProperties = function (doc){
+    doc.setFillColor(255,255,255);
+    doc.setFontType("normal");
+    doc.setTextColor(0,0,0);
+
+}
