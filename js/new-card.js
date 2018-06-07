@@ -236,9 +236,13 @@ itemAddSectionButton.addEventListener('click', function(){
   addItemSection.classList.toggle("hide");
 });
 
+var getTrelloCardName = function(estimate){
+  return estimate.workQuantity + "x" + estimate.workType + " - " + estimate.companyAlias;
+};
+
 var createCard = function(){
   var estimate = createEstimateObjectFromForm();
-  var cardToSave = {idList: listId, desc: "Prueba", name: "Prueba"};
+  var cardToSave = {idList: listId, desc: getTrelloCardDescription(estimate), name: getTrelloCardName(estimate)};
   createNewTrelloCard(t, cardToSave).then(function(card) {
     t.set(card.id, 'shared', cardInfoKey, estimate)
       .then(function(){
