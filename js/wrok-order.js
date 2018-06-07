@@ -8,8 +8,8 @@ var workOrderPDF = function(){
     doc.setFont("arial");
     doc.setFontSize(10);
     doc.text(10.5+97+25, 15, 'Prometido');
-    doc.text(10.5+97+25+27+2, 15, '<FechaPrometido>', null, null, 'center');
-    doc.rect(10.5+97+25+27+2, 10, 40, 5); 
+    doc.text(10.5+97+25+27+20, 15, '<FechaPrometido>', null, null, 'center');
+    doc.rect(10.5+97+25+27, 10, 40, 5); 
     //doc.setFontType("bold");
     //doc.text(35, 25, 'Paranyan loves jsPDF');
     doc.save('demo.pdf');
