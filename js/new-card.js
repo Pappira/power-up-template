@@ -262,7 +262,7 @@ var loadFormFromEstimateObject = function(estimate) {
     }
   }
 
-  var itemRows = items.map(function(item){
+  var itemRows = estimate.items.map(function(item){
     var value = "";
     var itemAttributes = item.keys();
     var tr = document.createElement("tr");
@@ -283,5 +283,7 @@ var loadFormFromEstimateObject = function(estimate) {
     itemsTable.appendChild(tr);
     return tr;
   });
-  itemsContainer.classList.remove("hide");
+  if(itemRows) {
+    itemsContainer.classList.remove("hide");
+  }
 };
