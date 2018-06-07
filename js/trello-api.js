@@ -23,10 +23,10 @@ var isAuthorized = function(t){
       }
     });
   };
-  var updateTrelloCard = function(t, card){
+  var updateTrelloCard = function(t, card, success, error){
     return isAuthorized(t).then(function(authorized){
       if(authorized.authorized){
-        return Trello.put("/cards/"+card.id, card);
+        return Trello.put("/cards/"+card.id, card, success, error);
       }
     });
   };
@@ -37,11 +37,10 @@ var isAuthorized = function(t){
       }
     });
   };
-  var createNewTrelloCard = function(t, card){
+  var createNewTrelloCard = function(t, card, success, error){
     return isAuthorized(t).then(function(authorized){
       if(authorized.authorized){
-        return Trello.post("/cards/",card, function(theCard){return theCard;}, 
-            function(error){console.error("An error occurred while creating a card " + error);});
+        return Trello.post("/cards/",card, success, error);
       }
     });
   };
