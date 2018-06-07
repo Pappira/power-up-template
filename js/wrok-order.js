@@ -21,9 +21,9 @@ var workOrderPDF = function(){
 };
 
 var writeTextInDoc = function(doc,name,value,x,y,boxLength){
-    doc.text(x, y + rowSize-1, name);
+    doc.text(x, y + rowSize/2, name);
     doc.setFontType("bold");
-    doc.text(x+boxLength/2, y+rowSize + rowSize-1, value, null, null, 'center');
+    doc.text(x+boxLength/2, y+rowSize + rowSize/2, value, null, null, 'center');
     doc.rect(x, y+rowSize, boxLength, rowSize); 
     doc.setFontType("normal");
     return doc;
