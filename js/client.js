@@ -194,8 +194,8 @@ var boardButtonCallback = function(t){
 
 var downloadWorkOrderPdf = function(){
   return  {
-    text: 'Download PDF',
-    callback: workOrderPDF()
+    text: 'WorkOrder PDF',
+    callback: workOrderPDF
   };
 };
 
