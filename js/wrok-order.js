@@ -24,7 +24,7 @@ var writeTextInDoc = function(doc,name,value,x,y,boxLength){
     doc.text(x, y + rowSize-1, name);
     doc.setFontType("bold");
     doc.text(x+boxLength/2, y+rowSize + rowSize-1, value, null, null, 'center');
-    doc.rect(x, y+1, boxLength, rowSize*2); 
+    doc.rect(x, y+rowSize, boxLength, rowSize); 
     doc.setFontType("normal");
     return doc;
 };
