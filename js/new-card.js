@@ -265,7 +265,7 @@ var loadFormFromEstimateObject = function(estimate) {
   if(estimate.items && estimate.items.length) {
     for(var i=0;i<estimate.items.length;i++){
       var tr = document.createElement("tr");
-      var itemColumns = estimate.items[i].keys().map(function(itemAttribute){
+      var itemColumns = Object.keys(estimate.items[i]).map(function(itemAttribute){
         var value = "";
         var itemElement = eval(itemAttribute);
         var value = "";
