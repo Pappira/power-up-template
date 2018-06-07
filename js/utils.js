@@ -11,3 +11,7 @@ var goToHashtag = function(hashtag){
         window.location.href = hashtag;
     }
 };
+
+var startLoader = function(){
+    document.getElementById('loader').classList.add("loader");
+}
