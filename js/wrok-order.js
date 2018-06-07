@@ -22,12 +22,12 @@ var workOrderPDF = function(){
     var sixthColumn = 5*(separation+normalBoxLength)+leftMargin;
 
     doc.addImage(diagonalLogo, 'JPEG', leftMargin, 5, 97, 26); 
-    writeTextInDoc(doc,"Prometido","<Prometido>",fifthColumn,8,normalBoxLength*2);
+    writeTextInDoc(doc,"Prometido","<Prometido>",fifthColumn,8,normalBoxLength*2+separation);
     writeTextInDoc(doc,"Orden N°","<Orden n°>",fifthColumn,19,normalBoxLength);
     writeTextInDoc(doc,"Fecha de Ingreso","<Fecha de Ingreso>",sixthColumn,19,normalBoxLength);
-    writeTextInDoc(doc,"Nombre / Empresa","<Nombre / Empresa>",firstColumn,32,normalBoxLength*4);
-    writeTextInDoc(doc,"Cantidad","<Cantidad>",fifthColumn,32,normalBoxLength*2);
-    writeTextInDoc(doc,"Trabajo","<Trabajo>",firstColumn,43,normalBoxLength*4);
+    writeTextInDoc(doc,"Nombre / Empresa","<Nombre / Empresa>",firstColumn,32,normalBoxLength*4+separation*3);
+    writeTextInDoc(doc,"Cantidad","<Cantidad>",fifthColumn,32,normalBoxLength*2+separation);
+    writeTextInDoc(doc,"Trabajo","<Trabajo>",firstColumn,43,normalBoxLength*4 + separation*3);
     writeTextInDoc(doc,"Páginas","<Páginas>",fifthColumn,43,normalBoxLength);
     writeTextInDoc(doc,"Vías","<Vías>",sixthColumn,43,normalBoxLength);
     writeTextInDoc(doc,"Armado x Pliego","<Armado>",firstColumn,54,normalBoxLength);
