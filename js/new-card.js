@@ -283,7 +283,7 @@ var loadFormFromEstimateObject = function(estimate) {
     itemsTable.appendChild(tr);
     return tr;
   });
-  if(itemRows) {
+  if(estimate.items && estimate.items.length) {
     itemsContainer.classList.remove("hide");
   }
 };
