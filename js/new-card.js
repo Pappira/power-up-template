@@ -71,7 +71,7 @@ t.render(function(){
 itemAddButton.addEventListener('click', function(){
     var item = {};
 
-    itemChildren = itemChildren.map(function(itemElement){
+    var itemColumns = itemChildren.map(function(itemElement){
       var value = "";
       if(itemElement.type !== "checkbox"){
         value = itemElement.value;
@@ -87,8 +87,8 @@ itemAddButton.addEventListener('click', function(){
     });
     items.push(item);
     var tr = document.createElement("tr");
-    for(var i=0;i<itemChildren.length;i++) {
-      tr.appendChild(itemChildren[i]);
+    for(var i=0;i<itemColumns.length;i++) {
+      tr.appendChild(itemColumns[i]);
     }
     itemsTable.appendChild(tr);
     itemsContainer.classList.remove("hide");
