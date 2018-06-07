@@ -51,9 +51,15 @@ var paymentWay = document.getElementById('paymentWay');
 var officeComments = document.getElementById('officeComments');
 
 var items = [];
+var cardInfoKey = 'pappira.cardInfo';
 
 t.render(function(){
-  return;
+  return t.get('card', 'shared', cardInfoKey)
+  .then(function(cardInfo){
+    if(cardInfo){
+      loadFormFromEstimateObject(cardInfo);
+    }
+  });
 });
 
 itemAddButton.addEventListener('click', function(){
@@ -95,7 +101,7 @@ numbered.addEventListener('click', function(){
     numeration.value = "";
   }
 });
-<<<<<<< HEAD
+
 var createTrelloCardObject = function (estimate){
   var description = "";
   description += "#" + estimate.workType + "\n";
@@ -213,9 +219,82 @@ var convertHeaderToTextInSpaniscase = function (header){
   }
   return "";
 };
-=======
 
 itemAddSectionButton.addEventListener('click', function(){
   addItemSection.classList.toggle("hide");
 });
->>>>>>> 5a2361e41540ef53557c888508e5d23c235a8d45
+
+createCardButton.addEventListener('click', function(){
+  var estimate = createEstimateObjectFromForm();
+  var cardToSave = {idList: listId, desc: "Prueba", name: "Prueba"};
+  createNewTrelloCard(t, cardToSave).then(function(card) {
+    t.set(card.id, 'shared', cardInfoKey, estimate)
+      .then(function(){
+        t.closeModal();
+      });
+  });
+});
+
+var createEstimateObjectFromForm = function() {
+  var estimate = {};
+  var estimateFields = [
+    companyAlias, companyName, rut, contactName, email, tel, 
+    workType, workQuantity, generalFinishes, itemsContainer, itemsTable, itemName, 
+    vias, pages, numbered, numeration, numerationDiv, openSize, closedSize, material, 
+    weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, 
+    printer, cutsPerSheet, quantityPerLayout, layoutSize, sheetWaste, 
+    addItemSection, price, deliveryDelay, customerComments, paymentWay, officeComments];
+
+  for(var i=0;i<estimateFields.length;i++){
+    var estimateField = estimateFields[i];
+    if(estimateField.type !== "checkbox"){
+      estimate[estimateField.id] = estimateField.value;
+    } else {
+      estimate[estimateField.id] = estimateField.checked;
+    }
+  }
+  estimate.items = items;
+  return estimate;
+};
+
+var loadFormFromEstimateObject = function(estimate) {
+  var estimateFields = [
+    companyAlias, companyName, rut, contactName, email, tel, 
+    workType, workQuantity, generalFinishes, itemsContainer, itemsTable, itemName, 
+    vias, pages, numbered, numeration, numerationDiv, openSize, closedSize, material, 
+    weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, 
+    printer, cutsPerSheet, quantityPerLayout, layoutSize, sheetWaste, 
+    addItemSection, price, deliveryDelay, customerComments, paymentWay, officeComments];
+
+  for(var i=0;i<estimateFields.length;i++){
+    var estimateField = estimateFields[i];
+    if(estimateField.type !== "checkbox"){
+       estimateField.value = estimate[estimateField.id];
+    } else {
+      estimateField.checked = estimate[estimateField.id];
+    }
+  }
+
+  var itemRows = items.map(function(item){
+    var value = "";
+    var itemAttributes = item.keys();
+    var tr = document.createElement("tr");
+    for(var i=0;i<itemAttributes.length;i++){
+      var itemElement = eval(itemAttributes[i]);
+      var value = "";
+      if(itemElement.type !== "checkbox"){
+        itemElement.value = item[itemElement];
+        value = item[itemElement];
+      } else {
+        itemElement.checked = item[itemElement];
+        value = itemElement.checked ? "Si" : "No";
+      }
+      var td = document.createElement("td");
+      td.appendChild(document.createTextNode(value));
+      tr.appendChild(td);
+    }
+    itemsTable.appendChild(tr);
+    return tr;
+  });
+  itemsContainer.classList.remove("hide");
+};
