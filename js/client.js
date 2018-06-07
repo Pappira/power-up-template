@@ -329,7 +329,7 @@ TrelloPowerUp.initialize({
     // throw t.NotHandled();
   },
   'board-buttons': function(t, options){
-    var buttons = {};
+    var buttons = [];
     buttons.push(pdf());
     buttons.push({
       text: 'Nuevo Presupuesto modal',
