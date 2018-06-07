@@ -262,28 +262,32 @@ var loadFormFromEstimateObject = function(estimate) {
     }
   }
 
-  var itemRows = estimate.items.map(function(item){
-    var value = "";
-    var itemAttributes = item.keys();
-    var tr = document.createElement("tr");
-    for(var i=0;i<itemAttributes.length;i++){
-      var itemElement = eval(itemAttributes[i]);
-      var value = "";
-      if(itemElement.type !== "checkbox"){
-        itemElement.value = item[itemElement];
-        value = item[itemElement];
-      } else {
-        itemElement.checked = item[itemElement];
-        value = itemElement.checked ? "Si" : "No";
-      }
-      var td = document.createElement("td");
-      td.appendChild(document.createTextNode(value));
-      tr.appendChild(td);
-    }
-    itemsTable.appendChild(tr);
-    return tr;
-  });
   if(estimate.items && estimate.items.length) {
+    for(var i=0;i<estimate.items.length;i++){
+      var tr = document.createElement("tr");
+      var itemColumns = estimate.items[i].map(function(item){
+        var value = "";
+        var itemAttributes = item.keys();
+        for(var i=0;i<itemAttributes.length;i++){
+          var itemElement = eval(itemAttributes[i]);
+          var value = "";
+          if(itemElement.type !== "checkbox"){
+            itemElement.value = item[itemElement];
+            value = item[itemElement];
+          } else {
+            itemElement.checked = item[itemElement];
+            value = itemElement.checked ? "Si" : "No";
+          }
+          var td = document.createElement("td");
+          td.appendChild(document.createTextNode(value));
+          return td;
+        }
+      });
+      for(var j=0;j<itemColumns.length;j++){
+        tr.appendChild(itemColumns[j]);
+      }
+      itemsTable.appendChild(tr);
+    }
     itemsContainer.classList.remove("hide");
   }
 };
