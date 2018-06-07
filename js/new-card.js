@@ -58,10 +58,15 @@ var estimateFields = [companyAlias, companyName, rut, contactName, email, tel,
 var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
     weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, printer, cutsPerSheet, quantityPerLayout,
     layoutSize, sheetWaste];
+var saveFunction = createCard;
 
 t.render(function(){
   return t.get('card', 'shared', cardInfoKey)
   .then(function(cardInfo){
+    if(t.arg('update')){
+      saveFunction = updateCard;
+      createCardButton.firstChild.data = "Modificar";
+    }
     if(cardInfo){
       loadFormFromEstimateObject(cardInfo);
     }
@@ -104,7 +109,7 @@ numbered.addEventListener('click', function(){
   }
 });
 
-var createTrelloCardObject = function (estimate){
+var getTrelloCardDescription = function (estimate){
   var description = "";
   description += "#" + estimate.workType + "\n";
   description += "Cantidad: **" + trabajo.workQuantity + "**\n";
@@ -226,7 +231,9 @@ itemAddSectionButton.addEventListener('click', function(){
   addItemSection.classList.toggle("hide");
 });
 
-createCardButton.addEventListener('click', function(){
+createCardButton.addEventListener('click', saveFunction);
+
+var createCard = function(){
   var estimate = createEstimateObjectFromForm();
   var cardToSave = {idList: listId, desc: "Prueba", name: "Prueba"};
   createNewTrelloCard(t, cardToSave).then(function(card) {
@@ -235,7 +242,21 @@ createCardButton.addEventListener('click', function(){
         t.closeModal();
       });
   });
-});
+};
+
+var updateCard = function() {
+  t.card('all')
+  .then(function(card) {
+    var estimate = createEstimateObjectFromForm();
+    t.set('card', 'shared', cardInfoKey, estimate)
+      .then(function(){
+        updateTrelloCard(t, {id: card.id, desc: getTrelloCardDescription(estimate)})
+          .then(function(){
+            t.closeModal();
+          });
+      });
+  });
+};
 
 var createEstimateObjectFromForm = function() {
   var estimate = {};

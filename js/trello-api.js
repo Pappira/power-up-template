@@ -23,6 +23,13 @@ var isAuthorized = function(t){
       }
     });
   };
+  var updateTrelloCard = function(t, card){
+    return isAuthorized(t).then(function(authorized){
+      if(authorized.authorized){
+        return Trello.put("/cards/"+card.id, card);
+      }
+    });
+  };
   var getTrelloCard = function(t, cardId){
     return isAuthorized(t).then(function(authorized){
       if(authorized.authorized){
