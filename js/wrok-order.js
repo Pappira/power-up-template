@@ -42,16 +42,18 @@ var workOrderPDF = function(){
 var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fontColor){
     var fill;
     doc.text(x, y + rowSize-1.5, name);
-    doc.setFontType("bold");
-    if(fontColor){
-        doc.setTextColor(fontColor);
-    }
-    doc.text(x+boxLength/2, y+rowSize + rowSize-1.5, value, null, null, 'center');
+
     if (boxBackgroundColor){
         fill = 'F';
         doc.setFillColor(boxBackgroundColor);
     }
     doc.rect(x, y+rowSize, boxLength, rowSize,fill);
+
+    doc.setFontType("bold");
+    if(fontColor){
+        doc.setTextColor(fontColor);
+    }
+    doc.text(x+boxLength/2, y+rowSize + rowSize-1.5, value, null, null, 'center');
 
     resetDocProperties(doc);
     return doc;
