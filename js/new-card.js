@@ -265,15 +265,15 @@ var loadFormFromEstimateObject = function(estimate) {
   if(estimate.items && estimate.items.length) {
     for(var i=0;i<estimate.items.length;i++){
       var tr = document.createElement("tr");
-      var itemColumns = Object.keys(estimate.items[i]).map(function(itemAttribute){
+      var item = estimate.items[i];
+      var itemColumns = Object.keys(item).map(function(itemAttribute){
         var value = "";
         var itemElement = eval(itemAttribute);
-        var value = "";
         if(itemElement.type !== "checkbox"){
-          itemElement.value = item[itemElement];
-          value = item[itemElement];
+          itemElement.value = item[itemAttribute];
+          value = item[itemAttribute];
         } else {
-          itemElement.checked = item[itemElement];
+          itemElement.checked = item[itemAttribute];
           value = itemElement.checked ? "Si" : "No";
         }
         var td = document.createElement("td");
