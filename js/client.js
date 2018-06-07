@@ -325,8 +325,9 @@ TrelloPowerUp.initialize({
     // throw t.NotHandled();
   },
   'board-buttons': function(t, options){
-    return [
-    {
+    var buttons = boardButtonCallback(t);
+    buttons.push({
+      
       text: 'Nuevo Presupuesto modal',
       callback: function(t){
         return t.modal({
@@ -360,7 +361,8 @@ TrelloPowerUp.initialize({
           }],
         });
       }
-    }];
+    });
+    return buttons;
   },
   'card-badges': function(t, options){
     return getBadges(t);
