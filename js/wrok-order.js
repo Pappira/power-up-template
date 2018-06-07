@@ -4,6 +4,10 @@ var workOrderPDF = function(){
     var doc = new jsPDF();
 
     doc.addImage(diagonalLogo, 'JPEG', 10.5, 5, 97, 26);
+
+    doc.setFont("arial");
+    doc.text(10.5+97+25, 15, 'Prometido');
+    //doc.setFontType("bold");
     //doc.setFontSize(40);
     //doc.text(35, 25, 'Paranyan loves jsPDF');
     doc.save('demo.pdf');
