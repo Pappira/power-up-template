@@ -66,10 +66,12 @@ t.render(function(){
     if(t.arg('update')){
       saveFunction = updateCard;
       createCardButton.firstChild.data = "Modificar";
+    } else {
+      saveFunction = createCard;
     }
 
     createCardButton.addEventListener('click', saveFunction);
-    
+
     if(cardInfo){
       loadFormFromEstimateObject(cardInfo);
     }
