@@ -25,30 +25,29 @@ var workOrderPDF = function(estimate){
 
     var heigth = heigthSeparation*3;
 
-    var client = estimate.client;
-    writeTextInDoc(doc,"Nombre / Empresa",estimate.client.companyName ,firstColumn,heigth,normalBoxLength*4+separation*3);
-    writeTextInDoc(doc,"Cantidad",item.quantity,fifthColumn,heigth,normalBoxLength*2+separation);
+    writeTextInDoc(doc,"Nombre / Empresa",estimate.companyName ,firstColumn,heigth,normalBoxLength*4+separation*3);
+    writeTextInDoc(doc,"Cantidad",estimate.workQuantity,fifthColumn,heigth,normalBoxLength*2+separation);
 
     for (var i = 0; i < estimate.items.length;i++){
-        var item = estimate.items;
-        var faces = item.faces==="Simple faz"?1:2;
+        var item = estimate.items[i];
+        var faces = item.phases==="Simple faz"?1:2;
         var coefficient = faces/item.pages;
-        var sheets = Math.ceil(item.quantity/item.quantityPerLayout)*coefficient;
+        var sheets = Math.ceil(estimate.workQuantity/item.quantityPerLayout)*coefficient;
       
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"","Trabajo " + item.name + " " + item.faces,firstColumn, heigth, normalBoxLength,[0,0,0],[255,255,255]);
+        writeTextInDoc(doc,"","Trabajo " + item.itemName + " " + item.phases,firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
         doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
 
         heigth += heigthSeparation;
         writeTextInDoc(doc,"Armado x Pliego",item.quantityPerLayout,firstColumn,heigth,normalBoxLength);
-        writeTextInDoc(doc,"Tamaño Abierto",item.openedSize, secondColumn, heigth, normalBoxLength);
+        writeTextInDoc(doc,"Tamaño Abierto",item.openSize, secondColumn, heigth, normalBoxLength);
         writeTextInDoc(doc,"Tamaño Cerrado",item.closedSize, thirdColumn,heigth, normalBoxLength);
         writeTextInDoc(doc,"Numerado",item.numbered?item.numeration:"No", fourthColumn, heigth, normalBoxLength);
         writeTextInDoc(doc,"Páginas",item.pages,fifthColumn,heigth,normalBoxLength);
         writeTextInDoc(doc,"Vías",item.vias,sixthColumn,heigth,normalBoxLength);
 
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"","Papel",firstColumn, heigth, normalBoxLength,[0,0,0],[255,255,255]);
+        writeTextInDoc(doc,"","Papel",firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
         doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
 
         heigth += heigthSeparation;
@@ -57,7 +56,7 @@ var workOrderPDF = function(estimate){
         writeTextInDoc(doc,"Tamaño de papel","<Tamaño de papel>",fifthColumn, heigth, normalBoxLength*2 + separation);
 
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"Cantidad de hojas a cortar x cada vía",(sheets + item.sheetWaste)/item.cutsPerSheet,firstColumn,heigth, normalBoxLength*2 + separation);
+        writeTextInDoc(doc,"Cantidad de hojas a cortar x cada vía",((sheets + item.sheetWaste)/item.cutsPerSheet)+"",firstColumn,heigth, normalBoxLength*2 + separation);
         writeTextInDoc(doc,"Cortado en",item.cutsPerSheet,thirdColumn, heigth, normalBoxLength);
         writeTextInDoc(doc,"Tamaño del Pliego",item.layoutSize,fourthColumn, heigth, normalBoxLength);
         writeTextInDoc(doc,"Cantidad de trozos x cada vía",sheets + " + Demasía",fifthColumn, heigth, normalBoxLength*2 + separation);
@@ -70,16 +69,16 @@ var workOrderPDF = function(estimate){
         writeTextInDoc(doc,"Armado",item.quantityPerLayout,firstColumn,heigth,normalBoxLength);
         writeTextInDoc(doc,"Tamaño del pliego",item.layoutSize,secondColumn ,heigth, normalBoxLength);
         writeTextInDoc(doc,"Demasía",item.sheetWaste,thirdColumn, heigth, normalBoxLength);
-        writeTextInDoc(doc,"Tiraje con Demasía",sheets,fourthColumn,heigth, normalBoxLength);
+        writeTextInDoc(doc,"Tiraje con Demasía",sheets + "",fourthColumn,heigth, normalBoxLength);
         doc.text(fifthColumn, heigth+rowSize + rowSize-1.5, "Por cada vía y color");
 
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"Tamaño final abierto",item.openedSize,firstColumn,heigth,normalBoxLength*2 + separation);
+        writeTextInDoc(doc,"Tamaño final abierto",item.openSize,firstColumn,heigth,normalBoxLength*2 + separation);
         writeTextInDoc(doc,"Cantidad final de pasadas de máquina por color con demasía","<Cantidad final de pasadas de máquina por color con demasía>",thirdColumn ,heigth, normalBoxLength*2 + separation);
         
         heigth += heigthSeparation;
         writeTextInDoc(doc,"Tintas",item.inkQuantity,firstColumn, heigth, normalBoxLength);
-        writeTextInDoc(doc,"Chapas",item.inkQuantity*faces,secondColumn,heigth, normalBoxLength);
+        writeTextInDoc(doc,"Chapas",item.inkQuantity*faces + "",secondColumn,heigth, normalBoxLength);
         writeTextInDoc(doc,"Descripción de las tintas",item.inkDetail,thirdColumn, heigth, normalBoxLength*3 + separation);
 
         heigth += heigthSeparation;
@@ -99,7 +98,7 @@ var workOrderPDF = function(estimate){
     doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
 
     heigth += rowSize;
-    var finishes = ["Encuadernado con Lomo","Corte","empaquetado"];
+    var finishes = estimate.finishes.split("\n");
     for (var i = 0; i < finishes.length;i++){
         var boxLength = normalBoxLength*3 + separation*2;
         doc.text(firstColumn, heigth+rowSize + rowSize-1.5, " - " + finishes[i]);
