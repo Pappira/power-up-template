@@ -394,7 +394,7 @@ TrelloPowerUp.initialize({
       // we recommend that you use a popup on click generally
       icon: GRAY_ICON, // don't use a colored icon here
       text: 'Ver O.T.',
-      callback: getWorkOrderPDFCallBack()
+      callback: getWorkOrderPDFCallBack(t)
     },{
       // but of course, you could also just kick off to a url if that's your thing
       icon: GRAY_ICON,

@@ -146,7 +146,7 @@ var resetDocProperties = function (doc){
 
 }
 
-var getWorkOrderPDFCallBack = function(){
+var getWorkOrderPDFCallBack = function(t){
     var cardInfoKey = 'pappira.cardInfo';
     return t.get('card', 'shared', cardInfoKey)
     .then(function(cardInfo){
