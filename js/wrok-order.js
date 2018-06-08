@@ -106,7 +106,7 @@ var workOrderPDF = function(){
     heigth += rowSize;
     doc.text(firstColumn, heigth+rowSize + rowSize-1.5, "<Comentarios>");
 
-    doc.save('demo.pdf');
+    doc.output('datauri');
 };
 
 var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fontColor){
