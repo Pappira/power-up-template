@@ -107,11 +107,11 @@ var workOrderPDF = function(){
     doc.text(firstColumn, heigth+rowSize + rowSize-1.5, "<Comentarios>");
 
 
-    doc.output('datauri');
-    
+    //doc.output('datauri');
+
     //window.open(doc.output('bloburl'),'_parent');
 
-    //doc.save('demo.pdf');
+    doc.save('demo.pdf'); 
 };
 
 var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fontColor){
