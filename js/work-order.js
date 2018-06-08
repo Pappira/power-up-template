@@ -145,3 +145,11 @@ var resetDocProperties = function (doc){
     doc.setTextColor(0,0,0);
 
 }
+
+var getWorkOrderPDFCallBack = function(t){
+    var cardInfoKey = 'pappira.cardInfo';
+    return t.get('card', 'shared', cardInfoKey)
+    .then(function(cardInfo){
+        workOrderPDF(cardInfo);
+    });
+};
