@@ -389,7 +389,13 @@ TrelloPowerUp.initialize({
       icon: GRAY_ICON, // don't use a colored icon here
       text: 'Modificar Datos',
       callback: getNewEstimateModalCallback(true)
-    }, {
+    },{
+      // usually you will provide a callback function to be run on button click
+      // we recommend that you use a popup on click generally
+      icon: GRAY_ICON, // don't use a colored icon here
+      text: 'Ver O.T.',
+      callback: getWorkOrderPDFCallBack()
+    },{
       // but of course, you could also just kick off to a url if that's your thing
       icon: GRAY_ICON,
       text: 'Just a URL',
