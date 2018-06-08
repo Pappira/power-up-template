@@ -98,7 +98,7 @@ var workOrderPDF = function(estimate){
     doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
 
     heigth += rowSize;
-    var finishes = estimate.finishes.split("\n");
+    var finishes = estimate.generalFinishes.split("\n");
     for (var i = 0; i < finishes.length;i++){
         var boxLength = normalBoxLength*3 + separation*2;
         doc.text(firstColumn, heigth+rowSize + rowSize-1.5, " - " + finishes[i]);
