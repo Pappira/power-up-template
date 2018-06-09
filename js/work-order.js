@@ -111,7 +111,7 @@ var workOrderPDF = function(estimate){
     heigth += rowSize;
     doc.text(firstColumn, heigth+rowSize + rowSize-1.5, "<Comentarios>");
     
-    return doc.output('datauri');
+    return doc.output('datauristring');
 };
 
 var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fontColor){
@@ -146,8 +146,8 @@ var getWorkOrderPDFCallBack = function(t){
     return t.get('card', 'shared', cardInfoKey)
     .then(function(cardInfo){
         return t.modal({
-            url: workOrderPDF(cardInfo), // The URL to load for the iframe
-            args: {}, // Optional args to access later with t.arg('text') on './modal.html'
+            url: './show-pdf.html', // The URL to load for the iframe
+            args: {pdf:workOrderPDF(cardInfo)}, // Optional args to access later with t.arg('text') on './modal.html'
             accentColor: '#F2D600', // Optional color for the modal header 
             height: 1500, // Initial height for iframe; not used if fullscreen is true
             fullscreen: false, // Whether the modal should stretch to take up the whole screen
