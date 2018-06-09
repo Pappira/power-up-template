@@ -10,7 +10,8 @@ t.render(function(){
   // you might want to react to, such as new data being
   // stored with t.set()
   var estimate = t.arg('estimate');
-  location.href = workOrderPDF(estimate);
+  document.getElementById('content').innerHTML = 
+    '<iframe src=“' + workOrderPDF(estimate) + '” height=“100%” width=“100%“></iframe>';
 });
 
 
