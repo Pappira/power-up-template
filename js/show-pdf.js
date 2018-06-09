@@ -11,8 +11,7 @@ t.render(function(){
   // stored with t.set()
   var estimate = t.arg('estimate');
 
-  document.getElementById('content').innerHTML = 
-    '<iframe src=' + workOrderPDF(estimate) + ' type="application/pdf" height=“100%” width=“100%“ frameborder="0" ></iframe>';
+  document.getElementById('showPdfIframe').src = workOrderPDF(estimate);
 });
 
 
