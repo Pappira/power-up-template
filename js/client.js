@@ -400,7 +400,7 @@ TrelloPowerUp.initialize({
       // we recommend that you use a popup on click generally
       icon: GRAY_ICON, // don't use a colored icon here
       text: 'Ver O.T.2',
-      url: getWorkOrderPDFCallBack2
+      url: getWorkOrderPDFCallBack2(t)
     }];
   },
   'card-detail-badges': function(t, options) {
