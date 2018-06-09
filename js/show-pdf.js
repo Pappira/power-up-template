@@ -1,6 +1,6 @@
 /* global TrelloPowerUp */
 
-var t = TrelloPowerUp.popup();
+var t = TrelloPowerUp.iframe();
 
 // you can access arguments passed to your iframe like so
 
