@@ -10,7 +10,7 @@ t.render(function(){
   // you might want to react to, such as new data being
   // stored with t.set()
   var pdf = t.arg('pdf');
-  window.location.href = pdf;
+ // window.location.href = pdf;
 });
 
 
