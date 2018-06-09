@@ -371,8 +371,8 @@ TrelloPowerUp.initialize({
   },
   'board-buttons': function(t, options){
     var buttons = [];
-    buttons.push(pdf());
-    buttons.push(downloadWorkOrderPdf());
+  //  buttons.push(pdf());
+  //  buttons.push(downloadWorkOrderPdf());
     buttons.push({
       text: 'Nuevo Presupuesto',
       callback: getNewEstimateModalCallback(false)
@@ -395,12 +395,6 @@ TrelloPowerUp.initialize({
       icon: GRAY_ICON, // don't use a colored icon here
       text: 'Ver O.T.',
       callback: getWorkOrderPDFCallBack
-    },{
-      // but of course, you could also just kick off to a url if that's your thing
-      icon: GRAY_ICON,
-      text: 'Just a URL',
-      url: 'https://developers.trello.com',
-      target: 'Trello Developer Site' // optional target for above url
     }];
   },
   'card-detail-badges': function(t, options) {
