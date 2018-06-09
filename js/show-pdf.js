@@ -128,7 +128,7 @@ var workOrderPDF = function(estimate,newTab){
     heigth += rowSize;
     doc.text(firstColumn, heigth+rowSize + rowSize-1.5, "<Comentarios>");
     if(newTab){
-       window.open(doc.output('bloburl'),'_parent');
+       window.open(doc.output('bloburl'),'_blank');
     }else{    
       return doc.output('bloburl');
     }
