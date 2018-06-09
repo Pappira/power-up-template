@@ -12,7 +12,7 @@ t.render(function(){
   var estimate = t.arg('estimate');
 
   document.getElementById('content').innerHTML = 
-    '<iframe src=“' + workOrderPDF(estimate) + '” height=“100%” width=“100%“></iframe>';
+    '<iframe src=' + workOrderPDF(estimate) + ' height=“100%” width=“100%“></iframe>';
 });
 
 
