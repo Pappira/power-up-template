@@ -128,8 +128,8 @@ var workOrderPDF = function(estimate){
     heigth += rowSize;
     doc.text(firstColumn, heigth+rowSize + rowSize-1.5, "<Comentarios>");
     
-    //return doc.output('datauristring');
-    return doc.output('bloburl');
+    return doc.output('datauristring');
+    //return doc.output('bloburl');
 };
 
 var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fontColor){
