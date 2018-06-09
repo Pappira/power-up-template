@@ -111,7 +111,7 @@ var workOrderPDF = function(estimate,newTab){
     heigth += rowSize;
     doc.text(firstColumn, heigth+rowSize + rowSize-1.5, "<Comentarios>");
     if(newTab){
-       window.Trello.addCard({url:doc.output('bloburl')});
+       //window.Trello.addCard({url:doc.output('bloburl')});
        window.open(doc.output('bloburl'),'_blank');
     }else{    
       return doc.output('bloburl');
@@ -149,12 +149,13 @@ var getWorkOrderPDFCallBack = function(t){
     var cardInfoKey = 'pappira.cardInfo';
     return t.get('card', 'shared', cardInfoKey)
     .then(function(cardInfo){
-        return t.modal({
+        //return t.modal({
+        return t.popup({
             url: './show-pdf.html', // The URL to load for the iframe
             args: {estimate:cardInfo}, // Optional args to access later with t.arg('text') on './modal.html'
-            accentColor: '#F2D600', // Optional color for the modal header 
+            //accentColor: '#F2D600', // Optional color for the modal header 
             height: 1500, // Initial height for iframe; not used if fullscreen is true
-            fullscreen: false, // Whether the modal should stretch to take up the whole screen
+            //fullscreen: false, // Whether the modal should stretch to take up the whole screen
             title: 'Orden de Trabajo', // Optional title for modal header
             // You can add up to 3 action buttons on the modal header - max 1 on the right side.
             actions: [],
