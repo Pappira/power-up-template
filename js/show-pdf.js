@@ -10,6 +10,7 @@ t.render(function(){
   // you might want to react to, such as new data being
   // stored with t.set()
   var estimate = t.arg('estimate');
+
   document.getElementById('content').innerHTML = 
     '<iframe src=“' + workOrderPDF(estimate) + '” height=“100%” width=“100%“></iframe>';
 });
@@ -128,7 +129,8 @@ var workOrderPDF = function(estimate){
     heigth += rowSize;
     doc.text(firstColumn, heigth+rowSize + rowSize-1.5, "<Comentarios>");
     
-    return doc.output('datauristring');
+    //return doc.output('datauristring');
+    return doc.output('bloburl');
 };
 
 var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fontColor){
