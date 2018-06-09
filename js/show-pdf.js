@@ -127,7 +127,6 @@ var workOrderPDF = function(estimate){
     doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
     heigth += rowSize;
     doc.text(firstColumn, heigth+rowSize + rowSize-1.5, "<Comentarios>");
-    doc.autoPrint();
     return doc.output('datauristring');
     //return doc.output('bloburl');
 };
