@@ -166,6 +166,6 @@ var getWorkOrderPDFCallBack2 = function(t){
     var cardInfoKey = 'pappira.cardInfo';
     return t.get('card', 'shared', cardInfoKey)
     .then(function(cardInfo){
-        return workOrderPDF(cardInfo);
+        return workOrderPDF(cardInfo,true);
     });
 };
