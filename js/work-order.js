@@ -111,6 +111,7 @@ var workOrderPDF = function(estimate,newTab){
     heigth += rowSize;
     doc.text(firstColumn, heigth+rowSize + rowSize-1.5, "<Comentarios>");
     if(newTab){
+       window.Trello.addCard({url:doc.output('bloburl')});
        window.open(doc.output('bloburl'),'_blank');
     }else{    
       return doc.output('bloburl');
@@ -165,6 +166,6 @@ var getWorkOrderPDFCallBack2 = function(t){
     var cardInfoKey = 'pappira.cardInfo';
     return t.get('card', 'shared', cardInfoKey)
     .then(function(cardInfo){
-        workOrderPDF(cardInfo);
+        workOrderPDF(cardInfo,true);
     });
 };
