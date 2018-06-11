@@ -139,7 +139,7 @@ finishAddButton.addEventListener('click', function(){
   var button = document.createElement("button");
   button.appendChild(document.createTextNode("Modificar"));
   button.id = "modifyFinish";
-  button.onclick = edit;
+  button.onclick = editFinish;
   td.appendChild(button);
   tr.appendChild(td);
  
@@ -147,7 +147,7 @@ finishAddButton.addEventListener('click', function(){
   finishesContainer.classList.remove("hide");
 });
 
-var edit = function(){
+var editFinish = function(){
   var tr = this.parentNode.parentNode;
   var tdShowToClient = tr.childNodes[0]; 
   var tdFinish = tr.childNodes[1];
@@ -176,10 +176,10 @@ var edit = function(){
 
   this.id = "saveModify";
   this.textContent = "Guardar";
-  this.onclick = save;
+  this.onclick = saveEditedFinish;
 };
 
-var save = function(){
+var saveEditedFinish = function(){
   var table = this.parentNode.parentNode.parentNode;
   var tr = this.parentNode.parentNode;
   var tdShowToClient = tr.childNodes[0]; 
@@ -205,7 +205,7 @@ var save = function(){
 
    this.id = "modify";
    this.textContent = "Modificar";
-   this.onclick = edit;
+   this.onclick = editFinish;
   }
 
 };
