@@ -13,6 +13,12 @@ body {
 .hide {
   display: none;
 }
+
+.showToClient{
+  width: 20%;
+  min-width: 70px;
+
+}
 #itemsContainer {
   width: 100%;
   max-width: 800px;
