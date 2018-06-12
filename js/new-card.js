@@ -139,8 +139,7 @@ finishAddButton.addEventListener('click', function(){
   var td = document.createElement("td");
   var button = document.createElement("button");
   button.appendChild(document.createTextNode("Modificar"));
-  button.id = "modifyFinish";
-  button.onclick = editFinish;
+  button.addEventListener('click', editFinish);
   td.appendChild(button);
   tr.appendChild(td);
  
@@ -150,24 +149,24 @@ finishAddButton.addEventListener('click', function(){
 
 var editFinish = function(){
   var tr = this.parentNode.parentNode;
+  var rowIndex = tr.rowIndex;
   var tdShowToClient = tr.childNodes[0]; 
   var tdFinish = tr.childNodes[1];
   var showToClientText = tdShowToClient.textContent;
   var finishText = tdFinish.textContent;
 
   var inputTextFinish = document.createElement("input");
-  inputTextFinish.id="editFinish";
   inputTextFinish.type="text";
   inputTextFinish.value = finishText;
   tdFinish.textContent = "";
   tdFinish.appendChild(inputTextFinish);
 
   var labelForCheckBox = document.createElement("label");
-  labelForCheckBox.setAttribute("for","editShowToClient");
+  labelForCheckBox.setAttribute("for","editShowToClient"+rowIndex);
   labelForCheckBox.textContent = "Mostrar al cliente";
 
   var checkBoxShowToClient = document.createElement("input");
-  checkBoxShowToClient.id = "editShowToClient";
+  checkBoxShowToClient.id = "editShowToClient"+rowIndex;
   checkBoxShowToClient.type = "checkbox";
   checkBoxShowToClient.checked = showToClientText==="No"?false:true;
   tdShowToClient.textContent = "";
@@ -175,39 +174,25 @@ var editFinish = function(){
   labelForCheckBox.appendChild(checkBoxShowToClient);
   tdShowToClient.appendChild(labelForCheckBox);
 
-  this.id = "saveModify";
   this.textContent = "Guardar";
-  this.onclick = saveEditedFinish;
+  this.addEventListener('click', saveEditedFinish);
 };
 
 var saveEditedFinish = function(){
   var table = this.parentNode.parentNode.parentNode;
   var tr = this.parentNode.parentNode;
+  var finishNumber = tr.rowIndex;
   var tdShowToClient = tr.childNodes[0]; 
   var tdFinish = tr.childNodes[1];
 
-  var finishNumber;
-
-  for (var i = 2; i < table.childNodes.length;i++){
-    if(table.childNodes[i]===tr){
-      finishNumber = i-2;
-      break;
-    }
-  }
-
-  
-  if(finishNumber){
-  
   finishes[finishNumber].showToClient = tdShowToClient.childNodes[0].childNodes[1].checked;
   finishes[finishNumber].finish = tdFinish.childNodes[0].value;
 
   tdShowToClient.textContent = finishes[finishNumber].showToClient?"Si":"No";
   tdFinish.textContent = finishes[finishNumber].finish;
 
-   this.id = "modify";
-   this.textContent = "Modificar";
-   this.onclick = editFinish;
-  }
+  this.textContent = "Modificar";
+  this.addEventListener('click', editFinish);
 
 };
 
