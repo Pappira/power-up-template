@@ -45,6 +45,7 @@ var itemAddButton = document.getElementById('itemAddButton');
 var createCardButton = document.getElementById('createCardButton');
 
 var price = document.getElementById('price');
+var downPayment = document.getElementById('downPayment');
 var deliveryDelay = document.getElementById('deliveryDelay');
 var customerComments = document.getElementById('customerComments');
 var paymentWay = document.getElementById('paymentWay');
@@ -54,7 +55,7 @@ var items = [];
 var cardInfoKey = 'pappira.cardInfo';
 var listId = '5a9ef0ce024c776a21220836';
 var estimateFields = [companyAlias, companyName, rut, contactName, email, tel, 
-  workType, workQuantity, generalFinishes, price, deliveryDelay, customerComments, paymentWay, officeComments];
+  workType, workQuantity, generalFinishes, price, downPayment, deliveryDelay, customerComments, paymentWay, officeComments];
 var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
     weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, printer, cutsPerSheet, quantityPerLayout,
     layoutSize, sheetWaste];
@@ -131,11 +132,15 @@ var getTrelloCardDescription = function (estimate){
     if (item.material !=null && item.material != ""){
       descriptionObject.material = item.material + " " + 
         (item.weight!=null&&item.weight!=""?(item.weight + "gr. "):"") + item.color;
+        
+        if(item.cutsPerSheet) {
+          descriptionObject.cutsPerSheet = "Cortado en " + item.cutsPerSheet;
+        }
     }
-    if (item.vias != null && item.vias!="" && item.vias==1){
+    if (item.vias != null && item.vias!="" && item.vias>1){
       descriptionObject.vias = item.vias + " vías";
     }
-    if (item.pages != null && item.pages!="" && item.pages==1){
+    if (item.pages != null && item.pages!="" && !item.pages>1){
       descriptionObject.pages = item.pages + " páginas";
     }
     if (item.inkQuantity != null && item.inkQuantity !=""){
@@ -144,6 +149,9 @@ var getTrelloCardDescription = function (estimate){
       }else{
         descriptionObject.inkDetail = item.inkQuantity + "/" + item.inkQuantity + " " + item.inkDetail;
       }
+    }
+    if(item.hardCoverage){
+      descriptionObject.hardCoverage = "Contiene cobertura plena";
     }
     if (item.openSize != null && item.closedSize != null && item.openSize == item.closedSize){
       descriptionObject.size = item.openSize;
@@ -155,8 +163,22 @@ var getTrelloCardDescription = function (estimate){
         descriptionObject.closedSize = item.closedSize + " (cerrado)";
       }
     }
-    
-    descriptionObject.design = item.design ? "Si" : "No";
+
+    if(item.numbered){
+      descriptionObject.numeration = "Numerado del " + item.numeration;
+    }
+
+    if(item.printer){
+      descriptionObject.printer = item.printer;
+    }
+    if(item.layoutSize){
+      descriptionObject.layoutSize = "Pliego " + item.layoutSize;
+      if(item.quantityPerLayout){
+        descriptionObject.quantityPerLayout = "Armado de a ";
+      }
+    }
+
+    descriptionObject.design = item.design ? "Incluye diseño" : "No incluye diseño";
     var name = item.itemName;
 
     var descriptionArray = Object.keys(descriptionObject).map(function(itemKey, index) {
@@ -174,6 +196,9 @@ var getTrelloCardDescription = function (estimate){
 
   if(estimate.price){
     description += "\n\n---\n\n##Total $ " + estimate.price;
+  }
+  if(estimate.downPayment){
+    description += "\n\n---\n\n##Seña $ " + estimate.price;
   }
   if(estimate.contactName || estimate.companyName || estimate.companyAlias || estimate.rut || estimate.tel || estimate.email){
     description += "\n\n---\n\n##Datos de contacto";
