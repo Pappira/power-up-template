@@ -104,8 +104,31 @@
         </select>
         <label for="design"><input type="checkbox" id="design"/> Incluye diseño?</label>
         
-        <label for="finishes">Terminaciones</label>
-        <textarea id="finishes"></textarea>
+        <hr/>
+        <h4>Terminaciones</h4>
+        
+        <div id="finishesContainer" class="hide"> 
+          <table id="finishesTable">
+            <tr>
+              <th class = "showToClient">Mostrar</th>
+              <th>Terminación</th>
+              <th class = "showToClient"></th>
+            </tr>
+          </table>
+        </div>
+        
+        
+        <label for="showToClient"><input type="checkbox" id="showToClient">Mostrar al cliente</label>
+        
+        <input type="text" id="finish"/>
+        
+        <button id="finishAddButton" class="mod-primary">Agregar terminación</button>
+
+
+        <hr/>
+
+
+        
         <label for="hardCoverage"><input type="checkbox" id="hardCoverage"/> Plenos de fondo?</label>
         <label for="printer">Impresora</label>
         <input type="text" id="printer"/>

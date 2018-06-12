@@ -31,7 +31,10 @@ var inkQuantity = document.getElementById('inkQuantity');
 var inkDetail = document.getElementById('inkDetail');
 var phases = document.getElementById('phases');
 var design = document.getElementById('design');
-var finishes = document.getElementById('finishes');
+var finishesContainer = document.getElementById('finishesContainer');
+var finishesTable = document.getElementById('finishesTable');
+var finish = document.getElementById('finish');
+var showToClient = document.getElementById('showToClient');
 var hardCoverage = document.getElementById('hardCoverage');
 var printer = document.getElementById('printer');
 var cutsPerSheet = document.getElementById('cutsPerSheet');
@@ -52,6 +55,7 @@ var paymentWay = document.getElementById('paymentWay');
 var officeComments = document.getElementById('officeComments');
 
 var items = [];
+var finishes = [];
 var cardInfoKey = 'pappira.cardInfo';
 var listId = '5a9ef0ce024c776a21220836';
 var estimateFields = [companyAlias, companyName, rut, contactName, email, tel, 
@@ -59,6 +63,7 @@ var estimateFields = [companyAlias, companyName, rut, contactName, email, tel,
 var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
     weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, printer, cutsPerSheet, quantityPerLayout,
     layoutSize, sheetWaste];
+var finishChildren = [showToClient,finish];
 var saveFunction = createCard;
 
 t.render(function(){
@@ -105,6 +110,106 @@ itemAddButton.addEventListener('click', function(){
     itemsContainer.classList.remove("hide");
     goToHashtag("#");
 });
+
+finishAddButton.addEventListener('click', function(){
+  var finish = {};
+
+  var finishColumns = finishChildren.map(function(finishElement){
+    var value = "";
+    if(finishElement.type !== "checkbox"){
+      value = finishElement.value;
+      finish[finishElement.id] = finishElement.value;
+      finishElement.value="";
+    } else {
+      value = finishElement.checked ? "Si" : "No";
+      finish[finishElement.id] = finishElement.checked;
+      finishElement.checked = false;
+    }
+
+    var td = document.createElement("td");
+    td.appendChild(document.createTextNode(value));
+    return td;
+  });
+  finishes.push(finish);
+  var tr = document.createElement("tr");
+  for(var i=0;i<finishColumns.length;i++) {
+    tr.appendChild(finishColumns[i]);
+  }
+
+  var td = document.createElement("td");
+  var button = document.createElement("button");
+  button.appendChild(document.createTextNode("Modificar"));
+  button.id = "modifyFinish";
+  button.onclick = editFinish;
+  td.appendChild(button);
+  tr.appendChild(td);
+ 
+  finishesTable.appendChild(tr);
+  finishesContainer.classList.remove("hide");
+});
+
+var editFinish = function(){
+  var tr = this.parentNode.parentNode;
+  var tdShowToClient = tr.childNodes[0]; 
+  var tdFinish = tr.childNodes[1];
+  var showToClientText = tdShowToClient.textContent;
+  var finishText = tdFinish.textContent;
+
+  var inputTextFinish = document.createElement("input");
+  inputTextFinish.id="editFinish";
+  inputTextFinish.type="text";
+  inputTextFinish.value = finishText;
+  tdFinish.textContent = "";
+  tdFinish.appendChild(inputTextFinish);
+
+  var labelForCheckBox = document.createElement("label");
+  labelForCheckBox.setAttribute("for","editShowToClient");
+  labelForCheckBox.textContent = "Mostrar al cliente";
+
+  var checkBoxShowToClient = document.createElement("input");
+  checkBoxShowToClient.id = "editShowToClient";
+  checkBoxShowToClient.type = "checkbox";
+  checkBoxShowToClient.checked = showToClientText==="No"?false:true;
+  tdShowToClient.textContent = "";
+
+  labelForCheckBox.appendChild(checkBoxShowToClient);
+  tdShowToClient.appendChild(labelForCheckBox);
+
+  this.id = "saveModify";
+  this.textContent = "Guardar";
+  this.onclick = saveEditedFinish;
+};
+
+var saveEditedFinish = function(){
+  var table = this.parentNode.parentNode.parentNode;
+  var tr = this.parentNode.parentNode;
+  var tdShowToClient = tr.childNodes[0]; 
+  var tdFinish = tr.childNodes[1];
+
+  var finishNumber;
+
+  for (var i = 2; i < table.childNodes.length;i++){
+    if(table.childNodes[i]===tr){
+      finishNumber = i-2;
+      break;
+    }
+  }
+
+  
+  if(finishNumber){
+  
+  finishes[finishNumber].showToClient = tdShowToClient.childNodes[0].childNodes[1].checked;
+  finishes[finishNumber].finish = tdFinish.childNodes[0].value;
+
+  tdShowToClient.textContent = finishes[finishNumber].showToClient?"Si":"No";
+  tdFinish.textContent = finishes[finishNumber].finish;
+
+   this.id = "modify";
+   this.textContent = "Modificar";
+   this.onclick = editFinish;
+  }
+
+};
 
 numbered.addEventListener('click', function(){
   if(numbered.checked) {
