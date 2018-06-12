@@ -195,7 +195,7 @@ var saveEditedFinish = function(){
   }
 
   
-  if(finishNumber){
+  if(finishNumber!=null && finishNumber>=0){
   
   finishes[finishNumber].showToClient = tdShowToClient.childNodes[0].childNodes[1].checked;
   finishes[finishNumber].finish = tdFinish.childNodes[0].value;
