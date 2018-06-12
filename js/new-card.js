@@ -188,8 +188,10 @@ var saveEditedFinish = function(){
   var table = this.parentNode.parentNode.parentNode;
   var tr = this.parentNode.parentNode;
   var finishNumber = tr.rowIndex - 1;
-  var inputShowToClient = tr.childNodes[0].getElementsByTagName('input')[0]; 
-  var inputFinish = tr.childNodes[1].getElementsByTagName('input')[0];
+  var tdShowToClient = tr.childNodes[0]; 
+  var tdFinish = tr.childNodes[1]; 
+  var inputShowToClient = tdShowToClient.getElementsByTagName('input')[0]; 
+  var inputFinish = tdFinish.getElementsByTagName('input')[0];
   var saveButton = tr.childNodes[2].getElementsByTagName('button')[0];
 
   finishes[finishNumber].showToClient = inputShowToClient.checked;
