@@ -149,7 +149,7 @@ finishAddButton.addEventListener('click', function(){
 
 var editFinish = function(){
   var tr = this.parentNode.parentNode;
-  var rowIndex = tr.rowIndex;
+  var rowIndex = tr.rowIndex - 1;
   var tdShowToClient = tr.childNodes[0]; 
   var tdFinish = tr.childNodes[1];
   var showToClientText = tdShowToClient.textContent;
@@ -181,7 +181,7 @@ var editFinish = function(){
 var saveEditedFinish = function(){
   var table = this.parentNode.parentNode.parentNode;
   var tr = this.parentNode.parentNode;
-  var finishNumber = tr.rowIndex;
+  var finishNumber = tr.rowIndex - 1;
   var tdShowToClient = tr.childNodes[0]; 
   var tdFinish = tr.childNodes[1];
 
