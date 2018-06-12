@@ -24,4 +24,5 @@ var onEnter = function(f){
         }
     };
     f2.bind(null, f);
+    return f2;
 };
