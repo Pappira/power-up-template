@@ -175,7 +175,7 @@ var editFinish = function(){
   tdShowToClient.appendChild(labelForCheckBox);
 
   this.textContent = "Guardar";
-  this.addEventListener('click', saveEditedFinish);
+  this.onclick = saveEditedFinish;
 };
 
 var saveEditedFinish = function(){
@@ -192,8 +192,7 @@ var saveEditedFinish = function(){
   tdFinish.textContent = finishes[finishNumber].finish;
 
   this.textContent = "Modificar";
-  this.addEventListener('click', editFinish);
-
+  this.onclick = editFinish;
 };
 
 numbered.addEventListener('click', function(){
