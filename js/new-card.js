@@ -34,7 +34,6 @@ var design = document.getElementById('design');
 var finishesContainer = document.getElementById('finishesContainer');
 var finishesTable = document.getElementById('finishesTable');
 var finish = document.getElementById('finish');
-finish.onkeyup = onEnter(addFinishToItem);
 var showToClient = document.getElementById('showToClient');
 var hardCoverage = document.getElementById('hardCoverage');
 var printer = document.getElementById('printer');
@@ -148,6 +147,7 @@ var addFinishToItem = function(){
   finishesContainer.classList.remove("hide");
 };
 
+finish.onkeyup = onEnter(addFinishToItem);
 finishAddButton.addEventListener('click', addFinishToItem);
 
 var editFinish = function(){
