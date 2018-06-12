@@ -139,7 +139,7 @@ finishAddButton.addEventListener('click', function(){
   var td = document.createElement("td");
   var button = document.createElement("button");
   button.appendChild(document.createTextNode("Modificar"));
-  button.addEventListener('click', editFinish);
+  button.onclick = editFinish;
   td.appendChild(button);
   tr.appendChild(td);
  
