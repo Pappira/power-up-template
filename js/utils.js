@@ -18,9 +18,9 @@ var startLoader = function(){
 
 
 var onEnter = function(f){
-    return function(e){
+    return function(e, f){
         if(e.keyCode == 13){
-        f();
+            f();
         }
     };
 };
