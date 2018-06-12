@@ -85,14 +85,6 @@ t.render(function(){
   });
 });
 
-var onEnter = function(f){
-  return function(e){
-    if(e.keyCode == 13){
-      f();
-    }
-  };
-};
-
 itemAddButton.addEventListener('click', function(){
     var item = {};
 

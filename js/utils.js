@@ -15,3 +15,12 @@ var goToHashtag = function(hashtag){
 var startLoader = function(){
     document.getElementById('loader').classList.add("loader");
 }
+
+
+var onEnter = function(f){
+    return function(e){
+        if(e.keyCode == 13){
+        f();
+        }
+    };
+};
