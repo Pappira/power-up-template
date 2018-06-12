@@ -34,6 +34,7 @@ var design = document.getElementById('design');
 var finishesContainer = document.getElementById('finishesContainer');
 var finishesTable = document.getElementById('finishesTable');
 var finish = document.getElementById('finish');
+finish.onkeyup = onEnter(addFinishToItem);
 var showToClient = document.getElementById('showToClient');
 var hardCoverage = document.getElementById('hardCoverage');
 var printer = document.getElementById('printer');
@@ -84,6 +85,14 @@ t.render(function(){
   });
 });
 
+var onEnter = function(f){
+  return function(e){
+    if(e.keyCode == 13){
+      f();
+    }
+  };
+};
+
 itemAddButton.addEventListener('click', function(){
     var item = {};
 
@@ -111,7 +120,7 @@ itemAddButton.addEventListener('click', function(){
     goToHashtag("#");
 });
 
-finishAddButton.addEventListener('click', function(){
+var addFinishToItem = function(){
   var finish = {};
 
   var finishColumns = finishChildren.map(function(finishElement){
@@ -145,13 +154,16 @@ finishAddButton.addEventListener('click', function(){
  
   finishesTable.appendChild(tr);
   finishesContainer.classList.remove("hide");
-});
+};
+
+finishAddButton.addEventListener('click', addFinishToItem);
 
 var editFinish = function(){
   var tr = this.parentNode.parentNode;
   var rowIndex = tr.rowIndex - 1;
   var tdShowToClient = tr.childNodes[0]; 
   var tdFinish = tr.childNodes[1];
+
   var showToClientText = tdShowToClient.textContent;
   var finishText = tdFinish.textContent;
 
@@ -176,23 +188,26 @@ var editFinish = function(){
 
   this.textContent = "Guardar";
   this.onclick = saveEditedFinish;
+  inputTextFinish.focus();
+  inputTextFinish.onkeyup = onEnter(saveEditedFinish);
 };
 
 var saveEditedFinish = function(){
   var table = this.parentNode.parentNode.parentNode;
   var tr = this.parentNode.parentNode;
   var finishNumber = tr.rowIndex - 1;
-  var tdShowToClient = tr.childNodes[0]; 
-  var tdFinish = tr.childNodes[1];
+  var inputShowToClient = tr.childNodes[0].getElementsByTagName('input')[0]; 
+  var inputFinish = tr.childNodes[1].getElementsByTagName('input')[0];
+  var saveButton = tr.childNodes[2].getElementsByTagName('button')[0];
 
-  finishes[finishNumber].showToClient = tdShowToClient.childNodes[0].childNodes[1].checked;
-  finishes[finishNumber].finish = tdFinish.childNodes[0].value;
+  finishes[finishNumber].showToClient = inputShowToClient.checked;
+  finishes[finishNumber].finish = inputFinish.value;
 
   tdShowToClient.textContent = finishes[finishNumber].showToClient?"Si":"No";
   tdFinish.textContent = finishes[finishNumber].finish;
 
-  this.textContent = "Modificar";
-  this.onclick = editFinish;
+  saveButton.textContent = "Modificar";
+  saveButton.onclick = editFinish;
 };
 
 numbered.addEventListener('click', function(){
