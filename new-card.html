@@ -168,8 +168,6 @@
       <h4>Variantes</h4>
         
       <div id="variantContainer" class="hide"> 
-        <table id="variantsTable">
-        </table>
       </div>
 
       <label for="variantName">Nombre</label>
@@ -178,10 +176,27 @@
       <select id="variantSelect">
         <option value="general">General</option>
       </select>
-      <select id="variantType">
-      </select>
-      <label for="variantValue">Valor</label>
-      <input type="text" id="variantValue"/>
+      <table id="variantsTable">
+        <tr>
+          <th>Variante</th>
+          <th>Valor</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>
+            <select id="variantType">
+              <option value="quantity">Cantidad</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" id="variantValue"/>
+          </td>
+          <td>
+            <button id="variantTypeAddButton" class="mod-secondary">+</button>
+          </td>
+        </tr>
+        
+      </table>
       <label for="additionalPrice"><input type="checkbox" id="additionalPrice">Precio Adicional</label>
       <label for="variantPrice">Precio</label>
       <input type="text" id="variantPrice"/>
