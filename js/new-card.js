@@ -111,6 +111,7 @@ itemAddButton.addEventListener('click', function(){
     goToHashtag("#");
 });
 
+
 finishAddButton.addEventListener('click', function(){
   var finish = {};
 

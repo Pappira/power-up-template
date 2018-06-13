@@ -162,8 +162,33 @@
         </select>
         <label for="officeComments">Comentarios al taller</label>
         <textarea id="officeComments"></textarea>
-        <button id="createCardButton" class="mod-primary">Crear</button><div id="loader"></div>
       </section>
+      <hr/>
+
+      <h4>Variantes</h4>
+        
+      <div id="variantContainer" class="hide"> 
+        <table id="variantsTable">
+        </table>
+      </div>
+
+      <label for="variantName">Nombre</label>
+      <input type="text" id="variantName"/>
+
+      <select id="variantSelect">
+        <option value="general">General</option>
+      </select>
+      <select id="variantType">
+      </select>
+      <label for="variantValue">Valor</label>
+      <input type="text" id="variantValue"/>
+      <label for="additionalPrice"><input type="checkbox" id="additionalPrice">Precio Adicional</label>
+      <label for="variantPrice">Precio</label>
+      <input type="text" id="variantPrice"/>
+      
+      <button id="finishAddButton" class="mod-primary">Agregar terminación</button>
+
+      <button id="createCardButton" class="mod-primary">Crear</button><div id="loader"></div>
     </div> 
     <script src="./js/utils.js"></script>
     <script src="./js/trello-api.js"></script>
