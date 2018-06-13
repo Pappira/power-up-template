@@ -111,8 +111,7 @@ itemAddButton.addEventListener('click', function(){
     goToHashtag("#");
 });
 
-
-finishAddButton.addEventListener('click', function(){
+var addFinishToItem = function(){
   var finish = {};
 
   var finishColumns = finishChildren.map(function(finishElement){
@@ -140,19 +139,23 @@ finishAddButton.addEventListener('click', function(){
   var td = document.createElement("td");
   var button = document.createElement("button");
   button.appendChild(document.createTextNode("Modificar"));
-  button.addEventListener('click', editFinish);
+  button.onclick = editFinish;
   td.appendChild(button);
   tr.appendChild(td);
  
   finishesTable.appendChild(tr);
   finishesContainer.classList.remove("hide");
-});
+};
+
+finish.onkeyup = onEnter(addFinishToItem);
+finishAddButton.addEventListener('click', addFinishToItem);
 
 var editFinish = function(){
   var tr = this.parentNode.parentNode;
   var rowIndex = tr.rowIndex - 1;
   var tdShowToClient = tr.childNodes[0]; 
   var tdFinish = tr.childNodes[1];
+
   var showToClientText = tdShowToClient.textContent;
   var finishText = tdFinish.textContent;
 
@@ -176,7 +179,9 @@ var editFinish = function(){
   tdShowToClient.appendChild(labelForCheckBox);
 
   this.textContent = "Guardar";
-  this.addEventListener('click', saveEditedFinish);
+  this.onclick = saveEditedFinish;
+  inputTextFinish.focus();
+  inputTextFinish.onkeyup = onEnter(saveEditedFinish);
 };
 
 var saveEditedFinish = function(){
@@ -184,17 +189,19 @@ var saveEditedFinish = function(){
   var tr = this.parentNode.parentNode;
   var finishNumber = tr.rowIndex - 1;
   var tdShowToClient = tr.childNodes[0]; 
-  var tdFinish = tr.childNodes[1];
+  var tdFinish = tr.childNodes[1]; 
+  var inputShowToClient = tdShowToClient.getElementsByTagName('input')[0]; 
+  var inputFinish = tdFinish.getElementsByTagName('input')[0];
+  var saveButton = tr.childNodes[2].getElementsByTagName('button')[0];
 
-  finishes[finishNumber].showToClient = tdShowToClient.childNodes[0].childNodes[1].checked;
-  finishes[finishNumber].finish = tdFinish.childNodes[0].value;
+  finishes[finishNumber].showToClient = inputShowToClient.checked;
+  finishes[finishNumber].finish = inputFinish.value;
 
   tdShowToClient.textContent = finishes[finishNumber].showToClient?"Si":"No";
   tdFinish.textContent = finishes[finishNumber].finish;
 
-  this.textContent = "Modificar";
-  this.addEventListener('click', editFinish);
-
+  saveButton.textContent = "Modificar";
+  saveButton.onclick = editFinish;
 };
 
 numbered.addEventListener('click', function(){
