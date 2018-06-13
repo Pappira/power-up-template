@@ -31,6 +31,7 @@ var inkQuantity = document.getElementById('inkQuantity');
 var inkDetail = document.getElementById('inkDetail');
 var phases = document.getElementById('phases');
 var design = document.getElementById('design');
+var finishAddButton = document.getElementById('finishAddButton');
 var finishesContainer = document.getElementById('finishesContainer');
 var finishesTable = document.getElementById('finishesTable');
 var finish = document.getElementById('finish');
