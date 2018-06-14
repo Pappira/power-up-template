@@ -108,7 +108,7 @@ itemAddButton.addEventListener('click', function(){
       return td;
     });
     items.push(item);
-    addItemToVariantSelect(item.itemName);
+    addItemToVariantSelect(items, items.length - 1);
     var tr = document.createElement("tr");
     for(var i=0;i<itemColumns.length;i++) {
       tr.appendChild(itemColumns[i]);
@@ -118,10 +118,8 @@ itemAddButton.addEventListener('click', function(){
     goToHashtag("#");
 });
 
-var addItemToVariantSelect = function(name){
-  var option = document.createElement('option');
-  option.value = items.length-1;
-  option.innerHTML = name;
+var addItemToVariantSelect = function(items, index){
+  var option = createOption(index, items[index].itemName);
   variantSelect.appendChild(option);
 };
 
@@ -457,70 +455,6 @@ String.prototype.replaceAll = function(search, replacement) {
   return target.replace(new RegExp(search, 'g'), replacement);
 };
 
-var convertHeaderToTextInSpanish = function (header){
-  switch (header){
-    case "companyAlias":
-      return "Nombre Fantasía";
-    case "companyName":
-      return "Razón social";
-    case "rut":
-      return "RUT";
-    case "contactName":
-      return "Nombre de contacto";
-    case "email":
-      return "Email";
-    case "tel":
-      return "Teléfono";
-    case "workType":
-      return "Tipo de trabajo";
-    case "workQuantity":
-      return "Cantidad";
-    case "generalFinishes":
-      return "Terminaciones";
-    case "itemName":
-      return "Nombre";
-    case "vias":
-      return "Vias";
-    case "pages":
-      return "Páginas";
-    case "numeration":
-      return "Numeración";
-    case "openSize":
-      return "Tamaño abierto";
-    case "closedSize":
-      return "Tamaño cerrado";
-    case "size":
-      return "Tamaño";
-    case "material":
-      return "Material";
-    case "inkQuantity":
-      return "Tintas";
-    case "inkDetail":
-      return "Tintas";
-    case "phases":
-      return "Fases";
-    case "design":
-      return "Incluye diseño";
-    case "finishes":
-      return "Terminaciones";
-    case "hardCoverage":
-      return "Plenos de fondo";
-    case "printer":
-      return "Impresora";
-    case "cutsPerSheet":
-      return "Cortes por Hoja";
-    case "quantityPerLayout":
-      return "Armado por Pliego";
-    case "layoutSize":
-      return "Tamaño del Pliego";
-    case "sheetWaste":
-      return "Demasía o Merma";
-    default:
-      return header;
-  }
-  return "";
-};
-
 itemAddSectionButton.addEventListener('click', function(){
   addItemSection.classList.toggle("hide");
 });
@@ -610,6 +544,7 @@ var loadFormFromEstimateObject = function(estimate) {
         tr.appendChild(itemColumns[j]);
       }
       itemsTable.appendChild(tr);
+      addItemToVariantSelect(items, i);
     }
     itemsContainer.classList.remove("hide");
 
