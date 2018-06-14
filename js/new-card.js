@@ -127,7 +127,7 @@ var addVariantTypesOnVariantSelectChange = function(){
   var index = variantSelect.selectedIndex;
   var item = items[index-1];
   var input = document.createElement('input');
-  input.setAttribute("type","text");
+  input.setAttribute("type","number");
   var rows = variantsTable.rows.length;
   for (i = 1; i < rows;i++){
     variantsTable.deleteRow(1);
