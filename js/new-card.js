@@ -544,7 +544,7 @@ var loadFormFromEstimateObject = function(estimate) {
         tr.appendChild(itemColumns[j]);
       }
       itemsTable.appendChild(tr);
-      addItemToVariantSelect(items, i);
+      addItemToVariantSelect(estimate.items, i);
     }
     itemsContainer.classList.remove("hide");
 
