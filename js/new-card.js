@@ -34,7 +34,7 @@ var design = document.getElementById('design');
 var finishAddButton = document.getElementById('finishAddButton');
 var finishesContainer = document.getElementById('finishesContainer');
 var finishesTable = document.getElementById('finishesTable');
-var finish = document.getElementById('finish');
+var itemFinish = document.getElementById('itemFinish');
 var showToClient = document.getElementById('showToClient');
 var hardCoverage = document.getElementById('hardCoverage');
 var printer = document.getElementById('printer');
@@ -61,13 +61,13 @@ var variantsTable = document.getElementById('variantsTable');
 
 
 var items = [];
-var finishes = [];
+var itemFinishes = [];
 var cardInfoKey = 'pappira.cardInfo';
 var listId = '5a9ef0ce024c776a21220836';
 var estimateFields = [companyAlias, companyName, rut, contactName, email, tel, 
   workType, workQuantity, generalFinishes, price, downPayment, deliveryDelay, customerComments, paymentWay, officeComments];
 var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
-    weight, color, inkQuantity, inkDetail, phases, design, finishes, hardCoverage, printer, cutsPerSheet, quantityPerLayout,
+    weight, color, inkQuantity, inkDetail, phases, design, itemFinishes, hardCoverage, printer, cutsPerSheet, quantityPerLayout,
     layoutSize, sheetWaste];
 var finishChildren = [showToClient,finish];
 var saveFunction = createCard;
@@ -95,7 +95,9 @@ itemAddButton.addEventListener('click', function(){
 
     var itemColumns = itemChildren.map(function(itemElement){
       var value = "";
-      if(itemElement.type !== "checkbox"){
+      if(!itemElement.type && itemElement.length) {
+        value = itemElement.join("\n");
+      } else if(itemElement.type !== "checkbox"){
         value = itemElement.value;
         item[itemElement.id] = itemElement.value;
       } else {
@@ -107,6 +109,7 @@ itemAddButton.addEventListener('click', function(){
       td.appendChild(document.createTextNode(value));
       return td;
     });
+    item.finishes = itemFinishes;
     items.push(item);
     addItemToVariantSelect(items, items.length - 1);
     var tr = document.createElement("tr");
@@ -239,6 +242,14 @@ variantType.addEventListener("change",changeType);
 variantSelect.addEventListener("change",addVariantTypesOnVariantSelectChange);
 variantTypeAddButton.onclick = addVariantTypeRow;
 
+var addFinishModifyButton = function(tr) {
+  var td = document.createElement("td");
+  var button = document.createElement("button");
+  button.appendChild(document.createTextNode("Modificar"));
+  button.onclick = editFinish;
+  td.appendChild(button);
+  tr.appendChild(td);
+}
 var addFinishToItem = function(){
   var finish = {};
 
@@ -258,18 +269,13 @@ var addFinishToItem = function(){
     td.appendChild(document.createTextNode(value));
     return td;
   });
-  finishes.push(finish);
+  itemFinishes.push(itemFinish);
   var tr = document.createElement("tr");
   for(var i=0;i<finishColumns.length;i++) {
     tr.appendChild(finishColumns[i]);
   }
 
-  var td = document.createElement("td");
-  var button = document.createElement("button");
-  button.appendChild(document.createTextNode("Modificar"));
-  button.onclick = editFinish;
-  td.appendChild(button);
-  tr.appendChild(td);
+  addFinishModifyButton(tr);
  
   finishesTable.appendChild(tr);
   finishesContainer.classList.remove("hide");
@@ -322,11 +328,11 @@ var saveEditedFinish = function(){
   var inputFinish = tdFinish.getElementsByTagName('input')[0];
   var saveButton = tr.childNodes[2].getElementsByTagName('button')[0];
 
-  finishes[finishNumber].showToClient = inputShowToClient.checked;
-  finishes[finishNumber].finish = inputFinish.value;
+  itemFinishes[finishNumber].showToClient = inputShowToClient.checked;
+  itemFinishes[finishNumber].finish = inputFinish.value;
 
-  tdShowToClient.textContent = finishes[finishNumber].showToClient?"Si":"No";
-  tdFinish.textContent = finishes[finishNumber].finish;
+  tdShowToClient.textContent = itemFinishes[finishNumber].showToClient?"Si":"No";
+  tdFinish.textContent = itemFinishes[finishNumber].finish;
 
   saveButton.textContent = "Modificar";
   saveButton.onclick = editFinish;
@@ -512,6 +518,14 @@ var createEstimateObjectFromForm = function() {
   return estimate;
 };
 
+var addItemFinishIntoTable = function(finish){
+  var tr = document.createElement("tr");
+  tr.appendChild(document.createElement("td").appendChild(document.createTextNode(finish.showToClient ? "Si" : "No")));
+  tr.appendChild(document.createElement("td").appendChild(document.createTextNode(finish.itemFinish)));
+  addFinishModifyButton(tr);
+  finishesTable.appendChild(tr);
+};
+
 var loadFormFromEstimateObject = function(estimate) {
   for(var i=0;i<estimateFields.length;i++){
     var estimateField = estimateFields[i];
@@ -526,19 +540,27 @@ var loadFormFromEstimateObject = function(estimate) {
     for(var i=0;i<estimate.items.length;i++){
       var tr = document.createElement("tr");
       var item = estimate.items[i];
+
+      itemFinishes = item.finishes;
+      for(var i=0;i<itemFinishes.length;i++){
+        addItemFinishIntoTable(itemFinishes[i]);
+      }
+      
       var itemColumns = Object.keys(item).map(function(itemAttribute){
         var value = "";
-        var itemElement = eval(itemAttribute);
-        if(itemElement.type !== "checkbox"){
-          itemElement.value = item[itemAttribute];
-          value = item[itemAttribute];
-        } else {
-          itemElement.checked = item[itemAttribute];
-          value = itemElement.checked ? "Si" : "No";
+        if(itemAttribute != "finishes") { // exclude finishes because they are shown in their own table
+          var itemElement = eval(itemAttribute);
+          if(itemElement.type !== "checkbox"){
+            itemElement.value = item[itemAttribute];
+            value = item[itemAttribute];
+          } else {
+            itemElement.checked = item[itemAttribute];
+            value = itemElement.checked ? "Si" : "No";
+          }
+          var td = document.createElement("td");
+          td.appendChild(document.createTextNode(value));
+          return td;
         }
-        var td = document.createElement("td");
-        td.appendChild(document.createTextNode(value));
-        return td;
       });
       for(var j=0;j<itemColumns.length;j++){
         tr.appendChild(itemColumns[j]);
