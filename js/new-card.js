@@ -55,11 +55,6 @@ var customerComments = document.getElementById('customerComments');
 var paymentWay = document.getElementById('paymentWay');
 var officeComments = document.getElementById('officeComments');
 
-var variantSelect = document.getElementById('variantSelect');
-var variantType = document.getElementById('variantType');
-var variantsTable = document.getElementById('variantsTable');
-
-
 var items = [];
 var itemFinishes = [];
 var cardInfoKey = 'pappira.cardInfo';
@@ -120,127 +115,6 @@ itemAddButton.addEventListener('click', function(){
     itemsContainer.classList.remove("hide");
     goToHashtag("#");
 });
-
-var addItemToVariantSelect = function(items, index){
-  var option = createOption(index, items[index].itemName);
-  variantSelect.appendChild(option);
-};
-
-var addVariantTypesOnVariantSelectChange = function(){
-  var index = variantSelect.selectedIndex;
-  var item = items[index-1];
-  var input = document.createElement('input');
-  input.setAttribute("type","number");
-  var rows = variantsTable.rows.length;
-  for (i = 1; i < rows;i++){
-    variantsTable.deleteRow(1);
-  }
-  var variantType = document.createElement("select");
-  variantType.options.length = 0;
-  if (index === 0){
-    variantType.appendChild(createOption("quantity","Cantidad"));
-  }else{
-    variantType.appendChild(createOption("vias","Vías"));
-    variantType.appendChild(createOption("pages","Páginas"));
-    if(item.openSize === item.closedSize){
-      variantType.appendChild(createOption("size","Tamaño"));
-    }else{
-      variantType.appendChild(createOption("openSize","Tamaño Abierto"));
-      variantType.appendChild(createOption("closedSize","Tamaño Cerrado"));
-    }
-    if (item.numbered){
-      variantType.appendChild(createOption("numeration","Numeración"));
-    }
-    variantType.appendChild(createOption("material","Material"));
-    variantType.appendChild(createOption("weight","Peso"));
-    variantType.appendChild(createOption("color","Color"));
-    variantType.appendChild(createOption("inksQuantity","Cantidad de tintas"));
-    variantType.appendChild(createOption("inksDescription","Detalle de tintas"));
-    variantType.appendChild(createOption("phases","Fases"));
-  }
-  variantType.addEventListener("change",changeType);
-  var tr = document.createElement("tr");
-  var tdVariant = document.createElement("td");
-  tdVariant.appendChild(input);
-  var tdValue = document.createElement("td");
-  tdValue.appendChild(variantType);
-  var button = document.createElement("button");
-  button.onclick = addVariantTypeRow;
-  button.innerHTML = "+";
-  var tdButton = document.createElement("td");
-  tdButton.appendChild(button);
-  tr.appendChild(tdValue);
-  tr.appendChild(tdVariant);
-  tr.appendChild(tdButton);
-  variantsTable.appendChild(tr);
-}
-
-var createOption = function (value,name){
-  var option = document.createElement('option');
-  option.value = value;
-  option.innerHTML = name;
-  return option;
-}
-
-var addVariantTypeRow = function(){
-  var currentTr = this.parentNode.parentNode;
-  var newTr = currentTr.cloneNode(true);
-  var input = document.createElement("input");
-  input.setAttribute("type","number");
-  newTr.getElementsByTagName('td')[1].innerHTML = "";
-  newTr.getElementsByTagName('td')[1].appendChild(input);
-  newTr.getElementsByTagName('td')[2].getElementsByTagName('button')[0].onclick = addVariantTypeRow;
-  newTr.getElementsByTagName('td')[0].getElementsByTagName('select')[0].addEventListener("change",changeType);
-  currentTr.getElementsByTagName('td')[2].getElementsByTagName('button')[0].onclick = removeVariantTypeRow;
-  currentTr.getElementsByTagName('td')[2].getElementsByTagName('button')[0].innerHTML = "-";
-  variantsTable.appendChild(newTr);
-}
-
-var removeVariantTypeRow = function(){
-  var currentTr = this.parentNode.parentNode.rowIndex;
-  variantsTable.deleteRow(currentTr);
-}
-
-var changeType = function(){
-  var currentTr = this.parentNode.parentNode;
-  switch (this.options[this.selectedIndex].value){
-    case "quantity":
-    case "vias":
-    case "pages":
-    case "weight":
-    case "inksQuantity":
-      var input = currentTr.getElementsByTagName('td')[1].getElementsByTagName('input')[0];
-      if(input){
-        input.setAttribute("type","number");
-      }else{
-        var input = document.createElement("input");
-        input.setAttribute("type","number");
-        currentTr.getElementsByTagName('td')[1].innerHTML = "";
-        currentTr.getElementsByTagName('td')[1].appendChild(input);
-      }
-      break;
-    case "material":
-      var select = currentTr.getElementsByTagName('td')[1].getElementsByTagName('select')[0];
-      var material2 = material.cloneNode(true);
-      if(select){
-        select = material2;
-      }else{
-        currentTr.getElementsByTagName('td')[1].innerHTML = "";
-        currentTr.getElementsByTagName('td')[1].appendChild(material2);
-      }
-      break;
-    default:
-      var input = document.createElement("input");
-      input.setAttribute("type","text");
-      currentTr.getElementsByTagName('td')[1].innerHTML = "";
-      currentTr.getElementsByTagName('td')[1].appendChild(input);
-      break;
-  }
-}
-
-variantType.addEventListener("change",changeType);
-variantSelect.addEventListener("change",addVariantTypesOnVariantSelectChange);
-variantTypeAddButton.onclick = addVariantTypeRow;
 
 var addFinishModifyButton = function(tr) {
   var td = document.createElement("td");
@@ -393,7 +267,7 @@ var getTrelloCardDescription = function (estimate){
       }
       if(item.closedSize != null) {
         descriptionObject.closedSize = item.closedSize + " (cerrado)";
-      }
+      }s
     }
 
     if(item.numbered){
