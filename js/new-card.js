@@ -281,7 +281,7 @@ var addFinishToItem = function(){
   finishesContainer.classList.remove("hide");
 };
 
-finish.onkeyup = onEnter(addFinishToItem);
+itemFinish.onkeyup = onEnter(addFinishToItem);
 finishAddButton.addEventListener('click', addFinishToItem);
 
 var editFinish = function(){
