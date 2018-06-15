@@ -67,9 +67,9 @@ var listId = '5a9ef0ce024c776a21220836';
 var estimateFields = [companyAlias, companyName, rut, contactName, email, tel, 
   workType, workQuantity, generalFinishes, price, downPayment, deliveryDelay, customerComments, paymentWay, officeComments];
 var itemChildren = [itemName, vias, pages, numbered, numeration, openSize, closedSize, material, 
-    weight, color, inkQuantity, inkDetail, phases, design, itemFinishes, hardCoverage, printer, cutsPerSheet, quantityPerLayout,
+    weight, color, inkQuantity, inkDetail, phases, design, hardCoverage, printer, cutsPerSheet, quantityPerLayout,
     layoutSize, sheetWaste];
-var finishChildren = [showToClient,finish];
+var finishChildren = [showToClient,itemFinish];
 var saveFunction = createCard;
 
 t.render(function(){
@@ -269,7 +269,7 @@ var addFinishToItem = function(){
     td.appendChild(document.createTextNode(value));
     return td;
   });
-  itemFinishes.push(itemFinish);
+  itemFinishes.push(finish);
   var tr = document.createElement("tr");
   for(var i=0;i<finishColumns.length;i++) {
     tr.appendChild(finishColumns[i]);
