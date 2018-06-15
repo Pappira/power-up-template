@@ -563,7 +563,9 @@ var loadFormFromEstimateObject = function(estimate) {
         }
       });
       for(var j=0;j<itemColumns.length;j++){
-        tr.appendChild(itemColumns[j]);
+        if(itemColumns[i]){
+          tr.appendChild(itemColumns[j]);
+        }
       }
       itemsTable.appendChild(tr);
       addItemToVariantSelect(estimate.items, i);
