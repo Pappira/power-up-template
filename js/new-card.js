@@ -437,7 +437,7 @@ var loadFormFromEstimateObject = function(estimate) {
         }
       });
       for(var j=0;j<itemColumns.length;j++){
-        if(itemColumns[i]){
+        if(itemColumns[j]){
           tr.appendChild(itemColumns[j]);
         }
       }
