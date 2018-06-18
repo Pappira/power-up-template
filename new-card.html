@@ -168,6 +168,14 @@
       <h4>Variantes</h4>
         
       <div id="variantContainer" class="hide"> 
+          <table id="variantsTable">
+              <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Variantes</th>
+                <th>Precio</th>
+              </tr>
+            </table>
       </div>
 
       <label for="variantName">Nombre</label>
@@ -176,7 +184,7 @@
       <select id="variantSelect">
         <option value="general">General</option>
       </select>
-      <table id="variantsTable">
+      <table id="variantTable">
         <tr>
           <th>Variante</th>
           <th>Valor</th>
@@ -199,14 +207,15 @@
       </table>
       <label for="additionalPrice"><input type="checkbox" id="additionalPrice">Precio Adicional</label>
       <label for="variantPrice">Precio</label>
-      <input type="text" id="variantPrice"/>
+      <input type="number" id="variantPrice"/>
       
-      <button id="finishAddButton" class="mod-primary">Agregar terminación</button>
+      <button id="variantAddButton" class="mod-primary">Agregar variante</button>
 
       <button id="createCardButton" class="mod-primary">Crear</button><div id="loader"></div>
     </div> 
     <script src="./js/utils.js"></script>
     <script src="./js/trello-api.js"></script>
+    <script src="./js/new-card-variant.js"></script>
     <script src="./js/new-card.js"></script>
   </body>
 </html>
