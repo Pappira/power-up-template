@@ -172,8 +172,12 @@ var addVariantToTable = function(variant,items){
     var tr = document.createElement("tr");
     var tdName = document.createElement("td");
     tdName.textContent = variant.name;
-    var tdItem = document.createElement("td");
-    tdItem.textContent = items[variant.item].itemName;
+    var tdItem = document.createElement("td");    
+    if( variant.item === "general"){
+      tdItem.textContent = "General"
+    }else{
+          tdItem.textContent = items[variant.item].itemName;
+    }
     var tdChanges = document.createElement("td");
     var tdChangesText ="";
     for (var i = 0; i < variant.changes.length; i++){
