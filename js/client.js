@@ -276,7 +276,7 @@ var cardButtonCallback = function(t){
 var getNewEstimateModalCallback = function(update){
   return function(t){
     return t.modal({
-      url: './new-card.html', // The URL to load for the iframe
+      url: './new-card2.html', // The URL to load for the iframe
       args: { update: update }, // Optional args to access later with t.arg('text') on './modal.html'
       accentColor: '#F2D600', // Optional color for the modal header 
       height: 1500, // Initial height for iframe; not used if fullscreen is true
