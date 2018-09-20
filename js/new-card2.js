@@ -22,9 +22,13 @@ var focusOutOnQuantity = function(){
 	}
 };
 
-/*var createItem = function(){
+var createItem = function(){
 	quantityOfItems++;
-	var h1 = createElement('h1','titulo','','Item' + quantityOfItems);
+
+	var divContainer = createElement('div','container','item' + quantityOfItems + 'container');
+	var formItem = createElement('form','col s12','item' + quantityOfItems + 'form');
+
+	var h1 = createElement('h1','titulo','','Item ' + quantityOfItems);
 	var divRow = createElement('div','row','','');
 
 	var divItemName = createTextInput('s6','item' + quantityOfItems + 'name','Nombre del item');
@@ -42,30 +46,8 @@ var focusOutOnQuantity = function(){
 	var divOpenedSize = createTextInput('s6','Item' + quantityOfItems + 'openedSize','Tamaño Abierto');
 	divRow.appendChild(divOpenedSize);
 
-	var option1 = createElement('optoin','','','option1');
-	var option2 = createElement('optoin','','','option2');
-	var option3 = createElement('optoin','','','option3');
-	var select = createElement('select');
-	select.appendChild(option1);
-	select.appendChild(option2);
-	select.appendChild(option3);
-	var divInput = createElement('div','input-wrapper');
-	divInput.appendChild(select);
-	var divCol = createElement('div','input-field col s4');
-	divCol.appendChild(divInput);
-	divRow.appendChild(divCol);
-
-	var selectMaterial = document.getElementById('item1material').cloneNode(true);
-	selectMaterial.removeAttribute('id');
-	selectMaterial.setAttribute('id','item' + quantityOfItems + 'material');
-	var divInput = createElement('div','input-wrapper');
-	divInput.appendChild(selectMaterial);
-	var divCol = createElement('div','input-field col s4');
-	divCol.appendChild(divInput);
-	divRow.appendChild(divCol);
-
-	var selectMaterialDiv = document.getElementById('item1materialDiv').cloneNode(true);
-	divRow.appendChild(selectMaterialDiv);
+	var selectMaterial = createSelect('s4','item' + quantityOfItems + 'material',['option1','option2','option3'],'Material')
+	divRow.appendChild(selectMaterial);
 
 	var switchgr = createTextInput('s2','Item' + quantityOfItems + 'paperGr','Gramaje');
 	divRow.appendChild(switchgr);
@@ -82,10 +64,53 @@ var focusOutOnQuantity = function(){
 	var divChipsQuantityOfPages = createElement('div','input-field col s4','item' + quantityOfItems + 'quantityOfPagesChips');
 	divRow.appendChild(divChipsQuantityOfPages);
 
+	formItem.appendChild(h1);
+	formItem.appendChild(divRow);
+
+	var subtitleFinishes = createElement('p','subtitulo','','Terminaciones');
+	formItem.appendChild(subtitleFinishes);
+
+ 	var divRowFinishes = createElement('div','row','','');
+
+	var selectFinish = createSelect('s6','item' + quantityOfItems + 'finish',['option1','option2','option3'],'tipo')
+	divRowFinishes.appendChild(selectFinish);
+
+	var divFinishComment = createTextInput('s4','Item' + quantityOfItems + 'openedSize','Comentario');
+	divRowFinishes.appendChild(divFinishComment);
 
 
+	var switchShowToClient = createSwitch('s2','Item' + quantityOfItems + 'showToClient','¿Mostrar al cliente?');
+	divRowFinishes.appendChild(switchShowToClient);
 
-	itemsDiv.appendChild(divRow);
+	formItem.appendChild(divRowFinishes);
+	divContainer.appendChild(formItem);
+
+	itemsDiv.appendChild(divContainer);
+
+	$('select#item' + quantityOfItems + 'material').material_select();
+	$('select#item' + quantityOfItems + 'finish').material_select();
+}
+
+var createSelect = function(colType,selectId,values,labelName){
+	var option0 = createElement('Option','','','Selecciona','','','');
+	option0.setAttribute('disabled',true);
+	option0.setAttribute('selected',true);
+	var select = createElement('select','',selectId);
+	select.appendChild(option0);
+	if (values){
+		for(var i = 0; i < values.length; i++){
+			var option = createElement('Option','','',values[i],'','',values[i]);
+			select.appendChild(option);
+		}
+	}
+	var label = createElement('label','','',labelName,'',selectId);
+	var divInput = createElement('div','input-wrapper');
+	divInput.appendChild(select);
+	divInput.appendChild(label);
+	var divCol = createElement('div','input-field col ' + colType);
+	divCol.appendChild(divInput);
+
+	return divCol;
 }
 
 var createSwitch = function(colType,switchId,switchLabelValue){
@@ -115,7 +140,7 @@ var createTextInput = function(colType,inputId,inputLabelValue){
 	return divCol;
 };
 
-var createElement = function(typeValue,className,id,value,type,forValue){
+var createElement = function(typeValue,className,id,text,type,forValue,value){
 	var createElement=document.createElement(typeValue);
 	if(className && className.length>0){
 		createElement.setAttribute('class',className);
@@ -123,8 +148,8 @@ var createElement = function(typeValue,className,id,value,type,forValue){
 	if(id && id.length>0){	
 		createElement.setAttribute('id',id);
 	}
-	if(value  && value.length>0){
-		createElement.append(value);
+	if(text  && text.length>0){
+		createElement.append(text);
 	}
 	if(type  && type.length>0){
 		createElement.setAttribute('type',type);
@@ -132,21 +157,15 @@ var createElement = function(typeValue,className,id,value,type,forValue){
 	if(forValue  && forValue.length>0){
 		createElement.setAttribute('for',forValue);
 	}
+	if(value  && value.length>0){
+		createElement.setAttribute('value',value);
+	}
 	return createElement;
-};*/
-
-
+};
 
 quantity.addEventListener('focusout',focusOutOnQuantity);
 
-
-var addItem = function(){
-	itemsDiv.innerHTML = itemsDiv.innerHTML +  itemHTML.replace(/\+/g ,++quantityOfItems);
-	$('select#item' + quantityOfItems + 'material').material_select();
-	$('select#item' + quantityOfItems + 'finish').material_select();
-}
-
-addItemButton.addEventListener('click',addItem);
+addItemButton.addEventListener('click',createItem);
 
 quantity.addEventListener('keyup',function(e){
     if(e.keyCode === 13 || e.keyCode === 32){
