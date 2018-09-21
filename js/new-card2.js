@@ -397,9 +397,9 @@ var createElement = function(typeValue,className,id,text,type,forValue,value){
 	return createElement;
 };
 
-addItemButton.addEventListener('click',createItem);
-
-
+addItemButton.addEventListener('click',function() {
+	createItem();
+});
 $(window).on('load', function() {
 	createGeneralInformation();
 	createItem();
