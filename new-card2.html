@@ -22,288 +22,99 @@
 	<div class="fixed-action-btn">
 	  <a class="btn-floating btn-large waves-effect waves-light add-item-button" id="addItemButton"><i class="large material-icons">add</i></a>
 	</div>
-	<div class="container">	
-		<form class="col s12">
-			<h1 class="titulo">General</h1>
+	<div class="fixed-action-btn">
+      <a class="btn-floating btn-large waves-effect waves-light add-item-button" id="addItemButton"><i class="large material-icons">add</i></a>
+    </div>
 
-			<div class="row">
-		    	<div class="input-field col s6">
-					<div class="input-wrapper">
-			        	<input id="quantity" type="number" class="validate">
-			        	<label for="quantity">Cantidad</label>
-		        	</div>
-		        </div>
+    <div id="generalDiv">
+    </div>
+  
+    <div id="itemsDiv">
+    </div>
+  
+    <div class="container">	
+        <form class="col s12">
+            <h1 class="titulo">Comentarios</h1>
 
-		    	<div id="quantityChipsDiv" class="input-field col s6">   
-		      	</div>
-		   
-		        <div class="input-field col s12">
-					<div class="input-wrapper">	
-		        		<input id="clossedSize" type="text" class="validate">
-		        		<label for="clossedSize">Tamaño cerrado (mm)</label>
-		      	  	</div>
-		        </div>
-	        </div>
-	        <p class="subtitulo">Terminaciones</p>
-	        <div class="row">
-	    		<div class="input-field col s6">
-					<div class="input-wrapper">	
-				    	<select id = "finish">
-				      		<option value="" disabled selected>Selecciona</option>
-				      		<option value="1">Option 1</option>
-				      		<option value="2">Option 2</option>
-				      		<option value="3">Option 3</option>
-				    	</select>
-				    	<label for="finish">Tipo</label>
-				    </div>
-			    </div>	
-	    		<div class="input-field col s4">
-	    			<div class="input-wrapper">
-		        	  <input id="finishComment" type="text" class="validate">
-			          <label for="finishComment">Comentario</label>
-	  				</div>
-	  			</div>
-	  			<div class="col s2 switch-div switch">
-					<p class="switch">¿Mostrar al cliente?</p>	
-				    <div class="switch">
-						<label class="puntas">
-						 	<input type="checkbox" id="showToClientFinish">
-							<span class="lever"></span>
-						</label>	
-					</div>
-				</div>
-			</div>	
-		</form>
-	</div>
-
-
-	<div id="itemsDiv">
-		<div class="container" id="item1container">	
-			<form class="col s12" id="item1form">
-				<h1 class="titulo">Item 1</h1>
-
-				<div class="row">
-			    	<div class="input-field col s6">
-						<div class="input-wrapper">
-				        	<input id="item1Name" type="text" class="validate">
-				        	<label for="item1Name">Nombre del item</label>
-			        	</div>
-			        </div>
-			        <div class="input-field col s4">
-		    			<div class="input-wrapper">
-			        	  <input id="item1Inks" type="text" class="validate">
-				          <label for="item1Inks">Tintas F/D</label>
-		  				</div>
-		  			</div>
-		  			<div class="col s2 switch-div switch">
-						<p class="switch">¿Impresión al vivo?</p>	
-					    <div class="switch">
-							<label class="puntas">
-							 	<input type="checkbox" id="Item1bleedPrint">
-								<span class="lever"></span>
-							</label>	
-						</div>
-					</div>
-			    
-			    	<div class="input-field col s6">
-						<div class="input-wrapper">
-				        	<input id="item1inksDetails" type="text" class="validate">
-				        	<label for="item1inksDetails">Detalle de tintas</label>
-			        	</div>
-			        </div>
-			        <div class="input-field col s6">
-		    			<div class="input-wrapper">
-			        	  <input id="item1openedSize" type="text" class="validate">
-				          <label for="item1openedSize">Tamaño Abierto</label>
-		  				</div>
-		  			</div>
-			   
-			       	<div class="input-field col s4">
-						<div class="input-wrapper">	
-					    	<select id="item1material">
-					      		<option value="" disabled selected>Selecciona</option>
-					      		<option value="1">Option 1</option>
-					      		<option value="2">Option 2</option>
-					      		<option value="3">Option 3</option>
-					    	</select>
-					    	<label for="item1material">Materiales</label>
-					    </div>
-				    </div>
-			        <div class="input-field col s2">
-		    			<div class="input-wrapper">
-			        	  <input id="item1paperGr" type="text" class="validate">
-				          <label for="item1paperGr">Gramaje</label>
-		  				</div>
-		  			</div>
-
-				    <div id="item1paperChips" class="input-field col s6">
-				    	<div class = "chip">           
-				        	Coteado 130
-				        	<i class = "material-icons">close</i>
-				    	</div> 
-				    	<div class = "chip">           
-				        	Coteado 170
-				        	<i class = "material-icons">close</i>
-				    	</div>  
-				    	<div class = "chip">           
-				        	Coteado 170
-				        	<i class = "material-icons">close</i>
-				    	</div>  
-				    	<div class = "chip">           
-				        	Coteado 170
-				        	<i class = "material-icons">close</i>
-				    	</div>  
-				    	<div class = "chip">           
-				        	Coteado 170
-				        	<i class = "material-icons">close</i>
-				    	</div>  
-			      	</div>
-
-			        <div class="input-field col s6">
-		    			<div class="input-wrapper">
-			        	  <input id="item1quantityOfPages" type="text" class="validate">
-				          <label for="item1quantityOfPages">Cantidad de Páginas</label>
-		  				</div>
-		  			</div>
-
-		  			<div class="col s2 switch-div switch">
-						<p class="switch">¿Todas Iguales?</p>	
-					    <div class="switch">
-							<label class="puntas">
-							 	<input type="checkbox" id="itemAllTheSame">
-								<span class="lever"></span>
-							</label>	
-						</div>
-					</div>
-
-				    <div id="item1quantityOfPagesChips" class="input-field col s4">
-				    	<div class = "chip">           
-				        	100
-				        	<i class = "material-icons">close</i>
-				    	</div> 
-				    	<div class = "chip">           
-				        	150
-				        	<i class = "material-icons">close</i>
-				    	</div>  
-			      	</div>
-
-				</div>
-				<p class="subtitulo">Terminaciones</p>
-		        <div class="row">
-		    		<div class="input-field col s6">
-						<div class="input-wrapper">	
-					    	<select id = "item1finish">
-					      		<option value="" disabled selected>Selecciona</option>
-					      		<option value="1">Option 1</option>
-					      		<option value="2">Option 2</option>
-					      		<option value="3">Option 3</option>
-					    	</select>
-					    	<label for="item1finish">Tipo</label>
-					    </div>
-				    </div>	
-		    		<div class="input-field col s4">
-		    			<div class="input-wrapper">
-			        	  <input id="item1finishComment" type="text" class="validate">
-				          <label for="finishComment">Comentario</label>
-		  				</div>
-		  			</div>
-		  			<div class="col s2 switch-div switch">
-						<p class="switch">¿Mostrar al cliente?</p>	
-					    <div class="switch">
-							<label class="puntas">
-							 	<input type="checkbox" id="item1showToClient">
-								<span class="lever"></span>
-							</label>	
-						</div>
-					</div>
-				</div>	
-			</form>
-		</div>
-	</div>
-
-	<div class="container">	
-		<form class="col s12">
-			<h1 class="titulo">Comentarios</h1>
-
-		    <div class="row">
-		    	<div class="input-field col s6">
-					<div class="input-wrapper">
-			        	<input id="internalComments" type="text" class="validate">
-			        	<label for="internalComments">Internos</label>
-		        	</div>
-		        </div>
-		        <div class="input-field col s6">
-	    			<div class="input-wrapper">
-		        	  <input id="clientComments" type="text" class="validate">
-			          <label for="clientComments">Al Cliente</label>
-	  				</div>
-	  			</div>
-		    </div>
-	    </form>
-	</div>
-
-
-	<div class="container">	
-		<form class="col s12">
-			<h1 class="titulo">Datos del cliente</h1>
-
-		    <div class="row">
-		    	<div class="input-field col s6">
-					<div class="input-wrapper">
-			        	<input id="comenrcialName" type="text" class="validate">
-			        	<label for="comenrcialName">Nombre comercial o fantasia</label>
-		        	</div>
-		        </div>
-		        <div class="input-field col s6">
-	    			<div class="input-wrapper">
-		        	  <input id="businessName" type="text" class="validate">
-			          <label for="businessName">Razón social</label>
-	  				</div>
-	  			</div>
-		    	<div class="input-field col s6">
-					<div class="input-wrapper">
-			        	<input id="rut" type="text" class="validate">
-			        	<label for="rut">RUT</label>
-		        	</div>
-		        </div>
-		        <div class="input-field col s6">
-	    			<div class="input-wrapper">
-		        	  <input id="address" type="text" class="validate">
-			          <label for="address">Dirección</label>
-	  				</div>
-	  			</div>
-		    	<div class="input-field col s6">
-					<div class="input-wrapper">
-			        	<input id="contactName" type="text" class="validate">
-			        	<label for="contactName">Nombre</label>
-		        	</div>
-		        </div>
-		        <div class="input-field col s6">
-	    			<div class="input-wrapper">
-		        	  <input id="contactEmail" type="text" class="validate">
-			          <label for="contactEmail">Email</label>
-	  				</div>
-	  			</div>
-		    	<div class="input-field col s6">
-					<div class="input-wrapper">
-			        	<input id="contactPhone" type="text" class="validate">
-			        	<label for="contactPhone">Teléfono</label>
-		        	</div>
-		        </div>
-	    		<div class="input-field col s6">
-					<div class="input-wrapper">	
-				    	<select id = "paymentWay">
-				      		<option value="" disabled selected>Selecciona</option>
-				      		<option value="1">Option 1</option>
-				      		<option value="2">Option 2</option>
-				      		<option value="3">Option 3</option>
-				    	</select>
-				    	<label for="paymentWay">Forma de pago</label>
-				    </div>
-			    </div>	
-		    </div>
-	    </form>
-	</div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <div class="input-wrapper">
+                        <input id="internalComments" type="text" class="validate">
+                        <label for="internalComments">Internos</label>
+                    </div>
+                </div>
+                <div class="input-field col s6">
+                    <div class="input-wrapper">
+                    <input id="clientComments" type="text" class="validate">
+                    <label for="clientComments">Al Cliente</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+  
+  
+      <div class="container">	
+          <form class="col s12">
+              <h1 class="titulo">Datos del cliente</h1>
+  
+              <div class="row">
+                  <div class="input-field col s6">
+                      <div class="input-wrapper">
+                          <input id="comenrcialName" type="text" class="validate">
+                          <label for="comenrcialName">Nombre comercial o fantasia</label>
+                      </div>
+                  </div>
+                  <div class="input-field col s6">
+                      <div class="input-wrapper">
+                        <input id="businessName" type="text" class="validate">
+                        <label for="businessName">Razón social</label>
+                        </div>
+                    </div>
+                  <div class="input-field col s6">
+                      <div class="input-wrapper">
+                          <input id="rut" type="text" class="validate">
+                          <label for="rut">RUT</label>
+                      </div>
+                  </div>
+                  <div class="input-field col s6">
+                      <div class="input-wrapper">
+                        <input id="address" type="text" class="validate">
+                        <label for="address">Dirección</label>
+                        </div>
+                    </div>
+                  <div class="input-field col s6">
+                      <div class="input-wrapper">
+                          <input id="contactName" type="text" class="validate">
+                          <label for="contactName">Nombre</label>
+                      </div>
+                  </div>
+                  <div class="input-field col s6">
+                      <div class="input-wrapper">
+                        <input id="contactEmail" type="text" class="validate">
+                        <label for="contactEmail">Email</label>
+                        </div>
+                    </div>
+                  <div class="input-field col s6">
+                      <div class="input-wrapper">
+                          <input id="contactPhone" type="text" class="validate">
+                          <label for="contactPhone">Teléfono</label>
+                      </div>
+                  </div>
+                  <div class="input-field col s6">
+                      <div class="input-wrapper">	
+                          <select id = "paymentWay">
+                                <option value="" disabled selected>Selecciona</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                          </select>
+                          <label for="paymentWay">Forma de pago</label>
+                      </div>
+                  </div>	
+              </div>
+          </form>
+      </div>
     <script src = "./js/new-card2.js"></script> 
 </body>
 </html>
