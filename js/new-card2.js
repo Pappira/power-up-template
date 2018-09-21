@@ -234,7 +234,10 @@ var createGeneralInformation = function(){
 
 	var quantity = document.getElementById('quantity');
 
-	quantity.addEventListener('focusout',focusOutOnQuantity);
+	quantity.addEventListener('focusout',function(e){
+        focusOutOnQuantity(e.srcElement);
+    });
+
 
 	quantity.addEventListener('keyup',function(e){
 	    if(e.keyCode === 13 || e.keyCode === 32){
