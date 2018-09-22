@@ -21,7 +21,7 @@ var materials = ['Coteado Mate','Coteado Brillo','Obra Blanco','Obra Color','Opa
 
 var focusOutOnQuantity = function(elementFocusedOut){
 	if (elementFocusedOut.value.length > 0){
-		var chip = createChip('quantityChip' + ++quantityOfQuantities,elementFocusedOut.value)
+		var chip = createChip('quantityChip' + ++quantityOfQuantities,elementFocusedOut.value,['quantity'],[elementFocusedOut.value])
 		var quantityChipsDiv = document.getElementById('quantityChipsDiv');	
 		quantityChipsDiv.appendChild(chip);
 		elementFocusedOut.value = '';
@@ -40,28 +40,7 @@ var itemNameChanged = function(elementFocusedOut){
 	}
 };
 
-var focusOutOnMaterial = function(elementFocusedOut){
-	var itemNumber = elementFocusedOut.getAttribute('id').substring(4,5);
-	var materialSelectFocusedOut = document.getElementById('item' + itemNumber + 'material');
-	var materialGrFocusedOut = document.getElementById('item' + itemNumber + 'paperGr');
-	if (materialSelectFocusedOut.selectedIndex > 0 && materialGrFocusedOut.value.length > 0){
-		//Busco el DIV donde va el chip (depende del número de item)
-		var materialChipsDiv = document.getElementById('item' + itemNumber + 'paperChips');
-		//Busco cuantos chips ya hay, si no hay ninguno pongo 0
-		var quantityOfMaterials = quantitiesOfMaterials[itemNumber-1];
-		if(!quantityOfMaterials){
-			quantityOfMaterials = 0; 
-		}
-		quantitiesOfMaterials[itemNumber-1] = ++quantityOfMaterials;	
-		//creo el chip
-		var chip = createChip('item' + itemNumber + 'MaterialChip' + quantityOfMaterials, materialSelectFocusedOut.value.substring(0,3) + ' ' + materialGrFocusedOut.value)
-		materialChipsDiv.appendChild(chip);
-		//vuelvo a cero o a vacio los inputs que crean este chip, para que se pueda crear otro chip
-		materialSelectFocusedOut.selectedIndex = 0;
-		$('select#item' + itemNumber + 'material').material_select();
-		materialGrFocusedOut.value = '';
-	}
-};
+
 
 var focusOutOnQuantityOfPages = function(elementFocusedOut){
 	var itemNumber = elementFocusedOut.getAttribute('id').substring(4,5);
@@ -76,17 +55,22 @@ var focusOutOnQuantityOfPages = function(elementFocusedOut){
 		}
 		quantitiesOfquantityOfPages[itemNumber-1] = ++quantityOfPages;
 		//creo el chip
-		var chip = createChip('item' + itemNumber + 'quantityOfPagesChip' + quantityOfPages,quantityOfPagesFocusedOut.value);
+		var chip = createChip('item' + itemNumber + 'quantityOfPagesChip' + quantityOfPages,quantityOfPagesFocusedOut.value,['quantityOfPages'],[quantityOfPagesFocusedOut.value]);
 		quantityOfPagesChipsDiv.appendChild(chip);
 		//vuelvo a cero o a vacio los inputs que crean este chip, para que se pueda crear otro chip
 		quantityOfPagesFocusedOut.value = '';
 	}
 };
 
-var createChip = function(chipId,chipText){
+var createChip = function(chipId,chipText,attirbuteName,attributeValue){
 	var div = document.createElement("div");
 	div.setAttribute('class','chip');
 	div.setAttribute('id',chipId);
+	if(attirbuteName && attributeValue){
+		for(var i = 0; i <attirbuteName.length;i++){
+			div.setAttribute(attirbuteName[i],attributeValue[i]);
+		}
+	}
 	div.append(chipText);
 	var i = document.createElement("i");
 	i.setAttribute('class','material-icons');
@@ -235,9 +219,8 @@ var createGeneralInformation = function(){
 	var quantity = document.getElementById('quantity');
 
 	quantity.addEventListener('focusout',function(e){
-        focusOutOnQuantity(e.srcElement);
-    });
-
+	        focusOutOnQuantity(e.srcElement);
+	});
 
 	quantity.addEventListener('keyup',function(e){
 	    if(e.keyCode === 13 || e.keyCode === 32){
@@ -319,7 +302,7 @@ var focusOutOnMaterial = function(elementFocusedOut){
 		}
 		quantitiesOfMaterials[itemNumber-1] = ++quantityOfMaterials;	
 		//creo el chip
-		var chip = createChip('item' + itemNumber + 'MaterialChip' + quantityOfMaterials, materialSelectFocusedOut.value.substring(0,3) + ' ' + materialGrFocusedOut.value)
+		var chip = createChip('item' + itemNumber + 'MaterialChip' + quantityOfMaterials, materialSelectFocusedOut.value.substring(0,3) + ' ' + materialGrFocusedOut.value,['paper','gr'],[materialSelectFocusedOut.value,materialGrFocusedOut.value])
 		materialChipsDiv.appendChild(chip);
 		//vuelvo a cero o a vacio los inputs que crean este chip, para que se pueda crear otro chip
 		materialSelectFocusedOut.selectedIndex = 0;
@@ -400,9 +383,9 @@ var createElement = function(typeValue,className,id,text,type,forValue,value){
 	return createElement;
 };
 
-addItemButton.addEventListener('click',function() {
-	createItem();
-});
+addItemButton.addEventListener('click',createItem);
+
+
 $(window).on('load', function() {
 	createGeneralInformation();
 	createItem();
