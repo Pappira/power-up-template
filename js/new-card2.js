@@ -797,3 +797,26 @@ $(window).on('load', function() {
 	createComments();
 	createCustomer();
 });
+
+var createTrelloCardName = function(){
+	return estimate.quantity + "x" + estimate.workType + " - " + estimate.customer.comenrcialName;
+}
+
+var createCard = function(){
+	var estimate = createObject();
+	var cardToSave = {idList: listId, desc: createTextForCard(estimate), name: getTrelloCardName(estimate)};
+	if(estimate.deliveryDelay){
+	  //TODO Agregar due date a la tarjeta
+	  // due: mm/dd/yyy
+	}
+	startLoader();
+	createNewTrelloCard(t, cardToSave, function(card) {
+	  setTimeout(function () {
+		t.set(card.id, 'shared', cardInfoKey, estimate)
+		  .then(function(){
+			t.showCard(card.id);
+			t.closeModal();
+		  });
+	  }, 1500);
+	});
+  };
