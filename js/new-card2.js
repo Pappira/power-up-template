@@ -49,9 +49,11 @@ t.render(function(){
   
 	  if(cardInfo){
 		createGeneralInformation(cardInfo);
-		createItem(cardInfo);
-		createComments(cardInfo);
-		createCustomer(cardInfo);
+		for (var i = 0; i <  cardInfo.items.length;i++){
+			createItem(cardInfo.items[i]);
+		}
+		createComments(cardInfo.comments);
+		createCustomer(cardInfo.customer);
 	  }
 	});
   });
