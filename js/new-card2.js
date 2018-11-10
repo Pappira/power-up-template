@@ -829,6 +829,22 @@ var createTrelloCardName = function(){
 	return estimate.quantity + "x" + estimate.workType + " - " + estimate.customer.comenrcialName;
 }
 
+
+var updateCard = function() {
+	startLoader();
+	t.card('all')
+	.then(function(card) {
+	  var estimate = createObject();
+	  t.set('card', 'shared', cardInfoKey, estimate)
+		.then(function(){
+		  updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate)},
+			function(){
+			  t.closeModal();
+			});
+		});
+	});
+  };
+
 var createCard = function(){
 	var estimate = createObject();
 	var cardToSave = {idList: listId, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)};
