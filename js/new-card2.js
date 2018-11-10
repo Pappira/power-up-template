@@ -3,6 +3,7 @@ var generalDiv = document.getElementById('generalDiv');
 var commentsDiv = document.getElementById('commentsDiv');
 var customerDiv = document.getElementById('customerDiv');
 var addItemButton = document.getElementById('addItemButton');
+var addCardButton = document.getElementById('addCardButton');
 
 var quantityOfQuantities = 0;
 var quantitiesOfMaterials = [0];
@@ -820,3 +821,6 @@ var createCard = function(){
 	  }, 1500);
 	});
   };
+
+
+addCardButton.addEventListener('click',createCard);
