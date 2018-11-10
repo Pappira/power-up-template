@@ -35,6 +35,27 @@ var items = [];
 var cardInfoKey = 'pappira.cardInfo';
 var listId = '5a9ef0ce024c776a21220836';
 
+t.render(function(){
+	return t.get('card', 'shared', cardInfoKey)
+	.then(function(cardInfo){
+	  if(t.arg('update')){
+		saveFunction = updateCard;
+		addCardButton.firstChild.data = "Modificar";
+	  } else {
+		saveFunction = createCard;
+	  }
+  
+	  addCardButton.addEventListener('click', saveFunction);
+  
+	  if(cardInfo){
+		createGeneralInformation(cardInfo);
+		createItem(cardInfo);
+		createComments(cardInfo);
+		createCustomer(cardInfo);
+	  }
+	});
+  });
+
 var createTextForCard = function(){
 	var text = '';
 	text += '#' + estimate['workType'] + '\n';
@@ -797,12 +818,12 @@ var createElement = function(typeValue,className,id,text,type,forValue,value){
 addItemButton.addEventListener('click',createItem);
 
 
-$(window).on('load', function() {
+/*$(window).on('load', function() {
 	createGeneralInformation();
 	createItem();
 	createComments();
 	createCustomer();
-});
+});*/
 
 var createTrelloCardName = function(){
 	return estimate.quantity + "x" + estimate.workType + " - " + estimate.customer.comenrcialName;
