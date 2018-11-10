@@ -279,8 +279,8 @@ var getNewEstimateModalCallback = function(update){
       url: './new-card2.html', // The URL to load for the iframe
       args: { update: update }, // Optional args to access later with t.arg('text') on './modal.html'
       accentColor: '#F2D600', // Optional color for the modal header 
-      height: 1500, // Initial height for iframe; not used if fullscreen is true
-      fullscreen: true, // Whether the modal should stretch to take up the whole screen
+      height: 500, // Initial height for iframe; not used if fullscreen is true
+      fullscreen: false, // Whether the modal should stretch to take up the whole screen
       callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
       title: update?'Modificar Datos':'Nuevo Presupuesto', // Optional title for modal header
       // You can add up to 3 action buttons on the modal header - max 1 on the right side.
