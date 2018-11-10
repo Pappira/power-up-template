@@ -54,6 +54,11 @@ t.render(function(){
 		}
 		createComments(cardInfo);
 		createCustomer(cardInfo);
+	  }else{
+		createGeneralInformation();
+		createItem();
+		createComments();
+		createCustomer();
 	  }
 	});
   });
