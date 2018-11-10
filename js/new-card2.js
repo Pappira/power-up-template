@@ -52,8 +52,8 @@ t.render(function(){
 		for (var i = 0; i <  cardInfo.items.length;i++){
 			createItem(cardInfo.items[i]);
 		}
-		createComments(cardInfo.comments);
-		createCustomer(cardInfo.customer);
+		createComments(cardInfo);
+		createCustomer(cardInfo);
 	  }
 	});
   });
