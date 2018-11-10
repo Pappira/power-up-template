@@ -1,3 +1,5 @@
+var t = TrelloPowerUp.iframe();
+
 var itemsDiv = document.getElementById('itemsDiv');	
 var generalDiv = document.getElementById('generalDiv');	
 var commentsDiv = document.getElementById('commentsDiv');
