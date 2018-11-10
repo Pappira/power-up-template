@@ -30,6 +30,9 @@ var quantityOfPagesOfItems = [];
 var materialsOfItems = [];
 var items = [];
 
+var cardInfoKey = 'pappira.cardInfo';
+var listId = '5a9ef0ce024c776a21220836';
+
 var createTextForCard = function(){
 	var text = '';
 	text += '#' + estimate['workType'] + '\n';
