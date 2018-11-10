@@ -808,7 +808,7 @@ var createTrelloCardName = function(){
 
 var createCard = function(){
 	var estimate = createObject();
-	var cardToSave = {idList: listId, desc: createTextForCard(estimate), name: getTrelloCardName(estimate)};
+	var cardToSave = {idList: listId, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)};
 	if(estimate.deliveryDelay){
 	  //TODO Agregar due date a la tarjeta
 	  // due: mm/dd/yyy
