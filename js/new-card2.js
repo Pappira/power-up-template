@@ -872,4 +872,4 @@ var createCard = function(){
   };
 
 
-addCardButton.addEventListener('click',createCard);
+//addCardButton.addEventListener('click',createCard);
