@@ -24,8 +24,9 @@ t.render(function(){
         items.push(item.name);
         var quantityOfPages = [];
         var quantityOfMaterials = [];
+        var text = '"item":{"id":'+i+ ', "name": "'+ item.name ;
         for (var j = 0; j  < item.quantityOfPages.length;j++){
-            quantityOfPages.push('"item":{"id":'+i+ ', "name": "'+ item.name +  '", "pages": ' + item.quantityOfPages[j] + ',');
+            quantityOfPages.push('"pages": ' + item.quantityOfPages[j] + ',');
         }
         for (var j = 0; j < item.materials.length; j++){
             quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(cardInfo.items.length-1)?'}':','));
