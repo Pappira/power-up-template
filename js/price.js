@@ -10,18 +10,20 @@ var listId = '5a9ef0ce024c776a21220836';
 var combinations = [];
 var combinationsObject = [];
 var items = [];
+var estimate ;
 
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
     combinations = [];
     var quantities = [];
-    for (var i = 0; i  < cardInfo.quantity.length; i++){
-        quantities.push('{"cantidad":' + cardInfo.quantity[i]+',');
+    estimate = cardInfo;
+    for (var i = 0; i  < estimate.quantity.length; i++){
+        quantities.push('{"quantity":' + estimate.quantity[i]+',');
     }
     combinations.push(quantities);
-    for (var i = 0; i  <  cardInfo.items.length; i++){
-        var item = cardInfo.items[i];
+    for (var i = 0; i  <  estimate.items.length; i++){
+        var item = estimate.items[i];
         items.push(item.name);
         var quantityOfPages = [];
         var quantityOfMaterials = [];
@@ -29,7 +31,7 @@ t.render(function(){
             quantityOfPages.push('"item":{"id":'+i+ ', "name": "'+ item.name +  '", "pages": ' + item.quantityOfPages[j] + ',');
         }
         for (var j = 0; j < item.materials.length; j++){
-            quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(cardInfo.items.length-1)?']':','));
+            quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(estimate.items.length-1)?']':','));
         }
         combinations.push(allPossibleCases([quantityOfPages,quantityOfMaterials]))
     }
@@ -229,6 +231,7 @@ var savePrices = function(){
         }
         combinationsObject [i]['price'] = price;
     }
+
 }
 
 savePricesButton.addEventListener('click',savePrices);
