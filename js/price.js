@@ -12,16 +12,16 @@ t.render(function(){
     var combinations = [];
     //a = ['cantidad 100', 'cantidad 250', 'cantidad 500', 'cantidad 1000']; b= ['papel Obra 80gr', 'papel Obra 90gr', 'papel Obra 100gr']; c = ['80 páginas','100 páginas', '120 páginas']; var d = allPossibleCases([a,b,c]);createWizard(d)
     var quantities = [];
-    for (var i = 0; cardInfo.quantity.length; i++){
+    for (var i = 0; i  < cardInfo.quantity.length; i++){
         quantities.push('cantidad ' + cardInfo.quantity[i]);
     }
     combinations.push(quantities);
-    for (var i = 0; cardInfo.items.length; i++){
+    for (var i = 0; i  <  cardInfo.items.length; i++){
         var item = cardInfo.items[i];
         var quantityOfPages = [];
         var quantityOfMaterials = [];
         if ( item.quantityOfPages.length>1){
-            for (var j = 0; item.quantityOfPages.length;j++){
+            for (var j = 0; j  < item.quantityOfPages.length;j++){
                 quantityOfPages.push(item.name + ' ' + item.quantityOfPages[j] + ' Páginas');
             }
         }
