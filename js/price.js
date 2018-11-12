@@ -28,7 +28,7 @@ t.render(function(){
             quantityOfPages.push('"item":{"id":'+i+ ', "name": "'+ item.name +  '", "pages": ' + item.quantityOfPages[j] + ',');
         }
         for (var j = 0; j < item.materials.length; j++){
-            quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==cardInfo.items.length?'}':',');
+            quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==cardInfo.items.length?'}':','));
         }
         combinations.push(allPossibleCases([quantityOfPages,quantityOfMaterials]))
     }
