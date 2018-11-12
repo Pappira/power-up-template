@@ -3,16 +3,19 @@
 
 var t = TrelloPowerUp.iframe();
 
+var savePricesButton = document.getElementById('savePrices');
+
 var cardInfoKey = 'pappira.cardInfo';
 var listId = '5a9ef0ce024c776a21220836';
+var combinations = [];
 
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
-    var combinations = [];
+    combinations = [];
     var quantities = [];
     for (var i = 0; i  < cardInfo.quantity.length; i++){
-        quantities.push('Cantidad ' + cardInfo.quantity[i]);
+        quantities.push('cantidad:' + cardInfo.quantity[i]+',');
     }
     combinations.push(quantities);
     var items = [];
@@ -22,14 +25,15 @@ t.render(function(){
         var quantityOfPages = [];
         var quantityOfMaterials = [];
         for (var j = 0; j  < item.quantityOfPages.length;j++){
-            quantityOfPages.push(' ' +item.name + ' de ' + item.quantityOfPages[j] + ' Páginas');
+            quantityOfPages.push('item:{id:'+i+ ', name: '+ item.name +  ', pages: ' + item.quantityOfPages[j] + ',');
         }
         for (var j = 0; j < item.materials.length; j++){
-            quantityOfMaterials.push(' en ' + item.materials[j].paper + ' ' + item.materials[j].gr + 'gr');
+            quantityOfMaterials.push(' paper: ' + item.materials[j].paper + ', gr: ' + item.materials[j].gr);
         }
         combinations.push(allPossibleCases([quantityOfPages,quantityOfMaterials]))
     }
-    createWizard(allPossibleCases(combinations),items);
+    combinations = allPossibleCases(combinations);
+    createWizard(combinations,items);
 	});
   });
 
@@ -110,6 +114,20 @@ else {
 
 var createWizardButton = function(step){
   var div = createElement('div','stepwizard-step'); 
+  var attirbuteName = [];
+  var attributeValue = [];
+
+  attirbuteName.push('quantity')
+
+  attirbuteName.push('step')
+
+  for (var i = 0; i < items.length;i++){
+    attirbuteName.push('itemIdPages')
+    attirbuteName.push('itemIdName')
+    attirbuteName.push('itemIdPaper')
+    attirbuteName.push('itemIdGr')
+  }
+
   var a = createElement('a','btn ' + (step==1?'btn-primary':'btn-default') +' btn-circle','',step,'button','','','#step-'+step,(step==1?'':'disabled'));
   var p = createElement('p','','',step+'');
   div.appendChild(a);
@@ -190,3 +208,9 @@ var createFormButton = function(step,text,next){
   div.appendChild(button);
   return button;
 } 
+
+var savePrices = function(){
+
+}
+
+savePricesButton.addEventListener('click',savePrices);

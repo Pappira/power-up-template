@@ -59,7 +59,7 @@ var createTextInput = function(colType,inputId,inputLabelValue,type,valueForInpu
 	return divCol;
 };
 
-var createElement = function(typeValue,className,id,text,type,forValue,value,href,disabled){
+var createElement = function(typeValue,className,id,text,type,forValue,value,href,disabled,attirbuteName,attributeValue){
 	var createElement=document.createElement(typeValue);
 	if(className && className.length>0){
 		createElement.setAttribute('class',className);
@@ -84,6 +84,11 @@ var createElement = function(typeValue,className,id,text,type,forValue,value,hre
 	}
 	if(disabled && disabled.length>0){
 		createElement.setAttribute('disabled',disabled);
+    }
+    if(attirbuteName && attributeValue){
+		for(var i = 0; i <attirbuteName.length;i++){
+			div.setAttribute(attirbuteName[i],attributeValue[i]);
+		}
 	}
 	return createElement;
 };
