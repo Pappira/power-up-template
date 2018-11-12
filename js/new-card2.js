@@ -73,7 +73,7 @@ var createTextForCard = function(){
 		for (var i = 0; i < estimate['finishes'].length;i++){
 			text += i + '. ' + estimate['finishes'][i]['finish'] + '\n';
 			if (estimate['finishes'][i]['finishComment']){
-				text += '- ' + estimate['finishes'][i]['finishComment'] + '\n';
+				text += '  - ' + estimate['finishes'][i]['finishComment'] + '\n';
 			}
 		}
 	}
