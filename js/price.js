@@ -3,6 +3,9 @@
 
 var t = TrelloPowerUp.iframe();
 
+var cardInfoKey = 'pappira.cardInfo';
+var listId = '5a9ef0ce024c776a21220836';
+
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
