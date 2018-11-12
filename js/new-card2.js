@@ -175,7 +175,7 @@ var createObject = function(){
 		var item = {};
 		for (var j = 0; j < items[i].length;j++){
 			var input = document.getElementById(items[i][j]);
-			if (input.value.length>0 && input.value !== 'Selecciona'){
+			if (input && input.value.length>0 && input.value !== 'Selecciona'){
 				if (input.type != "checkbox"){
 					item[items[i][j].slice(5)] = input.value;
 				}else{
