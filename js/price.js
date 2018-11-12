@@ -20,16 +20,16 @@ t.render(function(){
         var item = cardInfo.items[i];
         var quantityOfPages = [];
         var quantityOfMaterials = [];
-        if ( item.quantityOfPages.length>1){
+       // if ( item.quantityOfPages.length>1){
             for (var j = 0; j  < item.quantityOfPages.length;j++){
                 quantityOfPages.push(item.name + ' ' + item.quantityOfPages[j] + ' Páginas');
             }
-        }
-        if (item.materials.length >1){
+        //}
+        //if (item.materials.length >1){
             for (var j = 0; item.materials.length; j++){
                 quantityOfMaterials.push(item.materials[j].paper + ' ' + item.materials[j].gr + 'gr');
             }
-        }
+        //}
         combinations.push(allPossibleCases([quantityOfPages,quantityOfMaterials]))
     }
     createWizard(allPossibleCases(combinations));
