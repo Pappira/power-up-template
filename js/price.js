@@ -9,6 +9,7 @@ var cardInfoKey = 'pappira.cardInfo';
 var listId = '5a9ef0ce024c776a21220836';
 var combinations = [];
 var combinationsObject = [];
+var items = [];
 
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
@@ -19,7 +20,6 @@ t.render(function(){
         quantities.push('{"cantidad":' + cardInfo.quantity[i]+',');
     }
     combinations.push(quantities);
-    var items = [];
     for (var i = 0; i  <  cardInfo.items.length; i++){
         var item = cardInfo.items[i];
         items.push(item.name);
