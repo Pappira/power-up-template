@@ -8,6 +8,7 @@ var savePricesButton = document.getElementById('savePrices');
 var cardInfoKey = 'pappira.cardInfo';
 var listId = '5a9ef0ce024c776a21220836';
 var combinations = [];
+var combinationsObject = [];
 
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
@@ -43,9 +44,12 @@ t.render(function(){
             stringToReturn += '{' + text.substr(0,text.indexOf(stringToFind));
             text = text.substr(text.indexOf(stringToFind)+stringToFind.length);
         }
-        stringToReturn += '{' + text;
+        stringToReturn += '{' + text + '}';
         newCombinations.push(stringToReturn);
     }
+    for (var i = 0; i < newCombinations.length;i++){
+        combinationsObject.push($.parseJSON(newCombinations[i]));
+    };
     createWizard(combinations,items);
 	});
   });
@@ -126,21 +130,7 @@ else {
 
 
 var createWizardButton = function(step){
-  var div = createElement('div','stepwizard-step'); 
-  var attirbuteName = [];
-  var attributeValue = [];
-
-  attirbuteName.push('quantity')
-
-  attirbuteName.push('step')
-
- /* for (var i = 0; i < items.length;i++){
-    attirbuteName.push('itemIdPages')
-    attirbuteName.push('itemIdName')
-    attirbuteName.push('itemIdPaper')
-    attirbuteName.push('itemIdGr')
-  }
-*/
+  var div = createElement('div','stepwizard-step');
   var a = createElement('a','btn ' + (step==1?'btn-primary':'btn-default') +' btn-circle','',step,'button','','','#step-'+step,(step==1?'':'disabled'));
   var p = createElement('p','','',step+'');
   div.appendChild(a);
@@ -223,7 +213,17 @@ var createFormButton = function(step,text,next){
 } 
 
 var savePrices = function(){
-
+    for (var i = 0; i < combinations.length;i++){
+        var price = document.getElementById(i + '-price').value;
+        for (var j = 0; j < items.length;j++){
+            var machine = document.getElementById(i + '-' + j + '-machine').value
+            var cutPerSheet = document.getElementById(i + '-' + j + '-cutPerSheet');
+            var quantityPerPaper = document.getElementById(i  + '-' + j + '-quantityPerPaper');
+            var paperSize = document.getElementById(i + '-' + j + '-paperSize');
+            var excess = document.getElementById(i + '-' + j + '-excess');
+            combinationsObject [i] = combinationsObject [i].push()
+        }
+    }
 }
 
 savePricesButton.addEventListener('click',savePrices);
