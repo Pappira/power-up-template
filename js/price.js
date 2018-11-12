@@ -28,11 +28,24 @@ t.render(function(){
             quantityOfPages.push('"item":{"id":'+i+ ', "name": "'+ item.name +  '", "pages": ' + item.quantityOfPages[j] + ',');
         }
         for (var j = 0; j < item.materials.length; j++){
-            quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(cardInfo.items.length-1)?'}':','));
+            quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(cardInfo.items.length-1)?']':','));
         }
         combinations.push(allPossibleCases([quantityOfPages,quantityOfMaterials]))
     }
     combinations = allPossibleCases(combinations);
+    var newCombinations = [];
+    for (i = 0 ; i < combinations.length; i++){
+        var stringToFind = '"item":{';
+        var text = combinations[i];
+        var stringToReturn = text.substr(0,text.indexOf(stringToFind)) +  '"items":[{';
+        text = text.substr(text.indexOf(stringToFind)+stringToFind.length);
+        while(text.indexOf(stringToFind)>0){
+            stringToReturn += '{' + text.substr(0,text.indexOf(stringToFind));
+            text = text.substr(text.indexOf(stringToFind)+stringToFind.length);
+        }
+        stringToReturn += text + "]";
+        newCombinations.push(stringToReturn);
+    }
     createWizard(combinations,items);
 	});
   });
