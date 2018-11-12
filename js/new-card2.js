@@ -204,8 +204,8 @@ var createObject = function(){
 				if (input && input.getAttribute('paper') && input.getAttribute('gr')){
 					material['paper'] = input.getAttribute('paper');
 					material['gr'] = input.getAttribute('gr');
+					materials.push(material);
 				}
-				materials.push(material);
 			}
 		}
 		item['materials'] = materials;
