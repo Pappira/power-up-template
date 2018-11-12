@@ -231,7 +231,7 @@ var savePrices = function(){
         }
         combinationsObject [i]['price'] = price;
     }
-
+    estimate['prices'] = combinationsObject;
 }
 
 savePricesButton.addEventListener('click',savePrices);
