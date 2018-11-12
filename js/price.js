@@ -37,13 +37,13 @@ t.render(function(){
     for (i = 0 ; i < combinations.length; i++){
         var stringToFind = '"item":{';
         var text = combinations[i];
-        var stringToReturn = text.substr(0,text.indexOf(stringToFind)) +  '"items":[{';
+        var stringToReturn = text.substr(0,text.indexOf(stringToFind)) +  '"items":[';
         text = text.substr(text.indexOf(stringToFind)+stringToFind.length);
         while(text.indexOf(stringToFind)>0){
             stringToReturn += '{' + text.substr(0,text.indexOf(stringToFind));
             text = text.substr(text.indexOf(stringToFind)+stringToFind.length);
         }
-        stringToReturn += text + "]";
+        stringToReturn += text;
         newCombinations.push(stringToReturn);
     }
     createWizard(combinations,items);
