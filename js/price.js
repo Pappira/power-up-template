@@ -26,7 +26,7 @@ t.render(function(){
             }
         //}
         //if (item.materials.length >1){
-            for (var j = 0; item.materials.length; j++){
+            for (var j = 0; j < item.materials.length; j++){
                 quantityOfMaterials.push(item.materials[j].paper + ' ' + item.materials[j].gr + 'gr');
             }
         //}
