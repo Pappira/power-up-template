@@ -43,7 +43,7 @@ t.render(function(){
             stringToReturn += '{' + text.substr(0,text.indexOf(stringToFind));
             text = text.substr(text.indexOf(stringToFind)+stringToFind.length);
         }
-        stringToReturn += text;
+        stringToReturn += '{' + text;
         newCombinations.push(stringToReturn);
     }
     createWizard(combinations,items);
