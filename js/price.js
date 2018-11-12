@@ -1,5 +1,37 @@
 //Para probarlo solo hacer esto:
 //a = ['cantidad 100', 'cantidad 250', 'cantidad 500', 'cantidad 1000']; b= ['papel Obra 80gr', 'papel Obra 90gr', 'papel Obra 100gr']; c = ['80 páginas','100 páginas', '120 páginas']; var d = allPossibleCases([a,b,c]);createWizard(d)
+
+t.render(function(){
+	return t.get('card', 'shared', cardInfoKey)
+	.then(function(cardInfo){
+    var combinations = [];
+    //a = ['cantidad 100', 'cantidad 250', 'cantidad 500', 'cantidad 1000']; b= ['papel Obra 80gr', 'papel Obra 90gr', 'papel Obra 100gr']; c = ['80 páginas','100 páginas', '120 páginas']; var d = allPossibleCases([a,b,c]);createWizard(d)
+    var quantities = [];
+    for (var i = 0; cardInfo.quantity.length; i++){
+        quantities.push('cantidad ' + cardInfo.quantity[i]);
+    }
+    combinations.push(quantities);
+    for (var i = 0; cardInfo.items.length; i++){
+        var item = cardInfo.items[i];
+        var quantityOfPages = [];
+        var quantityOfMaterials = [];
+        if ( item.quantityOfPages.length>1){
+            for (var j = 0; item.quantityOfPages.length;j++){
+                quantityOfPages.push(item.name + ' ' + item.quantityOfPages[j] + ' Páginas');
+            }
+        }
+        if (item.materials.length >1){
+            for (var j = 0; item.materials.length; j++){
+                quantityOfMaterials.push(item.materials[j].paper + ' ' + item.materials[j].gr + 'gr');
+            }
+        }
+        combinations.push(allPossibleCases([quantityOfPages,quantityOfMaterials]))
+    }
+    createWizard(allPossibleCases(combinations));
+	});
+  });
+
+
 var machinesList = ['GTO52/4', 'TOKO', 'AB-Dick', 'GTO46'];
 
 var startFunction = function(){
