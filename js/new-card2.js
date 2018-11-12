@@ -246,7 +246,7 @@ var createObject = function(){
 	commentsObject = {};
 	for (var i = 0; i < comments.length;i++){
 		var input = document.getElementById(comments[i]);
-		if (input.value.length>0 && input.value !== 'Selecciona'){
+		if (input && input.value.length>0 && input.value !== 'Selecciona'){
 			commentsObject[comments[i]] = input.value;
 		}else{
 			commentsObject[comments[i]] = '';
@@ -257,7 +257,7 @@ var createObject = function(){
 	customerObject = {};
 	for (var i = 0; i < customer.length;i++){
 		var input = document.getElementById(customer[i]);
-		if (input.value.length>0 && input.value !== 'Selecciona'){
+		if (input && input.value.length>0 && input.value !== 'Selecciona'){
 			customerObject[customer[i]] = input.value;
 		}else{
 			customerObject[customer[i]] = '';
