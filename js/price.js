@@ -121,13 +121,13 @@ var createWizardButton = function(step){
 
   attirbuteName.push('step')
 
-  for (var i = 0; i < items.length;i++){
+ /* for (var i = 0; i < items.length;i++){
     attirbuteName.push('itemIdPages')
     attirbuteName.push('itemIdName')
     attirbuteName.push('itemIdPaper')
     attirbuteName.push('itemIdGr')
   }
-
+*/
   var a = createElement('a','btn ' + (step==1?'btn-primary':'btn-default') +' btn-circle','',step,'button','','','#step-'+step,(step==1?'':'disabled'));
   var p = createElement('p','','',step+'');
   div.appendChild(a);
