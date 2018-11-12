@@ -10,7 +10,6 @@ t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
     var combinations = [];
-    //a = ['cantidad 100', 'cantidad 250', 'cantidad 500', 'cantidad 1000']; b= ['papel Obra 80gr', 'papel Obra 90gr', 'papel Obra 100gr']; c = ['80 páginas','100 páginas', '120 páginas']; var d = allPossibleCases([a,b,c]);createWizard(d)
     var quantities = [];
     for (var i = 0; i  < cardInfo.quantity.length; i++){
         quantities.push('Cantidad ' + cardInfo.quantity[i]);
@@ -22,16 +21,12 @@ t.render(function(){
         items.push(item.name);
         var quantityOfPages = [];
         var quantityOfMaterials = [];
-       // if ( item.quantityOfPages.length>1){
-            for (var j = 0; j  < item.quantityOfPages.length;j++){
-                quantityOfPages.push(' ' +item.name + ' de ' + item.quantityOfPages[j] + ' Páginas');
-            }
-        //}
-        //if (item.materials.length >1){
-            for (var j = 0; j < item.materials.length; j++){
-                quantityOfMaterials.push(' en ' + item.materials[j].paper + ' ' + item.materials[j].gr + 'gr');
-            }
-        //}
+        for (var j = 0; j  < item.quantityOfPages.length;j++){
+            quantityOfPages.push(' ' +item.name + ' de ' + item.quantityOfPages[j] + ' Páginas');
+        }
+        for (var j = 0; j < item.materials.length; j++){
+            quantityOfMaterials.push(' en ' + item.materials[j].paper + ' ' + item.materials[j].gr + 'gr');
+        }
         combinations.push(allPossibleCases([quantityOfPages,quantityOfMaterials]))
     }
     createWizard(allPossibleCases(combinations),items);
