@@ -1,6 +1,8 @@
 //Para probarlo solo hacer esto:
 //a = ['cantidad 100', 'cantidad 250', 'cantidad 500', 'cantidad 1000']; b= ['papel Obra 80gr', 'papel Obra 90gr', 'papel Obra 100gr']; c = ['80 páginas','100 páginas', '120 páginas']; var d = allPossibleCases([a,b,c]);createWizard(d)
 
+var t = TrelloPowerUp.iframe();
+
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){

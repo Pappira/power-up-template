@@ -739,7 +739,7 @@ var focusOutOnMaterial = function(elementFocusedOut){
 	}
 };
 
-var createSelect = function(colType,selectId,values,labelName,thisValue){
+/*var createSelect = function(colType,selectId,values,labelName,thisValue){
 	var option0 = createElement('Option','','','Selecciona','','','');
 	option0.setAttribute('disabled',true);
 	option0.setAttribute('selected',true);
@@ -820,7 +820,7 @@ var createElement = function(typeValue,className,id,text,type,forValue,value){
 		createElement.setAttribute('value',value);
 	}
 	return createElement;
-};
+};*/
 
 addItemButton.addEventListener('click',createItem);
 
