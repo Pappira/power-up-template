@@ -15,7 +15,7 @@ t.render(function(){
     combinations = [];
     var quantities = [];
     for (var i = 0; i  < cardInfo.quantity.length; i++){
-        quantities.push('"{cantidad":' + cardInfo.quantity[i]+',');
+        quantities.push('{"cantidad":' + cardInfo.quantity[i]+',');
     }
     combinations.push(quantities);
     var items = [];
