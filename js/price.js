@@ -214,13 +214,13 @@ var createFormButton = function(step,text,next){
 
 var savePrices = function(){
     for (var i = 0; i < combinations.length;i++){
-        var price = document.getElementById(i + '-price').value;
+        var price = document.getElementById((i+1) + '-price').value;
         for (var j = 0; j < items.length;j++){
-            var machine = document.getElementById(i + '-' + j + '-machine').value
-            var cutPerSheet = document.getElementById(i + '-' + j + '-cutPerSheet');
-            var quantityPerPaper = document.getElementById(i  + '-' + j + '-quantityPerPaper');
-            var paperSize = document.getElementById(i + '-' + j + '-paperSize');
-            var excess = document.getElementById(i + '-' + j + '-excess');
+            var machine = document.getElementById((i+1) + '-' + j + '-machine').value
+            var cutPerSheet = document.getElementById((i+1) + '-' + j + '-cutPerSheet');
+            var quantityPerPaper = document.getElementById((i+1) + '-' + j + '-quantityPerPaper');
+            var paperSize = document.getElementById((i+1) + '-' + j + '-paperSize');
+            var excess = document.getElementById((i+1) + '-' + j + '-excess');
             combinationsObject [i] = combinationsObject [i].items[j]['machine'] = machine;
             combinationsObject [i] = combinationsObject [i].items[j]['cutPerSheet'] = cutPerSheet;
             combinationsObject [i] = combinationsObject [i].items[j]['quantityPerPaper'] = quantityPerPaper;
