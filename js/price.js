@@ -184,7 +184,7 @@ var createWizardElement = function(step,text,last,items){
 var createFormButton = function(step,text,next){
 
   var div = createElement('div','input-field col s12'); 
-  var button = createElement('button','btn btn-primary ' + (next?'nextBtn ':'prevBtn ') + 
+  var button = createElement('button','btn ' + (next?'nextBtn ':'prevBtn ') + 
     'btn-lg ' + (next?'pull-right ':'pull-left '),'',(next?'Siguiente':'Previo'),'button');
     next?button.addEventListener('click',nextButtonClick):button.addEventListener('click',previuosButtonClick);
   div.appendChild(button);
