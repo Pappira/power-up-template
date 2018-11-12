@@ -1,5 +1,5 @@
 //Para probarlo solo hacer esto:
-//a = ['cantidad 100', 'cantidad 250', 'cantidad 500', 'cantidad 1000']; b= ['papel Obra 80gr', 'papel Obra 90gr', 'papel Obra 100gr']; c = ['80 páginas','100 páginas', '120 páginas']; var d = allPossibleCases([a,b,c]);createWizard(d)
+//a = ['cantidad 100', 'cantidad 250', 'cantidad 500', 'cantidad 1000']; b= ['papel Obra 80gr', 'papel Obra 90gr', 'papel Obra 100gr']; c = ['80 páginas','100 páginas', '120 páginas']; var d = allPossibleCases([a,b,c]);createWizard(d,['Item 1','Item 2'])
 
 var t = TrelloPowerUp.iframe();
 
@@ -16,8 +16,10 @@ t.render(function(){
         quantities.push('cantidad ' + cardInfo.quantity[i]);
     }
     combinations.push(quantities);
+    var items = [];
     for (var i = 0; i  <  cardInfo.items.length; i++){
         var item = cardInfo.items[i];
+        items.push(item.name);
         var quantityOfPages = [];
         var quantityOfMaterials = [];
        // if ( item.quantityOfPages.length>1){
@@ -32,7 +34,7 @@ t.render(function(){
         //}
         combinations.push(allPossibleCases([quantityOfPages,quantityOfMaterials]))
     }
-    createWizard(allPossibleCases(combinations));
+    createWizard(allPossibleCases(combinations),items);
 	});
   });
 
