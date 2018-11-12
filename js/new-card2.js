@@ -104,8 +104,8 @@ var createTextForCard = function(){
 				text += '###Terminaciones' + '\n\n';
 				for (var j = 0; j < estimate['items'][i]['finishes'].length;j++){
 					text += j + '. ' + estimate['items'][i]['finishes'][j]['finish'] + '\n';
-					if (estimate['items'][i]['finishes'][j]['finishComment']){
-						text += '  - ' + estimate['items'][i]['finishes'][j]['finishComment'] + '\n';
+					if (estimate['items'][i]['finishes'][j]['comment']){
+						text += '  - ' + estimate['items'][i]['finishes'][j]['comment'] + '\n';
 					}
 				}
 				text +='\n';
