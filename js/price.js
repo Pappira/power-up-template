@@ -221,13 +221,13 @@ var savePrices = function(){
             var quantityPerPaper = document.getElementById((i+1) + '-' + j + '-quantityPerPaper');
             var paperSize = document.getElementById((i+1) + '-' + j + '-paperSize');
             var excess = document.getElementById((i+1) + '-' + j + '-excess');
-            combinationsObject [i] = combinationsObject [i].items[j]['machine'] = machine;
-            combinationsObject [i] = combinationsObject [i].items[j]['cutPerSheet'] = cutPerSheet;
-            combinationsObject [i] = combinationsObject [i].items[j]['quantityPerPaper'] = quantityPerPaper;
-            combinationsObject [i] = combinationsObject [i].items[j]['paperSize'] = paperSize;
-            combinationsObject [i] = combinationsObject [i].items[j]['excess'] = excess;
+            combinationsObject [i].items[j]['machine'] = machine;
+            combinationsObject [i].items[j]['cutPerSheet'] = cutPerSheet;
+            combinationsObject [i].items[j]['quantityPerPaper'] = quantityPerPaper;
+            combinationsObject [i].items[j]['paperSize'] = paperSize;
+            combinationsObject [i].items[j]['excess'] = excess;
         }
-        combinationsObject [i] = combinationsObject [i]['price'] = price;
+        combinationsObject [i]['price'] = price;
     }
 }
 
