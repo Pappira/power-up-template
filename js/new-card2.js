@@ -201,7 +201,7 @@ var createObject = function(){
 			for (var j = 0; j < materialsOfItems[i].length;j++){
 				var material = {};
 				var input = document.getElementById(materialsOfItems[i][j]);
-				if (input){
+				if (input && input.getAttribute('paper') && input.getAttribute('gr')){
 					material['paper'] = input.getAttribute('paper');
 					material['gr'] = input.getAttribute('gr');
 				}
