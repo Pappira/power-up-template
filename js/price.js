@@ -15,7 +15,7 @@ t.render(function(){
     combinations = [];
     var quantities = [];
     for (var i = 0; i  < cardInfo.quantity.length; i++){
-        quantities.push('cantidad:' + cardInfo.quantity[i]+',');
+        quantities.push('"cantidad":' + cardInfo.quantity[i]+',');
     }
     combinations.push(quantities);
     var items = [];
@@ -25,10 +25,10 @@ t.render(function(){
         var quantityOfPages = [];
         var quantityOfMaterials = [];
         for (var j = 0; j  < item.quantityOfPages.length;j++){
-            quantityOfPages.push('item:{id:'+i+ ', name: '+ item.name +  ', pages: ' + item.quantityOfPages[j] + ',');
+            quantityOfPages.push('"item":{id:'+i+ ', "name": "'+ item.name +  '", "pages": ' + item.quantityOfPages[j] + ',');
         }
         for (var j = 0; j < item.materials.length; j++){
-            quantityOfMaterials.push(' paper: ' + item.materials[j].paper + ', gr: ' + item.materials[j].gr);
+            quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}');
         }
         combinations.push(allPossibleCases([quantityOfPages,quantityOfMaterials]))
     }
