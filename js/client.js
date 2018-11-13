@@ -451,42 +451,45 @@ TrelloPowerUp.initialize({
     return getBadges(t);
   },
   'card-buttons': function(t, options) {
-    var estimate = t.get('card', 'shared', cardInfoKey);
-    var a;
-    if (estimate['prices']){
-      a = {
-        // usually you will provide a callback function to be run on button click
-        // we recommend that you use a popup on click generally
-        icon: GRAY_ICON, // don't use a colored icon here
-        text: 'Aceptar Presupuesto',
-        callback: getAcceptEstimate()
+    return t.get('card', 'shared', cardInfoKey).then(
+      function(estimate){
+        var a ={};
+        if (estimate['prices']){
+          a = {
+            // usually you will provide a callback function to be run on button click
+            // we recommend that you use a popup on click generally
+            icon: GRAY_ICON, // don't use a colored icon here
+            text: 'Aceptar Presupuesto',
+            callback: getAcceptEstimate()
+          }
+        }
+        return [{
+          // usually you will provide a callback function to be run on button click
+          // we recommend that you use a popup on click generally
+          icon: GRAY_ICON, // don't use a colored icon here
+          text: 'Modificar Datos',
+          callback: getNewEstimateModalCallback(true)
+        },{
+          // usually you will provide a callback function to be run on button click
+          // we recommend that you use a popup on click generally
+          icon: GRAY_ICON, // don't use a colored icon here
+          text: 'Poner precios',
+          callback: getAddPrices()
+        },{
+          // usually you will provide a callback function to be run on button click
+          // we recommend that you use a popup on click generally
+          icon: GRAY_ICON, // don't use a colored icon here
+          text: 'Ver O.T.',
+          callback: getWorkOrderPDFCallBack
+        },{
+          // usually you will provide a callback function to be run on button click
+          // we recommend that you use a popup on click generally
+          icon: GRAY_ICON, // don't use a colored icon here
+          text: 'Ver O.T.2',
+          callback: getWorkOrderPDFCallBack2
+        },a];
       }
-    }
-    return [{
-      // usually you will provide a callback function to be run on button click
-      // we recommend that you use a popup on click generally
-      icon: GRAY_ICON, // don't use a colored icon here
-      text: 'Modificar Datos',
-      callback: getNewEstimateModalCallback(true)
-    },{
-      // usually you will provide a callback function to be run on button click
-      // we recommend that you use a popup on click generally
-      icon: GRAY_ICON, // don't use a colored icon here
-      text: 'Poner precios',
-      callback: getAddPrices()
-    },{
-      // usually you will provide a callback function to be run on button click
-      // we recommend that you use a popup on click generally
-      icon: GRAY_ICON, // don't use a colored icon here
-      text: 'Ver O.T.',
-      callback: getWorkOrderPDFCallBack
-    },{
-      // usually you will provide a callback function to be run on button click
-      // we recommend that you use a popup on click generally
-      icon: GRAY_ICON, // don't use a colored icon here
-      text: 'Ver O.T.2',
-      callback: getWorkOrderPDFCallBack2
-    },a];
+    );
   },
   'card-detail-badges': function(t, options) {
     return getBadges(t);
