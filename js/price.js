@@ -215,23 +215,34 @@ var createFormButton = function(step,text,next){
 } 
 
 var savePrices = function(){
-    for (var i = 0; i < combinations.length;i++){
-        var price = document.getElementById((i+1) + '-price').value;
-        for (var j = 0; j < items.length;j++){
-            var machine = document.getElementById((i+1) + '-' + j + '-machine').value
-            var cutPerSheet = document.getElementById((i+1) + '-' + j + '-cutPerSheet').value;
-            var quantityPerPaper = document.getElementById((i+1) + '-' + j + '-quantityPerPaper').value;
-            var paperSize = document.getElementById((i+1) + '-' + j + '-paperSize').value;
-            var excess = document.getElementById((i+1) + '-' + j + '-excess').value;
-            combinationsObject [i].items[j]['machine'] = machine;
-            combinationsObject [i].items[j]['cutPerSheet'] = cutPerSheet;
-            combinationsObject [i].items[j]['quantityPerPaper'] = quantityPerPaper;
-            combinationsObject [i].items[j]['paperSize'] = paperSize;
-            combinationsObject [i].items[j]['excess'] = excess;
+    startLoader();
+    t.card('all')
+	.then(function(card) {
+        for (var i = 0; i < combinations.length;i++){
+            var price = document.getElementById((i+1) + '-price').value;
+            for (var j = 0; j < items.length;j++){
+                var machine = document.getElementById((i+1) + '-' + j + '-machine').value
+                var cutPerSheet = document.getElementById((i+1) + '-' + j + '-cutPerSheet').value;
+                var quantityPerPaper = document.getElementById((i+1) + '-' + j + '-quantityPerPaper').value;
+                var paperSize = document.getElementById((i+1) + '-' + j + '-paperSize').value;
+                var excess = document.getElementById((i+1) + '-' + j + '-excess').value;
+                combinationsObject [i].items[j]['machine'] = machine;
+                combinationsObject [i].items[j]['cutPerSheet'] = cutPerSheet;
+                combinationsObject [i].items[j]['quantityPerPaper'] = quantityPerPaper;
+                combinationsObject [i].items[j]['paperSize'] = paperSize;
+                combinationsObject [i].items[j]['excess'] = excess;
+            }
+            combinationsObject [i]['price'] = price;
         }
-        combinationsObject [i]['price'] = price;
-    }
-    estimate['prices'] = combinationsObject;
+        estimate['prices'] = combinationsObject;
+        t.set('card', 'shared', cardInfoKey, estimate)
+            .then(function(){
+            updateTrelloCard(t, {id: card.id, desc: card.desc},
+                function(){
+                t.closeModal();
+            });
+        });
+    });
 }
 
 savePricesButton.addEventListener('click',savePrices);
