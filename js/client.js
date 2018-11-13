@@ -342,6 +342,40 @@ var getAddPrices = function(){
   }
 }; 
 
+var getAcceptEstimate = function(){
+  return function(t){
+    return t.modal({
+      url: './acceptEstimate.html', // The URL to load for the iframe
+      accentColor: '#F2D600', // Optional color for the modal header 
+      height: 500, // Initial height for iframe; not used if fullscreen is true
+      fullscreen: false, // Whether the modal should stretch to take up the whole screen
+      callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
+      title: 'Aceptar Presupuesto', // Optional title for modal header
+      // You can add up to 3 action buttons on the modal header - max 1 on the right side.
+      actions: [{
+        icon: GRAY_ICON,
+        url: 'https://google.com', // Opens the URL passed to it.
+        alt: 'Leftmost',
+        position: 'left',
+      }, {
+        icon: GRAY_ICON,
+        callback: (tr) => tr.popup({ // Callback to be called when user clicks the action button.
+          title: 'Settings',
+          url: 'settings.html',
+          height: 164,
+        }),
+        alt: 'Second from left',
+        position: 'left',
+      }, {
+        icon: GRAY_ICON,
+        callback: () => console.log('🏎'),
+        alt: 'Right side',
+        position: 'right',
+      }],
+    });
+  }
+}; 
+
 // We need to call initialize to get all of our capability handles set up and registered with Trello
 TrelloPowerUp.initialize({
   // NOTE about asynchronous responses
@@ -417,6 +451,17 @@ TrelloPowerUp.initialize({
     return getBadges(t);
   },
   'card-buttons': function(t, options) {
+    var estimate = t.get('card', 'shared', cardInfoKey);
+    var a;
+    if (estimate['prices']){
+      a = {
+        // usually you will provide a callback function to be run on button click
+        // we recommend that you use a popup on click generally
+        icon: GRAY_ICON, // don't use a colored icon here
+        text: 'Aceptar Presupuesto',
+        callback: getAcceptEstimate()
+      }
+    }
     return [{
       // usually you will provide a callback function to be run on button click
       // we recommend that you use a popup on click generally
@@ -441,7 +486,7 @@ TrelloPowerUp.initialize({
       icon: GRAY_ICON, // don't use a colored icon here
       text: 'Ver O.T.2',
       callback: getWorkOrderPDFCallBack2
-    }];
+    },a];
   },
   'card-detail-badges': function(t, options) {
     return getBadges(t);
