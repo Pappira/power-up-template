@@ -42,7 +42,7 @@ var workOrderPDF = function(estimate,newTab){
         writeTextInDoc(doc,"Armado x Pliego",item.quantityPerLayout,firstColumn,heigth,normalBoxLength);
         writeTextInDoc(doc,"Tamaño Abierto",item.openSize, secondColumn, heigth, normalBoxLength);
         writeTextInDoc(doc,"Tamaño Cerrado",item.closedSize, thirdColumn,heigth, normalBoxLength);
-        writeTextInDoc(doc,"Numerado",item.numbered?item.numeration:"No", fourthColumn, heigth, normalBoxLength);
+        //writeTextInDoc(doc,"Numerado",item.numbered?item.numeration:"No", fourthColumn, heigth, normalBoxLength);
         writeTextInDoc(doc,"Páginas",item.pages,fifthColumn,heigth,normalBoxLength);
         writeTextInDoc(doc,"Vías",item.vias,sixthColumn,heigth,normalBoxLength);
 
