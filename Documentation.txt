@@ -1,0 +1,78 @@
+Estimate Object:
+
+{
+"estimate":{  
+   "workType":"",
+   "clossedSize":"",
+   "quantity":"[ ]",
+   "finishes":[  
+      {  
+         "finish":"",
+         "finishComment":"",
+         "showToClientFinish":false
+      }
+   ],
+   "items":[  
+      {  
+         "name":"",
+         "inks":"",
+         "bleedPrint":false,
+         "inksDetails":"",
+         "openedSize":"",
+         "allTheSame":false,
+         "quantityOfPages":"[ ]",
+         "materials":[  
+            {  
+               "paper":"",
+               "gr":""
+            }
+         ],
+         "finishes":[  
+            {  
+               "finish":"",
+               "finishComment":"",
+               "showToClientFinish":false
+            }
+         ]
+      }
+   ],
+   "comments":{  
+      "internalComments":"",
+      "clientComments":""
+   },
+   "customer":{  
+      "comenrcialName":"",
+      "businessName":"",
+      "rut":"",
+      "address":"",
+      "contactName":"",
+      "contactEmail":"",
+      "contactPhone":"",
+      "paymentWay":""
+   },
+   "prices":[  
+      {  
+         "quantity":"",
+         "items":[  
+            {  
+               "id":"",
+               "name":"",
+               "pages":"",
+               "paper":"",
+               "gr":"",
+               "machine":"",
+               "cutPerSheet":"",
+               "quantityPerPaper":"",
+               "paperSize":"",
+               "excess":""
+            }
+         ],
+         "price":""
+      }
+   ],
+   "SelectedOption":""
+}
+}
+
+para convertirlo a imagen:
+https://vanya.jp.net/vtree/

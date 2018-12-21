@@ -25,17 +25,17 @@ var workOrderPDF = function(estimate,newTab){
 
     var heigth = heigthSeparation*3;
 
-    writeTextInDoc(doc,"Nombre / Empresa",estimate.companyName ,firstColumn,heigth,normalBoxLength*4+separation*3);
-    writeTextInDoc(doc,"Cantidad",estimate.workQuantity,fifthColumn,heigth,normalBoxLength*2+separation);
+    writeTextInDoc(doc,"Nombre / Empresa",estimate.customer.comenrcialName + " / " + estimate.customer.businessName ,firstColumn,heigth,normalBoxLength*4+separation*3);
+    writeTextInDoc(doc,"Cantidad",estimate.quantity,fifthColumn,heigth,normalBoxLength*2+separation);
 
     for (var i = 0; i < estimate.items.length;i++){
         var item = estimate.items[i];
         var faces = item.phases==="Simple faz"?1:2;
-        var coefficient = faces/item.pages;
+        var coefficient = faces/item.quantityOfPages;
         var sheets = Math.ceil(estimate.workQuantity/item.quantityPerLayout)*coefficient;
       
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"","Trabajo " + item.itemName + " " + item.phases,firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
+        writeTextInDoc(doc,"","Trabajo " + item.name + " " + item.phases,firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
         doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
 
         heigth += heigthSeparation;

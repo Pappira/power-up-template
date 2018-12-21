@@ -1,0 +1,2 @@
+var workTypes = [{'id':0,'name':'Tarjetería','image':'tarjeta.jpeg'},{'id':1,'name':'Trabajos Encuadernados','description':'prueba','image':'no-image-icon.png'},
+{'id':2,'name':'Folletería','image':'no-image-icon.png'},{'id':3,'name':'Papelería Institucional','image':'no-image-icon.png'}];
