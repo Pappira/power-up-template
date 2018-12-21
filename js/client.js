@@ -484,12 +484,16 @@ TrelloPowerUp.initialize({
   //  buttons.push(pdf());
   //  buttons.push(downloadWorkOrderPdf());
     buttons.push(
-      [
         {
           text: 'Nuevo Presupuesto',
           callback: getNewEstimateModalCallback(false)
         }
-      ]
+    );
+    buttons.push(
+        {
+          text: 'Nuevo Presupuesto Automático',
+          callback: getNewAutomaticEstimateModalCallback()
+        }
     );
     return buttons;
   },
