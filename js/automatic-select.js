@@ -22,7 +22,7 @@ var createScreen = function(type,titulo,possibilities,nextFunction){
   div.appendChild(title);
   for (var i = 0; i < possibilities.length;i++){
     var possibility = possibilities[i];
-    var card = createCard(possibility.image,possibility.name,type,possibility.id,nextFunction);
+    var card = createHTMLCard(possibility.image,possibility.name,type,possibility.id,nextFunction);
     divRow.appendChild(card);
   }
   div.appendChild(divRow);
@@ -225,7 +225,7 @@ var createRevealCard = function(image,title,type,id){
   return divCol;
 }
 
-var createCard = function(image,title,type,id,functionOnClick){
+var createHTMLCard = function(image,title,type,id,functionOnClick){
   var divCol = createElement('div','col m4','','');
   var divCard = createElement('div','card',type + '-' + id,'');
   var divCardImage = createElement('div','card-image waves-effect waves-block waves-light','','');
@@ -286,12 +286,12 @@ var createFormButton = function(step,text,next,finish){
       next?button.addEventListener('click',nextButtonClick):button.addEventListener('click',previuosButtonClick);
      }else{
     button = createElement('button','btn ' +'nextBtn ' + 'btn-lg ' + 'pull-right ','',text,'button');
-    button.addEventListener('click',createTrelloCard);
+    button.addEventListener('click',createEstimateAndTrelloCard);
   }
   return button;
 } 
 
-var createTrelloCard = function(){
+var createEstimateAndTrelloCard = function(){
   var estimate = {};
   var work = works[selectedWorkId];
   if (work.clossedSizes.length > 1){
@@ -359,6 +359,8 @@ var createTrelloCard = function(){
     work.prices.push(currentPossiblePrices[0]);
   }
   return work;
+  estimate = work;
+  createCard();
 }
 
 var cutArray = function(originalArray,indexToCut){

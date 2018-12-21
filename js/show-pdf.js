@@ -41,11 +41,11 @@ var workOrderPDF = function(estimate,newTab){
     writeTextInDoc(doc,"Fecha de Ingreso","<Fecha de Ingreso>",sixthColumn,19,normalBoxLength);
 
     var heigth = heigthSeparation*3;
-    
+
     var selectedOption = estimate.selectedOption?estimate.selectedOption:0;
     var selectedEstimate = estimate.prices[selectedOption];
     writeTextInDoc(doc,"Nombre / Empresa",estimate.customer.comenrcialName + " / " + estimate.customer.businessName ,firstColumn,heigth,normalBoxLength*4+separation*3);
-    writeTextInDoc(doc,"Cantidad",selectedEstimate.quantity,fifthColumn,heigth,normalBoxLength*2+separation);
+    writeTextInDoc(doc,"Cantidad",selectedEstimate.quantity + "",fifthColumn,heigth,normalBoxLength*2+separation);
    
 
     for (var i = 0; i < estimate.items.length;i++){
