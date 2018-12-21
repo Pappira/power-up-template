@@ -490,7 +490,7 @@ TrelloPowerUp.initialize({
           callback: getNewEstimateModalCallback(false)
         },
         {
-          text: 'Nuevo Presupuesto',
+          text: 'Nuevo Presupuesto Automático',
           callback: getNewAutomaticEstimateModalCallback()
         }
       ]
