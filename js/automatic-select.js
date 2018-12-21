@@ -1,7 +1,40 @@
 
+var t = TrelloPowerUp.iframe();
+var cardInfoKey = 'pappira.cardInfo';
+var listId = '5a9ef0ce024c776a21220836';
+
 var selectedWorkTypeId;
 var selectedWorkId;
 var selectedOptions = {};
+
+t.render(function(){
+	return t.get('card', 'shared', cardInfoKey)
+	.then(function(cardInfo){
+	  if(t.arg('update')){
+		saveFunction = updateCard;
+		addCardButton.firstChild.data = "Modificar";
+	  } else {
+		saveFunction = createCard;
+	  }
+      createWorkTypeSelectPanel();
+	 // addCardButton.addEventListener('click', saveFunction);
+  
+	  /*if(cardInfo){
+		createGeneralInformation(cardInfo);
+		for (var i = 0; i <  cardInfo.items.length;i++){
+			createItem(cardInfo.items[i]);
+		}
+		createComments(cardInfo);
+		createCustomer(cardInfo);
+	  }else{
+		createGeneralInformation();
+		createItem();
+		createComments();
+		createCustomer();
+      }*/
+      
+	});
+  });
 
 var createWorkTypeSelectPanel = function(){
   var wizardForm =  document.getElementById('wizardForm');
