@@ -8,8 +8,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x54',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Simple Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -19,7 +19,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
       }],
       'price':480
@@ -33,8 +33,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x50',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Simple Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -44,7 +44,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':480
@@ -58,8 +58,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x54',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Doble Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -69,7 +69,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':745
@@ -83,8 +83,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x50',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Doble Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -94,7 +94,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':745
@@ -108,8 +108,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x54',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Simple Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -119,7 +119,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':680
@@ -133,8 +133,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x50',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Simple Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -144,7 +144,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':680
@@ -158,8 +158,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x54',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Doble Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -169,7 +169,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':1045
@@ -183,8 +183,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x50',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Doble Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -194,7 +194,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':1045
@@ -208,8 +208,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x54',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Simple Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -219,7 +219,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':880
@@ -233,8 +233,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x50',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Simple Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -244,7 +244,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':880
@@ -258,8 +258,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x54',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Doble Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -269,7 +269,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':1345
@@ -283,8 +283,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x50',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Doble Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -294,7 +294,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':1345
@@ -308,8 +308,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x54',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Simple Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -319,7 +319,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':1090
@@ -333,8 +333,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x50',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Simple Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -344,7 +344,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':1090
@@ -358,8 +358,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x54',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Doble Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -369,7 +369,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':1745
@@ -383,8 +383,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x50',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Doble Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -394,7 +394,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':1745
@@ -408,8 +408,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x54',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Simple Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -419,7 +419,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':1690
@@ -433,8 +433,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x50',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Simple Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -444,7 +444,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':1690
@@ -458,8 +458,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x54',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Doble Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -469,7 +469,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':2890
@@ -483,8 +483,8 @@ var prices = [
         'inksQuantity':4,
         'openedSize':'90x50',
         'quantityOfPages':1,
+        'quantityOfVias':1,
         'faces':'Doble Faz',
-        'pages':1,
         'materials':
           {
             'paper':'Coteado Mate',
@@ -494,7 +494,7 @@ var prices = [
         'paperSize':'320x330mm',
         'sheetSize':'660x960mm',
         'cutsPerSheet':6,
-        'worksPerPaper':15,
+        'quantityPerPaper':15,
         'excess':1
         }],
       'price':2890

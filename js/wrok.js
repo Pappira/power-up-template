@@ -29,6 +29,7 @@ var works = [
           'openedSize':['90x54','90x50'],
           'allTheSame':false,
           'quantityOfPages':[1,2,3],
+          'quantityOfVias':[1],
           'faces':['Simple Faz','Doble Faz'],
           'materials':[
             {

@@ -24,77 +24,81 @@ var workOrderPDF = function(estimate,newTab){
     writeTextInDoc(doc,"Fecha de Ingreso","<Fecha de Ingreso>",sixthColumn,19,normalBoxLength);
 
     var heigth = heigthSeparation*3;
-
+    var selectedOption = estimate.selectedOption?estimate.selectedOption:0;
+    var selectedEstimate = estimate.prices[selectedOption];
     writeTextInDoc(doc,"Nombre / Empresa",estimate.customer.comenrcialName + " / " + estimate.customer.businessName ,firstColumn,heigth,normalBoxLength*4+separation*3);
-    writeTextInDoc(doc,"Cantidad",estimate.quantity,fifthColumn,heigth,normalBoxLength*2+separation);
+    writeTextInDoc(doc,"Cantidad",selectedEstimate.quantity,fifthColumn,heigth,normalBoxLength*2+separation);
+   
 
     for (var i = 0; i < estimate.items.length;i++){
         var item = estimate.items[i];
-        var faces = item.phases==="Simple faz"?1:2;
-        var coefficient = faces/item.quantityOfPages;
-        var sheets = Math.ceil(estimate.workQuantity/item.quantityPerLayout)*coefficient;
+        var selectedItem = selectedEstimate.items[i];
+        var inksFront = item.inks.split("/")[0];
+        var inksBack= item.inks.split("/")[1];
+        var faces = inksBack>0?1:2;
+        var coefficient = faces/selectedItem.quantityOfPages;
+        var sheets = Math.ceil(selectedEstimate.quantity/selectedItem.quantityPerPaper)*coefficient;
       
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"","Trabajo " + item.name + " " + item.phases,firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
+        writeTextInDoc(doc,"","Trabajo " + item.name + " " + (faces==1?"Simple Faz":"Doble Faz"),firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
         doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
 
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"Armado x Pliego",item.quantityPerLayout,firstColumn,heigth,normalBoxLength);
-        writeTextInDoc(doc,"Tamaño Abierto",item.openSize, secondColumn, heigth, normalBoxLength);
-        writeTextInDoc(doc,"Tamaño Cerrado",item.closedSize, thirdColumn,heigth, normalBoxLength);
-        //writeTextInDoc(doc,"Numerado",item.numbered?item.numeration:"No", fourthColumn, heigth, normalBoxLength);
-        writeTextInDoc(doc,"Páginas",item.pages,fifthColumn,heigth,normalBoxLength);
-        writeTextInDoc(doc,"Vías",item.vias,sixthColumn,heigth,normalBoxLength);
+        writeTextInDoc(doc,"Armado x Pliego",selectedItem.quantityPerPaper,firstColumn,heigth,normalBoxLength);
+        writeTextInDoc(doc,"Tamaño Abierto",selectedItem.openedSize, secondColumn, heigth, normalBoxLength);
+        writeTextInDoc(doc,"Tamaño Cerrado",estimate.closedSize, thirdColumn,heigth, normalBoxLength);
+        writeTextInDoc(doc,"Páginas",selectedItem.quantityOfPages,fifthColumn,heigth,normalBoxLength);
+        writeTextInDoc(doc,"Vías",selectedItem.quantityOfVias,sixthColumn,heigth,normalBoxLength);
 
         heigth += heigthSeparation;
         writeTextInDoc(doc,"","Papel",firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
         doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
 
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"Tipo de Papel",item.material + " " + item.color,firstColumn,heigth,normalBoxLength*3 + separation*2);
-        writeTextInDoc(doc,"Gr.",item.weight,fourthColumn ,heigth, normalBoxLength);
-        writeTextInDoc(doc,"Tamaño de papel","<Tamaño de papel>",fifthColumn, heigth, normalBoxLength*2 + separation);
+        writeTextInDoc(doc,"Tipo de Papel",selectedItem.paper ,firstColumn,heigth,normalBoxLength*3 + separation*2);
+        writeTextInDoc(doc,"Gr.",selectedItem.gr,fourthColumn ,heigth, normalBoxLength);
+        writeTextInDoc(doc,"Tamaño de papel",selectedItem.sheetSize,fifthColumn, heigth, normalBoxLength*2 + separation);
 
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"Cantidad de hojas a cortar x cada vía",((sheets + item.sheetWaste)/item.cutsPerSheet)+"",firstColumn,heigth, normalBoxLength*2 + separation);
-        writeTextInDoc(doc,"Cortado en",item.cutsPerSheet,thirdColumn, heigth, normalBoxLength);
-        writeTextInDoc(doc,"Tamaño del Pliego",item.layoutSize,fourthColumn, heigth, normalBoxLength);
+        writeTextInDoc(doc,"Cantidad de hojas a cortar x cada vía",((sheets + selectedItem.excess)/selectedItem.cutsPerSheet)+"",firstColumn,heigth, normalBoxLength*2 + separation);
+        writeTextInDoc(doc,"Cortado en",selectedItem.cutsPerSheet,thirdColumn, heigth, normalBoxLength);
+        writeTextInDoc(doc,"Tamaño del Pliego",selectedItem.paperSize,fourthColumn, heigth, normalBoxLength);
         writeTextInDoc(doc,"Cantidad de trozos x cada vía",sheets + " + Demasía",fifthColumn, heigth, normalBoxLength*2 + separation);
 
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"","Impresión  " + item.printer,firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
+        writeTextInDoc(doc,"","Impresión  " + selectedItem.machine,firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
         doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
 
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"Armado",item.quantityPerLayout,firstColumn,heigth,normalBoxLength);
-        writeTextInDoc(doc,"Tamaño del pliego",item.layoutSize,secondColumn ,heigth, normalBoxLength);
-        writeTextInDoc(doc,"Demasía",item.sheetWaste,thirdColumn, heigth, normalBoxLength);
+        writeTextInDoc(doc,"Armado",selectedItem.quantityPerPaper,firstColumn,heigth,normalBoxLength);
+        writeTextInDoc(doc,"Tamaño del pliego",selectedItem.paperSize,secondColumn ,heigth, normalBoxLength);
+        writeTextInDoc(doc,"Demasía",selectedItem.excess,thirdColumn, heigth, normalBoxLength);
         writeTextInDoc(doc,"Tiraje con Demasía",sheets + "",fourthColumn,heigth, normalBoxLength);
         doc.text(fifthColumn, heigth+rowSize + rowSize-1.5, "Por cada vía y color");
 
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"Tamaño final abierto",item.openSize,firstColumn,heigth,normalBoxLength*2 + separation);
+        writeTextInDoc(doc,"Tamaño final abierto",selectedItem.openedSize,firstColumn,heigth,normalBoxLength*2 + separation);
         writeTextInDoc(doc,"Cantidad final de pasadas de máquina por color con demasía","<Cantidad final de pasadas de máquina por color con demasía>",thirdColumn ,heigth, normalBoxLength*2 + separation);
         
         heigth += heigthSeparation;
-        writeTextInDoc(doc,"Tintas",item.inkQuantity,firstColumn, heigth, normalBoxLength);
-        writeTextInDoc(doc,"Chapas",item.inkQuantity*faces + "",secondColumn,heigth, normalBoxLength);
-        writeTextInDoc(doc,"Descripción de las tintas",item.inkDetail,thirdColumn, heigth, normalBoxLength*3 + separation);
+        writeTextInDoc(doc,"Tintas",selectedItem.inksQuantity,firstColumn, heigth, normalBoxLength);
+        writeTextInDoc(doc,"Chapas",inksBack + inksFront + "",secondColumn,heigth, normalBoxLength);
+       // writeTextInDoc(doc,"Descripción de las tintas",item.inkDetail,thirdColumn, heigth, normalBoxLength*3 + separation);
 
         heigth += heigthSeparation;
         writeTextInDoc(doc,"","Terminaciones",firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
         doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
 
-        heigth += rowSize;
+        /*heigth += rowSize;
         var finishes = item.finishes.split("\n");
         for (var i = 0; i < finishes.length;i++){
             var boxLength = normalBoxLength*3 + separation*2;
             doc.text(firstColumn, heigth+rowSize + rowSize-1.5, " - " + finishes[i]);
             heigth += rowSize;
-        }  
+        }  */
         heigth += heigthSeparation - rowSize;
     }
-    writeTextInDoc(doc,"","Terminaciones Generales",firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
+   /* writeTextInDoc(doc,"","Terminaciones Generales",firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
     doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
 
     heigth += rowSize;
@@ -104,12 +108,12 @@ var workOrderPDF = function(estimate,newTab){
         doc.text(firstColumn, heigth+rowSize + rowSize-1.5, " - " + finishes[i]);
         heigth += rowSize;
     }  
-    heigth += heigthSeparation - rowSize;
+    heigth += heigthSeparation - rowSize;*/
 
     writeTextInDoc(doc,"","Comentarios",firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
     doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
     heigth += rowSize;
-    doc.text(firstColumn, heigth+rowSize + rowSize-1.5, "<Comentarios>");
+    doc.text(firstColumn, heigth+rowSize + rowSize-1.5, estimate.comments.internalComments);
     if(newTab){
        //window.Trello.addCard({url:doc.output('bloburl')});
        window.open(doc.output('bloburl'),'_blank');

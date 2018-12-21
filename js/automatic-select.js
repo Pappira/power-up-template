@@ -348,10 +348,12 @@ var createTrelloCard = function(){
       var faces = currentItem.faces;
       var paper = currentItem.paper;
       var gr = currentItem.gr;
+      var vias = currentItem.vias;
       currentPossiblePrices = currentPossiblePrices.filter(function(v, i) {
         return (v.items[j].pages == pages && v.items[j].inksQuantity == quantityOfInks && 
           v.items[j].openedSize == openedSize && v.items[j].faces ==  faces && 
-          v.items[j].materials.paper == paper && v.items[j].materials.gr == gr);
+          v.items[j].materials.paper == paper && v.items[j].materials.gr == gr &&
+          v.items[j].materials.paper == vias);
       })
     }
     work.prices.push(currentPossiblePrices[0]);
