@@ -123,4 +123,76 @@ var createCard = function(estimate){
 		  });
 	  }, 1500);
 	});
-  };
+	};
+	
+	
+var createTextForCard = function(){
+	var text = '';
+	text += '#' + estimate['workType'] + '\n';
+	text += '**Cantidad: **' + estimate['quantity'].join(' / ') + '\n';
+	text += '**Tamaño cerrado: **' + estimate['clossedSize'] + '\n';
+	if (estimate['finishes'].length >0){
+		text += '###Terminaciones Generales' + '\n\n';
+		for (var i = 0; i < estimate['finishes'].length;i++){
+			text += i + '. ' + estimate['finishes'][i]['finish'] + '\n';
+			if (estimate['finishes'][i]['finishComment']){
+				text += '  - ' + estimate['finishes'][i]['finishComment'] + '\n';
+			}
+		}
+	}
+	text +='\n';
+	if(estimate['items']){
+		for (var i = 0; i< estimate['items'].length;i++){
+			text += '##' + estimate['items'][i]['name'] + '\n';
+			text += '**Tintas: **' + (estimate['items'][i]['inks']?estimate['items'][i]['inks']+ ' ':'')  + 
+					(estimate['items'][i]['inksDetails']?estimate['items'][i]['inksDetails']+' ':'') + 
+					(estimate['items'][i]['bleedPrint']?'(Impresión al Vivo)':'') +'\n';
+			if (estimate['items'][i]['openedSize']){
+				if(estimate['items'][i]['openedSize'] !== estimate['clossedSize']){
+					text += '**Tamaño Abierto: **' + estimate['items'][i]['openedSize']  +'\n';
+				}
+			}
+			text += '**Cantidad de páginas: **' + (estimate['items'][i]['quantityOfPages'].join(' / '))  +
+					(estimate['items'][i]['allTheSame']?' (Todas iguales)':' (Todas diferentes)') +'\n';
+			if (estimate['items'][i]['materials']){	
+				var materiales = [];
+				for (var j = 0; j < estimate['items'][i]['materials'].length; j++){
+					materiales.push(estimate['items'][i]['materials'][j]['paper'] + ' ' + estimate['items'][i]['materials'][j]['gr'] + 'gr');
+				}
+				if(materiales && materiales.length>0){
+					text += '**Materiales: **' + materiales.join(' / ') + '\n'; 
+				}
+			}
+			if (estimate['items'][i]['finishes'].length >0){
+				text += '###Terminaciones' + '\n\n';
+				for (var j = 0; j < estimate['items'][i]['finishes'].length;j++){
+					text += j + '. ' + estimate['items'][i]['finishes'][j]['finish'] + '\n';
+					if (estimate['items'][i]['finishes'][j]['comment']){
+						text += '  - ' + estimate['items'][i]['finishes'][j]['comment'] + '\n';
+					}
+				}
+				text +='\n';
+			}
+		}
+	}
+	if (estimate['comments']){
+		text += '**Comentario: **' + estimate['comments']['internalComments']+ '\n';
+	}
+	if (estimate['customer']){
+		text += '##Cliente' + '\n';
+		text += estimate['customer']['comenrcialName']?'**Nombre Fantasía: **' + estimate['customer']['comenrcialName'] + '\n':'';
+		text += '**Razón Social: **' + estimate['customer']['businessName'] + '\n';
+		text += '**RUT: **' + estimate['customer']['rut'] + '\n';
+		text += '**Dirección: **' + estimate['customer']['address'] + '\n';
+		text += '**Forma de Pago: **' + estimate['customer']['paymentWay'] + '\n';
+		text += '####Contacto' + '\n';
+		text += '**Nombre: **' + estimate['customer']['contactName'] + '\n';
+		text += '**Mail: **' + estimate['customer']['contactEmail'] + '\n';
+		text += estimate['customer']['contactPhone']?'**Teléfono: **' + estimate['customer']['contactPhone'] + '\n':'';
+	}
+	return text;
+}
+
+var createTrelloCardName = function(){
+	return estimate.quantity + "x" + estimate.workType + " - " + estimate.customer.comenrcialName;
+}
