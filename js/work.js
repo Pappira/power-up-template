@@ -4,7 +4,7 @@ var works = [
       'workTypeId':0,
       'workType':'Tarjetería',
       'clossedSizes':['90x54mm'],
-      'image':'no-image-icon.png',
+      'image':noImage,
       'name':'Tarjetas Personales',
       'quantities':[100,200,300,500,1000],
       'finishes':[

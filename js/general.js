@@ -87,7 +87,7 @@ var createElement = function(typeValue,className,id,text,type,forValue,value,hre
     }
     if(attirbuteName && attributeValue){
 		for(var i = 0; i <attirbuteName.length;i++){
-			createElement.setAttribute(attirbuteName[i],attributeValue[i]);
+			createElement .setAttribute(attirbuteName[i],attributeValue[i]);
 		}
 	}
 	return createElement;
