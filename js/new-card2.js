@@ -38,6 +38,7 @@ var listId = '5a9ef0ce024c776a21220836';
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
+	  addItemButton.addEventListener('click',createItem);
 	  if(t.arg('update')){
 		saveFunction = updateCard;
 		addCardButton.firstChild.data = "Modificar";
@@ -739,7 +740,6 @@ var focusOutOnMaterial = function(elementFocusedOut){
 	}
 };
 
-addItemButton.addEventListener('click',createItem);
 
 var createTrelloCardName = function(){
 	return estimate.quantity + "x" + estimate.workType + " - " + estimate.customer.comenrcialName;
