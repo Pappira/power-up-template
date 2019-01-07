@@ -38,13 +38,15 @@ var listId = '5a9ef0ce024c776a21220836';
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
-	  addItemButton.addEventListener('click',createItem);
-	  if(t.arg('update')){
-		saveFunction = updateCard;
-		addCardButton.firstChild.data = "Modificar";
-	  } else {
-		saveFunction = createCard;
-	  }
+		if (addItemButton){
+			addItemButton.addEventListener('click',createItem);
+		}
+		if(t.arg('update')){
+			saveFunction = updateCard;
+			addCardButton.firstChild.data = "Modificar";
+		} else {
+			saveFunction = createCard;
+		}
   
 	  addCardButton.addEventListener('click', saveFunction);
   
@@ -744,7 +746,6 @@ var focusOutOnMaterial = function(elementFocusedOut){
 var createTrelloCardName = function(){
 	return estimate.quantity + "x" + estimate.workType + " - " + estimate.customer.comenrcialName;
 }
-
 
 var updateCard = function() {
 	startLoader();
