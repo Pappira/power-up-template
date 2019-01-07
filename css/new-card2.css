@@ -178,3 +178,37 @@ h3{
 .div-button{
   text-align: center;
 }
+
+
+.card-content{
+  color: black;
+}
+
+.card-reveal{
+  color: #ffffff;
+  background-color: rgba(48,63,159,0.4) !important
+}
+.card .card-image .card-title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+}
+.card .card-image {
+  text-align: center;
+}
+
+i.right {
+  height: 100%;
+  width: 100%;
+  margin-left: 0px;
+} 
+
+.card .card-reveal .card-title {
+  height: 100%;
+}
+
+.card .card-reveal {
+  padding: 0px;
+}
