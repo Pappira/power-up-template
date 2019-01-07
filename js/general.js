@@ -126,7 +126,7 @@ var createCard = function(estimate){
 	};
 	
 	
-var createTextForCard = function(){
+var createTextForCard = function(estimate){
 	var text = '';
 	text += '#' + estimate['workType'] + '\n';
 	text += '**Cantidad: **' + estimate['quantity'].join(' / ') + '\n';
@@ -193,6 +193,6 @@ var createTextForCard = function(){
 	return text;
 }
 
-var createTrelloCardName = function(){
+var createTrelloCardName = function(estimate){
 	return estimate.quantity + "x" + estimate.workType + " - " + estimate.customer.comenrcialName;
 }
