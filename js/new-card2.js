@@ -47,9 +47,9 @@ t.render(function(){
 		} else {
 			saveFunction = createCard;
 		}
-  
-	  addCardButton.addEventListener('click', saveFunction);
-  
+		if (addCardButton){
+		    addCardButton.addEventListener('click', saveFunction);
+		}
 	  if(cardInfo){
 		createGeneralInformation(cardInfo);
 		for (var i = 0; i <  cardInfo.items.length;i++){
