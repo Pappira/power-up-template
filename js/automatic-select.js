@@ -117,7 +117,7 @@ var createWizardElement = function(step,combination,last,combinations){
         value = combination.values[i].paper + ' ' + combination.values[i].gr + 'gr.';
       }
     }
-    var card = createRevealCard('no-image-icon.png',value,combination.itemId + '-' + combination.name,i);
+    var card = createRevealCard(noImage,value,combination.itemId + '-' + combination.name,i);
     divRow.appendChild(card);
   }
  
