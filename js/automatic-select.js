@@ -10,12 +10,12 @@ var selectedOptions = {};
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
-	  if(t.arg('update')){
+	  /*if(t.arg('update')){
 		saveFunction = updateCard;
 		addCardButton.firstChild.data = "Modificar";
 	  } else {
 		saveFunction = createCard;
-	  }
+	  }*/
       createWorkTypeSelectPanel();
 	 // addCardButton.addEventListener('click', saveFunction);
   
@@ -391,9 +391,9 @@ var createEstimateAndTrelloCard = function(){
     }
     work.prices.push(currentPossiblePrices[0]);
   }
-  return work;
   estimate = work;
-  createCard();
+  createCard(estimate);
+  return work;
 }
 
 var cutArray = function(originalArray,indexToCut){

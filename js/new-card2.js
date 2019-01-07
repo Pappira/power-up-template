@@ -42,10 +42,10 @@ t.render(function(){
 			addItemButton.addEventListener('click',createItem);
 		}
 		if(t.arg('update')){
-			saveFunction = updateCard;
+			saveFunction = createEstimateAndUpdateCard;
 			addCardButton.firstChild.data = "Modificar";
 		} else {
-			saveFunction = createCard;
+			saveFunction = createEstimateAndCard;
 		}
 		if (addCardButton){
 		    addCardButton.addEventListener('click', saveFunction);
@@ -747,36 +747,12 @@ var createTrelloCardName = function(){
 	return estimate.quantity + "x" + estimate.workType + " - " + estimate.customer.comenrcialName;
 }
 
-var updateCard = function() {
-	startLoader();
-	t.card('all')
-	.then(function(card) {
-	  var estimate = createObject();
-	  t.set('card', 'shared', cardInfoKey, estimate)
-		.then(function(){
-		  updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate)},
-			function(){
-			  t.closeModal();
-			});
-		});
-	});
+var createEstimateAndUpdateCard = function() {
+	var estimate = createObject();
+	updateCard(estimate);
   };
 
-var createCard = function(){
+var createEstimateAndCard = function(){
 	var estimate = createObject();
-	var cardToSave = {idList: listId, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)};
-	if(estimate.deliveryDelay){
-	  //TODO Agregar due date a la tarjeta
-	  // due: mm/dd/yyy
-	}
-	startLoader();
-	createNewTrelloCard(t, cardToSave, function(card) {
-	  setTimeout(function () {
-		t.set(card.id, 'shared', cardInfoKey, estimate)
-		  .then(function(){
-			t.showCard(card.id);
-			t.closeModal();
-		  });
-	  }, 1500);
-	});
+	createCard(estimate);
   };
