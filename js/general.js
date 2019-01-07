@@ -194,5 +194,5 @@ var createTextForCard = function(estimate){
 }
 
 var createTrelloCardName = function(estimate){
-	return estimate.quantity + "x" + estimate.workType + " - " + estimate.customer.comenrcialName;
+	return estimate.quantity + "x" + estimate.workType + " - " + estimate.customer? estimate.customer.comercialName:'';
 }
