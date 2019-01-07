@@ -238,7 +238,7 @@ var createRevealCard = function(image,title,type,id){
   var divCol = createElement('div','col m4','','');
   var divCard = createElement('div','card',type + '-' + id,'');
   var divCardImage = createElement('div','card-image waves-effect waves-block waves-light','','');
-  var img = createElement('img','activator','','','','','','','',image);
+  var img = createElement('img','activator','','','','','','','',['src'],[image]);
   var span = createElement('span','card-title activator grey-text text-darken-4','',title);
 
   divCardImage.appendChild(img);
