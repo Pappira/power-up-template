@@ -148,10 +148,14 @@ var createTextForCard = function(estimate){
 			text += '**Tintas: **' + (estimate['items'][i]['inksQuantity']?estimate['items'][i]['inksQuantity'].join(' // ') + ' ':'')  + 
 					(estimate['items'][i]['inksDetails']?estimate['items'][i]['inksDetails']+' ':'') + 
 					(estimate['items'][i]['bleedPrint']?'(Impresión al Vivo)':'') +'\n';
+			
 			if (estimate['items'][i]['openedSize']){
 				if(estimate['items'][i]['openedSize'] !== estimate['clossedSize']){
 					text += '**Tamaño Abierto: **' + estimate['items'][i]['openedSize'].join(' // ')  +'\n';
 				}
+			}
+			if (estimate['items'][i]['faces']){
+				text += '**Faces: **' + estimate['items'][i]['faces'].join(' // ')  +'\n';
 			}
 			text += '**Cantidad de páginas: **' + (estimate['items'][i]['quantityOfPages'].join(' // '))  +
 					(estimate['items'][i]['allTheSame']?' (Todas iguales)':' (Todas diferentes)') +'\n';
@@ -179,6 +183,22 @@ var createTextForCard = function(estimate){
 	if (estimate['comments']){
 		text += '**Comentario: **' + estimate['comments']['internalComments']+ '\n';
 	}
+	if(estimate['prices']){
+		text += '##Precios' + '\n';
+		for (var i = 0; i < estimate['prices'].length;i++){
+			var price = estimate['prices'][i];
+			text += price.quantity + " " + estimate['name'] ;
+			for (var j = 0; j < price.items.length; j++)
+				var item =  price.items[j];
+				var originalItem = estimate['items'][item.id];
+				text += ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
+				+ (originalItem.inksQuantity.length>1?item.inksQuantity + ' tintas ':' ') + (originalItem.faces.length>1?item.faces+' ':'') 
+				+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
+				+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
+				+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
+		}
+	}
+
 	if (estimate['customer']){
 		text += '##Cliente' + '\n';
 		text += estimate['customer']['comenrcialName']?'**Nombre Fantasía: **' + estimate['customer']['comenrcialName'] + '\n':'';
