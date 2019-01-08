@@ -388,7 +388,7 @@ var createEstimateAndTrelloCard = function(){
       var gr = currentItem.gr;
       var vias = currentItem.quantityOfVias;
       currentPossiblePrices = currentPossiblePrices.filter(function(v, i) {
-        return (v.items[j].pages == pages && v.items[j].inksQuantity == quantityOfInks && 
+        return (v.items[j].quantityOfPages == pages && v.items[j].inksQuantity == quantityOfInks && 
           v.items[j].openedSize == openedSize && v.items[j].faces ==  faces && 
           v.items[j].materials.paper == paper && v.items[j].materials.gr == gr &&
           v.items[j].quantityOfVias == vias);
