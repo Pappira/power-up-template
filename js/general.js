@@ -1,3 +1,4 @@
+var t = TrelloPowerUp.iframe();
 
 var createSelect = function(colType,selectId,values,labelName,thisValue){
 	var option0 = createElement('Option','','','Selecciona','','','');
