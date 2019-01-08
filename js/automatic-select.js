@@ -318,8 +318,13 @@ var createFormButton = function(step,text,next,finish){
       'btn-lg ' + (next?'pull-right ':'pull-left '),'',(next?'Avanzar a ' + text:'Volver a ' + text),'button');
       next?button.addEventListener('click',nextButtonClick):button.addEventListener('click',previuosButtonClick);
      }else{
-    button = createElement('button','btn ' +'nextBtn ' + 'btn-lg ' + 'pull-right ','',text,'button');
-    button.addEventListener('click',createEstimateAndTrelloCard);
+      var divButton = createElement('div');
+      var thisButton = createElement('button','btn ' +'nextBtn ' + 'btn-lg ' + 'pull-right ','',text,'button');
+      thisButton.addEventListener('click',createEstimateAndTrelloCard);
+      var divLoader = createElement('div','','loader');
+      divButton.appendChild(thisButton);
+      divButton.appendChild(divLoader);
+      button = divButton;
   }
   return button;
 } 

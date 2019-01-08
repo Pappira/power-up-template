@@ -677,8 +677,6 @@ var focusOutOnMaterial = function(elementFocusedOut){
 };
 
 
-
-
 var createEstimateAndUpdateCard = function() {
 	var estimate = createObject();
 	updateCard(estimate);
