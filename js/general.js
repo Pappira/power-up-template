@@ -60,7 +60,7 @@ var createTextInput = function(colType,inputId,inputLabelValue,type,valueForInpu
 	return divCol;
 };
 
-var createElement = function(typeValue,className,id,text,type,forValue,value,href,disabled,attirbuteName,attributeValue){
+var createElement = function(typeValue,className,id,text,type,forValue,value,href,disabled,attirbuteName,attributeValue,innerHTML){
 	var createElement=document.createElement(typeValue);
 	if(className && className.length>0){
 		createElement.setAttribute('class',className);
@@ -90,6 +90,9 @@ var createElement = function(typeValue,className,id,text,type,forValue,value,hre
 		for(var i = 0; i <attirbuteName.length;i++){
 			createElement .setAttribute(attirbuteName[i],attributeValue[i]);
 		}
+	}
+	if(innerHTML && innerHTML.length > 0){
+		createElement.innerHTML = innerHTML;
 	}
 	return createElement;
 };
