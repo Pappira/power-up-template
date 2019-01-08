@@ -393,6 +393,7 @@ var createEstimateAndTrelloCard = function(){
           v.items[j].materials.paper == paper && v.items[j].materials.gr == gr &&
           v.items[j].quantityOfVias == vias);
       })
+      var a = 123;
     }
     work.prices.push(currentPossiblePrices[0]);
   }
