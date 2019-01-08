@@ -42,7 +42,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
         + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?'<strong>Páginas: </strong>'  + item.quantityOfPages + '<br>':'')
         + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?'<strong>Vías: </strong>' + item.quantityOfVias + '<br>': '');
       }
-      text += "<h4>" + (priceText.length>0?'**' + priceText + ': **$ ':'**Precio: **$ ') + price.price + ' + IVA' + '</h4>';
+      text += priceText + "<h4>" + 'Precio: $ ' + price.price + ' + IVA' + '</h4>';
     }
 
     var card = createHTMLCard(noImage,estimate.name,text,type,estimate.id,nextFunction);
