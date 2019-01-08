@@ -440,7 +440,7 @@ var getCombinations = function(estimate){
         openedSize.push('"openedSize": "'+ item.openedSize[j] + '",');
       }
       for (var j = 0; j  < item.quantityOfVias.length;j++){
-        quantityOfVias.push('"quantityOfVias": "'+ item.quantityOfVias[j] + '",');
+        quantityOfVias.push('"quantityOfVias": '+ item.quantityOfVias[j] + ',');
       }
       for (var j = 0; j < item.materials.length; j++){
           quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(estimate.items.length-1)?']':','));
