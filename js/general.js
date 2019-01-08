@@ -157,8 +157,10 @@ var createTextForCard = function(estimate){
 			if (estimate['items'][i]['faces']){
 				text += '**Faces: **' + estimate['items'][i]['faces'].join(' // ')  +'\n';
 			}
-			text += '**Cantidad de páginas: **' + (estimate['items'][i]['quantityOfPages'].join(' // '))  +
+			if (estimate['items'][i]['quantityOfPages'].length>1 || (estimate['items'][i]['quantityOfPages'].length==1 && estimate['items'][i]['quantityOfPages']!=1)){
+				text += '**Cantidad de páginas: **' + (estimate['items'][i]['quantityOfPages'].join(' // '))  +
 					(estimate['items'][i]['allTheSame']?' (Todas iguales)':' (Todas diferentes)') +'\n';
+			}
 			if (estimate['items'][i]['materials']){	
 				var materiales = [];
 				for (var j = 0; j < estimate['items'][i]['materials'].length; j++){
@@ -196,7 +198,7 @@ var createTextForCard = function(estimate){
 				+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
 				+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
 				+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
-				text += (priceText.length>0?'**' + priceText + ': **$ ':'**Precio: **$ ') + item.price;
+				text += (priceText.length>0?'**' + priceText + ': **$ ':'**Precio: **$ ') + item.price + '\n';
 		}
 	}
 
