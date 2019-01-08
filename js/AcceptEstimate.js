@@ -12,7 +12,7 @@ t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
 	  estimate = cardInfo; 
-    createWizard(estimate);
+    createWorkTypeSelectPanel();
 	});
 });
 
