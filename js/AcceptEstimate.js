@@ -30,20 +30,18 @@ var createScreen = function(type,titulo,estimate,nextFunction){
   for (var i = 0; i < estimate.prices.length;i++){
     var price = estimate.prices[i];
     var text;
-    if(estimate['prices']){
-      var price = estimate['prices'][i];
-      var priceText = "<strong>Cantidad: </strong>" + price.quantity + '<br>';
-      for (var j = 0; j < price.items.length; j++){
-        var item =  price.items[j];
-        var originalItem = estimate['items'][item.id];
-        priceText += ( price.items.length>1?"<h3>" + originalItem.name+'</h3>':'') + (originalItem.materials.length>1?'<strong>papel: </strong>' + item.materials.paper + ' '  + item.materials.gr + 'gr <br>':'')
-        + ((originalItem.inksQuantity.length>1 || originalItem.faces.length>1)?'<strong>Tintas: </strong>' + item.inksQuantity +' ' + item.faces +'<br>':' ')
-        + (originalItem.openedSize.length>1?'<strong>Tamaño Abierto: </strong>' + item.openedSize + '<br>':'') 
-        + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?'<strong>Páginas: </strong>'  + item.quantityOfPages + '<br>':'')
-        + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?'<strong>Vías: </strong>' + item.quantityOfVias + '<br>': '');
-      }
-      text += priceText + "<h4>" + 'Precio: $ ' + price.price + ' + IVA' + '</h4>';
+    var price = estimate['prices'][i];
+    var priceText = "<strong>Cantidad: </strong>" + price.quantity + '<br>';
+    for (var j = 0; j < price.items.length; j++){
+      var item =  price.items[j];
+      var originalItem = estimate['items'][item.id];
+      priceText += ( price.items.length>1?"<h3>" + originalItem.name+'</h3>':'') + (originalItem.materials.length>1?'<strong>papel: </strong>' + item.materials.paper + ' '  + item.materials.gr + 'gr <br>':'')
+      + ((originalItem.inksQuantity.length>1 || originalItem.faces.length>1)?'<strong>Tintas: </strong>' + item.inksQuantity +' ' + item.faces +'<br>':' ')
+      + (originalItem.openedSize.length>1?'<strong>Tamaño Abierto: </strong>' + item.openedSize + '<br>':'') 
+      + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?'<strong>Páginas: </strong>'  + item.quantityOfPages + '<br>':'')
+      + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?'<strong>Vías: </strong>' + item.quantityOfVias + '<br>': '');
     }
+    text += priceText + "<h4>" + 'Precio: $ ' + price.price + ' + IVA' + '</h4>';
 
     var card = createHTMLCard(noImage,estimate.name,text,type,estimate.id,nextFunction);
     divRow.appendChild(card);
