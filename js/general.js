@@ -198,7 +198,7 @@ var createTextForCard = function(estimate){
 				+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
 				+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
 				+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
-				text += (priceText.length>0?'**' + priceText + ': **$ ':'**Precio: **$ ') + price .price + '\n';
+				text += (priceText.length>0?'**' + priceText + ': **$ ':'**Precio: **$ ') + price.price + '\n';
 		}
 	}
 
