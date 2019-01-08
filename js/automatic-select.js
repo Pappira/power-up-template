@@ -397,6 +397,7 @@ var createEstimateAndTrelloCard = function(){
     work.prices.push(currentPossiblePrices[0]);
   }
   estimate = work;
+  delete estimate['image'];
   createCard(estimate);
   return work;
 }
