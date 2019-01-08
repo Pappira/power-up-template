@@ -11,7 +11,7 @@ var estimate;
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
-	  estimate = cardInfo;
+	  estimate = cardInfo; 
     createWizard(estimate);
 	});
 });
@@ -33,7 +33,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
     if(estimate['prices']){
       for (var i = 0; i < estimate['prices'].length;i++){
         var price = estimate['prices'][i];
-        var priceText = "<strong>Cantidad: </strong>" price.quantity + '<br>';
+        var priceText = "<strong>Cantidad: </strong>" + price.quantity + '<br>';
         for (var j = 0; j < price.items.length; j++){
           var item =  price.items[j];
           var originalItem = estimate['items'][item.id];
