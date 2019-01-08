@@ -399,6 +399,8 @@ var createEstimateAndTrelloCard = function(){
   }
   estimate = work;
   delete estimate['image'];
+  delete estimate['quantities'];
+  delete estimate['clossedSizes'];
   createCard(estimate);
   return work;
 }

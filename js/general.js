@@ -129,8 +129,8 @@ var createCard = function(estimate){
 	
 var createTextForCard = function(estimate){
 	var text = '';
-	text += '#' + estimate['workType'] + '\n';
-	text += '**Cantidad: **' + estimate['quantity'].join(' / ') + '\n';
+	text += '#' + estimate['name'] + '\n';
+	text += '**Cantidad: **' + estimate['quantity'].join(' // ') + '\n';
 	text += '**Tamaño cerrado: **' + estimate['clossedSize'] + '\n';
 	if (estimate['finishes'].length >0){
 		text += '###Terminaciones Generales' + '\n\n';
@@ -144,16 +144,16 @@ var createTextForCard = function(estimate){
 	text +='\n';
 	if(estimate['items']){
 		for (var i = 0; i< estimate['items'].length;i++){
-			text += '##' + estimate['items'][i]['name'] + '\n';
-			text += '**Tintas: **' + (estimate['items'][i]['inks']?estimate['items'][i]['inks']+ ' ':'')  + 
+			text += (estimate['items'].length>1?('##' + estimate['items'][i]['name'] + '\n'):'');
+			text += '**Tintas: **' + (estimate['items'][i]['inksQuantity']?estimate['items'][i]['inksQuantity'].join(' // ') + ' ':'')  + 
 					(estimate['items'][i]['inksDetails']?estimate['items'][i]['inksDetails']+' ':'') + 
 					(estimate['items'][i]['bleedPrint']?'(Impresión al Vivo)':'') +'\n';
 			if (estimate['items'][i]['openedSize']){
 				if(estimate['items'][i]['openedSize'] !== estimate['clossedSize']){
-					text += '**Tamaño Abierto: **' + estimate['items'][i]['openedSize']  +'\n';
+					text += '**Tamaño Abierto: **' + estimate['items'][i]['openedSize'].join(' // ')  +'\n';
 				}
 			}
-			text += '**Cantidad de páginas: **' + (estimate['items'][i]['quantityOfPages'].join(' / '))  +
+			text += '**Cantidad de páginas: **' + (estimate['items'][i]['quantityOfPages'].join(' // '))  +
 					(estimate['items'][i]['allTheSame']?' (Todas iguales)':' (Todas diferentes)') +'\n';
 			if (estimate['items'][i]['materials']){	
 				var materiales = [];
@@ -161,7 +161,7 @@ var createTextForCard = function(estimate){
 					materiales.push(estimate['items'][i]['materials'][j]['paper'] + ' ' + estimate['items'][i]['materials'][j]['gr'] + 'gr');
 				}
 				if(materiales && materiales.length>0){
-					text += '**Materiales: **' + materiales.join(' / ') + '\n'; 
+					text += '**Materiales: **' + materiales.join(' // ') + '\n'; 
 				}
 			}
 			if (estimate['items'][i]['finishes'].length >0){
