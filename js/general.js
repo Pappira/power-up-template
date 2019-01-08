@@ -189,11 +189,11 @@ var createTextForCard = function(estimate){
 		text += '##Precios' + '\n';
 		for (var i = 0; i < estimate['prices'].length;i++){
 			var price = estimate['prices'][i];
-			text += price.quantity + " " + estimate['name'] ;
+			var priceText = price.quantity + " " + estimate['name'] ;
 			for (var j = 0; j < price.items.length; j++)
 				var item =  price.items[j];
 				var originalItem = estimate['items'][item.id];
-				var priceText = ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
+				priceText += ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
 				+ (originalItem.inksQuantity.length>1?item.inksQuantity + ' tintas ':' ') + (originalItem.faces.length>1?item.faces+' ':'') 
 				+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
 				+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
