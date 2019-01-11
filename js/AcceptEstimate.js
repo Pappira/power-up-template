@@ -71,7 +71,7 @@ var createHTMLCard = function(image,title,content,type,id,functionOnClick){
   var divCard = createElement('div','card',type + '-' + id,'');
   var divCardImage = createElement('div','card-content white-text','','');
   var span = createElement('span','card-title activator grey-text text-darken-4','',title);
-  var p = createElement('p','','',content)
+  var p = createElement('p','','','','','','','','','','',content);
   divCardImage.appendChild(span);
   divCardImage.appendChild(p);
   divCard.appendChild(divCardImage);
