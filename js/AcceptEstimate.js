@@ -43,7 +43,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
     }
     text = priceText + "<h6>" + 'Precio: $ ' + price.price + ' + IVA' + '</h6>';
 
-    var card = createHTMLCard(noImage,estimate.name,text,type,estimate.id,nextFunction,true);
+    var card = createHTMLCard(noImage,estimate.name,text,type,i,nextFunction,true);
     divRow.appendChild(card);
   }
   div.appendChild(divRow);
@@ -53,17 +53,8 @@ var createScreen = function(type,titulo,estimate,nextFunction){
 var nextAfterAcceptedEstimateSelect = function(){
   var elementId = $(this).attr('id');
   var id = elementId.substring(elementId.indexOf('-')+1);
-  selectedWorkTypeId = id;
-  var possibleWorks = [];
-  var possibleOptions = [];
-  for (var i = 0; i < works.length;i++){
-    if (works[i].workTypeId == id){
-      possibleWorks.push(works[i]);
-      possibleOptions.push(works[i].workName);
-    }
-  }
-  deleteWizard();
-  createWorkSelectPanel(possibleWorks);
+  estimate["SelectedOption"] = id;
+  updateCard(estimate);
 }
 
 var createHTMLCard = function(image,title,content,type,id,functionOnClick,blackText){
