@@ -426,7 +426,7 @@ TrelloPowerUp.initialize({
 			icon: GRAY_ICON, // Must be a gray icon, colored icons not allowed.
 			content: {
 				type: 'iframe',
-				url: t.signUrl('imprentadiagonal.com.uy'),
+				url: t.signUrl('http://www.imprentadiagonal.com.uy'),
 				height: 500 // Max height is 500
 			}
 		};
