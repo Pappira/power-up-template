@@ -533,12 +533,12 @@ TrelloPowerUp.initialize({
       }
     );
   },
-  'card-detail-badges': function(t, options) {
-    return t.card('all')
-    .then(function (card) {
-       return getBadges(t, card, false);
-    });
-  },
+  // 'card-detail-badges': function(t, options) {
+  //   return t.card('all')
+  //   .then(function (card) {
+  //      return getBadges(t, card, false);
+  //   });
+  // },
   'card-from-url': function(t, options) {
     // options.url has the url in question
     // if we know cool things about that url we can give Trello a name and desc
