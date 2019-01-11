@@ -83,10 +83,7 @@ var GRAY_ICON = './images/icon-gray.svg';
 var randomBadgeColor = function() {
   return ['green', 'yellow', 'red', 'none'][Math.floor(Math.random() * 4)];
 };
-
-var getBadges = function(t){
-  return t.card('all')
-  .then(function(card){
+var getBadges = function(t, card, detailed){
     var badges = [];
     return Promise.all([
       getCardStatus(card.id)
@@ -154,7 +151,6 @@ var getBadges = function(t){
       });
       return badges;
     });
-  });
 };
 
 var boardButtonCallback = function(t){
@@ -440,6 +436,17 @@ var getAcceptEstimate = function(){
 
 // We need to call initialize to get all of our capability handles set up and registered with Trello
 TrelloPowerUp.initialize({
+  // 'card-back-section': function(t, options){
+  //   return {
+  //     title: 'My Card Back Section',
+	// 		icon: GRAY_ICON, // Must be a gray icon, colored icons not allowed.
+	// 		content: {
+	// 			type: 'iframe',
+	// 			url: t.signUrl('https://www.imprentadiagonal.com.uy'),
+	// 			height: 500 // Max height is 500
+	// 		}
+	// 	};
+	// },
   // NOTE about asynchronous responses
   // If you need to make an asynchronous request or action before you can reply to Trello
   // you can return a Promise (bluebird promises are included at TrelloPowerUp.Promise)
@@ -518,7 +525,10 @@ TrelloPowerUp.initialize({
     return buttons;
   },
   'card-badges': function(t, options){
-    return getBadges(t);
+    return t.card('all')
+    .then(function (card) {
+       return getBadges(t, card, false);
+    });
   },
   'card-buttons': function(t, options) {
     return t.get('card', 'shared', cardInfoKey).then(
