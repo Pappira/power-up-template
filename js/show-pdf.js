@@ -144,7 +144,7 @@ var workOrderPDF = function(estimate,newTab){
     if(estimate.comments){
         doc.text(firstColumn, heigth+rowSize + rowSize-1.5, estimate.comments.internalComments);
     }
-    if(newTab){
+    /*if(newTab){
        window.open(doc.output('bloburl'),'_blank');
     }else{           
 //        var iframe = document.getElementById('iframe');
@@ -156,7 +156,7 @@ var workOrderPDF = function(estimate,newTab){
         //iframe.setAttribute('src',doc.output('datauri'));
         var iframe = document.getElementsByTagName('iframe');
         iframe[0].setAttribute('data', doc.output('datauri'));
-    }
+    }*/
     return doc.output('bloburl');
 };
 
