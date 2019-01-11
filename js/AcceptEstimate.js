@@ -27,6 +27,9 @@ var createScreen = function(type,titulo,estimate,nextFunction){
   var title = createElement('h3','','',titulo); 
   var divRow = createElement('div','row','','');
   div.appendChild(title);
+  
+  var divLoader = createElement('div','','loader');
+  div.appendChild(divLoader);
   for (var i = 0; i < estimate.prices.length;i++){
     var price = estimate.prices[i];
     var text;
@@ -65,10 +68,6 @@ var createHTMLCard = function(image,title,content,type,id,functionOnClick,blackT
   var p = createElement('p','','','','','','','','','','',content);
   divCardImage.appendChild(span);
   divCardImage.appendChild(p);
-
-  var divLoader = createElement('div','','loader');
-  divCard.appendChild(divLoader);
-  
   divCard.appendChild(divCardImage);
   divCol.appendChild(divCard);
   if (functionOnClick){
