@@ -147,8 +147,13 @@ var workOrderPDF = function(estimate,newTab){
     if(newTab){
        window.open(doc.output('bloburl'),'_blank');
     }else{           
-        var iframe = document.getElementById('iframe');
-        iframe.setAttribute('src',doc.output('datauri'));
+//        var iframe = document.getElementById('iframe');
+        var pdfObject = document.getElementById('pdfObject');
+
+        pdfObject.hide();
+        pdfObject.setAttribute('data', doc.output('datauri'));
+        pdfObject.show();
+        //iframe.setAttribute('src',doc.output('datauri'));
     }
 };
 
