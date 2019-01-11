@@ -181,8 +181,8 @@ h3{
 
 
 .card-content{
-  color: black!important;
-  margin-top: 0.4rem!important;
+  color: black;
+  margin-top: 0.4rem;
 }
 
 .card-reveal{
@@ -210,8 +210,8 @@ i.right {
   height: 100%;
 }
 .card-title {
-  line-height: normal;
-  font-weight: 400;
+  line-height: normal!important;
+  font-weight: 400!important;
 }
 
 .card .card-reveal {
