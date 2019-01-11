@@ -426,7 +426,7 @@ TrelloPowerUp.initialize({
 			icon: GRAY_ICON, // Must be a gray icon, colored icons not allowed.
 			content: {
 				type: 'iframe',
-				url: t.signUrl(workOrderPDF(cardInfoKey)),
+				url: t.signUrl(),
 				height: 500 // Max height is 500
 			}
 		};
