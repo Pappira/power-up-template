@@ -224,3 +224,7 @@ h6 {
   line-height: 110%;
   margin: 0.5rem 0 0rem 0;
 }
+
+.card .card-content p{
+  margin-top: 0.5rem;
+}
