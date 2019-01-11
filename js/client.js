@@ -487,10 +487,16 @@ TrelloPowerUp.initialize({
     return buttons;
   },
   'card-badges': function(t, options){
-    return t.card('all')
-    .then(function (card) {
-       return getBadges(t, card, false);
-    });
+    // return t.card('all')
+    // .then(function (card) {
+    //    return getBadges(t, card, false);
+    // });
+    return [{
+      text: cardStatus,
+      icon: GRAY_ICON, // for card front badges only
+      url: 'https://trello.com/home',
+      target: 'Trello Landing Page' // optional target for above url
+    }];
   },
   'card-buttons': function(t, options) {
     return t.get('card', 'shared', cardInfoKey).then(
