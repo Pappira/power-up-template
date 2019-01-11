@@ -54,13 +54,13 @@ var workOrderPDF = function(estimate,newTab){
         var inksFront;
         var inksBack;
         var faces;
-        if(selectedItem.inks.indexOf("/")>0){
-            inksFront = selectedItem.inks.split("/")[0];
-            inksBack= selectedItem.inks.split("/")[1];
+        if(selectedItem.inksQuantity.indexOf("/")>0){
+            inksFront = selectedItem.inksQuantity.split("/")[0];
+            inksBack= selectedItem.inksQuantity.split("/")[1];
             faces = inksBack>0?1:2;
         }else{
-            inksFront = selectedItem.inks;
-            inksBack= selectedItem.faces?(selectedItem.faces=="Simple Faz"?0:selectedItem.inks):0;
+            inksFront = selectedItem.inksQuantity;
+            inksBack= selectedItem.faces?(selectedItem.faces=="Simple Faz"?0:selectedItem.inksQuantity):0;
             faces = (selectedItem=="Simple Faz"?1:2);
         }
         var coefficient = faces/selectedItem.quantityOfPages;
