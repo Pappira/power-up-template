@@ -150,7 +150,7 @@ var workOrderPDF = function(estimate,newTab){
 
 var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fontColor){
     var fill;
-    value = isNumeric(value)?value+'':value;
+    value = value+'';
     doc.text(x, y + rowSize-1.5, name);
 
     if (boxBackgroundColor && boxBackgroundColor.length === 3){
