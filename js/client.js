@@ -98,19 +98,19 @@ var getBadges = function(t, card, detailed){
         url: 'https://trello.com/home',
         target: 'Trello Landing Page' // optional target for above url
       });
-      badges.push({
-        // dynamic badges can have their function rerun after a set number
-        // of seconds defined by refresh. Minimum of 10 seconds.
-        dynamic: function(){
-          // we could also return a Promise that resolves to this as well if we needed to do something async first
-          return {
-            text: cardStatus,
-            icon: GRAY_ICON, // for card front badges only
-            color: randomBadgeColor(),
-            refresh: 60 // in seconds
-          };
-        }
-      });
+      // badges.push({
+      //   // dynamic badges can have their function rerun after a set number
+      //   // of seconds defined by refresh. Minimum of 10 seconds.
+      //   dynamic: function(){
+      //     // we could also return a Promise that resolves to this as well if we needed to do something async first
+      //     return {
+      //       text: cardStatus,
+      //       icon: GRAY_ICON, // for card front badges only
+      //       color: randomBadgeColor(),
+      //       refresh: 60 // in seconds
+      //     };
+      //   }
+      // });
       return badges;
     });
 };
