@@ -572,7 +572,10 @@ TrelloPowerUp.initialize({
     );
   },
   'card-detail-badges': function(t, options) {
-    return getBadges(t);
+    return t.card('all')
+    .then(function (card) {
+       return getBadges(t, card, false);
+    });
   },
   'card-from-url': function(t, options) {
     // options.url has the url in question
