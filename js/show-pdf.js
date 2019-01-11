@@ -148,14 +148,14 @@ var workOrderPDF = function(estimate,newTab){
        window.open(doc.output('bloburl'),'_blank');
     }else{           
 //        var iframe = document.getElementById('iframe');
-        var pdfObject = document.getElementById('pdfObject');
+        //var pdfObject = document.getElementById('pdfObject');
 
-        pdfObject.hidden = true;
-        pdfObject.setAttribute('data', doc.output('datauri'));
-        pdfObject.hidden = false;
+        //pdfObject.hidden = true;
+        //pdfObject.setAttribute('data', doc.output('datauri'));
+        //pdfObject.hidden = false;
         //iframe.setAttribute('src',doc.output('datauri'));
-        //var iframe = document.getElementsByTagName('iframe');
-        //iframe[0].setAttribute('data', doc.output('datauri'));
+        var iframe = document.getElementsByTagName('iframe');
+        iframe[0].setAttribute('data', doc.output('datauri'));
     }
 };
 
