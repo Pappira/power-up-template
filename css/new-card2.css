@@ -181,8 +181,8 @@ h3{
 
 
 .card-content{
-  color: black;
-  margin-top: 0.4rem;
+  color: black!important;
+  margin-top: 0.4rem!important;
 }
 
 .card-reveal{
