@@ -69,7 +69,7 @@ var nextAfterAcceptedEstimateSelect = function(){
 var createHTMLCard = function(image,title,content,type,id,functionOnClick,blackText){
   var divCol = createElement('div','col m4','','');
   var divCard = createElement('div','card',type + '-' + id,'');
-  var divCardImage = createElement('div','card-content ' + blackText?'':'white-text','','');
+  var divCardImage = createElement('div','card-content ' + (blackText?'':'white-text'),'','');
   var span = createElement('span','card-title activator grey-text text-darken-4','',title);
   var p = createElement('p','','','','','','','','','','',content);
   divCardImage.appendChild(span);
