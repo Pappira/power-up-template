@@ -8,12 +8,12 @@ var getCardStatus = function(cardId) {
       url:
         bibliomanagerGateHost + "/trello/card/5c389be96404ec44a8367438/status",
       success: function(result) {
-        resolve(result);
+        return resolve(result);
       },
       error: function(result) {
         //handle the error
         console.log(result);
-        reject();
+        return reject();
       }
     });
     resolve({
