@@ -141,7 +141,9 @@ var workOrderPDF = function(estimate,newTab){
     writeTextInDoc(doc,"","Comentarios",firstColumn, heigth, normalBoxLength*2+separation,[0,0,0],[255,255,255]);
     doc.line(firstColumn, heigth+rowSize, firstColumn + normalBoxLength*6+separation*5, heigth+rowSize); 
     heigth += rowSize;
-    doc.text(firstColumn, heigth+rowSize + rowSize-1.5, estimate.comments.internalComments);
+    if(estimate.comments){
+        doc.text(firstColumn, heigth+rowSize + rowSize-1.5, estimate.comments.internalComments);
+    }
     if(newTab){
        window.open(doc.output('bloburl'),'_blank');
     }else{    
