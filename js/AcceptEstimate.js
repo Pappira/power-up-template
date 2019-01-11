@@ -41,9 +41,9 @@ var createScreen = function(type,titulo,estimate,nextFunction){
       + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?'<strong>Páginas: </strong>'  + item.quantityOfPages + '<br>':'')
       + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?'<strong>Vías: </strong>' + item.quantityOfVias + '<br>': '');
     }
-    text = priceText + "<h4>" + 'Precio: $ ' + price.price + ' + IVA' + '</h4>';
+    text = priceText + "<h6>" + 'Precio: $ ' + price.price + ' + IVA' + '</h6>';
 
-    var card = createHTMLCard(noImage,estimate.name,text,type,estimate.id,nextFunction);
+    var card = createHTMLCard(noImage,estimate.name,text,type,estimate.id,nextFunction,true);
     divRow.appendChild(card);
   }
   div.appendChild(divRow);
@@ -66,10 +66,10 @@ var nextAfterAcceptedEstimateSelect = function(){
   createWorkSelectPanel(possibleWorks);
 }
 
-var createHTMLCard = function(image,title,content,type,id,functionOnClick){
+var createHTMLCard = function(image,title,content,type,id,functionOnClick,blackText){
   var divCol = createElement('div','col m4','','');
   var divCard = createElement('div','card',type + '-' + id,'');
-  var divCardImage = createElement('div','card-content white-text','','');
+  var divCardImage = createElement('div','card-content ' + blackText?'':'white-text','','');
   var span = createElement('span','card-title activator grey-text text-darken-4','',title);
   var p = createElement('p','','','','','','','','','','',content);
   divCardImage.appendChild(span);
