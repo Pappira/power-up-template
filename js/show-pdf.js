@@ -150,10 +150,12 @@ var workOrderPDF = function(estimate,newTab){
 //        var iframe = document.getElementById('iframe');
         var pdfObject = document.getElementById('pdfObject');
 
-        pdfObject.hide();
+        pdfObject.hidden = true;
         pdfObject.setAttribute('data', doc.output('datauri'));
-        pdfObject.show();
+        pdfObject.hidden = false;
         //iframe.setAttribute('src',doc.output('datauri'));
+        //var iframe = document.getElementsByTagName('iframe');
+        //iframe[0].setAttribute('data', doc.output('datauri'));
     }
 };
 
