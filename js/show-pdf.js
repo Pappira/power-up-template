@@ -146,8 +146,9 @@ var workOrderPDF = function(estimate,newTab){
     }
     if(newTab){
        window.open(doc.output('bloburl'),'_blank');
-    }else{    
-      return doc.output('bloburl');
+    }else{           
+        var iframe = document.getElementById('iframe');
+        iframe.setAttribute('src',doc.output('bloburl'));
     }
 };
 
