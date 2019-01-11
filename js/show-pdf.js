@@ -44,16 +44,25 @@ var workOrderPDF = function(estimate,newTab){
 
     var selectedOption = estimate.selectedOption?estimate.selectedOption:0;
     var selectedEstimate = estimate.prices[selectedOption];
-    writeTextInDoc(doc,"Nombre / Empresa",estimate.customer.comenrcialName + " / " + estimate.customer.businessName ,firstColumn,heigth,normalBoxLength*4+separation*3);
-    writeTextInDoc(doc,"Cantidad",selectedEstimate.quantity + "",fifthColumn,heigth,normalBoxLength*2+separation);
+    writeTextInDoc(doc,"Nombre / Empresa",(estimate.customer?estimate.customer.comenrcialName:'') + " / " + (estimate.customer?estimate.customer.businessName:'') ,firstColumn,heigth,normalBoxLength*4+separation*3);
+    writeTextInDoc(doc,"Cantidad",selectedEstimate.quantity,fifthColumn,heigth,normalBoxLength*2+separation);
    
 
     for (var i = 0; i < estimate.items.length;i++){
         var item = estimate.items[i];
         var selectedItem = selectedEstimate.items[i];
-        var inksFront = item.inks.split("/")[0];
-        var inksBack= item.inks.split("/")[1];
-        var faces = inksBack>0?1:2;
+        var inksFront;
+        var inksBack;
+        var faces;
+        if(selectedItem.inks.indexOf("/")>0){
+            inksFront = selectedItem.inks.split("/")[0];
+            inksBack= selectedItem.inks.split("/")[1];
+            faces = inksBack>0?1:2;
+        }else{
+            inksFront = selectedItem.inks;
+            inksBack= selectedItem.faces?(selectedItem.faces=="Simple Faz"?0:selectedItem.inks):0;
+            faces = (selectedItem=="Simple Faz"?1:2);
+        }
         var coefficient = faces/selectedItem.quantityOfPages;
         var sheets = Math.ceil(selectedEstimate.quantity/selectedItem.quantityPerPaper)*coefficient;
       
