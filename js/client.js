@@ -463,17 +463,17 @@ var getAcceptEstimate = function(){
 
 // We need to call initialize to get all of our capability handles set up and registered with Trello
 TrelloPowerUp.initialize({
-  'card-back-section': function(t, options){
-    return {
-      title: 'My Card Back Section',
-			icon: GRAY_ICON, // Must be a gray icon, colored icons not allowed.
-			content: {
-				type: 'iframe',
-				url: t.signUrl('https://www.imprentadiagonal.com.uy'),
-				height: 500 // Max height is 500
-			}
-		};
-	},
+  // 'card-back-section': function(t, options){
+  //   return {
+  //     title: 'My Card Back Section',
+	// 		icon: GRAY_ICON, // Must be a gray icon, colored icons not allowed.
+	// 		content: {
+	// 			type: 'iframe',
+	// 			url: t.signUrl('https://www.imprentadiagonal.com.uy'),
+	// 			height: 500 // Max height is 500
+	// 		}
+	// 	};
+	// },
   // NOTE about asynchronous responses
   // If you need to make an asynchronous request or action before you can reply to Trello
   // you can return a Promise (bluebird promises are included at TrelloPowerUp.Promise)
