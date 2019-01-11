@@ -133,7 +133,7 @@ var createCard = function(estimate){
 var createTextForCard = function(estimate){
 	var text = '';
 	text += '#' + estimate['name'] + '\n';
-	text += '**Cantidad: **' + estimate['quantity'].join(' // ') + '\n';
+	text += '**Cantidad: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate['quantity'].join(' // ')) + '\n';
 	text += '**Tamaño cerrado: **' + estimate['clossedSize'] + '\n';
 	if (estimate['finishes'].length >0){
 		text += '###Terminaciones Generales' + '\n\n';
@@ -148,26 +148,30 @@ var createTextForCard = function(estimate){
 	if(estimate['items']){
 		for (var i = 0; i< estimate['items'].length;i++){
 			text += (estimate['items'].length>1?('##' + estimate['items'][i]['name'] + '\n'):'');
-			text += '**Tintas: **' + (estimate['items'][i]['inksQuantity']?estimate['items'][i]['inksQuantity'].join(' // ') + ' ':'')  + 
-					(estimate['items'][i]['inksDetails']?estimate['items'][i]['inksDetails']+' ':'') + 
+			text += '**Tintas: **' + (estimate['items'][i]['inksQuantity']?(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].inksQuantity+' ':estimate['items'][i]['inksQuantity'].join(' // ') + ' '):'')  + 
+					(estimate['items'][i]['inksDetails']?(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].inksDetails+' ':estimate['items'][i]['inksDetails']+' '):'') + 
 					(estimate['items'][i]['bleedPrint']?'(Impresión al Vivo)':'') +'\n';
 			
 			if (estimate['items'][i]['openedSize']){
 				if(estimate['items'][i]['openedSize'] !== estimate['clossedSize']){
-					text += '**Tamaño Abierto: **' + estimate['items'][i]['openedSize'].join(' // ')  +'\n';
+					text += '**Tamaño Abierto: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].openedSize:estimate['items'][i]['openedSize'].join(' // '))  +'\n';
 				}
 			}
 			if (estimate['items'][i]['faces']){
-				text += '**Faces: **' + estimate['items'][i]['faces'].join(' // ')  +'\n';
+				text += '**Faces: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].faces:estimate['items'][i]['faces'].join(' // '))  +'\n';
 			}
 			if (estimate['items'][i]['quantityOfPages'].length>1 || (estimate['items'][i]['quantityOfPages'].length==1 && estimate['items'][i]['quantityOfPages']!=1)){
-				text += '**Cantidad de páginas: **' + (estimate['items'][i]['quantityOfPages'].join(' // '))  +
+				text += '**Cantidad de páginas: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].quantityOfPages:estimate.items[i].quantityOfPages.join(' // '))  +
 					(estimate['items'][i]['allTheSame']?' (Todas iguales)':' (Todas diferentes)') +'\n';
 			}
 			if (estimate['items'][i]['materials']){	
 				var materiales = [];
-				for (var j = 0; j < estimate['items'][i]['materials'].length; j++){
-					materiales.push(estimate['items'][i]['materials'][j]['paper'] + ' ' + estimate['items'][i]['materials'][j]['gr'] + 'gr');
+				if (!estimate.SelectedOption){
+					for (var j = 0; j < estimate['items'][i]['materials'].length; j++){
+						materiales.push(estimate['items'][i]['materials'][j]['paper'] + ' ' + estimate['items'][i]['materials'][j]['gr'] + 'gr');
+					}
+				}else{
+					materiales.push(estimate.prices[estimate.SelectedOption].items[i].paper + ' ' + estimate.prices[estimate.SelectedOption].items[i].gr + 'gr');
 				}
 				if(materiales && materiales.length>0){
 					text += '**Materiales: **' + materiales.join(' // ') + '\n'; 
@@ -188,21 +192,25 @@ var createTextForCard = function(estimate){
 	if (estimate['comments']){
 		text += '**Comentario: **' + estimate['comments']['internalComments']+ '\n';
 	}
-	if(estimate['prices']){
-		text += '##Precios' + '\n';
-		for (var i = 0; i < estimate['prices'].length;i++){
-			var price = estimate['prices'][i];
-			var priceText = price.quantity + " " + estimate['name'] ;
-			for (var j = 0; j < price.items.length; j++){
-				var item =  price.items[j];
-				var originalItem = estimate['items'][item.id];
-				priceText += ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
-				+ (originalItem.inksQuantity.length>1?item.inksQuantity + ' tintas ':' ') + (originalItem.faces.length>1?item.faces+' ':'') 
-				+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
-				+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
-				+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
+	if(estimate.prices){
+		if (!estimate.SelectedOption){
+			text += '##Precios' + '\n';
+			for (var i = 0; i < estimate.prices.length;i++){
+				var price = estimate.prices[i];
+				var priceText = price.quantity + " " + estimate['name'] ;
+				for (var j = 0; j < price.items.length; j++){
+					var item =  price.items[j];
+					var originalItem = estimate.items[item.id];
+					priceText += ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
+					+ (originalItem.inksQuantity.length>1?item.inksQuantity + ' tintas ':' ') + (originalItem.faces.length>1?item.faces+' ':'') 
+					+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
+					+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
+					+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
+				}
+				text += (priceText.length>0?'**' + priceText + ': **$ ':'**Precio: **$ ') + price.price + ' + IVA' + '\n';
 			}
-			text += (priceText.length>0?'**' + priceText + ': **$ ':'**Precio: **$ ') + price.price + ' + IVA' + '\n';
+		}else{
+			text +='**Precio: **$ ' + estimate.prices[estimate.SelectedOption].price + ' + IVA' + '\n';
 		}
 	}
 
