@@ -157,7 +157,7 @@ var workOrderPDF = function(estimate,newTab){
         var iframe = document.getElementsByTagName('iframe');
         iframe[0].setAttribute('data', doc.output('datauri'));
     }*/
-    doc.save('hola.pdf');
+    doc.save('OrdenDeTrabajo.pdf');
     return true;
 };
 
