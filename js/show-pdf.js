@@ -187,3 +187,4 @@ var resetDocProperties = function (doc){
     doc.setTextColor(0,0,0);
 
 }
+
