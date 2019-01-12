@@ -517,9 +517,9 @@ TrelloPowerUp.initialize({
   'card-buttons': function(t, options) {
     return t.get('card', 'shared', cardInfoKey).then(
       function(estimate){
-        var a ={};
+        var acceptEstimte ={};
         if (estimate['prices']){
-          a = {
+          acceptEstimte = {
             // usually you will provide a callback function to be run on button click
             // we recommend that you use a popup on click generally
             icon: GRAY_ICON, // don't use a colored icon here
@@ -551,7 +551,7 @@ TrelloPowerUp.initialize({
           icon: GRAY_ICON, // don't use a colored icon here
           text: 'Ver O.T.2',
           callback: getWorkOrderPDFCallBack2
-        },a];
+        },acceptEstimte];
       }
     );
   },
