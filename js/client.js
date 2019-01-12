@@ -86,7 +86,7 @@ var randomBadgeColor = function() {
 
 var getBadges = function(t) {
   return t.card("all").then(function(card) {
-    Promise.all([getCardStatus(card.id)]).spread(function(cardStatus) {
+    return Promise.all([getCardStatus(card.id)]).spread(function(cardStatus) {
       console.log("We just loaded the card name for fun: " + card.name);
 
       return [
