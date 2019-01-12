@@ -158,7 +158,7 @@ var resetDocProperties = function (doc){
     doc.setTextColor(0,0,0);
 
 }
-
+/*
 var getWorkOrderPDFCallBack = function(t){
     var cardInfoKey = 'pappira.cardInfo';
     return t.get('card', 'shared', cardInfoKey)
@@ -174,8 +174,8 @@ var getWorkOrderPDFCallBack = function(t){
             actions: [],
         });
     });
-};
-
+};*/
+/*
 var getWorkOrderPDFCallBack2 = function(t){
     var cardInfoKey = 'pappira.cardInfo';
     return t.get('card', 'shared', cardInfoKey)
@@ -183,3 +183,4 @@ var getWorkOrderPDFCallBack2 = function(t){
         return workOrderPDF(cardInfo,true);
     });
 };
+*/
