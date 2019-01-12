@@ -493,6 +493,21 @@ TrelloPowerUp.initialize({
     // });
     return [{
       text: 'prueba',
+      icon: 'https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717',
+      color: 'yellow'
+      //icon: GRAY_ICON, // for card front badges only
+      //url: 'https://trello.com/home',
+      //target: 'Trello Landing Page' // optional target for above url
+    }];
+  },
+  'card-detail-badges': function(t, options) {
+    // return t.card('all')
+    // .then(function (card) {
+    //    return getBadges(t, card, false);
+    // });
+    return [{
+      text: 'prueba',
+      icon: 'https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717',
       color: 'yellow'
       //icon: GRAY_ICON, // for card front badges only
       //url: 'https://trello.com/home',
@@ -539,19 +554,6 @@ TrelloPowerUp.initialize({
         },a];
       }
     );
-  },
-  'card-detail-badges': function(t, options) {
-    // return t.card('all')
-    // .then(function (card) {
-    //    return getBadges(t, card, false);
-    // });
-    return [{
-      text: 'prueba',
-      color: 'yellow'
-      //icon: GRAY_ICON, // for card front badges only
-      //url: 'https://trello.com/home',
-      //target: 'Trello Landing Page' // optional target for above url
-    }];
   },
   'card-from-url': function(t, options) {
     // options.url has the url in question
