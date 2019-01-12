@@ -125,10 +125,10 @@ var workOrderPDF = function(estimate,newTab){
     doc.text(firstColumn, heigth+rowSize + rowSize-1.5, estimate.comments.internalComments);
     if(newTab){
        //window.Trello.addCard({url:doc.output('bloburl')});
-       window.open(doc.output('bloburl'),'_blank');
+    //   window.open(doc.output('bloburl'),'_blank');
     }else{    
-        var iframe = document.getElementById('iframe');
-        iframe.setAttribute('src',doc.output('bloburl'));
+    //  var iframe = document.getElementById('iframe');
+    // iframe.setAttribute('src',doc.output('bloburl'));
     }
 };
 
