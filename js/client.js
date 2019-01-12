@@ -493,8 +493,8 @@ TrelloPowerUp.initialize({
     // });
     return [{
       text: 'prueba',
-      icon: 'https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717',
-      color: 'yellow'
+      icon: 'https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717'
+      // color: 'yellow'
       //icon: GRAY_ICON, // for card front badges only
       //url: 'https://trello.com/home',
       //target: 'Trello Landing Page' // optional target for above url
@@ -507,8 +507,8 @@ TrelloPowerUp.initialize({
     // });
     return [{
       text: 'prueba',
-      icon: 'https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717',
-      color: 'yellow'
+      icon: 'https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717'
+      // color: 'yellow'
       //icon: GRAY_ICON, // for card front badges only
       //url: 'https://trello.com/home',
       //target: 'Trello Landing Page' // optional target for above url
