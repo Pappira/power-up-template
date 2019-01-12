@@ -539,7 +539,7 @@ TrelloPowerUp.initialize({
           icon: GRAY_ICON, // don't use a colored icon here
           text: 'Poner precios',
           callback: getAddPrices()
-        },{
+        },/*{
           // usually you will provide a callback function to be run on button click
           // we recommend that you use a popup on click generally
           icon: GRAY_ICON, // don't use a colored icon here
@@ -551,7 +551,7 @@ TrelloPowerUp.initialize({
           icon: GRAY_ICON, // don't use a colored icon here
           text: 'Ver O.T.2',
           callback: getWorkOrderPDFCallBack2
-        },acceptEstimte];
+        },*/acceptEstimte];
       }
     );
   },
