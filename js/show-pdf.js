@@ -158,6 +158,7 @@ var workOrderPDF = function(estimate,newTab){
         iframe[0].setAttribute('data', doc.output('datauri'));
     }*/
     doc.save('hola.pdf');
+    return true;
 };
 
 var writeTextInDoc = function(doc,name,value,x,y,boxLength,boxBackgroundColor,fontColor){
@@ -188,3 +189,10 @@ var resetDocProperties = function (doc){
 
 }
 
+var getWorkOrderPDFCallBack = function(t){
+    var cardInfoKey = 'pappira.cardInfo';
+    return t.get('card', 'shared', cardInfoKey)
+    .then(function(cardInfo){
+        return workOrderPDF(cardInfo);
+    });
+};
