@@ -413,7 +413,7 @@ TrelloPowerUp.initialize({
   // If you need to make an asynchronous request or action before you can reply to Trello
   // you can return a Promise (bluebird promises are included at TrelloPowerUp.Promise)
   // The Promise should resolve to the object type that is expected to be returned
-  'attachment-sections': function(t, options){
+  /*'attachment-sections': function(t, options){
     // options.entries is a list of the attachments for this card
     // you can look through them and 'claim' any that you want to
     // include in your section.
@@ -445,7 +445,7 @@ TrelloPowerUp.initialize({
     } else {
       return [];
     }
-  },
+  },*/
   'attachment-thumbnail': function(t, options){
     // options.url has the url of the attachment for us
     // return an object (or a Promise that resolves to it) with some or all of these properties:
@@ -486,7 +486,7 @@ TrelloPowerUp.initialize({
     );
     return buttons;
   },
-  'card-badges': function(t, options){
+  /*'card-badges': function(t, options){
     // return t.card('all')
     // .then(function (card) {
     //    return getBadges(t, card, false);
@@ -499,7 +499,7 @@ TrelloPowerUp.initialize({
       //url: 'https://trello.com/home',
       //target: 'Trello Landing Page' // optional target for above url
     }];
-  },
+  },*/
   'card-detail-badges': function(t, options) {
     // return t.card('all')
     // .then(function (card) {
