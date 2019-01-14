@@ -309,7 +309,7 @@ var getBadges = function(t, card, detailed){
     }
     if(bmgStatusEnabled || cardBmgStatus) {
       badges.push({
-        dynamic: getLadStatusBadge(card.id, t)
+        dynamic: function(){return getLadStatusBadge(card.id, t);}
       });
     }
     return badges;
