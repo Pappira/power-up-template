@@ -7,7 +7,7 @@ var getCardStatus = function(cardId) {
   );
 };
 
-var getLadStatusBadge = function(cardId) {
+var getLadStatusBadge = function(cardId, t) {
   return getCardStatus(cardId)
     .then(function(cardStatus) {
       t.set('card', 'shared', 'pappira.bmgStatus', cardStatus);
