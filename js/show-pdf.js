@@ -52,7 +52,7 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
 
 var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
     var items = estimate.items;
-    top = items.length>1?=increaseTop(top,rowSize,doc):top;
+    top = items.length>1?increaseTop(top,rowSize,doc):top;
     for (var i = 0; i < items.length; i++){
         item = items[i];
         if (items.length>1){
@@ -248,6 +248,32 @@ var generateEstimatePDF = function(estimate){
     doc.text("  •  Precios NO incluyen IVA.", leftMargin,top);
     top = increaseTop(top,rowSize,doc)
     doc.text("  •  Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", leftMargin,top);
+    top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
+
+    doc.setFontSize(16);  
+    doc.text("Formas de pago",leftMargin,top);
+    doc.setFontSize(fontSize);
+    top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
+    doc.text("  •  Por transferencia o Depósito:", leftMargin,top);
+    top = increaseTop(top,rowSize,doc)
+    doc.text("      »  BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",leftMargin,top);
+    top = increaseTop(top,rowSize,doc)
+    doc.text("  •  Abitab o RedPagos:",leftMargin,top);
+    top = increaseTop(top,rowSize,doc)
+    doc.text("      »  Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",leftMargin,top);
+    top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
+
+    doc.setFontSize(16);  
+    doc.text("Formas de pago",leftMargin,top);
+    doc.setFontSize(fontSize);
+    top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
+    doc.text("  •  Por transferencia o Depósito:", leftMargin,top);
+    top = increaseTop(top,rowSize,doc)
+    doc.text("      »  BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",leftMargin,top);
+    top = increaseTop(top,rowSize,doc)
+    doc.text("  •  Abitab o RedPagos:",leftMargin,top);
+    top = increaseTop(top,rowSize,doc)
+    doc.text("      »  Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",leftMargin,top);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
 
     doc.setFontSize(16);  
