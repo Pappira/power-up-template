@@ -116,7 +116,7 @@ var createWizardElement = function(step,combination,last,combinations){
       }else if (combination.name == 'materials'){
         value = combination.values[i].paper + ' ' + combination.values[i].gr + 'gr.';
       }else if (combination.name == 'inks'){
-            value = combination.value[i].inksQuantity + ' ' + combination.values[i].inksDetails; 
+            value = combination.values[i].inksQuantity + ' / ' + combination.values[i].inksDetails; 
       }
     }
     var card = createRevealCard(noImage,value,combination.itemId + '-' + combination.name,i);
@@ -352,8 +352,8 @@ var createEstimateAndTrelloCard = function(){
     if(work.items[i].materials.length>1){
         work.items[i].materials = cutArray(work.items[i].materials,selectedOptions[i].materials);
     }
-    if(work.items[i].inksQuantity.length>1){
-        work.items[i].inksQuantity = cutArray(work.items[i].inksQuantity,selectedOptions[i].inksQuantity);
+    if(work.items[i].inks.length>1){
+        work.items[i].inks = cutArray(work.items[i].inks,selectedOptions[i].inks);
     }
     if(work.items[i].faces.length>1){
         work.items[i].faces = cutArray(work.items[i].faces,selectedOptions[i].faces);
