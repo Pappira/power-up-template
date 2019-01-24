@@ -37,7 +37,7 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
     top+=rowSize*mediumSpaceFactor;
     writeTextNormalAndBold(fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,doc);
     top +=rowSize;
-    writeTextNormalAndBold(fontSize,fontType,"Tamaño cerrado: ", estimate.clossedSize.filter(Boolean).join(' // '), top,doc);
+    writeTextNormalAndBold(fontSize,fontType,"Tamaño cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,doc);
     top +=rowSize;
     return top;
 }
@@ -65,13 +65,13 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
         top +=rowSize;
         var inks = [];
         for (var j = 0 ; j < item.inks.length; j++){
-            inks.push(item.inks.inksDetails);
+            inks.push(item.inks[j].inksDetails);
         }
         if(item.faces.length==1){
-            writeTextNormalAndBold(fontSize,fontType,"Impresión: ", item.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // ') , top,doc);
+            writeTextNormalAndBold(fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // ') , top,doc);
             top +=rowSize;
         }else{
-            writeTextNormalAndBold(fontSize,fontType,"Impresión: ", item.filter(Boolean).join(' // '), top,doc);
+            writeTextNormalAndBold(fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // '), top,doc);
             top +=rowSize;
             writeTextNormalAndBold(fontSize,fontType,"Faces: ", item.faces.filter(Boolean).join(' // ') , top,doc);
             top +=rowSize;
@@ -85,6 +85,7 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
             top +=rowSize*tripleSpaceFactor;
         }
     }
+    return top;
 }
 
 var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
