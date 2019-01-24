@@ -370,3 +370,12 @@ var getWorkOrderPDFCallBack = function(t){
         return workOrderPDF(cardInfo);
     });
 };
+
+var getEstimateCallBack = function(t){
+    var cardInfoKey = 'pappira.cardInfo';
+    return t.get('card', 'shared', cardInfoKey)
+    .then(function(cardInfo){
+        return generateEstimatePDF(cardInfo);
+    });
+};
+
