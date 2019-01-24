@@ -19,7 +19,7 @@ var addGeneralAndCustomerInformationToPDFForCustromer = function(top,doc,estimat
     doc.text('Montevideo, ' + day.toLocaleDateString('es-UY', options),width-leftMargin,top,'right');
     top += rowSize*tripleSpaceFactor;
     doc.setFontType("bold");
-    var contactAndBusinessInfo = [estimate.customer.comenrcialName, estiamte.customer.businessName, estaimte.customer.contactName];
+    var contactAndBusinessInfo = estimate.customer?[estimate.customer.comenrcialName, estiamte.customer.businessName, estaimte.customer.contactName]:[];
     doc.text(contactAndBusinessInfo.filter(Boolean).join(' - '),leftMargin,top);
     doc.setFontType("normal");
     top+=rowSize;
@@ -177,6 +177,7 @@ var generateEstimatePDF = function(estimate){
     //addImage(imageData, format, x, y, width, height, alias, compression, rotation)
     doc.addImage(diagonalLogo, 'JPEG', leftMargin, top, 48, 13); 
     top += 16;
+    var width = doc.internal.pageSize.width;
     doc.line(leftMargin,top,width-leftMargin,top);
 
     top = marginTop;
