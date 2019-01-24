@@ -383,19 +383,19 @@ var createEstimateAndTrelloCard = function(){
     for (var j = 0; j < currentCombination.items.length; j++){
       var currentItem = currentCombination.items[j];
       var pages = currentItem.pages;
-      var quantityOfInks = currentItem.quantityOfInks;
+      var inksQuantity = currentItem.inksQuantity;
+      var inksDetails = currentItem.inksDetails;
       var openedSize = currentItem.openedSize;
       var faces = currentItem.faces;
       var paper = currentItem.paper;
       var gr = currentItem.gr;
       var vias = currentItem.quantityOfVias;
       currentPossiblePrices = currentPossiblePrices.filter(function(v, i) {
-        return (v.items[j].quantityOfPages == pages && v.items[j].inksQuantity == quantityOfInks && 
-          v.items[j].openedSize == openedSize && v.items[j].faces ==  faces && 
-          v.items[j].materials.paper == paper && v.items[j].materials.gr == gr &&
-          v.items[j].quantityOfVias == vias);
+        return (v.items[j].quantityOfPages == pages && v.items[j].inks.inksQuantity == inksQuantity && 
+          v.items[j].inks.inksDetails == inksDetails && v.items[j].openedSize == openedSize && 
+          v.items[j].faces ==  faces && v.items[j].materials.paper == paper && 
+          v.items[j].materials.gr == gr && v.items[j].quantityOfVias == vias);
       })
-      var a = 123;
     }
     work.prices.push(currentPossiblePrices[0]);
   }
@@ -435,8 +435,8 @@ var getCombinations = function(estimate){
       for (var j = 0; j  < item.quantityOfPages.length;j++){
           quantityOfPages.push('"item":{"id":'+i+ ', "name": "'+ item.name +  '", "pages": ' + item.quantityOfPages[j] + ',');
       }
-      for (var j = 0; j  < item.inksQuantity.length;j++){
-          quantityOfInks.push('"quantityOfInks":'+ item.inksQuantity[j] + ',');
+      for (var j = 0; j  < item.inks.length;j++){
+          quantityOfInks.push('"inksQuantity":'+ item.inks[j].inksQuantity + ',' + '"inksDetails":'+ item.inks[j].inksDetails);
       }
       for (var j = 0; j  < item.faces.length;j++){
           faces.push('"faces": "'+ item.faces[j] + '",');
