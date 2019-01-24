@@ -46,7 +46,7 @@ var works = [
               'inksQuantity':1,
             }
           ],
-          'openedSize':['90x54','90x50'],
+          'openedSize':['90x54mm','90x50mm'],
           'allTheSame':false,
           'quantityOfPages':[1,2,3],
           'quantityOfVias':[1],
