@@ -91,8 +91,7 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
 var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
     if(estimate.prices){
 		if (!estimate.SelectedOption){
-            var key = ['openedSize','quantityOfPages','quantityOfVias','faces','materials','inks'];
-            estaimte.prices.sort(compareValues(key));
+            estimate.prices.sort(compareValues());
             doc.setFontSize(16);  
             doc.text("Precios",leftMargin,top);
             doc.setFontSize(fontSize); 
@@ -131,12 +130,13 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
 function compareValues(key, order='asc') {
     return function(a, b) {
         let comparison = 0;
-        if(a.items.length==b.item.length){
+        key = ['openedSize','quantityOfPages','quantityOfVias','faces','materials','inks'];
+        if(a.items.length==b.items.length){
             for (var j = 0; j < a.items.length;j++){
-                var item1 = a.item[j];
-                var item2 = b.item[j];
-                for (var i = 0; i < key.length;i++){
-                    var currentKey = key[i];
+                var item1 = a.items[j];
+                var item2 = b.items[j];
+                for (var key in item1){
+                    var currentKey = key;
                     const varA = (typeof item1[currentKey] === 'string') ?item1[currentKey].toUpperCase() : item1[currentKey];
                     const varB = (typeof item2[currentKey] === 'string') ?item2[currentKey].toUpperCase() : item2[currentKey];
                     if(typeof varA !='object'){
