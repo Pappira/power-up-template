@@ -436,7 +436,7 @@ var getCombinations = function(estimate){
           quantityOfPages.push('"item":{"id":'+i+ ', "name": "'+ item.name +  '", "pages": ' + item.quantityOfPages[j] + ',');
       }
       for (var j = 0; j  < item.inks.length;j++){
-          quantityOfInks.push('"inksQuantity":'+ item.inks[j].inksQuantity + ',' + '"inksDetails":'+ item.inks[j].inksDetails);
+          quantityOfInks.push('"inksQuantity":'+ item.inks[j].inksQuantity + ',' + '"inksDetails": "'+ item.inks[j].inksDetails+ '",');
       }
       for (var j = 0; j  < item.faces.length;j++){
           faces.push('"faces": "'+ item.faces[j] + '",');
