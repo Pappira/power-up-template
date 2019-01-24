@@ -96,7 +96,7 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
             doc.setFontSize(16);  
             doc.text("Precios",leftMargin,top);
             doc.setFontSize(fontSize); 
-            top +=rowSize*mediumSpaceFactor;
+            top +=rowSize*dobleSpaceFactor;
             var lastPriceText = '';
 			for (var i = 0; i < estimate.prices.length;i++){
                 var price = estimate.prices[i];
@@ -111,11 +111,14 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
 					+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
                 }
                 if(lastPriceText !=priceText){
+                    if(lastPriceText){
+                        top += rowSize*mediumSpaceFactor;
+                    }
                     writeUnderlinedText(priceText,14,top,doc);
                     top += rowSize*mediumSpaceFactor;
                     lastPriceText = priceText;
                 }
-                writeTextNormalAndBold(12,fontType,'  •  Sub-Total(' + price.quantity + ' unidades): ', '$ ' + price.price + ' + IVA', top,doc);
+                writeTextNormalAndBold(fontSize,fontType,'  •  Sub-Total(' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,doc);
                 top +=rowSize*mediumSpaceFactor;
 			}
 		}else{
@@ -236,7 +239,7 @@ var writeUnderlinedText = function(text, fontSizeUnderlined, top, doc){
 
     doc.setFontSize(fontSizeUnderlined);
     doc.text(text,leftMargin,top);
-    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * fontSize / 3;
+    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * fontSizeUnderlined / 3;
     doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
     doc.setFontSize(fontSize);
 }
