@@ -213,7 +213,6 @@ var createTextForCard = function(estimate){
 			text +='**Precio: **$ ' + estimate.prices[estimate.SelectedOption].price + ' + IVA' + '\n';
 		}
 	}
-
 	if (estimate['customer']){
 		text += '##Cliente' + '\n';
 		text += estimate['customer']['comenrcialName']?'**Nombre Fantasía: **' + estimate['customer']['comenrcialName'] + '\n':'';

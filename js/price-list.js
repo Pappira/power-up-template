@@ -5,7 +5,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x54',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -30,7 +34,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+        {
+          'inksDetails':'Full color',
+          'inksQuantity':4,
+        },
         'openedSize':'90x50',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -55,7 +63,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x54',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -80,7 +92,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x50',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -105,7 +121,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x54',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -130,7 +150,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x50',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -155,7 +179,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x54',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -180,7 +208,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x50',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -205,7 +237,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x54',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -230,7 +266,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x50',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -255,7 +295,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x54',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -280,7 +324,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x50',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -305,7 +353,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x54',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -330,7 +382,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x50',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -355,7 +411,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x54',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -380,7 +440,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x50',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -405,7 +469,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x54',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -430,7 +498,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x50',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -455,7 +527,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x54',
         'quantityOfPages':1,
         'quantityOfVias':1,
@@ -480,7 +556,11 @@ var prices = [
       'items':[{
         'id':0,
         'bleedPrint':true,
-        'inksQuantity':4,
+        'inks':
+          {
+            'inksDetails':'Full color',
+            'inksQuantity':4,
+          },
         'openedSize':'90x50',
         'quantityOfPages':1,
         'quantityOfVias':1,

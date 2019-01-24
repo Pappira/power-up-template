@@ -24,8 +24,28 @@ var works = [
           'id':0,
           'name':'Tarjeta',
           'bleedPrint':true,
-          'inksDetails':'CMYK',
-          'inksQuantity':[1,2,3,4],
+          'inks':[
+            {
+              'inksDetails':'Full color',
+              'inksQuantity':4,
+            },
+            {
+              'inksDetails':'3 Tintas',
+              'inksQuantity':3,
+            },
+            {
+              'inksDetails':'2 Tintas',
+              'inksQuantity':2,
+            },
+            {
+              'inksDetails':'1 Tinta',
+              'inksQuantity':1,
+            },
+            {
+              'inksDetails':'1 Tinta negra',
+              'inksQuantity':1,
+            }
+          ],
           'openedSize':['90x54','90x50'],
           'allTheSame':false,
           'quantityOfPages':[1,2,3],
