@@ -101,16 +101,17 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
                 var price = estimate.prices[i];
                 if (quantity != price.quantity){
                     doc.setFontSize(14);  
-                    doc.text(price.quantity,leftMargin,top);
+                    doc.text(price.quantity+'',leftMargin,top);
                     doc.setFontSize(fontSize); 
                     top +=rowSize;
                     quantity = price.quantity;
                 }
+                var priceText = '';
 				for (var j = 0; j < price.items.length; j++){
 					var item =  price.items[j];
 					var originalItem = estimate.items[item.id];
 					priceText += ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
-					+ (originalItem.inksQuantity.length>1?item.inksQuantity + ' tintas ':' ') + (originalItem.faces.length>1?item.faces+' ':'') 
+					+ (originalItem.inks.length>1?item.inks.inksQuantity + ' tintas ' + item.inks.inksDetails + ' ':' ') + (originalItem.faces.length>1?item.faces+' ':'') 
 					+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
 					+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
 					+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
@@ -135,7 +136,7 @@ function compareValues(key, order='asc') {
             for (var j = 0; j < a.items.length;j++){
                 var item1 = a.items[j];
                 var item2 = b.items[j];
-                for (var key in item1){
+                for (var i = 0; i < key.length;i++){
                     var currentKey = key;
                     const varA = (typeof item1[currentKey] === 'string') ?item1[currentKey].toUpperCase() : item1[currentKey];
                     const varB = (typeof item2[currentKey] === 'string') ?item2[currentKey].toUpperCase() : item2[currentKey];
@@ -190,31 +191,31 @@ var generateEstimatePDF = function(estimate){
     
 
     doc.setFontSize(16);  
-    doc.text("Condiciones generales",top);
+    doc.text("Condiciones generales",leftMargin,top);
     doc.setFontSize(fontSize);
     top+=rowSize*mediumSpaceFactor;
-    doc.text("  •  Mantenimiento de oferta 20 días.", top);
+    doc.text("  •  Mantenimiento de oferta 20 días.", leftMargin,top);
     top +=rowSize;
-    doc.text("  •  Forma de pago seña 50% al confirmar el trabajo y restante contado contra entrega.",top);
+    doc.text("  •  Forma de pago seña 50% al confirmar el trabajo y restante contado contra entrega.",leftMargin,top);
     top +=rowSize;
-    doc.text("  •  Precio unitario basado en unidades descritas o más.",top);
+    doc.text("  •  Precio unitario basado en unidades descritas o más.",leftMargin,top);
     top +=rowSize;
-    doc.text("  •  El precio no incluye el costo de diseño o gráficos de banco de imágenes.",top);
+    doc.text("  •  El precio no incluye el costo de diseño o gráficos de banco de imágenes.",leftMargin,top);
     top +=rowSize;
-    doc.text("  •  Precios NO incluyen IVA.", top);
+    doc.text("  •  Precios NO incluyen IVA.", leftMargin,top);
     top +=rowSize;
-    doc.text("  •  Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", top);
+    doc.text("  •  Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", leftMargin,top);
     top +=rowSize*dobleSpaceFactor;
 
     doc.setFontSize(16);  
-    doc.text("Formas de pago",top);
+    doc.text("Formas de pago",leftMargin,top);
     doc.setFontSize(fontSize);
     top+=rowSize*mediumSpaceFactor;
-    doc.text("  •  Por transferencia o Depósito:", top);
+    doc.text("  •  Por transferencia o Depósito:", leftMargin,top);
     top +=rowSize;
-    doc.text("      »  BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",top);
+    doc.text("      »  BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",leftMargin,top);
     top +=rowSize;
-    doc.text("  •  Abitab o RedPagos:",top);
+    doc.text("  •  Abitab o RedPagos:",leftMargin,top);
     top +=rowSize;
     doc.text("      »  Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",leftMargin,top);
     top +=rowSize*dobleSpaceFactor;
