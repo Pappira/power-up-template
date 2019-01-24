@@ -78,13 +78,14 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
         }
         if (item.quantityOfPages > 1){
             writeTextNormalAndBold(fontSize,fontType,"Páginas: ", item.quantityOfPages.filter(Boolean).join(' // '), top,doc);
-            top +=rowSize*tripleSpaceFactor;
+            top +=rowSize;
         }
         if (item.quantityOfVias > 1){
             writeTextNormalAndBold(fontSize,fontType,"Vías: ", item.quantityOfVias.filter(Boolean).join(' // '), top,doc);
-            top +=rowSize*tripleSpaceFactor;
+            top +=rowSize;
         }
     }
+    top +=rowSize*tripleSpaceFactor;
     return top;
 }
 
@@ -96,16 +97,9 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
             doc.text("Precios",leftMargin,top);
             doc.setFontSize(fontSize); 
             top +=rowSize*mediumSpaceFactor;
-            var quantity;
+            var lastPriceText = '';
 			for (var i = 0; i < estimate.prices.length;i++){
                 var price = estimate.prices[i];
-                if (quantity != price.quantity){
-                    doc.setFontSize(14);  
-                    doc.text(price.quantity+'',leftMargin,top);
-                    doc.setFontSize(fontSize); 
-                    top +=rowSize;
-                    quantity = price.quantity;
-                }
                 var priceText = '';
 				for (var j = 0; j < price.items.length; j++){
 					var item =  price.items[j];
@@ -116,7 +110,11 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
 					+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
 					+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
                 }
-                writeTextNormalAndBold(fontSize,fontType,priceText + ': $ ', price.price + ' + IVA', top,doc);
+                if(lastPriceText !=priceText){
+                    writeUnderlinedText(priceText,14,top,doc);
+                    top += rowSize*mediumSpaceFactor;
+                }
+                writeTextNormalAndBold(12,fontType,'Sub-Total(' + price.quantity + ' unidades): ', '$ ' + price.price + ' + IVA', top,doc);
                 top +=rowSize*mediumSpaceFactor;
 			}
 		}else{
@@ -227,10 +225,19 @@ var writeTextNormalAndBold = function(fontSize, fontType, textNormal, textBold, 
 
     doc.text(textNormal,leftMargin,top);
     doc.setFontType("bold");
-    var actualTextWidth = doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / 3;
-    doc.text(textBold,leftMargin + actualTextWidth,top);
+    var currentTextWidth = doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / 3;
+    doc.text(textBold,leftMargin + currentTextWidth,top);
     doc.setFontType("normal");
 
+}
+
+var writeUnderlinedText = function(text, fontSizeUnderlined, top, doc){
+
+    doc.setFontSize(fontSizeUnderlined);
+    doc.text(text,leftMargin,top);
+    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * fontSizeUnderlined / 3;
+    doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
+    doc.setFontSize(fontSize);
 }
 
 var workOrderPDF = function(estimate){
