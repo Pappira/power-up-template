@@ -37,7 +37,7 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
     top+=rowSize*mediumSpaceFactor;
     writeTextNormalAndBold(fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,doc);
     top +=rowSize;
-    writeTextNormalAndBold(fontSize,fontType,"Tamaño cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,doc);
+    writeTextNormalAndBold(fontSize,fontType,"Tamaño Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,doc);
     top +=rowSize;
     return top;
 }
@@ -112,21 +112,22 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
                 }
                 if(lastPriceText !=priceText){
                     if(lastPriceText){
-                        top += rowSize*mediumSpaceFactor;
+                        top += rowSize*dobleSpaceFactor;
                     }
                     writeUnderlinedText(priceText,14,top,doc);
                     top += rowSize*mediumSpaceFactor;
                     lastPriceText = priceText;
+                }else{
+                    top +=rowSize*mediumSpaceFactor;
                 }
                 writeTextNormalAndBold(fontSize,fontType,'  •  Sub-Total(' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,doc);
-                top +=rowSize*mediumSpaceFactor;
 			}
 		}else{
             writeTextNormalAndBold(fontSize,fontType,'Precio: $ ', estimate.prices[estimate.SelectedOption].price + ' + IVA' , top,doc);
             top +=rowSize*mediumSpaceFactor;
 		}
     }
-    top +=rowSize*dobleSpaceFactor;
+    top +=rowSize*dobleSpaceFactor+rowSize*dobleSpaceFactor;
     return top;
 }
 
