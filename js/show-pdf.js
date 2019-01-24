@@ -7,6 +7,7 @@ var heigthSeparation = 11;
 var diagonalLogo = 'data:image/jpeg;base64,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';
 
 var marginTop = 29;
+var marginBottom = 29;
 var rowSize = 5;
 var mediumSpaceFactor = 1.3;
 var dobleSpaceFactor = 1.6;
@@ -17,16 +18,16 @@ var addGeneralAndCustomerInformationToPDFForCustromer = function(top,doc,estimat
     var day = new Date();
     var options = {year: 'numeric', month: 'long', day: 'numeric' };
     doc.text('Montevideo, ' + day.toLocaleDateString('es-UY', options),width-leftMargin,top,'right');
-    top += rowSize*tripleSpaceFactor;
+    top = increaseTop(top,rowSize*tripleSpaceFactor,doc)
     doc.setFontType("bold");
     var contactAndBusinessInfo = estimate.customer?[estimate.customer.comenrcialName, estiamte.customer.businessName, estaimte.customer.contactName]:[];
     doc.text(contactAndBusinessInfo.filter(Boolean).join(' - '),leftMargin,top);
     doc.setFontType("normal");
-    top+=rowSize;
+    top = increaseTop(top,rowSize,doc)
     doc.text("Presente",leftMargin,top);
-    top+=rowSize*dobleSpaceFactor;
+    top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
     doc.text("A continuación detallamos el presupuesto solicitado.",leftMargin,top);
-    top+=rowSize*tripleSpaceFactor*dobleSpaceFactor;
+    top = increaseTop(top,rowSize*tripleSpaceFactor*dobleSpaceFactor,doc)
     return top;
 }
 
@@ -34,9 +35,9 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
     doc.setFontSize(20);
     doc.text(estimate.name,leftMargin,top);
     doc.setFontSize(fontSize);
-    top+=rowSize*mediumSpaceFactor;
+    top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
     writeTextNormalAndBold(fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,doc);
-    top +=rowSize;
+    top =increaseTop(top,rowSize,doc);
     var openedSizeEqualsClossedSize = true;
     for (var i = 0; i < estimate.items.length; i++){
         if(estimate.clossedSize != estimate.items[i].openedSize){
@@ -45,54 +46,54 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
         }
     }
     writeTextNormalAndBold(fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,doc);
-    top +=rowSize;
+    top =increaseTop(top,rowSize,doc);
     return top;
 }
 
 var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
     var items = estimate.items;
-    top += items.length>1?rowSize:0;
+    top = items.length>1?=increaseTop(top,rowSize,doc):top;
     for (var i = 0; i < items.length; i++){
         item = items[i];
         if (items.length>1){
             doc.setFontSize(16);  
             doc.text(item.name,leftMargin,top);
             doc.setFontSize(fontSize); 
-            top+=rowSize*mediumSpaceFactor;
+            top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
         }
-        if(item.openedSize != estimate.closedSize){
+        if(item.openedSize != estimate.clossedSize){
             writeTextNormalAndBold(fontSize,fontType,"Tamaño Abierto: ", item.openedSize.filter(Boolean).join(' // ') , top,doc);
-            top +=rowSize;            
+            top =increaseTop(top,rowSize,doc);            
         }
         var materials = [];
         for (var j = 0; j < item.materials.length; j++){
             materials.push(item.materials[j].paper + ' ' + item.materials[j].gr + 'gr'); 
         }
         writeTextNormalAndBold(fontSize,fontType,"Papel: ", materials.filter(Boolean).join(' // ') , top,doc);
-        top +=rowSize;
+        top = increaseTop(top,rowSize,doc)
         var inks = [];
         for (var j = 0 ; j < item.inks.length; j++){
             inks.push(item.inks[j].inksDetails);
         }
         if(item.faces.length==1){
             writeTextNormalAndBold(fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // ') , top,doc);
-            top +=rowSize;
+            top = increaseTop(top,rowSize,doc)
         }else{
             writeTextNormalAndBold(fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // '), top,doc);
-            top +=rowSize;
+            top = increaseTop(top,rowSize,doc)
             writeTextNormalAndBold(fontSize,fontType,"Faces: ", item.faces.filter(Boolean).join(' // ') , top,doc);
-            top +=rowSize;
+            top = increaseTop(top,rowSize,doc)
         }
         if (item.quantityOfPages > 1){
             writeTextNormalAndBold(fontSize,fontType,"Páginas: ", item.quantityOfPages.filter(Boolean).join(' // '), top,doc);
-            top +=rowSize;
+            top = increaseTop(top,rowSize,doc)
         }
         if (item.quantityOfVias > 1){
             writeTextNormalAndBold(fontSize,fontType,"Vías: ", item.quantityOfVias.filter(Boolean).join(' // '), top,doc);
-            top +=rowSize;
+            top = increaseTop(top,rowSize,doc)
         }
     }
-    top +=rowSize*tripleSpaceFactor;
+    top = increaseTop(top,rowSize*tripleSpaceFactor,doc)
     return top;
 }
 
@@ -103,7 +104,7 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
             doc.setFontSize(16);  
             doc.text("Precios",leftMargin,top);
             doc.setFontSize(fontSize); 
-            top +=rowSize*dobleSpaceFactor;
+            top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
             var lastPriceText = '';
 			for (var i = 0; i < estimate.prices.length;i++){
                 var price = estimate.prices[i];
@@ -119,22 +120,22 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
                 }
                 if(lastPriceText !=priceText){
                     if(lastPriceText){
-                        top += rowSize*dobleSpaceFactor;
+                        top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
                     }
                     writeUnderlinedText(priceText,14,top,doc);
-                    top += rowSize*mediumSpaceFactor;
+                    top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
                     lastPriceText = priceText;
                 }else{
-                    top +=rowSize*mediumSpaceFactor;
+                    top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
                 }
                 writeTextNormalAndBold(fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,doc);
 			}
 		}else{
             writeTextNormalAndBold(fontSize,fontType,'Precio: $ ', estimate.prices[estimate.SelectedOption].price + ' + IVA' , top,doc);
-            top +=rowSize*mediumSpaceFactor;
+            top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
 		}
     }
-    top +=rowSize*dobleSpaceFactor+rowSize*dobleSpaceFactor;
+    top = increaseTop(top,rowSize*dobleSpaceFactor+rowSize*dobleSpaceFactor,doc)
     return top;
 }
 
@@ -178,19 +179,51 @@ function compareValues(key, order='asc') {
        return ((order == 'desc') ? (comparison * -1) : comparison);
     }
 }
+
+var addHeaderToCurrentPage = function(doc){
+    doc.addImage(diagonalLogo, 'JPEG', leftMargin, rowSize, 48, 13); 
+    var width = doc.internal.pageSize.width;
+    doc.line(leftMargin,top,width-leftMargin,top);
+}
+
+var addFooterToCurrentPage = function(doc){
+    var height = doc.internal.pageSize.heigth;
+    var width = doc.internal.pageSize.width;
+    var currentTop = height-marginBottom+5;
+    doc.line(leftMargin,currentTop ,width-leftMargin,top);
+    currentTop += rowSize*mediumSpaceFactor;
+    doc.text("Texto de prueba para pie de página",leftMargin,currentTop);
+    currentTop += rowSize;
+    doc.text("Segundo texto de prueba para pie de página",leftMargin,currentTop);
+    currentTop += rowSize;
+    doc.text("Tercer texto de prueba para pie de página",leftMargin,currentTop);
+
+}
+
+var increaseTop = function(top,add,doc){
+    if (top+add > doc.internal.pageSize.heigth - marginBottom){
+        addHeaderToCurrentPage(doc);
+        addFooterToCurrentPage(doc);
+        top = marginTop;
+        doc.addPage();
+    }else{
+        top +=add;
+    }
+    return top;
+}
   
 var generateEstimatePDF = function(estimate){
     var doc = new jsPDF();
-    
-    var height = doc.internal.pageSize.height;
-    var top = rowSize;
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
+    //var height = doc.internal.pageSize.height;
+    //var top = rowSize;
+
     //addImage(imageData, format, x, y, width, height, alias, compression, rotation)
-    doc.addImage(diagonalLogo, 'JPEG', leftMargin, top, 48, 13); 
-    top += 16;
-    var width = doc.internal.pageSize.width;
-    doc.line(leftMargin,top,width-leftMargin,top);
+    //doc.addImage(diagonalLogo, 'JPEG', leftMargin, top, 48, 13); 
+    //top += 16;
+    //var width = doc.internal.pageSize.width;
+    //doc.line(leftMargin,top,width-leftMargin,top);
 
     top = marginTop;
     top = addGeneralAndCustomerInformationToPDFForCustromer(top,doc,estimate);
@@ -203,32 +236,35 @@ var generateEstimatePDF = function(estimate){
     doc.setFontSize(16);  
     doc.text("Condiciones generales",leftMargin,top);
     doc.setFontSize(fontSize);
-    top+=rowSize*mediumSpaceFactor;
+    top =increaseTop(top,rowSize*mediumSpaceFactor,doc); 
     doc.text("  •  Mantenimiento de oferta 20 días.", leftMargin,top);
-    top +=rowSize;
+    top = increaseTop(top,rowSize,doc)
     doc.text("  •  Forma de pago seña 50% al confirmar el trabajo y restante contado contra entrega.",leftMargin,top);
-    top +=rowSize;
+    top = increaseTop(top,rowSize,doc)
     doc.text("  •  Precio unitario basado en unidades descritas o más.",leftMargin,top);
-    top +=rowSize;
+    top = increaseTop(top,rowSize,doc)
     doc.text("  •  El precio no incluye el costo de diseño o gráficos de banco de imágenes.",leftMargin,top);
-    top +=rowSize;
+    top = increaseTop(top,rowSize,doc)
     doc.text("  •  Precios NO incluyen IVA.", leftMargin,top);
-    top +=rowSize;
+    top = increaseTop(top,rowSize,doc)
     doc.text("  •  Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", leftMargin,top);
-    top +=rowSize*dobleSpaceFactor;
+    top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
 
     doc.setFontSize(16);  
     doc.text("Formas de pago",leftMargin,top);
     doc.setFontSize(fontSize);
-    top+=rowSize*mediumSpaceFactor;
+    top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
     doc.text("  •  Por transferencia o Depósito:", leftMargin,top);
-    top +=rowSize;
+    top = increaseTop(top,rowSize,doc)
     doc.text("      »  BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",leftMargin,top);
-    top +=rowSize;
+    top = increaseTop(top,rowSize,doc)
     doc.text("  •  Abitab o RedPagos:",leftMargin,top);
-    top +=rowSize;
+    top = increaseTop(top,rowSize,doc)
     doc.text("      »  Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",leftMargin,top);
-    top +=rowSize*dobleSpaceFactor;
+    top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
+   
+    addHeaderToCurrentPage(doc);
+    addFooterToCurrentPage(doc);
     doc.save('OrdenDeTrabajo.pdf');
 }
 
