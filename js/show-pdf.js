@@ -105,7 +105,7 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
 					var item =  price.items[j];
 					var originalItem = estimate.items[item.id];
 					priceText += ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
-					+ (originalItem.inks.length>1?item.inks.inksQuantity + ' tintas ' + item.inks.inksDetails + ' ':' ') + (originalItem.faces.length>1?item.faces+' ':'') 
+					+ (originalItem.inks.length>1?item.inks.inksQuantity + ' tintas ' + item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
 					+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
 					+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
 					+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
@@ -113,8 +113,9 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
                 if(lastPriceText !=priceText){
                     writeUnderlinedText(priceText,14,top,doc);
                     top += rowSize*mediumSpaceFactor;
+                    lastPriceText = priceText;
                 }
-                writeTextNormalAndBold(12,fontType,'Sub-Total(' + price.quantity + ' unidades): ', '$ ' + price.price + ' + IVA', top,doc);
+                writeTextNormalAndBold(12,fontType,'  •  Sub-Total(' + price.quantity + ' unidades): ', '$ ' + price.price + ' + IVA', top,doc);
                 top +=rowSize*mediumSpaceFactor;
 			}
 		}else{
@@ -235,7 +236,7 @@ var writeUnderlinedText = function(text, fontSizeUnderlined, top, doc){
 
     doc.setFontSize(fontSizeUnderlined);
     doc.text(text,leftMargin,top);
-    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * fontSizeUnderlined / 3;
+    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * fontSize / 3;
     doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
     doc.setFontSize(fontSize);
 }
