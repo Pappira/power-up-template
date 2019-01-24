@@ -115,6 +115,8 @@ var createWizardElement = function(step,combination,last,combinations){
         value = combination.values[i].finish;
       }else if (combination.name == 'materials'){
         value = combination.values[i].paper + ' ' + combination.values[i].gr + 'gr.';
+      }else if (combination.name == 'inks'){
+            value = combination.value[i].inksQuantity + ' ' + combination.values[i].inksDetails; 
       }
     }
     var card = createRevealCard(noImage,value,combination.itemId + '-' + combination.name,i);
