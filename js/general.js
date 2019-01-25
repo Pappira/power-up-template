@@ -194,10 +194,30 @@ var createTextForCard = function(estimate){
 	}
 	if(estimate.prices){
 		if (!estimate.SelectedOption){
-			text += '##Precios' + '\n';
+			estimate.prices.sort(compareValues());
+            text += '##Precios' + '\n';
+            var lastPriceText = '';
 			for (var i = 0; i < estimate.prices.length;i++){
-				var price = estimate.prices[i];
-				var priceText = price.quantity + " " + estimate['name'] ;
+                var price = estimate.prices[i];
+                var priceText = '';
+				for (var j = 0; j < price.items.length; j++){
+					var item =  price.items[j];
+					var originalItem = estimate.items[item.id];
+					priceText += ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
+					+ (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
+					+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
+					+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
+					+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
+                }
+                if(lastPriceText !=priceText){
+                    text += '####' + priceText + '\n';
+                    lastPriceText = priceText;
+				}
+				text += '  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA' + '\n';
+			}
+
+			
+			/*
 				for (var j = 0; j < price.items.length; j++){
 					var item =  price.items[j];
 					var originalItem = estimate.items[item.id];
@@ -208,7 +228,7 @@ var createTextForCard = function(estimate){
 					+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
 				}
 				text += (priceText.length>0?'**' + priceText + ': **$ ':'**Precio: **$ ') + price.price + ' + IVA' + '\n';
-			}
+			}*/
 		}else{
 			text +='**Precio: **$ ' + estimate.prices[estimate.SelectedOption].price + ' + IVA' + '\n';
 		}
@@ -230,4 +250,46 @@ var createTextForCard = function(estimate){
 
 var createTrelloCardName = function(estimate){
 	return estimate.quantity + "x" + estimate.workType + " - " + (estimate.customer?estimate.customer.comercialName:'');
+}
+
+
+function compareValues(key, order='asc') {
+    return function(a, b) {
+        let comparison = 0;
+        key = ['openedSize','quantityOfPages','quantityOfVias','faces','materials','inks'];
+        if(a.items.length==b.items.length){
+            for (var j = 0; j < a.items.length;j++){
+                var item1 = a.items[j];
+                var item2 = b.items[j];
+                for (var i = 0; i < key.length;i++){
+                    var currentKey = key;
+                    const varA = (typeof item1[currentKey] === 'string') ?item1[currentKey].toUpperCase() : item1[currentKey];
+                    const varB = (typeof item2[currentKey] === 'string') ?item2[currentKey].toUpperCase() : item2[currentKey];
+                    if(typeof varA !='object'){
+                        if (varA > varB) {
+                            return ((order == 'desc') ? -1:1);
+                        } else if (varA < varB) {
+                            return ((order == 'desc') ? 1:-1);
+                            
+                        }
+                    }else{
+                        for (var key in varA) {
+                            var varAA = (typeof varA[key] === 'string') ? varA[key].toUpperCase() :  varA[key];
+                            var varBA = (typeof varB[key] === 'string') ? varB[key].toUpperCase() :  varB[key];
+                            if (varAA > varBA) {
+                                return ((order == 'desc') ? -1:1);
+                            } else if (varAA < varBA) {
+                                return ((order == 'desc') ? 1:-1);
+                                
+                            }
+                        }
+                    }
+               }      
+
+            }
+        }else{
+            return a.items.length - b.items.length;
+        }
+       return ((order == 'desc') ? (comparison * -1) : comparison);
+    }
 }

@@ -139,47 +139,6 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
     return top;
 }
 
-function compareValues(key, order='asc') {
-    return function(a, b) {
-        let comparison = 0;
-        key = ['openedSize','quantityOfPages','quantityOfVias','faces','materials','inks'];
-        if(a.items.length==b.items.length){
-            for (var j = 0; j < a.items.length;j++){
-                var item1 = a.items[j];
-                var item2 = b.items[j];
-                for (var i = 0; i < key.length;i++){
-                    var currentKey = key;
-                    const varA = (typeof item1[currentKey] === 'string') ?item1[currentKey].toUpperCase() : item1[currentKey];
-                    const varB = (typeof item2[currentKey] === 'string') ?item2[currentKey].toUpperCase() : item2[currentKey];
-                    if(typeof varA !='object'){
-                        if (varA > varB) {
-                            return ((order == 'desc') ? -1:1);
-                        } else if (varA < varB) {
-                            return ((order == 'desc') ? 1:-1);
-                            
-                        }
-                    }else{
-                        for (var key in varA) {
-                            var varAA = (typeof varA[key] === 'string') ? varA[key].toUpperCase() :  varA[key];
-                            var varBA = (typeof varB[key] === 'string') ? varB[key].toUpperCase() :  varB[key];
-                            if (varAA > varBA) {
-                                return ((order == 'desc') ? -1:1);
-                            } else if (varAA < varBA) {
-                                return ((order == 'desc') ? 1:-1);
-                                
-                            }
-                        }
-                    }
-               }      
-
-            }
-        }else{
-            return a.items.length - b.items.length;
-        }
-       return ((order == 'desc') ? (comparison * -1) : comparison);
-    }
-}
-
 var addHeaderToCurrentPage = function(doc){
     doc.addImage(diagonalLogo, 'JPEG', leftMargin, rowSize, 48, 13); 
     var width = doc.internal.pageSize.width;
@@ -216,18 +175,8 @@ var generateEstimatePDF = function(estimate){
     var doc = new jsPDF();
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
-    //var height = doc.internal.pageSize.height;
-    //var top = rowSize;
-
-    //addImage(imageData, format, x, y, width, height, alias, compression, rotation)
-    //doc.addImage(diagonalLogo, 'JPEG', leftMargin, top, 48, 13); 
-    //top += 16;
-    //var width = doc.internal.pageSize.width;
-    //doc.line(leftMargin,top,width-leftMargin,top);
-
     var top = marginTop;
     top = addGeneralAndCustomerInformationToPDFForCustromer(top,doc,estimate);
-    //top = addGeneralInformationToPDFForCustromer(top,doc,estimate);
     top = addEstimateGeneralInformationToPDFForCustomer(top,doc,estimate);
     top = addEstimateItemInformationToPDFForCustomer(top,doc,estimate);
     top = addPriceInformationToPDFForCustomer(top,doc,estimate);
