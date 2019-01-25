@@ -183,14 +183,14 @@ function compareValues(key, order='asc') {
 var addHeaderToCurrentPage = function(doc){
     doc.addImage(diagonalLogo, 'JPEG', leftMargin, rowSize, 48, 13); 
     var width = doc.internal.pageSize.width;
-    doc.line(leftMargin,top,width-leftMargin,top);
+    doc.line(leftMargin,rowSize+13+5,width-leftMargin,rowSize+13+5);
 }
 
 var addFooterToCurrentPage = function(doc){
     var height = doc.internal.pageSize.height;
     var width = doc.internal.pageSize.width;
     var currentTop = height-marginBottom+5;
-    doc.line(leftMargin,currentTop ,width-leftMargin,top);
+    doc.line(leftMargin,currentTop ,width-leftMargin,currentTop);
     currentTop += rowSize*mediumSpaceFactor;
     doc.text("Texto de prueba para pie de página",leftMargin,currentTop);
     currentTop += rowSize;
