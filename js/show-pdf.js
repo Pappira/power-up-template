@@ -225,7 +225,7 @@ var generateEstimatePDF = function(estimate){
     //var width = doc.internal.pageSize.width;
     //doc.line(leftMargin,top,width-leftMargin,top);
 
-    top = marginTop;
+    var top = marginTop;
     top = addGeneralAndCustomerInformationToPDFForCustromer(top,doc,estimate);
     //top = addGeneralInformationToPDFForCustromer(top,doc,estimate);
     top = addEstimateGeneralInformationToPDFForCustomer(top,doc,estimate);
