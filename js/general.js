@@ -213,7 +213,7 @@ var createTextForCard = function(estimate){
                     text += '####' + priceText + '\n';
                     lastPriceText = priceText;
 				}
-				text += '  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA' + '\n';
+				text += '  •  Sub-Total (' + price.quantity + ' unidades): ** $ ' + price.price + ' + IVA**' + '\n';
 			}
 
 			
