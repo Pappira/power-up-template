@@ -23,7 +23,7 @@ var works = [
         {
           'id':0,
           'name':'Tarjeta',
-          'bleedPrint':true,
+          'bleedPrint':true, 
           'inks':[
             {
               'inksDetails':'Full color',
