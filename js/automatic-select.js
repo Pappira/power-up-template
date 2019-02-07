@@ -134,6 +134,7 @@ var nextAfterWorkSelect = function(){
 }
 
 var createPossibilities = function(work){
+  var possibilities = [];
   for(var attr in work){
     if(typeof work[attr] == 'object'){
       if(work[attr].length > 1){
