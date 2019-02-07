@@ -256,8 +256,10 @@ var checkIncidences = function(){
   var item = work.items[itemId];
   if (general){
     item = work;
+  }  
+  if (currentElement.includes("//")){
+    var currentElement = item[currentElement.split(" // ")[0]][currentElementId][currentElement.split(" // ")[1]];
   }
-  var currentElement = item[currentElement][currentElementId];
   if(currentElement.incidences){
     for (var i = 0; i < currentElement.incidences.length;i++){
       var incidence = currentElement.incidences[i];
