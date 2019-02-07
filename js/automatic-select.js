@@ -90,6 +90,8 @@ var createWizardElement = function(step,combination,last,combinations){
     if (typeof combination.values[i] == 'object'){
       if(combination.name == 'optionalFinishes'){
         value = combination.values[i].finish;
+      }else if(combination.name == 'mandatoryFinishGroups'){
+        value = combination.values[i].finish;
       }else if (combination.name == 'materials'){
         value = combination.values[i].paper + ' ' + combination.values[i].gr + 'gr.';
       }else if (combination.name == 'inks'){
@@ -144,6 +146,15 @@ var createPossibilities = function(work){
           possibilities.push(possibility);
         }
       }
+    }else if(attr == "mandatoryFinishGroups"){
+      for (var i = 0; i < work[attr].length ; i++){
+          var possibility = {};
+          possibility['itemId'] = -1;
+          possibility['itemName'] = 'general';
+          possibility['name'] = attr + " - " + work[attr][i].groupName;
+          possibility['values'] = work[attr][i].finishes;
+          possibilities.push(possibility);
+      }
     }
   }
 
@@ -151,13 +162,24 @@ var createPossibilities = function(work){
   for (var i = 0; i < items.length;i++){
     var item = items[i];
     for(var itemAttr in item){
-      if(typeof item[itemAttr] == 'object' && item[itemAttr].length > 1){
-        var possibility = {};
-        possibility['itemId'] = i;
-        possibility['itemName'] = item.name;
-        possibility['name'] = itemAttr;
-        possibility['values'] = item[itemAttr];
-        possibilities.push(possibility);
+      if(typeof item[itemAttr] == 'object'){
+        if (item[itemAttr].length > 1){
+          var possibility = {};
+          possibility['itemId'] = i;
+          possibility['itemName'] = item.name;
+          possibility['name'] = itemAttr;
+          possibility['values'] = item[itemAttr];
+          possibilities.push(possibility);
+        }
+      }else if(itemAttr == "mandatoryFinishGroups"){
+        for (var j = 0; j < work[itemAttr].length ; j++){
+            var possibility = {};
+            possibility['itemId'] = i;
+            possibility['itemName'] =  item.name;
+            possibility['name'] = itemAttr + " - " + item[itemAttr][j].groupName;
+            possibility['values'] = item[itemAttr][j].finishes;
+            possibilities.push(possibility);
+        }
       }
     }
   }
