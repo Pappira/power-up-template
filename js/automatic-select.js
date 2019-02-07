@@ -152,7 +152,7 @@ var createPossibilities = function(work){
           var possibility = {};
           possibility['itemId'] = -1;
           possibility['itemName'] = 'general';
-          possibility['name'] = attr + " // " + work[attr][i].groupName;
+          possibility['name'] = attr + " // " + i;
           possibility['values'] = work[attr][i].finishes;
           possibilities.push(possibility);
       }
@@ -177,7 +177,7 @@ var createPossibilities = function(work){
             var possibility = {};
             possibility['itemId'] = i;
             possibility['itemName'] =  item.name;
-            possibility['name'] = itemAttr + " // " + item[itemAttr][j].groupName;
+            possibility['name'] = itemAttr + " // " + j;
             possibility['values'] = item[itemAttr][j].finishes;
             possibilities.push(possibility);
         }
