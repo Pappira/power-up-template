@@ -90,7 +90,8 @@ var createWizardElement = function(step,combination,last,combinations){
     if (typeof combination.values[i] == 'object'){
       if(combination.name == 'optionalFinishes'){
         value = combination.values[i].finish;
-      }else if(combination.name == 'mandatoryFinishGroups'){
+      }else if(combination.name.includes('mandatoryFinishGroups')){
+        
         value = combination.values[i].finish;
       }else if (combination.name == 'materials'){
         value = combination.values[i].paper + ' ' + combination.values[i].gr + 'gr.';
