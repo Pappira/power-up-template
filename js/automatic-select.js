@@ -1,4 +1,3 @@
-
 var t = TrelloPowerUp.iframe();
 var cardInfoKey = 'pappira.cardInfo';
 var listId = '5a9ef0ce024c776a21220836';
@@ -47,11 +46,9 @@ var nextAfterWorkTypeSelect = function(){
   var id = elementId.substring(elementId.indexOf('-')+1);
   selectedWorkTypeId = id;
   var possibleWorks = [];
-  //var possibleOptions = [];
   for (var i = 0; i < works.length;i++){
     if (works[i].workTypeId == id){
       possibleWorks.push(works[i]);
-    //  possibleOptions.push(works[i].workName);
     }
   }
   deleteWizard();
@@ -91,8 +88,8 @@ var createWizardElement = function(step,combination,last,combinations){
 
     var value = combination.values[i]+'';
     if (typeof combination.values[i] == 'object'){
-      if(combination.name == 'finishes'){
-        value = combination.values[i].finish;
+      if(combination.name == 'optionalFinishes'){
+        value = combination.values[i].optionalFinishes;
       }else if (combination.name == 'materials'){
         value = combination.values[i].paper + ' ' + combination.values[i].gr + 'gr.';
       }else if (combination.name == 'inks'){
