@@ -7,34 +7,14 @@ var selectedWorkTypeId;
 var selectedWorkId;
 var selectedOptions = {};
 
+var work;
+
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
-	  /*if(t.arg('update')){
-		saveFunction = updateCard;
-		addCardButton.firstChild.data = "Modificar";
-	  } else {
-		saveFunction = createCard;
-	  }*/
       createWorkTypeSelectPanel();
-	 // addCardButton.addEventListener('click', saveFunction);
-  
-	  /*if(cardInfo){
-		createGeneralInformation(cardInfo);
-		for (var i = 0; i <  cardInfo.items.length;i++){
-			createItem(cardInfo.items[i]);
-		}
-		createComments(cardInfo);
-		createCustomer(cardInfo);
-	  }else{
-		createGeneralInformation();
-		createItem();
-		createComments();
-		createCustomer();
-      }*/
-      
 	});
-  });
+});
 
 var createWorkTypeSelectPanel = function(){
   var wizardForm =  document.getElementById('wizardForm');
@@ -67,11 +47,11 @@ var nextAfterWorkTypeSelect = function(){
   var id = elementId.substring(elementId.indexOf('-')+1);
   selectedWorkTypeId = id;
   var possibleWorks = [];
-  var possibleOptions = [];
+  //var possibleOptions = [];
   for (var i = 0; i < works.length;i++){
     if (works[i].workTypeId == id){
       possibleWorks.push(works[i]);
-      possibleOptions.push(works[i].workName);
+    //  possibleOptions.push(works[i].workName);
     }
   }
   deleteWizard();
@@ -119,7 +99,7 @@ var createWizardElement = function(step,combination,last,combinations){
             value = combination.values[i].inksQuantity + ' / ' + combination.values[i].inksDetails; 
       }
     }
-    var card = createRevealCard(noImage,value,combination.itemId + '-' + combination.name,i);
+    var card = createRevealCard(noImage,value,combination.itemId + '-' + combination.name,i,checkIncidences);
     divRow.appendChild(card);
   }
  
@@ -146,8 +126,14 @@ var nextAfterWorkSelect = function(){
   var elementId = $(this).attr('id');
   var id = elementId.substring(elementId.indexOf('-')+1);
   selectedWorkId = id;
-  var work = works[id];
-  var possibilities = [];
+  work = works[id];
+  var possibilities = createPossibilities(work);
+
+  deleteWizard();
+  createWizard(possibilities);
+}
+
+var createPossibilities = function(work){
   for(var attr in work){
     if(typeof work[attr] == 'object'){
       if(work[attr].length > 1){
@@ -177,9 +163,7 @@ var nextAfterWorkSelect = function(){
       }
     }
   }
-
-  deleteWizard();
-  createWizard(possibilities);
+  return possibilities;
 }
 
 var selectOption = function(){ 
@@ -236,7 +220,11 @@ var navListItems = $('div.setup-panel div a'),
   $('div.setup-panel div a.btn-primary').trigger('click');
 };
 
-var createRevealCard = function(image,title,type,id){
+var checkIncidences = function(){
+  var a = 123;
+} 
+
+var createRevealCard = function(image,title,type,id,functionOnClick){
   var divCol = createElement('div','col m4','','');
   var divCard = createElement('div','card',type + '-' + id,'');
   var divCardImage = createElement('div','card-image waves-effect waves-block waves-light','','');
@@ -257,6 +245,10 @@ var createRevealCard = function(image,title,type,id){
   divCard.appendChild(divCardReveal);
 
   divCol.appendChild(divCard);
+
+  if (functionOnClick){
+    divCard.addEventListener('click',functionOnClick)
+  }
   return divCol;
 }
 

@@ -75,9 +75,9 @@ var works = [
       "id":1,
       "workTypeId":1,
       "workType":"Encuadernados",
-      "clossedSizes":["150x210mm"],
       "image":noImage,
       "name":"Cuaderno",
+      "clossedSizes":["150x210mm"],
       "quantities":[100,200,300,500,1000],
       "mandatoryFinishGroups":
       [
@@ -114,7 +114,7 @@ var works = [
           ]
         }
       ],
-
+      "optionalFinishes":[],
       "items":
       [
         {
