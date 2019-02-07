@@ -89,7 +89,7 @@ var createWizardElement = function(step,combination,last,combinations){
     var value = combination.values[i]+'';
     if (typeof combination.values[i] == 'object'){
       if(combination.name == 'optionalFinishes'){
-        value = combination.values[i].optionalFinishes;
+        value = combination.values[i].finish;
       }else if (combination.name == 'materials'){
         value = combination.values[i].paper + ' ' + combination.values[i].gr + 'gr.';
       }else if (combination.name == 'inks'){
