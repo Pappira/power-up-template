@@ -222,7 +222,44 @@ var navListItems = $('div.setup-panel div a'),
 };
 
 var checkIncidences = function(){
-  var a = 123;
+  var elementId = $(this).attr('id');
+  var general = false;
+  if (elementId.charAt(0) == "-"){
+    general = true;
+    elementId = elementId.substr(1);
+  }
+  var values = elementId.split("-");
+  var itemId = values[0];
+  var currentElement = values[1];
+  var currentElementId = values[2];
+
+  var item = work.items[itemId];
+  if (general){
+    item = work;
+  }
+  var currentElement = item[currentElement][currentElementId];
+  if(currentElement.incidences){
+    for (var i = 0; i < currentElement.incidences.length;i++){
+      var incidence = currentElement.incidences[i];
+      if (incidence.itemId==-1){
+        if (incidence.action == 'add'){
+          for (var j = 0; j < incidence.values.length;j++){
+            work[incidence.type].push(incidence.values[j]);
+          }
+        }else if(incidence.action == 'replace'){
+          work[incidence.type] = incidence.values;
+        }
+      }else{
+        if (incidence.action == 'add'){
+          for (var j = 0; j < incidence.values.length;j++){
+            work.items[incidence.itemId][incidence.type].push(incidence.values[j]);
+          }
+        }else if(incidence.action == 'replace'){
+          work.items[incidence.itemId][incidence.type] = incidence.values;
+        }
+      }
+    }
+  }
 } 
 
 var createRevealCard = function(image,title,type,id,functionOnClick){
