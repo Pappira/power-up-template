@@ -205,17 +205,17 @@ var selectOption = function(){
   if (selectedOptions[item][name]){
     if(selectedOptions[item][name].indexOf(value) == -1){
       selectedOptions[item][name].push(value);
-      checkIncidences(true);
+      checkIncidences(true,this);
     }else{
       removeItem = value;
       selectedOptions[item][name] = jQuery.grep(selectedOptions[item][name],function(value1) {
         return value1 != removeItem;
       });
-      checkIncidences(false);
+      checkIncidences(false,this);
     }
   }else{
     selectedOptions[item][name] = [value];
-    checkIncidences(true);
+    checkIncidences(true,this);
   }
 }
 
@@ -243,10 +243,10 @@ var navListItems = $('div.setup-panel div a'),
   $('div.setup-panel div a.btn-primary').trigger('click');
 };
 
-var checkIncidences = function(add){
+var checkIncidences = function(add,element){
   if(haveToCheckIncidences){
-    var currentPosition = this.parentElement.parentElement.parentElement.getAttribute("id");
-    var elementId = $(this).attr('id');
+    var currentPosition = element.parentElement.parentElement.parentElement.getAttribute("id");
+    var elementId = element.attr('id');
     var general = false;
     if (elementId.charAt(0) == "-"){
       general = true;
@@ -275,7 +275,7 @@ var checkIncidences = function(add){
                   work[incidence.type].push(incidence.values[j]);
                 }
               }else if(!add){
-                
+
               }
             }
           }else if(incidence.action == 'replace'){
