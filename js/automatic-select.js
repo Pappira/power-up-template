@@ -292,10 +292,12 @@ var checkIncidences = function(){
 } 
 
 var checkAlreadySelectedPossibilities = function(){
-  for (var itemId in selectedOptions) {
-    for (var name in selectedOptions[itemId]) {
-      for (var i = 0; i < selectedOptions[itemId][name].length;i++){
-        var id = itemId + "-" + name + "-" + selectedOptions[itemId][name][i] ;
+  var lastSelectedOptions = selectOptions;
+  selectedOptions = {};
+  for (var itemId in lastSelectedOptions) {
+    for (var name in lastSelectedOptions[itemId]) {
+      for (var i = 0; i < lastSelectedOptions[itemId][name].length;i++){
+        var id = itemId + "-" + name + "-" + lastSelectedOptions[itemId][name][i] ;
         eventFire( document.getElementById(id).getElementsByTagName('span')[0], 'click');
       }
     }
