@@ -67,7 +67,7 @@ var createWizard = function(combinations){
   var wizardForm =  document.getElementById('wizardForm');
   for(var i = 0; i < combinations.length; i++){
     var combination = combinations[i];
-    var wizardButton = createWizardButton(i+1,combination.name);
+    var wizardButton = createWizardButton((i+1) + '-' + combination.itemId + '-' + combination.name,combination.name);
     divContainer.appendChild(wizardButton);
     var wizardElement = createWizardElement(i+1,combination,i==combinations.length-1?true:false,combinations);
     wizardForm.appendChild(wizardElement);
