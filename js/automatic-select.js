@@ -5,7 +5,7 @@ var listId = '5a9ef0ce024c776a21220836';
 var selectedWorkTypeId;
 var selectedWorkId;
 var selectedOptions = {};
-var checkIncidences = true;
+var haveToCheckIncidences = true;
 var work;
 
 t.render(function(){
@@ -241,7 +241,7 @@ var navListItems = $('div.setup-panel div a'),
 };
 
 var checkIncidences = function(){
-  if(checkIncidences){
+  if(haveToCheckIncidences){
     var currentPosition = this.parentElement.parentElement.parentElement.getAttribute("id");
     var elementId = $(this).attr('id');
     var general = false;
@@ -295,7 +295,7 @@ var checkIncidences = function(){
 } 
 
 var checkAlreadySelectedPossibilities = function(currentPosition){
-  checkIncidences = false;
+  haveToCheckIncidences = false;
   var lastSelectedOptions = selectedOptions;
   selectedOptions = {};
   for (var itemId in lastSelectedOptions) {
@@ -307,7 +307,7 @@ var checkAlreadySelectedPossibilities = function(currentPosition){
     }
   }
   eventFire($('a[href="#' + currentPosition + '"]')[0], 'click');
-  checkIncidences = true;
+  haveToCheckIncidences = true;
 }
 
 var createRevealCard = function(image,title,type,id,functionOnClick){
