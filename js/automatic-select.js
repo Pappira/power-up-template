@@ -287,8 +287,26 @@ var checkIncidences = function(){
     var possibilities = createPossibilities(work);
     deleteWizard();
     createWizard(possibilities);
+    checkAlreadySelectedPossibilities();
   }
 } 
+
+var checkAlreadySelectedPossibilities = function(){
+  for (var itemId in selectedOptions) {
+    for (var name in selectedOptions[itemId]) {
+      for (var i = 0; i < selectedOptions[itemId][name];i++){
+        var id = itemId + "-" + name + "-";
+        if (itemId == -1){
+          id +=work[name][i];
+        }else{
+          id += work[itemId][name][i];
+        }
+      eventFire( document.getElementById('-1-optionalFinishes-0').getElementsByTagName('span')[0], 'click');
+      }
+    }
+  }
+
+}
 
 var createRevealCard = function(image,title,type,id,functionOnClick){
   var divCol = createElement('div','col m4','','');
@@ -549,5 +567,15 @@ var allPossibleCases = function (arr) {
       }
     }
     return result;
+  }
+}
+
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
   }
 }
