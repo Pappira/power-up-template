@@ -60,6 +60,7 @@ var deleteWizard = function(){
   while(wizardForm.firstChild){
     wizardForm.removeChild(wizardForm.firstChild);
   }
+  $(".stepwizard-step").remove();
 }
 
 var createWizard = function(combinations){
@@ -264,7 +265,9 @@ var checkIncidences = function(){
       if (incidence.itemId==-1){
         if (incidence.action == 'add'){
           for (var j = 0; j < incidence.values.length;j++){
-            work[incidence.type].push(incidence.values[j]);
+            if(!work[incidence.type].includes(incidence.values[j])){
+              work[incidence.type].push(incidence.values[j]);
+            }
           }
         }else if(incidence.action == 'replace'){
           work[incidence.type] = incidence.values;
@@ -272,7 +275,9 @@ var checkIncidences = function(){
       }else{
         if (incidence.action == 'add'){
           for (var j = 0; j < incidence.values.length;j++){
-            work.items[incidence.itemId][incidence.type].push(incidence.values[j]);
+            if(!work.items[incidence.itemId][incidence.type].includes(incidence.values[j])){
+              work.items[incidence.itemId][incidence.type].push(incidence.values[j]);
+            }
           }
         }else if(incidence.action == 'replace'){
           work.items[incidence.itemId][incidence.type] = incidence.values;
