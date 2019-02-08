@@ -67,7 +67,7 @@ var createWizard = function(combinations){
   var wizardForm =  document.getElementById('wizardForm');
   for(var i = 0; i < combinations.length; i++){
     var combination = combinations[i];
-    var wizardButton = createWizardButton((i+1) + '-' + combination.itemId + '-' + combination.name,combination.name);
+    var wizardButton = createWizardButton(i+1,combination.name);
     divContainer.appendChild(wizardButton);
     var wizardElement = createWizardElement(i+1,combination,i==combinations.length-1?true:false,combinations);
     wizardForm.appendChild(wizardElement);
@@ -78,7 +78,7 @@ var createWizard = function(combinations){
 }
 
 var createWizardElement = function(step,combination,last,combinations){
-  var div = createElement('div','setup-content','step-' + step + '-' + combination.itemId + '-' + combination.name); 
+  var div = createElement('div','setup-content','step-' + step); 
   var divRow = createElement('div','row'); 
   var title = createElement('h3','','',combination.itemName + ' ' + combination.name+''); 
   divRow.appendChild(title);
