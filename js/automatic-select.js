@@ -294,7 +294,7 @@ var checkIncidences = function(){
 var checkAlreadySelectedPossibilities = function(){
   for (var itemId in selectedOptions) {
     for (var name in selectedOptions[itemId]) {
-      for (var i = 0; i < selectedOptions[itemId][name];i++){
+      for (var i = 0; i < selectedOptions[itemId][name].length;i++){
         var id = itemId + "-" + name + "-";
         if (itemId == -1){
           id +=work[name][i];
