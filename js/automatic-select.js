@@ -98,7 +98,7 @@ var createWizardElement = function(step,combination,last,combinations){
             value = combination.values[i].inksQuantity + ' / ' + combination.values[i].inksDetails; 
       }
     }
-    var card = createRevealCard(noImage,value,combination.itemId + '-' + combination.name,i,checkIncidences);
+    var card = createRevealCard(noImage,value,combination.itemId + '-' + combination.name,i);
     divRow.appendChild(card);
   }
  
@@ -205,14 +205,17 @@ var selectOption = function(){
   if (selectedOptions[item][name]){
     if(selectedOptions[item][name].indexOf(value) == -1){
       selectedOptions[item][name].push(value);
+      checkIncidences(true);
     }else{
       removeItem = value;
       selectedOptions[item][name] = jQuery.grep(selectedOptions[item][name],function(value1) {
         return value1 != removeItem;
       });
+      checkIncidences(false);
     }
   }else{
     selectedOptions[item][name] = [value];
+    checkIncidences(true);
   }
 }
 
@@ -240,7 +243,7 @@ var navListItems = $('div.setup-panel div a'),
   $('div.setup-panel div a.btn-primary').trigger('click');
 };
 
-var checkIncidences = function(){
+var checkIncidences = function(add){
   if(haveToCheckIncidences){
     var currentPosition = this.parentElement.parentElement.parentElement.getAttribute("id");
     var elementId = $(this).attr('id');
