@@ -271,7 +271,11 @@ var checkIncidences = function(add){
           if (incidence.action == 'add'){
             for (var j = 0; j < incidence.values.length;j++){
               if(!work[incidence.type].includes(incidence.values[j])){
-                work[incidence.type].push(incidence.values[j]);
+                if(add){
+                  work[incidence.type].push(incidence.values[j]);
+                }
+              }else if(!add){
+                
               }
             }
           }else if(incidence.action == 'replace'){
