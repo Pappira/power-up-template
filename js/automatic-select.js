@@ -78,7 +78,7 @@ var createWizard = function(combinations){
 }
 
 var createWizardElement = function(step,combination,last,combinations){
-  var div = createElement('div','setup-content','step-' + step); 
+  var div = createElement('div','setup-content','step-' + step + '-' + combination.itemId + '-' + combination.name); 
   var divRow = createElement('div','row'); 
   var title = createElement('h3','','',combination.itemName + ' ' + combination.name+''); 
   divRow.appendChild(title);
@@ -258,7 +258,7 @@ var checkIncidences = function(){
     item = work;
   }  
   if (currentElement.includes("//")){
-    var currentElement = item[currentElement.split(" // ")[0]][currentElementId][currentElement.split(" // ")[1]];
+    var currentElement = item[currentElement.split(" // ")[0]][currentElement.split(" // ")[1]].finishes[currentElementId];
   }
   if(currentElement.incidences){
     for (var i = 0; i < currentElement.incidences.length;i++){
