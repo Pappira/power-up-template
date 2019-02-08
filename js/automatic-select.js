@@ -246,7 +246,7 @@ var navListItems = $('div.setup-panel div a'),
 var checkIncidences = function(add,element){
   if(haveToCheckIncidences){
     var currentPosition = element.parentElement.parentElement.parentElement.getAttribute("id");
-    var elementId = element.attr('id');
+    var elementId = element.id  ;
     var general = false;
     if (elementId.charAt(0) == "-"){
       general = true;
