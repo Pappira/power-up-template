@@ -84,8 +84,6 @@ var createWizardElement = function(step,combination,last,combinations){
   divRow.appendChild(title);
 
   for (var i = 0; i < combination.values.length;i++){
-
-
     var value = combination.values[i]+'';
     if (typeof combination.values[i] == 'object'){
       if(combination.name == 'optionalFinishes'){
@@ -281,6 +279,9 @@ var checkIncidences = function(){
         }
       }
     }
+    var possibilities = createPossibilities(work);
+    deleteWizard();
+    createWizard(possibilities);
   }
 } 
 
