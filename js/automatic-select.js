@@ -134,8 +134,8 @@ var nextAfterWorkSelect = function(){
 var createPossibilities = function(work){
   var possibilities = [];
   for(var attr in work){
-    if((typeof work[attr] == 'object' && attr != "mandatoryFinishGroups") || (attr == "optionalFinishes" && work[attr].length >0)){
-      if(work[attr].length > 1){
+    if(typeof work[attr] == 'object' && attr != "mandatoryFinishGroups"){
+      if((work[attr].length > 1) || (attr == "optionalFinishes" && work[attr].length >0)){
         if (attr != 'items'){
           var possibility = {};
           possibility['itemId'] = -1;
@@ -161,8 +161,8 @@ var createPossibilities = function(work){
   for (var i = 0; i < items.length;i++){
     var item = items[i];
     for(var itemAttr in item){
-      if((typeof item[itemAttr] == 'object' && itemAttr != "mandatoryFinishGroups") || (attr == "optionalFinishes" && work[attr].length >0)){
-        if (item[itemAttr].length > 1){
+      if(typeof item[itemAttr] == 'object' && itemAttr != "mandatoryFinishGroups"){
+        if ((item[itemAttr].length > 1) || (attr == "optionalFinishes" && work[attr].length >0)){
           var possibility = {};
           possibility['itemId'] = i;
           possibility['itemName'] = item.name;
