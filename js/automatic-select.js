@@ -296,7 +296,7 @@ var checkAlreadySelectedPossibilities = function(){
     for (var name in selectedOptions[itemId]) {
       for (var i = 0; i < selectedOptions[itemId][name].length;i++){
         var id = itemId + "-" + name + "-" + selectedOptions[itemId][name][i] ;
-        eventFire( document.getElementById('-1-optionalFinishes-0').getElementsByTagName('span')[0], 'click');
+        eventFire( document.getElementById(id).getElementsByTagName('span')[0], 'click');
       }
     }
   }
