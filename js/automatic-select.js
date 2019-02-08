@@ -295,13 +295,8 @@ var checkAlreadySelectedPossibilities = function(){
   for (var itemId in selectedOptions) {
     for (var name in selectedOptions[itemId]) {
       for (var i = 0; i < selectedOptions[itemId][name].length;i++){
-        var id = itemId + "-" + name + "-";
-        if (itemId == -1){
-          id +=work[name][i];
-        }else{
-          id += work[itemId][name][i];
-        }
-      eventFire( document.getElementById('-1-optionalFinishes-0').getElementsByTagName('span')[0], 'click');
+        var id = itemId + "-" + name + "-" + selectedOptions[itemId][name][i] ;
+        eventFire( document.getElementById('-1-optionalFinishes-0').getElementsByTagName('span')[0], 'click');
       }
     }
   }
