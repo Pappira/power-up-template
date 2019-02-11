@@ -183,23 +183,22 @@ var createTextForCard = function(estimate){
 				}
 			}
 
-			if (estimate.items.mandatoryFinishGroups && estimate.items.mandatoryFinishGroups.length >0){
+			if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
 				text += '###Terminaciones' + '\n\n';
-				for (var i = 0; i < estimate.items.mandatoryFinishGroups.length;i++){
-					text += i + '. ' + estimate.items.mandatoryFinishGroups[i].groupName + '\n';
-					for (var j =0; j < estimate.items.mandatoryFinishGroups[i].finishes.length;j++){
-						text += '  - ' + estimate.items.mandatoryFinishGroups[i].finishes[j].finish + '\n';
-						text += estimate.items.mandatoryFinishGroups[i].finishes[j].finishComment!=""?'      ' + estimate.items.mandatoryFinishGroups[i].finishes[j].finishComment + '\n':'';
+				for (var k = 0; k < estimate.items[i].mandatoryFinishGroups.length;k++){
+					text += k + '. ' + estimate.items[i].mandatoryFinishGroups[k].groupName + '\n';
+					for (var j =0; j < estimate.items[i].mandatoryFinishGroups[k].finishes.length;j++){
+						text += '  - ' + estimate.items[i].mandatoryFinishGroups[k].finishes[j].finish + '\n';
+						text += estimate.items[i].mandatoryFinishGroups[k].finishes[j].finishComment!=""?'      ' + estimate.items[i].mandatoryFinishGroups[k].finishes[j].finishComment + '\n':'';
 					}
 				}
 			}
-			if (estimate.items.optionalFinishes && estimate.items.optionalFinishes.length >0){
-				for(var i = 0; i < estimate.items.optionalFinishes.length;i++){
-					text += i + '. ' + estimate.items.optionalFinishes[i].finish + '\n';	
-					text += estimate.items.optionalFinishes[i].finishComment!=""?'      ' + estimate.items.optionalFinishes[i].finishComment + '\n':'';
+			if (estimate.items[i].optionalFinishes && estimate.items[i].optionalFinishes.length >0){
+				for(var k = 0; k < estimate.items[i].optionalFinishes.length;k++){
+					text += k + '. ' + estimate.items[i].optionalFinishes[k].finish + '\n';	
+					text += estimate.items[i].optionalFinishes[k].finishComment!=""?'      ' + estimate.items[i].optionalFinishes[k].finishComment + '\n':'';
 				}
 			}
-
 
 
 
