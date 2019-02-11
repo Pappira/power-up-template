@@ -252,7 +252,7 @@ var checkIncidences = function(element){
         for (var i = 0; i < selectedOptions[itemId][name].length;i++){
           //var id = itemId + "-" + name + "-" + lastSelectedOptions[itemId][name][i] ;
           var item = work.items[itemId];
-          if (general){
+          if (itemId == -1){
             item = work;
           }  
           var currentElement;
