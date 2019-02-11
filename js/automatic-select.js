@@ -472,7 +472,7 @@ var createEstimateAndTrelloCard = function(){
       }
       if(work.items[i].mandatoryFinishGroups){
         for(var j = 0; j < work.items[i].mandatoryFinishGroups.length;j++){
-          work.items[i].mandatoryFinishGroups[i].finishes = cutArray(work.items[i].mandatoryFinishGroups[i].finishes,selectedOptions[i]["mandatoryFinishGroups " + "// " + j]);
+          work.items[i].mandatoryFinishGroups[j].finishes = cutArray(work.items[i].mandatoryFinishGroups[j].finishes,selectedOptions[i]["mandatoryFinishGroups " + "// " + j]);
         }
       }
       if (work.items[i].optionalFinishes){
