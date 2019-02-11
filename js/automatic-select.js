@@ -246,7 +246,7 @@ var navListItems = $('div.setup-panel div a'),
 var checkIncidences = function(element){
   
   if(haveToCheckIncidences){
-    work = originalWork;
+    work = JSON.parse(JSON.stringify(originalWork));
     for (var itemId in selectedOptions) {
       for (var name in selectedOptions[itemId]) {
         for (var i = 0; i < selectedOptions[itemId][name].length;i++){
