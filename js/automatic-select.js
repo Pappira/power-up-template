@@ -261,7 +261,7 @@ var checkIncidences = function(element){
           }else{
             currentElement = item[name][i];
           }
-          if(currentElement.incidences){
+          if(currentElement && currentElement.incidences){
             for (var i = 0; i < currentElement.incidences.length;i++){
               var incidence = currentElement.incidences[i];
               if (incidence.itemId==-1){
