@@ -445,7 +445,12 @@ var createEstimateAndTrelloCard = function(){
     }else{
       work.quantity = work.quantities;
     }
-    work.finishes = cutArray(work.finishes,selectedOptions[-1].finishes);
+    if(work.mandatoryFinishes){
+      for(var i = 0; i < work.mandatoryFinishes.length;i++){
+        work.mandatoryFinishes[i].finishes = cutArray(work.mandatoryFinishes[i].finishes,selectedOptions[-1]["mandatoryFinishes " + "// " + i]);
+      }
+    }
+   // work.finishes = cutArray(work.finishes,selectedOptions[-1].finishes);
     for (var i = 0; i < work.items.length;i++){
       if (work.items[i].quantityOfPages.length>1){
           work.items[i].quantityOfPages = cutArray(work.items[i].quantityOfPages,selectedOptions[i].quantityOfPages);
