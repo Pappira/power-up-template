@@ -133,13 +133,20 @@ var createTextForCard = function(estimate){
 	text += '#' + estimate['name'] + '\n';
 	text += '**Cantidad: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate['quantity'].join(' // ')) + '\n';
 	text += '**Tamaño cerrado: **' + estimate['clossedSize'] + '\n';
-	if (estimate['finishes'].length >0){
+	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
 		text += '###Terminaciones Generales' + '\n\n';
-		for (var i = 0; i < estimate['finishes'].length;i++){
-			text += i + '. ' + estimate['finishes'][i]['finish'] + '\n';
-			if (estimate['finishes'][i]['finishComment']){
-				text += '  - ' + estimate['finishes'][i]['finishComment'] + '\n';
+		for (var i = 0; i < estimate.mandatoryFinishGroups.length;i++){
+			text += i + '. ' + estimate.mandatoryFinishGroups[i].groupName + '\n';
+			for (var j =0; j < estimate.mandatoryFinishGroups[i].finishes.length;j++){
+				text += '  - ' + estimate.mandatoryFinishGroups[i].finishes[j].finish + '\n';
+				text += estimate.mandatoryFinishGroups[i].finishes[j].finishComment!=""?'      ' + estimate.mandatoryFinishGroups[i].finishes[j].finishComment + '\n':'';
 			}
+		}
+	}
+	if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
+		for(var i = 0; i < estimate.optionalFinishes.length;i++){
+			text += i + '. ' + estimate.optionalFinishes[i].finish + '\n';	
+			text += estimate.optionalFinishes[i].finishComment!=""?'      ' + estimate.optionalFinishes[i].finishComment + '\n':'';
 		}
 	}
 	text +='\n';
@@ -175,7 +182,28 @@ var createTextForCard = function(estimate){
 					text += '**Materiales: **' + materiales.join(' // ') + '\n'; 
 				}
 			}
-			if (estimate['items'][i]['finishes'].length >0){
+
+			if (estimate.items.mandatoryFinishGroups && estimate.items.mandatoryFinishGroups.length >0){
+				text += '###Terminaciones' + '\n\n';
+				for (var i = 0; i < estimate.items.mandatoryFinishGroups.length;i++){
+					text += i + '. ' + estimate.items.mandatoryFinishGroups[i].groupName + '\n';
+					for (var j =0; j < estimate.items.mandatoryFinishGroups[i].finishes.length;j++){
+						text += '  - ' + estimate.items.mandatoryFinishGroups[i].finishes[j].finish + '\n';
+						text += estimate.items.mandatoryFinishGroups[i].finishes[j].finishComment!=""?'      ' + estimate.items.mandatoryFinishGroups[i].finishes[j].finishComment + '\n':'';
+					}
+				}
+			}
+			if (estimate.items.optionalFinishes && estimate.items.optionalFinishes.length >0){
+				for(var i = 0; i < estimate.items.optionalFinishes.length;i++){
+					text += i + '. ' + estimate.items.optionalFinishes[i].finish + '\n';	
+					text += estimate.items.optionalFinishes[i].finishComment!=""?'      ' + estimate.items.optionalFinishes[i].finishComment + '\n':'';
+				}
+			}
+
+
+
+
+			/*if (estimate['items'][i]['finishes'].length >0){
 				text += '###Terminaciones' + '\n\n';
 				for (var j = 0; j < estimate['items'][i]['finishes'].length;j++){
 					text += j + '. ' + estimate['items'][i]['finishes'][j]['finish'] + '\n';
@@ -184,7 +212,7 @@ var createTextForCard = function(estimate){
 					}
 				}
 				text +='\n';
-			}
+			}*/
 		}
 	}
 	if (estimate['comments']){
