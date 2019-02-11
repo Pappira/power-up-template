@@ -216,7 +216,7 @@ var selectOption = function(){
   }else{
     selectedOptions[item][name] = [value];
   }
-  checkIncidences();
+  checkIncidences(this);
 }
 
 var startFunction = function(){
@@ -293,7 +293,7 @@ var checkIncidences = function(element){
     var possibilities = createPossibilities(work);
     deleteWizard();
     createWizard(possibilities);
-    checkAlreadySelectedPossibilities(currentPosition);
+    checkAlreadySelectedPossibilities(element.parentElement.parentElement.parentElement.getAttribute("id"));
 
   }
 
