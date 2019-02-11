@@ -247,11 +247,9 @@ var checkIncidences = function(element){
   
   if(haveToCheckIncidences){
     work = JSON.parse(JSON.stringify(originalWork));
-    var lastSelectedOptions =selectedOptions;
-    selectedOptions = {};
-    for (var itemId in lastSelectedOptions) {
-      for (var name in lastSelectedOptions[itemId]) {
-        for (var i = 0; i < lastSelectedOptions[itemId][name].length;i++){
+    for (var itemId in selectedOptions) {
+      for (var name in selectedOptions[itemId]) {
+        for (var i = 0; i < selectedOptions[itemId][name].length;i++){
           //var id = itemId + "-" + name + "-" + lastSelectedOptions[itemId][name][i] ;
           var item = work.items[itemId];
           if (itemId == -1){
