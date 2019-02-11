@@ -223,22 +223,24 @@ var createTextForCard = function(estimate){
             text += '##Precios' + '\n';
             var lastPriceText = '';
 			for (var i = 0; i < estimate.prices.length;i++){
-                var price = estimate.prices[i];
-                var priceText = '';
-				for (var j = 0; j < price.items.length; j++){
-					var item =  price.items[j];
-					var originalItem = estimate.items[item.id];
-					priceText += ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
-					+ (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
-					+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
-					+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
-					+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
-                }
-                if(lastPriceText !=priceText){
-                    text += '####' + priceText + '\n';
-                    lastPriceText = priceText;
+				var price = estimate.prices[i];
+				if (price){
+					var priceText = '';
+					for (var j = 0; j < price.items.length; j++){
+						var item =  price.items[j];
+						var originalItem = estimate.items[item.id];
+						priceText += ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
+						+ (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
+						+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
+						+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
+						+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
+					}
+					if(lastPriceText !=priceText){
+						text += '####' + priceText + '\n';
+						lastPriceText = priceText;
+					}
+					text += '  •  Sub-Total (' + price.quantity + ' unidades): ** $ ' + price.price + ' + IVA**' + '\n';
 				}
-				text += '  •  Sub-Total (' + price.quantity + ' unidades): ** $ ' + price.price + ' + IVA**' + '\n';
 			}
 		}else{
 			text +='**Precio: **$ ' + estimate.prices[estimate.SelectedOption].price + ' + IVA' + '\n';
