@@ -7,6 +7,7 @@ var selectedWorkId;
 var selectedOptions = {};
 var haveToCheckIncidences = true;
 var work;
+var originalWork;
 
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
@@ -126,6 +127,7 @@ var nextAfterWorkSelect = function(){
   var id = elementId.substring(elementId.indexOf('-')+1);
   selectedWorkId = id;
   work = works[id];
+  originalWork = works[id];
   var possibilities = createPossibilities(work);
 
   deleteWizard();
@@ -205,18 +207,16 @@ var selectOption = function(){
   if (selectedOptions[item][name]){
     if(selectedOptions[item][name].indexOf(value) == -1){
       selectedOptions[item][name].push(value);
-      checkIncidences(true,this);
     }else{
       removeItem = value;
       selectedOptions[item][name] = jQuery.grep(selectedOptions[item][name],function(value1) {
         return value1 != removeItem;
       });
-      checkIncidences(false,this);
     }
   }else{
     selectedOptions[item][name] = [value];
-    checkIncidences(true,this);
   }
+  checkIncidences();
 }
 
 var startFunction = function(){
@@ -243,10 +243,66 @@ var navListItems = $('div.setup-panel div a'),
   $('div.setup-panel div a.btn-primary').trigger('click');
 };
 
-var checkIncidences = function(add,element){
+var checkIncidences = function(element){
+  
+  if(haveToCheckIncidences){
+    work = originalWork;
+    for (var itemId in selectedOptions) {
+      for (var name in selectedOptions[itemId]) {
+        for (var i = 0; i < selectedOptions[itemId][name].length;i++){
+          //var id = itemId + "-" + name + "-" + lastSelectedOptions[itemId][name][i] ;
+          var item = work.items[itemId];
+          if (general){
+            item = work;
+          }  
+          var currentElement;
+          if (name.includes("//")){
+            currentElement = item[name.split(" // ")[0]][name.split(" // ")[1]].finishes[i];
+          }else{
+            currentElement = item[name][i];
+          }
+          if(currentElement.incidences){
+            for (var i = 0; i < currentElement.incidences.length;i++){
+              var incidence = currentElement.incidences[i];
+              if (incidence.itemId==-1){
+                if (incidence.action == 'add'){
+                  for (var j = 0; j < incidence.values.length;j++){
+                    if(!work[incidence.type].includes(incidence.values[j])){
+                        work[incidence.type].push(incidence.values[j]);
+                    }
+                  }
+                }else if(incidence.action == 'replace'){
+                  work[incidence.type] = incidence.values;
+                }
+              }else{
+                if (incidence.action == 'add'){
+                  for (var j = 0; j < incidence.values.length;j++){
+                    if(!work.items[incidence.itemId][incidence.type].includes(incidence.values[j])){
+                      work.items[incidence.itemId][incidence.type].push(incidence.values[j]);
+                    }
+                  }
+                }else if(incidence.action == 'replace'){
+                  work.items[incidence.itemId][incidence.type] = incidence.values;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    var possibilities = createPossibilities(work);
+    deleteWizard();
+    createWizard(possibilities);
+    checkAlreadySelectedPossibilities(currentPosition);
+
+  }
+
+
+
+/*
   if(haveToCheckIncidences){
     var currentPosition = element.parentElement.parentElement.parentElement.getAttribute("id");
-    var elementId = element.id  ;
+    var elementId = element.id;
     var general = false;
     if (elementId.charAt(0) == "-"){
       general = true;
@@ -261,8 +317,11 @@ var checkIncidences = function(add,element){
     if (general){
       item = work;
     }  
+    var currentElement;
     if (currentElement.includes("//")){
-      var currentElement = item[currentElement.split(" // ")[0]][currentElement.split(" // ")[1]].finishes[currentElementId];
+      currentElement = item[currentElement.split(" // ")[0]][currentElement.split(" // ")[1]].finishes[currentElementId];
+    }else{
+      currentElement = item[currentElement][currentElementId];
     }
     if(currentElement.incidences){
       for (var i = 0; i < currentElement.incidences.length;i++){
@@ -271,11 +330,7 @@ var checkIncidences = function(add,element){
           if (incidence.action == 'add'){
             for (var j = 0; j < incidence.values.length;j++){
               if(!work[incidence.type].includes(incidence.values[j])){
-                if(add){
                   work[incidence.type].push(incidence.values[j]);
-                }
-              }else if(!add){
-
               }
             }
           }else if(incidence.action == 'replace'){
@@ -298,7 +353,7 @@ var checkIncidences = function(add,element){
       createWizard(possibilities);
       checkAlreadySelectedPossibilities(currentPosition);
     }
-  }
+  }*/
 } 
 
 var checkAlreadySelectedPossibilities = function(currentPosition){
