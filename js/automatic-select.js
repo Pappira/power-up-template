@@ -256,7 +256,7 @@ var checkIncidences = function(element){
           }  
           var currentElement;
           if (name.includes("//")){
-            currentElement = item[name.split(" // ")[0]][name.split(" // ")[1]].finishes[i];
+            currentElement = item[name.split(" // ")[0]][name.split(" // ")[1]].finishes[selectedOptions[itemId][name][i]];
           }else{
             currentElement = item[name][i];
           }
