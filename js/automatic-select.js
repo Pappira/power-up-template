@@ -417,15 +417,11 @@ var createFormButton = function(step,text,next,finish){
 
 var checkMandatoryFieldsSelected = function(){
   var possibilities = createPossibilities(work);
-  var message;
+  var message = "";
   for (var i = 0; i < possibilities.length; i++){
-    if (!(selectedOptions && selectedOptions[possibilities.itemId] && selectedOptions[possibilities.itemId][possibilities.name] && selectedOptions[possibilities.itemId][possibilities.name].length >=1)){
-      if(!possibilities.name.contains('optional')){
-        var itemName = "General";
-        if (possibilities.itemId>=0){
-          itemName = work.item[possibilities.itemId].name;
-        }
-        message += itemName + " " + possibilities.name +  '\n';
+    if (!(selectedOptions && selectedOptions[possibilities[i].itemId] && selectedOptions[possibilities[i].itemId][possibilities[i].name] && selectedOptions[possibilities[i].itemId][possibilities[i].name].length >=1)){
+      if(possibilities[i].name.indexOf('optional')==-1){
+        message += possibilities[i].itemName + " " + possibilities[i].name +  '\n';
       }
     }
   }
@@ -434,7 +430,7 @@ var checkMandatoryFieldsSelected = function(){
 
 var createEstimateAndTrelloCard = function(){
   var message = checkMandatoryFieldsSelected();
-  if(meessage.length > 0){
+  if(message.length > 0){
     window.alert('Debe completar todas las opciones solicitadas \n' + message);
   }else{
     var estimate = {};
