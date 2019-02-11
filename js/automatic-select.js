@@ -445,10 +445,12 @@ var createEstimateAndTrelloCard = function(){
     }else{
       work.quantity = work.quantities;
     }
-    if(work.mandatoryFinishes){
-      for(var i = 0; i < work.mandatoryFinishes.length;i++){
-        work.mandatoryFinishes[i].finishes = cutArray(work.mandatoryFinishes[i].finishes,selectedOptions[-1]["mandatoryFinishes " + "// " + i]);
-      }
+    if(work.mandatoryFinishGroups){
+      for(var i = 0; i < work.mandatoryFinishGroups.length;i++){
+        work.mandatoryFinishGroups[i].finishes = cutArray(work.mandatoryFinishGroups[i].finishes,selectedOptions[-1]["mandatoryFinishGroups " + "// " + i]);
+    }
+    if (work.optionalFinishes){
+      work.optionalFinishes = cutArray(work.optionalFinishes,selectedOptions[-1].optionalFinishes);
     }
    // work.finishes = cutArray(work.finishes,selectedOptions[-1].finishes);
     for (var i = 0; i < work.items.length;i++){
@@ -467,7 +469,13 @@ var createEstimateAndTrelloCard = function(){
       if(work.items[i].openedSize.length>1){
           work.items[i].openedSize = cutArray(work.items[i].openedSize,selectedOptions[i].openedSize);
       }
-      work.items[i].finishes = cutArray(work.items[i].finishes,selectedOptions[i].finishes);
+      if(work.items[i].mandatoryFinishGroups){
+        for(var j = 0; j < work.items[i].mandatoryFinishGroups.length;j++){
+          work.items[i].mandatoryFinishGroups[i].finishes = cutArray(work.items[i].mandatoryFinishGroups[i].finishes,selectedOptions[i]["mandatoryFinishGroups " + "// " + j]);
+      }
+      if (work.items[i].optionalFinishes){
+        work.items[i].optionalFinishes = cutArray(work.items[i].optionalFinishes,selectedOptions[-1].optionalFinishes);
+      }
     }
     work['prices'] = [];
     var allCombinations = getCombinations(work);
