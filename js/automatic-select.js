@@ -364,7 +364,10 @@ var checkAlreadySelectedPossibilities = function(currentPosition){
     for (var name in lastSelectedOptions[itemId]) {
       for (var i = 0; i < lastSelectedOptions[itemId][name].length;i++){
         var id = itemId + "-" + name + "-" + lastSelectedOptions[itemId][name][i] ;
-        eventFire(document.getElementById(id).getElementsByTagName('span')[0], 'click');
+        var htmlItel = document.getElementById(id);
+        if(htmlItel){
+          eventFire(htmlItel.getElementsByTagName('span')[0], 'click');
+        }
       }
     }
   }
