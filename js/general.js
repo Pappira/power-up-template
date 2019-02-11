@@ -153,8 +153,11 @@ var createTextForCard = function(estimate){
 	if(estimate['items']){
 		for (var i = 0; i< estimate['items'].length;i++){
 			text += (estimate['items'].length>1?('##' + estimate['items'][i]['name'] + '\n'):'');
-			text += '**Tintas: **' + (estimate['items'][i]['inksQuantity']?(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].inksQuantity+' ':estimate['items'][i]['inksQuantity'].join(' // ') + ' '):'')  + 
-					(estimate['items'][i]['inksDetails']?estimate['items'][i]['inksDetails']+' ':'') + 
+			var inks = [];
+			for(var j = 0; j < estimate.items[i].inks.length;j++){
+				inks.push(estimate.items[i].inks[j].inksQuantity + " " + estimate.items[i].inks[j].inksDetails);
+			}
+			text += '**Tintas: **' + (estimate['items'][i]['inks']?(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].inks.inksQuantity+' '+estimate.prices[estimate.SelectedOption].items[i].inks.inksDetails:inks.join(' // ') + ' '):'')  +
 					(estimate['items'][i]['bleedPrint']?'(Impresión al Vivo)':'') +'\n';
 			
 			if (estimate['items'][i]['openedSize']){
@@ -189,16 +192,18 @@ var createTextForCard = function(estimate){
 					text += k + '. ' + estimate.items[i].mandatoryFinishGroups[k].groupName + '\n';
 					for (var j =0; j < estimate.items[i].mandatoryFinishGroups[k].finishes.length;j++){
 						text += '  - ' + estimate.items[i].mandatoryFinishGroups[k].finishes[j].finish + '\n';
-						text += estimate.items[i].mandatoryFinishGroups[k].finishes[j].finishComment!=""?'      ' + estimate.items[i].mandatoryFinishGroups[k].finishes[j].finishComment + '\n':'';
+						text += estimate.items[i].mandatoryFinishGroups[k].finishes[j].finishComment?'      ' + estimate.items[i].mandatoryFinishGroups[k].finishes[j].finishComment + '\n':'';
 					}
 				}
 			}
 			if (estimate.items[i].optionalFinishes && estimate.items[i].optionalFinishes.length >0){
 				for(var k = 0; k < estimate.items[i].optionalFinishes.length;k++){
 					text += k + '. ' + estimate.items[i].optionalFinishes[k].finish + '\n';	
-					text += estimate.items[i].optionalFinishes[k].finishComment!=""?'      ' + estimate.items[i].optionalFinishes[k].finishComment + '\n':'';
+					text += estimate.items[i].optionalFinishes[k].finishComment?'      ' + estimate.items[i].optionalFinishes[k].finishComment + '\n':'';
 				}
 			}
+			
+			text +='\n';
 
 
 
