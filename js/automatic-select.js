@@ -290,9 +290,18 @@ var checkIncidences = function(element){
       }
     }
     var possibilities = createPossibilities(work);
-    deleteWizard();
     createWizard(possibilities);
+    $.each($(".stepwizard-step"), function( index, value ) {
+      value.setAttribute("class","stepwizard-step asd");
+    });
+    document.getElementById('wizardForm').setAttribute("id","wizardForm-asd");
+   // deleteWizard();
     checkAlreadySelectedPossibilities(element.parentElement.parentElement.parentElement.getAttribute("id"));
+    $(".stepwizard-step.asd").remove();
+    var wizardForm =  document.getElementById('wizardForm-asd');
+    while(wizardForm.firstChild){
+      wizardForm.removeChild(wizardForm.firstChild);
+    }
 
   }
 } 
@@ -305,9 +314,9 @@ var checkAlreadySelectedPossibilities = function(currentPosition){
     for (var name in lastSelectedOptions[itemId]) {
       for (var i = 0; i < lastSelectedOptions[itemId][name].length;i++){
         var id = itemId + "-" + name + "-" + lastSelectedOptions[itemId][name][i] ;
-        var htmlItel = document.getElementById(id);
-        if(htmlItel){
-          eventFire(htmlItel.getElementsByTagName('span')[0], 'click');
+        var htmlItem = document.getElementById(id);
+        if(htmlItem){
+          eventFire(htmlItem.getElementsByTagName('span')[0], 'click');
         }
       }
     }
