@@ -417,17 +417,23 @@ var createFormButton = function(step,text,next,finish){
 
 var checkMandatoryFieldsSelected = function(){
   var possibilities = createPossibilities(work);
+  var message;
   for (var i = 0; i < possibilities.length; i++){
-    if (!(selectedOptions && selectedOptions[itemId] && selectedOptions[itemId][name] && selectedOptions[itemId][name].length >=1)){
-      return false;
+    if (!(selectedOptions && selectedOptions[possibilities.itemId] && selectedOptions[possibilities.itemId][possibilities.name] && selectedOptions[possibilities.itemId][possibilities.name].length >=1)){
+      var itemName = "General";
+      if (possibilities.itemId>=0){
+        itemName = work.item[possibilities.itemId].name;
+      }
+      message += itemName + " " + possibilities.name +  '\n';
     }
   }
-  return true;
+  return message;
 }
 
 var createEstimateAndTrelloCard = function(){
-  if(!checkMandatoryFieldsSelected()){
-    window.alert('Debe completar todas las opciones solicitadas');
+  var message = checkMandatoryFieldsSelected();
+  if(meessage.length > 0){
+    window.alert('Debe completar todas las opciones solicitadas \n' + message);
   }else{
     var estimate = {};
     //var work = works[selectedWorkId];
