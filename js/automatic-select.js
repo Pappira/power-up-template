@@ -420,11 +420,13 @@ var checkMandatoryFieldsSelected = function(){
   var message;
   for (var i = 0; i < possibilities.length; i++){
     if (!(selectedOptions && selectedOptions[possibilities.itemId] && selectedOptions[possibilities.itemId][possibilities.name] && selectedOptions[possibilities.itemId][possibilities.name].length >=1)){
-      var itemName = "General";
-      if (possibilities.itemId>=0){
-        itemName = work.item[possibilities.itemId].name;
+      if(!possibilities.name.contains('optional')){
+        var itemName = "General";
+        if (possibilities.itemId>=0){
+          itemName = work.item[possibilities.itemId].name;
+        }
+        message += itemName + " " + possibilities.name +  '\n';
       }
-      message += itemName + " " + possibilities.name +  '\n';
     }
   }
   return message;
