@@ -448,6 +448,7 @@ var createEstimateAndTrelloCard = function(){
     if(work.mandatoryFinishGroups){
       for(var i = 0; i < work.mandatoryFinishGroups.length;i++){
         work.mandatoryFinishGroups[i].finishes = cutArray(work.mandatoryFinishGroups[i].finishes,selectedOptions[-1]["mandatoryFinishGroups " + "// " + i]);
+      }
     }
     if (work.optionalFinishes){
       work.optionalFinishes = cutArray(work.optionalFinishes,selectedOptions[-1].optionalFinishes);
@@ -472,6 +473,7 @@ var createEstimateAndTrelloCard = function(){
       if(work.items[i].mandatoryFinishGroups){
         for(var j = 0; j < work.items[i].mandatoryFinishGroups.length;j++){
           work.items[i].mandatoryFinishGroups[i].finishes = cutArray(work.items[i].mandatoryFinishGroups[i].finishes,selectedOptions[i]["mandatoryFinishGroups " + "// " + j]);
+        }
       }
       if (work.items[i].optionalFinishes){
         work.items[i].optionalFinishes = cutArray(work.items[i].optionalFinishes,selectedOptions[-1].optionalFinishes);
