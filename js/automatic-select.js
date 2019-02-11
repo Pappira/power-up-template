@@ -250,7 +250,6 @@ var checkIncidences = function(element){
     for (var itemId in selectedOptions) {
       for (var name in selectedOptions[itemId]) {
         for (var i = 0; i < selectedOptions[itemId][name].length;i++){
-          //var id = itemId + "-" + name + "-" + lastSelectedOptions[itemId][name][i] ;
           var item = work.items[itemId];
           if (itemId == -1){
             item = work;
@@ -296,64 +295,6 @@ var checkIncidences = function(element){
     checkAlreadySelectedPossibilities(element.parentElement.parentElement.parentElement.getAttribute("id"));
 
   }
-
-
-
-/*
-  if(haveToCheckIncidences){
-    var currentPosition = element.parentElement.parentElement.parentElement.getAttribute("id");
-    var elementId = element.id;
-    var general = false;
-    if (elementId.charAt(0) == "-"){
-      general = true;
-      elementId = elementId.substr(1);
-    }
-    var values = elementId.split("-");
-    var itemId = values[0];
-    var currentElement = values[1];
-    var currentElementId = values[2];
-
-    var item = work.items[itemId];
-    if (general){
-      item = work;
-    }  
-    var currentElement;
-    if (currentElement.includes("//")){
-      currentElement = item[currentElement.split(" // ")[0]][currentElement.split(" // ")[1]].finishes[currentElementId];
-    }else{
-      currentElement = item[currentElement][currentElementId];
-    }
-    if(currentElement.incidences){
-      for (var i = 0; i < currentElement.incidences.length;i++){
-        var incidence = currentElement.incidences[i];
-        if (incidence.itemId==-1){
-          if (incidence.action == 'add'){
-            for (var j = 0; j < incidence.values.length;j++){
-              if(!work[incidence.type].includes(incidence.values[j])){
-                  work[incidence.type].push(incidence.values[j]);
-              }
-            }
-          }else if(incidence.action == 'replace'){
-            work[incidence.type] = incidence.values;
-          }
-        }else{
-          if (incidence.action == 'add'){
-            for (var j = 0; j < incidence.values.length;j++){
-              if(!work.items[incidence.itemId][incidence.type].includes(incidence.values[j])){
-                work.items[incidence.itemId][incidence.type].push(incidence.values[j]);
-              }
-            }
-          }else if(incidence.action == 'replace'){
-            work.items[incidence.itemId][incidence.type] = incidence.values;
-          }
-        }
-      }
-      var possibilities = createPossibilities(work);
-      deleteWizard();
-      createWizard(possibilities);
-      checkAlreadySelectedPossibilities(currentPosition);
-    }
-  }*/
 } 
 
 var checkAlreadySelectedPossibilities = function(currentPosition){
@@ -474,80 +415,94 @@ var createFormButton = function(step,text,next,finish){
   return button;
 } 
 
+var checkMandatoryFieldsSelected = function(){
+  var possibilities = createPossibilities(work);
+  for (var i = 0; i < possibilities.length; i++){
+    if (!(selectedOptions && selectedOptions[itemId] && selectedOptions[itemId][name] && selectedOptions[itemId][name].length >=1)){
+      return false;
+    }
+  }
+  return true;
+}
+
 var createEstimateAndTrelloCard = function(){
-  var estimate = {};
-  var work = works[selectedWorkId];
-  if (work.clossedSizes.length > 1){
-    work.clossedSize = cutArray(work.clossedSize,selectedOptions[-1].clossedSize[0]);
+  if(!checkMandatoryFieldsSelected()){
+    window.alert('Debe completar todas las opciones solicitadas');
   }else{
-    work.clossedSize = work.clossedSizes[0];
-  }
-  if (work.quantities.length > 1){
-    work.quantity =  cutArray(work.quantities,selectedOptions[-1].quantities);
-  }else{
-    work.quantity = work.quantities;
-  }
-  work.finishes = cutArray(work.finishes,selectedOptions[-1].finishes);
-  for (var i = 0; i < work.items.length;i++){
-    if (work.items[i].quantityOfPages.length>1){
-        work.items[i].quantityOfPages = cutArray(work.items[i].quantityOfPages,selectedOptions[i].quantityOfPages);
+    var estimate = {};
+    //var work = works[selectedWorkId];
+    if (work.clossedSizes.length > 1){
+      work.clossedSize = cutArray(work.clossedSize,selectedOptions[-1].clossedSize[0]);
+    }else{
+      work.clossedSize = work.clossedSizes[0];
     }
-    if(work.items[i].materials.length>1){
-        work.items[i].materials = cutArray(work.items[i].materials,selectedOptions[i].materials);
+    if (work.quantities.length > 1){
+      work.quantity =  cutArray(work.quantities,selectedOptions[-1].quantities);
+    }else{
+      work.quantity = work.quantities;
     }
-    if(work.items[i].inks.length>1){
-        work.items[i].inks = cutArray(work.items[i].inks,selectedOptions[i].inks);
+    work.finishes = cutArray(work.finishes,selectedOptions[-1].finishes);
+    for (var i = 0; i < work.items.length;i++){
+      if (work.items[i].quantityOfPages.length>1){
+          work.items[i].quantityOfPages = cutArray(work.items[i].quantityOfPages,selectedOptions[i].quantityOfPages);
+      }
+      if(work.items[i].materials.length>1){
+          work.items[i].materials = cutArray(work.items[i].materials,selectedOptions[i].materials);
+      }
+      if(work.items[i].inks.length>1){
+          work.items[i].inks = cutArray(work.items[i].inks,selectedOptions[i].inks);
+      }
+      if(work.items[i].faces.length>1){
+          work.items[i].faces = cutArray(work.items[i].faces,selectedOptions[i].faces);
+      }
+      if(work.items[i].openedSize.length>1){
+          work.items[i].openedSize = cutArray(work.items[i].openedSize,selectedOptions[i].openedSize);
+      }
+      work.items[i].finishes = cutArray(work.items[i].finishes,selectedOptions[i].finishes);
     }
-    if(work.items[i].faces.length>1){
-        work.items[i].faces = cutArray(work.items[i].faces,selectedOptions[i].faces);
-    }
-    if(work.items[i].openedSize.length>1){
-        work.items[i].openedSize = cutArray(work.items[i].openedSize,selectedOptions[i].openedSize);
-    }
-    work.items[i].finishes = cutArray(work.items[i].finishes,selectedOptions[i].finishes);
-  }
-  work['prices'] = [];
-  var allCombinations = getCombinations(work);
-  possiblePrices = prices.filter(function(v, i) {
-    return (v.workId == work.id);
-  })
-
-  for (var i = 0; i < allCombinations.length;i++){
-    var currentCombination = allCombinations[i];
-    var quantity = currentCombination.quantity;
-
-
-    currentPossiblePrices = possiblePrices.filter(function(v, i) {
-      return (v.quantity == quantity);
+    work['prices'] = [];
+    var allCombinations = getCombinations(work);
+    possiblePrices = prices.filter(function(v, i) {
+      return (v.workId == work.id);
     })
 
+    for (var i = 0; i < allCombinations.length;i++){
+      var currentCombination = allCombinations[i];
+      var quantity = currentCombination.quantity;
 
 
-    for (var j = 0; j < currentCombination.items.length; j++){
-      var currentItem = currentCombination.items[j];
-      var pages = currentItem.pages;
-      var inksQuantity = currentItem.inksQuantity;
-      var inksDetails = currentItem.inksDetails;
-      var openedSize = currentItem.openedSize;
-      var faces = currentItem.faces;
-      var paper = currentItem.paper;
-      var gr = currentItem.gr;
-      var vias = currentItem.quantityOfVias;
-      currentPossiblePrices = currentPossiblePrices.filter(function(v, i) {
-        return (v.items[j].quantityOfPages == pages && v.items[j].inks.inksQuantity == inksQuantity && 
-          v.items[j].inks.inksDetails == inksDetails && v.items[j].openedSize == openedSize && 
-          v.items[j].faces ==  faces && v.items[j].materials.paper == paper && 
-          v.items[j].materials.gr == gr && v.items[j].quantityOfVias == vias);
+      currentPossiblePrices = possiblePrices.filter(function(v, i) {
+        return (v.quantity == quantity);
       })
+
+
+
+      for (var j = 0; j < currentCombination.items.length; j++){
+        var currentItem = currentCombination.items[j];
+        var pages = currentItem.pages;
+        var inksQuantity = currentItem.inksQuantity;
+        var inksDetails = currentItem.inksDetails;
+        var openedSize = currentItem.openedSize;
+        var faces = currentItem.faces;
+        var paper = currentItem.paper;
+        var gr = currentItem.gr;
+        var vias = currentItem.quantityOfVias;
+        currentPossiblePrices = currentPossiblePrices.filter(function(v, i) {
+          return (v.items[j].quantityOfPages == pages && v.items[j].inks.inksQuantity == inksQuantity && 
+            v.items[j].inks.inksDetails == inksDetails && v.items[j].openedSize == openedSize && 
+            v.items[j].faces ==  faces && v.items[j].materials.paper == paper && 
+            v.items[j].materials.gr == gr && v.items[j].quantityOfVias == vias);
+        })
+      }
+      work.prices.push(currentPossiblePrices[0]);
     }
-    work.prices.push(currentPossiblePrices[0]);
+    estimate = work;
+    delete estimate['image'];
+    delete estimate['quantities'];
+    delete estimate['clossedSizes'];
+    createCard(estimate);
+    return work;
   }
-  estimate = work;
-  delete estimate['image'];
-  delete estimate['quantities'];
-  delete estimate['clossedSizes'];
-  createCard(estimate);
-  return work;
 }
 
 var cutArray = function(originalArray,indexToCut){
