@@ -578,5 +578,89 @@ var prices = [
         'excess':1
         }],
       'price':2890
+    },
+    {
+      "workId":1,
+      "clossedSizes":"150x210mm",
+      "quantities":100,
+      "mandatoryFinishGroups":
+      [
+        {
+          "groupName": "Encuadernado",
+          "finishes":
+          {
+            "finish":"Encuadernado HotMelt",
+            "finishComment":"",
+            "showToClientFinish":true
+          }
+        }
+      ],
+      "items":
+      [
+        {
+          "id":0,
+          "bleedPrint":true,
+          "inks":
+          {
+            "inksDetails":"Full color",
+            "inksQuantity":4
+          },
+          "openedSize":"150x210mm",
+          "allTheSame":false,
+          "mandatoryFinishGroups":
+          [
+            {
+              "groupName": "Tipo de Tapa",
+              "finishes": 
+              {
+                "finish":"Tapa Flexible",
+                "finishComment":"",
+                "showToClientFinish":true
+              }
+            }
+          ],
+          "quantityOfPages":2,
+          "quantityOfVias":1,
+          "faces":"Simple Faz",
+          "materials":
+          {
+            "paper":"Cartulina Blanca/Blanca",
+            "gr":"250"
+          },
+          'machine':'Konica C1070',
+          'paperSize':'320x330mm',
+          'sheetSize':'660x960mm',
+          'cutsPerSheet':6,
+          'quantityPerPaper':1,
+          'excess':1
+        },
+        {
+          "id":1,
+          "name":"Interior",
+          "bleedPrint":true,
+          "inks":
+          {
+            "inksDetails":"Tinta Negra",
+            "inksQuantity":1
+          },
+          "openedSize":"150x210mm",
+          "allTheSame":false,
+          "quantityOfPages":70,
+          "quantityOfVias":1,
+          "faces":"Doble Faz",
+          "materials":
+          {
+          "paper":"Obra Blanco",
+          "gr":"80"
+          },
+          'machine':'NO',
+          'paperSize':'305x230mm',
+          'sheetSize':'720x920mm',
+          'cutsPerSheet':9,
+          'quantityPerPaper':2,
+          'excess':5
+        }
+      ],
+      'price':1690
     }
     ];
