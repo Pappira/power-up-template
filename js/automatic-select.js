@@ -146,6 +146,32 @@ var createPossibilities = function(work){
           possibility['name'] = attr;
           possibility['values'] = work[attr];
           possibilities.push(possibility);
+        }else{
+          var items = work.items;
+          for (var i = 0; i < items.length;i++){
+            var item = items[i];
+            for(var itemAttr in item){
+              if(typeof item[itemAttr] == 'object' && itemAttr != "mandatoryFinishGroups"){
+                if ((item[itemAttr].length > 1) || (itemAttr == "optionalFinishes" && work[attr].length >0)){
+                  var possibility = {};
+                  possibility['itemId'] = i;
+                  possibility['itemName'] = item.name;
+                  possibility['name'] = itemAttr;
+                  possibility['values'] = item[itemAttr];
+                  possibilities.push(possibility);
+                }
+              }else if(itemAttr == "mandatoryFinishGroups"){
+                for (var j = 0; j < work[itemAttr].length ; j++){
+                    var possibility = {};
+                    possibility['itemId'] = i;
+                    possibility['itemName'] =  item.name;
+                    possibility['name'] = itemAttr + " // " + j;
+                    possibility['values'] = item[itemAttr][j].finishes;
+                    possibilities.push(possibility);
+                }
+              }
+            }
+          }
         }
       }
     }else if(attr == "mandatoryFinishGroups"){
@@ -160,31 +186,7 @@ var createPossibilities = function(work){
     }
   }
 
-  var items = work.items;
-  for (var i = 0; i < items.length;i++){
-    var item = items[i];
-    for(var itemAttr in item){
-      if(typeof item[itemAttr] == 'object' && itemAttr != "mandatoryFinishGroups"){
-        if ((item[itemAttr].length > 1) || (itemAttr == "optionalFinishes" && work[attr].length >0)){
-          var possibility = {};
-          possibility['itemId'] = i;
-          possibility['itemName'] = item.name;
-          possibility['name'] = itemAttr;
-          possibility['values'] = item[itemAttr];
-          possibilities.push(possibility);
-        }
-      }else if(itemAttr == "mandatoryFinishGroups"){
-        for (var j = 0; j < work[itemAttr].length ; j++){
-            var possibility = {};
-            possibility['itemId'] = i;
-            possibility['itemName'] =  item.name;
-            possibility['name'] = itemAttr + " // " + j;
-            possibility['values'] = item[itemAttr][j].finishes;
-            possibilities.push(possibility);
-        }
-      }
-    }
-  }
+  
   return possibilities;
 }
 
