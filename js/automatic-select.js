@@ -583,6 +583,7 @@ var getCombinations = function(estimate){
       var faces = [];
       var openedSize = [];
       var quantityOfVias = [];
+      var mandatoryFinishGroup = [];
       for (var j = 0; j  < item.quantityOfPages.length;j++){
           quantityOfPages.push('"item":{"id":'+i+ ', "name": "'+ item.name +  '", "pages": ' + item.quantityOfPages[j] + ',');
       }
@@ -598,10 +599,19 @@ var getCombinations = function(estimate){
       for (var j = 0; j  < item.quantityOfVias.length;j++){
         quantityOfVias.push('"quantityOfVias": '+ item.quantityOfVias[j] + ',');
       }
+      for (varj=0; j < item.mandatoryFinishGroups.length;j++){
+        var mandatoryFinish = [];
+        for(var k = 0; k < item.mandatoryFinishGroup[j].finishes.length;k++){
+          mandatoryFinish.push('finish": ' + item.mandatoryFinishGroup[j].finishes[k].finish + '",');
+        }
+        mandatoryFinishGroup.push(mandatoryFinish);
+      }
       for (var j = 0; j < item.materials.length; j++){
           quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(estimate.items.length-1)?']':','));
       }
-      var cases = allPossibleCases([quantityOfPages,quantityOfInks]);
+      var cases = allPossibleCases(mandatoryFinishGroup);
+      cases = allPossibleCases([cases,quantityOfPages]);
+      cases = allPossibleCases([cases,quantityOfInks]);
       cases = allPossibleCases([cases,openedSize]);
       cases = allPossibleCases([cases,quantityOfVias]);
       cases = allPossibleCases([cases,faces]);
