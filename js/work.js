@@ -112,6 +112,38 @@ var works = [
               "showToClientFinish":true
             }
           ]
+        },
+        {
+          "groupName": "Encuadernado2",
+          "finishes":
+          [
+            {
+              "finish":"Encuadernado HotMelt2",
+              "finishComment":"",
+              "showToClientFinish":true,
+              "incidences":
+              [
+                {
+                  "itemId":-1,
+                  "type":"optionalFinishes",
+                  "action":"add",
+                  "values":
+                  [
+                    {
+                      "finish":"Marca Páginas2",
+                      "finishComment":"",
+                      "showToClientFinish":true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "finish":"Encuadernado con Rulo Wire-o2",
+              "finishComment":"",
+              "showToClientFinish":true
+            }
+          ]
         }
       ],
       "items":
