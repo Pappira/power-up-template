@@ -312,12 +312,12 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
         var allH3 = document.getElementsByTagName("h3")
         var currentPositionElement;
         for (var i = 0; i < allH3.length;i++){
-          if(allH3.innerText == currentPositionText){
+          if(allH3[i].innerText == currentPositionText){
             currentPositionElement = allH3[i];
             break;
           }
         }
-        currentPositionElement = $('a[href="#' + currentPositionElement.getAttribute("id") + '"]')[0];
+        currentPositionElement = $('a[href="#' + currentPositionElement.parentElement.parentElement.getAttribute("id") + '"]')[0];
         checkAlreadySelectedPossibilities(currentPositionElement);
       }
 
