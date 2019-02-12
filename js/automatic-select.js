@@ -246,7 +246,6 @@ var navListItems = $('div.setup-panel div a'),
 var checkIncidences = function(element,currentItem,currentName,currentValue){
   
   if(haveToCheckIncidences){
-    work = JSON.parse(JSON.stringify(originalWork)); 
     var currentElementHaveIncidences = false;
     var item = work.items[currentItem];
     if (currentItem == -1){
@@ -261,12 +260,10 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
     if(currentElement.incidences){
       currentElementHaveIncidences = true;
     }
+    work = JSON.parse(JSON.stringify(originalWork)); 
 
-    if(currentElementHaveIncidences){
-
-
-      for (var itemId in selectedOptions) {
-        for (var name in selectedOptions[itemId]) {
+    for (var itemId in selectedOptions) {
+      for (var name in selectedOptions[itemId]) {
           for (var i = 0; i < selectedOptions[itemId][name].length;i++){
             var item = work.items[itemId];
             if (itemId == -1){
@@ -285,7 +282,7 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
                   if (incidence.action == 'add'){
                     for (var j = 0; j < incidence.values.length;j++){
                       if(!work[incidence.type].includes(incidence.values[j])){
-                          work[incidence.type].push(incidence.values[j]);
+                        work[incidence.type].push(incidence.values[j]);
                       }
                     }
                   }else if(incidence.action == 'replace'){
@@ -307,14 +304,15 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
           }
         }
       }
-      var possibilities = createPossibilities(work);
-      deleteWizard();
-      createWizard(possibilities);
-      checkAlreadySelectedPossibilities(element.parentElement.parentElement.parentElement.getAttribute("id"));
-    }
+      if(currentElementHaveIncidences){
+        var possibilities = createPossibilities(work);
+        deleteWizard();
+        createWizard(possibilities);
+        checkAlreadySelectedPossibilities(element.parentElement.parentElement.parentElement.getAttribute("id"));
+      }
 
-  }
-} 
+    }
+  } 
 
 var checkAlreadySelectedPossibilities = function(currentPosition){
   haveToCheckIncidences = false;
