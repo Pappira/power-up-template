@@ -114,7 +114,6 @@ var works = [
           ]
         }
       ],
-      "optionalFinishes":[],
       "items":
       [
         {
@@ -129,23 +128,6 @@ var works = [
           ],
           "openedSize":["150x210mm"],
           "allTheSame":false,
-          "quantityOfPages":[2],
-          "quantityOfVias":[1],
-          "faces":["Simple Faz"],
-          "materials":[
-            {
-              "paper":"Cartulina Blanca/Blanca",
-              "gr":"250"
-            },
-            {
-              "paper":"Coteado",
-              "gr":"300"
-            },
-            {
-              "paper":"Coteado",
-              "gr":"150"
-            }
-          ],
           "mandatoryFinishGroups":
           [
             {
@@ -241,6 +223,23 @@ var works = [
               ]  
             }
           ],
+          "quantityOfPages":[2],
+          "quantityOfVias":[1],
+          "faces":["Simple Faz"],
+          "materials":[
+            {
+              "paper":"Cartulina Blanca/Blanca",
+              "gr":"250"
+            },
+            {
+              "paper":"Coteado",
+              "gr":"300"
+            },
+            {
+              "paper":"Coteado",
+              "gr":"150"
+            }
+          ],
           "optionalFinishes":
           [
             {
@@ -262,7 +261,7 @@ var works = [
         },
         {
           "id":1,
-          "name":"Intrior",
+          "name":"Interior",
           "bleedPrint":true,
           "inks":
           [
@@ -300,6 +299,7 @@ var works = [
             }
           ]
         } 
-      ]
+      ],
+      "optionalFinishes":[]
     }
   ];
