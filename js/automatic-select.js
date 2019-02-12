@@ -599,12 +599,14 @@ var getCombinations = function(estimate){
       for (var j = 0; j  < item.quantityOfVias.length;j++){
         quantityOfVias.push('"quantityOfVias": '+ item.quantityOfVias[j] + ',');
       }
-      for (var j=0; j < item.mandatoryFinishGroups.length;j++){
-        var mandatoryFinish = [];
-        for(var k = 0; k < item.mandatoryFinishGroups[j].finishes.length;k++){
-          mandatoryFinish.push('finish": ' + item.mandatoryFinishGroups[j].finishes[k].finish + '",');
+      if(item.mandatoryFinishGroups){
+        for (var j=0; j < item.mandatoryFinishGroups.length;j++){
+          var mandatoryFinish = [];
+          for(var k = 0; k < item.mandatoryFinishGroups[j].finishes.length;k++){
+            mandatoryFinish.push('finish": ' + item.mandatoryFinishGroups[j].finishes[k].finish + '",');
+          }
+          mandatoryFinishGroup.push(mandatoryFinish);
         }
-        mandatoryFinishGroup.push(mandatoryFinish);
       }
       for (var j = 0; j < item.materials.length; j++){
           quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(estimate.items.length-1)?']':','));
