@@ -246,6 +246,7 @@ var navListItems = $('div.setup-panel div a'),
 var checkIncidences = function(element,currentItem,currentName,currentValue){
   
   if(haveToCheckIncidences){
+    var currentPositionText = element.parentElement.parentElement.parentElement.getElementsByTagName("h3")[0].innerText;
     var currentElementHaveIncidences = false;
     var item = work.items[currentItem];
     if (currentItem == -1){
@@ -308,7 +309,16 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
         var possibilities = createPossibilities(work);
         deleteWizard();
         createWizard(possibilities);
-        checkAlreadySelectedPossibilities(element.parentElement.parentElement.parentElement.getAttribute("id"));
+        var allH3 = document.getElementsByTagName("h3")
+        var currentPositionElement;
+        for (var i = 0; i < allH3.length;i++){
+          if(allH3.innerText == currentPositionText){
+            currentPositionElement = allH3[i];
+            break;
+          }
+        }
+        currentPositionElement = $('a[href="#' + currentPositionElement.getAttribute("id") + '"]')[0];
+        checkAlreadySelectedPossibilities(currentPositionElement);
       }
 
     }
@@ -329,7 +339,7 @@ var checkAlreadySelectedPossibilities = function(currentPosition){
       }
     }
   }
-  eventFire($('a[href="#' + currentPosition + '"]')[0], 'click');
+  eventFire(currentPosition, 'click');
   haveToCheckIncidences = true;
 }
 
