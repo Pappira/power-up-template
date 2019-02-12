@@ -603,7 +603,7 @@ var getCombinations = function(estimate){
         for (var j=0; j < item.mandatoryFinishGroups.length;j++){
           var mandatoryFinish = [];
           for(var k = 0; k < item.mandatoryFinishGroups[j].finishes.length;k++){
-            mandatoryFinish.push('finish": ' + item.mandatoryFinishGroups[j].finishes[k].finish + '",');
+            mandatoryFinish.push('"finish": "' + item.mandatoryFinishGroups[j].finishes[k].finish + '",');
           }
           mandatoryFinishGroup.push(mandatoryFinish);
         }
