@@ -582,7 +582,7 @@ var prices = [
     {
       "workId":1,
       "clossedSizes":"150x210mm",
-      "quantities":100,
+      "quantity":100,
       "mandatoryFinishGroups":
       [
         {
