@@ -535,11 +535,16 @@ var createEstimateAndTrelloCard = function(){
         var paper = currentItem.paper;
         var gr = currentItem.gr;
         var vias = currentItem.quantityOfVias;
+        var mandatoryFinishGroups = currentItem.mandatoryFinishGroups;
+        for(var k = 0; k < mandatoryFinishGroups.length;k++){
+          delete mandatoryFinishGroups[k].finishes.incidence;
+        }
         currentPossiblePrices = currentPossiblePrices.filter(function(v, i) {
           return (v.items[j].quantityOfPages == pages && v.items[j].inks.inksQuantity == inksQuantity && 
             v.items[j].inks.inksDetails == inksDetails && v.items[j].openedSize == openedSize && 
             v.items[j].faces ==  faces && v.items[j].materials.paper == paper && 
-            v.items[j].materials.gr == gr && v.items[j].quantityOfVias == vias);
+            v.items[j].materials.gr == gr && v.items[j].quantityOfVias == vias &&
+            v.items[j].mandatoryFinishGroups == mandatoryFinishGroups);
         })
       }
       work.prices.push(currentPossiblePrices[0]);
