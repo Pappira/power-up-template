@@ -216,7 +216,7 @@ var selectOption = function(){
   }else{
     selectedOptions[item][name] = [value];
   }
-  checkIncidences(this);
+  checkIncidences(this,item,name,value);
 }
 
 var startFunction = function(){
@@ -243,55 +243,74 @@ var navListItems = $('div.setup-panel div a'),
   $('div.setup-panel div a.btn-primary').trigger('click');
 };
 
-var checkIncidences = function(element){
+var checkIncidences = function(element,currentItem,currentName,currentValue){
   
   if(haveToCheckIncidences){
     work = JSON.parse(JSON.stringify(originalWork)); 
-    for (var itemId in selectedOptions) {
-      for (var name in selectedOptions[itemId]) {
-        for (var i = 0; i < selectedOptions[itemId][name].length;i++){
-          var item = work.items[itemId];
-          if (itemId == -1){
-            item = work;
-          }  
-          var currentElement;
-          if (name.includes("//")){
-            currentElement = item[name.split(" // ")[0]][name.split(" // ")[1]].finishes[selectedOptions[itemId][name][i]];
-          }else{
-            currentElement = item[name][i];
-          }
-          if(currentElement && currentElement.incidences){
-            for (var i = 0; i < currentElement.incidences.length;i++){
-              var incidence = currentElement.incidences[i];
-              if (incidence.itemId==-1){
-                if (incidence.action == 'add'){
-                  for (var j = 0; j < incidence.values.length;j++){
-                    if(!work[incidence.type].includes(incidence.values[j])){
-                        work[incidence.type].push(incidence.values[j]);
+    var currentElementHaveIncidences = false;
+    var item = work.items[currentItem];
+    if (currentItem == -1){
+      item = work;
+    }  
+    var currentElement;
+    if (currentName.includes("//")){
+      currentElement = item[currentName.split(" // ")[0]][currentName.split(" // ")[1]].finishes[currentValue];
+    }else{
+      currentElement = item[currentName][currentValue];
+    }
+    if(currentElement.incidences){
+      currentElementHaveIncidences = true;
+    }
+
+    if(currentElementHaveIncidences){
+
+
+      for (var itemId in selectedOptions) {
+        for (var name in selectedOptions[itemId]) {
+          for (var i = 0; i < selectedOptions[itemId][name].length;i++){
+            var item = work.items[itemId];
+            if (itemId == -1){
+              item = work;
+            }  
+            var currentElement;
+            if (name.includes("//")){
+              currentElement = item[name.split(" // ")[0]][name.split(" // ")[1]].finishes[selectedOptions[itemId][name][i]];
+            }else{
+              currentElement = item[name][i];
+            }
+            if(currentElement && currentElement.incidences){
+              for (var i = 0; i < currentElement.incidences.length;i++){
+                var incidence = currentElement.incidences[i];
+                if (incidence.itemId==-1){
+                  if (incidence.action == 'add'){
+                    for (var j = 0; j < incidence.values.length;j++){
+                      if(!work[incidence.type].includes(incidence.values[j])){
+                          work[incidence.type].push(incidence.values[j]);
+                      }
                     }
+                  }else if(incidence.action == 'replace'){
+                    work[incidence.type] = incidence.values;
                   }
-                }else if(incidence.action == 'replace'){
-                  work[incidence.type] = incidence.values;
-                }
-              }else{
-                if (incidence.action == 'add'){
-                  for (var j = 0; j < incidence.values.length;j++){
-                    if(!work.items[incidence.itemId][incidence.type].includes(incidence.values[j])){
-                      work.items[incidence.itemId][incidence.type].push(incidence.values[j]);
+                }else{
+                  if (incidence.action == 'add'){
+                    for (var j = 0; j < incidence.values.length;j++){
+                      if(!work.items[incidence.itemId][incidence.type].includes(incidence.values[j])){
+                        work.items[incidence.itemId][incidence.type].push(incidence.values[j]);
+                      }
                     }
+                  }else if(incidence.action == 'replace'){
+                    work.items[incidence.itemId][incidence.type] = incidence.values;
                   }
-                }else if(incidence.action == 'replace'){
-                  work.items[incidence.itemId][incidence.type] = incidence.values;
                 }
               }
             }
-            var possibilities = createPossibilities(work);
-            createWizard(possibilities);
-            deleteWizard();
-            checkAlreadySelectedPossibilities(element.parentElement.parentElement.parentElement.getAttribute("id"));
           }
         }
       }
+      var possibilities = createPossibilities(work);
+      deleteWizard();
+      createWizard(possibilities);
+      checkAlreadySelectedPossibilities(element.parentElement.parentElement.parentElement.getAttribute("id"));
     }
 
   }
