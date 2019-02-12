@@ -613,7 +613,9 @@ var getCombinations = function(estimate){
       }
       var cases = allPossibleCases([quantityOfPages,quantityOfInks]);
       var cases2 = allPossibleCases(mandatoryFinishGroup);
-      cases = allPossibleCases([cases,cases2]);
+      if(cases2 && cases2.length>0){
+              cases = allPossibleCases([cases,cases2]);
+      }
       cases = allPossibleCases([cases,openedSize]);
       cases = allPossibleCases([cases,quantityOfVias]);
       cases = allPossibleCases([cases,faces]);
