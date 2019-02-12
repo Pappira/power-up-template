@@ -285,27 +285,15 @@ var checkIncidences = function(element){
                 }
               }
             }
+            var possibilities = createPossibilities(work);
+            createWizard(possibilities);
+            deleteWizard();
+            checkAlreadySelectedPossibilities(element.parentElement.parentElement.parentElement.getAttribute("id"));
           }
         }
       }
     }
-    var possibilities = createPossibilities(work);
 
-    $.each($(".stepwizard-step"), function( index, value ) {
-      value.setAttribute("class","stepwizard-step asd");
-    });
-    var wizardElements = document.getElementById('wizardForm').children;
-    for(var i=0; i < wizardElements.length ; i++){
-      wizardElements[i].setAttribute("id",wizardElements[i].getAttribute("id")+"old")
-    }
-    createWizard(possibilities);
-    checkAlreadySelectedPossibilities(element.parentElement.parentElement.parentElement.getAttribute("id"));
-    $(".stepwizard-step.asd").remove();
-    for(var i=0; i < wizardElements.length ; i++){
-      if (wizardElements[i].getAttribute("id").indexOf("old")!=-1){
-        wizardElements[i].remove();
-      }
-    }
   }
 } 
 
@@ -324,7 +312,7 @@ var checkAlreadySelectedPossibilities = function(currentPosition){
       }
     }
   }
-  eventFire($('a[href="#' + currentPosition.substr(0,currentPosition.length-3) + '"]')[0], 'click');
+  eventFire($('a[href="#' + currentPosition + '"]')[0], 'click');
   haveToCheckIncidences = true;
 }
 
