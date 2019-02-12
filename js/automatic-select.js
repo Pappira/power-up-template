@@ -161,7 +161,7 @@ var createPossibilities = function(work){
                   possibilities.push(possibility);
                 }
               }else if(itemAttr == "mandatoryFinishGroups"){
-                for (var j = 0; j < work[itemAttr].length ; j++){
+                for (var j = 0; j < item[itemAttr].length ; j++){
                     var possibility = {};
                     possibility['itemId'] = i;
                     possibility['itemName'] =  item.name;
