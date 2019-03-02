@@ -253,6 +253,98 @@ var works = [
                   ]
                 }
               ]  
+            },
+            {
+              "groupName": "Tipo de Tapa 2",
+              "finishes": 
+              [
+                {
+                  "finish":"Tapa Flexible 2",
+                  "finishComment":"",
+                  "showToClientFinish":true,
+                  "incidences":
+                  [
+                    {
+                      "itemId":0,
+                      "type":"materials",
+                      "action":"replace",
+                      "values":
+                      [
+                        {
+                          "paper":"Cartulina Blanca/Blanca",
+                          "gr":"250"
+                        },
+                        {
+                          "paper":"Coteado",
+                          "gr":"300"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "finish":"Tapa SemiDura 2",
+                  "finishComment":"",
+                  "showToClientFinish":true,
+                  "incidences":
+                  [
+                    {
+                      "itemId":0,
+                      "type":"materials",
+                      "action":"replace",
+                      "values":
+                      [{
+                        "paper":"Cartulina Blanca/Blanca",
+                        "gr":"250"
+                      }]
+                    },
+                    {
+                      "itemId":-1,
+                      "type":"optionalFinishes",
+                      "action":"add",
+                      "values":
+                      [
+                        {
+                          "finish":"Cierre Elástico",
+                          "finishComment":"",
+                          "showToClientFinish":true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "finish":"Tapa Dura 2",
+                  "finishComment":"",
+                  "showToClientFinish":true,
+                  "incidences":
+                  [
+                    {
+                      "itemId":0,
+                      "type":"materials",
+                      "action":"replace",
+                      "values":
+                      {
+                        "paper":"Coteado",
+                        "gr":"150"
+                      }
+                    },
+                    {
+                      "itemId":-1,
+                      "type":"optionalFinishes",
+                      "action":"add",
+                      "values":
+                      [
+                        {
+                          "finish":"Cierre Elástico",
+                          "finishComment":"",
+                          "showToClientFinish":true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]  
             }
           ],
           "quantityOfPages":[2],
