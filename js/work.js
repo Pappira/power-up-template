@@ -201,10 +201,10 @@ var works = [
                       "type":"materials",
                       "action":"replace",
                       "values":
-                      {
+                      [{
                         "paper":"Cartulina Blanca/Blanca",
                         "gr":"250"
-                      }
+                      }]
                     },
                     {
                       "itemId":-1,
