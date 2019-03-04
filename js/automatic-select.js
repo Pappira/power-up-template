@@ -600,11 +600,16 @@ var getCombinations = function(estimate){
         quantityOfVias.push('"quantityOfVias": '+ item.quantityOfVias[j] + ',');
       }
       if(item.mandatoryFinishGroups){
+        var firstOfFirsts = true;
         for (var j=0; j < item.mandatoryFinishGroups.length;j++){
+          var lastOfLasts = j == item.mandatoryFinishGroups.length -1;
           var mandatoryFinish = [];
           for(var k = 0; k < item.mandatoryFinishGroups[j].finishes.length;k++){
-            mandatoryFinish.push('"finish": "' + item.mandatoryFinishGroups[j].finishes[k].finish + '",');
+            var last = k == item.mandatoryFinishGroups[j].finishes.length-1;
+            var first = k ==0;
+            mandatoryFinish.push('"' + item.mandatoryFinishGroups[j].finishes[k].finish + (lastOfLasts?'"':'",'));
           }
+          firstOfFirsts = false;
           mandatoryFinishGroup.push(mandatoryFinish);
         }
       }
@@ -613,6 +618,9 @@ var getCombinations = function(estimate){
       }
       var cases = allPossibleCases([quantityOfPages,quantityOfInks]);
       var cases2 = allPossibleCases(mandatoryFinishGroup);
+      for (var j = 0; j < cases2.length;j++){
+        cases2[j] = '"finishes":[' + cases2[j] + "],";
+      }
       if(cases2 && cases2.length>0){
               cases = allPossibleCases([cases,cases2]);
       }
