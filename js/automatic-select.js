@@ -618,8 +618,9 @@ var getCombinations = function(estimate){
         var mandatoryFinishGroupsString = "mandatoryFinishGroups:[";
         var separated = cases2[j].split(",");
         for (var k = 0; k  < separated.length;k++){
-          var mandatoryFinishGroups = JSON.parse(JSON.stringify(item.mandatoryFinishGroups[separated[k].split("-")[0]]));
-          var finishes = cutArray(mandatoryFinishGroups.finishes,separated[k].split("-")[0]);
+          var currentSeparated = separated[k].substring(1,separated[0].length-1);
+          var mandatoryFinishGroups = JSON.parse(JSON.stringify(item.mandatoryFinishGroups[currentSeparated.split("-")[0]]));
+          var finishes = cutArray(mandatoryFinishGroups.finishes,currentSeparated.split("-")[0]);
           mandatoryFinishGroups.finishes = finishes; 
           mandatoryFinishGroupsString += JSON.stringify(mandatoryFinishGroups) + (k==separated.length-1?'':',')
         }
