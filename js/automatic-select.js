@@ -544,7 +544,7 @@ var createEstimateAndTrelloCard = function(){
             v.items[j].inks.inksDetails == inksDetails && v.items[j].openedSize == openedSize && 
             v.items[j].faces ==  faces && v.items[j].materials.paper == paper && 
             v.items[j].materials.gr == gr && v.items[j].quantityOfVias == vias &&
-            v.items[j].mandatoryFinishGroups == mandatoryFinishGroups);
+            JSON.stringify(v.items[j].mandatoryFinishGroups) == JSON.stringify(mandatoryFinishGroups));
         })
       }
       work.prices.push(currentPossiblePrices[0]);
