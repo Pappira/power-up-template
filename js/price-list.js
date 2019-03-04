@@ -617,6 +617,15 @@ var prices = [
                 "finishComment":"",
                 "showToClientFinish":true
               }
+            },
+            {
+              "groupName": "Tipo de Tapa 2",
+              "finishes": 
+              {
+                "finish":"Tapa SemiDura 2",
+                "finishComment":"",
+                "showToClientFinish":true,
+              }
             }
           ],
           "quantityOfPages":2,

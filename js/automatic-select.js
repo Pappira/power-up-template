@@ -621,7 +621,7 @@ var getCombinations = function(estimate){
           var currentSeparated = separated[k].substring(1,separated[0].length-1);
           var mandatoryFinishGroups = JSON.parse(JSON.stringify(item.mandatoryFinishGroups[currentSeparated.split("-")[0]]));
           var finishes = cutArray(mandatoryFinishGroups.finishes,currentSeparated.split("-")[0]);
-          mandatoryFinishGroups.finishes = finishes; 
+          mandatoryFinishGroups.finishes = finishes[0]; 
           mandatoryFinishGroupsString += JSON.stringify(mandatoryFinishGroups) + (k==separated.length-1?'':',')
         }
         cases2[j] = mandatoryFinishGroupsString + "],";
