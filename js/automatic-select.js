@@ -536,8 +536,10 @@ var createEstimateAndTrelloCard = function(){
         var gr = currentItem.gr;
         var vias = currentItem.quantityOfVias;
         var mandatoryFinishGroups = currentItem.mandatoryFinishGroups;
-        for(var k = 0; k < mandatoryFinishGroups.length;k++){
-          delete mandatoryFinishGroups[k].finishes.incidences;
+        if(mandatoryFinishGroups){
+          for(var k = 0; k < mandatoryFinishGroups.length;k++){
+            delete mandatoryFinishGroups[k].finishes.incidences;
+          }
         }
         currentPossiblePrices = currentPossiblePrices.filter(function(v, i) {
           return (v.items[j].quantityOfPages == pages && v.items[j].inks.inksQuantity == inksQuantity && 
