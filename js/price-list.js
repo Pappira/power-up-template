@@ -593,6 +593,15 @@ var prices = [
             "finishComment":"",
             "showToClientFinish":true
           }
+        },
+        {
+          "groupName": "Encuadernado2",
+          "finishes":
+          {
+            "finish":"Encuadernado HotMelt2",
+            "finishComment":"",
+            "showToClientFinish":true
+          }
         }
       ],
       "items":

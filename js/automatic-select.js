@@ -517,10 +517,16 @@ var createEstimateAndTrelloCard = function(){
     for (var i = 0; i < allCombinations.length;i++){
       var currentCombination = allCombinations[i];
       var quantity = currentCombination.quantity;
+      var generalMandatoryFinishGroups = currentCombination.mandatoryFinishGroups;
 
+      if(generalMandatoryFinishGroups){
+        for(var k = 0; k < generalMandatoryFinishGroups.length;k++){
+          delete generalMandatoryFinishGroups[k].finishes.incidences;
+        }
+      }
 
       currentPossiblePrices = possiblePrices.filter(function(v, i) {
-        return (v.quantity == quantity);
+        return (v.quantity == quantity && JSON.stringify(v.mandatoryFinishGroups) == JSON.stringify(generalMandatoryFinishGroups));
       })
 
 
