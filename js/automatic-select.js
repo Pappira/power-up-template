@@ -609,11 +609,11 @@ var getCombinations = function(estimate){
   }
 
   if (generalMandatoryFinishGroupsCases && generalMandatoryFinishGroupsCases.length > 0){
-    combinations.push([quantities,generalMandatoryFinishGroupsCases]);
+    combinations.push(allPossibleCases([quantities,generalMandatoryFinishGroupsCases]));
   }else{    
     combinations.push(quantities);
   }
-  
+
   for (var i = 0; i  <  estimate.items.length; i++){
       var item = estimate.items[i];
       items.push(item.name);
