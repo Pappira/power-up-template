@@ -578,9 +578,41 @@ var getCombinations = function(estimate){
   var combinationsObject = [];
   combinations = [];
   var quantities = [];
+
+  var generalMandatoryFinishGroups = [];
+  if(estimate.mandatoryFinishGroups){
+    for (var j=0; j < estimate.mandatoryFinishGroups.length;j++){
+      var lastOfLasts = j == estimate.mandatoryFinishGroups.length -1; 
+      var generalMandatoryFinish = [];
+      for(var k = 0; k < estimate.mandatoryFinishGroups[j].finishes.length;k++){
+        generalMandatoryFinish.push('"' + j + '-' + k + (lastOfLasts?'"':'",'));
+      }
+      generalMandatoryFinishGroups.push(generalMandatoryFinish);
+    }
+  }
+
+  var generalMandatoryFinishGroupsCases = allPossibleCases(generalMandatoryFinishGroups);
+  for (var j = 0; j < generalMandatoryFinishGroupsCases.length;j++){
+    var mandatoryFinishGroupsString = '"mandatoryFinishGroups":[';
+    var separated = generalMandatoryFinishGroupsCases[j].split(",");
+    for (var k = 0; k  < separated.length;k++){
+      var currentSeparated = separated[k].substring(1,separated[0].length-1);
+      var mandatoryFinishGroups = JSON.parse(JSON.stringify(estimate.mandatoryFinishGroups[currentSeparated.split("-")[0]]));
+      var finishes = cutArray(mandatoryFinishGroups.finishes,currentSeparated.split("-")[1]);
+      mandatoryFinishGroups.finishes = finishes[0]; 
+      mandatoryFinishGroupsString += JSON.stringify(mandatoryFinishGroups) + (k==separated.length-1?'':',')
+    }
+    generalMandatoryFinishGroupsCases[j] = mandatoryFinishGroupsString + "],";
+  }
+
+
+
+
   for (var i = 0; i  < estimate.quantity.length; i++){
     quantities.push('{"quantity":' + estimate.quantity[i]+',');
   }
+
+
   combinations.push(quantities);
   for (var i = 0; i  <  estimate.items.length; i++){
       var item = estimate.items[i];
@@ -619,6 +651,13 @@ var getCombinations = function(estimate){
       }
       for (var j = 0; j < item.materials.length; j++){
           quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(estimate.items.length-1)?']':','));
+      }
+      var cases;
+      if (generalMandatoryFinishGroupsCases && generalMandatoryFinishGroupsCases.length > 0){
+        cases = allPossibleCases([quantityOfPages,generalMandatoryFinishGroupsCases]);
+        cases = allPossibleCases([cases,quantityOfInks]);
+      }else{
+        cases = allPossibleCases([quantityOfPages,quantityOfInks]);
       }
       var cases = allPossibleCases([quantityOfPages,quantityOfInks]);
       var cases2 = allPossibleCases(mandatoryFinishGroup);
