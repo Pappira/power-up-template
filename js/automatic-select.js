@@ -604,16 +604,16 @@ var getCombinations = function(estimate){
     }
     generalMandatoryFinishGroupsCases[j] = mandatoryFinishGroupsString + "],";
   }
-
-
-
-
   for (var i = 0; i  < estimate.quantity.length; i++){
     quantities.push('{"quantity":' + estimate.quantity[i]+',');
   }
 
-
-  combinations.push(quantities);
+  if (generalMandatoryFinishGroupsCases && generalMandatoryFinishGroupsCases.length > 0){
+    combinations.push([quantities,generalMandatoryFinishGroupsCases]);
+  }else{    
+    combinations.push(quantities);
+  }
+  
   for (var i = 0; i  <  estimate.items.length; i++){
       var item = estimate.items[i];
       items.push(item.name);
@@ -651,13 +651,6 @@ var getCombinations = function(estimate){
       }
       for (var j = 0; j < item.materials.length; j++){
           quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(estimate.items.length-1)?']':','));
-      }
-      var cases;
-      if (generalMandatoryFinishGroupsCases && generalMandatoryFinishGroupsCases.length > 0){
-        cases = allPossibleCases([quantityOfPages,generalMandatoryFinishGroupsCases]);
-        cases = allPossibleCases([cases,quantityOfInks]);
-      }else{
-        cases = allPossibleCases([quantityOfPages,quantityOfInks]);
       }
       var cases = allPossibleCases([quantityOfPages,quantityOfInks]);
       var cases2 = allPossibleCases(mandatoryFinishGroup);
