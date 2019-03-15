@@ -1,3 +1,56 @@
+var extraPrices = [
+  {
+    "workId":1,
+    "quantity":100,    
+    "optionalFinishes":
+      [
+        {
+          "finish":"Marca Páginas",
+          "finishComment":"",
+          "showToClientFinish":true,
+          "price": 2050
+        },
+        {
+          "finish":"Cierre Elástico",
+          "finishComment":"",
+          "showToClientFinish":true,
+          "price": 5000
+        }
+      ],
+    "items":
+    [
+      {
+        "id":0,
+        "optionalFinishes":
+        [
+          {
+            "finish":"Laminado Mate",
+            "comment":"",
+            "showToClient":true,
+            "price": 1650
+          },
+          {
+            "finish":"Laminado Brillo",
+            "comment":"",
+            "showToClient":true,
+            "price": 1000
+          },
+          {
+            "finish":"Laminado Mate o Brillo a definir",
+            "comment":"",
+            "showToClient":true,
+            "price": 2000
+          }
+        ]
+      },
+      {
+        "id":1,
+      }
+    ],
+    
+  }
+]
+
 var prices = [
     {
       'workId':0,
@@ -608,6 +661,7 @@ var prices = [
       [
         {
           "id":0,
+          "name":"Tapas",
           "bleedPrint":true,
           "inks":
           {
