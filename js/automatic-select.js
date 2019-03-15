@@ -602,7 +602,7 @@ var createEstimateAndTrelloCard = function(){
           }
         }
         cutPossibleExtraPrice.optionalFinishes = cutArray(cutPossibleExtraPrice.optionalFinishes,indexToPreserve);
-        for(var j= 0; j < work.items.length;i++){
+        for(var j= 0; j < work.items.length;j++){
           indexToPreserve = [];
           var currentWorkExtraPriceItem = work.items[j];
           var currentExtraPriceItem;
@@ -612,16 +612,20 @@ var createEstimateAndTrelloCard = function(){
               break;
             }
           }
-          for (var k = 0; k < currentWorkExtraPriceItem.optionalFinishes.length;k++){
-            for (var q = 0; q < currentExtraPriceItem.optionalFinishes.length;q++){
-              if(currentWorkExtraPriceItem.optionalFinishes[k].finish == currentExtraPriceItem.optionalFinishes[q].finish){
-                indexToPreserve.push(q);
-                break; 
+          
+          if(currentWorkExtraPriceItem.optionalFinishes && currentExtraPriceItem.optionalFinishes){
+            for (var k = 0; k < currentWorkExtraPriceItem.optionalFinishes.length;k++){
+              for (var q = 0; q < currentExtraPriceItem.optionalFinishes.length;q++){
+                if(currentWorkExtraPriceItem.optionalFinishes[k].finish == currentExtraPriceItem.optionalFinishes[q].finish){
+                  indexToPreserve.push(q);
+                  break; 
+                }
               }
             }
           }
-          
-        cutPossibleExtraPrice.items[j].optionalFinishes = cutArray(cutPossibleExtraPrice.items[j].optionalFinishes,indexToPreserve);
+          if(indexToPreserve && indexToPreserve.length >0){       
+            cutPossibleExtraPrice.items[j].optionalFinishes = cutArray(cutPossibleExtraPrice.items[j].optionalFinishes,indexToPreserve);
+          }
         }
         if(!(work["optionalFinishesPrices"] && work["optionalFinishesPrices"].length>0)){
           work["optionalFinishesPrices"] = [];
