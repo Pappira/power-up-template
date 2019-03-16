@@ -222,7 +222,8 @@ var createTextForCard = function(estimate){
 	if (estimate['comments']){
 		text += '**Comentario: **' + estimate['comments']['internalComments']+ '\n';
 	}
-	if(estimate.prices){
+	//TODO Solo poner el precio si existe la selected option.
+	/*if(estimate.prices){
 		if (!estimate.SelectedOption){
 			estimate.prices.sort(compareValues());
             text += '##Precios' + '\n';
@@ -241,8 +242,6 @@ var createTextForCard = function(estimate){
 							+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
 							+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
 						}
-					}else{
-						priceText = "Precio";
 					}
 					if(lastPriceText !=priceText){
 						text += '####' + priceText + '\n';
@@ -254,7 +253,7 @@ var createTextForCard = function(estimate){
 		}else{
 			text +='**Precio: **$ ' + estimate.prices[estimate.SelectedOption].price + ' + IVA' + '\n';
 		}
-	}
+	}*/
 	if (estimate['customer']){
 		text += '##Cliente' + '\n';
 		text += estimate['customer']['comenrcialName']?'**Nombre Fantasía: **' + estimate['customer']['comenrcialName'] + '\n':'';
