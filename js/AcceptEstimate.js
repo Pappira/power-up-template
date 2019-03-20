@@ -225,3 +225,12 @@ var createFormButton = function(step,text,next,finish){
  var updateEstimateAndTrelloCard = function(){
    console.log("holaaa");
  }
+
+ var createWizardButton = function(step,name){
+  var div = createElement('div','stepwizard-step'); 
+  var a = createElement('a','btn ' + (step==1?'btn-primary':'btn-default') +' btn-circle','',step,'button','','','#step-'+step,(step==1?'':'disabled'));
+  var p = createElement('p','','',name);
+  div.appendChild(a);
+  div.appendChild(p);
+  return div;
+}  
