@@ -427,22 +427,22 @@ var createWizardButton = function(step,name){
 }  
 
 var createFormButton = function(step,text,next,finish){
- var button;
-  if(!finish){
-    button = createElement('button','btn ' + (next?'nextBtn ':'prevBtn ') + 
-      'btn-lg ' + (next?'pull-right ':'pull-left '),'',(next?'Avanzar a ' + text:'Volver a ' + text),'button');
-      next?button.addEventListener('click',nextButtonClick):button.addEventListener('click',previuosButtonClick);
-     }else{
-      var divButton = createElement('div');
-      var thisButton = createElement('button','btn ' +'nextBtn ' + 'btn-lg ' + 'pull-right ','',text,'button');
-      thisButton.addEventListener('click',createEstimateAndTrelloCard);
-      var divLoader = createElement('div','','loader');
-      divButton.appendChild(thisButton);
-      divButton.appendChild(divLoader);
-      button = divButton;
-  }
-  return button;
-} 
+  var button;
+   if(!finish){
+     button = createElement('button','btn ' + (next?'nextBtn ':'prevBtn ') + 
+       'btn-lg ' + (next?'pull-right ':'pull-left '),'',(next?'Avanzar a ' + text:'Volver a ' + text),'button');
+       next?button.addEventListener('click',nextButtonClick):button.addEventListener('click',previuosButtonClick);
+      }else{
+       var divButton = createElement('div');
+       var thisButton = createElement('button','btn ' +'nextBtn ' + 'btn-lg ' + 'pull-right ','',text,'button');
+       thisButton.addEventListener('click',createEstimateAndTrelloCard);
+       var divLoader = createElement('div','','loader');
+       divButton.appendChild(thisButton);
+       divButton.appendChild(divLoader);
+       button = divButton;
+   }
+   return button;
+ } 
 
 var checkMandatoryFieldsSelected = function(){
   var possibilities = createPossibilities(work);
@@ -577,7 +577,7 @@ var createEstimateAndTrelloCard = function(){
             var workItem = work.items[j];
             for (var itemProp in priceItem) {
               if (itemProp != "optionalFinishes" && itemProp!="id"){
-                if(!JSON.stringify(workItem[itemProp]).includes(JSON.stringify(priceItem[prop]))){
+                if(!JSON.stringify(workItem[itemProp]).includes(JSON.stringify(priceItem[itemProp]))){
                   isPossible = false;
                   break;
                 }
