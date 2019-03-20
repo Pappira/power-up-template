@@ -19,7 +19,9 @@ t.render(function(){
 var createWorkTypeSelectPanel = function(){
   var wizardForm =  document.getElementById('wizardForm');
   var wizardElement = createScreen('AcceptEstimate','Aceptar Presupuesto',estimate,nextAfterAcceptedEstimateSelect);
-  wizardForm.appendChild(wizardElement);
+  if(wizardElement){
+    wizardForm.appendChild(wizardElement);
+  }
 }
 
 var createScreen = function(type,titulo,estimate,nextFunction){
