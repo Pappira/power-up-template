@@ -104,7 +104,7 @@ var createPossibilities = function(){
       if (isPossible){
         for(var j = 0; j <possibleExtraPrice.optionalFinishes.length;j++ ){
           var possibility = {};
-          possibility['itemId'] = i + "-" + j +"-general";
+          possibility['itemId'] = "-1-" + i + "-" + j;
           possibility['values'] = possibleExtraPrice.optionalFinishes[j].finish;
           generalFinishesToShow.push(possibility);
         }
@@ -112,7 +112,7 @@ var createPossibilities = function(){
           if(possibleExtraPrice.items[j] && possibleExtraPrice.items[j].optionalFinishes){
             for (var k = 0; k < possibleExtraPrice.items[j].optionalFinishes.length;k++){
               var possibility = {};
-              possibility['itemId'] = i + "-" + j + "-" + k;
+              possibility['itemId'] = j + "-" + i + "-" + k;
               possibility['values'] = possibleExtraPrice.items[j].optionalFinishes[k].finish;
               if(!itemFinishesToShow[j] || itemFinishesToShow[j].length==0){
                 itemFinishesToShow[j] = [];
@@ -263,4 +263,34 @@ var createRevealCard = function(image,title,type,id,functionOnClick){
     divCard.addEventListener('click',functionOnClick)
   }
   return divCol;
+}
+
+var selectOption = function(){ 
+  var elementId = $(this).attr('id');
+  var item;
+  if (elementId.charAt(0)=='-'){
+    item = -1;
+    elementId = elementId.substring(3);
+  }else{
+    var item = elementId.substring(0,elementId.indexOf('-'));
+    elementId = elementId.substring(elementId.indexOf('-')+1);
+  }
+  var extraPriceId = elementId.substring(0,elementId.indexOf('-'));
+  var finishId = parseInt(elementId.substring(elementId.indexOf('-')+1));
+
+  if (!selectedOptions[item]){
+    selectedOptions[item] = {};
+  }
+  if (selectedOptions[item][extraPriceId]){
+    if(selectedOptions[item][extraPriceId].indexOf(finishId) == -1){
+      selectedOptions[item][extraPriceId].push(finishId);
+    }else{
+      removeItem = finishId;
+      selectedOptions[item][extraPriceId] = jQuery.grep(selectedOptions[item][extraPriceId],function(value1) {
+        return value1 != removeItem;
+      });
+    }
+  }else{
+    selectedOptions[item][extraPriceId] = [finishId];
+  }
 }
