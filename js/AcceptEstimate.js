@@ -163,9 +163,9 @@ var createWizard = function(combinations){
   
   for(var i = 0; i < combinations[1].length; i++){
     var combination = combinations[1][i];
-    var wizardButton = createWizardButton(i+2,"Terminaciones de " + work.items[i].name + " opcionales");
+    var wizardButton = createWizardButton(i+2,"Terminaciones de " + estimate.items[i].name + " opcionales");
     divContainer.appendChild(wizardButton);
-    var wizardElement = createWizardElement(1,combination,"Terminaciones de " + work.items[i].name + " opcionales");
+    var wizardElement = createWizardElement(1,combination,"Terminaciones de " + estimate.items[i].name + " opcionales");
     wizardForm.appendChild(wizardElement);
   }
 
