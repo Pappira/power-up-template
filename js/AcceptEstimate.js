@@ -109,7 +109,7 @@ var createPossibilities = function(){
           generalFinishesToShow.push(possibility);
         }
         for(var j = 0; j < possibleExtraPrice.items.length;j++){
-          if(possibleExtraPrice.items[j]){
+          if(possibleExtraPrice.items[j] && possibleExtraPrice.items[j].optionalFinishes){
             for (var k = 0; k < possibleExtraPrice.items[j].optionalFinishes.length;k++){
               var possibility = {};
               possibility['itemId'] = i + "-" + j + "-" + k;
