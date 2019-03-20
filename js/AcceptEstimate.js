@@ -109,14 +109,16 @@ var createPossibilities = function(){
           generalFinishesToShow.push(possibility);
         }
         for(var j = 0; j < possibleExtraPrice.items.length;j++){
-          for (var k = 0; k < possibleExtraPrice.items[j].optionalFinishes.length;k++){
-            var possibility = {};
-            possibility['itemId'] = i + "-" + j + "-" + k;
-            possibility['values'] = possibleExtraPrice.items[j].optionalFinishes[k].finish;
-            if(!itemFinishesToShow[j] || itemFinishesToShow[j].length==0){
-              itemFinishesToShow[j] = [];
+          if(possibleExtraPrice.items[j]){
+            for (var k = 0; k < possibleExtraPrice.items[j].optionalFinishes.length;k++){
+              var possibility = {};
+              possibility['itemId'] = i + "-" + j + "-" + k;
+              possibility['values'] = possibleExtraPrice.items[j].optionalFinishes[k].finish;
+              if(!itemFinishesToShow[j] || itemFinishesToShow[j].length==0){
+                itemFinishesToShow[j] = [];
+              }
+              itemFinishesToShow[j].push(possibility);
             }
-            itemFinishesToShow[j].push(possibility);
           }
         }
       }
