@@ -321,4 +321,3 @@ var nextButtonClick = function(){
   if (isValid)
     nextStepWizard.removeAttr('disabled').trigger('click');
 };
- 
