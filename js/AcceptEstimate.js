@@ -236,3 +236,31 @@ var createFormButton = function(step,text,next,finish){
   div.appendChild(p);
   return div;
 }  
+
+var createRevealCard = function(image,title,type,id,functionOnClick){
+  var divCol = createElement('div','col m4','','');
+  var divCard = createElement('div','card',type + '-' + id,'');
+  var divCardImage = createElement('div','card-image waves-effect waves-block waves-light','','');
+  var img = createElement('img','activator','','','','','','','',['src'],[image]);
+  var span = createElement('span','card-title activator grey-text text-darken-4','',title);
+
+  divCardImage.appendChild(img);
+  divCardImage.appendChild(span);
+
+  var divCardReveal = createElement('div','card-reveal','','');
+  var spanReveal = createElement('span','card-title grey-text text-darken-4');
+  var iClose = createElement('i','material-icons right',type + '-' + title);
+
+  spanReveal.appendChild(iClose);
+  divCardReveal.appendChild(spanReveal);
+  divCard.addEventListener('click',selectOption);
+  divCard.appendChild(divCardImage);
+  divCard.appendChild(divCardReveal);
+
+  divCol.appendChild(divCard);
+
+  if (functionOnClick){
+    divCard.addEventListener('click',functionOnClick)
+  }
+  return divCol;
+}
