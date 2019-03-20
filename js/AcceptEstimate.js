@@ -66,7 +66,7 @@ var nextAfterAcceptedEstimateSelect = function(){
     estimate["SelectedOption"] = 0;
   }
   if (estimate.optionalFinishesPrices && estimate.optionalFinishesPrices.length>0){
-      var possibilities = createPossibilities;
+      var possibilities = createPossibilities();
       deleteWizard();
       createWizard(possibilities);
 
