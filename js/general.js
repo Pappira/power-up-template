@@ -162,7 +162,7 @@ var createTextForCard = function(estimate){
 				text += currentOptionalFinish[i].finishComment!=""?'      ' + currentOptionalFinish[i].finishComment + '\n':'';
 			}
 		}else{
-			var optionalFinishesPrices = estimate.optionalFinishesPrices;
+			var optionalFinishesPrices = estimate.selectedExtraPrices;
 			for (var i = 0; i < optionalFinishesPrices.length; i++){
 				for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
 					text += i + '. ' + optionalFinishesPrices[i].optionalFinishes[j].finish + '\n';	
@@ -231,7 +231,7 @@ var createTextForCard = function(estimate){
 						text += currentItemOptionalFinish[k].finishComment?'      ' + currentItemOptionalFinish[k].finishComment + '\n':'';
 					}
 				}else{
-					var optionalFinishesPrices = estimate.optionalFinishesPrices;
+					var optionalFinishesPrices = estimate.selectedExtraPrices;
 					for (var j = 0; j < optionalFinishesPrices.length; j++){
 						for (var k = 0; k < optionalFinishesPrices[j].items[i].optionalFinishes.length;k++){
 							text += i + '. ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finish + '\n';	
