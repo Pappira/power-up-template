@@ -145,7 +145,7 @@ var createTextForCard = function(estimate){
 		text += '###Terminaciones Generales' + '\n\n';
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
 		if(estimate.SelectedOption!=null){
-			currentMandatoryFinishGroups = estimate.prices.mandatoryFinishGroups;
+			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
 		}
 		for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
 			text += i + '. ' + currentMandatoryFinishGroups[i].groupName + '\n';
@@ -215,7 +215,7 @@ var createTextForCard = function(estimate){
 				text += '###Terminaciones' + '\n\n';
 				var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
 				if(estimate.SelectedOption!=null){
-					currentItemMandatoryFinishGroups = estimate.prices.items[i].mandatoryFinishGroups;
+					currentItemMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].items[i].mandatoryFinishGroups;
 				}
 				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
 					text += k + '. ' + currentItemMandatoryFinishGroups[k].groupName + '\n';
