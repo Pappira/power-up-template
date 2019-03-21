@@ -95,6 +95,13 @@ var createElement = function(typeValue,className,id,text,type,forValue,value,hre
 	return createElement;
 };
 
+var cutArray = function(originalArray,indexToCut){
+  var a =  jQuery.grep(originalArray, function(n, i ) {
+    return indexToCut?indexToCut.indexOf(i)!=-1:false;
+  });
+  return a;
+}
+
 var updateCard = function(estimate) {
 	startLoader();
 	t.card('all')

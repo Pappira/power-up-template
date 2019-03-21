@@ -228,6 +228,28 @@ var createFormButton = function(step,text,next,finish){
 
  var updateEstimateAndTrelloCard = function(){
   var extraPrices = JSON.parse(JSON.stringify(estimate.optionalFinishesPrices));
+
+
+  for (var extrapriceId = 0; extraPriceId < estimate.optionalFinishesPrices.length;extrapriceId++){
+    if (estimate.optionalFinishesPrices[extrapriceId].optionalFinishes){
+      if(selectedOptions[-1][extrapriceId]){
+        extraPrices[extraPriceId].optionalFinishes = cutArray(extraPrices[extraPriceId].optionalFinishes,selectedOptions[-1][extraPriceId]);
+      }else{
+        delete extraPrices[extraPriceId].optionalFinishes;
+      }
+    }
+    for(var elementId = 0; elementId < estimate.optionalFinishesPrices[extrapriceId].items.length; elementId++ ){
+      if (estimate.optionalFinishesPrices[extrapriceId].items[elementId]){
+        if(selectedOptions[elementId][extrapriceId]){
+          extraPrices[extraPriceId].items[elementId] = cutArray(extraPrices[extraPriceId].items[elementId],selectedOptions[elementId][extraPriceId]);
+        }else{
+          delete extraPrices[extraPriceId].items[elementId];
+        }
+      }
+    }
+  }
+/*
+
   for (var elementId in selectedOptions) {
     for (var extraPriceId in selectedOptions[elementId]) {
         if(elementId==-1){
@@ -236,7 +258,7 @@ var createFormButton = function(step,text,next,finish){
           extraPrices[extraPriceId].items[elementId] = cutArray(extraPrices[extraPriceId].items[elementId],selectedOptions[elementId][extraPriceId]);
         }
     }
-  }
+  }*/
   estimate.selectedExtraPrices = extraPrices;
 
 

@@ -643,13 +643,6 @@ var createEstimateAndTrelloCard = function(){
   }
 }
 
-var cutArray = function(originalArray,indexToCut){
-  var a =  jQuery.grep(originalArray, function(n, i ) {
-    return indexToCut?indexToCut.indexOf(i)!=-1:false;
-  });
-  return a;
-}
-
 /*var deleteFromArray = function(originalArray,indexToCut){
   var a =  jQuery.grep(originalArray, function(n, i ) {
     return indexToCut?indexToCut.indexOf(i)!==1:false;
