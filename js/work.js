@@ -64,7 +64,7 @@ var works = [
           'finishes':[
             {
               'finish':'Laminado Mate',
-              'comment':'asd',
+              'finishComment':'asd',
               'showToClient':true
             }
           ]
@@ -368,17 +368,17 @@ var works = [
           [
             {
               "finish":"Laminado Mate",
-              "comment":"",
+              "finishComment":"",
               "showToClient":true
             },
             {
               "finish":"Laminado Brillo",
-              "comment":"",
+              "finishComment":"",
               "showToClient":true
             },
             {
               "finish":"Laminado Mate o Brillo a definir",
-              "comment":"",
+              "finishComment":"",
               "showToClient":true
             }
           ]

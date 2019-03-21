@@ -25,19 +25,19 @@ var extraPrices = [
         [
           {
             "finish":"Laminado Mate",
-            "comment":"",
+            "finishComment":"",
             "showToClient":true,
             "price": 1650
           },
           {
             "finish":"Laminado Brillo",
-            "comment":"",
+            "finishComment":"",
             "showToClient":true,
             "price": 1000
           },
           {
             "finish":"Laminado Mate o Brillo a definir",
-            "comment":"",
+            "finishComment":"",
             "showToClient":true,
             "price": 2000
           }
