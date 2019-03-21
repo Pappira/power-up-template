@@ -45,10 +45,16 @@ var isAuthorized = function(t){
     });
   };
 
-  var addCheckListToCard = function(t,checkList){
+  var addCheckListToCard = function(t,currentCheckList,checkListItems){
     return isAuthorized(t).then(function(authorized){
       if(authorized.authorized){
-        return Trello.post("/checklists", checkList);
+        return Trello.post("/checklists", currentCheckList, function(checklist) {
+          // Add items
+          notify(card);
+          for (var i = 0; i < checkLists[i].checkItems.length;i++){
+            Trello.post("checklists/" + checklist.id + '/checkItems', checkListItems[i]);
+          }
+          });
       }
     });
   };
