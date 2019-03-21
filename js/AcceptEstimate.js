@@ -247,6 +247,9 @@ var createFormButton = function(step,text,next,finish){
         }
       }
     }
+    if (extraPrices[extraPriceId].items.every(element => element === null)){
+      delete extraPrices[extraPriceId].items;
+    }
   }
 /*
 
