@@ -52,3 +52,11 @@ var isAuthorized = function(t){
       }
     });
   };
+
+  var addCheckListItemToCheckList = function(t,checkListItem,checkListId){
+    return isAuthorized(t).then(function(authorized){
+      if(authorized.authorized){
+        return Trello.post("/checklists/" + checkListId +"/checkItems",checkListItem);
+      }
+    });
+  };

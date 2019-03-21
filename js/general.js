@@ -109,6 +109,7 @@ var createCheckListObject = function(name, cardId){
 	};
 }
 
+
 var updateCard = function(estimate) {
 	startLoader();
 	var checkLists = createCheckListsForCard(estimate);
@@ -123,6 +124,9 @@ var updateCard = function(estimate) {
 			for (var i = 0; i < checkLists.length;i++){
 				var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
 				var trelloCheckList = addCheckListToCard(t, currentCheckList);
+				for (var j = 0; j < checkLists[i].checkItems.length;i++){
+					addCheckListItemToCheckList(t,checkLists[i].checkItems[j],trelloCheckList.id);
+				}
 				console.log("hola")
 			}
 		});
@@ -163,8 +167,9 @@ var createCheckListsForCard = function(estimate){
 				currentMandatoryFinishGroups[i].finishes.finishComment!=""?currentMandatoryFinishGroups[i].finishes.finishComment:'';
 				generalCheckList.checkItems.push(
 					{
-						state:"incomplete",
-						name:item
+						checked:false,
+						name:item,
+						pos:'bottom'
 					}
 				);
 			}
@@ -179,8 +184,9 @@ var createCheckListsForCard = function(estimate){
 						var item = optionalFinishesPrices[i].optionalFinishes[j].finish + optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?optionalFinishesPrices[i].optionalFinishes[j].finishComment:'';
 						generalCheckList.checkItems.push(
 							{
-								state:"incomplete",
-								name:item
+								checked:false,
+								name:item,
+								pos:'bottom'
 							}
 						);
 					}
@@ -205,8 +211,9 @@ var createCheckListsForCard = function(estimate){
 					currentItemMandatoryFinishGroups[k].finishes.finishComment?currentItemMandatoryFinishGroups[k].finishes.finishComment:'';
 					currentCheckList.checkItems.push(
 						{
-							state:"incomplete",
-							name:item
+							checked:false,
+							name:item,
+							pos:'bottom'
 						}
 					);
 				}
@@ -221,8 +228,9 @@ var createCheckListsForCard = function(estimate){
 							var item = optionalFinishesPrices[j].items[i].optionalFinishes[k].finish + ' - ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment!=""?optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'';
 							currentCheckList.checkItems.push(
 								{
-									state:"incomplete",
-									name:item
+									checked:false,
+									name:item,
+									pos:'bottom'
 								}
 							);
 						}
