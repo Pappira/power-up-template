@@ -233,10 +233,12 @@ var createTextForCard = function(estimate){
 				}else{
 					var optionalFinishesPrices = estimate.selectedExtraPrices;
 					for (var j = 0; j < optionalFinishesPrices.length; j++){
-						for (var k = 0; k < optionalFinishesPrices[j].items[i].optionalFinishes.length;k++){
-							text += i + '. ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finish + '\n';	
-							text += optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment!=""?'      ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment + '\n':'';
-							price += optionalFinishesPrices[j].items[i].optionalFinishes[k].price;
+						if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[i] && optionalFinishesPrices[j].items[i].optionalFinishes){
+							for (var k = 0; k < optionalFinishesPrices[j].items[i].optionalFinishes.length;k++){
+								text += i + '. ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finish + '\n';	
+								text += optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment!=""?'      ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment + '\n':'';
+								price += optionalFinishesPrices[j].items[i].optionalFinishes[k].price;
+							}
 						}
 					}
 				}
