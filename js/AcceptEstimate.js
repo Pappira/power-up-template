@@ -251,24 +251,9 @@ var createFormButton = function(step,text,next,finish){
       delete extraPrices[extraPriceId].items;
     }
   }
-/*
-
-  for (var elementId in selectedOptions) {
-    for (var extraPriceId in selectedOptions[elementId]) {
-        if(elementId==-1){
-          extraPrices[extraPriceId].optionalFinishes = cutArray(extraPrices[extraPriceId].optionalFinishes,selectedOptions[elementId][extraPriceId]);
-        }else{
-          extraPrices[extraPriceId].items[elementId] = cutArray(extraPrices[extraPriceId].items[elementId],selectedOptions[elementId][extraPriceId]);
-        }
-    }
-  }*/
   estimate.selectedExtraPrices = extraPrices;
 
-
-
-
-
-   console.log("holaaa");
+  updateCard(estimate);
  }
 
  var createWizardButton = function(step,name){
