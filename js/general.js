@@ -101,18 +101,30 @@ var cutArray = function(originalArray,indexToCut){
   });
   return a;
 }
+/*var createCheckListObject = function(name, cardId){
+	return {
+		idCard:cardId,
+		name:name,
+		pos:'bottom'
+	};
+}*/
 
 var updateCard = function(estimate) {
 	startLoader();
+	var checkLists = createCheckListsForCard(estimate);
 	t.card('all')
 	.then(function(card) {
 	  t.set('card', 'shared', cardInfoKey, estimate)
 		.then(function(){
-		  updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate)},
+		  updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)},
 			function(){
 			  t.closeModal();
 			});
 		});
+		for (var i = 0; i < checkLists.length;i++){
+			var trelloCheckList = addCheckListToCard(t, checkLists);
+		}
+
 	});
   };
 
@@ -134,6 +146,90 @@ var createCard = function(estimate){
 	});
 	};
 	
+var createCheckListsForCard = function(estimate){
+	var checkLists = [];
+	var generalCheckList = {
+		name:"Terminaciones Generales",
+		checkItems:[]
+	};
+	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
+		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
+		if(estimate.SelectedOption!=null){
+			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
+			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
+				var item = currentMandatoryFinishGroups[i].groupName + " - " + currentMandatoryFinishGroups[i].finishes.finish + " - " + 
+				currentMandatoryFinishGroups[i].finishes.finishComment!=""?currentMandatoryFinishGroups[i].finishes.finishComment:'';
+				generalCheckList.checkItems.push(
+					{
+						state:"incomplete",
+						name:item
+					}
+				);
+			}
+		}
+	}
+	if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
+		if(estimate.SelectedOption!=null){
+			var optionalFinishesPrices = estimate.selectedExtraPrices;
+			for (var i = 0; i < optionalFinishesPrices.length; i++){
+				if (optionalFinishesPrices[i].optionalFinishes){
+					for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
+						var item = optionalFinishesPrices[i].optionalFinishes[j].finish + optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?optionalFinishesPrices[i].optionalFinishes[j].finishComment:'';
+						generalCheckList.checkItems.push(
+							{
+								state:"incomplete",
+								name:item
+							}
+						);
+					}
+				}
+			}
+		}
+	}
+	checkLists.push(generalCheckList);
+	for (var i = 0; i< estimate['items'].length;i++){
+		var currentCheckList = {
+			name:"Terminaciones de " + estimate.items[i].name,
+			checkItems:[]
+		};
+		if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
+			var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
+			if(estimate.SelectedOption!=null){
+				currentItemMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].items[i].mandatoryFinishGroups;
+				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
+					var item = currentItemMandatoryFinishGroups[k].groupName + ' - ' + currentItemMandatoryFinishGroups[k].finishes.finish + '-' +
+					currentItemMandatoryFinishGroups[k].finishes.finishComment?currentItemMandatoryFinishGroups[k].finishes.finishComment:'';
+					currentCheckList.checkItems.push(
+						{
+							state:"incomplete",
+							name:item
+						}
+					);
+				}
+			}
+		}
+		if (estimate.items[i].optionalFinishes && estimate.items[i].optionalFinishes.length >0){
+			if(estimate.SelectedOption!=null){
+				var optionalFinishesPrices = estimate.selectedExtraPrices;
+				for (var j = 0; j < optionalFinishesPrices.length; j++){
+					if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[i] && optionalFinishesPrices[j].items[i].optionalFinishes){
+						for (var k = 0; k < optionalFinishesPrices[j].items[i].optionalFinishes.length;k++){
+							var item = optionalFinishesPrices[j].items[i].optionalFinishes[k].finish + ' - ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment!=""?optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'';
+							currentCheckList.checkItems.push(
+								{
+									state:"incomplete",
+									name:item
+								}
+							);
+						}
+					}
+				}
+			}
+		}
+		checkLists.push(currentCheckList);
+	}
+return checkLists;
+}
 	
 var createTextForCard = function(estimate){
 	var price = 0;

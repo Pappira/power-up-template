@@ -228,8 +228,6 @@ var createFormButton = function(step,text,next,finish){
 
  var updateEstimateAndTrelloCard = function(){
   var extraPrices = JSON.parse(JSON.stringify(estimate.optionalFinishesPrices));
-
-
   for (var extraPriceId = 0; extraPriceId < estimate.optionalFinishesPrices.length;extraPriceId++){
     if (estimate.optionalFinishesPrices[extraPriceId].optionalFinishes){
       if(selectedOptions[-1] && selectedOptions[-1][extraPriceId]){
