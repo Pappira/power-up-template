@@ -164,10 +164,12 @@ var createTextForCard = function(estimate){
 		}else{
 			var optionalFinishesPrices = estimate.selectedExtraPrices;
 			for (var i = 0; i < optionalFinishesPrices.length; i++){
-				for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
-					text += i + '. ' + optionalFinishesPrices[i].optionalFinishes[j].finish + '\n';	
-					text += optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?'      ' + optionalFinishesPrices[i].optionalFinishes[j].finishComment + '\n':'';
-					price += optionalFinishesPrices[i].optionalFinishes[j].price;
+				if (optionalFinishesPrices[i].optionalFinishes){
+					for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
+						text += i + '. ' + optionalFinishesPrices[i].optionalFinishes[j].finish + '\n';	
+						text += optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?'      ' + optionalFinishesPrices[i].optionalFinishes[j].finishComment + '\n':'';
+						price += optionalFinishesPrices[i].optionalFinishes[j].price;
+					}
 				}
 			}
 		}

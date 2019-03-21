@@ -232,7 +232,7 @@ var createFormButton = function(step,text,next,finish){
 
   for (var extraPriceId = 0; extraPriceId < estimate.optionalFinishesPrices.length;extraPriceId++){
     if (estimate.optionalFinishesPrices[extraPriceId].optionalFinishes){
-      if(selectedOptions[-1][extraPriceId]){
+      if(selectedOptions[-1] && selectedOptions[-1][extraPriceId]){
         extraPrices[extraPriceId].optionalFinishes = cutArray(extraPrices[extraPriceId].optionalFinishes,selectedOptions[-1][extraPriceId]);
       }else{
         delete extraPrices[extraPriceId].optionalFinishes;
