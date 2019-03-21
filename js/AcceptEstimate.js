@@ -240,8 +240,8 @@ var createFormButton = function(step,text,next,finish){
     }
     for(var elementId = 0; elementId < estimate.optionalFinishesPrices[extraPriceId].items.length; elementId++ ){
       if (estimate.optionalFinishesPrices[extraPriceId].items[elementId]){
-        if(selectedOptions[elementId][extraPriceId]){
-          extraPrices[extraPriceId].items[elementId] = cutArray(extraPrices[extraPriceId].items[elementId],selectedOptions[elementId][extraPriceId]);
+        if(selectedOptions[elementId] && selectedOptions[elementId][extraPriceId]){
+          extraPrices[extraPriceId].items[elementId].optionalFinishes = cutArray(extraPrices[extraPriceId].items[elementId].optionalFinishes,selectedOptions[elementId][extraPriceId]);
         }else{
           delete extraPrices[extraPriceId].items[elementId];
         }
