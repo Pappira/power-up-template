@@ -101,13 +101,13 @@ var cutArray = function(originalArray,indexToCut){
   });
   return a;
 }
-/*var createCheckListObject = function(name, cardId){
+var createCheckListObject = function(name, cardId){
 	return {
 		idCard:cardId,
 		name:name,
 		pos:'bottom'
 	};
-}*/
+}
 
 var updateCard = function(estimate) {
 	startLoader();
@@ -120,10 +120,12 @@ var updateCard = function(estimate) {
 			function(){
 			  t.closeModal();
 			});
+			for (var i = 0; i < checkLists.length;i++){
+				var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
+				var trelloCheckList = addCheckListToCard(t, currentCheckList);
+				console.log("hola")
+			}
 		});
-		for (var i = 0; i < checkLists.length;i++){
-			var trelloCheckList = addCheckListToCard(t, checkLists[i]);
-		}
 
 	});
   };
