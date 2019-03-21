@@ -136,24 +136,42 @@ var createCard = function(estimate){
 	
 	
 var createTextForCard = function(estimate){
+	var price = 0;
 	var text = '';
 	text += '#' + estimate['name'] + '\n';
 	text += '**Cantidad: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate['quantity'].join(' // ')) + '\n';
 	text += '**Tamaño cerrado: **' + estimate['clossedSize'] + '\n';
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
 		text += '###Terminaciones Generales' + '\n\n';
-		for (var i = 0; i < estimate.mandatoryFinishGroups.length;i++){
-			text += i + '. ' + estimate.mandatoryFinishGroups[i].groupName + '\n';
-			for (var j =0; j < estimate.mandatoryFinishGroups[i].finishes.length;j++){
-				text += '  - ' + estimate.mandatoryFinishGroups[i].finishes[j].finish + '\n';
-				text += estimate.mandatoryFinishGroups[i].finishes[j].finishComment!=""?'      ' + estimate.mandatoryFinishGroups[i].finishes[j].finishComment + '\n':'';
+		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
+		if(estimate.SelectedOption){
+			currentMandatoryFinishGroups = estimate.prices.mandatoryFinishGroups;
+		}
+		for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
+			text += i + '. ' + currentMandatoryFinishGroups.groupName + '\n';
+			for (var j =0; j < currentMandatoryFinishGroups.finishes.length;j++){
+				text += '  - ' + currentMandatoryFinishGroups.finishes[j].finish + '\n';
+				text += currentMandatoryFinishGroups.finishes[j].finishComment!=""?'      ' + currentMandatoryFinishGroups.finishes[j].finishComment + '\n':'';
 			}
 		}
 	}
+	
 	if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
-		for(var i = 0; i < estimate.optionalFinishes.length;i++){
-			text += i + '. ' + estimate.optionalFinishes[i].finish + '\n';	
-			text += estimate.optionalFinishes[i].finishComment!=""?'      ' + estimate.optionalFinishes[i].finishComment + '\n':'';
+		if(!estimate.SelectedOption){
+			var currentOptionalFinish = estimate.optionalFinishes;
+			for(var i = 0; i < currentOptionalFinish.length;i++){
+				text += i + '. ' + currentOptionalFinish[i].finish + '\n';	
+				text += vcurrentOptionalFinish[i].finishComment!=""?'      ' + currentOptionalFinish[i].finishComment + '\n':'';
+			}
+		}else{
+			var optionalFinishesPrices = estimate.optionalFinishesPrices;
+			for (var i = 0; i < optionalFinishesPrices.length; i++){
+				for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
+					text += i + '. ' + optionalFinishesPrices[i].optionalFinishes[j].finish + '\n';	
+					text += optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?'      ' + optionalFinishesPrices[i].optionalFinishes[j].finishComment + '\n':'';
+					price += optionalFinishesPrices[i].optionalFinishes[j].price;
+				}
+			}
 		}
 	}
 	text +='\n';
@@ -195,35 +213,40 @@ var createTextForCard = function(estimate){
 
 			if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
 				text += '###Terminaciones' + '\n\n';
-				for (var k = 0; k < estimate.items[i].mandatoryFinishGroups.length;k++){
-					text += k + '. ' + estimate.items[i].mandatoryFinishGroups[k].groupName + '\n';
-					for (var j =0; j < estimate.items[i].mandatoryFinishGroups[k].finishes.length;j++){
-						text += '  - ' + estimate.items[i].mandatoryFinishGroups[k].finishes[j].finish + '\n';
-						text += estimate.items[i].mandatoryFinishGroups[k].finishes[j].finishComment?'      ' + estimate.items[i].mandatoryFinishGroups[k].finishes[j].finishComment + '\n':'';
+				var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
+				if(estimate.SelectedOption){
+					currentItemMandatoryFinishGroups = estimate.prices.items[i].mandatoryFinishGroups;
+				}
+				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
+					text += k + '. ' + currentItemMandatoryFinishGroups[k].groupName + '\n';
+					for (var j =0; j < currentItemMandatoryFinishGroups[k].finishes.length;j++){
+						text += '  - ' + currentItemMandatoryFinishGroups[k].finishes[j].finish + '\n';
+						text += currentItemMandatoryFinishGroups[k].finishes[j].finishComment?'      ' + currentItemMandatoryFinishGroups[k].finishes[j].finishComment + '\n':'';
 					}
 				}
 			}
+
+			
 			if (estimate.items[i].optionalFinishes && estimate.items[i].optionalFinishes.length >0){
-				for(var k = 0; k < estimate.items[i].optionalFinishes.length;k++){
-					text += k + '. ' + estimate.items[i].optionalFinishes[k].finish + '\n';	
-					text += estimate.items[i].optionalFinishes[k].finishComment?'      ' + estimate.items[i].optionalFinishes[k].finishComment + '\n':'';
+				if(!estimate.SelectedOption){
+					var currentItemOptionalFinish = estimate.optionalFinishes;
+					for(var k = 0; k < currentItemOptionalFinish.length;k++){
+						text += k + '. ' + currentItemOptionalFinish[k].finish + '\n';	
+						text += currentItemOptionalFinish[k].finishComment?'      ' + currentItemOptionalFinish[k].finishComment + '\n':'';
+					}
+				}else{
+					var optionalFinishesPrices = estimate.optionalFinishesPrices;
+					for (var j = 0; j < optionalFinishesPrices.length; j++){
+						for (var k = 0; k < optionalFinishesPrices[j].items[i].optionalFinishes.length;k++){
+							text += i + '. ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finish + '\n';	
+							text += optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment!=""?'      ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment + '\n':'';
+							price += optionalFinishesPrices[j].items[i].optionalFinishes[k].price;
+						}
+					}
 				}
 			}
 			
 			text +='\n';
-
-
-
-			/*if (estimate['items'][i]['finishes'].length >0){
-				text += '###Terminaciones' + '\n\n';
-				for (var j = 0; j < estimate['items'][i]['finishes'].length;j++){
-					text += j + '. ' + estimate['items'][i]['finishes'][j]['finish'] + '\n';
-					if (estimate['items'][i]['finishes'][j]['comment']){
-						text += '  - ' + estimate['items'][i]['finishes'][j]['comment'] + '\n';
-					}
-				}
-				text +='\n';
-			}*/
 		}
 	}
 	if (estimate['comments']){
