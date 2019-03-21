@@ -48,7 +48,7 @@ var isAuthorized = function(t){
   var addCheckListToCard = function(t,checkList){
     return isAuthorized(t).then(function(authorized){
       if(authorized.authorized){
-        return Trello.post("/checklists" ,checkList, success, error);
+        return Trello.post("/checklists" ,checkList);
       }
     });
   };
