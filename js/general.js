@@ -122,7 +122,7 @@ var updateCard = function(estimate) {
 			});
 		});
 		for (var i = 0; i < checkLists.length;i++){
-			var trelloCheckList = addCheckListToCard(t, checkLists);
+			var trelloCheckList = addCheckListToCard(t, checkLists[i]);
 		}
 
 	});
@@ -186,7 +186,9 @@ var createCheckListsForCard = function(estimate){
 			}
 		}
 	}
-	checkLists.push(generalCheckList);
+	if(generalCheckList.checkItems.length>0){
+		checkLists.push(generalCheckList);
+	}
 	for (var i = 0; i< estimate['items'].length;i++){
 		var currentCheckList = {
 			name:"Terminaciones de " + estimate.items[i].name,
@@ -226,7 +228,9 @@ var createCheckListsForCard = function(estimate){
 				}
 			}
 		}
-		checkLists.push(currentCheckList);
+		if(currentCheckList.checkItems.length>0){
+			checkLists.push(currentCheckList);
+		}
 	}
 return checkLists;
 }
