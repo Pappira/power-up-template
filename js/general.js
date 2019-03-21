@@ -144,7 +144,7 @@ var createTextForCard = function(estimate){
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
 		text += '###Terminaciones Generales' + '\n\n';
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
-		if(estimate.SelectedOption){
+		if(estimate.SelectedOption!=null){
 			currentMandatoryFinishGroups = estimate.prices.mandatoryFinishGroups;
 		}
 		for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
@@ -157,11 +157,11 @@ var createTextForCard = function(estimate){
 	}
 	
 	if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
-		if(!estimate.SelectedOption){
+		if(estimate.SelectedOption==null){
 			var currentOptionalFinish = estimate.optionalFinishes;
 			for(var i = 0; i < currentOptionalFinish.length;i++){
 				text += i + '. ' + currentOptionalFinish[i].finish + '\n';	
-				text += vcurrentOptionalFinish[i].finishComment!=""?'      ' + currentOptionalFinish[i].finishComment + '\n':'';
+				text += currentOptionalFinish[i].finishComment!=""?'      ' + currentOptionalFinish[i].finishComment + '\n':'';
 			}
 		}else{
 			var optionalFinishesPrices = estimate.optionalFinishesPrices;
@@ -214,7 +214,7 @@ var createTextForCard = function(estimate){
 			if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
 				text += '###Terminaciones' + '\n\n';
 				var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
-				if(estimate.SelectedOption){
+				if(estimate.SelectedOption!=null){
 					currentItemMandatoryFinishGroups = estimate.prices.items[i].mandatoryFinishGroups;
 				}
 				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
@@ -228,8 +228,8 @@ var createTextForCard = function(estimate){
 
 			
 			if (estimate.items[i].optionalFinishes && estimate.items[i].optionalFinishes.length >0){
-				if(!estimate.SelectedOption){
-					var currentItemOptionalFinish = estimate.optionalFinishes;
+				if(estimate.SelectedOption==null){
+					var currentItemOptionalFinish = estimate.items[i].optionalFinishes;
 					for(var k = 0; k < currentItemOptionalFinish.length;k++){
 						text += k + '. ' + currentItemOptionalFinish[k].finish + '\n';	
 						text += currentItemOptionalFinish[k].finishComment?'      ' + currentItemOptionalFinish[k].finishComment + '\n':'';
