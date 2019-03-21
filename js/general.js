@@ -146,11 +146,19 @@ var createTextForCard = function(estimate){
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
 		if(estimate.SelectedOption!=null){
 			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
-		}
-		for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-			text += i + '. ' + currentMandatoryFinishGroups[i].groupName + '\n';
-			text += '  - ' + currentMandatoryFinishGroups[i].finishes.finish + '\n';
-			text += currentMandatoryFinishGroups[i].finishes.finishComment!=""?'      ' + currentMandatoryFinishGroups[i].finishes.finishComment + '\n':'';
+			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
+				text += i + '. ' + currentMandatoryFinishGroups[i].groupName + '\n';
+				text += '  - ' + currentMandatoryFinishGroups[i].finishes.finish + '\n';
+				text += currentMandatoryFinishGroups[i].finishes.finishComment!=""?'      ' + currentMandatoryFinishGroups[i].finishes.finishComment + '\n':'';
+			}
+		}else{
+			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
+				text += i + '. ' + currentMandatoryFinishGroups[i].groupName + '\n';
+				for(var j= 0 ; j < currentMandatoryFinishGroups[i].finishes.length;j++){
+					text += '  - ' + currentMandatoryFinishGroups[i].finishes[j].finish + '\n';
+					text += currentMandatoryFinishGroups[i].finishes[j].finishComment!=""?'      ' + currentMandatoryFinishGroups[i].finishes[j].finishComment + '\n':'';
+				}
+			}
 		}
 	}
 	
@@ -216,11 +224,19 @@ var createTextForCard = function(estimate){
 				var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
 				if(estimate.SelectedOption!=null){
 					currentItemMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].items[i].mandatoryFinishGroups;
-				}
-				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-					text += k + '. ' + currentItemMandatoryFinishGroups[k].groupName + '\n';
-					text += '  - ' + currentItemMandatoryFinishGroups[k].finishes.finish + '\n';
-					text += currentItemMandatoryFinishGroups[k].finishes.finishComment?'      ' + currentItemMandatoryFinishGroups[k].finishes.finishComment + '\n':'';
+					for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
+						text += k + '. ' + currentItemMandatoryFinishGroups[k].groupName + '\n';
+						text += '  - ' + currentItemMandatoryFinishGroups[k].finishes.finish + '\n';
+						text += currentItemMandatoryFinishGroups[k].finishes.finishComment?'      ' + currentItemMandatoryFinishGroups[k].finishes.finishComment + '\n':'';
+					}
+				}else{
+					for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
+						text += k + '. ' + currentItemMandatoryFinishGroups[k].groupName + '\n';
+						for (var j = 0; j < currentItemMandatoryFinishGroups[k].finishes.length;j++){
+							text += '  - ' + currentItemMandatoryFinishGroups[k].finishes[j].finish + '\n';
+							text += currentItemMandatoryFinishGroups[k].finishes[j].finishComment?'      ' + currentItemMandatoryFinishGroups[k].finishes[j].finishComment + '\n':'';
+						}
+					}
 				}
 			}
 
