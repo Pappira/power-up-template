@@ -50,8 +50,8 @@ var isAuthorized = function(t){
       if(authorized.authorized){
         return Trello.post("/checklists", currentCheckList, function(checklist) {
           // Add items
-          notify(card);
-          for (var i = 0; i < checkLists[i].checkItems.length;i++){
+          //notify(card);
+          for (var i = 0; i < checkListItems.length;i++){
             Trello.post("checklists/" + checklist.id + '/checkItems', checkListItems[i]);
           }
           });
