@@ -168,10 +168,8 @@ var createCard = function(estimate){
 	startLoader();
 	createNewTrelloCard(t, cardToSave, function(card) {
 	  setTimeout(function () {
-		for (key in estimate){
-
-		}
-		t.set(card.id, 'shared', cardInfoKey, estimate)
+		var estimateToSave = convert(estimate);
+		t.set(card.id, 'shared', cardInfoKey, estimateToSave)
 		  .then(function(){
 			t.showCard(card.id);
 			t.closeModal();
@@ -183,20 +181,26 @@ var createCard = function(estimate){
 var convert = function(objectToConvert){
 	Object.keys(objectToConvert).forEach(function(key) {
 		if(typeof objectToConvert[key] == 'object'){
-				convert(objectToConvert[key]);
-				var newKey = translate(key);
-				//TODO
-				RENAME
+			var newKey = translate(key);
+			objectToConvert = rename(objectToConvert,newKey,key);
+			convert(objectToConvert[newKey]);
 		}else{
 			if(isNaN(key)){
-					//TODO
-					RENAME
+					var newKey = translate(key);
+					objectToConvert = rename(objectToConvert,newKey,key);
 				}
 			}
 	});
 }
 
-
+var rename = function(objectToRename, newKey, oldKey){
+	if (oldKey !== newKey) {
+    Object.defineProperty(objectToRename, newKey,
+        Object.getOwnPropertyDescriptor(objectToRename, oldKey));
+    delete objectToRename[oldKey];
+	}
+	return objectToRename;
+}
 var createCheckListsForCard = function(estimate){
 	var checkLists = [];
 	var generalCheckList = {
