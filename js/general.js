@@ -117,15 +117,18 @@ var updateCard = function(estimate) {
 	.then(function(card) {
 	  t.set('card', 'shared', cardInfoKey, estimate)
 		.then(function(){
-		  updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)})
-			for (var i = 0; i < checkLists.length;i++){
-				var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
-				addCheckListToCard(t, currentCheckList,checkLists[i].checkItems);
-			}
-			
-		})
-		.then(function(){
-			t.closeModal();
+			updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)})
+			.then(function(){
+				var checkListToCard = [];
+				for (var i = 0; i < checkLists.length;i++){
+					var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
+					checkListToCard.push(addCheckListToCard(t, currentCheckList,checkLists[i].checkItems));
+				}
+				TrelloPowerUp.Promise.all(checkListToCard)
+				.then(function(){
+					t.closeModal();
+				});
+			});
 		});
 	});
 };
