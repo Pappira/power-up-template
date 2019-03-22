@@ -133,10 +133,11 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
     var finishes = [];
     for (var i = 0; i < estimate.optionalFinishesPrices.length; i++){
         var optionalFinishPrice = estimate.optionalFinishesPrices[i];
+        var finish = {};
+        var price = {};
+        finish.item = -1;
+        finish.price = [];
         for (var key in optionalFinishPrice) {
-            var finish = {};
-            var price = {};
-            finish.item = -1;
             if(key != "workId" && key!= "optionalFinishes" && key !="items"){
                 price[key] = optionalFinishPrice[key];
             }
