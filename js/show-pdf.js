@@ -140,30 +140,30 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
             if(key != "workId" && key!= "optionalFinishes" && key !="items"){
                 price[key] = optionalFinishPrice[key];
             }
-            for (var j = 0; j < optionalFinishPrice.optionalFinishes.length;j++){
-                var currentOptionalFinish = optionalFinishPrice.optionalFinishes[j];
-                for (var key in currentOptionalFinish) {
-                    if (key !="price"){
-                        finish[key] = currentOptionalFinish[key];
-                    }else{
-                        price[key] = currentOptionalFinish[key];
-                    }
-                }
-                finish.price.push(price);
-            }
-            //reviso si hay algún finish así ya agregado
-            var alreadyExist = false;
-            for (var j = 0; j < finishes.length; j++){
-                if (finishes[j].item == finish.item && finishes[j].finish == finish.finish && finishes[j].finishComment == finish.finishComment &&
-                    finishes[j].showToClientFinish == finish.showToClientFinish){
-                        finishes[j].price.push(price);
-                        alreadyExist = true;
-                        break;
+        }
+        for (var j = 0; j < optionalFinishPrice.optionalFinishes.length;j++){
+            var currentOptionalFinish = optionalFinishPrice.optionalFinishes[j];
+            for (var key in currentOptionalFinish) {
+                if (key !="price"){
+                    finish[key] = currentOptionalFinish[key];
+                }else{
+                    price[key] = currentOptionalFinish[key];
                 }
             }
-            if (!alreadyExist){
-                finishes.push(finish);
+            finish.price.push(price);
+        }
+        //reviso si hay algún finish así ya agregado
+        var alreadyExist = false;
+        for (var j = 0; j < finishes.length; j++){
+            if (finishes[j].item == finish.item && finishes[j].finish == finish.finish && finishes[j].finishComment == finish.finishComment &&
+                finishes[j].showToClientFinish == finish.showToClientFinish){
+                    finishes[j].price.push(price);
+                    alreadyExist = true;
+                    break;
             }
+        }
+        if (!alreadyExist){
+            finishes.push(finish);
         }
     }
     return finishes;
