@@ -113,6 +113,8 @@ var createCheckListObject = function(name, cardId){
 var updateCard = function(estimate) {
 	startLoader();
 	var checkLists = createCheckListsForCard(estimate);
+	var trelloCheckList = [];
+	var trelloCheckListItems = [];
 	t.card('all')
 	.then(function(card) {
 	  t.set('card', 'shared', cardInfoKey, estimate)
@@ -120,8 +122,6 @@ var updateCard = function(estimate) {
 			updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)})
 			.then(function(){
 				//var checkListToCard = [];
-				var trelloCheckList = [];
-				var trelloCheckListItems = [];
 				for (var i = 0; i < checkLists.length;i++){
 					var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
 					var checkListToCard = addCheckListToCard(t, currentCheckList,checkLists[i].checkItems)
