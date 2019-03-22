@@ -119,12 +119,17 @@ var updateCard = function(estimate) {
 		.then(function(){
 			updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)})
 			.then(function(){
-				var checkListToCard = [];
+				//var checkListToCard = [];
+				var trelloCheckList = [];
 				for (var i = 0; i < checkLists.length;i++){
-					var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
-					checkListToCard.push(addCheckListToCard(t, currentCheckList,checkLists[i].checkItems));
+					//var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
+					addCheckListToCard(t, currentCheckList,checkLists[i].checkItems).then(function(checkList){
+						for (var i = 0; i < checkListItems.length;i++){
+							trelloCheckList.push(addCheckListItemToCheckList(t,checkListItems[i],checkList.id));
+						}
+					})
 				}
-				TrelloPowerUp.Promise.all(checkListToCard)
+				TrelloPowerUp.Promise.all(trelloCheckList)
 				.then(function(){
 					t.closeModal();
 				});

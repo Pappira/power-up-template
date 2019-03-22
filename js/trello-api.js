@@ -45,10 +45,11 @@ var isAuthorized = function(t){
     });
   };
 
-  var addCheckListToCard = function(t,currentCheckList,checkListItems){
+
+  var addCheckListToCard = function(t,currentCheckList){
     return isAuthorized(t).then(function(authorized){
       if(authorized.authorized){
-        return Trello.post("/checklists", currentCheckList, function(checklist) {
+        return Trello.post("/checklists", currentCheckList);/*, function(checklist) {
           // Add items
           var trelloCheckList = [];
           for (var i = 0; i < checkListItems.length;i++){
@@ -57,7 +58,7 @@ var isAuthorized = function(t){
           return TrelloPowerUp.Promise.all(trelloCheckList).then(function(checkList){
             return checkList;
           });
-        });
+        });*/
       }
     });
   };
