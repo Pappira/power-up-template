@@ -122,7 +122,7 @@ var updateCard = function(estimate) {
 			updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)})
 			.then(function(){
 				//var checkListToCard = [];
-				getCheckLists(card.id)
+				return getCheckLists(t,card.id)
 				.then(function(currentCheckListsOnCard){
 					var currentCheckListsToDelete = [];
 					for (var i = 0; i < currentCheckListsOnCard.length;i++){
