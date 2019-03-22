@@ -121,17 +121,22 @@ var updateCard = function(estimate) {
 			.then(function(){
 				//var checkListToCard = [];
 				var trelloCheckList = [];
+				var trelloCheckListItems = [];
 				for (var i = 0; i < checkLists.length;i++){
-					//var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
-					addCheckListToCard(t, currentCheckList,checkLists[i].checkItems).then(function(checkList){
+					var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
+					var checkListToCard = addCheckListToCard(t, currentCheckList,checkLists[i].checkItems).then(function(checkList){
 						for (var i = 0; i < checkListItems.length;i++){
-							trelloCheckList.push(addCheckListItemToCheckList(t,checkListItems[i],checkList.id));
+							trelloCheckListItems.push(addCheckListItemToCheckList(t,checkListItems[i],checkList.id));
 						}
 					})
+					trelloCheckList.push(checkListToCard);
 				}
 				TrelloPowerUp.Promise.all(trelloCheckList)
 				.then(function(){
-					t.closeModal();
+					TrelloPowerUp.Promise.all(trelloCheckListItems)
+					.then(function(){
+						t.closeModal();
+					});
 				});
 			});
 		});
