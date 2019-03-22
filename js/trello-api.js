@@ -50,9 +50,13 @@ var isAuthorized = function(t){
       if(authorized.authorized){
         return Trello.post("/checklists", currentCheckList, function(checklist) {
           // Add items
+          var trelloCheckList = [];
           for (var i = 0; i < checkListItems.length;i++){
-            TrelloPowerUp.Promise.all(Trello.post("checklists/" + checklist.id + '/checkItems', checkListItems[i]));
+            trelloCheckList.push(Trello.post("checklists/" + checklist.id + '/checkItems', checkListItems[i]));
           }
+          return TrelloPowerUp.Promise.all(trelloCheckList).then(function(checkList){
+            return checkList;
+          });
         });
       }
     });
