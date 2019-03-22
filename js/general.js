@@ -191,6 +191,7 @@ var convert = function(objectToConvert){
 				}
 			}
 	});
+	return objectToConvert;
 }
 
 var rename = function(objectToRename, newKey, oldKey){
