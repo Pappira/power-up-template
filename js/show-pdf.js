@@ -129,6 +129,46 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
     return top;
 }
 
+var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
+    var finishes = [];
+    for (var i = 0; i < estimate.optionalFinishesPrices.length; i++){
+        var optionalFinishPrice = estimate.optionalFinishesPrices[i];
+        for (var key in optionalFinishPrice) {
+            var finish = {};
+            var price = {};
+            finish.item = -1;
+            if(key != "workId" && key!= "optionalFinishes" && key !="items"){
+                price[key] = optionalFinishPrice[key];
+            }
+            for (var j = 0; j < optionalFinishPrice.optionalFinishes.length;j++){
+                var currentOptionalFinish = optionalFinishPrice.optionalFinishes[j];
+                for (var key in currentOptionalFinish) {
+                    if (key !="price"){
+                        finish[key] = currentOptionalFinish[key];
+                    }else{
+                        price[key] = currentOptionalFinish[key];
+                    }
+                }
+                finish.price.push(price);
+            }
+            //reviso si hay algún finish así ya agregado
+            var alreadyExist = false;
+            for (var j = 0; j < finishes.length; j++){
+                if (finishes[j].item == finish.item && finishes[j].finish == finish.finish && finishes[j].finishComment == finish.finishComment &&
+                    finishes[j].showToClientFinish == finish.showToClientFinish){
+                        finishes[j].price.push(price);
+                        alreadyExist = true;
+                        break;
+                }
+            }
+            if (!alreadyExist){
+                finishes.push(finish);
+            }
+        }
+    }
+    return finishes;
+}
+
 var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
     if(estimate.prices){
         estimate.prices.sort(compareValues());
@@ -213,7 +253,7 @@ var generateEstimatePDF = function(estimate){
     top = addEstimateItemInformationToPDFForCustomer(top,doc,estimate);
     top = addPriceInformationToPDFForCustomer(top,doc,estimate);
     
-
+    addOptionalFinishesToPDFForCustomer(top,doc,estimate);
     doc.setFontSize(16);  
     doc.text("Condiciones generales",leftMargin,top);
     doc.setFontSize(fontSize);
