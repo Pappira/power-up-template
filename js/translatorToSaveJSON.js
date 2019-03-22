@@ -1,5 +1,5 @@
 var translate = function(key){
-    switch (expr) {
+    switch (key) {
         case 'workTypeId':
             return 'WTI'; 
         case 'workType':
@@ -78,7 +78,7 @@ var translate = function(key){
 }
 
 var deTranslate = function(key){
-    switch (expr) {
+    switch (key) {
         case 'WTI': 
             return 'workTypeId';
         case 'WT':
