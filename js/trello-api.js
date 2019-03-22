@@ -49,16 +49,7 @@ var isAuthorized = function(t){
   var addCheckListToCard = function(t,currentCheckList){
     return isAuthorized(t).then(function(authorized){
       if(authorized.authorized){
-        return Trello.post("/checklists", currentCheckList);/*, function(checklist) {
-          // Add items
-          var trelloCheckList = [];
-          for (var i = 0; i < checkListItems.length;i++){
-            trelloCheckList.push(Trello.post("checklists/" + checklist.id + '/checkItems', checkListItems[i]));
-          }
-          return TrelloPowerUp.Promise.all(trelloCheckList).then(function(checkList){
-            return checkList;
-          });
-        });*/
+        return Trello.post("/checklists", currentCheckList);
       }
     });
   };
