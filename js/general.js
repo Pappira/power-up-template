@@ -127,7 +127,7 @@ var updateCard = function(estimate) {
 					var checkListToCard = addCheckListToCard(t, currentCheckList,checkLists[i].checkItems)
 					.then(function(checkList){
 						for (var i = 0; i < checkLists.length;i++){
-							if(checkLists.name == checkList.name){
+							if(checkLists[i].name == checkList.name){
 								for (var j = 0; j < checkLists[i].checkItems.length;j++){ 
 									trelloCheckListItems.push(addCheckListItemToCheckList(t,checkLists[i].checkItems[j],checkList.id));
 								}
