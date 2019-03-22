@@ -124,10 +124,15 @@ var updateCard = function(estimate) {
 				var trelloCheckListItems = [];
 				for (var i = 0; i < checkLists.length;i++){
 					var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
-					var checkItems = checkLists[i].checkItems;
-					var checkListToCard = addCheckListToCard(t, currentCheckList,checkLists[i].checkItems).then(function(checkList){
-						for (var i = 0; i < checkItems.length;i++){
-							trelloCheckListItems.push(addCheckListItemToCheckList(t,checkItems[i],checkList.id));
+					var checkListToCard = addCheckListToCard(t, currentCheckList,checkLists[i].checkItems)
+					.then(function(checkList){
+						for (var i = 0; i < checkLists.length;i++){
+							if(checkLists.name == checkList.name){
+								for (var j = 0; j < checkLists[i].checkItems.length;j++){ 
+									trelloCheckListItems.push(addCheckListItemToCheckList(t,checkLists[i].checkItems[j],checkList.id));
+								}
+								break;
+							}
 						}
 					})
 					trelloCheckList.push(checkListToCard);
@@ -177,6 +182,7 @@ var createCheckListsForCard = function(estimate){
 				(currentMandatoryFinishGroups[i].finishes.finishComment!=""?' - ' +currentMandatoryFinishGroups[i].finishes.finishComment:'');
 				generalCheckList.checkItems.push(
 					{
+						checkListName: "Terminaciones Generales",
 						checked:false,
 						name:item,
 						pos:'bottom'
@@ -195,6 +201,7 @@ var createCheckListsForCard = function(estimate){
 						(optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?' - ' +optionalFinishesPrices[i].optionalFinishes[j].finishComment:'');
 						generalCheckList.checkItems.push(
 							{
+								checkListName: "Terminaciones Generales",
 								checked:false,
 								name:item,
 								pos:'bottom'
@@ -222,6 +229,7 @@ var createCheckListsForCard = function(estimate){
 					(currentItemMandatoryFinishGroups[k].finishes.finishComment?' - ' +currentItemMandatoryFinishGroups[k].finishes.finishComment:'');
 					currentCheckList.checkItems.push(
 						{
+							checkListName: "Terminaciones de " + estimate.items[i].name,
 							checked:false,
 							name:item,
 							pos:'bottom'
@@ -240,6 +248,7 @@ var createCheckListsForCard = function(estimate){
 							(optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment!=""?' - ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'');
 							currentCheckList.checkItems.push(
 								{
+									checkListName: "Terminaciones de " + estimate.items[i].name,
 									checked:false,
 									name:item,
 									pos:'bottom'
