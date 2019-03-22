@@ -146,12 +146,12 @@ var updateCard = function(estimate) {
 							trelloCheckList.push(checkListToCard);
 						}
 					});
-				});
-				TrelloPowerUp.Promise.all(trelloCheckList)
-				.then(function(){
-					TrelloPowerUp.Promise.all(trelloCheckListItems)
+					TrelloPowerUp.Promise.all(trelloCheckList)
 					.then(function(){
-						t.closeModal();
+						TrelloPowerUp.Promise.all(trelloCheckListItems)
+						.then(function(){
+							t.closeModal();
+						});
 					});
 				});
 			});
