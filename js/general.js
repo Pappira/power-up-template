@@ -126,7 +126,7 @@ var updateCard = function(estimate) {
 				.then(function(currentCheckListsOnCard){
 					var currentCheckListsToDelete = [];
 					for (var i = 0; i < currentCheckListsOnCard.length;i++){
-						currentCheckListsToDelete.push(removeCheckLists(t,currentCheckListsOnCard[i]));
+						currentCheckListsToDelete.push(removeCheckLists(t,currentCheckListsOnCard[i].id));
 					}
 					TrelloPowerUp.Promise.all(currentCheckListsToDelete)
 					.then(function(){
