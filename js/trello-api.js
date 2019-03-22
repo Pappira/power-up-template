@@ -70,3 +70,21 @@ var isAuthorized = function(t){
       }
     });
   };
+
+  var getCheckLists = function(t,cardId){
+    return isAuthorized(t).then(function(authorized){
+      if(authorized.authorized){
+        return Trello.get("card/" + cardId + "/checklists/");
+      }
+    });
+  };
+
+  var removeCheckLists = function(t,checkListId){
+    return isAuthorized(t).then(function(authorized){
+      if(authorized.authorized){
+        return Trello.delete("checklists/" + checkListId);
+      }
+    });
+  };
+
+  

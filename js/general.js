@@ -122,21 +122,31 @@ var updateCard = function(estimate) {
 			updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)})
 			.then(function(){
 				//var checkListToCard = [];
-				for (var i = 0; i < checkLists.length;i++){
-					var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
-					var checkListToCard = addCheckListToCard(t, currentCheckList,checkLists[i].checkItems)
-					.then(function(checkList){
+				getCheckLists(card.id)
+				.then(function(currentCheckListsOnCard){
+					var currentCheckListsToDelete = [];
+					for (var i = 0; i < currentCheckListsOnCard.length;i++){
+						currentCheckListsToDelete.push(removeCheckLists(t,currentCheckListsOnCard[i]));
+					}
+					TrelloPowerUp.Promise.all(currentCheckListsToDelete)
+					.then(function(){
 						for (var i = 0; i < checkLists.length;i++){
-							if(checkLists[i].name == checkList.name){
-								for (var j = 0; j < checkLists[i].checkItems.length;j++){ 
-									trelloCheckListItems.push(addCheckListItemToCheckList(t,checkLists[i].checkItems[j],checkList.id));
+							var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
+							var checkListToCard = addCheckListToCard(t, currentCheckList,checkLists[i].checkItems)
+							.then(function(checkList){
+								for (var i = 0; i < checkLists.length;i++){
+									if(checkLists[i].name == checkList.name){
+										for (var j = 0; j < checkLists[i].checkItems.length;j++){ 
+											trelloCheckListItems.push(addCheckListItemToCheckList(t,checkLists[i].checkItems[j],checkList.id));
+										}
+										break;
+									}
 								}
-								break;
-							}
+							})
+							trelloCheckList.push(checkListToCard);
 						}
-					})
-					trelloCheckList.push(checkListToCard);
-				}
+					});
+				});
 				TrelloPowerUp.Promise.all(trelloCheckList)
 				.then(function(){
 					TrelloPowerUp.Promise.all(trelloCheckListItems)
