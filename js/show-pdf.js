@@ -130,10 +130,10 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
 var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
     if(estimate.prices){
         estimate.prices.sort(compareValues());
-        doc.setFontSize(16);  
-        doc.text("Precios",leftMargin,top);
-        doc.setFontSize(fontSize); 
         if (estimate.prices.length>1){
+            doc.setFontSize(16);  
+            doc.text("Precios",leftMargin,top);
+            doc.setFontSize(fontSize); 
             top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
         }
         var lastPriceText = '';
