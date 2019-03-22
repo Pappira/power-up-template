@@ -121,7 +121,9 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
             top = increaseTop(top,rowSize,doc)
             }
         }
-        top = increaseTop(top,rowSize,doc)
+        if(i!=items.length-1){
+            top = increaseTop(top,rowSize,doc)
+        }
     }
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
     return top;
@@ -159,7 +161,7 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
                 writeUnderlinedText(priceText,14,top,doc);
                 top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
                 lastPriceText = priceText;
-            }else{
+            }else if (priceText.length > 0){
                 top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
             }
             writeTextNormalAndBold(fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,doc);
