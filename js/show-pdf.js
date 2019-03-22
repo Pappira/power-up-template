@@ -110,19 +110,20 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
         if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
             var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
             for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-                var name = currentItemMandatoryFinishGroups[k].groupName + ':';
+                var name = currentItemMandatoryFinishGroups[k].groupName + ': ';
                 var value = "";
                 for (var j = 0; j < currentItemMandatoryFinishGroups[k].finishes.length;j++){
                     value += currentItemMandatoryFinishGroups[k].finishes[j].finish +
                      (currentItemMandatoryFinishGroups[k].finishes[j].finishComment?currentItemMandatoryFinishGroups[k].finishes[j].finishComment:'') +
                      (j!=currentItemMandatoryFinishGroups[k].finishes.length-1?' // ':'');
                 }
-            }
             writeTextNormalAndBold(fontSize,fontType,name, value, top,doc);
             top = increaseTop(top,rowSize,doc)
+            }
         }
+        top = increaseTop(top,rowSize,doc)
     }
-    top = increaseTop(top,rowSize*tripleSpaceFactor,doc)
+    top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
     return top;
 }
 
