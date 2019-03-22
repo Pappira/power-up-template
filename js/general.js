@@ -122,6 +122,9 @@ var updateCard = function(estimate) {
 				var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
 				addCheckListToCard(t, currentCheckList,checkLists[i].checkItems);
 			}
+			
+		})
+		.then(function(){
 			t.closeModal();
 		});
 	});
