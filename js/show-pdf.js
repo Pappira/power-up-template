@@ -133,7 +133,9 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
         doc.setFontSize(16);  
         doc.text("Precios",leftMargin,top);
         doc.setFontSize(fontSize); 
-        top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
+        if (estimate.prices.length>1){
+            top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
+        }
         var lastPriceText = '';
         for (var i = 0; i < estimate.prices.length;i++){
             var price = estimate.prices[i];
