@@ -119,15 +119,15 @@ var updateCard = function(estimate) {
 		.then(function(){
 		  updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)},
 			function(){
+				for (var i = 0; i < checkLists.length;i++){
+					var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
+					addCheckListToCard(t, currentCheckList,checkLists[i].checkItems);
+				}
+				t.closeModal();
 			});
-			for (var i = 0; i < checkLists.length;i++){
-				var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
-				addCheckListToCard(t, currentCheckList,checkLists[i].checkItems);
-			}
-			t.closeModal();
 		});
 	});
-  };
+};
 
 var createCard = function(estimate){
 	var cardToSave = {idList: listId, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)};
