@@ -11,7 +11,7 @@ var translate = function(key){
         case 'clossedSizes':
             return 'CS';
         case 'quantities':
-            return 'Q';
+            return 'Qs';
         case 'mandatoryFinishGroups':
             return 'MFG';
         case 'groupName':
@@ -24,6 +24,8 @@ var translate = function(key){
             return 'FC';
         case 'showToClientFinish':
             return 'SCF';
+        case 'showToClient':
+            return 'SC';
         case 'incidences':
             return 'In';
         case 'itemId':
@@ -60,11 +62,31 @@ var translate = function(key){
             return 'P';
         case 'price':
             return 'Pr';
-      /*  case '':
-            return '';
-        case '':
-            return '';
-        case '':
+        case 'inksQuantity':
+            return 'IQ';
+        case 'clossedSize':
+            return 'CZ';
+        case 'optionalFinishesPrices':
+            return 'OFP';
+        case 'quantity':
+            return 'Q';
+        case 'workId':
+            return 'WI';
+        case 'prices':
+            return 'Prs';
+        case 'cutsPerSheet':
+            return 'CPS';
+        case 'excess':
+            return 'E';
+        case 'machine':
+            return 'Ma';
+        case 'paperSize':
+            return 'PZ';
+        case 'quantityPerPaper':
+            return 'QPP';
+        case 'sheetSize':
+            return 'S';
+        /*case '':
             return '';
         case '':
             return '';
@@ -89,7 +111,7 @@ var deTranslate = function(key){
             return 'name';
         case 'CS':
             return 'clossedSizes';
-        case 'Q':
+        case 'Qs':
             return 'quantities';
         case 'MFG':
             return 'mandatoryFinishGroups';
@@ -103,6 +125,8 @@ var deTranslate = function(key){
             return 'finishComment';
         case 'SCF':
             return 'showToClientFinish';
+        case 'SC':
+            return 'showToClient';
         case 'In':
             return 'incidences';
         case 'IId':
@@ -139,9 +163,31 @@ var deTranslate = function(key){
             return 'paper';
         case 'Pr':
             return 'price';
+        case 'IQ':
+            return 'inksQuantity';
+        case 'CZ':
+            return 'clossedSize';
+        case 'optionalFinishesPrices':
+            return 'OFP';
+        case 'Q':
+            return 'quantity';
+        case 'WI':
+            return 'workId';
+        case 'Prs':
+            return 'prices';
+        case 'CPPS':
+            return 'cutsPerSheet';
+        case 'E':
+            return 'excess';
+        case 'Ma':
+            return 'machine';
+        case 'PZ':
+            return 'paperSize';
+        case 'QPP':
+            return 'quantityPerPaper';
+        case 'S':
+            return 'sheetSize';
         /*case '':
-            return '';
-        case '':
             return '';
         case '':
             return '';
