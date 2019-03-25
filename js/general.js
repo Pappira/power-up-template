@@ -179,11 +179,11 @@ var createCard = function(estimate){
 	};
 	
 var translateEstimate = function (estimate){
-	convert(estimate,translate);
+	return convert(estimate,translate);
 }
 
 var deTranslateEstimate = function (estimate){
-	convert(estimate,deTranslate);
+	return convert(estimate,deTranslate);
 }
 
 var convert = function(objectToConvert,functionToTranslate){
