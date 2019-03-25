@@ -191,7 +191,7 @@ var convert = function(objectToConvert,functionToTranslate){
 		if(typeof objectToConvert[key] == 'object'){
 			var newKey = functionToTranslate(key);
 			objectToConvert = rename(objectToConvert,newKey,key);
-			convert(objectToConvert[newKey]);
+			convert(objectToConvert[newKey],functionToTranslate);
 		}else{
 			if(isNaN(key)){
 					var newKey = functionToTranslate(key);
