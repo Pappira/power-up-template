@@ -168,7 +168,7 @@ var createCard = function(estimate){
 	startLoader();
 	createNewTrelloCard(t, cardToSave, function(card) {
 	  setTimeout(function () {
-		var estimateToSave = convert(estimate);
+		var estimateToSave = translateEstimate(estimate);
 		t.set(card.id, 'shared', cardInfoKey, estimateToSave)
 		  .then(function(){
 			t.showCard(card.id);
@@ -178,15 +178,23 @@ var createCard = function(estimate){
 	});
 	};
 	
-var convert = function(objectToConvert){
+var translateEstimate = function (estimate){
+	convert(estimate,translate);
+}
+
+var deTranslateEstimate = function (estimate){
+	convert(estimate,deTranslate);
+}
+
+var convert = function(objectToConvert,functionToTranslate){
 	Object.keys(objectToConvert).forEach(function(key) {
 		if(typeof objectToConvert[key] == 'object'){
-			var newKey = translate(key);
+			var newKey = functionToTranslate(key);
 			objectToConvert = rename(objectToConvert,newKey,key);
 			convert(objectToConvert[newKey]);
 		}else{
 			if(isNaN(key)){
-					var newKey = translate(key);
+					var newKey = functionToTranslate(key);
 					objectToConvert = rename(objectToConvert,newKey,key);
 				}
 			}
