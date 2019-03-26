@@ -167,8 +167,8 @@ var deTranslate = function(key){
             return 'inksQuantity';
         case 'CZ':
             return 'clossedSize';
-        case 'optionalFinishesPrices':
-            return 'OFP';
+        case 'OFP':
+            return 'optionalFinishesPrices';
         case 'Q':
             return 'quantity';
         case 'WI':

@@ -115,9 +115,10 @@ var updateCard = function(estimate) {
 	var checkLists = createCheckListsForCard(estimate);
 	var trelloCheckList = [];
 	var trelloCheckListItems = [];
+	var estimateToSave = translateEstimate(JSON.parse(JSON.stringify(estimate)));
 	t.card('all')
 	.then(function(card) {
-	  t.set('card', 'shared', cardInfoKey, estimate)
+	  t.set('card', 'shared', cardInfoKey, estimateToSave)
 		.then(function(){
 			updateTrelloCard(t, {id: card.id, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)})
 			.then(function(){

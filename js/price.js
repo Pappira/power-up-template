@@ -17,7 +17,7 @@ t.render(function(){
 	.then(function(cardInfo){
     combinations = [];
     var quantities = [];
-    estimate = cardInfo;
+    estimate = deTranslateEstimate(cardInfo);
     for (var i = 0; i  < estimate.quantity.length; i++){
         quantities.push('{"quantity":' + estimate.quantity[i]+',');
     }
@@ -235,7 +235,7 @@ var savePrices = function(){
             combinationsObject [i]['price'] = price;
         }
         estimate['prices'] = combinationsObject;
-        t.set('card', 'shared', cardInfoKey, estimate)
+        t.set('card', 'shared', cardInfoKey, translateEstimate(estimate))
             .then(function(){
             updateTrelloCard(t, {id: card.id, desc: card.desc},
                 function(){

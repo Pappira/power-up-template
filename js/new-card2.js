@@ -51,12 +51,13 @@ t.render(function(){
 		    addCardButton.addEventListener('click', saveFunction);
 		}
 	  if(cardInfo){
-		createGeneralInformation(cardInfo);
-		for (var i = 0; i <  cardInfo.items.length;i++){
-			createItem(cardInfo.items[i]);
+		var estimate = deTranslateEstimate(cardInfo);
+		createGeneralInformation(estimate);
+		for (var i = 0; i <  estimate.items.length;i++){
+			createItem(estimate.items[i]);
 		}
-		createComments(cardInfo);
-		createCustomer(cardInfo);
+		createComments(estimate);
+		createCustomer(estimate);
 	  }else{
 		createGeneralInformation();
 		createItem();
