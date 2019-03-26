@@ -175,7 +175,7 @@ var deTranslate = function(key){
             return 'workId';
         case 'Prs':
             return 'prices';
-        case 'CPPS':
+        case 'CPS':
             return 'cutsPerSheet';
         case 'E':
             return 'excess';
