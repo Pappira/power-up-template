@@ -188,18 +188,20 @@ var deTranslateEstimate = function (estimate){
 }
 
 var convert = function(objectToConvert,functionToTranslate){
-	Object.keys(objectToConvert).forEach(function(key) {
-		if(typeof objectToConvert[key] == 'object'){
-			var newKey = functionToTranslate(key);
-			objectToConvert = rename(objectToConvert,newKey,key);
-			convert(objectToConvert[newKey],functionToTranslate);
-		}else{
-			if(isNaN(key)){
-					var newKey = functionToTranslate(key);
-					objectToConvert = rename(objectToConvert,newKey,key);
+	if (objectToConvert!=null){
+		Object.keys(objectToConvert).forEach(function(key) {
+			if(typeof objectToConvert[key] == 'object'){
+				var newKey = functionToTranslate(key);
+				objectToConvert = rename(objectToConvert,newKey,key);
+				convert(objectToConvert[newKey],functionToTranslate);
+			}else{
+				if(isNaN(key)){
+						var newKey = functionToTranslate(key);
+						objectToConvert = rename(objectToConvert,newKey,key);
+					}
 				}
-			}
-	});
+		});
+	}
 	return objectToConvert;
 }
 
