@@ -149,7 +149,7 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
                     top = increaseTop(top,rowSize,doc);
                 }
             }
-            writeTextNormalAndBold(fontSize,fontType,"Sub-Total" + (price[quantity]?" (" + price[quantity] +"unidades)":"") +": ", price.price+'', top,doc);
+            writeTextNormalAndBold(fontSize,fontType,"Sub-Total" + (price.quantity?" (" + price.quantity +" unidades)":"") +": ","$" + price.price + ' + IVA', top,doc);
             top = increaseTop(top,rowSize,doc);
         }
         top = increaseTop(top,rowSize,doc);
