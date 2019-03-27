@@ -140,7 +140,7 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
     for (var i = 0; i < finishes.length; i++){
         var finish = finishes[i];
         doc.setFontSize(16);  
-        doc.text("Opcional " + estimate.items[finish.item].name + " " + finish.name,leftMargin,top);
+        doc.text("Opcional " + (finish.item!=-1?estimate.items[finish.item].name+ " ":'') + finish.finish,leftMargin,top);
         doc.setFontSize(fontSize); 
         top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
         if (finish.desc && finish.desc != "" && finish.desc.length > 0){
@@ -198,7 +198,7 @@ var groupFinishes = function(finishesToGroup,itemNumber){
                 for (var k = 0; k < optionalFinishPrice.length;k++){
                     var currentFinish = JSON.parse(JSON.stringify(finish));
                     var currentPrice = JSON.parse(JSON.stringify(price));
-                    var currentOptionalFinish = optionalFinishPrice[j];
+                    var currentOptionalFinish = optionalFinishPrice[k];
                     for (var key in currentOptionalFinish) {
                         if (key !="price"){
                             currentFinish[key] = currentOptionalFinish[key];
@@ -218,7 +218,7 @@ var groupFinishes = function(finishesToGroup,itemNumber){
             for (var j = 0; j < finishes.length; j++){
                 if (finishes[j].item == currentFinish.item && finishes[j].finish == currentFinish.finish && finishes[j].finishComment == currentFinish.finishComment &&
                     finishes[j].showToClientFinish == currentFinish.showToClientFinish){
-                        finishes[j].price.push(currentFinish.price);
+                        finishes[j].price.push(currentFinish.price[0]);
                         alreadyExist = true;
                         break;
                 }
