@@ -131,18 +131,12 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
 
 var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
     var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
-    /*for (var i = 0; i < estimate.items.length; i++){
-        var currentOptionalFinish = JSON.parse(JSON.stringify(estimate.optionalFinishesPrices));
-        currentOptionalFinish.optionalFinishes = currentOptionalFinish.items[i].optionalFinishes;
-        var itemFinishes = groupFinishes(currentOptionalFinish,i);
-        finishes.push(itemFinishes);
-    }*/ 
     for (var i = 0; i < finishes.length; i++){
         var finish = finishes[i];
         doc.setFontSize(16);  
         doc.text("Opcional " + (finish.item!=-1?estimate.items[finish.item].name+ " ":'') + finish.finish,leftMargin,top);
         doc.setFontSize(fontSize); 
-        top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+        top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
         if (finish.desc && finish.desc != "" && finish.desc.length > 0){
             writeTextNormalAndBold(fontSize,fontType,finish.desc,"", top,doc);
             top = increaseTop(top,rowSize,doc);
@@ -158,6 +152,7 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
             writeTextNormalAndBold(fontSize,fontType,"Sub-Total: ", price.price+'', top,doc);
             top = increaseTop(top,rowSize,doc);
         }
+        top = increaseTop(top,rowSize,doc);
     }
     return top;
 }
@@ -239,7 +234,7 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
             doc.setFontSize(16);  
             doc.text("Precios",leftMargin,top);
             doc.setFontSize(fontSize); 
-            top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
+            top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
         }
         var lastPriceText = '';
         for (var i = 0; i < estimate.prices.length;i++){
@@ -248,10 +243,10 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
             for (var j = 0; j < price.items.length; j++){
                 var item =  price.items[j];
                 var originalItem = estimate.items[item.id];
-                var currentPriceText = (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
-                + (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
-                + (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
-                + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
+                var currentPriceText = (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'');
+                + (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') ;
+                + (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') ;
+                + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'');
                 + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
                 if(currentPriceText && currentPriceText.length>0){
                     priceText = ( price.items.length>1?originalItem.name+' ':'')  + currentPriceText;
@@ -259,18 +254,19 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
             }
             if(lastPriceText !=priceText){
                 if(lastPriceText){
-                    top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
+                    top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
                 }
                 writeUnderlinedText(priceText,14,top,doc);
-                top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
+                top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
                 lastPriceText = priceText;
             }else if (priceText.length > 0){
-                top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
+                top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
             }
             writeTextNormalAndBold(fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,doc);
         }
     }
-    top = increaseTop(top,rowSize*dobleSpaceFactor+rowSize*dobleSpaceFactor,doc)
+    top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
+    //top = increaseTop(top,rowSize*dobleSpaceFactor+rowSize*dobleSpaceFactor,doc)
     return top;
 }
 
@@ -317,6 +313,8 @@ var generateEstimatePDF = function(estimate){
     top = addPriceInformationToPDFForCustomer(top,doc,estimate);
     
     top = addOptionalFinishesToPDFForCustomer(top,doc,estimate);
+
+    top = increaseTop(top,rowSize*dobleSpaceFactor+rowSize*dobleSpaceFactor,doc)
     doc.setFontSize(16);  
     doc.text("Condiciones generales",leftMargin,top);
     doc.setFontSize(fontSize);
