@@ -174,7 +174,7 @@ var groupFinishes = function(finishesToGroup,itemNumber){
             }
         }
         var optionalFinishPrice = finishesToGroup[i].optionalFinishes;
-        if (optionalFinishes){
+        if (optionalFinishPrice){
             for (var j = 0; j < optionalFinishPrice.length;j++){
                 finish.item = -1;
                 var currentFinish = JSON.parse(JSON.stringify(finish));
@@ -194,7 +194,7 @@ var groupFinishes = function(finishesToGroup,itemNumber){
         for (var j = 0; j < finishesToGroup[i].items.length;j++){
             finish.item = finishesToGroup[i].items[j].id;
             var optionalFinishPrice = finishesToGroup[i].items[j].optionalFinishes;
-            if (optionalFinishes){
+            if (optionalFinishPrice){
                 for (var k = 0; k < optionalFinishPrice.length;k++){
                     var currentFinish = JSON.parse(JSON.stringify(finish));
                     var currentPrice = JSON.parse(JSON.stringify(price));
