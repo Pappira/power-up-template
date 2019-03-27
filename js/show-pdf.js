@@ -151,11 +151,11 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
             var price = finish.price[j];
             for (var key in price) {
                 if (key!="price"){
-                    writeTextNormalAndBold(fontSize,fontType,key, price[key], top,doc);
+                    writeTextNormalAndBold(fontSize,fontType,key, price[key]+'', top,doc);
                     top = increaseTop(top,rowSize,doc);
                 }
             }
-            writeTextNormalAndBold(fontSize,fontType,"Sub-Total: ", price.price, top,doc);
+            writeTextNormalAndBold(fontSize,fontType,"Sub-Total: ", price.price+'', top,doc);
             top = increaseTop(top,rowSize,doc);
         }
     }
