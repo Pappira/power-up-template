@@ -159,6 +159,7 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
             top = increaseTop(top,rowSize,doc);
         }
     }
+    return top;
 }
 
 var groupFinishes = function(finishesToGroup,itemNumber){
@@ -315,7 +316,7 @@ var generateEstimatePDF = function(estimate){
     top = addEstimateItemInformationToPDFForCustomer(top,doc,estimate);
     top = addPriceInformationToPDFForCustomer(top,doc,estimate);
     
-    addOptionalFinishesToPDFForCustomer(top,doc,estimate);
+    top = addOptionalFinishesToPDFForCustomer(top,doc,estimate);
     doc.setFontSize(16);  
     doc.text("Condiciones generales",leftMargin,top);
     doc.setFontSize(fontSize);
