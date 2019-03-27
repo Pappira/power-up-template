@@ -162,18 +162,18 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
 var groupFinishes = function(finishesToGroup,itemNumber){
     var finishes = [];
     for (var i = 0; i < finishesToGroup.length; i++){
-        var optionalFinishPrice = finishesToGroup[i];
+        var optionalFinishPrice = finishesToGroup[i].optionalFinishes;
         var finish = {};
         var price = {};
         finish.item = itemNumber;
         finish.price = [];
-        for (var key in optionalFinishPrice) {
+        for (var key in finishesToGroup[i]) {
             if(key != "workId" && key!= "optionalFinishes" && key !="items"){
-                price[key] = optionalFinishPrice[key];
+                price[key] = finishesToGroup[i][key];
             }
         }
-        for (var j = 0; j < optionalFinishPrice.optionalFinishes.length;j++){
-            var currentOptionalFinish = optionalFinishPrice.optionalFinishes[j];
+        for (var j = 0; j < optionalFinishPrice.length;j++){
+            var currentOptionalFinish = optionalFinishPrice[j];
             for (var key in currentOptionalFinish) {
                 if (key !="price"){
                     finish[key] = currentOptionalFinish[key];
