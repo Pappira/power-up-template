@@ -265,7 +265,7 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
             writeTextNormalAndBold(fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,doc);
         }
     }
-    top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
+    top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
     //top = increaseTop(top,rowSize*dobleSpaceFactor+rowSize*dobleSpaceFactor,doc)
     return top;
 }
