@@ -144,12 +144,12 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
         for (var j = 0; j < finish.price.length;j++){
             var price = finish.price[j];
             for (var key in price) {
-                if (key!="price"){
+                if (key!="price" && key!="quantity"){
                     writeTextNormalAndBold(fontSize,fontType,key, price[key]+'', top,doc);
                     top = increaseTop(top,rowSize,doc);
                 }
             }
-            writeTextNormalAndBold(fontSize,fontType,"Sub-Total: ", price.price+'', top,doc);
+            writeTextNormalAndBold(fontSize,fontType,"Sub-Total" + (price[quantity]?" (" + price[quantity] +"unidades)":"") +": ", price.price+'', top,doc);
             top = increaseTop(top,rowSize,doc);
         }
         top = increaseTop(top,rowSize,doc);
