@@ -130,12 +130,42 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
 }
 
 var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
+    var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
+    for (var i = 0; i < estimate.items.length; i++){
+        var itemFinishes = groupFinishes(estimate.items[i].optionalFinishesPrices,i);
+        finishes.push(itemFinishes);
+    }
+    for (var i = 0; i < finishes.length; i++){
+        var finish = finishes[i];
+        doc.setFontSize(16);  
+        doc.text("Opcional " + estimate.items[finish.item].name + " " + finish.name,leftMargin,top);
+        doc.setFontSize(fontSize); 
+        top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+        if (finish.desc && finish.desc != "" && finish.desc.length > 0){
+            writeTextNormalAndBold(fontSize,fontType,finish.desc,"", top,doc);
+            top = increaseTop(top,rowSize,doc);
+        }
+        for (var j = 0; j < finish.price.length;j++){
+            var price = finish.price[j];
+            for (var key in price) {
+                if (key!="price"){
+                    writeTextNormalAndBold(fontSize,fontType,key, price[key], top,doc);
+                    top = increaseTop(top,rowSize,doc);
+                }
+            }
+            writeTextNormalAndBold(fontSize,fontType,"Sub-Total: ", price.price, top,doc);
+            top = increaseTop(top,rowSize,doc);
+        }
+    }
+}
+
+var groupFinishes = function(finishesToGroup,itemNumber){
     var finishes = [];
-    for (var i = 0; i < estimate.optionalFinishesPrices.length; i++){
-        var optionalFinishPrice = estimate.optionalFinishesPrices[i];
+    for (var i = 0; i < finishesToGroup.length; i++){
+        var optionalFinishPrice = finishesToGroup[i];
         var finish = {};
         var price = {};
-        finish.item = -1;
+        finish.item = itemNumber;
         finish.price = [];
         for (var key in optionalFinishPrice) {
             if(key != "workId" && key!= "optionalFinishes" && key !="items"){
