@@ -136,7 +136,7 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
         currentOptionalFinish.optionalFinishes = currentOptionalFinish.items[i].optionalFinishes;
         var itemFinishes = groupFinishes(currentOptionalFinish,i);
         finishes.push(itemFinishes);
-    }*/
+    }*/ 
     for (var i = 0; i < finishes.length; i++){
         var finish = finishes[i];
         doc.setFontSize(16);  
