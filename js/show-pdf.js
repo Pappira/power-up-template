@@ -132,7 +132,9 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
 var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
     var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
     for (var i = 0; i < estimate.items.length; i++){
-        var itemFinishes = groupFinishes(estimate.items[i].optionalFinishesPrices,i);
+        var currentOptionalFinish = JSON.parse(JSON.stringify(estimate.optionalFinishesPrices));
+        currentOptionalFinish.optionalFinishes = currentOptionalFinish.items[i].optionalFinishes;
+        var itemFinishes = groupFinishes(currentOptionalFinish,i);
         finishes.push(itemFinishes);
     }
     for (var i = 0; i < finishes.length; i++){
@@ -163,17 +165,17 @@ var groupFinishes = function(finishesToGroup,itemNumber){
     var finishes = [];
     for (var i = 0; i < finishesToGroup.length; i++){
         var currentFinishes = [];
-        var optionalFinishPrice = finishesToGroup[i].optionalFinishes;
         var finish = {};
         var price = {};
-        finish.item = itemNumber;
         finish.price = [];
         for (var key in finishesToGroup[i]) {
             if(key != "workId" && key!= "optionalFinishes" && key !="items"){
                 price[key] = finishesToGroup[i][key];
             }
         }
+        var optionalFinishPrice = finishesToGroup[i].optionalFinishes;
         for (var j = 0; j < optionalFinishPrice.length;j++){
+            finish.item = -1;
             var currentFinish = JSON.parse(JSON.stringify(finish));
             var currentPrice = JSON.parse(JSON.stringify(price));
             var currentOptionalFinish = optionalFinishPrice[j];
@@ -186,6 +188,24 @@ var groupFinishes = function(finishesToGroup,itemNumber){
             }
             currentFinish.price.push(currentPrice);
             currentFinishes.push(currentFinish);
+        }
+        for (var j = 0; j < finishesToGroup[i].items.length;j++){
+            finish.item = finishesToGroup[i].items[j].id;
+            var optionalFinishPrice = finishesToGroup[i].items[j].optionalFinishes;
+            for (var k = 0; k < optionalFinishPrice.length;k++){
+                var currentFinish = JSON.parse(JSON.stringify(finish));
+                var currentPrice = JSON.parse(JSON.stringify(price));
+                var currentOptionalFinish = optionalFinishPrice[j];
+                for (var key in currentOptionalFinish) {
+                    if (key !="price"){
+                        currentFinish[key] = currentOptionalFinish[key];
+                    }else{
+                        currentPrice[key] = currentOptionalFinish[key];
+                    }
+                }
+                currentFinish.price.push(currentPrice);
+                currentFinishes.push(currentFinish);
+            }
         }
         //reviso si hay algún finish así ya agregado
         var alreadyExist = false;
