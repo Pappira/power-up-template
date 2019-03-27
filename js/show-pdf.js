@@ -217,7 +217,7 @@ var groupFinishes = function(finishesToGroup,itemNumber){
             var currentFinish = currentFinishes[k];
             for (var j = 0; j < finishes.length; j++){
                 if (finishes[j].item == currentFinish.item && finishes[j].finish == currentFinish.finish && finishes[j].finishComment == currentFinish.finishComment &&
-                    finishes[j].showToClientFinish == finiscurrentFinishh.showToClientFinish){
+                    finishes[j].showToClientFinish == currentFinish.showToClientFinish){
                         finishes[j].price.push(currentFinish.price);
                         alreadyExist = true;
                         break;
