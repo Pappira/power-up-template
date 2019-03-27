@@ -131,12 +131,12 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
 
 var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
     var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
-    for (var i = 0; i < estimate.items.length; i++){
+    /*for (var i = 0; i < estimate.items.length; i++){
         var currentOptionalFinish = JSON.parse(JSON.stringify(estimate.optionalFinishesPrices));
         currentOptionalFinish.optionalFinishes = currentOptionalFinish.items[i].optionalFinishes;
         var itemFinishes = groupFinishes(currentOptionalFinish,i);
         finishes.push(itemFinishes);
-    }
+    }*/
     for (var i = 0; i < finishes.length; i++){
         var finish = finishes[i];
         doc.setFontSize(16);  
