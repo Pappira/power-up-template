@@ -45,8 +45,7 @@ var addText = function(textToAdd, doc, top){
                 writeTextNormalAndBold(text.fontSize,text.fontType,text.title, text.value, top,doc);
                 break;
             case 'writeUnderlinedText':
-                writeTextNormalAndBold(text.fontSize,text.fontType,text.title, top,doc);
-                writeUnderlinedText(text.title, text.fontSize, top, doc);
+                writeUnderlinedText(text.fontSize,text.fontType,text.title, top, doc);
                 break;
         }
         top =increaseTop(top,text.increaseTop,doc);
