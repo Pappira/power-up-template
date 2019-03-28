@@ -276,6 +276,7 @@ var getPriceTextInformationForPDF = function(estimate){
             }
             lastGeneralFinishesText = generalFinishesText;
             //Si hay más de una cantidad
+            var separator = "        →  ";
             if(estimate.quantity.length>1){
                 //Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
                 if(lastPriceText !=priceText){
@@ -287,12 +288,13 @@ var getPriceTextInformationForPDF = function(estimate){
                         textToAdd.push(createText('writeTextNormalAndBold',11,fontType,'    •  ' + priceText, '', rowSize*mediumSpaceFactor));  
                     }else{
                         textToAdd.push(createText('writeUnderlinedText',12,fontType, priceText, '', rowSize*mediumSpaceFactor));  
+                        separator = '    •  ' ; 
                     }
                     lastPriceText = priceText;
                 }/*else if (priceText.length > 0){
                     top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
                 }*/
-                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'        →  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
+                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,separator + 'Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
             }else{
                 textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'    •  ' + priceText + ' (' + price.quantity + ' unidades): ',' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
                 //writeTextNormalAndBold(fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ' , ' $ ' + price.price + ' + IVA',top,doc);
