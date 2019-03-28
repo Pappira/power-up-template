@@ -96,7 +96,7 @@ var getEstimateGeneralTextInformationForPDF = function(top,estimate){
 var getEstimateItemTextInformationForPDF = function(top,estimate){
     var items = estimate.items;
     var textToAdd = [];
-    if(items.length>1?){
+    if(items.length>1){
         textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '' , top,rowSize));       
     }
     for (var i = 0; i < items.length; i++){
