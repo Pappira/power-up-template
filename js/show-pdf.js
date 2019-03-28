@@ -434,7 +434,7 @@ var writeTextNormalAndBold = function(fontSize, fontType, textNormal, textBold, 
 
     doc.text(textNormal,leftMargin,top);
     doc.setFontType("bold");
-    var currentTextWidth = doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / 3;
+    var currentTextWidth = doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
     doc.text(textBold,leftMargin + currentTextWidth,top);
     doc.setFontType("normal");
 
@@ -443,7 +443,7 @@ var writeTextNormalAndBold = function(fontSize, fontType, textNormal, textBold, 
 var writeUnderlinedText = function(fontSize, fontType, text, top, doc){
     doc.setFontSize(fontSize);
     doc.text(text,leftMargin,top);
-    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * fontSize / 3;
+    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * (fontSize / doc.internal.scaleFactor);
     doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
     doc.setFontSize(fontSize);
 }
