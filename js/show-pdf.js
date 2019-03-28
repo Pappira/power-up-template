@@ -394,7 +394,7 @@ var generateEstimatePDF = function(estimate){
         top = addNewPage(doc);
     };
     doc.setFontSize(16);  
-    var scale = writeTextNormalAndBold(fontSize, fontType, "Condiciones generales","",top, doc);
+    var scale = writeTextNormalAndBold(12, fontType, "Condiciones generales","",top, doc);
     doc.setFontSize(fontSize);
     top =increaseTop(top,rowSize*mediumSpaceFactor*scale,doc); 
     scale = writeTextNormalWithSeparation(fontSize, fontType,"  •  ","Mantenimiento de oferta 20 días.", top,doc);
@@ -414,7 +414,7 @@ var generateEstimatePDF = function(estimate){
         top = addNewPage(doc);
     };
     doc.setFontSize(16);  
-    scale = writeTextNormalAndBold(fontSize, fontType, "Formas de pago","", top, doc);
+    scale = writeTextNormalAndBold(12, fontType, "Formas de pago","", top, doc);
     doc.setFontSize(fontSize);
     top = increaseTop(top,rowSize*mediumSpaceFactor*scale,doc)
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Por transferencia o Depósito:", top, doc);
