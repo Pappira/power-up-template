@@ -349,7 +349,7 @@ var generateEstimatePDF = function(estimate){
     top = addTextToDoc(textToAdd,doc,top);
 
     textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
-    textToAdd.concat(getEstimateItemTextInformationForPDF(estimate));
+    textToAdd = textToAdd.concat(getEstimateItemTextInformationForPDF(estimate));
     top = addTextToDoc(textToAdd,doc,top);
     
     textToAdd = getPriceTextInformationForPDF(estimate);
