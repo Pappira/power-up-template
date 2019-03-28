@@ -80,7 +80,7 @@ t.render(function(){
     createCardButton.addEventListener('click', saveFunction);
 
     if(cardInfo){
-      loadFormFromEstimateObject(deTranslateEstimate(LZString.decompress(cardInfo)));
+      loadFormFromEstimateObject(deTranslateEstimate(JSON.parse( LZString.decompress(cardInfo))));
     }
   });
 });

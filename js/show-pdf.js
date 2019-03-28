@@ -558,7 +558,7 @@ var getWorkOrderPDFCallBack = function(t){
     var cardInfoKey = 'pappira.cardInfo';
     return t.get('card', 'shared', cardInfoKey)
     .then(function(cardInfo){  
-        return workOrderPDF(deTranslateEstimate( LZString.decompress(cardInfo)));
+        return workOrderPDF(deTranslateEstimate(JSON.parse( LZString.decompress(cardInfo))));
     });
 };
 
@@ -566,7 +566,7 @@ var getEstimateCallBack = function(t){
     var cardInfoKey = 'pappira.cardInfo';
     return t.get('card', 'shared', cardInfoKey)
     .then(function(cardInfo){
-        return generateEstimatePDF(deTranslateEstimate( LZString.decompress(cardInfo)));
+        return generateEstimatePDF(deTranslateEstimate(JSON.parse( LZString.decompress(cardInfo))));
     });
 };
 
