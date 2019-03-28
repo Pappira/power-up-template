@@ -56,8 +56,9 @@ var addText = function(textToAdd){
                 break;
 
         }
-        top =increaseTop(text.top,text.increaseTop,doc);
+        top =increaseTop(top,text.increaseTop,doc);
     }
+    return top;
 }
 
 var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
@@ -365,7 +366,7 @@ var generateEstimatePDF = function(estimate){
     if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
         top = addNewPage(doc);
     }
-    addText(textToAdd);
+    top = addText(textToAdd,doc);
     
     top = addEstimateItemInformationToPDFForCustomer(top,doc,estimate);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
