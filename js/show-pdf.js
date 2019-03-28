@@ -243,18 +243,22 @@ var getPriceTextInformationForPDF = function(estimate){
         for (var i = 0; i < estimate.prices.length;i++){
             var price = estimate.prices[i];
             var generalFinishesText = "";
-            for (var j = 0; j < estimate.mandatoryFinishGroups.length;j++){
-                if (estimate.mandatoryFinishGroups[j].length>1){
-                    generalFinishesText += " " + price.mandatoryFinishGroups[j].finishes.finish;
+            if(estimate.mandatoryFinishGroups){
+                for (var j = 0; j < estimate.mandatoryFinishGroups.length;j++){
+                    if (estimate.mandatoryFinishGroups[j].finishes.length>1){
+                        generalFinishesText += " " + price.mandatoryFinishGroups[j].finishes.finish;
+                    }
                 }
             }
             var priceText = '';
             for (var j = 0; j < price.items.length; j++){
                 var item =  price.items[j];
                 var itemsFinishesText = "";
-                for (var k = 0; k < estimate.items[j].mandatoryFinishGroups.length;k++){
-                    if (estimate.items[j].mandatoryFinishGroups[k].length>1){
-                        itemsFinishesText += " " + item.mandatoryFinishGroups[k].finishes.finish;
+                if(estimate.items[j].mandatoryFinishGroups){
+                    for (var k = 0; k < estimate.items[j].mandatoryFinishGroups.length;k++){
+                        if (estimate.items[j].mandatoryFinishGroups[k].finishes.length>1){
+                            itemsFinishesText += " " + item.mandatoryFinishGroups[k].finishes.finish;
+                        }
                     }
                 }
                 var originalItem = estimate.items[item.id];
@@ -291,13 +295,10 @@ var getPriceTextInformationForPDF = function(estimate){
                         separator = '    •  ' ; 
                     }
                     lastPriceText = priceText;
-                }/*else if (priceText.length > 0){
-                    top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
-                }*/
+                }
                 textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,separator + 'Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
             }else{
                 textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'    •  ' + priceText + ' (' + price.quantity + ' unidades): ',' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
-                //writeTextNormalAndBold(fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ' , ' $ ' + price.price + ' + IVA',top,doc);
                 lastPriceText = priceText;
             }
         }
