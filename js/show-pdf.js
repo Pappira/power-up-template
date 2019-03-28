@@ -34,20 +34,18 @@ var getTotalSpaceNeededForText = function(textToAdd){
     return textToAdd.reduce((a, b) => a + (b['increaseTop'] || 0), 0);
 }
 
-var createText = function(type,fontSize,fontType,title,value,top,increaseTop){
+var createText = function(type,fontSize,fontType,title,value,increaseTop){
     return {
         type: type,
         fontSize: fontSize,
         fontType:fontType,
         title: title,
         value: value,
-        top: top,
         increaseTop: increaseTop
     };
 }
 
-var addText = function(textToAdd, doc){
-    var top = textToAdd[0].top;
+var addText = function(textToAdd, doc, top){
     for (var i = 0; i < textToAdd.length;i++){
         text = textToAdd[i];
         switch (text.type){
@@ -63,11 +61,11 @@ var addText = function(textToAdd, doc){
     return top;
 }
 
-var getEstimateGeneralTextInformationForPDF = function(top,estimate){
+var getEstimateGeneralTextInformationForPDF = function(estimate){
     var textToAdd = [];
-    textToAdd.push(createText('writeTextNormalAndBold',20,fontType,estimate.name, '', top,rowSize*mediumSpaceFactor));
+    textToAdd.push(createText('writeTextNormalAndBold',20,fontType,estimate.name, '', rowSize*mediumSpaceFactor));
 
-    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,rowSize));
+    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), rowSize));
     var openedSizeEqualsClossedSize = true;
     for (var i = 0; i < estimate.items.length; i++){
         if(estimate.clossedSize != estimate.items[i].openedSize){
@@ -75,7 +73,7 @@ var getEstimateGeneralTextInformationForPDF = function(top,estimate){
             break;
         }
     }
-    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,rowSize));
+    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), rowSize));
 
     if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
@@ -87,46 +85,46 @@ var getEstimateGeneralTextInformationForPDF = function(top,estimate){
                 (currentMandatoryFinishGroups[i].finishes[j].finishComment!=""?currentMandatoryFinishGroups[i].finishes[j].finishComment:'') +
                 (j!=currentMandatoryFinishGroups[i].finishes.length-1?" // ":"");
             }
-        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,name, value, top,rowSize)); 
+        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,name, value, rowSize)); 
         }
 	}
     return textToAdd;
 }
 
-var getEstimateItemTextInformationForPDF = function(top,estimate){
+var getEstimateItemTextInformationForPDF = function(estimate){
     var items = estimate.items;
     var textToAdd = [];
     if(items.length>1){
-        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '' , top,rowSize));       
+        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '' , rowSize));       
     }
     for (var i = 0; i < items.length; i++){
         item = items[i];
         if (items.length>1){
-            textToAdd.push(createText('writeTextNormalAndBold',16,fontType,item.name, '' , top,rowSize*mediumSpaceFactor));         
+            textToAdd.push(createText('writeTextNormalAndBold',16,fontType,item.name, '' , rowSize*mediumSpaceFactor));         
         }
         if(item.openedSize != estimate.clossedSize){    
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Tamaño Abierto: ", item.openedSize.filter(Boolean).join(' // ') , top,rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Tamaño Abierto: ", item.openedSize.filter(Boolean).join(' // ') , rowSize));         
         }
         var materials = [];
         for (var j = 0; j < item.materials.length; j++){
             materials.push(item.materials[j].paper + ' ' + item.materials[j].gr + 'gr'); 
         }
-        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Papel: ", materials.filter(Boolean).join(' // '), top,rowSize));         
+        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Papel: ", materials.filter(Boolean).join(' // '), rowSize));         
         var inks = [];
         for (var j = 0 ; j < item.inks.length; j++){
             inks.push(item.inks[j].inksDetails);
         }
         if(item.faces.length==1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // '), top,rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // '), rowSize));         
         }else{
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // '), top,rowSize));         
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Faces: ", item.faces.filter(Boolean).join(' // '), top,rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Faces: ", item.faces.filter(Boolean).join(' // '), rowSize));         
         }
         if (item.quantityOfPages > 1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Páginas: ", item.quantityOfPages.filter(Boolean).join(' // '), top,rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Páginas: ", item.quantityOfPages.filter(Boolean).join(' // '), rowSize));         
         }
         if (item.quantityOfVias > 1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Vías: ", item.quantityOfVias.filter(Boolean).join(' // '), top,rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Vías: ", item.quantityOfVias.filter(Boolean).join(' // '), rowSize));         
         }
         if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
             var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
@@ -138,11 +136,11 @@ var getEstimateItemTextInformationForPDF = function(top,estimate){
                      (currentItemMandatoryFinishGroups[k].finishes[j].finishComment?currentItemMandatoryFinishGroups[k].finishes[j].finishComment:'') +
                      (j!=currentItemMandatoryFinishGroups[k].finishes.length-1?' // ':'');
                 }
-                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,name, value, top,rowSize));         
+                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,name, value, rowSize));         
             }
         }
         if(i!=items.length-1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', top,rowSize));        
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize));        
         }
     }
     return textToAdd;
@@ -345,30 +343,30 @@ var generateEstimatePDF = function(estimate){
     top = addGeneralAndCustomerInformationToPDFForCustromer(top,doc,estimate);
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
-    var textToAdd = getEstimateGeneralTextInformationForPDF(top,estimate);
+    var textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
     if(textToAdd && textToAdd.length>0){
         if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
             top = addNewPage(doc);
         }
-        top = addText(textToAdd,doc);
+        top = addText(textToAdd,doc,top);
     }
     
-    textToAdd = getEstimateItemTextInformationForPDF(top,estimate);
+    textToAdd = getEstimateItemTextInformationForPDF(estimate);
     if(textToAdd && textToAdd.length>0){
         if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
             top = addNewPage(doc);
         }
-        top = addText(textToAdd,doc);
+        top = addText(textToAdd,doc,top);
         top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
     }
     
     
-    textToAdd = getPriceTextInformationForPDF(top,estimate);
+    textToAdd = getPriceTextInformationForPDF(estimate);
     if(textToAdd && textToAdd.length>0){
         if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
             top = addNewPage(doc);
         }
-        top = addText(textToAdd,doc);
+        top = addText(textToAdd,doc,top);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
     }
 
@@ -418,7 +416,7 @@ var generateEstimatePDF = function(estimate){
 var writeTextNormalAndBold = function(fontSize, fontType, textNormal, textBold, top, doc){
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
-    
+
     doc.text(textNormal,leftMargin,top);
     doc.setFontType("bold");
     var currentTextWidth = doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / 3;
