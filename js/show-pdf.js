@@ -293,7 +293,7 @@ var getPriceTextInformationForPDF = function(estimate){
                         textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize*dobleSpaceFactor));  
                     }*/
                     if ((generalFinishesText && generalFinishesText.length>0)){
-                        textToAdd.push(createText('writeTextNormalWithSeparation',11,fontType,'', '    •  ', priceText, rowSize*mediumSpaceFactor));  
+                        textToAdd.push(createText('writeTextNormalWithSeparation',11,fontType, '    •  ', priceText, rowSize*mediumSpaceFactor));  
                     }else{
                         textToAdd.push(createText('writeUnderlinedText',12,fontType, priceText, '', rowSize*mediumSpaceFactor));  
                         separator = '    •  ' ; 
