@@ -241,19 +241,34 @@ var getPriceTextInformationForPDF = function(estimate){
         var lastPriceText = '';
         for (var i = 0; i < estimate.prices.length;i++){
             var price = estimate.prices[i];
+            var generalFinishesText = "";
+            for (var j = 0; j < estimate.mandatoryFinishGroups.length;j++){
+                if (estimate.mandatoryFinishGroups[j].length>1){
+                    generalFinishesText += " " + price.mandatoryFinishGroups[j].finishes.finish;
+                }
+            }
             var priceText = '';
             for (var j = 0; j < price.items.length; j++){
                 var item =  price.items[j];
+                var itemsFinishesText = "";
+                for (var k = 0; k < estimate.items[j].mandatoryFinishGroups.length;k++){
+                    if (estimate.items[j].mandatoryFinishGroups[k].length>1){
+                        itemsFinishesText += " " + item.mandatoryFinishGroups[k].finishes.finish;
+                    }
+                }
                 var originalItem = estimate.items[item.id];
-                var currentPriceText = (originalItem.materials.length>1?' en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'');
-                + (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') ;
-                + (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') ;
-                + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'');
-                + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
+                var currentPriceText = (originalItem.materials.length>1?' en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
+                + (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
+                + (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
+                + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
+                + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '')
+                + ((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'');
+
                 if(currentPriceText && currentPriceText.length>0){
                     priceText = ( price.items.length>1?originalItem.name+' ':'')  + currentPriceText;
                 }
             }
+            priceText += generalFinishesText;
             //Si hay más de una cantidad
             if(estimate.quantity.length>1){
                 //Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
