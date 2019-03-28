@@ -54,25 +54,20 @@ var addText = function(textToAdd){
             case 'writeTextNormalAndBold':
                 writeTextNormalAndBold(text.fontSize,text.fontType,text.title, text.value, top,doc);
                 break;
-
+            case 'writeUnderlinedText':
+                writeUnderlinedText(text.title, text.fontSize, top, doc);
+                break;
         }
         top =increaseTop(top,text.increaseTop,doc);
     }
     return top;
 }
 
-var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
+var getEstimateGeneralTextInformationForPDF = function(top,estimate){
     var textToAdd = [];
-    doc.setFontSize(20);
-    doc.text(estimate.name,leftMargin,top);
-    doc.setFontSize(fontSize);
-    top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
+    textToAdd.push(createText('writeTextNormalAndBold',20,fontType,estimate.name, '', top,rowSize*mediumSpaceFactor));
 
     textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,rowSize));
-    
-
-    //writeTextNormalAndBold(fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,doc);
-    //top =increaseTop(top,rowSize,doc);
     var openedSizeEqualsClossedSize = true;
     for (var i = 0; i < estimate.items.length; i++){
         if(estimate.clossedSize != estimate.items[i].openedSize){
@@ -81,8 +76,6 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
         }
     }
     textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,rowSize));
-//    writeTextNormalAndBold(fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,doc);
-  //  top =increaseTop(top,rowSize,doc);
 
     if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
@@ -94,55 +87,46 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
                 (currentMandatoryFinishGroups[i].finishes[j].finishComment!=""?currentMandatoryFinishGroups[i].finishes[j].finishComment:'') +
                 (j!=currentMandatoryFinishGroups[i].finishes.length-1?" // ":"");
             }
-        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,name, value, top,rowSize));
-        //writeTextNormalAndBold(fontSize,fontType,name, value, top,doc);
-        //top =increaseTop(top,rowSize,doc);    
+        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,name, value, top,rowSize)); 
         }
 	}
     return textToAdd;
 }
 
-var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
+var getEstimateItemTextInformationForPDF = function(top,estimate){
     var items = estimate.items;
-    top = items.length>1?increaseTop(top,rowSize,doc):top;
+    var textToAdd = [];
+    if(items.length>1?){
+        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '' , top,rowSize));       
+    }
     for (var i = 0; i < items.length; i++){
         item = items[i];
         if (items.length>1){
-            doc.setFontSize(16);  
-            doc.text(item.name,leftMargin,top);
-            doc.setFontSize(fontSize); 
-            top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
+            textToAdd.push(createText('writeTextNormalAndBold',16,fontType,item.name, '' , top,rowSize*mediumSpaceFactor));         
         }
-        if(item.openedSize != estimate.clossedSize){
-            writeTextNormalAndBold(fontSize,fontType,"Tamaño Abierto: ", item.openedSize.filter(Boolean).join(' // ') , top,doc);
-            top =increaseTop(top,rowSize,doc);            
+        if(item.openedSize != estimate.clossedSize){    
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Tamaño Abierto: ", item.openedSize.filter(Boolean).join(' // ') , top,rowSize));         
         }
         var materials = [];
         for (var j = 0; j < item.materials.length; j++){
             materials.push(item.materials[j].paper + ' ' + item.materials[j].gr + 'gr'); 
         }
-        writeTextNormalAndBold(fontSize,fontType,"Papel: ", materials.filter(Boolean).join(' // ') , top,doc);
-        top = increaseTop(top,rowSize,doc);
+        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Papel: ", materials.filter(Boolean).join(' // '), top,rowSize));         
         var inks = [];
         for (var j = 0 ; j < item.inks.length; j++){
             inks.push(item.inks[j].inksDetails);
         }
         if(item.faces.length==1){
-            writeTextNormalAndBold(fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // ') , top,doc);
-            top = increaseTop(top,rowSize,doc);
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // '), top,rowSize));         
         }else{
-            writeTextNormalAndBold(fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // '), top,doc);
-            top = increaseTop(top,rowSize,doc);
-            writeTextNormalAndBold(fontSize,fontType,"Faces: ", item.faces.filter(Boolean).join(' // ') , top,doc);
-            top = increaseTop(top,rowSize,doc);
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // '), top,rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Faces: ", item.faces.filter(Boolean).join(' // '), top,rowSize));         
         }
         if (item.quantityOfPages > 1){
-            writeTextNormalAndBold(fontSize,fontType,"Páginas: ", item.quantityOfPages.filter(Boolean).join(' // '), top,doc);
-            top = increaseTop(top,rowSize,doc);
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Páginas: ", item.quantityOfPages.filter(Boolean).join(' // '), top,rowSize));         
         }
         if (item.quantityOfVias > 1){
-            writeTextNormalAndBold(fontSize,fontType,"Vías: ", item.quantityOfVias.filter(Boolean).join(' // '), top,doc);
-            top = increaseTop(top,rowSize,doc);
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Vías: ", item.quantityOfVias.filter(Boolean).join(' // '), top,rowSize));         
         }
         if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
             var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
@@ -154,15 +138,14 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
                      (currentItemMandatoryFinishGroups[k].finishes[j].finishComment?currentItemMandatoryFinishGroups[k].finishes[j].finishComment:'') +
                      (j!=currentItemMandatoryFinishGroups[k].finishes.length-1?' // ':'');
                 }
-            writeTextNormalAndBold(fontSize,fontType,name, value, top,doc);
-            top = increaseTop(top,rowSize,doc);
+                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,name, value, top,rowSize));         
             }
         }
         if(i!=items.length-1){
-            top = increaseTop(top,rowSize,doc);
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', top,rowSize));        
         }
     }
-    return top;
+    return textToAdd;
 }
 
 var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
@@ -185,7 +168,7 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
                     top = increaseTop(top,rowSize,doc);
                 }
             }
-            writeTextNormalAndBold(fontSize,fontType,"Sub-Total" + (price.quantity?" (" + price.quantity +" unidades)":"") +": ","$" + price.price + ' + IVA', top,doc);
+            writeTextNormalAndBold(fontSize,fontType,"Sub-Total extra" + (price.quantity?" (" + price.quantity +" unidades)":"") +": ","$" + price.price + ' + IVA', top,doc);
             top = increaseTop(top,rowSize,doc);
         }
         top = increaseTop(top,rowSize,doc);
@@ -263,14 +246,12 @@ var groupFinishes = function(finishesToGroup,itemNumber){
     return finishes;
 }
 
-var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
+var getPriceTextInformationForPDF = function(top,estimate){
+    textToAdd = [];
     if(estimate.prices){
         estimate.prices.sort(compareValues());
         if (estimate.prices.length>1){
-            doc.setFontSize(16);  
-            doc.text("Precios",leftMargin,top);
-            doc.setFontSize(fontSize); 
-            top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+            textToAdd.push(createText('writeTextNormalAndBold',16,fontType,'Precios', '', top,rowSize*dobleSpaceFactor));  
         }
         var lastPriceText = '';
         for (var i = 0; i < estimate.prices.length;i++){
@@ -288,26 +269,28 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
                     priceText = ( price.items.length>1?originalItem.name+' ':'')  + currentPriceText;
                 }
             }
+            //Si hay más de una cantidad
             if(estimate.quantity.length>1){
+                //Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
                 if(lastPriceText !=priceText){
+                    //Si no es el primero que agrego, es decir lastPriceText existe
                     if(lastPriceText){
-                        top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+                        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', top,rowSize*dobleSpaceFactor));  
                     }
-                    writeUnderlinedText(priceText, 12,top,doc);
-                    top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
+                    textToAdd.push(createText('writeUnderlinedText',12,fontType,priceText, '', top,rowSize*mediumSpaceFactor));  
                     lastPriceText = priceText;
-                }else if (priceText.length > 0){
+                }/*else if (priceText.length > 0){
                     top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
-                }
-                writeTextNormalAndBold(fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,doc);
+                }*/
+                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,rowSize*mediumSpaceFactor));  
             }else{
+                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ',' $ ' + price.price + ' + IVA', top,rowSize*mediumSpaceFactor));  
                 writeTextNormalAndBold(fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ' , ' $ ' + price.price + ' + IVA',top,doc);
-                top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
                 lastPriceText = priceText;
             }
         }
     }
-    return top;
+    return textToAdd;
 }
 
 var addHeaderToCurrentPage = function(doc){
@@ -362,17 +345,32 @@ var generateEstimatePDF = function(estimate){
     top = addGeneralAndCustomerInformationToPDFForCustromer(top,doc,estimate);
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
-    var textToAdd = addEstimateGeneralInformationToPDFForCustomer(top,doc,estimate);
-    if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
-        top = addNewPage(doc);
+    var textToAdd = getEstimateGeneralTextInformationForPDF(top,estimate);
+    if(textToAdd && textToAdd.length>0){
+        if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
+            top = addNewPage(doc);
+        }
+        top = addText(textToAdd,doc);
     }
-    top = addText(textToAdd,doc);
     
-    top = addEstimateItemInformationToPDFForCustomer(top,doc,estimate);
-    top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+    textToAdd = getEstimateItemTextInformationForPDF(top,estimate);
+    if(textToAdd && textToAdd.length>0){
+        if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
+            top = addNewPage(doc);
+        }
+        top = addText(textToAdd,doc);
+        top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+    }
     
-    top = addPriceInformationToPDFForCustomer(top,doc,estimate);
+    
+    textToAdd = getPriceTextInformationForPDF(top,estimate);
+    if(textToAdd && textToAdd.length>0){
+        if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
+            top = addNewPage(doc);
+        }
+        top = addText(textToAdd,doc);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+    }
 
     var currentTop = top;
     top = addOptionalFinishesToPDFForCustomer(top,doc,estimate);
