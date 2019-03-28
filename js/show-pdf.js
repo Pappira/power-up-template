@@ -30,13 +30,43 @@ var addGeneralAndCustomerInformationToPDFForCustromer = function(top,doc,estimat
     return top;
 }
 
+var createText = function(type,fontSize,title,value,top,increaseTop){
+    return {
+        type: type,
+        fontSize: fontSize,
+        title: title,
+        value: value,
+        top: top,
+        increaseTop: increaseTop
+    };
+}
+
+var addText = function(textToAdd){
+    var top = textToAdd[0].top;
+    for (var i = 0; i < textToAdd.length;i++){
+        text = textToAdd[i];
+        switch (text.type){
+            case 'writeTextNormalAndBold':
+                writeTextNormalAndBold(text.fontSize,text.fontType,text.title, text.value, top,doc);
+                break;
+
+        }
+        top =increaseTop(text.top,text.increaseTop,doc);
+    }
+}
+
 var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
+    var textToAdd = [];
     doc.setFontSize(20);
     doc.text(estimate.name,leftMargin,top);
     doc.setFontSize(fontSize);
     top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
-    writeTextNormalAndBold(fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,doc);
-    top =increaseTop(top,rowSize,doc);
+
+    textToAdd.push(createText(fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,rowSize));
+    
+
+    //writeTextNormalAndBold(fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,doc);
+    //top =increaseTop(top,rowSize,doc);
     var openedSizeEqualsClossedSize = true;
     for (var i = 0; i < estimate.items.length; i++){
         if(estimate.clossedSize != estimate.items[i].openedSize){
@@ -44,8 +74,9 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
             break;
         }
     }
-    writeTextNormalAndBold(fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,doc);
-    top =increaseTop(top,rowSize,doc);
+    textToAdd.push(createText(fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,rowSize));
+//    writeTextNormalAndBold(fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,doc);
+  //  top =increaseTop(top,rowSize,doc);
 
     if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
@@ -57,11 +88,12 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
                 (currentMandatoryFinishGroups[i].finishes[j].finishComment!=""?currentMandatoryFinishGroups[i].finishes[j].finishComment:'') +
                 (j!=currentMandatoryFinishGroups[i].finishes.length-1?" // ":"");
             }
-        writeTextNormalAndBold(fontSize,fontType,name, value, top,doc);
-        top =increaseTop(top,rowSize,doc);    
+        textToAdd.push(createText(fontSize,fontType,name, value, top,rowSize));
+        //writeTextNormalAndBold(fontSize,fontType,name, value, top,doc);
+        //top =increaseTop(top,rowSize,doc);    
         }
 	}
-    return top;
+    return textToAdd;
 }
 
 var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
@@ -324,7 +356,8 @@ var generateEstimatePDF = function(estimate){
     top = addGeneralAndCustomerInformationToPDFForCustromer(top,doc,estimate);
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
-    top = addEstimateGeneralInformationToPDFForCustomer(top,doc,estimate);
+    var textToAdd = addEstimateGeneralInformationToPDFForCustomer(top,doc,estimate);
+    addText(textToAdd);
     top = addEstimateItemInformationToPDFForCustomer(top,doc,estimate);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
     
@@ -335,7 +368,7 @@ var generateEstimatePDF = function(estimate){
     top = addOptionalFinishesToPDFForCustomer(top,doc,estimate);
     top = currentTop!=top?increaseTop(top,rowSize*dobleSpaceFactor,doc):top;
 
-    if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5 + rowSize*dobleSpaceFactor)){
+    if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5 + rowSize*dobleSpaceFactor,doc)){
         top = addNewPage(doc);
     };
     doc.setFontSize(16);  
