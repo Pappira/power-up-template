@@ -469,7 +469,7 @@ var writeTextNormalAndBoldWithSeparation = function(fontSize, fontType, textSepa
     var currentTextWidth = doc.getStringUnitWidth(textSeparator, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
     writeText(doc,text,top, currentTextWidth);
     doc.setFontType("bold");
-    var currentTextWidth = currentTextWidth + doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
+    var currentTextWidth = currentTextWidth + doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
     var scale = writeText(doc,textBold,top, currentTextWidth);
     doc.setFontType("normal");
     return scale;
