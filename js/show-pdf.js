@@ -34,10 +34,11 @@ var getTotalSpaceNeededForText = function(textToAdd){
     return textToAdd.reduce((a, b) => a + (b['increaseTop'] || 0), 0);
 }
 
-var createText = function(type,fontSize,title,value,top,increaseTop){
+var createText = function(type,fontSize,fontType,title,value,top,increaseTop){
     return {
         type: type,
         fontSize: fontSize,
+        fontType:fontType,
         title: title,
         value: value,
         top: top,
@@ -66,7 +67,7 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
     doc.setFontSize(fontSize);
     top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
 
-    textToAdd.push(createText(fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,rowSize));
+    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,rowSize));
     
 
     //writeTextNormalAndBold(fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,doc);
@@ -78,7 +79,7 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
             break;
         }
     }
-    textToAdd.push(createText(fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,rowSize));
+    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,rowSize));
 //    writeTextNormalAndBold(fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), top,doc);
   //  top =increaseTop(top,rowSize,doc);
 
@@ -92,7 +93,7 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
                 (currentMandatoryFinishGroups[i].finishes[j].finishComment!=""?currentMandatoryFinishGroups[i].finishes[j].finishComment:'') +
                 (j!=currentMandatoryFinishGroups[i].finishes.length-1?" // ":"");
             }
-        textToAdd.push(createText(fontSize,fontType,name, value, top,rowSize));
+        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,name, value, top,rowSize));
         //writeTextNormalAndBold(fontSize,fontType,name, value, top,doc);
         //top =increaseTop(top,rowSize,doc);    
         }
