@@ -13,21 +13,13 @@ var mediumSpaceFactor = 1.3;
 var dobleSpaceFactor = 1.6;
 var tripleSpaceFactor = 2;
 
-var addGeneralAndCustomerInformationToPDFForCustromer = function(top,doc,estimate){
-    var width = doc.internal.pageSize.width;
-    var day = new Date();
-    var options = {year: 'numeric', month: 'long', day: 'numeric' };
-    doc.text('Montevideo, ' + day.toLocaleDateString('es-UY', options),width-leftMargin,top,'right');
-    top = increaseTop(top,rowSize*tripleSpaceFactor,doc)
-    doc.setFontType("bold");
+var getGeneralAndCustomerInformationForPDF = function(estimate){
+    var textToAdd = [];
     var contactAndBusinessInfo = estimate.customer?[estimate.customer.comenrcialName, estiamte.customer.businessName, estaimte.customer.contactName]:[];
-    doc.text(contactAndBusinessInfo.filter(Boolean).join(' - '),leftMargin,top);
-    doc.setFontType("normal");
-    top = increaseTop(top,rowSize,doc);
-    doc.text("Presente",leftMargin,top);
-    top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
-    doc.text("A continuación detallamos el presupuesto solicitado.",leftMargin,top);
-    return top;
+    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', contactAndBusinessInfo.filter(Boolean).join(' - '), rowSize));
+    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'Presente','', rowSize*dobleSpaceFactor));
+    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"A continuación detallamos el presupuesto solicitado.",'', rowSize));
+    return textToAdd;
 }
 
 var getTotalSpaceNeededForText = function(textToAdd){
@@ -343,17 +335,22 @@ var addTextToDoc = function(textToAdd,doc,top){
 var generateEstimatePDF = function(estimate){
     var doc = new jsPDF();
     var top = marginTop;
-    
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
 
-    top = addGeneralAndCustomerInformationToPDFForCustromer(top,doc,estimate);
+
+    var width = doc.internal.pageSize.width;
+    var day = new Date();
+    var options = {year: 'numeric', month: 'long', day: 'numeric' };
+    doc.text('Montevideo, ' + day.toLocaleDateString('es-UY', options),width-leftMargin,top,'right');
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
-    var textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
+    var textToAdd  = getGeneralAndCustomerInformationForPDF(top,doc,estimate);
+    addTextToDoc(textToAdd,doc,top);
+
+    textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
     textToAdd.concat(getEstimateItemTextInformationForPDF(estimate));
     addTextToDoc(textToAdd,doc,top);
-    
     
     textToAdd = getPriceTextInformationForPDF(estimate);
     addTextToDoc(textToAdd,doc,top);
