@@ -46,7 +46,7 @@ var createText = function(type,fontSize,fontType,title,value,top,increaseTop){
     };
 }
 
-var addText = function(textToAdd){
+var addText = function(textToAdd, doc){
     var top = textToAdd[0].top;
     for (var i = 0; i < textToAdd.length;i++){
         text = textToAdd[i];
@@ -285,7 +285,7 @@ var getPriceTextInformationForPDF = function(top,estimate){
                 textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,rowSize*mediumSpaceFactor));  
             }else{
                 textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ',' $ ' + price.price + ' + IVA', top,rowSize*mediumSpaceFactor));  
-                writeTextNormalAndBold(fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ' , ' $ ' + price.price + ' + IVA',top,doc);
+                //writeTextNormalAndBold(fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ' , ' $ ' + price.price + ' + IVA',top,doc);
                 lastPriceText = priceText;
             }
         }
@@ -416,7 +416,9 @@ var generateEstimatePDF = function(estimate){
 
 
 var writeTextNormalAndBold = function(fontSize, fontType, textNormal, textBold, top, doc){
-
+    doc.setFont(fontType);
+    doc.setFontSize(fontSize);
+    
     doc.text(textNormal,leftMargin,top);
     doc.setFontType("bold");
     var currentTextWidth = doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / 3;
