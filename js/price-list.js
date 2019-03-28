@@ -48,6 +48,56 @@ var extraPrices = [
       }
     ],
     
+  },
+  {
+    "workId":1,
+    "quantity":200,    
+    "optionalFinishes":
+      [
+        {
+          "finish":"Marca Páginas",
+          "finishComment":"",
+          "showToClientFinish":true,
+          "price": 4050
+        },
+        {
+          "finish":"Cierre Elástico",
+          "finishComment":"",
+          "showToClientFinish":true,
+          "price": 8000
+        }
+      ],
+    "items":
+    [
+      {
+        "id":0,
+        "optionalFinishes":
+        [
+          {
+            "finish":"Laminado Mate",
+            "finishComment":"",
+            "showToClient":true,
+            "price": 5650
+          },
+          {
+            "finish":"Laminado Brillo",
+            "finishComment":"",
+            "showToClient":true,
+            "price": 7000
+          },
+          {
+            "finish":"Laminado Mate o Brillo a definir",
+            "finishComment":"",
+            "showToClient":true,
+            "price": 12000
+          }
+        ]
+      },
+      {
+        "id":1,
+      }
+    ],
+    
   }
 ]
 
