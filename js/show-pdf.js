@@ -307,7 +307,7 @@ var getPriceTextInformationForPDF = function(estimate){
                 }
                 textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades): ', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
             }else{
-                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,'    •  ', priceText + ' (' + price.quantity + ' unidades): ', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
+                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,'    •  ', (priceText.length>0?priceText:'Sub-Total ') + ' (' + price.quantity + ' unidades): ', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
                 lastPriceText = priceText;
             }
         }
