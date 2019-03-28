@@ -244,12 +244,12 @@ var groupFinishes = function(finishesToGroup,itemNumber){
     return finishes;
 }
 
-var getPriceTextInformationForPDF = function(top,estimate){
+var getPriceTextInformationForPDF = function(estimate){
     textToAdd = [];
     if(estimate.prices){
         estimate.prices.sort(compareValues());
         if (estimate.prices.length>1){
-            textToAdd.push(createText('writeTextNormalAndBold',16,fontType,'Precios', '', top,rowSize*dobleSpaceFactor));  
+            textToAdd.push(createText('writeTextNormalAndBold',16,fontType,'Precios', '', rowSize*dobleSpaceFactor));  
         }
         var lastPriceText = '';
         for (var i = 0; i < estimate.prices.length;i++){
@@ -273,16 +273,16 @@ var getPriceTextInformationForPDF = function(top,estimate){
                 if(lastPriceText !=priceText){
                     //Si no es el primero que agrego, es decir lastPriceText existe
                     if(lastPriceText){
-                        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', top,rowSize*dobleSpaceFactor));  
+                        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize*dobleSpaceFactor));  
                     }
-                    textToAdd.push(createText('writeUnderlinedText',12,fontType,priceText, '', top,rowSize*mediumSpaceFactor));  
+                    textToAdd.push(createText('writeUnderlinedText',12,fontType,priceText, '', rowSize*mediumSpaceFactor));  
                     lastPriceText = priceText;
                 }/*else if (priceText.length > 0){
                     top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
                 }*/
-                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,rowSize*mediumSpaceFactor));  
+                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
             }else{
-                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ',' $ ' + price.price + ' + IVA', top,rowSize*mediumSpaceFactor));  
+                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ',' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
                 //writeTextNormalAndBold(fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ' , ' $ ' + price.price + ' + IVA',top,doc);
                 lastPriceText = priceText;
             }
