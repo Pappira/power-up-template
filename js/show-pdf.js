@@ -30,6 +30,10 @@ var addGeneralAndCustomerInformationToPDFForCustromer = function(top,doc,estimat
     return top;
 }
 
+var getTotalSpaceNeededForText = function(textToAdd){
+    return textToAdd.reduce((a, b) => a + (b['increaseTop'] || 0), 0);
+}
+
 var createText = function(type,fontSize,title,value,top,increaseTop){
     return {
         type: type,
@@ -357,7 +361,11 @@ var generateEstimatePDF = function(estimate){
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
     var textToAdd = addEstimateGeneralInformationToPDFForCustomer(top,doc,estimate);
+    if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
+        top = addNewPage(doc);
+    }
     addText(textToAdd);
+    
     top = addEstimateItemInformationToPDFForCustomer(top,doc,estimate);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
     
