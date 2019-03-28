@@ -52,7 +52,7 @@ var addText = function(textToAdd, doc, top){
                 scale = writeTextNormalWithSeparation(fontSize, fontType, text.title, text.value,top, doc);
    
         }
-        top =increaseTop(top,text.increaseTop,doc);
+        top =increaseTop(top,text.increaseTop*scale,doc);
     }
     return top;
 }
@@ -300,9 +300,9 @@ var getPriceTextInformationForPDF = function(estimate){
                     }
                     lastPriceText = priceText;
                 }
-                textToAdd.push(createText('writeTextNormalWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
+                textToAdd.push(createText('writeTextNormalWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades):  $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
             }else{
-                textToAdd.push(createText('writeTextNormalWithSeparation',fontSize,fontType,'    •  ', priceText + ' (' + price.quantity + ' unidades): ',' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
+                textToAdd.push(createText('writeTextNormalWithSeparation',fontSize,fontType,'    •  ', priceText + ' (' + price.quantity + ' unidades):  $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
                 lastPriceText = priceText;
             }
         }
@@ -396,19 +396,19 @@ var generateEstimatePDF = function(estimate){
     doc.setFontSize(16);  
     var scale = writeTextNormalAndBold(fontSize, fontType, "Condiciones generales","",top, doc);
     doc.setFontSize(fontSize);
-    top =increaseTop(top,rowSize*mediumSpaceFactor,doc); 
+    top =increaseTop(top,rowSize*mediumSpaceFactor*scale,doc); 
     scale = writeTextNormalWithSeparation(fontSize, fontType,"  •  ","Mantenimiento de oferta 20 días.", top,doc);
-    top = increaseTop(top,rowSize,doc);
+    top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType,"  •  ","Forma de pago seña 50% al confirmar el trabajo y restante contado contra entrega.",top,doc);
-    top = increaseTop(top,rowSize,doc);
+    top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Precio unitario basado en unidades descritas o más.",top,doc);
-    top = increaseTop(top,rowSize,doc);
+    top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","El precio no incluye el costo de diseño o gráficos de banco de imágenes.",top,doc);
-    top = increaseTop(top,rowSize,doc);
+    top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Precios NO incluyen IVA.", top,doc);
-    top = increaseTop(top,rowSize,doc);
+    top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", top, doc);
-    top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
+    top = increaseTop(top,rowSize*dobleSpaceFactor*scale,doc)
 
     if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*3 ,doc)){
         top = addNewPage(doc);
@@ -416,13 +416,13 @@ var generateEstimatePDF = function(estimate){
     doc.setFontSize(16);  
     scale = writeTextNormalAndBold(fontSize, fontType, "Formas de pago","", top, doc);
     doc.setFontSize(fontSize);
-    top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
+    top = increaseTop(top,rowSize*mediumSpaceFactor*scale,doc)
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Por transferencia o Depósito:", top, doc);
-    top = increaseTop(top,rowSize,doc);
+    top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "      »  ","BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",top, doc);
-    top = increaseTop(top,rowSize,doc);
+    top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Abitab o RedPagos:",top, doc);
-    top = increaseTop(top,rowSize,doc);
+    top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "      »  ","Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",top,doc);
     top = increaseTop(top,rowSize*dobleSpaceFactor*scale,doc) 
    
