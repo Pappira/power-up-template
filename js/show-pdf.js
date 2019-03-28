@@ -346,17 +346,17 @@ var generateEstimatePDF = function(estimate){
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
     var textToAdd  = getGeneralAndCustomerInformationForPDF(top,doc,estimate);
-    addTextToDoc(textToAdd,doc,top);
+    top = addTextToDoc(textToAdd,doc,top);
 
     textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
     textToAdd.concat(getEstimateItemTextInformationForPDF(estimate));
-    addTextToDoc(textToAdd,doc,top);
+    top = addTextToDoc(textToAdd,doc,top);
     
     textToAdd = getPriceTextInformationForPDF(estimate);
-    addTextToDoc(textToAdd,doc,top);
+    top = addTextToDoc(textToAdd,doc,top);
 
-    textToAdd = getOptionalFinishesForPDF(top,doc,estimate);
-    addTextToDoc(textToAdd,doc,top);
+    textToAdd = getOptionalFinishesForPDF(estimate);
+    top = addTextToDoc(textToAdd,doc,top);
 
     if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5,doc)){
         top = addNewPage(doc);
