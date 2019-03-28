@@ -146,32 +146,27 @@ var getEstimateItemTextInformationForPDF = function(estimate){
     return textToAdd;
 }
 
-var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
+var getOptionalFinishesForPDF = function(estimate){
+    var textToAdd = [];
     var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
     for (var i = 0; i < finishes.length; i++){
         var finish = finishes[i];
-        doc.setFontSize(13);  
-        doc.text("Opcional " + (finish.item!=-1?estimate.items[finish.item].name+ " ":'') + finish.finish,leftMargin,top);
-        doc.setFontSize(fontSize); 
-        top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
+        textToAdd.push(createText('writeTextNormalAndBold',13,fontType,"Opcional " + (finish.item!=-1?estimate.items[finish.item].name+ " ":'') + finish.finish,'', rowSize*mediumSpaceFactor));
         if (finish.desc && finish.desc != "" && finish.desc.length > 0){
-            writeTextNormalAndBold(fontSize,fontType,finish.desc,"", top,doc);
-            top = increaseTop(top,rowSize,doc);
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,finish.desc,'', rowSize));
         }
         for (var j = 0; j < finish.price.length;j++){
             var price = finish.price[j];
             for (var key in price) {
                 if (key!="price" && key!="quantity"){
-                    writeTextNormalAndBold(fontSize,fontType,key, price[key]+'', top,doc);
-                    top = increaseTop(top,rowSize,doc);
+                    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,key,price[key]+'', rowSize));
                 }
             }
-            writeTextNormalAndBold(fontSize,fontType,"Sub-Total extra" + (price.quantity?" (" + price.quantity +" unidades)":"") +": ","$" + price.price + ' + IVA', top,doc);
-            top = increaseTop(top,rowSize,doc);
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Sub-Total extra" + (price.quantity?" (" + price.quantity +" unidades)":"") +": ","$" + price.price + ' + IVA', rowSize));
         }
-        top = increaseTop(top,rowSize,doc);
+        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'','', rowSize));
     }
-    return top;
+    return textToAdd;
 }
 
 var groupFinishes = function(finishesToGroup,itemNumber){
@@ -334,24 +329,7 @@ var addNewPage = function(doc){
     return marginTop;
 }
   
-var generateEstimatePDF = function(estimate){
-    var doc = new jsPDF();
-    doc.setFont(fontType);
-    doc.setFontSize(fontSize);
-    var top = marginTop;
-
-    top = addGeneralAndCustomerInformationToPDFForCustromer(top,doc,estimate);
-    top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
-
-    var textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
-    if(textToAdd && textToAdd.length>0){
-        if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
-            top = addNewPage(doc);
-        }
-        top = addText(textToAdd,doc,top);
-    }
-    
-    textToAdd = getEstimateItemTextInformationForPDF(estimate);
+var addTextToDoc = function(textToAdd,doc,top){
     if(textToAdd && textToAdd.length>0){
         if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
             top = addNewPage(doc);
@@ -359,22 +337,31 @@ var generateEstimatePDF = function(estimate){
         top = addText(textToAdd,doc,top);
         top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
     }
+    return top;
+}
+
+var generateEstimatePDF = function(estimate){
+    var doc = new jsPDF();
+    var top = marginTop;
+    
+    doc.setFont(fontType);
+    doc.setFontSize(fontSize);
+
+    top = addGeneralAndCustomerInformationToPDFForCustromer(top,doc,estimate);
+    top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
+
+    var textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
+    textToAdd.concat(getEstimateItemTextInformationForPDF(estimate));
+    addTextToDoc(textToAdd,doc,top);
     
     
     textToAdd = getPriceTextInformationForPDF(estimate);
-    if(textToAdd && textToAdd.length>0){
-        if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
-            top = addNewPage(doc);
-        }
-        top = addText(textToAdd,doc,top);
-    top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
-    }
+    addTextToDoc(textToAdd,doc,top);
 
-    var currentTop = top;
-    top = addOptionalFinishesToPDFForCustomer(top,doc,estimate);
-    top = currentTop!=top?increaseTop(top,rowSize*dobleSpaceFactor,doc):top;
+    textToAdd = getOptionalFinishesForPDF(top,doc,estimate);
+    addTextToDoc(textToAdd,doc,top);
 
-    if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5 + rowSize*dobleSpaceFactor,doc)){
+    if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5,doc)){
         top = addNewPage(doc);
     };
     doc.setFontSize(16);  
@@ -394,6 +381,9 @@ var generateEstimatePDF = function(estimate){
     doc.text("  •  Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", leftMargin,top);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
 
+    if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*3 ,doc)){
+        top = addNewPage(doc);
+    };
     doc.setFontSize(16);  
     doc.text("Formas de pago",leftMargin,top);
     doc.setFontSize(fontSize);
