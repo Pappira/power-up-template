@@ -104,7 +104,7 @@ var createPossibilities = function(){
     for (var i = 0; i < estimate.optionalFinishesPrices.length;i++){
       var possibleExtraPrice = estimate.optionalFinishesPrices[i];
       var isPossible = true;
-      var work = estimate;
+      var work = estimate.prices[estimate.SelectedOption];
       for (var prop in possibleExtraPrice) {
         if (prop != "optionalFinishes" && prop !="items" && prop !="workId"){
           if(!JSON.stringify(work[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
