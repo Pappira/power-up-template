@@ -518,7 +518,7 @@ TrelloPowerUp.initialize({
     return t.get('card', 'shared', cardInfoKey).then(
       function(estimate){
         var acceptEstimte ={};
-        estimate = deTranslateEstimate(JSON.parse( LZString.decompress(cardInfo)));
+        estimate = deTranslateEstimate(JSON.parse( LZString.decompress(estimate)));
         if (estimate['prices']){
           acceptEstimte = {
             // usually you will provide a callback function to be run on button click
