@@ -390,36 +390,36 @@ var generateEstimatePDF = function(estimate){
         top = addNewPage(doc);
     };
     doc.setFontSize(16);  
-    doc.writeText("Condiciones generales",leftMargin,top);
+    doc.writeText("Condiciones generales",top);
     doc.setFontSize(fontSize);
     top =increaseTop(top,rowSize*mediumSpaceFactor,doc); 
-    doc.writeText("  •  Mantenimiento de oferta 20 días.", leftMargin,top);
+    doc.writeText("  •  Mantenimiento de oferta 20 días.", top);
     top = increaseTop(top,rowSize,doc);
-    doc.writeText("  •  Forma de pago seña 50% al confirmar el trabajo y restante contado contra entrega.",leftMargin,top);
+    doc.writeText("  •  Forma de pago seña 50% al confirmar el trabajo y restante contado contra entrega.",top);
     top = increaseTop(top,rowSize,doc);
-    doc.writeText("  •  Precio unitario basado en unidades descritas o más.",leftMargin,top);
+    doc.writeText("  •  Precio unitario basado en unidades descritas o más.",top);
     top = increaseTop(top,rowSize,doc);
-    doc.writeText("  •  El precio no incluye el costo de diseño o gráficos de banco de imágenes.",leftMargin,top);
+    doc.writeText("  •  El precio no incluye el costo de diseño o gráficos de banco de imágenes.",top);
     top = increaseTop(top,rowSize,doc);
-    doc.writeText("  •  Precios NO incluyen IVA.", leftMargin,top);
+    doc.writeText("  •  Precios NO incluyen IVA.", top);
     top = increaseTop(top,rowSize,doc);
-    doc.writeText("  •  Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", leftMargin,top);
+    doc.writeText("  •  Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", top);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
 
     if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*3 ,doc)){
         top = addNewPage(doc);
     };
     doc.setFontSize(16);  
-    doc.writeText("Formas de pago",leftMargin,top);
+    doc.writeText("Formas de pago",top);
     doc.setFontSize(fontSize);
     top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
-    doc.writeText("  •  Por transferencia o Depósito:", leftMargin,top);
+    doc.writeText("  •  Por transferencia o Depósito:", top);
     top = increaseTop(top,rowSize,doc);
-    doc.writeText("      »  BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",leftMargin,top);
+    doc.writeText("      »  BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",top);
     top = increaseTop(top,rowSize,doc);
-    doc.writeText("  •  Abitab o RedPagos:",leftMargin,top);
+    doc.writeText("  •  Abitab o RedPagos:",top);
     top = increaseTop(top,rowSize,doc);
-    doc.writeText("      »  Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",leftMargin,top);
+    doc.writeText("      »  Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",top);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc) 
    
     addHeaderToCurrentPage(doc);
@@ -427,7 +427,7 @@ var generateEstimatePDF = function(estimate){
     doc.save('OrdenDeTrabajo.pdf');
 }
 
-var writeText = function(text, extraSpace){
+var writeText = function(text, top,extraSpace){
     var textSplited = doc.splitTextToSize(text,  doc.internal.pageSize.width - leftMargin*2 - (extraSpace?extraSpace:0));
     doc.text(textSplited,leftMargin + (extraSpace?extraSpace:0),top);
 }
@@ -436,17 +436,17 @@ var writeTextNormalAndBold = function(fontSize, fontType, textNormal, textBold, 
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
 
-    doc.text(textNormal,leftMargin,top);
+    doc.writeText(textNormal,top);
     doc.setFontType("bold");
     var currentTextWidth = doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
-    doc.text(textBold,leftMargin + currentTextWidth,top);
+    doc.writeText(textBold,top, currentTextWidth);
     doc.setFontType("normal");
 
 }
 
 var writeUnderlinedText = function(fontSize, fontType, text, top, doc){
     doc.setFontSize(fontSize);
-    doc.text(text,leftMargin,top);
+    doc.writeText(text,top);
     var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * (fontSize / doc.internal.scaleFactor);
     doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
     doc.setFontSize(fontSize);
