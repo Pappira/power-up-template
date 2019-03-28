@@ -501,7 +501,23 @@ var createTrelloCardName = function(estimate){
 
 function compareValues(key, order='asc') {
     return function(a, b) {
-        let comparison = 0;
+				let comparison = 0;
+				if(a.mandatoryFinishGroups && b.mandatoryFinishGroups){
+					if (a.mandatoryFinishGroups.length == b.mandatoryFinishGroups.length){
+						for (var j = 0; j < a.mandatoryFinishGroups.length;j++){
+							const varA = (typeof a.mandatoryFinishGroups[j].finishes.finish === 'string') ?a.mandatoryFinishGroups[j].finishes.finish.toUpperCase() : a.mandatoryFinishGroups[j].finishes.finish;
+							const varB = (typeof b.mandatoryFinishGroups[j].finishes.finish === 'string') ?b.mandatoryFinishGroups[j].finishes.finish.toUpperCase() : b.mandatoryFinishGroups[j].finishes.finish;
+							if (a.mandatoryFinishGroups[j].finishes.finish != b.mandatoryFinishGroups[j].finishes.finish){
+								if (varA > varB) {
+									return ((order == 'desc') ? -1:1);
+								} else if (varA < varB) {
+										return ((order == 'desc') ? 1:-1);
+										
+								}
+							}
+						}
+					}
+				}
         key = ['openedSize','quantityOfPages','quantityOfVias','faces','materials','inks'];
         if(a.items.length==b.items.length){
             for (var j = 0; j < a.items.length;j++){

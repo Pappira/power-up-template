@@ -246,7 +246,7 @@ var getPriceTextInformationForPDF = function(estimate){
             if(estimate.mandatoryFinishGroups){
                 for (var j = 0; j < estimate.mandatoryFinishGroups.length;j++){
                     if (estimate.mandatoryFinishGroups[j].finishes.length>1){
-                        generalFinishesText += " " + price.mandatoryFinishGroups[j].finishes.finish;
+                        generalFinishesText += (generalFinishesText.length>0?" ":"") + price.mandatoryFinishGroups[j].finishes.finish;
                     }
                 }
             }
@@ -280,14 +280,14 @@ var getPriceTextInformationForPDF = function(estimate){
             }
             lastGeneralFinishesText = generalFinishesText;
             //Si hay más de una cantidad
-            var separator = "        →  ";
+            var separator = "        -  ";
             if(estimate.quantity.length>1){
                 //Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
                 if(lastPriceText !=priceText){
                     //Si no es el primero que agrego, es decir lastPriceText existe
-                    if(lastPriceText){
+                    /*if(lastPriceText){
                         textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize*dobleSpaceFactor));  
-                    }
+                    }*/
                     if ((generalFinishesText && generalFinishesText.length>0)){
                         textToAdd.push(createText('writeTextNormalAndBold',11,fontType,'    •  ' + priceText, '', rowSize*mediumSpaceFactor));  
                     }else{
