@@ -734,5 +734,108 @@ var prices = [
         }
       ],
       'price':1690
+    },
+    {
+      "workId":1,
+      "clossedSizes":"150x210mm",
+      "quantity":100,
+      "mandatoryFinishGroups":
+      [
+        {
+          "groupName": "Encuadernado",
+          "finishes":
+          {
+            "finish":"Encuadernado HotMelt",
+            "finishComment":"",
+            "showToClientFinish":true
+          }
+        },
+        {
+          "groupName": "Encuadernado2",
+          "finishes":
+          {
+            "finish":"Encuadernado HotMelt2",
+            "finishComment":"",
+            "showToClientFinish":true
+          }
+        }
+      ],
+      "items":
+      [
+        {
+          "id":0,
+          "name":"Tapas",
+          "bleedPrint":true,
+          "inks":
+          {
+            "inksDetails":"Full color",
+            "inksQuantity":4
+          },
+          "openedSize":"150x210mm",
+          "allTheSame":false,
+          "mandatoryFinishGroups":
+          [
+            {
+              "groupName": "Tipo de Tapa",
+              "finishes": 
+              {
+                "finish":"Tapa Flexible",
+                "finishComment":"",
+                "showToClientFinish":true
+              }
+            },
+            {
+              "groupName": "Tipo de Tapa 2",
+              "finishes": 
+              {
+                "finish":"Tapa SemiDura 2",
+                "finishComment":"",
+                "showToClientFinish":true,
+              }
+            }
+          ],
+          "quantityOfPages":2,
+          "quantityOfVias":1,
+          "faces":"Simple Faz",
+          "materials":
+          {
+            "paper":"Cartulina Blanca/Blanca",
+            "gr":"250"
+          },
+          'machine':'Konica C1070',
+          'paperSize':'320x330mm',
+          'sheetSize':'660x960mm',
+          'cutsPerSheet':6,
+          'quantityPerPaper':1,
+          'excess':1
+        },
+        {
+          "id":1,
+          "name":"Interior",
+          "bleedPrint":true,
+          "inks":
+          {
+            "inksDetails":"Tinta Negra",
+            "inksQuantity":1
+          },
+          "openedSize":"150x210mm",
+          "allTheSame":false,
+          "quantityOfPages":70,
+          "quantityOfVias":1,
+          "faces":"Doble Faz",
+          "materials":
+          {
+            "paper":"Obra Blanco",
+            "gr":"90"
+          },
+          'machine':'NO',
+          'paperSize':'305x230mm',
+          'sheetSize':'720x920mm',
+          'cutsPerSheet':9,
+          'quantityPerPaper':2,
+          'excess':5
+        }
+      ],
+      'price':2090
     }
     ];
