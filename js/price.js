@@ -17,7 +17,7 @@ t.render(function(){
 	.then(function(cardInfo){
     combinations = [];
     var quantities = [];
-    estimate = deTranslateEstimate(cardInfo);
+    estimate = deTranslateEstimate( LZString.decompress(cardInfo));
     for (var i = 0; i  < estimate.quantity.length; i++){
         quantities.push('{"quantity":' + estimate.quantity[i]+',');
     }

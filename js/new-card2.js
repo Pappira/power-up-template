@@ -51,7 +51,7 @@ t.render(function(){
 		    addCardButton.addEventListener('click', saveFunction);
 		}
 	  if(cardInfo){
-		var estimate = deTranslateEstimate(cardInfo);
+		var estimate = deTranslateEstimate(LZString.decompress(cardInfo));
 		createGeneralInformation(estimate);
 		for (var i = 0; i <  estimate.items.length;i++){
 			createItem(estimate.items[i]);

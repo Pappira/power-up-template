@@ -116,6 +116,7 @@ var updateCard = function(estimate) {
 	var trelloCheckList = [];
 	var trelloCheckListItems = [];
 	var estimateToSave = translateEstimate(JSON.parse(JSON.stringify(estimate)));
+	var estimateToSave = LZString.compress(JSON.stringify(estimate));
 	t.card('all')
 	.then(function(card) {
 	  t.set('card', 'shared', cardInfoKey, estimateToSave)
@@ -169,7 +170,8 @@ var createCard = function(estimate){
 	startLoader();
 	createNewTrelloCard(t, cardToSave, function(card) {
 	  setTimeout(function () {
-		var estimateToSave = translateEstimate(estimate);
+		var estimateToSave = JSON.parse(JSON.stringify(translateEstimate(estimate)));
+		var estimateToSave = LZString.compress(JSON.stringify(estimate));
 		t.set(card.id, 'shared', cardInfoKey, estimateToSave)
 		  .then(function(){
 			t.showCard(card.id);
