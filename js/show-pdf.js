@@ -40,13 +40,17 @@ var createText = function(type,fontSize,fontType,title,value,increaseTop){
 var addText = function(textToAdd, doc, top){
     for (var i = 0; i < textToAdd.length;i++){
         text = textToAdd[i];
+        var scale;
         switch (text.type){
             case 'writeTextNormalAndBold':
-                writeTextNormalAndBold(text.fontSize,text.fontType,text.title, text.value, top,doc);
+                scale = writeTextNormalAndBold(text.fontSize,text.fontType,text.title, text.value, top,doc);
                 break;
             case 'writeUnderlinedText':
-                writeUnderlinedText(text.fontSize,text.fontType,text.title, top, doc);
+                scale = writeUnderlinedText(text.fontSize,text.fontType,text.title, top, doc);
                 break;
+            case 'writeTextNormalWithSeparation':
+                scale = writeTextNormalWithSeparation(fontSize, fontType, text.title, text.value,top, doc);
+   
         }
         top =increaseTop(top,text.increaseTop,doc);
     }
@@ -289,16 +293,16 @@ var getPriceTextInformationForPDF = function(estimate){
                         textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize*dobleSpaceFactor));  
                     }*/
                     if ((generalFinishesText && generalFinishesText.length>0)){
-                        textToAdd.push(createText('writeTextNormalAndBold',11,fontType,'', '    •  ' + priceText, rowSize*mediumSpaceFactor));  
+                        textToAdd.push(createText('writeTextNormalWithSeparation',11,fontType,'', '    •  ', priceText, rowSize*mediumSpaceFactor));  
                     }else{
                         textToAdd.push(createText('writeUnderlinedText',12,fontType, priceText, '', rowSize*mediumSpaceFactor));  
                         separator = '    •  ' ; 
                     }
                     lastPriceText = priceText;
                 }
-                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,separator + 'Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
+                textToAdd.push(createText('writeTextNormalWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
             }else{
-                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'    •  ' + priceText + ' (' + price.quantity + ' unidades): ',' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
+                textToAdd.push(createText('writeTextNormalWithSeparation',fontSize,fontType,'    •  ', priceText + ' (' + price.quantity + ' unidades): ',' $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
                 lastPriceText = priceText;
             }
         }
@@ -390,37 +394,37 @@ var generateEstimatePDF = function(estimate){
         top = addNewPage(doc);
     };
     doc.setFontSize(16);  
-    writeText(doc,"Condiciones generales",top);
+    var scale = writeTextNormalAndBold(fontSize, fontType, "Condiciones generales","",top, doc);
     doc.setFontSize(fontSize);
     top =increaseTop(top,rowSize*mediumSpaceFactor,doc); 
-    writeText(doc,"  •  Mantenimiento de oferta 20 días.", top);
+    scale = writeTextNormalWithSeparation(fontSize, fontType,"  •  ","Mantenimiento de oferta 20 días.", top,doc);
     top = increaseTop(top,rowSize,doc);
-    writeText(doc,"  •  Forma de pago seña 50% al confirmar el trabajo y restante contado contra entrega.",top);
+    scale = writeTextNormalWithSeparation(fontSize, fontType,"  •  ","Forma de pago seña 50% al confirmar el trabajo y restante contado contra entrega.",top,doc);
     top = increaseTop(top,rowSize,doc);
-    writeText(doc,"  •  Precio unitario basado en unidades descritas o más.",top);
+    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Precio unitario basado en unidades descritas o más.",top,doc);
     top = increaseTop(top,rowSize,doc);
-    writeText(doc,"  •  El precio no incluye el costo de diseño o gráficos de banco de imágenes.",top);
+    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","El precio no incluye el costo de diseño o gráficos de banco de imágenes.",top,doc);
     top = increaseTop(top,rowSize,doc);
-    writeText(doc,"  •  Precios NO incluyen IVA.", top);
+    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Precios NO incluyen IVA.", top,doc);
     top = increaseTop(top,rowSize,doc);
-    writeText(doc,"  •  Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", top);
+    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", top, doc);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
 
     if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*3 ,doc)){
         top = addNewPage(doc);
     };
     doc.setFontSize(16);  
-    writeText(doc,"Formas de pago",top);
+    scale = writeTextNormalAndBold(fontSize, fontType, "Formas de pago","", top, doc);
     doc.setFontSize(fontSize);
     top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
-    writeText(doc,"  •  Por transferencia o Depósito:", top);
+    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Por transferencia o Depósito:", top, doc);
     top = increaseTop(top,rowSize,doc);
-    writeText(doc,"      »  BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",top);
+    scale = writeTextNormalWithSeparation(fontSize, fontType, "      »  ","BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",top, doc);
     top = increaseTop(top,rowSize,doc);
-    writeText(doc,"  •  Abitab o RedPagos:",top);
+    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Abitab o RedPagos:",top, doc);
     top = increaseTop(top,rowSize,doc);
-    writeText(doc,"      »  Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",top);
-    top = increaseTop(top,rowSize*dobleSpaceFactor,doc) 
+    scale = writeTextNormalWithSeparation(fontSize, fontType, "      »  ","Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",top,doc);
+    top = increaseTop(top,rowSize*dobleSpaceFactor*scale,doc) 
    
     addHeaderToCurrentPage(doc);
     addFooterToCurrentPage(doc);
@@ -430,26 +434,36 @@ var generateEstimatePDF = function(estimate){
 var writeText = function(doc, text, top,extraSpace){
     var textSplited = doc.splitTextToSize(text,  doc.internal.pageSize.width - leftMargin*2 - (extraSpace?extraSpace:0));
     doc.text(textSplited,leftMargin + (extraSpace?extraSpace:0),top);
+    return textSplited.length;
 }
 
 var writeTextNormalAndBold = function(fontSize, fontType, textNormal, textBold, top, doc){
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
-
     writeText(doc,textNormal,top);
     doc.setFontType("bold");
     var currentTextWidth = doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
-    writeText(doc,textBold,top, currentTextWidth);
+    var scale = writeText(doc,textBold,top, currentTextWidth);
     doc.setFontType("normal");
+    return scale;
+}
 
+
+var writeTextNormalWithSeparation = function(fontSize, fontType, textSeparator, text, top, doc){
+    doc.setFont(fontType);
+    doc.setFontSize(fontSize);
+    writeText(doc,textSeparator,top);
+    var currentTextWidth = doc.getStringUnitWidth(textSeparator, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
+    return writeText(doc,text,top, currentTextWidth);
 }
 
 var writeUnderlinedText = function(fontSize, fontType, text, top, doc){
     doc.setFontSize(fontSize);
-    writeText(doc,text,top);
+    var scale = writeText(doc,text,top);
     var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * (fontSize / doc.internal.scaleFactor);
     doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
     doc.setFontSize(fontSize);
+    return scale;
 }
 
 var workOrderPDF = function(estimate){
