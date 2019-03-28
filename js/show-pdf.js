@@ -133,7 +133,7 @@ var addOptionalFinishesToPDFForCustomer = function(top,doc,estimate){
     var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
     for (var i = 0; i < finishes.length; i++){
         var finish = finishes[i];
-        doc.setFontSize(16);  
+        doc.setFontSize(13);  
         doc.text("Opcional " + (finish.item!=-1?estimate.items[finish.item].name+ " ":'') + finish.finish,leftMargin,top);
         doc.setFontSize(fontSize); 
         top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
@@ -256,7 +256,7 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
                 if(lastPriceText){
                     top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
                 }
-                writeUnderlinedText(priceText,14,top,doc);
+                writeUnderlinedText(priceText, 12,top,doc);
                 top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
                 lastPriceText = priceText;
             }else if (priceText.length > 0){
