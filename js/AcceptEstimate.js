@@ -37,16 +37,35 @@ var createScreen = function(type,titulo,estimate,nextFunction){
       var price = estimate.prices[i];
       var text;
       var priceText = "<strong>Cantidad: </strong>" + price.quantity + '<br>';
+      var generalFinishesText = "";
+      if(estimate.mandatoryFinishGroups){
+        for (var j = 0; j < estimate.mandatoryFinishGroups.length;j++){
+            if (estimate.mandatoryFinishGroups[j].finishes.length>1){
+                generalFinishesText += (generalFinishesText.length>0?" ":"") + price.mandatoryFinishGroups[j].finishes.finish;
+            }
+        }
+      }
+      priceText += "<strong>" + generalFinishesText +"</strong>" + '<br>';
       for (var j = 0; j < price.items.length; j++){
         var item =  price.items[j];
+        var itemsFinishesText  = "";
+        if(estimate.items[j].mandatoryFinishGroups){
+          for (var k = 0; k < estimate.items[j].mandatoryFinishGroups.length;k++){
+              if (estimate.items[j].mandatoryFinishGroups[k].finishes.length>1){
+                  itemsFinishesText += " " + item.mandatoryFinishGroups[k].finishes.finish;
+              }
+          }
+        }
+
         var originalItem = estimate['items'][item.id];
         var currentPriceText = (originalItem.materials.length>1?'<strong>papel: </strong>' + item.materials.paper + ' '  + item.materials.gr + 'gr <br>':'')
-        + ((originalItem.inks.length>1 || originalItem.faces.length>1)?'<strong>Tintas: </strong>' + item.inks.inksQuantity +' ' + item.faces +'<br>':' ')
+        + ((originalItem.inks.length>1 || originalItem.faces.length>1)?'<strong>Tintas: </strong>' + item.inks.inksQuantity +' ' + item.faces +'<br>':'')
         + (originalItem.openedSize.length>1?'<strong>Tamaño Abierto: </strong>' + item.openedSize + '<br>':'') 
         + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?'<strong>Páginas: </strong>'  + item.quantityOfPages + '<br>':'')
-        + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?'<strong>Vías: </strong>' + item.quantityOfVias + '<br>': '');
+        + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?'<strong>Vías: </strong>' + item.quantityOfVias + '<br>': '')
+        + ((itemsFinishesText && itemsFinishesText.length>0)?'<strong>' + itemsFinishesText + '</strong>':'');;
         if (currentPriceText && currentPriceText.length>0){
-          currentPriceText = (price.items.length>1?"<h3>" + originalItem.name+'</h3>':'') + currentPriceText;
+          currentPriceText = (price.items.length>1?'<p style="text-align: center;font-size: 1.3em;text-decoration: underline;margin: 0.5em;">' + originalItem.name+'</p>':'') + currentPriceText;
           priceText += currentPriceText;
         }
       }
