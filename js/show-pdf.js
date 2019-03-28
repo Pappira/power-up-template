@@ -45,6 +45,7 @@ var addText = function(textToAdd, doc, top){
                 writeTextNormalAndBold(text.fontSize,text.fontType,text.title, text.value, top,doc);
                 break;
             case 'writeUnderlinedText':
+                writeTextNormalAndBold(text.fontSize,text.fontType,text.title, top,doc);
                 writeUnderlinedText(text.title, text.fontSize, top, doc);
                 break;
         }
@@ -440,11 +441,10 @@ var writeTextNormalAndBold = function(fontSize, fontType, textNormal, textBold, 
 
 }
 
-var writeUnderlinedText = function(text, fontSizeUnderlined, top, doc){
-
-    doc.setFontSize(fontSizeUnderlined);
+var writeUnderlinedText = function(fontSize, fontType, text, top, doc){
+    doc.setFontSize(fontSize);
     doc.text(text,leftMargin,top);
-    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * fontSizeUnderlined / 3;
+    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * fontSize / 3;
     doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
     doc.setFontSize(fontSize);
 }
