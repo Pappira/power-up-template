@@ -33,6 +33,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
     
     var divLoader = createElement('div','','loader');
     div.appendChild(divLoader);
+    estimate.prices.sort(compareValues());
     for (var i = 0; i < estimate.prices.length;i++){
       var price = estimate.prices[i];
       var text;
