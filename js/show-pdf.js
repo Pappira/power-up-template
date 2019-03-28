@@ -26,14 +26,15 @@ var getTotalSpaceNeededForText = function(textToAdd){
     return textToAdd.reduce((a, b) => a + (b['increaseTop'] || 0), 0);
 }
 
-var createText = function(type,fontSize,fontType,title,value,increaseTop){
+var createText = function(type,fontSize,fontType,title,value,increaseTop,textBold){
     return {
         type: type,
         fontSize: fontSize,
         fontType:fontType,
         title: title,
         value: value,
-        increaseTop: increaseTop
+        increaseTop: increaseTop,
+        textBold: textBold
     };
 }
 
@@ -50,6 +51,10 @@ var addText = function(textToAdd, doc, top){
                 break;
             case 'writeTextNormalWithSeparation':
                 scale = writeTextNormalWithSeparation(fontSize, fontType, text.title, text.value,top, doc);
+                break;
+            case 'writeTextNormalAndBoldWithSeparation':
+                scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType, text.title, text.value, text.textBold, top, doc);
+                break;
    
         }
         top =increaseTop(top,text.increaseTop*scale,doc);
@@ -222,9 +227,9 @@ var groupFinishes = function(finishesToGroup,itemNumber){
             for (var j = 0; j < finishes.length; j++){
                 if (finishes[j].item == currentFinish.item && finishes[j].finish == currentFinish.finish && finishes[j].finishComment == currentFinish.finishComment &&
                     finishes[j].showToClientFinish == currentFinish.showToClientFinish){
-                        finishes[j].price.push(currentFinish.price[0]);
-                        alreadyExist = true;
-                        break;
+                    finishes[j].price.push(currentFinish.price[0]);
+                    alreadyExist = true;
+                    break;
                 }
             }
             if (!alreadyExist){
@@ -300,9 +305,9 @@ var getPriceTextInformationForPDF = function(estimate){
                     }
                     lastPriceText = priceText;
                 }
-                textToAdd.push(createText('writeTextNormalWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades):  $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
+                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades): ', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
             }else{
-                textToAdd.push(createText('writeTextNormalWithSeparation',fontSize,fontType,'    •  ', priceText + ' (' + price.quantity + ' unidades):  $ ' + price.price + ' + IVA', rowSize*mediumSpaceFactor));  
+                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,'    •  ', priceText + ' (' + price.quantity + ' unidades): ', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
                 lastPriceText = priceText;
             }
         }
@@ -455,6 +460,20 @@ var writeTextNormalWithSeparation = function(fontSize, fontType, textSeparator, 
     writeText(doc,textSeparator,top);
     var currentTextWidth = doc.getStringUnitWidth(textSeparator, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
     return writeText(doc,text,top, currentTextWidth);
+}
+
+var writeTextNormalAndBoldWithSeparation = function(fontSize, fontType, textSeparator, text, textBold, top, doc){
+    doc.setFont(fontType);
+    doc.setFontSize(fontSize);
+    writeText(doc,textSeparator,top);
+    var currentTextWidth = doc.getStringUnitWidth(textSeparator, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
+    writeText(doc,text,top, currentTextWidth);
+    doc.setFontType("bold");
+    var currentTextWidth = currentTextWidth + doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
+    var scale = writeText(doc,textBold,top, currentTextWidth);
+    doc.setFontType("normal");
+    return scale;
+
 }
 
 var writeUnderlinedText = function(fontSize, fontType, text, top, doc){
