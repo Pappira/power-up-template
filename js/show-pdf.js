@@ -241,7 +241,7 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
             for (var j = 0; j < price.items.length; j++){
                 var item =  price.items[j];
                 var originalItem = estimate.items[item.id];
-                var currentPriceText = (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'');
+                var currentPriceText = (originalItem.materials.length>1?' en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'');
                 + (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') ;
                 + (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') ;
                 + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'');
@@ -303,6 +303,17 @@ var increaseTop = function(top,add,doc){
     }
     return top;
 }
+
+var checkIfEnoughSpace = function(top,totalSpaceNeeded,doc){
+    return (top+totalSpaceNeeded > doc.internal.pageSize.height - marginBottom?false:true);
+}
+
+var addNewPage = function(doc){
+    addHeaderToCurrentPage(doc);
+    addFooterToCurrentPage(doc);
+    doc.addPage();
+    return marginTop;
+}
   
 var generateEstimatePDF = function(estimate){
     var doc = new jsPDF();
@@ -324,6 +335,9 @@ var generateEstimatePDF = function(estimate){
     top = addOptionalFinishesToPDFForCustomer(top,doc,estimate);
     top = currentTop!=top?increaseTop(top,rowSize*dobleSpaceFactor,doc):top;
 
+    if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5 + rowSize*dobleSpaceFactor)){
+        top = addNewPage(doc);
+    };
     doc.setFontSize(16);  
     doc.text("Condiciones generales",leftMargin,top);
     doc.setFontSize(fontSize);
