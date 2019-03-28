@@ -23,11 +23,10 @@ var addGeneralAndCustomerInformationToPDFForCustromer = function(top,doc,estimat
     var contactAndBusinessInfo = estimate.customer?[estimate.customer.comenrcialName, estiamte.customer.businessName, estaimte.customer.contactName]:[];
     doc.text(contactAndBusinessInfo.filter(Boolean).join(' - '),leftMargin,top);
     doc.setFontType("normal");
-    top = increaseTop(top,rowSize,doc)
+    top = increaseTop(top,rowSize,doc);
     doc.text("Presente",leftMargin,top);
-    top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
+    top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
     doc.text("A continuación detallamos el presupuesto solicitado.",leftMargin,top);
-    top = increaseTop(top,rowSize*tripleSpaceFactor*dobleSpaceFactor,doc)
     return top;
 }
 
@@ -35,7 +34,7 @@ var addEstimateGeneralInformationToPDFForCustomer = function(top,doc,estimate){
     doc.setFontSize(20);
     doc.text(estimate.name,leftMargin,top);
     doc.setFontSize(fontSize);
-    top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
+    top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
     writeTextNormalAndBold(fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), top,doc);
     top =increaseTop(top,rowSize,doc);
     var openedSizeEqualsClossedSize = true;
@@ -74,7 +73,7 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
             doc.setFontSize(16);  
             doc.text(item.name,leftMargin,top);
             doc.setFontSize(fontSize); 
-            top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
+            top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
         }
         if(item.openedSize != estimate.clossedSize){
             writeTextNormalAndBold(fontSize,fontType,"Tamaño Abierto: ", item.openedSize.filter(Boolean).join(' // ') , top,doc);
@@ -85,27 +84,27 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
             materials.push(item.materials[j].paper + ' ' + item.materials[j].gr + 'gr'); 
         }
         writeTextNormalAndBold(fontSize,fontType,"Papel: ", materials.filter(Boolean).join(' // ') , top,doc);
-        top = increaseTop(top,rowSize,doc)
+        top = increaseTop(top,rowSize,doc);
         var inks = [];
         for (var j = 0 ; j < item.inks.length; j++){
             inks.push(item.inks[j].inksDetails);
         }
         if(item.faces.length==1){
             writeTextNormalAndBold(fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // ') , top,doc);
-            top = increaseTop(top,rowSize,doc)
+            top = increaseTop(top,rowSize,doc);
         }else{
             writeTextNormalAndBold(fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // '), top,doc);
-            top = increaseTop(top,rowSize,doc)
+            top = increaseTop(top,rowSize,doc);
             writeTextNormalAndBold(fontSize,fontType,"Faces: ", item.faces.filter(Boolean).join(' // ') , top,doc);
-            top = increaseTop(top,rowSize,doc)
+            top = increaseTop(top,rowSize,doc);
         }
         if (item.quantityOfPages > 1){
             writeTextNormalAndBold(fontSize,fontType,"Páginas: ", item.quantityOfPages.filter(Boolean).join(' // '), top,doc);
-            top = increaseTop(top,rowSize,doc)
+            top = increaseTop(top,rowSize,doc);
         }
         if (item.quantityOfVias > 1){
             writeTextNormalAndBold(fontSize,fontType,"Vías: ", item.quantityOfVias.filter(Boolean).join(' // '), top,doc);
-            top = increaseTop(top,rowSize,doc)
+            top = increaseTop(top,rowSize,doc);
         }
         if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
             var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
@@ -118,14 +117,13 @@ var addEstimateItemInformationToPDFForCustomer = function(top,doc,estimate){
                      (j!=currentItemMandatoryFinishGroups[k].finishes.length-1?' // ':'');
                 }
             writeTextNormalAndBold(fontSize,fontType,name, value, top,doc);
-            top = increaseTop(top,rowSize,doc)
+            top = increaseTop(top,rowSize,doc);
             }
         }
         if(i!=items.length-1){
-            top = increaseTop(top,rowSize,doc)
+            top = increaseTop(top,rowSize,doc);
         }
     }
-    top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
     return top;
 }
 
@@ -252,21 +250,25 @@ var addPriceInformationToPDFForCustomer = function(top,doc,estimate){
                     priceText = ( price.items.length>1?originalItem.name+' ':'')  + currentPriceText;
                 }
             }
-            if(lastPriceText !=priceText){
-                if(lastPriceText){
-                    top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+            if(estimate.quantity.length>1){
+                if(lastPriceText !=priceText){
+                    if(lastPriceText){
+                        top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+                    }
+                    writeUnderlinedText(priceText, 12,top,doc);
+                    top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
+                    lastPriceText = priceText;
+                }else if (priceText.length > 0){
+                    top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
                 }
-                writeUnderlinedText(priceText, 12,top,doc);
+                writeTextNormalAndBold(fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,doc);
+            }else{
+                writeTextNormalAndBold(fontSize,fontType,'  •  ' + priceText + ' (' + price.quantity + ' unidades): ' , ' $ ' + price.price + ' + IVA',top,doc);
                 top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
                 lastPriceText = priceText;
-            }else if (priceText.length > 0){
-                top = increaseTop(top,rowSize*mediumSpaceFactor,doc);
             }
-            writeTextNormalAndBold(fontSize,fontType,'  •  Sub-Total (' + price.quantity + ' unidades): ', ' $ ' + price.price + ' + IVA', top,doc);
         }
     }
-    top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
-    //top = increaseTop(top,rowSize*dobleSpaceFactor+rowSize*dobleSpaceFactor,doc)
     return top;
 }
 
@@ -307,28 +309,35 @@ var generateEstimatePDF = function(estimate){
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
     var top = marginTop;
+
     top = addGeneralAndCustomerInformationToPDFForCustromer(top,doc,estimate);
+    top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
+
     top = addEstimateGeneralInformationToPDFForCustomer(top,doc,estimate);
     top = addEstimateItemInformationToPDFForCustomer(top,doc,estimate);
-    top = addPriceInformationToPDFForCustomer(top,doc,estimate);
+    top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
     
-    top = addOptionalFinishesToPDFForCustomer(top,doc,estimate);
+    top = addPriceInformationToPDFForCustomer(top,doc,estimate);
+    top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
 
-    top = increaseTop(top,rowSize*dobleSpaceFactor+rowSize*dobleSpaceFactor,doc)
+    var currentTop = top;
+    top = addOptionalFinishesToPDFForCustomer(top,doc,estimate);
+    top = currentTop!=top?increaseTop(top,rowSize*dobleSpaceFactor,doc):top;
+
     doc.setFontSize(16);  
     doc.text("Condiciones generales",leftMargin,top);
     doc.setFontSize(fontSize);
     top =increaseTop(top,rowSize*mediumSpaceFactor,doc); 
     doc.text("  •  Mantenimiento de oferta 20 días.", leftMargin,top);
-    top = increaseTop(top,rowSize,doc)
+    top = increaseTop(top,rowSize,doc);
     doc.text("  •  Forma de pago seña 50% al confirmar el trabajo y restante contado contra entrega.",leftMargin,top);
-    top = increaseTop(top,rowSize,doc)
+    top = increaseTop(top,rowSize,doc);
     doc.text("  •  Precio unitario basado en unidades descritas o más.",leftMargin,top);
-    top = increaseTop(top,rowSize,doc)
+    top = increaseTop(top,rowSize,doc);
     doc.text("  •  El precio no incluye el costo de diseño o gráficos de banco de imágenes.",leftMargin,top);
-    top = increaseTop(top,rowSize,doc)
+    top = increaseTop(top,rowSize,doc);
     doc.text("  •  Precios NO incluyen IVA.", leftMargin,top);
-    top = increaseTop(top,rowSize,doc)
+    top = increaseTop(top,rowSize,doc);
     doc.text("  •  Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", leftMargin,top);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc)
 
@@ -337,11 +346,11 @@ var generateEstimatePDF = function(estimate){
     doc.setFontSize(fontSize);
     top = increaseTop(top,rowSize*mediumSpaceFactor,doc)
     doc.text("  •  Por transferencia o Depósito:", leftMargin,top);
-    top = increaseTop(top,rowSize,doc)
+    top = increaseTop(top,rowSize,doc);
     doc.text("      »  BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",leftMargin,top);
-    top = increaseTop(top,rowSize,doc)
+    top = increaseTop(top,rowSize,doc);
     doc.text("  •  Abitab o RedPagos:",leftMargin,top);
-    top = increaseTop(top,rowSize,doc)
+    top = increaseTop(top,rowSize,doc);
     doc.text("      »  Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",leftMargin,top);
     top = increaseTop(top,rowSize*dobleSpaceFactor,doc) 
    
