@@ -448,6 +448,9 @@ var createTextForCard = function(estimate){
 		text += '**Comentario: **' + estimate['comments']['internalComments']+ '\n';
 	}
 	//TODO Solo poner el precio si existe la selected option.
+	if (estimate.SelectedOption!=null){
+		text +='**Precio: **$ ' + (estimate.prices[estimate.SelectedOption].price + price) + ' + IVA' + '\n';
+	}
 	/*if(estimate.prices){
 		if (!estimate.SelectedOption){
 			estimate.prices.sort(compareValues());

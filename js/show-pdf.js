@@ -339,7 +339,7 @@ var increaseTop = function(top,add,doc){
     if (top+add > doc.internal.pageSize.height - marginBottom){
         addHeaderToCurrentPage(doc);
         addFooterToCurrentPage(doc);
-        top = marginTop;
+        top = marginTop + 10;
         doc.addPage();
     }else{
         top +=add;
@@ -355,7 +355,7 @@ var addNewPage = function(doc){
     addHeaderToCurrentPage(doc);
     addFooterToCurrentPage(doc);
     doc.addPage();
-    return marginTop;
+    return marginTop + 10;
 }
   
 var addTextToDoc = function(textToAdd,doc,top){
