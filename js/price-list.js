@@ -1077,7 +1077,7 @@ var prices = [
             "inksQuantity":1
           },
           "openedSize":"150x210mm",
-          "allTheSame":false,
+          "allTheSame":true,
           "quantityOfPages":70,
           "quantityOfVias":1,
           "faces":"Doble Faz",
