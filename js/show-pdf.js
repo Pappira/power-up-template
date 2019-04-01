@@ -163,7 +163,7 @@ var getOptionalFinishesForPDF = function(estimate){
                     textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,key,price[key]+'', rowSize));
                 }
             }
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Sub-Total extra" + (price.quantity?" (" + price.quantity +" unidades)":"") +":","$" + price.price + ' + IVA', rowSize));
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Sub-Total extra" + (price.quantity?" (" + price.quantity +" unidades)":"") +":","$ " + price.price.toLocalString() + ' + IVA', rowSize));
         }
         textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'','', rowSize));
     }
@@ -305,9 +305,9 @@ var getPriceTextInformationForPDF = function(estimate){
                     }
                     lastPriceText = priceText;
                 }
-                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades):', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
+                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades):', rowSize*mediumSpaceFactor,'$ ' + price.price.toLocalString() + ' + IVA'));  
             }else{
-                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,'    •  ', (priceText.length>0?priceText:'Sub-Total ') + ' (' + price.quantity + ' unidades)', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
+                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,'    •  ', (priceText.length>0?priceText:'Sub-Total ') + ' (' + price.quantity + ' unidades)', rowSize*mediumSpaceFactor,'$ ' + price.price.toLocalString() + ' + IVA'));  
                 lastPriceText = priceText;
             }
         }
