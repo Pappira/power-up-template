@@ -445,7 +445,7 @@ var createTextForCard = function(estimate){
 		}
 	}
 	if (estimate['comments']){
-		text += '**Comentario: **' + estimate['comments']['internalComments']+ '\n';
+		text += '##**Comentario: **' + estimate['comments']['internalComments']+ '\n';
 	}
 	//TODO Solo poner el precio si existe la selected option.
 	if (estimate.SelectedOption!=null){
