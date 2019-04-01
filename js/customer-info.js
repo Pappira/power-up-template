@@ -41,7 +41,7 @@ var createObject = function(){
 			commentsObject[comments[i]] = '';
 		}
 	}
-	estimate['comments'] = commentsObject;
+	estimate.comments = commentsObject;
 
 	customerObject = {};
 	for (var i = 0; i < customer.length;i++){
@@ -52,7 +52,7 @@ var createObject = function(){
 			customerObject[customer[i]] = '';
 		}
 	}
-	estimate['customer'] = customerObject;
+	estimate.customer = customerObject;
 
 	return estimate;
 
@@ -65,10 +65,10 @@ var createComments = function(estimateObject){
 	var h1 = createElement('h1','titulo','commentsTitle','Comentarios');
 	var divRow = createElement('div','row','','');
 
-	var divInternalComments = createTextInput('s6','internalComments','Internos','text',estimateObject?estimateObject['comments']['internalComments']:null);
+	var divInternalComments = createTextInput('s6','internalComments','Internos','text',(estimateObject && estimateObject.comments)?estimateObject.comments.internalComments:null);
 	divRow.appendChild(divInternalComments);
 	
-	var divClientComments = createTextInput('s6','clientComments','Al Cliente','text',estimateObject?estimateObject['comments']['clientComments']:null);
+	var divClientComments = createTextInput('s6','clientComments','Al Cliente','text',(estimateObject && estimateObject.comments)?estimateObject.comments.clientComments:null);
 	divRow.appendChild(divClientComments);
 
 	formItem.appendChild(h1);
@@ -85,16 +85,16 @@ var createCustomer = function(estimateObject){
 	var h1 = createElement('h1','titulo','customerTitle','Datos del cliente');
 	var divRow = createElement('div','row','','');
 
-	divRow.appendChild(createTextInput('s6','comenrcialName','Nombre comercial o fantasia','text',estimateObject?estimateObject['customer']['comenrcialName']:null));
-	divRow.appendChild(createTextInput('s6','businessName','Razón social','text',estimateObject?estimateObject['customer']['businessName']:null));
+	divRow.appendChild(createTextInput('s6','comenrcialName','Nombre comercial o fantasia','text',(estimateObject && estimateObject.customer)?estimateObject.customer.comenrcialName:null));
+	divRow.appendChild(createTextInput('s6','businessName','Razón social','text',(estimateObject && estimateObject.customer)?estimateObject.customer.businessName:null));
 
-	divRow.appendChild(createTextInput('s6','rut','RUT','text',estimateObject?estimateObject['customer']['rut']:null));
-	divRow.appendChild(createTextInput('s6','address','Dirección','text',estimateObject?estimateObject['customer']['address']:null));
+	divRow.appendChild(createTextInput('s6','rut','RUT','text',(estimateObject && estimateObject.customer)?estimateObject.customer.rut:null));
+	divRow.appendChild(createTextInput('s6','address','Dirección','text',(estimateObject && estimateObject.customer)?estimateObject.customer.address:null));
 
-	divRow.appendChild(createTextInput('s6','contactName','Nombre','text',estimateObject?estimateObject['customer']['contactName']:null));
-	divRow.appendChild(createTextInput('s6','contactEmail','Email','text',estimateObject?estimateObject['customer']['contactEmail']:null));
+	divRow.appendChild(createTextInput('s6','contactName','Nombre','text',(estimateObject && estimateObject.customer)?estimateObject.customer.contactName:null));
+	divRow.appendChild(createTextInput('s6','contactEmail','Email','text',(estimateObject && estimateObject.customer)?estimateObject.customer.contactEmail:null));
 
-	divRow.appendChild(createTextInput('s6','contactPhone','Teléfono','text',estimateObject?estimateObject['customer']['contactPhone']:null));
+	divRow.appendChild(createTextInput('s6','contactPhone','Teléfono','text',(estimateObject && estimateObject.customer)?estimateObject.customer.contactPhone:null));
 	divRow.appendChild(createSelect('s6','paymentWay',paymentWays,'Forma de pago'));
 
 	formItem.appendChild(h1);
