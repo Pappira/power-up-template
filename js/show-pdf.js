@@ -66,7 +66,7 @@ var getEstimateGeneralTextInformationForPDF = function(estimate){
     var textToAdd = [];
     textToAdd.push(createText('writeTextNormalAndBold',20,fontType,estimate.name, '', rowSize*mediumSpaceFactor));
 
-    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Cantidad: ", estimate.quantity.filter(Boolean).join(' // '), rowSize));
+    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Cantidad:", estimate.quantity.filter(Boolean).join(' // '), rowSize));
     var openedSizeEqualsClossedSize = true;
     for (var i = 0; i < estimate.items.length; i++){
         if(estimate.clossedSize != estimate.items[i].openedSize){
@@ -74,12 +74,12 @@ var getEstimateGeneralTextInformationForPDF = function(estimate){
             break;
         }
     }
-    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño: ":"Tamaño: Cerrado: ", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), rowSize));
+    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño:":"Tamaño: Cerrado:", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), rowSize));
 
     if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
         for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-            var name = currentMandatoryFinishGroups[i].groupName+": ";
+            var name = currentMandatoryFinishGroups[i].groupName+":";
             var value = "";
             for(var j= 0 ; j < currentMandatoryFinishGroups[i].finishes.length;j++){
                 value += currentMandatoryFinishGroups[i].finishes[j].finish + 
@@ -104,33 +104,33 @@ var getEstimateItemTextInformationForPDF = function(estimate){
             textToAdd.push(createText('writeTextNormalAndBold',16,fontType,item.name, '' , rowSize*mediumSpaceFactor));         
         }
         if(item.openedSize != estimate.clossedSize){    
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Tamaño Abierto: ", item.openedSize.filter(Boolean).join(' // ') , rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Tamaño Abierto:", item.openedSize.filter(Boolean).join(' // ') , rowSize));         
         }
         var materials = [];
         for (var j = 0; j < item.materials.length; j++){
             materials.push(item.materials[j].paper + ' ' + item.materials[j].gr + 'gr'); 
         }
-        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Papel: ", materials.filter(Boolean).join(' // '), rowSize));         
+        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Papel:", materials.filter(Boolean).join(' // '), rowSize));         
         var inks = [];
         for (var j = 0 ; j < item.inks.length; j++){
             inks.push(item.inks[j].inksDetails);
         }
         if(item.faces.length==1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión:", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // '), rowSize));         
         }else{
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión: ", inks.filter(Boolean).join(' // '), rowSize));         
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Faces: ", item.faces.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión:", inks.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Faces:", item.faces.filter(Boolean).join(' // '), rowSize));         
         }
         if (item.quantityOfPages > 1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Páginas: ", item.quantityOfPages.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Páginas:", item.quantityOfPages.filter(Boolean).join(' // '), rowSize));         
         }
         if (item.quantityOfVias > 1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Vías: ", item.quantityOfVias.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Vías:", item.quantityOfVias.filter(Boolean).join(' // '), rowSize));         
         }
         if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
             var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
             for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-                var name = currentItemMandatoryFinishGroups[k].groupName + ': ';
+                var name = currentItemMandatoryFinishGroups[k].groupName + ':';
                 var value = "";
                 for (var j = 0; j < currentItemMandatoryFinishGroups[k].finishes.length;j++){
                     value += currentItemMandatoryFinishGroups[k].finishes[j].finish +
@@ -163,7 +163,7 @@ var getOptionalFinishesForPDF = function(estimate){
                     textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,key,price[key]+'', rowSize));
                 }
             }
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Sub-Total extra" + (price.quantity?" (" + price.quantity +" unidades)":"") +": ","$" + price.price + ' + IVA', rowSize));
+            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Sub-Total extra" + (price.quantity?" (" + price.quantity +" unidades)":"") +":","$" + price.price + ' + IVA', rowSize));
         }
         textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'','', rowSize));
     }
@@ -275,7 +275,7 @@ var getPriceTextInformationForPDF = function(estimate){
                 + (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
                 + (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
                 + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
-                + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '')
+                + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías':'')
                 + ((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'');
 
                 if(currentPriceText && currentPriceText.length>0){
@@ -305,9 +305,9 @@ var getPriceTextInformationForPDF = function(estimate){
                     }
                     lastPriceText = priceText;
                 }
-                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades): ', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
+                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades):', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
             }else{
-                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,'    •  ', (priceText.length>0?priceText:'Sub-Total ') + ' (' + price.quantity + ' unidades): ', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
+                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,'    •  ', (priceText.length>0?priceText:'Sub-Total ') + ' (' + price.quantity + ' unidades)', rowSize*mediumSpaceFactor,'$ ' + price.price + ' + IVA'));  
                 lastPriceText = priceText;
             }
         }
