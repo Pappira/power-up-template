@@ -15,7 +15,7 @@ var tripleSpaceFactor = 2;
 
 var getGeneralAndCustomerInformationForPDF = function(estimate){
     var textToAdd = [];
-    var contactAndBusinessInfo = estimate.customer?[estimate.customer.comenrcialName, estiamte.customer.businessName, estaimte.customer.contactName]:[];
+    var contactAndBusinessInfo = estimate.customer?[estimate.customer.comenrcialName, estimate.customer.businessName, estimate.customer.contactName]:[];
     textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', contactAndBusinessInfo.filter(Boolean).join(' - '), rowSize));
     textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'Presente','', rowSize*dobleSpaceFactor));
     textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"A continuación detallamos el presupuesto solicitado.",'', rowSize));
@@ -382,7 +382,7 @@ var generateEstimatePDF = function(estimate){
     doc.text('Montevideo, ' + day.toLocaleDateString('es-UY', options),width-leftMargin,top,'right');
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
-    var textToAdd  = getGeneralAndCustomerInformationForPDF(top,doc,estimate);
+    var textToAdd  = getGeneralAndCustomerInformationForPDF(estimate);
     top = addTextToDoc(textToAdd,doc,top);
 
     textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
