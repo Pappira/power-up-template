@@ -355,7 +355,7 @@ var createTextForCard = function(estimate){
 	for (var i = 0; i < texts.length;i++){
 		text +=convertTextForCard(texts[i]);
 	}
-	
+
 	text +='\n';
 	if(estimate.items){
 		for (var i = 0; i< estimate.items.length;i++){
@@ -544,9 +544,9 @@ var createItemText = function(item, showBBleedPrint, showAllDifferent, showOptio
 			if(showOptionalFinishes){
 				var optionalFinishesPrices = estimate.selectedExtraPrices;
 				for (var j = 0; j < optionalFinishesPrices.length; j++){
-					if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[i] && optionalFinishesPrices[j].items[i].optionalFinishes){
-						for (var k = 0; k < optionalFinishesPrices[j].items[i].optionalFinishes.length;k++){
-							texts.push(createText('list',optionalFinishesPrices[j].items[i].optionalFinishes[k].finish + (optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment!=""?optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'')));
+					if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[selectedItem.id] && optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes){
+						for (var k = 0; k < optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes.length;k++){
+							texts.push(createText('list',optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finish + (optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finishComment!=""?optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'')));
 						}
 					}
 				}
