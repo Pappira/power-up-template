@@ -313,11 +313,42 @@ var createCheckListsForCard = function(estimate){
 	}
 return checkLists;
 }
+
+var convertTextForCard = function(text){
+	switch(text.type){
+		case 'title':
+		return '#' + text.name + '\n';
+		
+		case 'subtitle1':
+		return '##' + text.name + '\n';
+		
+		case 'subtitle2':
+		return '###' + text.name + '\n';
+		
+		case 'subtitle3':
+		return '####' + text.name + '\n';
+		
+		case 'subtitle4':
+		return '#####' + text.name + '\n';
+		
+		case 'text':
+		return '**' + text.name + ': **' + text.value + '\n';
+		
+		case 'list':
+		var thisText = '1. ' + text.name + '\n';
+		if (Array.isArray(text.value)){
+			for (var j = 0; j < text.value.length;j++){
+				thisText += '  - ' + text.value[j] + '\n';
+			}
+		}
+		return thisText;
+	}
+}
 	
 var createTextForCard = function(estimate){
 	var price = 0;
 	var text = '';
-	text += '#' + estimate.name + '\n';
+	/*text += '#' + estimate.name + '\n';
 	text += '**Cantidad: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // ')) + '\n';
 	text += '**Tamaño cerrado: **' + estimate.clossedSize + '\n';
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
@@ -360,7 +391,174 @@ var createTextForCard = function(estimate){
 				}
 			}
 		}
+	}*/
+	var texts = createGeneralText(estimate,true);
+	for (var i = 0; i < texts.length;i++){
+		text +=convertTextForCard(texts[i]);
 	}
+	text +='\n';
+	if(estimate.items){
+		for (var i = 0; i< estimate.items.length;i++){
+			text += (estimate.items.length>1?('##' + estimate.items[i].name + '\n'):'');
+			var inks = [];
+			for(var j = 0; j < estimate.items[i].inks.length;j++){
+				inks.push(estimate.items[i].inks[j].inksQuantity + " " + estimate.items[i].inks[j].inksDetails);
+			}
+			text += '**Tintas: **' + (estimate.items[i].inks?(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].inks.inksQuantity+' '+estimate.prices[estimate.SelectedOption].items[i].inks.inksDetails:inks.join(' // ') + ' '):'')  +
+					(estimate.items[i].bleedPrint?'(Impresión al Vivo)':'') +'\n';
+			
+			if (estimate.items[i].openedSize){
+				if(estimate.items[i].openedSize !== estimate.clossedSize){
+					text += '**Tamaño Abierto: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].openedSize:estimate.items[i].openedSize.join(' // '))  +'\n';
+				}
+			}
+			if (estimate.items[i].faces){
+				text += '**Faces: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].faces:estimate.items[i].faces.join(' // '))  +'\n';
+			}
+			if (estimate.items[i].quantityOfPages.length>1 || (estimate.items[i].quantityOfPages.length==1 && estimate.items[i].quantityOfPages!=1)){
+				text += '**Cantidad de páginas: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].quantityOfPages:estimate.items[i].quantityOfPages.join(' // '))  +
+					(estimate.items[i].allTheSame?' (Todas iguales)':' (Todas diferentes)') +'\n';
+			}
+			if (estimate.items[i].materials){	
+				var materiales = [];
+				if (!estimate.SelectedOption){
+					for (var j = 0; j < estimate.items[i].materials.length; j++){
+						materiales.push(estimate.items[i].materials[j].paper + ' ' + estimate.items[i].materials[j].gr + 'gr');
+					}
+				}else{
+					materiales.push(estimate.prices[estimate.SelectedOption].items[i].materials.paper + ' ' + estimate.prices[estimate.SelectedOption].items[i].materials.gr + 'gr');
+				}
+				if(materiales && materiales.length>0){
+					text += '**Materiales: **' + materiales.join(' // ') + '\n'; 
+				}
+			}
+
+			if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
+				text += '###Terminaciones' + '\n\n';
+				var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
+				if(estimate.SelectedOption!=null){
+					currentItemMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].items[i].mandatoryFinishGroups;
+					for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
+						text += k + '. ' + currentItemMandatoryFinishGroups[k].groupName + '\n';
+						text += '  - ' + currentItemMandatoryFinishGroups[k].finishes.finish + '\n';
+						text += currentItemMandatoryFinishGroups[k].finishes.finishComment?'      ' + currentItemMandatoryFinishGroups[k].finishes.finishComment + '\n':'';
+					}
+				}else{
+					for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
+						text += k + '. ' + currentItemMandatoryFinishGroups[k].groupName + '\n';
+						for (var j = 0; j < currentItemMandatoryFinishGroups[k].finishes.length;j++){
+							text += '  - ' + currentItemMandatoryFinishGroups[k].finishes[j].finish + '\n';
+							text += currentItemMandatoryFinishGroups[k].finishes[j].finishComment?'      ' + currentItemMandatoryFinishGroups[k].finishes[j].finishComment + '\n':'';
+						}
+					}
+				}
+			}
+
+			
+			if (estimate.items[i].optionalFinishes && estimate.items[i].optionalFinishes.length >0){
+				if(estimate.SelectedOption==null){
+					var currentItemOptionalFinish = estimate.items[i].optionalFinishes;
+					for(var k = 0; k < currentItemOptionalFinish.length;k++){
+						text += k + '. ' + currentItemOptionalFinish[k].finish + '\n';	
+						text += currentItemOptionalFinish[k].finishComment?'      ' + currentItemOptionalFinish[k].finishComment + '\n':'';
+					}
+				}else{
+					var optionalFinishesPrices = estimate.selectedExtraPrices;
+					for (var j = 0; j < optionalFinishesPrices.length; j++){
+						if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[i] && optionalFinishesPrices[j].items[i].optionalFinishes){
+							for (var k = 0; k < optionalFinishesPrices[j].items[i].optionalFinishes.length;k++){
+								text += i + '. ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finish + '\n';	
+								text += optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment!=""?'      ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment + '\n':'';
+								price += optionalFinishesPrices[j].items[i].optionalFinishes[k].price;
+							}
+						}
+					}
+				}
+			}
+			
+			text +='\n';
+		}
+	}
+	if (estimate.comments){
+		text += '##**Comentario: **' + estimate.comments.internalComments + '\n';
+	}
+	
+	if (estimate.SelectedOption!=null){
+		text +='##**Precio: **$ ' + (estimate.prices[estimate.SelectedOption].price + price) + ' + IVA' + '\n';
+	}
+
+	if (estimate.customer){
+		text += '##Cliente' + '\n';
+		text += estimate.customer.comercialName?'**Nombre Fantasía: **' + estimate.customer.comercialName + '\n':'';
+		text += '**Razón Social: **' + estimate.customer.businessName + '\n';
+		text += '**RUT: **' + estimate.customer.rut + '\n';
+		text += '**Dirección: **' + estimate.customer.address + '\n';
+		text += '**Forma de Pago: **' + estimate.customer.paymentWay + '\n';
+		text += '####Contacto' + '\n';
+		text += '**Nombre: **' + estimate.customer.contactName + '\n';
+		text += '**Mail: **' + estimate.customer.contactEmail + '\n';
+		text += estimate.customer.contactPhone?'**Teléfono: **' + estimate.customer.contactPhone + '\n':'';
+	}
+	return text;
+}
+
+var createText = function(type,name,value){
+	return {
+		type: type,
+		name: estimate.name,
+		value: value
+	};
+}
+
+var createGeneralText = function(estimate,includeOptionalFinishes){
+	//var price = 0;
+	var text = {};
+	text.push(createText('title',estimate.name,''));
+	text.push(createText('text','Cantidad',(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // '))));
+	text.push(createText('text','Tamaño cerrado',estimate.clossedSize));
+	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){	
+		text.push(createText('subtitle2','Terminaciones Generales',''));
+		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
+		if(estimate.SelectedOption!=null){
+			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
+			
+			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
+				text.push(createText('list',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.finish + (currentMandatoryFinishGroups[i].finishes.finishComment!=""?currentMandatoryFinishGroups[i].finishes.finishComment:'')));
+			}
+		}else{
+			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
+				var currentText = createText('list',currentMandatoryFinishGroups[i].groupName,[]);
+				for(var j= 0 ; j < currentMandatoryFinishGroups[i].finishes.length;j++){
+					currentText.value.push(currentMandatoryFinishGroups[i].finishes[j].finish + (currentMandatoryFinishGroups[i].finishes[j].finishComment!=""?currentMandatoryFinishGroups[i].finishes[j].finishComment:''));
+				}
+				text.push(currentText);
+			}
+		}
+	}
+	if (includeOptionalFinishes){
+		if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
+			if(estimate.SelectedOption==null){
+				var currentOptionalFinish = estimate.optionalFinishes;
+				for(var i = 0; i < currentOptionalFinish.length;i++){
+					text.push(createText('list',currentOptionalFinish[i].finish + (currentOptionalFinish[i].finishComment!=""?currentOptionalFinish[i].finishComment:''),''));
+				}
+			}else{
+				var optionalFinishesPrices = estimate.selectedExtraPrices;
+				for (var i = 0; i < optionalFinishesPrices.length; i++){
+					var 
+					if (optionalFinishesPrices[i].optionalFinishes){
+						for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
+							text.push(createText('list',optionalFinishesPrices[i].optionalFinishes[j].finish + (optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?optionalFinishesPrices[i].optionalFinishes[j].finishComment:'')));
+							//price += optionalFinishesPrices[i].optionalFinishes[j].price;
+						}
+					}
+				}
+			}
+		}
+	}
+	return text;
+}
+var otracosa = function(){
 	text +='\n';
 	if(estimate.items){
 		for (var i = 0; i< estimate.items.length;i++){
@@ -470,7 +668,7 @@ var createTextForCard = function(estimate){
 var createTrelloCardName = function(estimate){
 	var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
 
-	return estimate.quantity + "x" + estimate.name + " - " + contactAndBusinessInfo.filter(Boolean).join(' - ');
+	return estimate.quantity + " " + estimate.name + " - " + contactAndBusinessInfo.filter(Boolean).join(' - ');
 }
 
 
