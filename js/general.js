@@ -510,8 +510,7 @@ var createText = function(type,name,value){
 	};
 }
 
-var createGeneralText = function(estimate,includeOptionalFinishes){
-	//var price = 0;
+var createGeneralText = function(estimate,includeOptionalFinishes){ 
 	var text = {};
 	text.push(createText('title',estimate.name,''));
 	text.push(createText('text','Cantidad',(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // '))));
@@ -545,11 +544,9 @@ var createGeneralText = function(estimate,includeOptionalFinishes){
 			}else{
 				var optionalFinishesPrices = estimate.selectedExtraPrices;
 				for (var i = 0; i < optionalFinishesPrices.length; i++){
-					var 
 					if (optionalFinishesPrices[i].optionalFinishes){
 						for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
 							text.push(createText('list',optionalFinishesPrices[i].optionalFinishes[j].finish + (optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?optionalFinishesPrices[i].optionalFinishes[j].finishComment:'')));
-							//price += optionalFinishesPrices[i].optionalFinishes[j].price;
 						}
 					}
 				}
