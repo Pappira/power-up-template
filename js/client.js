@@ -408,7 +408,7 @@ var getAcceptEstimate = function(){
       height: 500, // Initial height for iframe; not used if fullscreen is true
       fullscreen: false, // Whether the modal should stretch to take up the whole screen
       callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
-      title: 'Aceptar', // Optional title for modal header
+      title: 'Aceptar presupuesto', // Optional title for modal header
       // You can add up to 3 action buttons on the modal header - max 1 on the right side.
       actions: [{
         icon: GRAY_ICON,
@@ -562,7 +562,7 @@ TrelloPowerUp.initialize({
             // usually you will provide a callback function to be run on button click
             // we recommend that you use a popup on click generally
             icon: GRAY_ICON, // don't use a colored icon here
-            text: 'Aceptar Presupuesto',
+            text: 'Aceptar',
             callback: getAcceptEstimate()
           }
         }
