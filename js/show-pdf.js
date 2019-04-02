@@ -15,7 +15,7 @@ var tripleSpaceFactor = 2;
 
 var getGeneralAndCustomerInformationForPDF = function(estimate){
     var textToAdd = [];
-    var contactAndBusinessInfo = estimate.customer?[estimate.customer.comenrcialName, estimate.customer.businessName, estimate.customer.contactName]:[];
+    var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
     textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', contactAndBusinessInfo.filter(Boolean).join(' - '), rowSize));
     textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'Presente','', rowSize*dobleSpaceFactor));
     textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"A continuación detallamos el presupuesto solicitado.",'', rowSize));
@@ -505,7 +505,7 @@ var workOrderPDF = function(estimate){
 
     var selectedOption = estimate.selectedOption?estimate.selectedOption:0;
     var selectedEstimate = estimate.prices[selectedOption];
-    writeTextInDoc(doc,"Nombre / Empresa",(estimate.customer?estimate.customer.comenrcialName:'') + " / " + (estimate.customer?estimate.customer.businessName:'') ,firstColumn,height,normalBoxLength*4+separation*3);
+    writeTextInDoc(doc,"Nombre / Empresa",(estimate.customer?estimate.customer.comercialName:'') + " / " + (estimate.customer?estimate.customer.businessName:'') ,firstColumn,height,normalBoxLength*4+separation*3);
     writeTextInDoc(doc,"Cantidad",selectedEstimate.quantity,fifthColumn,height,normalBoxLength*2+separation);
    
 

@@ -24,7 +24,7 @@ var quantityChip = [];
 var generalFinishes = [];
 var generalIds =['workType','clossedSize'];
 var comments = ['internalComments','clientComments'];
-var customer = ['comenrcialName','businessName','rut','address','contactName','contactEmail','contactPhone','paymentWay'];
+var customer = ['comercialName','businessName','rut','address','contactName','contactEmail','contactPhone','paymentWay'];
 var estimate = {};
 var item = [];
 var itemFinishes = [];
@@ -470,7 +470,7 @@ var createCustomer = function(estimateObject){
 	var h1 = createElement('h1','titulo','customerTitle','Datos del cliente');
 	var divRow = createElement('div','row','','');
 
-	divRow.appendChild(createTextInput('s6','comenrcialName','Nombre comercial o fantasia','text',estimateObject?estimateObject['customer']['comenrcialName']:null));
+	divRow.appendChild(createTextInput('s6','comercialName','Nombre comercial o fantasia','text',estimateObject?estimateObject['customer']['comercialName']:null));
 	divRow.appendChild(createTextInput('s6','businessName','Razón social','text',estimateObject?estimateObject['customer']['businessName']:null));
 
 	divRow.appendChild(createTextInput('s6','rut','RUT','text',estimateObject?estimateObject['customer']['rut']:null));

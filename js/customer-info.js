@@ -9,7 +9,7 @@ var paymentWays = ['Contado','Seña del 50% y saldo contra-entrega','Seña del 4
 
 
 var comments = ['internalComments','clientComments'];
-var customer = ['comenrcialName','businessName','rut','address','contactName','contactEmail','contactPhone','paymentWay'];
+var customer = ['comercialName','businessName','rut','address','contactName','contactEmail','contactPhone','paymentWay'];
 var estimate = {};
 
 var cardInfoKey = 'pappira.cardInfo';
@@ -85,7 +85,7 @@ var createCustomer = function(estimateObject){
 	var h1 = createElement('h1','titulo','customerTitle','Datos del cliente');
 	var divRow = createElement('div','row','','');
 
-	divRow.appendChild(createTextInput('s6','comenrcialName','Nombre comercial o fantasia','text',(estimateObject && estimateObject.customer)?estimateObject.customer.comenrcialName:null));
+	divRow.appendChild(createTextInput('s6','comercialName','Nombre comercial o fantasia','text',(estimateObject && estimateObject.customer)?estimateObject.customer.comercialName:null));
 	divRow.appendChild(createTextInput('s6','businessName','Razón social','text',(estimateObject && estimateObject.customer)?estimateObject.customer.businessName:null));
 
 	divRow.appendChild(createTextInput('s6','rut','RUT','text',(estimateObject && estimateObject.customer)?estimateObject.customer.rut:null));

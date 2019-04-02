@@ -41,7 +41,7 @@ Estimate Object:
       "clientComments":""
    },
    "customer":{  
-      "comenrcialName":"",
+      "comercialName":"",
       "businessName":"",
       "rut":"",
       "address":"",

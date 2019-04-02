@@ -26,7 +26,7 @@ var workOrderPDF = function(estimate,newTab){
     var heigth = heigthSeparation*3;
     var selectedOption = estimate.selectedOption;
     var selectedEstimate = estimate.prices[selectedOption];
-    writeTextInDoc(doc,"Nombre / Empresa",(estimate.customer?estimate.customer.comenrcialName:'') + " / " + (estimate.customer?estimate.customer.businessName:'') ,firstColumn,heigth,normalBoxLength*4+separation*3);
+    writeTextInDoc(doc,"Nombre / Empresa",(estimate.customer?estimate.customer.comercialName:'') + " / " + (estimate.customer?estimate.customer.businessName:'') ,firstColumn,heigth,normalBoxLength*4+separation*3);
     writeTextInDoc(doc,"Cantidad",selectedEstimate.quantity,fifthColumn,heigth,normalBoxLength*2+separation);
    
 

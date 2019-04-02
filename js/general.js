@@ -447,44 +447,14 @@ var createTextForCard = function(estimate){
 	if (estimate['comments']){
 		text += '##**Comentario: **' + estimate['comments']['internalComments']+ '\n';
 	}
-	//TODO Solo poner el precio si existe la selected option.
+	
 	if (estimate.SelectedOption!=null){
 		text +='##**Precio: **$ ' + (estimate.prices[estimate.SelectedOption].price + price) + ' + IVA' + '\n';
 	}
-	/*if(estimate.prices){
-		if (!estimate.SelectedOption){
-			estimate.prices.sort(compareValues());
-            text += '##Precios' + '\n';
-            var lastPriceText = '';
-			for (var i = 0; i < estimate.prices.length;i++){
-				var price = estimate.prices[i];
-				if (price){
-					var priceText = '';
-					if (estimate.prices.length > 1){
-						for (var j = 0; j < price.items.length; j++){
-							var item =  price.items[j];
-							var originalItem = estimate.items[item.id];
-							priceText += ( price.items.length>1?originalItem.name+' ':'') + (originalItem.materials.length>1?' en papel' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
-							+ (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
-							+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
-							+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
-							+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías': '');
-						}
-					}
-					if(lastPriceText !=priceText){
-						text += '####' + priceText + '\n';
-						lastPriceText = priceText;
-					}
-					text += '  •  Sub-Total (' + price.quantity + ' unidades): ** $ ' + price.price + ' + IVA**' + '\n';
-				}
-			}
-		}else{
-			text +='**Precio: **$ ' + estimate.prices[estimate.SelectedOption].price + ' + IVA' + '\n';
-		}
-	}*/
+
 	if (estimate['customer']){
 		text += '##Cliente' + '\n';
-		text += estimate['customer']['comenrcialName']?'**Nombre Fantasía: **' + estimate['customer']['comenrcialName'] + '\n':'';
+		text += estimate['customer']['comercialName']?'**Nombre Fantasía: **' + estimate['customer']['comercialName'] + '\n':'';
 		text += '**Razón Social: **' + estimate['customer']['businessName'] + '\n';
 		text += '**RUT: **' + estimate['customer']['rut'] + '\n';
 		text += '**Dirección: **' + estimate['customer']['address'] + '\n';
