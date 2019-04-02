@@ -28,11 +28,11 @@ t.render(function(){
 			createComments();
 			createCustomer();
 	  }
+	}).then(function(){
+		var select = document.getElementById('paymentWay');
+		select.value = (estimate && estimate.customer)?estimate.customer.paymentWay:'';
+		$('select#paymentWay').material_select();
 	});
-}).then(function(){
-	var select = document.getElementById('paymentWay');
-	select.value = (estimate && estimate.customer)?estimate.customer.paymentWay:'';
-	$('select#paymentWay').material_select();
 });
 
 var createObject = function(){
