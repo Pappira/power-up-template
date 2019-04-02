@@ -510,8 +510,8 @@ var createText = function(type,name,value){
 	};
 }
 
-var createGeneralText = function(estimate,includeOptionalFinishes){ 
-	var text = {};
+var createGeneralText = function(estimate,includeOptionalFinishes){  
+	var text = [];
 	text.push(createText('title',estimate.name,''));
 	text.push(createText('text','Cantidad',(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // '))));
 	text.push(createText('text','Tamaño cerrado',estimate.clossedSize));
