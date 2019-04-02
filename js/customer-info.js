@@ -10,6 +10,7 @@ var paymentWays = ['Contado','Seña del 50% y saldo contra-entrega','Seña del 4
 
 var comments = ['internalComments','clientComments'];
 var customer = ['comercialName','businessName','rut','address','contactName','contactEmail','contactPhone','paymentWay'];
+var productionTimes = ['1 a 2 días hábiles', '3 a 5 días hábiles','5 a 8 días hábiles','8 a 12 días hábiles', '12 a 15 días hábiles','15 a 20 días hábiles'];
 var estimate = {};
 
 var cardInfoKey = 'pappira.cardInfo';
@@ -22,16 +23,19 @@ t.render(function(){
 		}
 	  if(cardInfo){
 			estimate = deTranslateEstimate(JSON.parse( LZString.decompress(cardInfo)));
-			createComments(estimate);
-			createCustomer(estimate);
-	  }else{
-			createComments();
-			createCustomer();
-	  }
+		}
+		createComments(estimate);
+		createCustomer(estimate);
+		createProductionTime(estimate);
 	}).then(function(){
 		var select = document.getElementById('paymentWay');
 		select.value = (estimate && estimate.customer)?estimate.customer.paymentWay:'';
 		$('select#paymentWay').material_select();
+
+		var select = document.getElementById('productionTime');
+		select.value = (estimate && estimate.customer)?estimate.customer.productionTime:'';
+		$('select#productionTime').material_select();
+		
 	});
 });
 
@@ -61,6 +65,24 @@ var createObject = function(){
 	return estimate;
 
 };
+
+
+var createProductionTime = function(estimateObject){
+	var divContainer = createElement('div','container','productionTimeContainer');
+	var formItem = createElement('form','col s12','productionTimeForm');
+
+	var h1 = createElement('h1','titulo','productionTimeTitle','Tiempo de Entrega');
+	var divRow = createElement('div','row','','');
+
+	var select = createSelect('s6','productionTime',productionTimes,'Tiempo de entrega');
+	divRow.appendChild(select);
+
+	formItem.appendChild(h1);
+	formItem.appendChild(divRow);
+	divContainer.appendChild(formItem);
+
+	commentsDiv.appendChild(divContainer);
+}
 
 var createComments = function(estimateObject){
 	var divContainer = createElement('div','container','commentsContainer');
