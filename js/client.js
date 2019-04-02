@@ -404,7 +404,7 @@ var getAcceptEstimate = function(){
   return function(t){
     return t.modal({
       url: './acceptEstimate.html', // The URL to load for the iframe
-      accentColor: '#F2D600', // Optional color for the modal header 
+     // accentColor: '#F2D600', // Optional color for the modal header 
       height: 500, // Initial height for iframe; not used if fullscreen is true
       fullscreen: false, // Whether the modal should stretch to take up the whole screen
       callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
