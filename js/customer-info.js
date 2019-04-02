@@ -95,7 +95,9 @@ var createCustomer = function(estimateObject){
 	divRow.appendChild(createTextInput('s6','contactEmail','Email','text',(estimateObject && estimateObject.customer)?estimateObject.customer.contactEmail:null));
 
 	divRow.appendChild(createTextInput('s6','contactPhone','Teléfono','text',(estimateObject && estimateObject.customer)?estimateObject.customer.contactPhone:null));
-	divRow.appendChild(createSelect('s6','paymentWay',paymentWays,'Forma de pago'));
+	var select = createSelect('s6','paymentWay',paymentWays,'Forma de pago');
+	divRow.appendChild(select);
+	select.value = (estimateObject && estimateObject.customer)?estimateObject.customer.paymentWay:'';
 
 	formItem.appendChild(h1);
 	formItem.appendChild(divRow);
