@@ -351,7 +351,9 @@ var createTextForCard = function(estimate){
 	var price = 0;
 	var text = '';
 	var texts = createGeneralText(estimate,true);
-	texts.concat(createItemText(estimate,true,true,true));
+	for (var i = 0; i < estimate.items.length;i++){
+		texts = texts.concat(createItemText(estimate,estimate.items[i],true,true,true));
+	}
 	for (var i = 0; i < texts.length;i++){
 		text +=convertTextForCard(texts[i]);
 	}
@@ -514,7 +516,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes){
 	}
 	return text;
 }
-var createItemText = function(item, showBBleedPrint, showAllDifferent, showOptionalFinishes){
+var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent, showOptionalFinishes){
 	var texts = [];
 	var selectedItem;
 	if(item){
