@@ -354,10 +354,19 @@ var createTextForCard = function(estimate){
 	for (var i = 0; i < estimate.items.length;i++){
 		texts = texts.concat(createItemText(estimate,estimate.items[i],true,true,true));
 	}
+	texts = texts.concat(createCommentsText(estimate,true,false)); 
+
+	var extraPrice = 0;
+	if(estimate.selectedExtraPrices && estimate.selectedExtraPrices.length > 0){
+		extraPrice += estimate.selectedExtraPrices.map(optionalFinishes => optionalFinishes.optionalFinishes?optionalFinishes.optionalFinishes.map(optionalFinish => optionalFinish.price).reduce(add):0).reduce(add);
+		extraPrice += estimate.selectedExtraPrices.map(optionalFinishes => optionalFinishes.items?optionalFinishes.items.filter(Boolean).map(item => item.optionalFinishes?item.optionalFinishes.filter(Boolean).map(optionalFinish => optionalFinish.price).reduce(add):0).reduce(add):0).reduce(add);
+	}
+	texts = texts.concat(createPriceText(estimate,extraPrice)); 
+	texts = texts.concat(createCustomerText(estimate));
 	for (var i = 0; i < texts.length;i++){
 		text +=convertTextForCard(texts[i]);
 	}
-
+/*
 	text +='\n';
 	if(estimate.items){
 		for (var i = 0; i< estimate.items.length;i++){
@@ -440,7 +449,7 @@ var createTextForCard = function(estimate){
 			
 			text +='\n';
 		}
-	}
+	}*/
 	if (estimate.comments){
 		text += '##**Comentario: **' + estimate.comments.internalComments + '\n';
 	}
@@ -601,29 +610,57 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent,
 	}
 }
 
-var otrasCosas = function(){
-
+var createCommentsText = function(estimate, showInternalComments, showCustomerComments){
+	var texts =[];
 	if (estimate.comments){
-		text += '##**Comentario: **' + estimate.comments.internalComments + '\n';
+		if (showInternalComments){
+			texts.push(createText('subtitle1','Comentario: ' + estimate.comments.internalComments,''));
+		}
+		if(showCustomerComments){
+			texts.push(createText('subtitle1','Comentario: ' + estimate.comments.clientComments,''));
+		}
 	}
-	
-	if (estimate.SelectedOption!=null){
-		text +='##**Precio: **$ ' + (estimate.prices[estimate.SelectedOption].price + price) + ' + IVA' + '\n';
-	}
+	return texts;
+}
 
-	if (estimate.customer){
-		text += '##Cliente' + '\n';
-		text += estimate.customer.comercialName?'**Nombre Fantasía: **' + estimate.customer.comercialName + '\n':'';
-		text += '**Razón Social: **' + estimate.customer.businessName + '\n';
-		text += '**RUT: **' + estimate.customer.rut + '\n';
-		text += '**Dirección: **' + estimate.customer.address + '\n';
-		text += '**Forma de Pago: **' + estimate.customer.paymentWay + '\n';
-		text += '####Contacto' + '\n';
-		text += '**Nombre: **' + estimate.customer.contactName + '\n';
-		text += '**Mail: **' + estimate.customer.contactEmail + '\n';
-		text += estimate.customer.contactPhone?'**Teléfono: **' + estimate.customer.contactPhone + '\n':'';
+var createPriceText = function(estimate,extraPrice){
+	var texts = [];
+	texts.push(createText('subtitle1','Precio: ' + (estimate.prices[estimate.SelectedOption].price + extraPrice) + ' + IVA' ,''));
+	return texts;
+}
+
+var createCustomerText = function(estimate){
+	var customer = estimate.customer;
+	var texts = [];
+	if (customer){
+		texts.push(createText('subtitle1','Cliente' ,''));
+		if (customer.comercialName){
+			texts.push(createText('text','Nombre Fantasía' ,customer.comercialName ));
+		}
+		if (customer.businessName){
+			texts.push(createText('text','Razón Social' ,customer.businessName ));
+		}
+		if (customer.rut){
+			texts.push(createText('text','RUT' ,customer.rut ));
+		}
+		if (customer.address){
+			texts.push(createText('text','Dirección' ,customer.address ));
+		}
+		if (estimate.paymentWay){
+			texts.push(createText('text','Forma de Pago' ,estimate.paymentWay ));
+		}
+		texts.push(createText('subtitle3','Contacto' ,''));
+		if (customer.contactName){
+			texts.push(createText('text','Nombre' ,customer.contactName ));
+		}		
+		if (customer.contactEmail){
+			texts.push(createText('text','Mail' ,customer.contactEmail ));
+		}
+		if (customer.contactPhone){
+			texts.push(createText('text','Teléfono' ,customer.contactPhone ));
+		}
 	}
-	return text;
+	return texts;
 }
 
 var createTrelloCardName = function(estimate){
