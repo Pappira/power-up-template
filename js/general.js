@@ -350,7 +350,7 @@ var convertTextForCard = function(text){
 var createTextForCard = function(estimate){
 	var price = 0;
 	var text = '';
-	/*text += '#' + estimate.name + '\n';
+	text += '#' + estimate.name + '\n';
 	text += '**Cantidad: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // ')) + '\n';
 	text += '**Tamaño cerrado: **' + estimate.clossedSize + '\n';
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
@@ -393,7 +393,7 @@ var createTextForCard = function(estimate){
 				}
 			}
 		}
-	}*/
+	}
 	var texts = createGeneralText(estimate,true);
 	for (var i = 0; i < texts.length;i++){
 		text +=convertTextForCard(texts[i]);
