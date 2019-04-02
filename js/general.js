@@ -340,6 +340,8 @@ var convertTextForCard = function(text){
 			for (var j = 0; j < text.value.length;j++){
 				thisText += '  - ' + text.value[j] + '\n';
 			}
+		}else if (text.value.length>0){
+			thisText += '  - ' + text.value + '\n';
 		}
 		return thisText;
 	}
