@@ -97,7 +97,6 @@ var createCustomer = function(estimateObject){
 	divRow.appendChild(createTextInput('s6','contactPhone','Teléfono','text',(estimateObject && estimateObject.customer)?estimateObject.customer.contactPhone:null));
 	var select = createSelect('s6','paymentWay',paymentWays,'Forma de pago');
 	divRow.appendChild(select);
-	select.value = (estimateObject && estimateObject.customer)?estimateObject.customer.paymentWay:'';
 
 	formItem.appendChild(h1);
 	formItem.appendChild(divRow);
@@ -106,10 +105,17 @@ var createCustomer = function(estimateObject){
 	customerDiv.appendChild(divContainer);
 
 
+	select.value = (estimateObject && estimateObject.customer)?estimateObject.customer.paymentWay:'';
 	$('select#paymentWay').material_select();
 }
 
 var createEstimateAndUpdateCard = function() {
 	estimate = createObject();
 	updateCard(estimate);
-  };
+	};
+	
+	$(window).bind("load", function() {
+	var select = document.getElementById('paymentWay');
+	select.value = (estimateObject && estimateObject.customer)?estimateObject.customer.paymentWay:'';
+	$('select#paymentWay').material_select();
+ });
