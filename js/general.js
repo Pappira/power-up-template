@@ -346,7 +346,11 @@ var convertTextForCard = function(text){
 		return thisText + '\n';
 	}
 }
-	
+
+function add(accumulator, a) {
+	return accumulator + a;
+}
+
 var createTextForCard = function(estimate){
 	var price = 0;
 	var text = '';
