@@ -62,6 +62,8 @@ var createObject = function(){
 	}
 	estimate.customer = customerObject;
 
+	var paymentWayText = document.getElementById('productionTime').value;
+	estimate.productionTime = paymentWayText!='Selecciona'?paymentWayText:'';
 	return estimate;
 
 };

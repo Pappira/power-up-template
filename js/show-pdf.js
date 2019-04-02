@@ -404,7 +404,7 @@ var generateEstimatePDF = function(estimate){
     top =increaseTop(top,rowSize*mediumSpaceFactor*scale,doc); 
     scale = writeTextNormalWithSeparation(fontSize, fontType,"  •  ","Mantenimiento de oferta 20 días.", top,doc);
     top = increaseTop(top,rowSize*scale,doc);
-    scale = writeTextNormalWithSeparation(fontSize, fontType,"  •  ","Forma de pago " + (estimate.customer?estimate.customer.paymentWay:''),top,doc);
+    scale = writeTextNormalWithSeparation(fontSize, fontType,"  •  ","Forma de pago " + ((estimate.customer && estimate.customer.paymentWay && estimate.customer.paymentWay!="")?estimate.customer.paymentWay:'Seña del 50% y saldo contra-entrega'),top,doc);
     top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Precio unitario basado en unidades descritas o más.",top,doc);
     top = increaseTop(top,rowSize*scale,doc);
@@ -412,7 +412,7 @@ var generateEstimatePDF = function(estimate){
     top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Precios NO incluyen IVA.", top,doc);
     top = increaseTop(top,rowSize*scale,doc);
-    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Entrega entre 10 y 15 días hábiles una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", top, doc);
+    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Entrega entre " + ((estimate.productionTime && estimate.productionTime!="")?estimate.productionTime:"10 y 15 días hábiles") + " una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", top, doc);
     top = increaseTop(top,rowSize*dobleSpaceFactor*scale,doc)
 
     if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*3 ,doc)){
