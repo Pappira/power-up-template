@@ -505,7 +505,7 @@ var createTextForCard = function(estimate){
 var createText = function(type,name,value){
 	return {
 		type: type,
-		name: estimate.name,
+		name: name,
 		value: value
 	};
 }
