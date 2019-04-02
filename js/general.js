@@ -352,8 +352,6 @@ function add(accumulator, a) {
 }
 
 var createTextForCard = function(estimate){
-	var price = 0;
-	var text = '';
 	var texts = createGeneralText(estimate,true);
 	for (var i = 0; i < estimate.items.length;i++){
 		texts = texts.concat(createItemText(estimate,estimate.items[i],true,true,true));
@@ -366,113 +364,12 @@ var createTextForCard = function(estimate){
 		extraPrice += estimate.selectedExtraPrices.map(optionalFinishes => optionalFinishes.items?optionalFinishes.items.filter(Boolean).map(item => item.optionalFinishes?item.optionalFinishes.filter(Boolean).map(optionalFinish => optionalFinish.price).reduce(add):0).reduce(add):0).reduce(add);
 	}
 	texts = texts.concat(createPriceText(estimate,extraPrice)); 
+
 	texts = texts.concat(createCustomerText(estimate));
+
+	var text = '';
 	for (var i = 0; i < texts.length;i++){
 		text +=convertTextForCard(texts[i]);
-	}
-/*
-	text +='\n';
-	if(estimate.items){
-		for (var i = 0; i< estimate.items.length;i++){
-			text += (estimate.items.length>1?('##' + estimate.items[i].name + '\n'):'');
-			var inks = [];
-			for(var j = 0; j < estimate.items[i].inks.length;j++){
-				inks.push(estimate.items[i].inks[j].inksQuantity + " " + estimate.items[i].inks[j].inksDetails);
-			}
-			text += '**Tintas: **' + (estimate.items[i].inks?(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].inks.inksQuantity+' '+estimate.prices[estimate.SelectedOption].items[i].inks.inksDetails:inks.join(' // ') + ' '):'')  +
-					(estimate.items[i].bleedPrint?'(Impresión al Vivo)':'') +'\n';
-			
-			if (estimate.items[i].openedSize){
-				if(estimate.items[i].openedSize !== estimate.clossedSize){
-					text += '**Tamaño Abierto: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].openedSize:estimate.items[i].openedSize.join(' // '))  +'\n';
-				}
-			}
-			if (estimate.items[i].faces){
-				text += '**Faces: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].faces:estimate.items[i].faces.join(' // '))  +'\n';
-			}
-			if (estimate.items[i].quantityOfPages.length>1 || (estimate.items[i].quantityOfPages.length==1 && estimate.items[i].quantityOfPages!=1)){
-				text += '**Cantidad de páginas: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].quantityOfPages:estimate.items[i].quantityOfPages.join(' // '))  +
-					(estimate.items[i].allTheSame?' (Todas iguales)':' (Todas diferentes)') +'\n';
-			}
-			if (estimate.items[i].materials){	
-				var materiales = [];
-				if (!estimate.SelectedOption){
-					for (var j = 0; j < estimate.items[i].materials.length; j++){
-						materiales.push(estimate.items[i].materials[j].paper + ' ' + estimate.items[i].materials[j].gr + 'gr');
-					}
-				}else{
-					materiales.push(estimate.prices[estimate.SelectedOption].items[i].materials.paper + ' ' + estimate.prices[estimate.SelectedOption].items[i].materials.gr + 'gr');
-				}
-				if(materiales && materiales.length>0){
-					text += '**Materiales: **' + materiales.join(' // ') + '\n'; 
-				}
-			}
-
-			if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
-				text += '###Terminaciones' + '\n\n';
-				var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
-				if(estimate.SelectedOption!=null){
-					currentItemMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].items[i].mandatoryFinishGroups;
-					for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-						text += k + '. ' + currentItemMandatoryFinishGroups[k].groupName + '\n';
-						text += '  - ' + currentItemMandatoryFinishGroups[k].finishes.finish + '\n';
-						text += currentItemMandatoryFinishGroups[k].finishes.finishComment?'      ' + currentItemMandatoryFinishGroups[k].finishes.finishComment + '\n':'';
-					}
-				}else{
-					for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-						text += k + '. ' + currentItemMandatoryFinishGroups[k].groupName + '\n';
-						for (var j = 0; j < currentItemMandatoryFinishGroups[k].finishes.length;j++){
-							text += '  - ' + currentItemMandatoryFinishGroups[k].finishes[j].finish + '\n';
-							text += currentItemMandatoryFinishGroups[k].finishes[j].finishComment?'      ' + currentItemMandatoryFinishGroups[k].finishes[j].finishComment + '\n':'';
-						}
-					}
-				}
-			}
-
-			
-			if (estimate.items[i].optionalFinishes && estimate.items[i].optionalFinishes.length >0){
-				if(estimate.SelectedOption==null){
-					var currentItemOptionalFinish = estimate.items[i].optionalFinishes;
-					for(var k = 0; k < currentItemOptionalFinish.length;k++){
-						text += k + '. ' + currentItemOptionalFinish[k].finish + '\n';	
-						text += currentItemOptionalFinish[k].finishComment?'      ' + currentItemOptionalFinish[k].finishComment + '\n':'';
-					}
-				}else{
-					var optionalFinishesPrices = estimate.selectedExtraPrices;
-					for (var j = 0; j < optionalFinishesPrices.length; j++){
-						if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[i] && optionalFinishesPrices[j].items[i].optionalFinishes){
-							for (var k = 0; k < optionalFinishesPrices[j].items[i].optionalFinishes.length;k++){
-								text += i + '. ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finish + '\n';	
-								text += optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment!=""?'      ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment + '\n':'';
-								price += optionalFinishesPrices[j].items[i].optionalFinishes[k].price;
-							}
-						}
-					}
-				}
-			}
-			
-			text +='\n';
-		}
-	}*/
-	if (estimate.comments){
-		text += '##**Comentario: **' + estimate.comments.internalComments + '\n';
-	}
-	
-	if (estimate.SelectedOption!=null){
-		text +='##**Precio: **$ ' + (estimate.prices[estimate.SelectedOption].price + price) + ' + IVA' + '\n';
-	}
-
-	if (estimate.customer){
-		text += '##Cliente' + '\n';
-		text += estimate.customer.comercialName?'**Nombre Fantasía: **' + estimate.customer.comercialName + '\n':'';
-		text += '**Razón Social: **' + estimate.customer.businessName + '\n';
-		text += '**RUT: **' + estimate.customer.rut + '\n';
-		text += '**Dirección: **' + estimate.customer.address + '\n';
-		text += '**Forma de Pago: **' + estimate.customer.paymentWay + '\n';
-		text += '####Contacto' + '\n';
-		text += '**Nombre: **' + estimate.customer.contactName + '\n';
-		text += '**Mail: **' + estimate.customer.contactEmail + '\n';
-		text += estimate.customer.contactPhone?'**Teléfono: **' + estimate.customer.contactPhone + '\n':'';
 	}
 	return text;
 }
