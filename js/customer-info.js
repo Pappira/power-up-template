@@ -29,6 +29,10 @@ t.render(function(){
 			createCustomer();
 	  }
 	});
+}).then(function(){
+	var select = document.getElementById('paymentWay');
+	select.value = (estimate && estimate.customer)?estimate.customer.paymentWay:'';
+	$('select#paymentWay').material_select();
 });
 
 var createObject = function(){
@@ -113,9 +117,3 @@ var createEstimateAndUpdateCard = function() {
 	estimate = createObject();
 	updateCard(estimate);
 	};
-	
-	$(window).bind("load", function() {
-	var select = document.getElementById('paymentWay');
-	select.value = (estimateObject && estimateObject.customer)?estimateObject.customer.paymentWay:'';
-	$('select#paymentWay').material_select();
- });
