@@ -263,7 +263,7 @@ var createCheckListsForCard = function(estimate){
 	if(generalCheckList.checkItems.length>0){
 		checkLists.push(generalCheckList);
 	}
-	for (var i = 0; i< estimate['items'].length;i++){
+	for (var i = 0; i< estimate.items.length;i++){
 		var currentCheckList = {
 			name:"Terminaciones de " + estimate.items[i].name,
 			checkItems:[]
@@ -317,9 +317,9 @@ return checkLists;
 var createTextForCard = function(estimate){
 	var price = 0;
 	var text = '';
-	text += '#' + estimate['name'] + '\n';
-	text += '**Cantidad: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate['quantity'].join(' // ')) + '\n';
-	text += '**Tamaño cerrado: **' + estimate['clossedSize'] + '\n';
+	text += '#' + estimate.name + '\n';
+	text += '**Cantidad: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // ')) + '\n';
+	text += '**Tamaño cerrado: **' + estimate.clossedSize + '\n';
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
 		text += '###Terminaciones Generales' + '\n\n';
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
@@ -362,33 +362,33 @@ var createTextForCard = function(estimate){
 		}
 	}
 	text +='\n';
-	if(estimate['items']){
-		for (var i = 0; i< estimate['items'].length;i++){
-			text += (estimate['items'].length>1?('##' + estimate['items'][i]['name'] + '\n'):'');
+	if(estimate.items){
+		for (var i = 0; i< estimate.items.length;i++){
+			text += (estimate.items.length>1?('##' + estimate.items[i].name + '\n'):'');
 			var inks = [];
 			for(var j = 0; j < estimate.items[i].inks.length;j++){
 				inks.push(estimate.items[i].inks[j].inksQuantity + " " + estimate.items[i].inks[j].inksDetails);
 			}
-			text += '**Tintas: **' + (estimate['items'][i]['inks']?(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].inks.inksQuantity+' '+estimate.prices[estimate.SelectedOption].items[i].inks.inksDetails:inks.join(' // ') + ' '):'')  +
-					(estimate['items'][i]['bleedPrint']?'(Impresión al Vivo)':'') +'\n';
+			text += '**Tintas: **' + (estimate.items[i].inks?(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].inks.inksQuantity+' '+estimate.prices[estimate.SelectedOption].items[i].inks.inksDetails:inks.join(' // ') + ' '):'')  +
+					(estimate.items[i].bleedPrint?'(Impresión al Vivo)':'') +'\n';
 			
-			if (estimate['items'][i]['openedSize']){
-				if(estimate['items'][i]['openedSize'] !== estimate['clossedSize']){
-					text += '**Tamaño Abierto: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].openedSize:estimate['items'][i]['openedSize'].join(' // '))  +'\n';
+			if (estimate.items[i].openedSize){
+				if(estimate.items[i].openedSize !== estimate.clossedSize){
+					text += '**Tamaño Abierto: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].openedSize:estimate.items[i].openedSize.join(' // '))  +'\n';
 				}
 			}
-			if (estimate['items'][i]['faces']){
-				text += '**Faces: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].faces:estimate['items'][i]['faces'].join(' // '))  +'\n';
+			if (estimate.items[i].faces){
+				text += '**Faces: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].faces:estimate.items[i].faces.join(' // '))  +'\n';
 			}
-			if (estimate['items'][i]['quantityOfPages'].length>1 || (estimate['items'][i]['quantityOfPages'].length==1 && estimate['items'][i]['quantityOfPages']!=1)){
+			if (estimate.items[i].quantityOfPages.length>1 || (estimate.items[i].quantityOfPages.length==1 && estimate.items[i].quantityOfPages!=1)){
 				text += '**Cantidad de páginas: **' + (estimate.SelectedOption?estimate.prices[estimate.SelectedOption].items[i].quantityOfPages:estimate.items[i].quantityOfPages.join(' // '))  +
-					(estimate['items'][i]['allTheSame']?' (Todas iguales)':' (Todas diferentes)') +'\n';
+					(estimate.items[i].allTheSame?' (Todas iguales)':' (Todas diferentes)') +'\n';
 			}
-			if (estimate['items'][i]['materials']){	
+			if (estimate.items[i].materials){	
 				var materiales = [];
 				if (!estimate.SelectedOption){
-					for (var j = 0; j < estimate['items'][i]['materials'].length; j++){
-						materiales.push(estimate['items'][i]['materials'][j]['paper'] + ' ' + estimate['items'][i]['materials'][j]['gr'] + 'gr');
+					for (var j = 0; j < estimate.items[i].materials.length; j++){
+						materiales.push(estimate.items[i].materials[j].paper + ' ' + estimate.items[i].materials[j].gr + 'gr');
 					}
 				}else{
 					materiales.push(estimate.prices[estimate.SelectedOption].items[i].materials.paper + ' ' + estimate.prices[estimate.SelectedOption].items[i].materials.gr + 'gr');
@@ -444,31 +444,33 @@ var createTextForCard = function(estimate){
 			text +='\n';
 		}
 	}
-	if (estimate['comments']){
-		text += '##**Comentario: **' + estimate['comments']['internalComments']+ '\n';
+	if (estimate.comments){
+		text += '##**Comentario: **' + estimate.comments.internalComments + '\n';
 	}
 	
 	if (estimate.SelectedOption!=null){
 		text +='##**Precio: **$ ' + (estimate.prices[estimate.SelectedOption].price + price) + ' + IVA' + '\n';
 	}
 
-	if (estimate['customer']){
+	if (estimate.customer){
 		text += '##Cliente' + '\n';
-		text += estimate['customer']['comercialName']?'**Nombre Fantasía: **' + estimate['customer']['comercialName'] + '\n':'';
-		text += '**Razón Social: **' + estimate['customer']['businessName'] + '\n';
-		text += '**RUT: **' + estimate['customer']['rut'] + '\n';
-		text += '**Dirección: **' + estimate['customer']['address'] + '\n';
-		text += '**Forma de Pago: **' + estimate['customer']['paymentWay'] + '\n';
+		text += estimate.customer.comercialName?'**Nombre Fantasía: **' + estimate.customer.comercialName + '\n':'';
+		text += '**Razón Social: **' + estimate.customer.businessName + '\n';
+		text += '**RUT: **' + estimate.customer.rut + '\n';
+		text += '**Dirección: **' + estimate.customer.address + '\n';
+		text += '**Forma de Pago: **' + estimate.customer.paymentWay + '\n';
 		text += '####Contacto' + '\n';
-		text += '**Nombre: **' + estimate['customer']['contactName'] + '\n';
-		text += '**Mail: **' + estimate['customer']['contactEmail'] + '\n';
-		text += estimate['customer']['contactPhone']?'**Teléfono: **' + estimate['customer']['contactPhone'] + '\n':'';
+		text += '**Nombre: **' + estimate.customer.contactName + '\n';
+		text += '**Mail: **' + estimate.customer.contactEmail + '\n';
+		text += estimate.customer.contactPhone?'**Teléfono: **' + estimate.customer.contactPhone + '\n':'';
 	}
 	return text;
 }
 
 var createTrelloCardName = function(estimate){
-	return estimate.quantity + "x" + estimate.workType + " - " + (estimate.customer?estimate.customer.comercialName:'');
+	var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
+
+	return estimate.quantity + "x" + estimate.workType + " - " + contactAndBusinessInfo.filter(Boolean).join(' - ');
 }
 
 
