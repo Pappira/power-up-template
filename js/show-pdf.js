@@ -26,7 +26,14 @@ var getTotalSpaceNeededForText = function(textToAdd){
     return textToAdd.reduce((a, b) => a + (b['increaseTop'] || 0), 0);
 }
 var newGetTotalSpaceNeededForText = function(textToAdd){
-    return textToAdd.reduce((a, b) => a + (b['increaseTop'] || 0), 0);
+    
+    //Filtro todos los types text y cada uno ocupa rowSize
+    var total = textToAdd.map(currentText => currentText.type).filter(type => type =='text').length*rowSize;
+    //Filtro todos los types que tiene title (subtitle1, 2, 3 etc) y cada uno ocupa rowSize*medium
+    total += textToAdd.map(currentText => currentText.type).filter(type => type.includes('title')).length*rowSize*mediumSpaceFactor;
+    //Filtro todos los tipo list y concateno todos los values de esto, de esa forma obtengo un array con todos los values, cada value ocupa rowSize
+    total += [].concat.apply([], textToAdd.filter(currentText => currentText.type == 'list').map(currentText => currentText.value)).length*rowSize;
+    return total;
 }
 
 var createText = function(type,fontSize,fontType,title,value,increaseTop,textBold){
@@ -39,6 +46,57 @@ var createText = function(type,fontSize,fontType,title,value,increaseTop,textBol
         increaseTop: increaseTop,
         textBold: textBold
     };
+}
+
+var newAddText = function(textToAdd, doc, top){
+    for (var i = 0; i < textToAdd.length;i++){
+        text = textToAdd[i];
+        var increaseTop = 0;
+        switch (text.type){
+            case 'text':
+                var scale = writeTextNormalAndBold(fontSize,fontType,text.name, text.value, top,doc);
+                increaseTop = rowSize*scale;
+                break;
+            case 'title':
+                var scale = writeTextNormalAndBold(20,fontType,text.name, text.value, top,doc);
+                increaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
+            case 'subtitle1':
+                var scale = writeTextNormalAndBold(18,fontType,text.name, text.value, top,doc);
+                increaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
+            case 'subtitle2':
+                var scale = writeTextNormalAndBold(16,fontType,text.name, text.value, top,doc);
+                increaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
+            case 'subtitle3':
+                var scale = writeTextNormalAndBold(14,fontType,text.name, text.value, top,doc);
+                increaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
+            case 'subtitle4':
+                var scale = writeUnderlinedText(fontSize,fontType,text.name, top, doc);
+                increaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
+            case 'list':
+                if (Array.isArray(text.value)){
+                    var scale = writeTextNormalWithSeparation(fontSize, fontType, '    •  ' , text.name,top, doc);
+                    increaseTop = rowSize*scale;
+                    for (var j = 0; j < text.value.length;j++){
+                        scale = writeTextNormalWithSeparation(fontSize, fontType,'        »  ', text.value[j],top, doc);
+                        increaseTop += rowSize*scale;
+                    }
+                }else if (text.value && text.value.length>0){
+                    var scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'    •  ', text.name, text.value, top, doc);
+                    increaseTop = rowSize*scale;
+                }else{
+                    var scale = writeTextNormalWithSeparation(fontSize, fontType, '    •  ' , text.name,top, doc);
+                    increaseTop = rowSize*scale;
+                }
+                break;
+        }
+        top = increaseTop(top,increaseTop,doc);
+    }
+    return top;
 }
 
 var addText = function(textToAdd, doc, top){
@@ -377,7 +435,7 @@ var newAddTextToDoc = function(textToAdd,doc,top){
         if(!checkIfEnoughSpace(top,newGetTotalSpaceNeededForText(textToAdd),doc)){
             top = addNewPage(doc);
         }
-        top = addText(textToAdd,doc,top);
+        top = newAddText(textToAdd,doc,top);
         top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
     }
     return top;
