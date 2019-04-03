@@ -403,6 +403,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes){
 	}
 	if (includeOptionalFinishes){
 		if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
+			texts.push(createText('subtitle2','Terminaciones',''));
 			if(estimate.SelectedOption==null){
 				var currentOptionalFinish = estimate.optionalFinishes;
 				for(var i = 0; i < currentOptionalFinish.length;i++){
@@ -448,13 +449,17 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent,
 					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.finish +currentItemMandatoryFinishGroups[k].finishes.finishComment));
 				}
 			}
+			var notTitlePlaced = true;
 			if(showOptionalFinishes){
 				var optionalFinishesPrices = estimate.selectedExtraPrices;
 				if (optionalFinishesPrices){
-					texts.push(createText('subtitle2','Terminaciones',''));
 					for (var j = 0; j < optionalFinishesPrices.length; j++){
 						if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[selectedItem.id] && optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes){
 							for (var k = 0; k < optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes.length;k++){
+								if (notTitlePlaced){
+									texts.push(createText('subtitle2','Terminaciones',''));
+									notTitlePlaced = false;
+								}
 								texts.push(createText('list',optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finish + (optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finishComment!=""?optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'')));
 							}
 						}
@@ -491,11 +496,15 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent,
 					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.map(finishes => finishes.finish + finishes.finishComment).join(" // ")));
 				}
 			}
+			var notTitlePlaced = true;
 			if(showOptionalFinishes){
 				if (item.optionalFinishes && item. optionalFinishes.length >0){
-				texts.push(createText('subtitle2','Terminaciones',''));
 					var currentItemOptionalFinish = item.optionalFinishes;
 					for(var k = 0; k < currentItemOptionalFinish.length;k++){
+						if (notTitlePlaced){
+							texts.push(createText('subtitle2','Terminaciones',''));
+							notTitlePlaced = false;
+						}
 						texts.push(createText('list',currentItemOptionalFinish[k].finish + (currentItemOptionalFinish[k].finishComment!=""?currentItemOptionalFinish[k].finishComment:''),''));
 					}
 				}
