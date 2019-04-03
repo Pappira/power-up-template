@@ -382,7 +382,7 @@ var createText = function(type,name,value){
 	};
 }
 
-var createGeneralText = function(estimate,includeOptionalFinishes){  
+var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOfSelectedOption){  
 	var text = [];
 	text.push(createText('title',estimate.name,''));
 	text.push(createText('text','Cantidad',(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // '))));
@@ -390,7 +390,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes){
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){	
 		//text.push(createText('subtitle2','Terminaciones Generales',''));
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
-		if(estimate.SelectedOption!=null){
+		if(estimate.SelectedOption!=null && (dontTakeCareOfSelectedOption || dontTakeCareOfSelectedOption==false)){
 			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
 				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.finish + (currentMandatoryFinishGroups[i].finishes.finishComment!=""?currentMandatoryFinishGroups[i].finishes.finishComment:'')));
@@ -404,7 +404,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes){
 	if (includeOptionalFinishes){
 		if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
 			text.push(createText('subtitle2','Terminaciones',''));
-			if(estimate.SelectedOption==null){
+			if(estimate.SelectedOption==null || dontTakeCareOfSelectedOption==true){
 				var currentOptionalFinish = estimate.optionalFinishes;
 				for(var i = 0; i < currentOptionalFinish.length;i++){
 					text.push(createText('list',currentOptionalFinish[i].finish + (currentOptionalFinish[i].finishComment!=""?currentOptionalFinish[i].finishComment:''),''));
