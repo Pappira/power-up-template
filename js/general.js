@@ -377,8 +377,8 @@ var createTextForCard = function(estimate){
 var createText = function(type,name,value){
 	return {
 		type: type,
-		name: name,
-		value: value
+		name: name?name+'':name,
+		value: value?value+'':value
 	};
 }
 
