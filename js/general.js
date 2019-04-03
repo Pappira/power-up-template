@@ -450,10 +450,13 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent,
 			}
 			if(showOptionalFinishes){
 				var optionalFinishesPrices = estimate.selectedExtraPrices;
-				for (var j = 0; j < optionalFinishesPrices.length; j++){
-					if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[selectedItem.id] && optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes){
-						for (var k = 0; k < optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes.length;k++){
-							texts.push(createText('list',optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finish + (optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finishComment!=""?optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'')));
+				if (optionalFinishesPrices){
+					texts.push(createText('subtitle2','Terminaciones',''));
+					for (var j = 0; j < optionalFinishesPrices.length; j++){
+						if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[selectedItem.id] && optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes){
+							for (var k = 0; k < optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes.length;k++){
+								texts.push(createText('list',optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finish + (optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finishComment!=""?optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'')));
+							}
 						}
 					}
 				}
@@ -489,7 +492,8 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent,
 				}
 			}
 			if(showOptionalFinishes){
-				if (item.optionalFinishes && item.optionalFinishes.length >0){
+				if (item.optionalFinishes && item. optionalFinishes.length >0){
+				texts.push(createText('subtitle2','Terminaciones',''));
 					var currentItemOptionalFinish = item.optionalFinishes;
 					for(var k = 0; k < currentItemOptionalFinish.length;k++){
 						texts.push(createText('list',currentItemOptionalFinish[k].finish + (currentItemOptionalFinish[k].finishComment!=""?currentItemOptionalFinish[k].finishComment:''),''));
