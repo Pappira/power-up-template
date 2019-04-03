@@ -403,7 +403,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes){
 	}
 	if (includeOptionalFinishes){
 		if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
-			texts.push(createText('subtitle2','Terminaciones',''));
+			text.push(createText('subtitle2','Terminaciones',''));
 			if(estimate.SelectedOption==null){
 				var currentOptionalFinish = estimate.optionalFinishes;
 				for(var i = 0; i < currentOptionalFinish.length;i++){
