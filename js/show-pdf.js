@@ -125,7 +125,7 @@ var addText = function(textToAdd, doc, top){
 
 var getEstimateGeneralTextInformationForPDF = function(estimate){
     var textToAdd = [];
-    textToAdd.push(showPdf ('writeTextNormalAndBold',20,fontType,estimate.name, '', rowSize*mediumSpaceFactor));
+    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',20,fontType,estimate.name, '', rowSize*mediumSpaceFactor));
 
     textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Cantidad:", estimate.quantity.filter(Boolean).join(' // '), rowSize));
     var openedSizeEqualsClossedSize = true;
