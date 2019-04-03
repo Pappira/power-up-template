@@ -32,8 +32,8 @@ t.render(function(){
 		select.value = (estimate && estimate.customer)?estimate.customer.paymentWay:'';
 		$('select#paymentWay').material_select();
 
-		var select = document.getElementById('productionTime');
-		select.value = (estimate && estimate.customer)?estimate.customer.productionTime:'';
+		select = document.getElementById('productionTime');
+		select.value = (estimate && estimate.productionTime)?estimate.productionTime:'';
 		$('select#productionTime').material_select();
 		
 	});

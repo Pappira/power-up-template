@@ -367,7 +367,7 @@ var createTextForCard = function(estimate){
 
 	texts = texts.concat(createCustomerText(estimate));
 
-	var text = '';
+	var text = ''; 
 	for (var i = 0; i < texts.length;i++){
 		text +=convertTextForCard(texts[i]);
 	}
