@@ -526,7 +526,9 @@ var createCommentsText = function(estimate, showInternalComments, showCustomerCo
 
 var createPriceText = function(estimate,extraPrice){
 	var texts = [];
-	texts.push(createText('subtitle1','Precio: ' + (estimate.prices[estimate.SelectedOption].price + extraPrice) + ' + IVA' ,''));
+	if (estimate.SelectedOption){
+		texts.push(createText('subtitle1','Precio: ' + (estimate.prices[estimate.SelectedOption].price + extraPrice) + ' + IVA' ,''));
+	}
 	return texts;
 }
 
