@@ -16,9 +16,9 @@ var tripleSpaceFactor = 2;
 var getGeneralAndCustomerInformationForPDF = function(estimate){
     var textToAdd = [];
     var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
-    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', contactAndBusinessInfo.filter(Boolean).join(' - '), rowSize));
-    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'Presente','', rowSize*dobleSpaceFactor));
-    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"A continuación detallamos el presupuesto solicitado.",'', rowSize));
+    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'', contactAndBusinessInfo.filter(Boolean).join(' - '), rowSize));
+    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'Presente','', rowSize*dobleSpaceFactor));
+    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"A continuación detallamos el presupuesto solicitado.",'', rowSize));
     return textToAdd;
 }
 
@@ -36,7 +36,7 @@ var newGetTotalSpaceNeededForText = function(textToAdd){
     return total;
 }
 
-var createText = function(type,fontSize,fontType,title,value,increaseTop,textBold){
+var showPdfCreateText = function(type,fontSize,fontType,title,value,increaseTop,textBold){
     return {
         type: type,
         fontSize: fontSize,
@@ -125,9 +125,9 @@ var addText = function(textToAdd, doc, top){
 
 var getEstimateGeneralTextInformationForPDF = function(estimate){
     var textToAdd = [];
-    textToAdd.push(createText('writeTextNormalAndBold',20,fontType,estimate.name, '', rowSize*mediumSpaceFactor));
+    textToAdd.push(showPdf ('writeTextNormalAndBold',20,fontType,estimate.name, '', rowSize*mediumSpaceFactor));
 
-    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Cantidad:", estimate.quantity.filter(Boolean).join(' // '), rowSize));
+    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Cantidad:", estimate.quantity.filter(Boolean).join(' // '), rowSize));
     var openedSizeEqualsClossedSize = true;
     for (var i = 0; i < estimate.items.length; i++){
         if(estimate.clossedSize != estimate.items[i].openedSize){
@@ -135,7 +135,7 @@ var getEstimateGeneralTextInformationForPDF = function(estimate){
             break;
         }
     }
-    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño:":"Tamaño: Cerrado:", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), rowSize));
+    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño:":"Tamaño: Cerrado:", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), rowSize));
 
     if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
@@ -147,7 +147,7 @@ var getEstimateGeneralTextInformationForPDF = function(estimate){
                 (currentMandatoryFinishGroups[i].finishes[j].finishComment!=""?currentMandatoryFinishGroups[i].finishes[j].finishComment:'') +
                 (j!=currentMandatoryFinishGroups[i].finishes.length-1?" // ":"");
             }
-        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,name, value, rowSize)); 
+        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,name, value, rowSize)); 
         }
 	}
     return textToAdd;
@@ -157,36 +157,36 @@ var getEstimateItemTextInformationForPDF = function(estimate){
     var items = estimate.items;
     var textToAdd = [];
     if(items.length>1){
-        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '' , rowSize));       
+        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'', '' , rowSize));       
     }
     for (var i = 0; i < items.length; i++){
         item = items[i];
         if (items.length>1){
-            textToAdd.push(createText('writeTextNormalAndBold',16,fontType,item.name, '' , rowSize*mediumSpaceFactor));         
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',16,fontType,item.name, '' , rowSize*mediumSpaceFactor));         
         }
         if(item.openedSize != estimate.clossedSize){    
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Tamaño Abierto:", item.openedSize.filter(Boolean).join(' // ') , rowSize));         
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Tamaño Abierto:", item.openedSize.filter(Boolean).join(' // ') , rowSize));         
         }
         var materials = [];
         for (var j = 0; j < item.materials.length; j++){
             materials.push(item.materials[j].paper + ' ' + item.materials[j].gr + 'gr'); 
         }
-        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Papel:", materials.filter(Boolean).join(' // '), rowSize));         
+        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Papel:", materials.filter(Boolean).join(' // '), rowSize));         
         var inks = [];
         for (var j = 0 ; j < item.inks.length; j++){
             inks.push(item.inks[j].inksDetails);
         }
         if(item.faces.length==1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión:", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Impresión:", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // '), rowSize));         
         }else{
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Impresión:", inks.filter(Boolean).join(' // '), rowSize));         
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Faces:", item.faces.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Impresión:", inks.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Faces:", item.faces.filter(Boolean).join(' // '), rowSize));         
         }
         if (item.quantityOfPages > 1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Páginas:", item.quantityOfPages.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Páginas:", item.quantityOfPages.filter(Boolean).join(' // '), rowSize));         
         }
         if (item.quantityOfVias > 1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Vías:", item.quantityOfVias.filter(Boolean).join(' // '), rowSize));         
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Vías:", item.quantityOfVias.filter(Boolean).join(' // '), rowSize));         
         }
         if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
             var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
@@ -198,11 +198,11 @@ var getEstimateItemTextInformationForPDF = function(estimate){
                      (currentItemMandatoryFinishGroups[k].finishes[j].finishComment?currentItemMandatoryFinishGroups[k].finishes[j].finishComment:'') +
                      (j!=currentItemMandatoryFinishGroups[k].finishes.length-1?' // ':'');
                 }
-                textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,name, value, rowSize));         
+                textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,name, value, rowSize));         
             }
         }
         if(i!=items.length-1){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize));        
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize));        
         }
     }
     return textToAdd;
@@ -213,20 +213,20 @@ var getOptionalFinishesForPDF = function(estimate){
     var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
     for (var i = 0; i < finishes.length; i++){
         var finish = finishes[i];
-        textToAdd.push(createText('writeTextNormalAndBold',13,fontType,"Opcional " + (finish.item!=-1?estimate.items[finish.item].name+ " ":'') + finish.finish,'', rowSize*mediumSpaceFactor));
+        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',13,fontType,"Opcional " + (finish.item!=-1?estimate.items[finish.item].name+ " ":'') + finish.finish,'', rowSize*mediumSpaceFactor));
         if (finish.desc && finish.desc != "" && finish.desc.length > 0){
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,finish.desc,'', rowSize));
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,finish.desc,'', rowSize));
         }
         for (var j = 0; j < finish.price.length;j++){
             var price = finish.price[j];
             for (var key in price) {
                 if (key!="price" && key!="quantity"){
-                    textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,key,price[key]+'', rowSize));
+                    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,key,price[key]+'', rowSize));
                 }
             }
-            textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,"Sub-Total extra" + (price.quantity?" (" + price.quantity +" unidades)":"") +":","$ " + price.price.toLocaleString() + ' + IVA', rowSize));
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Sub-Total extra" + (price.quantity?" (" + price.quantity +" unidades)":"") +":","$ " + price.price.toLocaleString() + ' + IVA', rowSize));
         }
-        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'','', rowSize));
+        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'','', rowSize));
     }
     return textToAdd;
 }
@@ -306,7 +306,7 @@ var getPriceTextInformationForPDF = function(estimate){
     if(estimate.prices){
         estimate.prices.sort(compareValues());
         if (estimate.prices.length>1){
-            textToAdd.push(createText('writeTextNormalAndBold',16,fontType,'Precios', '', rowSize*dobleSpaceFactor));  
+            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',16,fontType,'Precios', '', rowSize*dobleSpaceFactor));  
         }
         var lastPriceText = '';
         var lastGeneralFinishesText = '';
@@ -345,7 +345,7 @@ var getPriceTextInformationForPDF = function(estimate){
             }
             if (generalFinishesText && generalFinishesText.length>0){
                 if(generalFinishesText != lastGeneralFinishesText){
-                    textToAdd.push(createText('writeUnderlinedText',12,fontType,generalFinishesText, '', rowSize*dobleSpaceFactor));  
+                    textToAdd.push(showPdfCreateText('writeUnderlinedText',12,fontType,generalFinishesText, '', rowSize*dobleSpaceFactor));  
                 }
             }
             lastGeneralFinishesText = generalFinishesText;
@@ -356,19 +356,19 @@ var getPriceTextInformationForPDF = function(estimate){
                 if(lastPriceText !=priceText){
                     //Si no es el primero que agrego, es decir lastPriceText existe
                     /*if(lastPriceText){
-                        textToAdd.push(createText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize*dobleSpaceFactor));  
+                        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize*dobleSpaceFactor));  
                     }*/
                     if ((generalFinishesText && generalFinishesText.length>0)){
-                        textToAdd.push(createText('writeTextNormalWithSeparation',11,fontType, '    •  ', priceText, rowSize*mediumSpaceFactor));  
+                        textToAdd.push(showPdfCreateText('writeTextNormalWithSeparation',11,fontType, '    •  ', priceText, rowSize*mediumSpaceFactor));  
                     }else{
-                        textToAdd.push(createText('writeUnderlinedText',12,fontType, priceText, '', rowSize*mediumSpaceFactor));  
+                        textToAdd.push(showPdfCreateText('writeUnderlinedText',12,fontType, priceText, '', rowSize*mediumSpaceFactor));  
                         separator = '    •  ' ; 
                     }
                     lastPriceText = priceText;
                 }
-                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades):', rowSize*mediumSpaceFactor,'$ ' + price.price.toLocaleString() + ' + IVA'));  
+                textToAdd.push(showPdfCreateText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades):', rowSize*mediumSpaceFactor,'$ ' + price.price.toLocaleString() + ' + IVA'));  
             }else{
-                textToAdd.push(createText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,'    •  ', (priceText.length>0?priceText:'Sub-Total ') + ' (' + price.quantity + ' unidades)', rowSize*mediumSpaceFactor,'$ ' + price.price.toLocaleString() + ' + IVA'));  
+                textToAdd.push(showPdfCreateText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,'    •  ', (priceText.length>0?priceText:'Sub-Total ') + ' (' + price.quantity + ' unidades)', rowSize*mediumSpaceFactor,'$ ' + price.price.toLocaleString() + ' + IVA'));  
                 lastPriceText = priceText;
             }
         }
