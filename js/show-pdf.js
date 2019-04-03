@@ -51,50 +51,50 @@ var createText = function(type,fontSize,fontType,title,value,increaseTop,textBol
 var newAddText = function(textToAdd, doc, top){
     for (var i = 0; i < textToAdd.length;i++){
         text = textToAdd[i];
-        var increaseTop = 0;
+        var currentIncreaseTop = 0;
         switch (text.type){
             case 'text':
                 var scale = writeTextNormalAndBold(fontSize,fontType,text.name, text.value, top,doc);
-                increaseTop = rowSize*scale;
+                currentIncreaseTop = rowSize*scale;
                 break;
             case 'title':
                 var scale = writeTextNormalAndBold(20,fontType,text.name, text.value, top,doc);
-                increaseTop = rowSize*mediumSpaceFactor*scale;
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle1':
                 var scale = writeTextNormalAndBold(18,fontType,text.name, text.value, top,doc);
-                increaseTop = rowSize*mediumSpaceFactor*scale;
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle2':
                 var scale = writeTextNormalAndBold(16,fontType,text.name, text.value, top,doc);
-                increaseTop = rowSize*mediumSpaceFactor*scale;
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle3':
                 var scale = writeTextNormalAndBold(14,fontType,text.name, text.value, top,doc);
-                increaseTop = rowSize*mediumSpaceFactor*scale;
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle4':
                 var scale = writeUnderlinedText(fontSize,fontType,text.name, top, doc);
-                increaseTop = rowSize*mediumSpaceFactor*scale;
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'list':
                 if (Array.isArray(text.value)){
                     var scale = writeTextNormalWithSeparation(fontSize, fontType, '    •  ' , text.name,top, doc);
-                    increaseTop = rowSize*scale;
+                    currentIncreaseTop = rowSize*scale;
                     for (var j = 0; j < text.value.length;j++){
                         scale = writeTextNormalWithSeparation(fontSize, fontType,'        »  ', text.value[j],top, doc);
-                        increaseTop += rowSize*scale;
+                        currentIncreaseTop += rowSize*scale;
                     }
                 }else if (text.value && text.value.length>0){
                     var scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'    •  ', text.name, text.value, top, doc);
-                    increaseTop = rowSize*scale;
+                    currentIncreaseTop = rowSize*scale;
                 }else{
                     var scale = writeTextNormalWithSeparation(fontSize, fontType, '    •  ' , text.name,top, doc);
-                    increaseTop = rowSize*scale;
+                    currentIncreaseTop = rowSize*scale;
                 }
                 break;
         }
-        top = increaseTop(top,increaseTop,doc);
+        top = increaseTop(top,currentIncreaseTop,doc);
     }
     return top;
 }
