@@ -384,13 +384,14 @@ var createText = function(type,name,value){
 
 var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOfSelectedOption){  
 	var text = [];
+	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	text.push(createText('title',estimate.name,''));
-	text.push(createText('text','Cantidad',(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // '))));
+	text.push(createText('text','Cantidad',(selectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // '))));
 	text.push(createText('text','Tamaño cerrado',estimate.clossedSize));
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){	
 		//text.push(createText('subtitle2','Terminaciones Generales',''));
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
-		if(estimate.SelectedOption==null || dontTakeCareOfSelectedOption){
+		if(selectedOption){
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
 				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish + finishes.finishComment).join(" // ")));
 			}
@@ -404,7 +405,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	if (includeOptionalFinishes){
 		if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
 			text.push(createText('subtitle2','Terminaciones',''));
-			if(estimate.SelectedOption==null || dontTakeCareOfSelectedOption){
+			if(selectedOption){
 				var currentOptionalFinish = estimate.optionalFinishes;
 				for(var i = 0; i < currentOptionalFinish.length;i++){
 					text.push(createText('list',currentOptionalFinish[i].finish + (currentOptionalFinish[i].finishComment!=""?currentOptionalFinish[i].finishComment:''),''));
