@@ -455,7 +455,7 @@ var generateEstimatePDF = function(estimate){
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
     //var textToAdd  = getGeneralAndCustomerInformationForPDF(estimate);
-    var textToAdd = createGeneralText(estimate,false);
+    var textToAdd = createGeneralText(estimate,false,true);
     top = newAddTextToDoc(textToAdd,doc,top);
 
     textToAdd = getEstimateGeneralTextInformationForPDF(estimate);

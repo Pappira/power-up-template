@@ -390,21 +390,21 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){	
 		//text.push(createText('subtitle2','Terminaciones Generales',''));
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
-		if(estimate.SelectedOption!=null && (dontTakeCareOfSelectedOption || dontTakeCareOfSelectedOption==false)){
+		if(estimate.SelectedOption==null || dontTakeCareOfSelectedOption){
+			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
+				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish + finishes.finishComment).join(" // ")));
+			}
+		}else{
 			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
 				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.finish + (currentMandatoryFinishGroups[i].finishes.finishComment!=""?currentMandatoryFinishGroups[i].finishes.finishComment:'')));
-			}
-		}else{
-			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish + finishes.finishComment).join(" // ")));
 			}
 		}
 	}
 	if (includeOptionalFinishes){
 		if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
 			text.push(createText('subtitle2','Terminaciones',''));
-			if(estimate.SelectedOption==null || dontTakeCareOfSelectedOption==true){
+			if(estimate.SelectedOption==null || dontTakeCareOfSelectedOption){
 				var currentOptionalFinish = estimate.optionalFinishes;
 				for(var i = 0; i < currentOptionalFinish.length;i++){
 					text.push(createText('list',currentOptionalFinish[i].finish + (currentOptionalFinish[i].finishComment!=""?currentOptionalFinish[i].finishComment:''),''));
