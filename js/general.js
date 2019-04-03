@@ -569,8 +569,8 @@ var createCustomerText = function(estimate){
 var createTrelloCardName = function(estimate){
 	var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
 	var quantity = estimate.quantity.join(' // ');
-	if (estimate.selectedItem){
-		quantity = estimate.prices[estimate.selectedItem].quantity;
+	if (estimate.SelectedOption){
+		quantity = estimate.prices[estimate.SelectedOption].quantity;
 	}
 	return quantity + " " + estimate.name + " - " + contactAndBusinessInfo.filter(Boolean).join(' - ');
 }
