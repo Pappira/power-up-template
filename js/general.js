@@ -388,20 +388,16 @@ var createGeneralText = function(estimate,includeOptionalFinishes){
 	text.push(createText('text','Cantidad',(estimate.SelectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // '))));
 	text.push(createText('text','Tamaño cerrado',estimate.clossedSize));
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){	
-		text.push(createText('subtitle2','Terminaciones Generales',''));
+		//text.push(createText('subtitle2','Terminaciones Generales',''));
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
 		if(estimate.SelectedOption!=null){
 			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text.push(createText('list',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.finish + (currentMandatoryFinishGroups[i].finishes.finishComment!=""?currentMandatoryFinishGroups[i].finishes.finishComment:'')));
+				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.finish + (currentMandatoryFinishGroups[i].finishes.finishComment!=""?currentMandatoryFinishGroups[i].finishes.finishComment:'')));
 			}
 		}else{
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				var currentText = createText('list',currentMandatoryFinishGroups[i].groupName,[]);
-				for(var j= 0 ; j < currentMandatoryFinishGroups[i].finishes.length;j++){
-					currentText.value.push(currentMandatoryFinishGroups[i].finishes[j].finish + (currentMandatoryFinishGroups[i].finishes[j].finishComment!=""?currentMandatoryFinishGroups[i].finishes[j].finishComment:''));
-				}
-				text.push(currentText);
+				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish + finishes.finishComment).join(" // ")));
 			}
 		}
 	}
@@ -447,10 +443,9 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent,
 			}
 			texts.push(createText('text','Materiales', selectedItem.materials.paper + ' ' + selectedItem.materials.gr + 'gr'));
 			if (selectedItem.mandatoryFinishGroups && selectedItem.mandatoryFinishGroups.length >0){
-				texts.push(createText('subtitle2','Terminaciones',''));
 				currentItemMandatoryFinishGroups = selectedItem.mandatoryFinishGroups;
 				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-					texts.push(createText('list',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.finish + (currentItemMandatoryFinishGroups[k].finishes.finishComment!=""?currentItemMandatoryFinishGroups[k].finishes.finishComment:'')));
+					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.finish +currentItemMandatoryFinishGroups[k].finishes.finishComment));
 				}
 			}
 			if(showOptionalFinishes){
@@ -488,14 +483,9 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent,
 				texts.push(createText('text','Materiales',materials));
 			}
 			if (item.mandatoryFinishGroups && item.mandatoryFinishGroups.length >0){
-				texts.push(createText('subtitle2','Terminaciones',''));
 				var currentItemMandatoryFinishGroups = item.mandatoryFinishGroups;
 				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-					var currentText = createText('list',currentItemMandatoryFinishGroups[k].groupName,[]);
-					for (var j = 0; j < currentItemMandatoryFinishGroups[k].finishes.length;j++){
-						currentText.value.push(currentItemMandatoryFinishGroups[k].finishes[j].finish + (currentItemMandatoryFinishGroups[k].finishes[j].finishComment!=""?currentItemMandatoryFinishGroups[k].finishes[j].finishComment:''));
-					}
-					texts.push(currentText);
+					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.map(finishes => finishes.finish + finishes.finishComment).join(" // ")));
 				}
 			}
 			if(showOptionalFinishes){

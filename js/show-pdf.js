@@ -25,6 +25,9 @@ var getGeneralAndCustomerInformationForPDF = function(estimate){
 var getTotalSpaceNeededForText = function(textToAdd){
     return textToAdd.reduce((a, b) => a + (b['increaseTop'] || 0), 0);
 }
+var newGetTotalSpaceNeededForText = function(textToAdd){
+    return textToAdd.reduce((a, b) => a + (b['increaseTop'] || 0), 0);
+}
 
 var createText = function(type,fontSize,fontType,title,value,increaseTop,textBold){
     return {
@@ -369,6 +372,17 @@ var addTextToDoc = function(textToAdd,doc,top){
     return top;
 }
 
+var newAddTextToDoc = function(textToAdd,doc,top){
+    if(textToAdd && textToAdd.length>0){
+        if(!checkIfEnoughSpace(top,newGetTotalSpaceNeededForText(textToAdd),doc)){
+            top = addNewPage(doc);
+        }
+        top = addText(textToAdd,doc,top);
+        top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+    }
+    return top;
+}
+
 var generateEstimatePDF = function(estimate){
     var doc = new jsPDF();
     var top = marginTop;
@@ -382,8 +396,9 @@ var generateEstimatePDF = function(estimate){
     doc.text('Montevideo, ' + day.toLocaleDateString('es-UY', options),width-leftMargin,top,'right');
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
-    var textToAdd  = getGeneralAndCustomerInformationForPDF(estimate);
-    top = addTextToDoc(textToAdd,doc,top);
+    //var textToAdd  = getGeneralAndCustomerInformationForPDF(estimate);
+    var textToAdd = createGeneralText(estimate,false);
+    top = newAddTextToDoc(textToAdd,doc,top);
 
     textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
     textToAdd = textToAdd.concat(getEstimateItemTextInformationForPDF(estimate));
