@@ -434,17 +434,17 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferentP
 		}
 		texts.push(createText('subtitle1',item.name,''));
 		if (selectedItem){
-			var inks = selectedItem.inks.inksQuantity + ' ' + selectedItem.inks.inksDetails + (showBBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
+			texts.push(createText('text','Papel', selectedItem.materials.paper + ' ' + selectedItem.materials.gr + 'gr'));
+			var inks = selectedItem.inks.inksDetails + (showBBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
 			inks += ' ' + selectedItem.faces;
-			texts.push(createText('text','Tintas',inks));
-			if (selectedItem.openedSize != item.clossedSize){
+			texts.push(createText('text','Impresión',inks));
+			if (selectedItem.openedSize != estimate.clossedSize){
 				texts.push(createText('text','Tamaño Abierto',selectedItem.openedSize));
 			}
 			if (selectedItem.quantityOfPages !=1){
 				var quantityOfPages = selectedItem.quantityOfPages + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''));
-				texts.push(createText('text','Cantidad de páginas',quantityOfPages));
+				texts.push(createText('text','Páginas',quantityOfPages));
 			}
-			texts.push(createText('text','Materiales', selectedItem.materials.paper + ' ' + selectedItem.materials.gr + 'gr'));
 			if (selectedItem.mandatoryFinishGroups && selectedItem.mandatoryFinishGroups.length >0){
 				currentItemMandatoryFinishGroups = selectedItem.mandatoryFinishGroups;
 				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
@@ -472,25 +472,25 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferentP
 
 
 		}else{
+			if (item.materials){
+				var materials = item.materials.map(function(material) {
+					return material.paper + " " + material.gr + 'gr';
+				}).join(' // ');
+				texts.push(createText('text','Papel',materials));
+			}
 			if (item.inks){
 					var inks = item.inks.map(function(ink) {
-						return ink.inksQuantity + " " + ink.inksDetails;
+						return ink.inksDetails;
 					}).join(' // ') + (showBBleedPrint?' ' + (item.bleedPrint?'(Impresión al Vivo)':''):'');
 					inks += (item.faces?' ' + item.faces.join(' // '):'');
-					texts.push(createText('text','Tintas',inks));
+					texts.push(createText('text','Impresión',inks));
 			}
 			if (item.openedSize && item.openedSize !== estimate.clossedSize){
 				texts.push(createText('text','Tamaño Abierto',item.openedSize.join(' // ')));
 			}
 			if (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1)){
 				var quantityOfPages = item.quantityOfPages.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
-				texts.push(createText('text','Cantidad de páginas',quantityOfPages));
-			}
-			if (item.materials){
-				var materials = item.materials.map(function(material) {
-					return material.paper + " " + material.gr + 'gr';
-				}).join(' // ');
-				texts.push(createText('text','Materiales',materials));
+				texts.push(createText('text','Páginas',quantityOfPages));
 			}
 			if (item.mandatoryFinishGroups && item.mandatoryFinishGroups.length >0){
 				var currentItemMandatoryFinishGroups = item.mandatoryFinishGroups;
