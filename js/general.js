@@ -424,11 +424,12 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	}
 	return text;
 }
-var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent, showOptionalFinishes){
+var createItemText = function(estimate, item, showBBleedPrint, showAllDifferentPages, showOptionalFinishes,dontTakeCareOfSelectedOption){
 	var texts = [];
 	var selectedItem;
+	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	if(item){
-		if (estimate.SelectedOption){
+		if (selectedOption){
 			selectedItem = estimate.prices[estimate.SelectedOption].items[item.id];
 		}
 		texts.push(createText('subtitle1',item.name,''));
@@ -440,7 +441,7 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent,
 				texts.push(createText('text','Tamaño Abierto',selectedItem.openedSize));
 			}
 			if (selectedItem.quantityOfPages !=1){
-				var quantityOfPages = selectedItem.quantityOfPages + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferent?' (Todas diferentes)':''));
+				var quantityOfPages = selectedItem.quantityOfPages + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''));
 				texts.push(createText('text','Cantidad de páginas',quantityOfPages));
 			}
 			texts.push(createText('text','Materiales', selectedItem.materials.paper + ' ' + selectedItem.materials.gr + 'gr'));
@@ -482,7 +483,7 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferent,
 				texts.push(createText('text','Tamaño Abierto',item.openedSize.join(' // ')));
 			}
 			if (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1)){
-				var quantityOfPages = item.quantityOfPages.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferent?' (Todas diferentes)':''))
+				var quantityOfPages = item.quantityOfPages.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
 				texts.push(createText('text','Cantidad de páginas',quantityOfPages));
 			}
 			if (item.materials){

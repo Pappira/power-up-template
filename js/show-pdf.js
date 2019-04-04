@@ -458,7 +458,13 @@ var generateEstimatePDF = function(estimate){
     var textToAdd = createGeneralText(estimate,false,true);
     top = newAddTextToDoc(textToAdd,doc,top);
 
-    textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
+    for (var i = 0; i < estimate.items.length;i++){
+        textToAdd = createItemText(estimate, items[i], false, false, false,true);
+        top = newAddTextToDoc(textToAdd,doc,top);
+    }
+
+    
+    //textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
     textToAdd = textToAdd.concat(getEstimateItemTextInformationForPDF(estimate));
     top = addTextToDoc(textToAdd,doc,top);
     
