@@ -459,7 +459,7 @@ var generateEstimatePDF = function(estimate){
     top = newAddTextToDoc(textToAdd,doc,top);
 
     for (var i = 0; i < estimate.items.length;i++){
-        textToAdd = createItemText(estimate, items[i], false, false, false,true);
+        textToAdd = createItemText(estimate, estimate.items[i], false, false, false,true);
         top = newAddTextToDoc(textToAdd,doc,top);
     }
 
