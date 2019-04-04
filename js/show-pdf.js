@@ -456,17 +456,15 @@ var generateEstimatePDF = function(estimate){
 
     //var textToAdd  = getGeneralAndCustomerInformationForPDF(estimate);
     var textToAdd = createGeneralText(estimate,false,true);
-    top = newAddTextToDoc(textToAdd,doc,top);
-
     for (var i = 0; i < estimate.items.length;i++){
-        textToAdd = createItemText(estimate, estimate.items[i], false, false, false,true);
-        top = newAddTextToDoc(textToAdd,doc,top);
+        textToAdd = textToAdd.concat(createItemText(estimate, estimate.items[i], false, false, false,true));
     }
+    top = newAddTextToDoc(textToAdd,doc,top);
 
     
     //textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
-    textToAdd = getEstimateItemTextInformationForPDF(estimate);
-    top = addTextToDoc(textToAdd,doc,top);
+    //textToAdd = getEstimateItemTextInformationForPDF(estimate);
+    //top = addTextToDoc(textToAdd,doc,top);
     
     textToAdd = getPriceTextInformationForPDF(estimate);
     top = addTextToDoc(textToAdd,doc,top);
