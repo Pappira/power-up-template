@@ -436,7 +436,7 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferentP
 		if (selectedItem){
 			texts.push(createText('text','Papel', selectedItem.materials.paper + ' ' + selectedItem.materials.gr + 'gr'));
 			var inks = selectedItem.inks.inksDetails + (showBBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
-			inks += ' ' + selectedItem.faces;
+			inks += ' - ' + selectedItem.faces;
 			texts.push(createText('text','Impresión',inks));
 			if (selectedItem.openedSize != estimate.clossedSize){
 				texts.push(createText('text','Tamaño Abierto',selectedItem.openedSize));
@@ -482,7 +482,7 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferentP
 					var inks = item.inks.map(function(ink) {
 						return ink.inksDetails;
 					}).join(' // ') + (showBBleedPrint?' ' + (item.bleedPrint?'(Impresión al Vivo)':''):'');
-					inks += (item.faces?' ' + item.faces.join(' // '):'');
+					inks += (item.faces?' - ' + item.faces.join(' // '):'');
 					texts.push(createText('text','Impresión',inks));
 			}
 			if (item.openedSize && item.openedSize !== estimate.clossedSize){
