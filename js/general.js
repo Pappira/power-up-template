@@ -485,7 +485,7 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferentP
 					inks += (item.faces?' - ' + item.faces.join(' // '):'');
 					texts.push(createText('text','Impresión',inks));
 			}
-			if (item.openedSize && item.openedSize !== estimate.clossedSize){
+			if (item.openedSize && item.openedSize != estimate.clossedSize){
 				texts.push(createText('text','Tamaño Abierto',item.openedSize.join(' // ')));
 			}
 			if (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1)){
