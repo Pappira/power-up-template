@@ -54,7 +54,7 @@ var newAddText = function(textToAdd, doc, top){
         var currentIncreaseTop = 0;
         switch (text.type){
             case 'text':
-                var scale = writeTextNormalAndBold(fontSize,fontType,text.name + ": ", text.value, top,doc);
+                var scale = writeTextNormalAndBold(fontSize,fontType,text.name + ":", text.value, top,doc);
                 currentIncreaseTop = rowSize*scale;
                 break;
             case 'title':
@@ -86,7 +86,7 @@ var newAddText = function(textToAdd, doc, top){
                         currentIncreaseTop += rowSize*scale;
                     }
                 }else if (text.value && text.value.length>0){
-                    var scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'    •  ', text.name +  ": ", text.value, top, doc);
+                    var scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'    •  ', text.name +  ":", text.value, top, doc);
                     currentIncreaseTop = rowSize*scale;
                 }else{
                     var scale = writeTextNormalWithSeparation(fontSize, fontType, '    •  ' , text.name,top, doc);
