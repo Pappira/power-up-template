@@ -123,7 +123,7 @@ var addText = function(textToAdd, doc, top){
     return top;
 }
 
-var getOptionalFinishesForPDF = +function(estimate){
+var getOptionalFinishesForPDF = function(estimate){
     var textToAdd = [];
     var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
     for (var i = 0; i < finishes.length; i++){
