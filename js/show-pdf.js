@@ -123,91 +123,6 @@ var addText = function(textToAdd, doc, top){
     return top;
 }
 
-var getEstimateGeneralTextInformationForPDF = function(estimate){
-    var textToAdd = [];
-    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',20,fontType,estimate.name, '', rowSize*mediumSpaceFactor));
-
-    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Cantidad:", estimate.quantity.filter(Boolean).join(' // '), rowSize));
-    var openedSizeEqualsClossedSize = true;
-    for (var i = 0; i < estimate.items.length; i++){
-        if(estimate.clossedSize != estimate.items[i].openedSize){
-            openedSizeEqualsClossedSize = false;
-            break;
-        }
-    }
-    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,openedSizeEqualsClossedSize?"Tamaño:":"Tamaño: Cerrado:", (typeof estimate.clossedSize == 'object'?estimate.clossedSize.filter(Boolean).join(' // '):estimate.clossedSize), rowSize));
-
-    if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
-		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
-        for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-            var name = currentMandatoryFinishGroups[i].groupName+":";
-            var value = "";
-            for(var j= 0 ; j < currentMandatoryFinishGroups[i].finishes.length;j++){
-                value += currentMandatoryFinishGroups[i].finishes[j].finish + 
-                (currentMandatoryFinishGroups[i].finishes[j].finishComment!=""?currentMandatoryFinishGroups[i].finishes[j].finishComment:'') +
-                (j!=currentMandatoryFinishGroups[i].finishes.length-1?" // ":"");
-            }
-        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,name, value, rowSize)); 
-        }
-	}
-    return textToAdd;
-}
-
-var getEstimateItemTextInformationForPDF = function(estimate){
-    var items = estimate.items;
-    var textToAdd = [];
-    if(items.length>1){
-        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'', '' , rowSize));       
-    }
-    for (var i = 0; i < items.length; i++){
-        item = items[i];
-        if (items.length>1){
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',16,fontType,item.name, '' , rowSize*mediumSpaceFactor));         
-        }
-        if(item.openedSize != estimate.clossedSize){    
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Tamaño Abierto:", item.openedSize.filter(Boolean).join(' // ') , rowSize));         
-        }
-        var materials = [];
-        for (var j = 0; j < item.materials.length; j++){
-            materials.push(item.materials[j].paper + ' ' + item.materials[j].gr + 'gr'); 
-        }
-        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Papel:", materials.filter(Boolean).join(' // '), rowSize));         
-        var inks = [];
-        for (var j = 0 ; j < item.inks.length; j++){
-            inks.push(item.inks[j].inksDetails);
-        }
-        if(item.faces.length==1){
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Impresión:", inks.filter(Boolean).join(' // ') + ' - ' + item.faces.filter(Boolean).join(' // '), rowSize));         
-        }else{
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Impresión:", inks.filter(Boolean).join(' // '), rowSize));         
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Faces:", item.faces.filter(Boolean).join(' // '), rowSize));         
-        }
-        if (item.quantityOfPages > 1){
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Páginas:", item.quantityOfPages.filter(Boolean).join(' // '), rowSize));         
-        }
-        if (item.quantityOfVias > 1){
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Vías:", item.quantityOfVias.filter(Boolean).join(' // '), rowSize));         
-        }
-        if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
-            var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
-            for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-                var name = currentItemMandatoryFinishGroups[k].groupName + ':';
-                var value = "";
-                for (var j = 0; j < currentItemMandatoryFinishGroups[k].finishes.length;j++){
-                    value += currentItemMandatoryFinishGroups[k].finishes[j].finish +
-                     (currentItemMandatoryFinishGroups[k].finishes[j].finishComment?currentItemMandatoryFinishGroups[k].finishes[j].finishComment:'') +
-                     (j!=currentItemMandatoryFinishGroups[k].finishes.length-1?' // ':'');
-                }
-                textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,name, value, rowSize));         
-            }
-        }
-        if(i!=items.length-1){
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize));        
-        }
-    }
-    return textToAdd;
-}
-
 var getOptionalFinishesForPDF = function(estimate){
     var textToAdd = [];
     var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
@@ -454,18 +369,12 @@ var generateEstimatePDF = function(estimate){
     doc.text('Montevideo, ' + day.toLocaleDateString('es-UY', options),width-leftMargin,top,'right');
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
-    //var textToAdd  = getGeneralAndCustomerInformationForPDF(estimate);
     var textToAdd = createGeneralText(estimate,false,true);
     for (var i = 0; i < estimate.items.length;i++){
         textToAdd = textToAdd.concat(createItemText(estimate, estimate.items[i], false, false, false,true));
     }
     top = newAddTextToDoc(textToAdd,doc,top);
-
-    
-    //textToAdd = getEstimateGeneralTextInformationForPDF(estimate);
-    //textToAdd = getEstimateItemTextInformationForPDF(estimate);
-    //top = addTextToDoc(textToAdd,doc,top);
-    
+   
     textToAdd = getPriceTextInformationForPDF(estimate);
     top = addTextToDoc(textToAdd,doc,top);
 

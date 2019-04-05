@@ -358,12 +358,7 @@ var createTextForCard = function(estimate){
 	}
 	texts = texts.concat(createCommentsText(estimate,true,false)); 
 
-	var extraPrice = 0;
-	if(estimate.selectedExtraPrices && estimate.selectedExtraPrices.length > 0){
-		extraPrice += estimate.selectedExtraPrices.map(optionalFinishes => optionalFinishes.optionalFinishes?optionalFinishes.optionalFinishes.map(optionalFinish => optionalFinish.price).reduce(add):0).reduce(add);
-		extraPrice += estimate.selectedExtraPrices.map(optionalFinishes => optionalFinishes.items?optionalFinishes.items.filter(Boolean).map(item => item.optionalFinishes?item.optionalFinishes.filter(Boolean).map(optionalFinish => optionalFinish.price).reduce(add):0).reduce(add):0).reduce(add);
-	}
-	texts = texts.concat(createPriceText(estimate,extraPrice)); 
+	texts = texts.concat(createPriceText(estimate,getExtraPricesFromEstimate(estimate))); 
 
 	texts = texts.concat(createCustomerText(estimate));
 
@@ -382,6 +377,71 @@ var createText = function(type,name,value){
 	};
 }
 
+var getExtraPricesFromEstimate = function(estimate){
+	var extraPrice = 0;
+	if(estimate.selectedExtraPrices && estimate.selectedExtraPrices.length > 0){
+		extraPrice += estimate.selectedExtraPrices.map(optionalFinishes => optionalFinishes.optionalFinishes?optionalFinishes.optionalFinishes.map(optionalFinish => optionalFinish.price).reduce(add):0).reduce(add);
+		extraPrice += estimate.selectedExtraPrices.map(optionalFinishes => optionalFinishes.items?optionalFinishes.items.filter(Boolean).map(item => item.optionalFinishes?item.optionalFinishes.filter(Boolean).map(optionalFinish => optionalFinish.price).reduce(add):0).reduce(add):0).reduce(add);
+	}
+	return extraPrice;
+}
+
+var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption){
+	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
+	if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
+		text.push(createText('subtitle2','Terminaciones',''));
+		if(!selectedOption){
+			var currentOptionalFinish = estimate.optionalFinishes;
+			for(var i = 0; i < currentOptionalFinish.length;i++){
+				text.push(createText('list',currentOptionalFinish[i].finish + (currentOptionalFinish[i].finishComment!=""?currentOptionalFinish[i].finishComment:''),''));
+			}
+		}else{
+			var optionalFinishesPrices = estimate.selectedExtraPrices;
+			for (var i = 0; i < optionalFinishesPrices.length; i++){
+				if (optionalFinishesPrices[i].optionalFinishes){
+					for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
+						text.push(createText('list',optionalFinishesPrices[i].optionalFinishes[j].finish + (optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?optionalFinishesPrices[i].optionalFinishes[j].finishComment:'')));
+					}
+				}
+			}
+		}
+	}
+
+
+	var notTitlePlaced = true;
+			if(showOptionalFinishes){
+				var optionalFinishesPrices = estimate.selectedExtraPrices;
+				if (optionalFinishesPrices){
+					for (var j = 0; j < optionalFinishesPrices.length; j++){
+						if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[selectedItem.id] && optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes){
+							for (var k = 0; k < optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes.length;k++){
+								if (notTitlePlaced){
+									texts.push(createText('subtitle2','Terminaciones',''));
+									notTitlePlaced = false;
+								}
+								texts.push(createText('list',optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finish + (optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finishComment!=""?optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'')));
+							}
+						}
+					}
+				}
+			}
+
+
+			var notTitlePlaced = true;
+			if(showOptionalFinishes){
+				if (item.optionalFinishes && item. optionalFinishes.length >0){
+					var currentItemOptionalFinish = item.optionalFinishes;
+					for(var k = 0; k < currentItemOptionalFinish.length;k++){
+						if (notTitlePlaced){
+							texts.push(createText('subtitle2','Terminaciones',''));
+							notTitlePlaced = false;
+						}
+						texts.push(createText('list',currentItemOptionalFinish[k].finish + (currentItemOptionalFinish[k].finishComment!=""?currentItemOptionalFinish[k].finishComment:''),''));
+					}
+				}
+			}
+}
+
 var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOfSelectedOption){  
 	var text = [];
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
@@ -391,7 +451,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){	
 		//text.push(createText('subtitle2','Terminaciones Generales',''));
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
-		if(!selectedOption){
+		if(!selectedOption || dontTakeCareOfSelectedOption){
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
 				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish + finishes.finishComment).join(" // ")));
 			}
@@ -405,7 +465,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	if (includeOptionalFinishes){
 		if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
 			text.push(createText('subtitle2','Terminaciones',''));
-			if(!selectedOption){
+			if(!selectedOption || dontTakeCareOfSelectedOption){
 				var currentOptionalFinish = estimate.optionalFinishes;
 				for(var i = 0; i < currentOptionalFinish.length;i++){
 					text.push(createText('list',currentOptionalFinish[i].finish + (currentOptionalFinish[i].finishComment!=""?currentOptionalFinish[i].finishComment:''),''));
