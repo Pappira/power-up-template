@@ -382,6 +382,9 @@ var generateEstimatePDF = function(estimate){
     textToAdd = getPriceTextInformationForPDF(estimate);
     top = addTextToDoc(textToAdd,doc,top);
 
+    var textToAdd = createOptionalFinishesText(estimate,true);
+    top = newAddTextToDoc(textToAdd,doc,top);
+    
     textToAdd = getOptionalFinishesForPDF(estimate);
     top = addTextToDoc(textToAdd,doc,top);
 

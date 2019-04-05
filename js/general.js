@@ -389,55 +389,17 @@ var getExtraPricesFromEstimate = function(estimate){
 var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption){
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	var texts = [];
+	var finishes;
 	if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
 		if(!selectedOption){
-			var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
-			texts = [].concat.apply([],finishes.map(finish => [].concat.apply([],[createText('subtitle3','Opcional ' + finish.finish), finish.price.map(price => createText('text','Sub-Total extra (' + price.quantity + ' unidades):', '$ ' +  price.price + ' + IVA'))])))
+			finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
 		}else{
-			var optionalFinishesPrices = estimate.selectedExtraPrices;
-			for (var i = 0; i < optionalFinishesPrices.length; i++){
-				if (optionalFinishesPrices[i].optionalFinishes){
-					for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
-						text.push(createText('list',optionalFinishesPrices[i].optionalFinishes[j].finish + (optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?optionalFinishesPrices[i].optionalFinishes[j].finishComment:'')));
-					}
-				}
-			}
+			finishes = groupFinishes(estimate.selectedExtraPrices,-1);
+			
 		}
+		texts = [].concat.apply([],finishes.map(finish => [].concat.apply([],[createText('subtitle3','Opcional ' + finish.finish), finish.price.map(price => createText('text','Sub-Total extra (' + price.quantity + ' unidades):', '$ ' +  price.price + ' + IVA'))])))
 	}
-
-
-	var notTitlePlaced = true;
-			if(showOptionalFinishes){
-				var optionalFinishesPrices = estimate.selectedExtraPrices;
-				if (optionalFinishesPrices){
-					for (var j = 0; j < optionalFinishesPrices.length; j++){
-						if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[selectedItem.id] && optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes){
-							for (var k = 0; k < optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes.length;k++){
-								if (notTitlePlaced){
-									texts.push(createText('subtitle2','Terminaciones',''));
-									notTitlePlaced = false;
-								}
-								texts.push(createText('list',optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finish + (optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finishComment!=""?optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'')));
-							}
-						}
-					}
-				}
-			}
-
-
-			var notTitlePlaced = true;
-			if(showOptionalFinishes){
-				if (item.optionalFinishes && item. optionalFinishes.length >0){
-					var currentItemOptionalFinish = item.optionalFinishes;
-					for(var k = 0; k < currentItemOptionalFinish.length;k++){
-						if (notTitlePlaced){
-							texts.push(createText('subtitle2','Terminaciones',''));
-							notTitlePlaced = false;
-						}
-						texts.push(createText('list',currentItemOptionalFinish[k].finish + (currentItemOptionalFinish[k].finishComment!=""?currentItemOptionalFinish[k].finishComment:''),''));
-					}
-				}
-			}
+	return texts;
 }
 
 var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOfSelectedOption){  
