@@ -388,13 +388,11 @@ var getExtraPricesFromEstimate = function(estimate){
 
 var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption){
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
+	var texts = [];
 	if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
-		text.push(createText('subtitle2','Terminaciones',''));
 		if(!selectedOption){
-			var currentOptionalFinish = estimate.optionalFinishes;
-			for(var i = 0; i < currentOptionalFinish.length;i++){
-				text.push(createText('list',currentOptionalFinish[i].finish + (currentOptionalFinish[i].finishComment!=""?currentOptionalFinish[i].finishComment:''),''));
-			}
+			var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
+			texts = [].concat.apply([],finishes.map(finish => [].concat.apply([],[createText('subtitle3','Opcional ' + finish.finish), finish.price.map(price => createText('text','Sub-Total extra (' + price.quantity + ' unidades):', '$ ' +  price.price + ' + IVA'))])))
 		}else{
 			var optionalFinishesPrices = estimate.selectedExtraPrices;
 			for (var i = 0; i < optionalFinishesPrices.length; i++){

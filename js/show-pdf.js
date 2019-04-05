@@ -176,25 +176,27 @@ var groupFinishes = function(finishesToGroup,itemNumber){
                 currentFinishes.push(currentFinish);
             }
         }
-        for (var j = 0; j < finishesToGroup[i].items.length;j++){
-            finish.item = finishesToGroup[i].items[j].id;
-            var optionalFinishPrice = finishesToGroup[i].items[j].optionalFinishes;
-            if (optionalFinishPrice){
-                for (var k = 0; k < optionalFinishPrice.length;k++){
-                    var currentFinish = JSON.parse(JSON.stringify(finish));
-                    var currentPrice = JSON.parse(JSON.stringify(price));
-                    var currentOptionalFinish = optionalFinishPrice[k];
-                    for (var key in currentOptionalFinish) {
-                        if (key !="price"){
-                            currentFinish[key] = currentOptionalFinish[key];
-                        }else{
-                            currentPrice[key] = currentOptionalFinish[key];
+        if (finishesToGroup[i].items){
+            for (var j = 0; j < finishesToGroup[i].items.length;j++){
+                finish.item = finishesToGroup[i].items[j].id;
+                var optionalFinishPrice = finishesToGroup[i].items[j].optionalFinishes;
+                if (optionalFinishPrice){
+                    for (var k = 0; k < optionalFinishPrice.length;k++){
+                        var currentFinish = JSON.parse(JSON.stringify(finish));
+                        var currentPrice = JSON.parse(JSON.stringify(price));
+                        var currentOptionalFinish = optionalFinishPrice[k];
+                        for (var key in currentOptionalFinish) {
+                            if (key !="price"){
+                                currentFinish[key] = currentOptionalFinish[key];
+                            }else{
+                                currentPrice[key] = currentOptionalFinish[key];
+                            }
                         }
+                        currentFinish.price.push(currentPrice);
+                        currentFinishes.push(currentFinish);
                     }
-                    currentFinish.price.push(currentPrice);
-                    currentFinishes.push(currentFinish);
-                }
-            }  
+                }  
+            }
         }
         //reviso si hay algún finish así ya agregado
         var alreadyExist = false;
