@@ -58,22 +58,27 @@ var newAddText = function(textToAdd, doc, top){
                 currentIncreaseTop = rowSize*scale;
                 break;
             case 'title':
+                top = increaseTop(top,rowSize/2,doc);
                 var scale = writeTextNormalAndBold(20,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle1':
+                top = increaseTop(top,rowSize/2,doc);
                 var scale = writeTextNormalAndBold(18,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle2':
+                top = increaseTop(top,rowSize/2,doc);
                 var scale = writeTextNormalAndBold(16,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle3':
+                top = increaseTop(top,rowSize/2,doc);
                 var scale = writeTextNormalAndBold(14,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle4':
+                top = increaseTop(top,rowSize/2,doc);
                 var scale = writeUnderlinedText(fontSize,fontType,text.name, top, doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
