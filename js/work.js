@@ -86,7 +86,7 @@ var works = [
           "finishes":
           [
             {
-              "finish":"Encuadernado HotMelt",
+              "finish":"HotMelt",
               "finishComment":"",
               "showToClientFinish":true,
               "incidences":
@@ -107,39 +107,12 @@ var works = [
               ]
             },
             {
-              "finish":"Encuadernado con Rulo Wire-o",
+              "finish":"Rulo Wire-o",
               "finishComment":"",
               "showToClientFinish":true
-            }
-          ]
-        },
-        {
-          "groupName": "Encuadernado2",
-          "finishes":
-          [
-            {
-              "finish":"Encuadernado HotMelt2",
-              "finishComment":"",
-              "showToClientFinish":true,
-              "incidences":
-              [
-                {
-                  "itemId":-1,
-                  "type":"optionalFinishes",
-                  "action":"add",
-                  "values":
-                  [
-                    {
-                      "finish":"Marca Páginas2",
-                      "finishComment":"",
-                      "showToClientFinish":true
-                    }
-                  ]
-                }
-              ]
             },
             {
-              "finish":"Encuadernado con Rulo Wire-o2",
+              "finish":"Cosido con dos grapas",
               "finishComment":"",
               "showToClientFinish":true
             }
@@ -252,104 +225,12 @@ var works = [
                     }
                   ]
                 }
-              ]  
-            },
-            {
-              "groupName": "Tipo de Tapa 2",
-              "finishes": 
-              [
-                {
-                  "finish":"Tapa Flexible 2",
-                  "finishComment":"",
-                  "showToClientFinish":true,
-                  "incidences":
-                  [
-                    {
-                      "itemId":0,
-                      "type":"materials",
-                      "action":"replace",
-                      "values":
-                      [
-                        {
-                          "paper":"Cartulina Blanca/Blanca",
-                          "gr":"250"
-                        },
-                        {
-                          "paper":"Coteado",
-                          "gr":"300"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "finish":"Tapa SemiDura 2",
-                  "finishComment":"",
-                  "showToClientFinish":true,
-                  "incidences":
-                  [
-                    {
-                      "itemId":0,
-                      "type":"materials",
-                      "action":"replace",
-                      "values":
-                      [{
-                        "paper":"Cartulina Blanca/Blanca",
-                        "gr":"250"
-                      }]
-                    },
-                    {
-                      "itemId":-1,
-                      "type":"optionalFinishes",
-                      "action":"add",
-                      "values":
-                      [
-                        {
-                          "finish":"Cierre Elástico",
-                          "finishComment":"",
-                          "showToClientFinish":true
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "finish":"Tapa Dura 2",
-                  "finishComment":"",
-                  "showToClientFinish":true,
-                  "incidences":
-                  [
-                    {
-                      "itemId":0,
-                      "type":"materials",
-                      "action":"replace",
-                      "values":
-                      {
-                        "paper":"Coteado",
-                        "gr":"150"
-                      }
-                    },
-                    {
-                      "itemId":-1,
-                      "type":"optionalFinishes",
-                      "action":"add",
-                      "values":
-                      [
-                        {
-                          "finish":"Cierre Elástico",
-                          "finishComment":"",
-                          "showToClientFinish":true
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]  
+              ] 
             }
           ],
           "quantityOfPages":[2],
           "quantityOfVias":[1],
-          "faces":["Simple Faz"],
+          "faces":["Simple Faz","Doble Faz"],
           "materials":[
             {
               "paper":"Cartulina Blanca/Blanca",
@@ -404,9 +285,9 @@ var works = [
           ],
           "openedSize":["150x210mm"],
           "allTheSame":false,
-          "quantityOfPages":[70,100],
+          "quantityOfPages":[50,70,100],
           "quantityOfVias":[1],
-          "faces":["Doble Faz"],
+          "faces":["Simple Faz","Doble Faz"],
           "materials":
           [
             {
