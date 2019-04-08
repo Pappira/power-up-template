@@ -55,7 +55,7 @@ var newAddText = function(textToAdd, doc, top){
         var currentIncreaseTop = 0;
         switch (text.type){
             case 'text':
-                var scale = writeTextNormalAndBold(fontSize,fontType,text.name + ":", text.value, top,doc);
+                var scale = writeTextNormalAndBold(fontSize,fontType,((text.name && text.name.length>1)? text.name + ":":text.name), text.value, top,doc);
                 currentIncreaseTop = rowSize*scale;
                 break;
             case 'title':
