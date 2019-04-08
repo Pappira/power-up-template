@@ -88,10 +88,10 @@ var newAddText = function(textToAdd, doc, top){
                     currentIncreaseTop = rowSize*scale;
                     for (var j = 0; j < text.value.length;j++){
                         if(Array.isArray(text.value[j])){
-                            scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'        »  ', text.value[j][0] + ':',text.value[j][1],top, doc);
+                            scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'        »  ', text.value[j][0] + ':',text.value[j][1],currentIncreaseTop, doc);
                             currentIncreaseTop += rowSize*scale;
                         }else{
-                            scale = writeTextNormalWithSeparation(fontSize, fontType,'        »  ', text.value[j],top, doc);
+                            scale = writeTextNormalWithSeparation(fontSize, fontType,'        »  ', text.value[j],currentIncreaseTop, doc);
                             currentIncreaseTop += rowSize*scale;
                         }
                     }

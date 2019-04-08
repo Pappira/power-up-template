@@ -373,7 +373,7 @@ var createText = function(type,name,value){
 	return {
 		type: type,
 		name: name?name+'':name,
-		value: value?value+'':value
+		value: (!value || Array.isArray(value))?value:value+''
 	};
 }
 
@@ -612,7 +612,7 @@ var createCompletePriceText = function(estimate){
 									lastPriceText = priceText;
 							}
 							if (isList){
-								textToAdd.get(textToAdd.length-1).value.push(['Sub-Total (' + price.quantity + ' unidades):','$ ' + price.price.toLocaleString() + ' + IVA']);  
+								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades):','$ ' + price.price.toLocaleString() + ' + IVA']);  
 							}else{
 								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades):', '$ ' + price.price.toLocaleString() + ' + IVA'));  
 							}
