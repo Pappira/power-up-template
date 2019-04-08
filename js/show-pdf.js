@@ -87,8 +87,13 @@ var newAddText = function(textToAdd, doc, top){
                     var scale = writeTextNormalWithSeparation(fontSize, fontType, '    •  ' , text.name,top, doc);
                     currentIncreaseTop = rowSize*scale;
                     for (var j = 0; j < text.value.length;j++){
-                        scale = writeTextNormalWithSeparation(fontSize, fontType,'        »  ', text.value[j],top, doc);
-                        currentIncreaseTop += rowSize*scale;
+                        if(Array.isArray(text.value[j])){
+                            scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'        »  ', text.value[j][0] + ':',text.value[j][1],top, doc);
+                            currentIncreaseTop += rowSize*scale;
+                        }else{
+                            scale = writeTextNormalWithSeparation(fontSize, fontType,'        »  ', text.value[j],top, doc);
+                            currentIncreaseTop += rowSize*scale;
+                        }
                     }
                 }else if (text.value && text.value.length>0){
                     var scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'    •  ', text.name +  ":", text.value, top, doc);
@@ -389,9 +394,6 @@ var generateEstimatePDF = function(estimate){
 
     var textToAdd = createOptionalFinishesText(estimate,true);
     top = newAddTextToDoc(textToAdd,doc,top);
-
-    textToAdd = getOptionalFinishesForPDF(estimate);
-    top = addTextToDoc(textToAdd,doc,top);
 
     if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5,doc)){
         top = addNewPage(doc);

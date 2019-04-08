@@ -549,6 +549,82 @@ var createCommentsText = function(estimate, showInternalComments, showCustomerCo
 	return texts;
 }
 
+var createCompletePriceText = function(estimate){
+	textToAdd = [];
+	if(estimate.prices){
+			estimate.prices.sort(compareValues());
+			if (estimate.prices.length>1){
+					textToAdd.push(createText('subtitle1','Precios', ''));  
+			}
+			var lastPriceText = '';
+			var lastGeneralFinishesText = '';
+			var isList = false;
+			for (var i = 0; i < estimate.prices.length;i++){
+					var price = estimate.prices[i];
+					var generalFinishesText = "";
+					if(estimate.mandatoryFinishGroups){
+							for (var j = 0; j < estimate.mandatoryFinishGroups.length;j++){
+									if (estimate.mandatoryFinishGroups[j].finishes.length>1){
+											generalFinishesText += (generalFinishesText.length>0?" ":"") + price.mandatoryFinishGroups[j].finishes.finish;
+									}
+							}
+					}
+					var priceText = '';
+					for (var j = 0; j < price.items.length; j++){
+							var item =  price.items[j];
+							var itemsFinishesText = "";
+							if(estimate.items[j].mandatoryFinishGroups){
+									for (var k = 0; k < estimate.items[j].mandatoryFinishGroups.length;k++){
+											if (estimate.items[j].mandatoryFinishGroups[k].finishes.length>1){
+													itemsFinishesText += " " + item.mandatoryFinishGroups[k].finishes.finish;
+											}
+									}
+							}
+							var originalItem = estimate.items[item.id];
+							var currentPriceText = (originalItem.materials.length>1?' en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
+							+ (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
+							+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
+							+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
+							+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías':'')
+							+ ((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'');
+
+							if(currentPriceText && currentPriceText.length>0){
+									priceText = ( price.items.length>1?originalItem.name+' ':'')  + currentPriceText;
+							}
+					}
+					if (generalFinishesText && generalFinishesText.length>0){
+							if(generalFinishesText != lastGeneralFinishesText){
+									textToAdd.push(createText('subtitle4',generalFinishesText, ''));  
+							}
+					}
+					lastGeneralFinishesText = generalFinishesText;
+					//Si hay más de una cantidad
+					if(estimate.quantity.length>1){
+							//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
+							if(lastPriceText !=priceText){
+									if ((generalFinishesText && generalFinishesText.length>0)){
+										textToAdd.push(createText('list',priceText, []));  
+										isList = true;
+									}else{
+											textToAdd.push(createText('subtitle4', priceText, ''));  
+											isList = false;
+									}
+									lastPriceText = priceText;
+							}
+							if (isList){
+								textToAdd.get(textToAdd.length-1).value.push(['Sub-Total (' + price.quantity + ' unidades):','$ ' + price.price.toLocaleString() + ' + IVA']);  
+							}else{
+								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades):', '$ ' + price.price.toLocaleString() + ' + IVA'));  
+							}
+					}else{
+							textToAdd.push(createText('list', (priceText.length>0?priceText:'Sub-Total') + ' (' + price.quantity + ' unidades)','$ ' + price.price.toLocaleString() + ' + IVA'));  
+							lastPriceText = priceText;
+					}
+			}
+	}
+	return textToAdd;
+}
+
 var createPriceText = function(estimate,extraPrice){
 	var texts = [];
 	if (estimate.SelectedOption){
