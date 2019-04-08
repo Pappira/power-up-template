@@ -84,9 +84,8 @@ var newAddText = function(textToAdd, doc, top){
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle5':
-                top = increaseTop(top,rowSize/2,doc);
                 var scale = writeTextNormalAndBold(fontSize,fontType,text.name, text.value, top,doc);
-                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                currentIncreaseTop = rowSize*scale;
                 break;
             case 'list':
                 if (Array.isArray(text.value)){
@@ -296,7 +295,7 @@ var newAddTextToDoc = function(textToAdd,doc,top){
             top = addNewPage(doc);
         }
         top = newAddText(textToAdd,doc,top);
-        top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
+        top = increaseTop(top,rowSize,doc);
     }
     return top;
 }
