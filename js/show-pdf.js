@@ -55,7 +55,7 @@ var newAddText = function(textToAdd, doc, top){
         var currentIncreaseTop = 0;
         switch (text.type){
             case 'text':
-                var scale = writeTextNormalAndBold(fontSize,fontType,((text.name && text.name.length>1)? text.name + ":":text.name), text.value, top,doc);
+                var scale = writeTextNormalAndBold(fontSize,fontType, text.name + ":", text.value, top,doc);
                 currentIncreaseTop = rowSize*scale;
                 break;
             case 'title':
@@ -81,6 +81,11 @@ var newAddText = function(textToAdd, doc, top){
             case 'subtitle4':
                 top = increaseTop(top,rowSize/2,doc);
                 var scale = writeUnderlinedText(fontSize,fontType,text.name, top, doc);
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
+            case 'subtitle5':
+                top = increaseTop(top,rowSize/2,doc);
+                var scale = writeTextNormalAndBold(fontSize,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'list':
@@ -311,9 +316,9 @@ var generateEstimatePDF = function(estimate){
 
     var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
     var textToAdd = [];
-    textToAdd.push(createText('text','', contactAndBusinessInfo.filter(Boolean).join(' - ')));
-    textToAdd.push(createText('text','Presente',''));
-    textToAdd.push(createText('text',"A continuación detallamos el presupuesto solicitado.",''));
+    textToAdd.push(createText('subtitle5','', contactAndBusinessInfo.filter(Boolean).join(' - ')));
+    textToAdd.push(createText('subtitle5','Presente',''));
+    textToAdd.push(createText('subtitle5',"A continuación detallamos el presupuesto solicitado.",''));
     top = newAddTextToDoc(textToAdd,doc,top);
 
     textToAdd = createGeneralText(estimate,false,true);
