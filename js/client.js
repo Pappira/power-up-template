@@ -296,8 +296,8 @@ var getCustomerCallback = function(update){
       {
         url: './customer.html', // The URL to load for the iframe
         accentColor: '#303F9F', // Optional color for the modal header 
-        height: 700, // Initial height for iframe; not used if fullscreen is true
-        fullscreen: false, // Whether the modal should stretch to take up the whole screen
+        height: 740, // Initial height for iframe; not used if fullscreen is true
+        fullscreen: true, // Whether the modal should stretch to take up the whole screen
         callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
         title: 'Cliente y comentarios', // Optional title for modal header
         // You can add up to 3 action buttons on the modal header - max 1 on the right side.
