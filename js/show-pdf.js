@@ -88,10 +88,10 @@ var newAddText = function(textToAdd, doc, top){
                     currentIncreaseTop = rowSize*scale;
                     for (var j = 0; j < text.value.length;j++){
                         if(Array.isArray(text.value[j])){
-                            scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'        »  ', text.value[j][0] + ':',text.value[j][1],currentIncreaseTop, doc);
+                            scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'        »  ', text.value[j][0] + ':',text.value[j][1],top + currentIncreaseTop, doc);
                             currentIncreaseTop += rowSize*scale;
                         }else{
-                            scale = writeTextNormalWithSeparation(fontSize, fontType,'        »  ', text.value[j],currentIncreaseTop, doc);
+                            scale = writeTextNormalWithSeparation(fontSize, fontType,'        »  ', text.value[j],top + currentIncreaseTop, doc);
                             currentIncreaseTop += rowSize*scale;
                         }
                     }
@@ -230,81 +230,6 @@ var groupFinishes = function(finishesToGroup,itemNumber){
     return finishes;
 }
 
-var getPriceTextInformationForPDF = function(estimate){
-    textToAdd = [];
-    if(estimate.prices){
-        estimate.prices.sort(compareValues());
-        if (estimate.prices.length>1){
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',16,fontType,'Precios', '', rowSize*dobleSpaceFactor));  
-        }
-        var lastPriceText = '';
-        var lastGeneralFinishesText = '';
-        for (var i = 0; i < estimate.prices.length;i++){
-            var price = estimate.prices[i];
-            var generalFinishesText = "";
-            if(estimate.mandatoryFinishGroups){
-                for (var j = 0; j < estimate.mandatoryFinishGroups.length;j++){
-                    if (estimate.mandatoryFinishGroups[j].finishes.length>1){
-                        generalFinishesText += (generalFinishesText.length>0?" ":"") + price.mandatoryFinishGroups[j].finishes.finish;
-                    }
-                }
-            }
-            var priceText = '';
-            for (var j = 0; j < price.items.length; j++){
-                var item =  price.items[j];
-                var itemsFinishesText = "";
-                if(estimate.items[j].mandatoryFinishGroups){
-                    for (var k = 0; k < estimate.items[j].mandatoryFinishGroups.length;k++){
-                        if (estimate.items[j].mandatoryFinishGroups[k].finishes.length>1){
-                            itemsFinishesText += " " + item.mandatoryFinishGroups[k].finishes.finish;
-                        }
-                    }
-                }
-                var originalItem = estimate.items[item.id];
-                var currentPriceText = (originalItem.materials.length>1?' en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
-                + (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
-                + (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
-                + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
-                + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías':'')
-                + ((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'');
-
-                if(currentPriceText && currentPriceText.length>0){
-                    priceText = ( price.items.length>1?originalItem.name+' ':'')  + currentPriceText;
-                }
-            }
-            if (generalFinishesText && generalFinishesText.length>0){
-                if(generalFinishesText != lastGeneralFinishesText){
-                    textToAdd.push(showPdfCreateText('writeUnderlinedText',12,fontType,generalFinishesText, '', rowSize*dobleSpaceFactor));  
-                }
-            }
-            lastGeneralFinishesText = generalFinishesText;
-            //Si hay más de una cantidad
-            var separator = "        »  ";
-            if(estimate.quantity.length>1){
-                //Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
-                if(lastPriceText !=priceText){
-                    //Si no es el primero que agrego, es decir lastPriceText existe
-                    /*if(lastPriceText){
-                        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'', '', rowSize*dobleSpaceFactor));  
-                    }*/
-                    if ((generalFinishesText && generalFinishesText.length>0)){
-                        textToAdd.push(showPdfCreateText('writeTextNormalWithSeparation',11,fontType, '    •  ', priceText, rowSize*mediumSpaceFactor));  
-                    }else{
-                        textToAdd.push(showPdfCreateText('writeUnderlinedText',12,fontType, priceText, '', rowSize*mediumSpaceFactor));  
-                        separator = '    •  ' ; 
-                    }
-                    lastPriceText = priceText;
-                }
-                textToAdd.push(showPdfCreateText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,separator, 'Sub-Total (' + price.quantity + ' unidades):', rowSize*mediumSpaceFactor,'$ ' + price.price.toLocaleString() + ' + IVA'));  
-            }else{
-                textToAdd.push(showPdfCreateText('writeTextNormalAndBoldWithSeparation',fontSize,fontType,'    •  ', (priceText.length>0?priceText:'Sub-Total ') + ' (' + price.quantity + ' unidades)', rowSize*mediumSpaceFactor,'$ ' + price.price.toLocaleString() + ' + IVA'));  
-                lastPriceText = priceText;
-            }
-        }
-    }
-    return textToAdd;
-}
-
 var addHeaderToCurrentPage = function(doc){
     doc.addImage(diagonalLogo, 'JPEG', leftMargin, rowSize, 48, 13); 
     var width = doc.internal.pageSize.width;
@@ -389,8 +314,8 @@ var generateEstimatePDF = function(estimate){
     }
     top = newAddTextToDoc(textToAdd,doc,top);
    
-    textToAdd = getPriceTextInformationForPDF(estimate);
-    top = addTextToDoc(textToAdd,doc,top);
+    textToAdd = createCompletePriceText(estimate);
+    top = newAddTextToDoc(textToAdd,doc,top);
 
     var textToAdd = createOptionalFinishesText(estimate,true);
     top = newAddTextToDoc(textToAdd,doc,top);

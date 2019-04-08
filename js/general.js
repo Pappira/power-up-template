@@ -612,9 +612,9 @@ var createCompletePriceText = function(estimate){
 									lastPriceText = priceText;
 							}
 							if (isList){
-								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades):','$ ' + price.price.toLocaleString() + ' + IVA']);  
+								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.price.toLocaleString() + ' + IVA']);  
 							}else{
-								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades):', '$ ' + price.price.toLocaleString() + ' + IVA'));  
+								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
 							}
 					}else{
 							textToAdd.push(createText('list', (priceText.length>0?priceText:'Sub-Total') + ' (' + price.quantity + ' unidades)','$ ' + price.price.toLocaleString() + ' + IVA'));  
