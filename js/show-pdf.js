@@ -13,18 +13,19 @@ var mediumSpaceFactor = 1.3;
 var dobleSpaceFactor = 1.6;
 var tripleSpaceFactor = 2;
 
-var getGeneralAndCustomerInformationForPDF = function(estimate){
+/*var getGeneralAndCustomerInformationForPDF = function(estimate){
     var textToAdd = [];
     var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
     textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'', contactAndBusinessInfo.filter(Boolean).join(' - '), rowSize));
     textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'Presente','', rowSize*dobleSpaceFactor));
     textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"A continuación detallamos el presupuesto solicitado.",'', rowSize));
     return textToAdd;
-}
+}*/
 
-var getTotalSpaceNeededForText = function(textToAdd){
+/*var getTotalSpaceNeededForText = function(textToAdd){
     return textToAdd.reduce((a, b) => a + (b['increaseTop'] || 0), 0);
-}
+}*/
+
 var newGetTotalSpaceNeededForText = function(textToAdd){
     
     //Filtro todos los types text y cada uno ocupa rowSize
@@ -36,7 +37,7 @@ var newGetTotalSpaceNeededForText = function(textToAdd){
     return total;
 }
 
-var showPdfCreateText = function(type,fontSize,fontType,title,value,increaseTop,textBold){
+/*var showPdfCreateText = function(type,fontSize,fontType,title,value,increaseTop,textBold){
     return {
         type: type,
         fontSize: fontSize,
@@ -46,7 +47,7 @@ var showPdfCreateText = function(type,fontSize,fontType,title,value,increaseTop,
         increaseTop: increaseTop,
         textBold: textBold
     };
-}
+}*/
 
 var newAddText = function(textToAdd, doc, top){
     for (var i = 0; i < textToAdd.length;i++){
@@ -109,7 +110,7 @@ var newAddText = function(textToAdd, doc, top){
     return top;
 }
 
-var addText = function(textToAdd, doc, top){
+/*var addText = function(textToAdd, doc, top){
     for (var i = 0; i < textToAdd.length;i++){
         text = textToAdd[i];
         var scale;
@@ -131,9 +132,9 @@ var addText = function(textToAdd, doc, top){
         top =increaseTop(top,text.increaseTop*scale,doc);
     }
     return top;
-}
+}*/
 
-var getOptionalFinishesForPDF = function(estimate){
+/*var getOptionalFinishesForPDF = function(estimate){
     var textToAdd = [];
     var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
     for (var i = 0; i < finishes.length; i++){
@@ -154,7 +155,7 @@ var getOptionalFinishesForPDF = function(estimate){
         textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'','', rowSize));
     }
     return textToAdd;
-}
+}*/
 
 var groupFinishes = function(finishesToGroup,itemNumber){
     var finishes = [];
@@ -273,7 +274,7 @@ var addNewPage = function(doc){
     return marginTop + 10;
 }
   
-var addTextToDoc = function(textToAdd,doc,top){
+/*var addTextToDoc = function(textToAdd,doc,top){
     if(textToAdd && textToAdd.length>0){
         if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
             top = addNewPage(doc);
@@ -282,7 +283,7 @@ var addTextToDoc = function(textToAdd,doc,top){
         top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
     }
     return top;
-}
+}*/
 
 var newAddTextToDoc = function(textToAdd,doc,top){
     if(textToAdd && textToAdd.length>0){
@@ -308,7 +309,14 @@ var generateEstimatePDF = function(estimate){
     doc.text('Montevideo, ' + day.toLocaleDateString('es-UY', options),width-leftMargin,top,'right');
     top = increaseTop(top,rowSize*tripleSpaceFactor,doc);
 
-    var textToAdd = createGeneralText(estimate,false,true);
+    var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
+    var textToAdd = [];
+    textToAdd.push(createText('text','', contactAndBusinessInfo.filter(Boolean).join(' - ')));
+    textToAdd.push(createText('text','Presente',''));
+    textToAdd.push(createText('text',"A continuación detallamos el presupuesto solicitado.",''));
+    top = newAddTextToDoc(textToAdd,doc,top);
+
+    textToAdd = createGeneralText(estimate,false,true);
     for (var i = 0; i < estimate.items.length;i++){
         textToAdd = textToAdd.concat(createItemText(estimate, estimate.items[i], false, false, false,true));
     }
