@@ -13,19 +13,6 @@ var mediumSpaceFactor = 1.3;
 var dobleSpaceFactor = 1.6;
 var tripleSpaceFactor = 2;
 
-/*var getGeneralAndCustomerInformationForPDF = function(estimate){
-    var textToAdd = [];
-    var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
-    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'', contactAndBusinessInfo.filter(Boolean).join(' - '), rowSize));
-    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'Presente','', rowSize*dobleSpaceFactor));
-    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"A continuación detallamos el presupuesto solicitado.",'', rowSize));
-    return textToAdd;
-}*/
-
-/*var getTotalSpaceNeededForText = function(textToAdd){
-    return textToAdd.reduce((a, b) => a + (b['increaseTop'] || 0), 0);
-}*/
-
 var newGetTotalSpaceNeededForText = function(textToAdd){
     
     //Filtro todos los types text y cada uno ocupa rowSize
@@ -37,18 +24,6 @@ var newGetTotalSpaceNeededForText = function(textToAdd){
     return total;
 }
 
-/*var showPdfCreateText = function(type,fontSize,fontType,title,value,increaseTop,textBold){
-    return {
-        type: type,
-        fontSize: fontSize,
-        fontType:fontType,
-        title: title,
-        value: value,
-        increaseTop: increaseTop,
-        textBold: textBold
-    };
-}*/
-
 var newAddText = function(textToAdd, doc, top){
     for (var i = 0; i < textToAdd.length;i++){
         text = textToAdd[i];
@@ -59,12 +34,12 @@ var newAddText = function(textToAdd, doc, top){
                 currentIncreaseTop = rowSize*scale;
                 break;
             case 'title':
-                top = increaseTop(top,rowSize/2,doc);
+                top = increaseTop(top,rowSize,doc);
                 var scale = writeTextNormalAndBold(20,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle1':
-                top = increaseTop(top,rowSize/2,doc);
+                top = increaseTop(top,rowSize,doc);
                 var scale = writeTextNormalAndBold(18,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
@@ -113,53 +88,6 @@ var newAddText = function(textToAdd, doc, top){
     }
     return top;
 }
-
-/*var addText = function(textToAdd, doc, top){
-    for (var i = 0; i < textToAdd.length;i++){
-        text = textToAdd[i];
-        var scale;
-        switch (text.type){
-            case 'writeTextNormalAndBold':
-                scale = writeTextNormalAndBold(text.fontSize,text.fontType,text.title, text.value, top,doc);
-                break;
-            case 'writeUnderlinedText':
-                scale = writeUnderlinedText(text.fontSize,text.fontType,text.title, top, doc);
-                break;
-            case 'writeTextNormalWithSeparation':
-                scale = writeTextNormalWithSeparation(fontSize, fontType, text.title, text.value,top, doc);
-                break;
-            case 'writeTextNormalAndBoldWithSeparation':
-                scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType, text.title, text.value, text.textBold, top, doc);
-                break;
-   
-        }
-        top =increaseTop(top,text.increaseTop*scale,doc);
-    }
-    return top;
-}*/
-
-/*var getOptionalFinishesForPDF = function(estimate){
-    var textToAdd = [];
-    var finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
-    for (var i = 0; i < finishes.length; i++){
-        var finish = finishes[i];
-        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',13,fontType,"Opcional " + (finish.item!=-1?estimate.items[finish.item].name+ " ":'') + finish.finish,'', rowSize*mediumSpaceFactor));
-        if (finish.desc && finish.desc != "" && finish.desc.length > 0){
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,finish.desc,'', rowSize));
-        }
-        for (var j = 0; j < finish.price.length;j++){
-            var price = finish.price[j];
-            for (var key in price) {
-                if (key!="price" && key!="quantity"){
-                    textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,key,price[key]+'', rowSize));
-                }
-            }
-            textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,"Sub-Total extra" + (price.quantity?" (" + price.quantity +" unidades)":"") +":","$ " + price.price.toLocaleString() + ' + IVA', rowSize));
-        }
-        textToAdd.push(showPdfCreateText('writeTextNormalAndBold',fontSize,fontType,'','', rowSize));
-    }
-    return textToAdd;
-}*/
 
 var groupFinishes = function(finishesToGroup,itemNumber){
     var finishes = [];
@@ -278,17 +206,6 @@ var addNewPage = function(doc){
     return marginTop + 10;
 }
   
-/*var addTextToDoc = function(textToAdd,doc,top){
-    if(textToAdd && textToAdd.length>0){
-        if(!checkIfEnoughSpace(top,getTotalSpaceNeededForText(textToAdd),doc)){
-            top = addNewPage(doc);
-        }
-        top = addText(textToAdd,doc,top);
-        top = increaseTop(top,rowSize*dobleSpaceFactor,doc);
-    }
-    return top;
-}*/
-
 var newAddTextToDoc = function(textToAdd,doc,top){
     if(textToAdd && textToAdd.length>0){
         if(!checkIfEnoughSpace(top,newGetTotalSpaceNeededForText(textToAdd),doc)){
@@ -344,44 +261,13 @@ var generateEstimatePDF = function(estimate){
     textToAdd.push(createText('list', "Precios NO incluyen IVA.", ''));
     textToAdd.push(createText('list', "Entrega entre " + ((estimate.productionTime && estimate.productionTime!="")?estimate.productionTime:"10 y 15 días hábiles") + " una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", ''));
     top = newAddTextToDoc(textToAdd,doc,top);
-    /*doc.setFontSize(16);  
-    var scale = writeTextNormalAndBold(14, fontType, "Condiciones generales","",top, doc);
-    doc.setFontSize(fontSize);
-    top =increaseTop(top,rowSize*mediumSpaceFactor*scale,doc); 
-    scale = writeTextNormalWithSeparation(fontSize, fontType,"  •  ","Mantenimiento de oferta 20 días.", top,doc);
-    top = increaseTop(top,rowSize*scale,doc);
-    scale = writeTextNormalWithSeparation(fontSize, fontType,"  •  ","Forma de pago " + ((estimate.customer && estimate.customer.paymentWay && estimate.customer.paymentWay!="")?estimate.customer.paymentWay:'Seña del 50% y saldo contra-entrega'),top,doc);
-    top = increaseTop(top,rowSize*scale,doc);
-    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Precio unitario basado en unidades descritas o más.",top,doc);
-    top = increaseTop(top,rowSize*scale,doc);
-    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","El precio no incluye el costo de diseño o gráficos de banco de imágenes.",top,doc);
-    top = increaseTop(top,rowSize*scale,doc);
-    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Precios NO incluyen IVA.", top,doc);
-    top = increaseTop(top,rowSize*scale,doc);
-    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Entrega entre " + ((estimate.productionTime && estimate.productionTime!="")?estimate.productionTime:"10 y 15 días hábiles") + " una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", top, doc);
-    top = increaseTop(top,rowSize*dobleSpaceFactor*scale,doc)*/
 
-    /*if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*3 ,doc)){
-        top = addNewPage(doc);
-    };*/
     textToAdd = [];
     textToAdd.push(createText('subtitle2', "Formas de pago", ''));
     textToAdd.push(createText('list', "Por transferencia o Depósito:", ["BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda."]));
     textToAdd.push(createText('list', "Abitab o RedPagos:", ["Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 188-0001815 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente."]));
     top = newAddTextToDoc(textToAdd,doc,top);
-    /*doc.setFontSize(16);  
-    scale = writeTextNormalAndBold(14, fontType, "Formas de pago","", top, doc);
-    doc.setFontSize(fontSize);
-    top = increaseTop(top,rowSize*mediumSpaceFactor*scale,doc)
-    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Por transferencia o Depósito:", top, doc);
-    top = increaseTop(top,rowSize*scale,doc);
-    scale = writeTextNormalWithSeparation(fontSize, fontType, "      »  ","BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda.",top, doc);
-    top = increaseTop(top,rowSize*scale,doc);
-    scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Abitab o RedPagos:",top, doc);
-    top = increaseTop(top,rowSize*scale,doc);
-    scale = writeTextNormalWithSeparation(fontSize, fontType, "      »  ","Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",top,doc);
-    top = increaseTop(top,rowSize*dobleSpaceFactor*scale,doc) */
-   
+    
     addHeaderToCurrentPage(doc);
     addFooterToCurrentPage(doc);
     doc.save('OrdenDeTrabajo.pdf');
