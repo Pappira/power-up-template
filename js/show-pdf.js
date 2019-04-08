@@ -317,13 +317,22 @@ var generateEstimatePDF = function(estimate){
     textToAdd = createCompletePriceText(estimate);
     top = newAddTextToDoc(textToAdd,doc,top);
 
-    var textToAdd = createOptionalFinishesText(estimate,true);
+    textToAdd = createOptionalFinishesText(estimate,true);
     top = newAddTextToDoc(textToAdd,doc,top);
 
-    if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5,doc)){
+    /*if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5,doc)){
         top = addNewPage(doc);
-    };
-    doc.setFontSize(16);  
+    };*/
+    textToAdd = [];
+    textToAdd.push(createText('subtitle2', "Condiciones generales", ''));
+    textToAdd.push(createText('list', "Mantenimiento de oferta 20 días.", ''));
+    textToAdd.push(createText('list', "Forma de pago " + ((estimate.customer && estimate.customer.paymentWay && estimate.customer.paymentWay!="")?estimate.customer.paymentWay:'Seña del 50% y saldo contra-entrega.'), ''));
+    textToAdd.push(createText('list', "Precio unitario basado en unidades descritas o más.", ''));
+    textToAdd.push(createText('list', "El precio no incluye el costo de diseño o gráficos de banco de imágenes.", ''));
+    textToAdd.push(createText('list', "Precios NO incluyen IVA.", ''));
+    textToAdd.push(createText('list', "Entrega entre " + ((estimate.productionTime && estimate.productionTime!="")?estimate.productionTime:"10 y 15 días hábiles") + " una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", ''));
+    top = newAddTextToDoc(textToAdd,doc,top);
+    /*doc.setFontSize(16);  
     var scale = writeTextNormalAndBold(14, fontType, "Condiciones generales","",top, doc);
     doc.setFontSize(fontSize);
     top =increaseTop(top,rowSize*mediumSpaceFactor*scale,doc); 
@@ -338,12 +347,17 @@ var generateEstimatePDF = function(estimate){
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Precios NO incluyen IVA.", top,doc);
     top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Entrega entre " + ((estimate.productionTime && estimate.productionTime!="")?estimate.productionTime:"10 y 15 días hábiles") + " una vez confirmada la seña y recibido el diseño en formato adecuado para impresión.", top, doc);
-    top = increaseTop(top,rowSize*dobleSpaceFactor*scale,doc)
+    top = increaseTop(top,rowSize*dobleSpaceFactor*scale,doc)*/
 
-    if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*3 ,doc)){
+    /*if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*3 ,doc)){
         top = addNewPage(doc);
-    };
-    doc.setFontSize(16);  
+    };*/
+    textToAdd = [];
+    textToAdd.push(createText('subtitle2', "Formas de pago", ''));
+    textToAdd.push(createText('list', "Por transferencia o Depósito:", ["BROU - C.C. en pesos 001555948-00002 a nombre de Nesta Ltda."]));
+    textToAdd.push(createText('list', "Abitab o RedPagos:", ["Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 188-0001815 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente."]));
+    top = newAddTextToDoc(textToAdd,doc,top);
+    /*doc.setFontSize(16);  
     scale = writeTextNormalAndBold(14, fontType, "Formas de pago","", top, doc);
     doc.setFontSize(fontSize);
     top = increaseTop(top,rowSize*mediumSpaceFactor*scale,doc)
@@ -354,7 +368,7 @@ var generateEstimatePDF = function(estimate){
     scale = writeTextNormalWithSeparation(fontSize, fontType, "  •  ","Abitab o RedPagos:",top, doc);
     top = increaseTop(top,rowSize*scale,doc);
     scale = writeTextNormalWithSeparation(fontSize, fontType, "      »  ","Se debe concurrir a cualquiera de ellos y pedir para hacer un depósito en el BROU C.C. 001555948-00002 a nombre de Nesta Ltda., esta forma de pago no tiene ningún costo para el cliente.",top,doc);
-    top = increaseTop(top,rowSize*dobleSpaceFactor*scale,doc) 
+    top = increaseTop(top,rowSize*dobleSpaceFactor*scale,doc) */
    
     addHeaderToCurrentPage(doc);
     addFooterToCurrentPage(doc);
