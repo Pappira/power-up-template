@@ -663,7 +663,8 @@ var getValueFromObjectByReferences = function(object, reference){
   for (var i = 0; i < reference.length;i++){
     returnValue += getValueFromObjectByReference(JSON.parse(JSON.stringify(object)),reference[i]) + ((i< reference.length-1)?" ":"");
   }
-  console.log("Value to evaluate: " + returnValue);
+  console.log("Value to evaluate: ");
+  console.log(returnValue);
   return returnValue;
 }
 
