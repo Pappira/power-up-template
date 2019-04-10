@@ -649,6 +649,9 @@ var getValueFromObjectByCompleteReference = function(currentObjectProp, object){
   var props = currentObjectProp.split('.');
   var currentObject = JSON.parse(JSON.stringify(object));
   for (var h=0; h < props.length;h++){
+    console.log("propiedad a evaluar y currentObject");
+    console.log(props[h]);
+    console.log(currentObject);
     currentObject = getValueFromObjectByReference(currentObject, props[h]);
   }
   return currentObject;
