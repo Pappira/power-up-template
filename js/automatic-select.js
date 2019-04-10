@@ -674,7 +674,7 @@ var filterPrices = function(currentCombination,itemNumber){
 
   return generalPrices.filter(function(v, i) {
     for (var t = 0; t < checks.length;t++){
-      var insideCurrentWork = getValueFromObjectByCompleteReference(checks[t], currentCombination);
+      var insideCurrentWork = getValueFromObjectByCompleteReference(checks[t], JSON.parse(JSON.stringify(currentCombination)));
 
       var priceToCheckValue = v.toCheck.filter(
         function(toCheck){
