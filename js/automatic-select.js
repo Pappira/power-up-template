@@ -793,8 +793,8 @@ var createEstimateAndTrelloCard2 = function(){
       }
 
         //hay que agregar al currentCombination todo lo que tenga el work que no tenga el currentCombination y luego agregar el precio y eso agregarlo al work.prices.push()
-      
-
+      var a = 1234;
+/*
 
 
       for (var j = 0; j < currentCombination.items.length; j++){
@@ -907,7 +907,7 @@ var createEstimateAndTrelloCard2 = function(){
     createCard(estimate);
     return work;
   }
-}
+}*/
 
 /*var deleteFromArray = function(originalArray,indexToCut){
   var a =  jQuery.grep(originalArray, function(n, i ) {
