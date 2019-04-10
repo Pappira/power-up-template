@@ -714,7 +714,7 @@ var createEstimateAndTrelloCard2 = function(){
         }
       }
 
-      var generalPrices = possiblePrices.filter(function(v, i) {
+      var generalPrices = prices2.filter(function(v, i) {
         return (v.item == -1);
       })
       
