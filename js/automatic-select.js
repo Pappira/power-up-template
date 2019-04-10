@@ -783,6 +783,21 @@ var createEstimateAndTrelloCard2 = function(){
       var totalPrice = priceFiltered.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
       var currentPrice = convertWorkToPrice(work, currentCombination,totalPrice);
       
+      var possibleExtraPrices = extraPrices.filter(function(v, i) {
+        return (v.workId == work.id);
+      });
+      
+      possibleExtraPrices.map(function(extraPrice){
+        Object.keys(extraPrice).filter(function(key){
+           if (key != "optionalFinishes" && key !="items" && key !="workId"){
+            if(!JSON.stringify(work[key]).includes(JSON.stringify(extraPrice[key]))){
+                  return false; 
+            }
+          }
+              return true;
+          });
+      });
+
       for(var i = 0; i < possibleExtraPrices.length;i++){
         var possibleExtraPrice = possibleExtraPrices[i];
         var isPossible = true;
