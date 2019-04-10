@@ -652,9 +652,19 @@ var getValueFromObjectByCompleteReference = function(currentObjectProp, object){
     console.log("propiedad a evaluar y currentObject");
     console.log(props[h]);
     console.log(currentObject);
-    currentObject = getValueFromObjectByReference(currentObject, props[h]);
+    currentObject = getValueFromObjectByReferences(currentObject, props[h]);
   }
   return currentObject;
+}
+
+var getValueFromObjectByReferences = function(object, reference){
+  reference = reference.split("+");
+  var returnValue = "";
+  for (var i = 0; i < reference.length;i++){
+    returnValue += getValueFromObjectByReference(JSON.parse(JSON.stringify(object)),reference[i]) + ((i< reference.length-1)?" ":"");
+  }
+  console.log("Value to evaluate: " + returnValue);
+  return returnValue;
 }
 
 var getValueFromObjectByReference = function(object, reference){
