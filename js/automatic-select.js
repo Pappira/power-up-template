@@ -764,7 +764,9 @@ var createEstimateAndTrelloCard2 = function(){
       console.log(currentCombination);
       var priceFiltered = [];
       for (var i = -1; i < currentCombination.items.length;i++){
-        priceFiltered.push(filterPrices(currentCombination,i));
+        priceFiltered.push(filterPrices(JSON.parse(JSON.stringify(currentCombination)),i));
+        console.log("for " + i + "currentCombination");
+        console.log(currentCombination);
       }
 
         //hay que agregar al currentCombination todo lo que tenga el work que no tenga el currentCombination y luego agregar el precio y eso agregarlo al work.prices.push()
