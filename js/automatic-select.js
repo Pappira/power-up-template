@@ -781,11 +781,67 @@ var createEstimateAndTrelloCard2 = function(){
       for (var i = -1; i < currentCombination.items.length;i++){
         priceFiltered.push(filterPrices(JSON.parse(JSON.stringify(currentCombination)),i));
       }
-
-        //hay que agregar al currentCombination todo lo que tenga el work que no tenga el currentCombination y luego agregar el precio y eso agregarlo al work.prices.push()
-        var a = 1234;
+      var totalPrice = priceFiltered.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
+      var currentPrice = convertWorkToPrice(work, currentCombination,totalPrice);
+      
+      //hay que agregar al currentCombination todo lo que tenga el work que no tenga el currentCombination y luego agregar el precio y eso agregarlo al work.prices.push()
+      var a = 1234;
     }
   }
+}
+
+function add(accumulator, a) {
+  return accumulator + a;
+}
+
+function convertWorkToPrice(work,combination,price){
+  var currentWork = JSON.parse(JSON.stringify(work));
+  delete currentWork.workTypeId;
+  delete currentWork.workType;
+  delete currentWork.image;
+  delete currentWork.name;
+  if (combination.mandatoryFinishGroups){
+    currentWork.mandatoryFinishGroups = combination.mandatoryFinishGroups;
+  }
+  if (combination.quantity){
+    currentWork.quantity = combination.quantity;
+  }
+  if(combination.closedSizes){
+    currentWork.closedSizes = combination.closedSizes;
+  } 
+  currentWork.workId = currentWork.id;
+  delete currentWork.workId;
+  currentWork.price = price;
+  for(var i =0; i < currentWork.items.length; i++){
+    if(combination.items[i].pages){
+      currentWork.items[i].pages = combination.items[i].pages;
+    }
+    if(combination.items[i].faces){
+      currentWork.items[i].faces = combination.items[i].faces;
+    }
+    if(combination.items[i].openedSize){
+      currentWork.items[i].openedSize = combination.items[i].openedSize;
+    }
+    if(combination.items[i].quantityOfVias){
+      currentWork.items[i].quantityOfVias = combination.items[i].quantityOfVias;
+    }
+    if (combination.items[i].mandatoryFinishGroups){
+      currentWork.items[i].mandatoryFinishGroups = combination.items[i].mandatoryFinishGroups;
+    }
+    if(combination.items[i].inksDetails){
+      currentWork.items[i].inks = {
+        inksQuantity: combination.items[i].inksQuantity,
+        inksDetails: combination.items[i].inksDetails
+      }
+    }
+    if(combination.items[i].paper){
+      currentWork.items[i].materials = {
+        gr: combination.items[i].gr,
+        paper: combination.items[i].paper
+      }
+    }
+  }
+  return currentWork;
 }
 /*
 
