@@ -712,8 +712,6 @@ var createEstimateAndTrelloCard2 = function(){
   if(message.length > 0){
     window.alert('Debe completar todas las opciones solicitadas \n' + message);
   }else{
-    var estimate = {};
-    //var work = works[selectedWorkId];
     if (work.clossedSizes.length > 1){
       work.clossedSize = cutArray(work.clossedSize,selectedOptions[-1].clossedSize[0]);
     }else{
@@ -781,11 +779,38 @@ var createEstimateAndTrelloCard2 = function(){
       for (var i = -1; i < currentCombination.items.length;i++){
         priceFiltered.push(filterPrices(JSON.parse(JSON.stringify(currentCombination)),i));
       }
+      priceFiltered = [].concat.apply([],priceFiltered);
       var totalPrice = priceFiltered.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
       var currentPrice = convertWorkToPrice(work, currentCombination,totalPrice);
       
-      //hay que agregar al currentCombination todo lo que tenga el work que no tenga el currentCombination y luego agregar el precio y eso agregarlo al work.prices.push()
-      var a = 1234;
+      for(var i = 0; i < possibleExtraPrices.length;i++){
+        var possibleExtraPrice = possibleExtraPrices[i];
+        var isPossible = true;
+        for (var prop in possibleExtraPrice) {
+          if (prop != "optionalFinishes" && prop !="items" && prop !="workId"){
+            if(!JSON.stringify(work[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
+              isPossible = false;
+              break;
+            }
+          }else if(prop == "items"){
+            for (var j = 0; j < possibleExtraPrice.items.length; j++){
+              var priceItem = possibleExtraPrice.items[j];
+              var workItem = work.items[j];
+              for (var itemProp in priceItem) {
+                if (itemProp != "optionalFinishes" && itemProp!="id"){
+                  if(!JSON.stringify(workItem[itemProp]).includes(JSON.stringify(priceItem[itemProp]))){
+                    isPossible = false;
+                    break;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      //hay que ver como agregar la machine, papersize, sheetsize, etc
+      work['prices'].push(currentPrice); 
     }
   }
 }
@@ -800,21 +825,24 @@ function convertWorkToPrice(work,combination,price){
   delete currentWork.workType;
   delete currentWork.image;
   delete currentWork.name;
+  delete currentWork.quantities;
   if (combination.mandatoryFinishGroups){
     currentWork.mandatoryFinishGroups = combination.mandatoryFinishGroups;
   }
   if (combination.quantity){
     currentWork.quantity = combination.quantity;
   }
-  if(combination.closedSizes){
-    currentWork.closedSizes = combination.closedSizes;
-  } 
+  if(combination.clossedSizes){
+    currentWork.clossedSizes = combination.clossedSizes;
+  }else{
+    currentWork.clossedSizes = currentWork.clossedSizes[0];
+  }
   currentWork.workId = currentWork.id;
-  delete currentWork.workId;
+  delete currentWork.id;
   currentWork.price = price;
   for(var i =0; i < currentWork.items.length; i++){
     if(combination.items[i].pages){
-      currentWork.items[i].pages = combination.items[i].pages;
+      currentWork.items[i].quantityOfPages = combination.items[i].pages;
     }
     if(combination.items[i].faces){
       currentWork.items[i].faces = combination.items[i].faces;
@@ -848,37 +876,6 @@ function convertWorkToPrice(work,combination,price){
     
 
 
-      for (var j = 0; j < currentCombination.items.length; j++){
-        var currentItem = currentCombination.items[j];
-        var pages = currentItem.pages;
-        var inksQuantity = currentItem.inksQuantity;
-        var inksDetails = currentItem.inksDetails;
-        var openedSize = currentItem.openedSize;
-        var faces = currentItem.faces;
-        var paper = currentItem.paper;
-        var gr = currentItem.gr;
-        var vias = currentItem.quantityOfVias;
-        var mandatoryFinishGroups = currentItem.mandatoryFinishGroups;
-        if(mandatoryFinishGroups){
-          for(var k = 0; k < mandatoryFinishGroups.length;k++){
-            delete mandatoryFinishGroups[k].finishes.incidences;
-          }
-        }
-        currentPossiblePrices = currentPossiblePrices.filter(function(v, i) {
-          return (v.items[j].quantityOfPages == pages && v.items[j].inks.inksQuantity == inksQuantity && 
-            v.items[j].inks.inksDetails == inksDetails && v.items[j].openedSize == openedSize && 
-            v.items[j].faces ==  faces && v.items[j].materials.paper == paper && 
-            v.items[j].materials.gr == gr && v.items[j].quantityOfVias == vias &&
-            JSON.stringify(v.items[j].mandatoryFinishGroups) == JSON.stringify(mandatoryFinishGroups));
-        })
-      }
-      work.prices.push(currentPossiblePrices[0]);
-    }
-    var possibleExtraPrices = extraPrices.filter(function(v, i) {
-      return (v.workId == work.id);
-    });
-
- 
     for(var i = 0; i < possibleExtraPrices.length;i++){
       var possibleExtraPrice = possibleExtraPrices[i];
       var isPossible = true;
