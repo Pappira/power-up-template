@@ -1864,7 +1864,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -1889,7 +1889,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -1914,7 +1914,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -1939,7 +1939,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -1964,7 +1964,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -1989,7 +1989,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2014,7 +2014,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2039,7 +2039,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2064,7 +2064,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2089,7 +2089,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2114,7 +2114,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2139,7 +2139,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2164,7 +2164,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2189,7 +2189,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2214,7 +2214,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2239,7 +2239,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2264,7 +2264,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2289,7 +2289,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2314,7 +2314,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2339,7 +2339,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2364,7 +2364,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2389,7 +2389,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2414,7 +2414,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2439,7 +2439,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2464,7 +2464,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2489,7 +2489,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2514,7 +2514,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2539,7 +2539,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2564,7 +2564,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2589,7 +2589,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2614,7 +2614,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2639,7 +2639,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2664,7 +2664,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2689,7 +2689,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2714,7 +2714,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2739,7 +2739,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Cartulina Blanca/Blanca 250gr."
         }
      ],
@@ -2764,7 +2764,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -2789,7 +2789,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -2814,7 +2814,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -2839,7 +2839,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -2864,7 +2864,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -2889,7 +2889,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -2914,7 +2914,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -2939,7 +2939,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -2964,7 +2964,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -2989,7 +2989,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -3014,7 +3014,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -3039,7 +3039,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -3064,7 +3064,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -3089,7 +3089,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -3114,7 +3114,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -3139,7 +3139,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -3164,7 +3164,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -3189,7 +3189,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 300gr."
         }
      ],
@@ -3214,7 +3214,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3239,7 +3239,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3264,7 +3264,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3289,7 +3289,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3314,7 +3314,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3339,7 +3339,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3364,7 +3364,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3389,7 +3389,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3414,7 +3414,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3439,7 +3439,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3464,7 +3464,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3489,7 +3489,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3514,7 +3514,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3539,7 +3539,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3564,7 +3564,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3589,7 +3589,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3614,7 +3614,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
@@ -3639,7 +3639,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[0].materials",
+           "checkAttribute":"items[0].paper+gr",
            "value":"Coteado 150gr."
         }
      ],
