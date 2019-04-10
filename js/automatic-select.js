@@ -666,19 +666,25 @@ var getValueFromObjectByReferences = function(object, reference){
   if(returnValue.length>1){
     returnValue = returnValue.join(' ');
   }
-  console.log("Value to evaluate: ");
-  console.log(returnValue);
+
   return returnValue;
 }
 
 var getValueFromObjectByReference = function(object, reference){
+  console.log("Value to evaluate: " + reference);
+  console.log(object);
   if(reference.indexOf("[")>-1){
     var index = reference.substring(reference.indexOf("[")+1, reference.indexOf("]"));
     var reference = reference.substring(0,reference.indexOf("["));
+    console.log("return object");
+    console.log( object[reference][index]);
     return object[reference][index];
-  }else{
+  }else{    
+    console.log("return object");
+    console.log(object[reference]);
     return object[reference];
   }
+
 }
 
 var filterPrices = function(currentCombination,itemNumber){
