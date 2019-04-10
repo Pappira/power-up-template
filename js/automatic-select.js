@@ -664,10 +664,10 @@ var getValueFromObjectByReferences = function(object, reference){
     returnValue.push(getValueFromObjectByReference(JSON.parse(JSON.stringify(object)),reference[i]));
   }
   if(returnValue.length>1){
-    returnValue = returnValue.join(' ');
+    return returnValue.join(' ');
+  }else{
+    return returnValue[0];
   }
-
-  return returnValue;
 }
 
 var getValueFromObjectByReference = function(object, reference){
