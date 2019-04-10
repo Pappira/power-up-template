@@ -644,7 +644,7 @@ var createEstimateAndTrelloCard = function(){
   }
 }
 
-var getValueFromObjectByCompleteReference = function(currentObjectProp, object){generalChecks[t]
+var getValueFromObjectByCompleteReference = function(currentObjectProp, object){
 
   var props = currentObjectProp.split('.');
   var currentObject = JSON.parse(JSON.stringify(object));
@@ -678,7 +678,7 @@ var filterPrices = function(currentCombination,itemNumber){
 
       var priceToCheckValue = v.toCheck.filter(
         function(toCheck){
-          return toCheck.checkAttribute == currentObjectProp
+          return toCheck.checkAttribute == checks[t];
         })[0].value;
 
       if(insideCurrentWork!=priceToCheckValue){
@@ -757,7 +757,7 @@ var createEstimateAndTrelloCard2 = function(){
           delete generalMandatoryFinishGroups[k].finishes.incidences;
         }
       }
-      var priceFiltered;
+      var priceFiltered = [];
       for (var i = -1; i < currentCombination.items.length;i++){
         priceFiltered.push(filterPrices(currentCombination,i));
       }
