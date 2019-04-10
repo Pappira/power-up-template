@@ -643,34 +643,44 @@ var createEstimateAndTrelloCard = function(){
     return work;
   }
 }
-var filterPrices = function(currentCombination){
+
+var getValueFromObjectByCompleteReference = function(currentObjectProp, object){generalChecks[t]
+
+  var props = currentObjectProp.split('.');
+  var currentObject = JSON.parse(JSON.stringify(object));
+  for (var h=0; h < props.length;h++){
+    currentObject = getValueFromObjectByReference(currentObject, props[h]);
+  }
+  return currentObject;
+}
+
+var getValueFromObjectByReference = function(object, reference){
+  if(reference.indexOf("[")>-1){
+    var index = reference.substring(reference.indexOf("[")+1, reference.indexOf("]"));
+    var reference = reference.substring(0,reference.indexOf("["));
+    return object[reference][index];
+  }else{
+    return object[reference];
+  }
+}
+
+var filterPrices = function(currentCombination,itemNumber){
 
   var generalPrices = prices2.filter(function(v, i) {
-    return (v.item == -1);
+    return (v.item == itemNumber);
   })
   
-  var generalChecks = generalPrices[0].toCheck.map(a => a.checkAttribute);
-
+  var checks = generalPrices[0].toCheck.map(a => a.checkAttribute);
 
   return generalPrices.filter(function(v, i) {
-    for (var t = 0; t < generalChecks.length;t++){
-      var currentObjectProp = generalChecks[t];
-      var workProps = currentObjectProp.split('.');
-      var insideCurrentWork = currentCombination;
-      for (var h=0; h < workProps.length;h++){
-        var workProp = workProps[h];
-        if(workProp.indexOf("[")>-1){
-          var index = workProp.substring(workProp.indexOf("[")+1, workProp.indexOf("]"));
-          var workProp = workProp.substring(0,workProp.indexOf("["));
-          insideCurrentWork = insideCurrentWork[workProp][index];
-        }else{
-          insideCurrentWork = insideCurrentWork[workProp];
-        }
-      }
+    for (var t = 0; t < checks.length;t++){
+      var insideCurrentWork = getValueFromObjectByCompleteReference(checks[t], currentCombination);
+
       var priceToCheckValue = v.toCheck.filter(
         function(toCheck){
           return toCheck.checkAttribute == currentObjectProp
         })[0].value;
+
       if(insideCurrentWork!=priceToCheckValue){
         return false;       
       }
@@ -747,8 +757,11 @@ var createEstimateAndTrelloCard2 = function(){
           delete generalMandatoryFinishGroups[k].finishes.incidences;
         }
       }
+      var priceFiltered;
+      for (var i = -1; i < currentCombination.items.length;i++){
+        priceFiltered.push(filterPrices(currentCombination,i));
+      }
 
-      var priceFiltered = filterPrices(currentCombination);
         //hay que agregar al currentCombination todo lo que tenga el work que no tenga el currentCombination y luego agregar el precio y eso agregarlo al work.prices.push()
       
 
