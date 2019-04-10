@@ -510,6 +510,7 @@ var createEstimateAndTrelloCard = function(){
     }
     work['prices'] = [];
     var allCombinations = getCombinations(work);
+    
     possiblePrices = prices.filter(function(v, i) {
       return (v.workId == work.id);
     })
@@ -528,6 +529,221 @@ var createEstimateAndTrelloCard = function(){
       currentPossiblePrices = possiblePrices.filter(function(v, i) {
         return (v.quantity == quantity && JSON.stringify(v.mandatoryFinishGroups) == JSON.stringify(generalMandatoryFinishGroups));
       })
+
+
+
+      for (var j = 0; j < currentCombination.items.length; j++){
+        var currentItem = currentCombination.items[j];
+        var pages = currentItem.pages;
+        var inksQuantity = currentItem.inksQuantity;
+        var inksDetails = currentItem.inksDetails;
+        var openedSize = currentItem.openedSize;
+        var faces = currentItem.faces;
+        var paper = currentItem.paper;
+        var gr = currentItem.gr;
+        var vias = currentItem.quantityOfVias;
+        var mandatoryFinishGroups = currentItem.mandatoryFinishGroups;
+        if(mandatoryFinishGroups){
+          for(var k = 0; k < mandatoryFinishGroups.length;k++){
+            delete mandatoryFinishGroups[k].finishes.incidences;
+          }
+        }
+        currentPossiblePrices = currentPossiblePrices.filter(function(v, i) {
+          return (v.items[j].quantityOfPages == pages && v.items[j].inks.inksQuantity == inksQuantity && 
+            v.items[j].inks.inksDetails == inksDetails && v.items[j].openedSize == openedSize && 
+            v.items[j].faces ==  faces && v.items[j].materials.paper == paper && 
+            v.items[j].materials.gr == gr && v.items[j].quantityOfVias == vias &&
+            JSON.stringify(v.items[j].mandatoryFinishGroups) == JSON.stringify(mandatoryFinishGroups));
+        })
+      }
+      work.prices.push(currentPossiblePrices[0]);
+    }
+    var possibleExtraPrices = extraPrices.filter(function(v, i) {
+      return (v.workId == work.id);
+    });
+
+ 
+    for(var i = 0; i < possibleExtraPrices.length;i++){
+      var possibleExtraPrice = possibleExtraPrices[i];
+      var isPossible = true;
+      for (var prop in possibleExtraPrice) {
+        if (prop != "optionalFinishes" && prop !="items" && prop !="workId"){
+          if(!JSON.stringify(work[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
+            isPossible = false;
+            break;
+          }
+        }else if(prop == "items"){
+          for (var j = 0; j < possibleExtraPrice.items.length; j++){
+            var priceItem = possibleExtraPrice.items[j];
+            var workItem = work.items[j];
+            for (var itemProp in priceItem) {
+              if (itemProp != "optionalFinishes" && itemProp!="id"){
+                if(!JSON.stringify(workItem[itemProp]).includes(JSON.stringify(priceItem[itemProp]))){
+                  isPossible = false;
+                  break;
+                }
+              }
+            }
+          }
+        }
+      }
+      if (isPossible){
+        if (!(work["extraPrices"] && work["extraPrices"].length > 0)){
+          work["extraPrices"] = [];
+        }
+        //tengo que buscar los extra prices que quiero, segun las terminaciones, lo que se hasta ahora es que cumple con las cualidades del trabajo
+        var cutPossibleExtraPrice = JSON.parse(JSON.stringify(possibleExtraPrice)); 
+        var indexToPreserve = [];
+        for (var j = 0; j < work.optionalFinishes.length;j++){
+          for (var k = 0; k < cutPossibleExtraPrice.optionalFinishes.length; k++){
+            if(work.optionalFinishes[j].finish == cutPossibleExtraPrice.optionalFinishes[k].finish){
+              indexToPreserve.push(k);
+              break; 
+            }
+          }
+        }
+        cutPossibleExtraPrice.optionalFinishes = cutArray(cutPossibleExtraPrice.optionalFinishes,indexToPreserve);
+        for(var j= 0; j < work.items.length;j++){
+          indexToPreserve = [];
+          var currentWorkExtraPriceItem = work.items[j];
+          var currentExtraPriceItem;
+          for (var k = 0; k < cutPossibleExtraPrice.items.length;k++){
+            if(currentWorkExtraPriceItem.id == cutPossibleExtraPrice.items[k].id){
+              currentExtraPriceItem = cutPossibleExtraPrice.items[k];
+              break;
+            }
+          }
+          
+          if(currentWorkExtraPriceItem.optionalFinishes && currentExtraPriceItem.optionalFinishes){
+            for (var k = 0; k < currentWorkExtraPriceItem.optionalFinishes.length;k++){
+              for (var q = 0; q < currentExtraPriceItem.optionalFinishes.length;q++){
+                if(currentWorkExtraPriceItem.optionalFinishes[k].finish == currentExtraPriceItem.optionalFinishes[q].finish){
+                  indexToPreserve.push(q);
+                  break; 
+                }
+              }
+            }
+          }
+          if(indexToPreserve && indexToPreserve.length >0){       
+            cutPossibleExtraPrice.items[j].optionalFinishes = cutArray(cutPossibleExtraPrice.items[j].optionalFinishes,indexToPreserve);
+          }
+        }
+        if(!(work["optionalFinishesPrices"] && work["optionalFinishesPrices"].length>0)){
+          work["optionalFinishesPrices"] = [];
+        }
+        work["optionalFinishesPrices"].push(cutPossibleExtraPrice);
+      }
+    }
+
+    estimate = work;
+    delete estimate['image'];
+    delete estimate['quantities'];
+    delete estimate['clossedSizes'];
+    createCard(estimate);
+    return work;
+  }
+}
+
+
+var createEstimateAndTrelloCard2 = function(){
+  var message = checkMandatoryFieldsSelected();
+  if(message.length > 0){
+    window.alert('Debe completar todas las opciones solicitadas \n' + message);
+  }else{
+    var estimate = {};
+    //var work = works[selectedWorkId];
+    if (work.clossedSizes.length > 1){
+      work.clossedSize = cutArray(work.clossedSize,selectedOptions[-1].clossedSize[0]);
+    }else{
+      work.clossedSize = work.clossedSizes[0];
+    }
+    if (work.quantities.length > 1){
+      work.quantity =  cutArray(work.quantities,selectedOptions[-1].quantities);
+    }else{
+      work.quantity = work.quantities;
+    }
+    if(work.mandatoryFinishGroups){
+      for(var i = 0; i < work.mandatoryFinishGroups.length;i++){
+        work.mandatoryFinishGroups[i].finishes = cutArray(work.mandatoryFinishGroups[i].finishes,selectedOptions[-1]["mandatoryFinishGroups " + "// " + i]);
+      }
+    }
+    if (work.optionalFinishes){
+      work.optionalFinishes = cutArray(work.optionalFinishes,selectedOptions[-1].optionalFinishes);
+    }
+   // work.finishes = cutArray(work.finishes,selectedOptions[-1].finishes);
+    for (var i = 0; i < work.items.length;i++){
+      if (work.items[i].quantityOfPages.length>1){
+          work.items[i].quantityOfPages = cutArray(work.items[i].quantityOfPages,selectedOptions[i].quantityOfPages);
+      }
+      if(work.items[i].materials.length>1){
+          work.items[i].materials = cutArray(work.items[i].materials,selectedOptions[i].materials);
+      }
+      if(work.items[i].inks.length>1){
+          work.items[i].inks = cutArray(work.items[i].inks,selectedOptions[i].inks);
+      }
+      if(work.items[i].faces.length>1){
+          work.items[i].faces = cutArray(work.items[i].faces,selectedOptions[i].faces);
+      }
+      if(work.items[i].openedSize.length>1){
+          work.items[i].openedSize = cutArray(work.items[i].openedSize,selectedOptions[i].openedSize);
+      }
+      if(work.items[i].mandatoryFinishGroups){
+        for(var j = 0; j < work.items[i].mandatoryFinishGroups.length;j++){
+          work.items[i].mandatoryFinishGroups[j].finishes = cutArray(work.items[i].mandatoryFinishGroups[j].finishes,selectedOptions[i]["mandatoryFinishGroups " + "// " + j]);
+        }
+      }
+      if (work.items[i].optionalFinishes){
+        work.items[i].optionalFinishes = cutArray(work.items[i].optionalFinishes,selectedOptions[-1].optionalFinishes);
+      }
+    }
+    work['prices'] = [];
+    var allCombinations = getCombinations(work);
+    
+    /*possiblePrices = prices.filter(function(v, i) {
+      return (v.workId == work.id);
+    })*/
+
+    for (var i = 0; i < allCombinations.length;i++){
+      var currentCombination = allCombinations[i];
+      var quantity = currentCombination.quantity;
+      var generalMandatoryFinishGroups = currentCombination.mandatoryFinishGroups;
+
+      if(generalMandatoryFinishGroups){
+        for(var k = 0; k < generalMandatoryFinishGroups.length;k++){
+          delete generalMandatoryFinishGroups[k].finishes.incidences;
+        }
+      }
+
+      var generalPrices = possiblePrices.filter(function(v, i) {
+        return (v.item == -1);
+      })
+      
+      var generalChecks = generalPrices[0].toCheck.map(a => a.checkAttribute);
+
+      for (var t = 0; t < generalChecks.length;t++){
+        var thisCheck = generalChecks[t];
+        generalPrices = generalPrices.filter(function(v, i) {
+          var currentObjectProp = thisCheck;
+          var workProps = currentObjectProp.split('.');
+          var insideCurrentWork = currentCombination;
+          for (var h=0; h < workProps.length;h++){
+            var workProp = workProps[h];
+            if(workProp.indexOf("[")>-1){
+              var index = workProp.substring(workProp.indexOf("[")+1, workProp.indexOf("]"));
+              var workProp = workProp.substring(0,workProp.indexOf("["));
+              insideCurrentWork = insideCurrentWork[workProp][index];
+            }else{
+              insideCurrentWork = insideCurrentWork[workProp];
+            }
+          }
+          if(insideCurrentWork!=currentObject[currentObjectProp]){
+            return false;       
+          }
+          return true;
+        });
+      }
+      //hay que agregar al currentCombination todo lo que tenga el work que no tenga el currentCombination y luego agregar el precio y eso agregarlo al work.prices.push()
+      
 
 
 
