@@ -3668,7 +3668,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3697,7 +3697,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3726,7 +3726,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3755,7 +3755,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3784,7 +3784,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3813,7 +3813,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3842,7 +3842,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3871,7 +3871,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3900,7 +3900,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3929,7 +3929,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3958,7 +3958,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -3987,7 +3987,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4016,7 +4016,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4045,7 +4045,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4074,7 +4074,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4103,7 +4103,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4132,7 +4132,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4161,7 +4161,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4190,7 +4190,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4219,7 +4219,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4248,7 +4248,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4277,7 +4277,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4306,7 +4306,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4335,7 +4335,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4364,7 +4364,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4393,7 +4393,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4422,7 +4422,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4451,7 +4451,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4480,7 +4480,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4509,7 +4509,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4538,7 +4538,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4567,7 +4567,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4596,7 +4596,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4625,7 +4625,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4654,7 +4654,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4683,7 +4683,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4712,7 +4712,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4741,7 +4741,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4770,7 +4770,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4799,7 +4799,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4828,7 +4828,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4857,7 +4857,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4886,7 +4886,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4915,7 +4915,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4944,7 +4944,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -4973,7 +4973,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5002,7 +5002,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5031,7 +5031,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5060,7 +5060,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5089,7 +5089,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5118,7 +5118,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5147,7 +5147,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5176,7 +5176,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5205,7 +5205,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5234,7 +5234,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5263,7 +5263,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5292,7 +5292,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5321,7 +5321,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5350,7 +5350,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5379,7 +5379,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5408,7 +5408,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5437,7 +5437,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5466,7 +5466,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5495,7 +5495,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5524,7 +5524,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5553,7 +5553,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5582,7 +5582,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5611,7 +5611,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5640,7 +5640,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5669,7 +5669,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5698,7 +5698,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5727,7 +5727,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5756,7 +5756,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5785,7 +5785,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5814,7 +5814,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5843,7 +5843,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5872,7 +5872,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5901,7 +5901,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5930,7 +5930,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5959,7 +5959,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -5988,7 +5988,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6017,7 +6017,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6046,7 +6046,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6075,7 +6075,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6104,7 +6104,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6133,7 +6133,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6162,7 +6162,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6191,7 +6191,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6220,7 +6220,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6249,7 +6249,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6278,7 +6278,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6307,7 +6307,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6336,7 +6336,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6365,7 +6365,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6394,7 +6394,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6423,7 +6423,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6452,7 +6452,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6481,7 +6481,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6510,7 +6510,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6539,7 +6539,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6568,7 +6568,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6597,7 +6597,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6626,7 +6626,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6655,7 +6655,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6684,7 +6684,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6713,7 +6713,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6742,7 +6742,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6771,7 +6771,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6800,7 +6800,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6829,7 +6829,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6858,7 +6858,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6887,7 +6887,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6916,7 +6916,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6945,7 +6945,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -6974,7 +6974,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7003,7 +7003,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7032,7 +7032,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7061,7 +7061,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7090,7 +7090,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7119,7 +7119,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7148,7 +7148,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7177,7 +7177,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7206,7 +7206,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7235,7 +7235,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7264,7 +7264,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7293,7 +7293,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7322,7 +7322,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7351,7 +7351,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7380,7 +7380,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7409,7 +7409,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7438,7 +7438,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7467,7 +7467,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7496,7 +7496,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7525,7 +7525,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7554,7 +7554,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7583,7 +7583,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7612,7 +7612,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7641,7 +7641,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7670,7 +7670,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7699,7 +7699,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7728,7 +7728,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7757,7 +7757,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7786,7 +7786,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7815,7 +7815,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7844,7 +7844,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7873,7 +7873,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7902,7 +7902,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7931,7 +7931,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7960,7 +7960,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -7989,7 +7989,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8018,7 +8018,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8047,7 +8047,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8076,7 +8076,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8105,7 +8105,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8134,7 +8134,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8163,7 +8163,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8192,7 +8192,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8221,7 +8221,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8250,7 +8250,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8279,7 +8279,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8308,7 +8308,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8337,7 +8337,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8366,7 +8366,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8395,7 +8395,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8424,7 +8424,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8453,7 +8453,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8482,7 +8482,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8511,7 +8511,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8540,7 +8540,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8569,7 +8569,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8598,7 +8598,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8627,7 +8627,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8656,7 +8656,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8685,7 +8685,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8714,7 +8714,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8743,7 +8743,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8772,7 +8772,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8801,7 +8801,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8830,7 +8830,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8859,7 +8859,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8888,7 +8888,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8917,7 +8917,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8946,7 +8946,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -8975,7 +8975,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9004,7 +9004,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9033,7 +9033,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9062,7 +9062,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9091,7 +9091,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9120,7 +9120,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9149,7 +9149,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9178,7 +9178,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9207,7 +9207,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9236,7 +9236,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9265,7 +9265,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9294,7 +9294,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9323,7 +9323,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9352,7 +9352,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9381,7 +9381,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9410,7 +9410,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9439,7 +9439,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9468,7 +9468,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9497,7 +9497,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9526,7 +9526,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9555,7 +9555,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9584,7 +9584,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9613,7 +9613,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9642,7 +9642,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9671,7 +9671,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9700,7 +9700,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9729,7 +9729,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9758,7 +9758,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9787,7 +9787,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9816,7 +9816,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9845,7 +9845,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9874,7 +9874,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9903,7 +9903,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 80"
         }
      ],
@@ -9932,7 +9932,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -9961,7 +9961,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -9990,7 +9990,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10019,7 +10019,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10048,7 +10048,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10077,7 +10077,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10106,7 +10106,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10135,7 +10135,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10164,7 +10164,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10193,7 +10193,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10222,7 +10222,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10251,7 +10251,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10280,7 +10280,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10309,7 +10309,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10338,7 +10338,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10367,7 +10367,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10396,7 +10396,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10425,7 +10425,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10454,7 +10454,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10483,7 +10483,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10512,7 +10512,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10541,7 +10541,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10570,7 +10570,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10599,7 +10599,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10628,7 +10628,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10657,7 +10657,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10686,7 +10686,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10715,7 +10715,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10744,7 +10744,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10773,7 +10773,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10802,7 +10802,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10831,7 +10831,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10860,7 +10860,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10889,7 +10889,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10918,7 +10918,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10947,7 +10947,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -10976,7 +10976,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11005,7 +11005,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11034,7 +11034,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11063,7 +11063,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11092,7 +11092,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11121,7 +11121,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11150,7 +11150,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11179,7 +11179,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11208,7 +11208,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11237,7 +11237,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11266,7 +11266,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11295,7 +11295,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11324,7 +11324,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11353,7 +11353,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11382,7 +11382,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11411,7 +11411,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11440,7 +11440,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11469,7 +11469,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11498,7 +11498,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11527,7 +11527,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11556,7 +11556,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11585,7 +11585,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11614,7 +11614,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11643,7 +11643,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11672,7 +11672,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11701,7 +11701,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11730,7 +11730,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11759,7 +11759,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11788,7 +11788,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11817,7 +11817,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11846,7 +11846,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11875,7 +11875,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11904,7 +11904,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11933,7 +11933,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11962,7 +11962,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -11991,7 +11991,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12020,7 +12020,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12049,7 +12049,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12078,7 +12078,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12107,7 +12107,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12136,7 +12136,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12165,7 +12165,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12194,7 +12194,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12223,7 +12223,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12252,7 +12252,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12281,7 +12281,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12310,7 +12310,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12339,7 +12339,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12368,7 +12368,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12397,7 +12397,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12426,7 +12426,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12455,7 +12455,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12484,7 +12484,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12513,7 +12513,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12542,7 +12542,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12571,7 +12571,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12600,7 +12600,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12629,7 +12629,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12658,7 +12658,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12687,7 +12687,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12716,7 +12716,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12745,7 +12745,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12774,7 +12774,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12803,7 +12803,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12832,7 +12832,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12861,7 +12861,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12890,7 +12890,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12919,7 +12919,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12948,7 +12948,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -12977,7 +12977,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13006,7 +13006,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13035,7 +13035,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13064,7 +13064,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13093,7 +13093,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13122,7 +13122,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13151,7 +13151,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13180,7 +13180,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13209,7 +13209,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13238,7 +13238,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13267,7 +13267,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13296,7 +13296,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13325,7 +13325,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13354,7 +13354,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13383,7 +13383,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13412,7 +13412,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13441,7 +13441,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13470,7 +13470,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13499,7 +13499,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13528,7 +13528,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13557,7 +13557,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13586,7 +13586,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13615,7 +13615,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13644,7 +13644,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13673,7 +13673,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13702,7 +13702,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13731,7 +13731,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13760,7 +13760,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13789,7 +13789,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13818,7 +13818,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13847,7 +13847,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13876,7 +13876,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13905,7 +13905,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13934,7 +13934,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13963,7 +13963,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -13992,7 +13992,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14021,7 +14021,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14050,7 +14050,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14079,7 +14079,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14108,7 +14108,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14137,7 +14137,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14166,7 +14166,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14195,7 +14195,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14224,7 +14224,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14253,7 +14253,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14282,7 +14282,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14311,7 +14311,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14340,7 +14340,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14369,7 +14369,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14398,7 +14398,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14427,7 +14427,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14456,7 +14456,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14485,7 +14485,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14514,7 +14514,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14543,7 +14543,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14572,7 +14572,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14601,7 +14601,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14630,7 +14630,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14659,7 +14659,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14688,7 +14688,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14717,7 +14717,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14746,7 +14746,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14775,7 +14775,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14804,7 +14804,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14833,7 +14833,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14862,7 +14862,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14891,7 +14891,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14920,7 +14920,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14949,7 +14949,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -14978,7 +14978,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15007,7 +15007,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15036,7 +15036,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15065,7 +15065,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15094,7 +15094,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15123,7 +15123,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15152,7 +15152,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15181,7 +15181,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15210,7 +15210,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15239,7 +15239,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15268,7 +15268,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15297,7 +15297,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15326,7 +15326,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15355,7 +15355,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15384,7 +15384,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15413,7 +15413,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15442,7 +15442,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15471,7 +15471,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15500,7 +15500,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15529,7 +15529,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15558,7 +15558,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15587,7 +15587,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15616,7 +15616,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15645,7 +15645,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15674,7 +15674,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15703,7 +15703,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15732,7 +15732,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15761,7 +15761,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15790,7 +15790,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15819,7 +15819,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15848,7 +15848,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15877,7 +15877,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15906,7 +15906,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15935,7 +15935,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15964,7 +15964,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -15993,7 +15993,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -16022,7 +16022,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -16051,7 +16051,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -16080,7 +16080,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -16109,7 +16109,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -16138,7 +16138,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -16167,7 +16167,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Obra Blacno 90"
         }
      ],
@@ -16196,7 +16196,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16225,7 +16225,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16254,7 +16254,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16283,7 +16283,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16312,7 +16312,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16341,7 +16341,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16370,7 +16370,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16399,7 +16399,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16428,7 +16428,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16457,7 +16457,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16486,7 +16486,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16515,7 +16515,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16544,7 +16544,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16573,7 +16573,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16602,7 +16602,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16631,7 +16631,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16660,7 +16660,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16689,7 +16689,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16718,7 +16718,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16747,7 +16747,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16776,7 +16776,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16805,7 +16805,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16834,7 +16834,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16863,7 +16863,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16892,7 +16892,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16921,7 +16921,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16950,7 +16950,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -16979,7 +16979,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17008,7 +17008,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17037,7 +17037,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17066,7 +17066,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17095,7 +17095,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17124,7 +17124,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17153,7 +17153,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17182,7 +17182,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17211,7 +17211,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17240,7 +17240,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17269,7 +17269,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17298,7 +17298,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17327,7 +17327,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17356,7 +17356,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17385,7 +17385,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17414,7 +17414,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17443,7 +17443,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17472,7 +17472,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17501,7 +17501,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17530,7 +17530,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17559,7 +17559,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17588,7 +17588,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17617,7 +17617,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17646,7 +17646,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17675,7 +17675,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17704,7 +17704,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17733,7 +17733,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17762,7 +17762,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17791,7 +17791,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17820,7 +17820,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17849,7 +17849,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17878,7 +17878,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17907,7 +17907,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17936,7 +17936,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17965,7 +17965,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -17994,7 +17994,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -18023,7 +18023,7 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -18052,7 +18052,7 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -18081,7 +18081,7 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -18110,7 +18110,7 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -18139,7 +18139,7 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -18168,7 +18168,7 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -18197,7 +18197,7 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -18226,7 +18226,7 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
@@ -18255,7 +18255,7 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].paper+items[1].gr",
+           "checkAttribute":"items[1].paper+gr",
            "value":"Rayado estándar 70"
         }
      ],
