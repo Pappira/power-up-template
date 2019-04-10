@@ -695,8 +695,8 @@ var filterPrices = function(currentCombination,itemNumber){
   
   var checks = generalPrices[0].toCheck.map(a => a.checkAttribute);
 
-  return generalPrices.filter(function(v, i) {
-    for (var t = 0; t < checks.length;t++){
+  for (var t = 0; t < checks.length;t++){
+    generalPrices = generalPrices.filter(function(v, i) {
       var insideCurrentWork = getValueFromObjectByCompleteReference(checks[t], JSON.parse(JSON.stringify(currentCombination)));
 
       var priceToCheckValue = v.toCheck.filter(
@@ -707,9 +707,10 @@ var filterPrices = function(currentCombination,itemNumber){
       if(insideCurrentWork!=priceToCheckValue){
         return false;       
       }
-    }
-    return true;
-  });
+      return true;
+    });
+  }
+  return generalPrices;
 }
 
 var createEstimateAndTrelloCard2 = function(){
