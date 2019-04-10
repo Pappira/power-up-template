@@ -706,6 +706,8 @@ var createEstimateAndTrelloCard2 = function(){
     }else{
       work.quantity = work.quantities;
     }
+    console.log(work)
+ 
     if(work.mandatoryFinishGroups){
       for(var i = 0; i < work.mandatoryFinishGroups.length;i++){
         work.mandatoryFinishGroups[i].finishes = cutArray(work.mandatoryFinishGroups[i].finishes,selectedOptions[-1]["mandatoryFinishGroups " + "// " + i]);
