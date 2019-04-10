@@ -671,17 +671,11 @@ var getValueFromObjectByReferences = function(object, reference){
 }
 
 var getValueFromObjectByReference = function(object, reference){
-  console.log("Value to evaluate: " + reference);
-  console.log(object);
   if(reference.indexOf("[")>-1){
     var index = reference.substring(reference.indexOf("[")+1, reference.indexOf("]"));
     var reference = reference.substring(0,reference.indexOf("["));
-    console.log("return object");
-    console.log( object[reference][index]);
     return object[reference][index];
   }else{    
-    console.log("return object");
-    console.log(object[reference]);
     return object[reference];
   }
 
@@ -730,7 +724,6 @@ var createEstimateAndTrelloCard2 = function(){
     }else{
       work.quantity = work.quantities;
     }
-    console.log(work);
  
     if(work.mandatoryFinishGroups){
       for(var i = 0; i < work.mandatoryFinishGroups.length;i++){
@@ -770,7 +763,6 @@ var createEstimateAndTrelloCard2 = function(){
     
     var allCombinations = getCombinations(work);
     
-    console.log(allCombinations);
     /*possiblePrices = prices.filter(function(v, i) {
       return (v.workId == work.id);
     })*/
@@ -785,12 +777,9 @@ var createEstimateAndTrelloCard2 = function(){
           delete generalMandatoryFinishGroups[k].finishes.incidences;
         }
       }
-      console.log(currentCombination);
       var priceFiltered = [];
       for (var i = -1; i < currentCombination.items.length;i++){
         priceFiltered.push(filterPrices(JSON.parse(JSON.stringify(currentCombination)),i));
-        console.log("for " + i + "currentCombination");
-        console.log(currentCombination);
       }
 
         //hay que agregar al currentCombination todo lo que tenga el work que no tenga el currentCombination y luego agregar el precio y eso agregarlo al work.prices.push()

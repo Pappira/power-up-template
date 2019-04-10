@@ -3669,7 +3669,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3698,7 +3698,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3727,7 +3727,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3756,7 +3756,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3785,7 +3785,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3814,7 +3814,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3843,7 +3843,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3872,7 +3872,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3901,7 +3901,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3930,7 +3930,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3959,7 +3959,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -3988,7 +3988,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4017,7 +4017,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4046,7 +4046,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4075,7 +4075,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4104,7 +4104,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4133,7 +4133,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4162,7 +4162,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4191,7 +4191,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4220,7 +4220,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4249,7 +4249,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4278,7 +4278,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4307,7 +4307,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4336,7 +4336,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4365,7 +4365,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4394,7 +4394,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4423,7 +4423,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4452,7 +4452,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4481,7 +4481,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4510,7 +4510,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4539,7 +4539,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4568,7 +4568,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4597,7 +4597,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4626,7 +4626,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4655,7 +4655,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4684,7 +4684,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4713,7 +4713,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4742,7 +4742,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4771,7 +4771,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4800,7 +4800,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4829,7 +4829,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4858,7 +4858,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4887,7 +4887,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4916,7 +4916,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4945,7 +4945,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -4974,7 +4974,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5003,7 +5003,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5032,7 +5032,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5061,7 +5061,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5090,7 +5090,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5119,7 +5119,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5148,7 +5148,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5177,7 +5177,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5206,7 +5206,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5235,7 +5235,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5264,7 +5264,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5293,7 +5293,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5322,7 +5322,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5351,7 +5351,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5380,7 +5380,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5409,7 +5409,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5438,7 +5438,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5467,7 +5467,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5496,7 +5496,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5525,7 +5525,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5554,7 +5554,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5583,7 +5583,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5612,7 +5612,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5641,7 +5641,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5670,7 +5670,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5699,7 +5699,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5728,7 +5728,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5757,7 +5757,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5786,7 +5786,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5815,7 +5815,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5844,7 +5844,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5873,7 +5873,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5902,7 +5902,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5931,7 +5931,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5960,7 +5960,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -5989,7 +5989,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6018,7 +6018,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6047,7 +6047,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6076,7 +6076,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6105,7 +6105,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6134,7 +6134,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6163,7 +6163,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6192,7 +6192,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6221,7 +6221,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6250,7 +6250,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6279,7 +6279,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6308,7 +6308,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6337,7 +6337,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6366,7 +6366,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6395,7 +6395,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6424,7 +6424,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6453,7 +6453,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6482,7 +6482,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6511,7 +6511,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6540,7 +6540,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6569,7 +6569,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6598,7 +6598,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6627,7 +6627,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6656,7 +6656,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6685,7 +6685,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6714,7 +6714,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6743,7 +6743,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6772,7 +6772,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6801,7 +6801,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6830,7 +6830,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6859,7 +6859,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6888,7 +6888,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6917,7 +6917,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6946,7 +6946,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -6975,7 +6975,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7004,7 +7004,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7033,7 +7033,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7062,7 +7062,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7091,7 +7091,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7120,7 +7120,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7149,7 +7149,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7178,7 +7178,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7207,7 +7207,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7236,7 +7236,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7265,7 +7265,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7294,7 +7294,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7323,7 +7323,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7352,7 +7352,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7381,7 +7381,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7410,7 +7410,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7439,7 +7439,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7468,7 +7468,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7497,7 +7497,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7526,7 +7526,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7555,7 +7555,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7584,7 +7584,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7613,7 +7613,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7642,7 +7642,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7671,7 +7671,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7700,7 +7700,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7729,7 +7729,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7758,7 +7758,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7787,7 +7787,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7816,7 +7816,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7845,7 +7845,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7874,7 +7874,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7903,7 +7903,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7932,7 +7932,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7961,7 +7961,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -7990,7 +7990,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8019,7 +8019,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8048,7 +8048,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8077,7 +8077,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8106,7 +8106,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8135,7 +8135,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8164,7 +8164,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8193,7 +8193,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8222,7 +8222,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8251,7 +8251,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8280,7 +8280,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8309,7 +8309,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8338,7 +8338,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8367,7 +8367,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8396,7 +8396,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8425,7 +8425,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8454,7 +8454,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8483,7 +8483,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8512,7 +8512,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8541,7 +8541,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8570,7 +8570,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8599,7 +8599,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8628,7 +8628,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8657,7 +8657,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8686,7 +8686,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8715,7 +8715,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8744,7 +8744,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8773,7 +8773,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8802,7 +8802,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8831,7 +8831,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8860,7 +8860,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8889,7 +8889,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8918,7 +8918,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8947,7 +8947,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -8976,7 +8976,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9005,7 +9005,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9034,7 +9034,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9063,7 +9063,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9092,7 +9092,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9121,7 +9121,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9150,7 +9150,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9179,7 +9179,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9208,7 +9208,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9237,7 +9237,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9266,7 +9266,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9295,7 +9295,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9324,7 +9324,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9353,7 +9353,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9382,7 +9382,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9411,7 +9411,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9440,7 +9440,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9469,7 +9469,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9498,7 +9498,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9527,7 +9527,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9556,7 +9556,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9585,7 +9585,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9614,7 +9614,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9643,7 +9643,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9672,7 +9672,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9701,7 +9701,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9730,7 +9730,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9759,7 +9759,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9788,7 +9788,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9817,7 +9817,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9846,7 +9846,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9875,7 +9875,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
@@ -9904,7 +9904,7 @@ var prices2 = [
         },
         {
            "checkAttribute":"items[1].paper+gr",
-           "value":"Obra Blacno 80"
+           "value":"Obra Blanco 80"
         }
      ],
      "price":{
