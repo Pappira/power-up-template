@@ -643,7 +643,41 @@ var createEstimateAndTrelloCard = function(){
     return work;
   }
 }
+var filterPrices = function(currentCombination){
 
+  var generalPrices = prices2.filter(function(v, i) {
+    return (v.item == -1);
+  })
+  
+  var generalChecks = generalPrices[0].toCheck.map(a => a.checkAttribute);
+
+
+  return generalPrices.filter(function(v, i) {
+    for (var t = 0; t < generalChecks.length;t++){
+      var currentObjectProp = generalChecks[t];
+      var workProps = currentObjectProp.split('.');
+      var insideCurrentWork = currentCombination;
+      for (var h=0; h < workProps.length;h++){
+        var workProp = workProps[h];
+        if(workProp.indexOf("[")>-1){
+          var index = workProp.substring(workProp.indexOf("[")+1, workProp.indexOf("]"));
+          var workProp = workProp.substring(0,workProp.indexOf("["));
+          insideCurrentWork = insideCurrentWork[workProp][index];
+        }else{
+          insideCurrentWork = insideCurrentWork[workProp];
+        }
+      }
+      var priceToCheckValue = v.toCheck.filter(
+        function(toCheck){
+          return toCheck.checkAttribute == currentObjectProp
+        })[0].value;
+      if(insideCurrentWork!=priceToCheckValue){
+        return false;       
+      }
+    }
+    return true;
+  });
+}
 
 var createEstimateAndTrelloCard2 = function(){
   var message = checkMandatoryFieldsSelected();
@@ -714,38 +748,7 @@ var createEstimateAndTrelloCard2 = function(){
         }
       }
 
-      var generalPrices = prices2.filter(function(v, i) {
-        return (v.item == -1);
-      })
-      
-      var generalChecks = generalPrices[0].toCheck.map(a => a.checkAttribute);
-
-
-        generalPrices = generalPrices.filter(function(v, i) {
-          for (var t = 0; t < generalChecks.length;t++){
-            var currentObjectProp = generalChecks[t];
-            var workProps = currentObjectProp.split('.');
-            var insideCurrentWork = currentCombination;
-            for (var h=0; h < workProps.length;h++){
-              var workProp = workProps[h];
-              if(workProp.indexOf("[")>-1){
-                var index = workProp.substring(workProp.indexOf("[")+1, workProp.indexOf("]"));
-                var workProp = workProp.substring(0,workProp.indexOf("["));
-                insideCurrentWork = insideCurrentWork[workProp][index];
-              }else{
-                insideCurrentWork = insideCurrentWork[workProp];
-              }
-            }
-            var priceToCheckValue = v.toCheck.filter(
-              function(toCheck){
-                return toCheck.checkAttribute == currentObjectProp
-              })[0].value;
-            if(insideCurrentWork!=priceToCheckValue){
-              return false;       
-            }
-          }
-          return true;
-        });
+      var priceFiltered = filterPrices(currentCombination);
         //hay que agregar al currentCombination todo lo que tenga el work que no tenga el currentCombination y luego agregar el precio y eso agregarlo al work.prices.push()
       
 
