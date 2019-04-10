@@ -706,7 +706,7 @@ var createEstimateAndTrelloCard2 = function(){
     }else{
       work.quantity = work.quantities;
     }
-    console.log(work)
+    console.log(work);
  
     if(work.mandatoryFinishGroups){
       for(var i = 0; i < work.mandatoryFinishGroups.length;i++){
@@ -743,8 +743,10 @@ var createEstimateAndTrelloCard2 = function(){
       }
     }
     work['prices'] = [];
+    
     var allCombinations = getCombinations(work);
     
+    console.log(allCombinations);
     /*possiblePrices = prices.filter(function(v, i) {
       return (v.workId == work.id);
     })*/
@@ -759,6 +761,7 @@ var createEstimateAndTrelloCard2 = function(){
           delete generalMandatoryFinishGroups[k].finishes.incidences;
         }
       }
+      console.log(currentCombination);
       var priceFiltered = [];
       for (var i = -1; i < currentCombination.items.length;i++){
         priceFiltered.push(filterPrices(currentCombination,i));
