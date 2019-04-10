@@ -3652,7 +3652,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3668,8 +3668,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3681,7 +3681,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3697,8 +3697,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3710,7 +3710,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3726,8 +3726,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3739,7 +3739,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3755,8 +3755,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3768,7 +3768,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3784,8 +3784,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3797,7 +3797,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3813,8 +3813,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3826,7 +3826,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3842,8 +3842,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3855,7 +3855,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3871,8 +3871,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3884,7 +3884,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3900,8 +3900,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3913,7 +3913,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3929,8 +3929,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3942,7 +3942,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3958,8 +3958,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -3971,7 +3971,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -3987,8 +3987,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4000,7 +4000,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4016,8 +4016,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4029,7 +4029,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4045,8 +4045,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4058,7 +4058,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4074,8 +4074,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4087,7 +4087,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4103,8 +4103,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4116,7 +4116,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4132,8 +4132,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4145,7 +4145,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4161,8 +4161,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4174,7 +4174,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4190,8 +4190,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4203,7 +4203,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4219,8 +4219,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4232,7 +4232,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4248,8 +4248,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4261,7 +4261,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4277,8 +4277,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4290,7 +4290,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4306,8 +4306,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4319,7 +4319,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4335,8 +4335,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4348,7 +4348,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4364,8 +4364,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4377,7 +4377,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4393,8 +4393,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4406,7 +4406,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4422,8 +4422,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4435,7 +4435,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4451,8 +4451,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4464,7 +4464,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4480,8 +4480,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4493,7 +4493,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4509,8 +4509,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4522,7 +4522,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4538,8 +4538,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4551,7 +4551,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4567,8 +4567,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4580,7 +4580,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4596,8 +4596,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4609,7 +4609,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4625,8 +4625,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4638,7 +4638,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4654,8 +4654,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4667,7 +4667,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4683,8 +4683,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4696,7 +4696,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4712,8 +4712,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4725,7 +4725,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4741,8 +4741,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4754,7 +4754,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4770,8 +4770,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4783,7 +4783,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4799,8 +4799,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4812,7 +4812,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4828,8 +4828,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4841,7 +4841,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4857,8 +4857,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4870,7 +4870,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4886,8 +4886,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4899,7 +4899,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4915,8 +4915,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4928,7 +4928,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4944,8 +4944,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4957,7 +4957,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -4973,8 +4973,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -4986,7 +4986,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5002,8 +5002,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5015,7 +5015,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5031,8 +5031,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5044,7 +5044,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5060,8 +5060,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5073,7 +5073,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5089,8 +5089,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5102,7 +5102,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5118,8 +5118,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5131,7 +5131,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5147,8 +5147,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5160,7 +5160,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5176,8 +5176,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5189,7 +5189,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5205,8 +5205,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5218,7 +5218,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5234,8 +5234,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5247,7 +5247,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5263,8 +5263,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5276,7 +5276,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5292,8 +5292,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5305,7 +5305,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5321,8 +5321,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5334,7 +5334,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5350,8 +5350,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5363,7 +5363,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5379,8 +5379,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5392,7 +5392,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5408,8 +5408,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5421,7 +5421,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5437,8 +5437,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5450,7 +5450,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5466,8 +5466,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5479,7 +5479,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5495,8 +5495,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5508,7 +5508,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5524,8 +5524,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5537,7 +5537,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5553,8 +5553,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5566,7 +5566,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5582,8 +5582,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5595,7 +5595,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5611,8 +5611,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5624,7 +5624,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5640,8 +5640,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5653,7 +5653,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5669,8 +5669,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5682,7 +5682,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5698,8 +5698,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5711,7 +5711,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -5727,8 +5727,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5740,7 +5740,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -5756,8 +5756,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5769,7 +5769,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -5785,8 +5785,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5798,7 +5798,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -5814,8 +5814,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5827,7 +5827,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -5843,8 +5843,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5856,7 +5856,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -5872,8 +5872,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5885,7 +5885,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -5901,8 +5901,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5914,7 +5914,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -5930,8 +5930,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5943,7 +5943,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -5959,8 +5959,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -5972,7 +5972,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -5988,8 +5988,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6001,7 +6001,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6017,8 +6017,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6030,7 +6030,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6046,8 +6046,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6059,7 +6059,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6075,8 +6075,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6088,7 +6088,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6104,8 +6104,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6117,7 +6117,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6133,8 +6133,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6146,7 +6146,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6162,8 +6162,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6175,7 +6175,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6191,8 +6191,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6204,7 +6204,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6220,8 +6220,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6233,7 +6233,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6249,8 +6249,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6262,7 +6262,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6278,8 +6278,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6291,7 +6291,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6307,8 +6307,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6320,7 +6320,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6336,8 +6336,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6349,7 +6349,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6365,8 +6365,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6378,7 +6378,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6394,8 +6394,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6407,7 +6407,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6423,8 +6423,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6436,7 +6436,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6452,8 +6452,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6465,7 +6465,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6481,8 +6481,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6494,7 +6494,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6510,8 +6510,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6523,7 +6523,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6539,8 +6539,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6552,7 +6552,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6568,8 +6568,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6581,7 +6581,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6597,8 +6597,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6610,7 +6610,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6626,8 +6626,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6639,7 +6639,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6655,8 +6655,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6668,7 +6668,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6684,8 +6684,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6697,7 +6697,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6713,8 +6713,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6726,7 +6726,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6742,8 +6742,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6755,7 +6755,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6771,8 +6771,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6784,7 +6784,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6800,8 +6800,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6813,7 +6813,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6829,8 +6829,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6842,7 +6842,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6858,8 +6858,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6871,7 +6871,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6887,8 +6887,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6900,7 +6900,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6916,8 +6916,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6929,7 +6929,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6945,8 +6945,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6958,7 +6958,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -6974,8 +6974,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -6987,7 +6987,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7003,8 +7003,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7016,7 +7016,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7032,8 +7032,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7045,7 +7045,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7061,8 +7061,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7074,7 +7074,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7090,8 +7090,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7103,7 +7103,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7119,8 +7119,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7132,7 +7132,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7148,8 +7148,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7161,7 +7161,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7177,8 +7177,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7190,7 +7190,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7206,8 +7206,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7219,7 +7219,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7235,8 +7235,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7248,7 +7248,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7264,8 +7264,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7277,7 +7277,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7293,8 +7293,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7306,7 +7306,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7322,8 +7322,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7335,7 +7335,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7351,8 +7351,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7364,7 +7364,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7380,8 +7380,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7393,7 +7393,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7409,8 +7409,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7422,7 +7422,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7438,8 +7438,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7451,7 +7451,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7467,8 +7467,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7480,7 +7480,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7496,8 +7496,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7509,7 +7509,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7525,8 +7525,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7538,7 +7538,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7554,8 +7554,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7567,7 +7567,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7583,8 +7583,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7596,7 +7596,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7612,8 +7612,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7625,7 +7625,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7641,8 +7641,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7654,7 +7654,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7670,8 +7670,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7683,7 +7683,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7699,8 +7699,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7712,7 +7712,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7728,8 +7728,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7741,7 +7741,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7757,8 +7757,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7770,7 +7770,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7786,8 +7786,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7799,7 +7799,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -7815,8 +7815,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7828,7 +7828,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -7844,8 +7844,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7857,7 +7857,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -7873,8 +7873,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7886,7 +7886,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -7902,8 +7902,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7915,7 +7915,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -7931,8 +7931,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7944,7 +7944,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -7960,8 +7960,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -7973,7 +7973,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -7989,8 +7989,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8002,7 +8002,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8018,8 +8018,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8031,7 +8031,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8047,8 +8047,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8060,7 +8060,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8076,8 +8076,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8089,7 +8089,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8105,8 +8105,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8118,7 +8118,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8134,8 +8134,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8147,7 +8147,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8163,8 +8163,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8176,7 +8176,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8192,8 +8192,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8205,7 +8205,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8221,8 +8221,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8234,7 +8234,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8250,8 +8250,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8263,7 +8263,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8279,8 +8279,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8292,7 +8292,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8308,8 +8308,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8321,7 +8321,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8337,8 +8337,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8350,7 +8350,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8366,8 +8366,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8379,7 +8379,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8395,8 +8395,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8408,7 +8408,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8424,8 +8424,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8437,7 +8437,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8453,8 +8453,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8466,7 +8466,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8482,8 +8482,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8495,7 +8495,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8511,8 +8511,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8524,7 +8524,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8540,8 +8540,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8553,7 +8553,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8569,8 +8569,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8582,7 +8582,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8598,8 +8598,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8611,7 +8611,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8627,8 +8627,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8640,7 +8640,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8656,8 +8656,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8669,7 +8669,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8685,8 +8685,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8698,7 +8698,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8714,8 +8714,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8727,7 +8727,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8743,8 +8743,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8756,7 +8756,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8772,8 +8772,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8785,7 +8785,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8801,8 +8801,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8814,7 +8814,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8830,8 +8830,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8843,7 +8843,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8859,8 +8859,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8872,7 +8872,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8888,8 +8888,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8901,7 +8901,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8917,8 +8917,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8930,7 +8930,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8946,8 +8946,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8959,7 +8959,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -8975,8 +8975,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -8988,7 +8988,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9004,8 +9004,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9017,7 +9017,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9033,8 +9033,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9046,7 +9046,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9062,8 +9062,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9075,7 +9075,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9091,8 +9091,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9104,7 +9104,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9120,8 +9120,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9133,7 +9133,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9149,8 +9149,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9162,7 +9162,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9178,8 +9178,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9191,7 +9191,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9207,8 +9207,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9220,7 +9220,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9236,8 +9236,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9249,7 +9249,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9265,8 +9265,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9278,7 +9278,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9294,8 +9294,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9307,7 +9307,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9323,8 +9323,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9336,7 +9336,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9352,8 +9352,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9365,7 +9365,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9381,8 +9381,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9394,7 +9394,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9410,8 +9410,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9423,7 +9423,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9439,8 +9439,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9452,7 +9452,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9468,8 +9468,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9481,7 +9481,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9497,8 +9497,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9510,7 +9510,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9526,8 +9526,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9539,7 +9539,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9555,8 +9555,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9568,7 +9568,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9584,8 +9584,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9597,7 +9597,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9613,8 +9613,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9626,7 +9626,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9642,8 +9642,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9655,7 +9655,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9671,8 +9671,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9684,7 +9684,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9700,8 +9700,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9713,7 +9713,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9729,8 +9729,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9742,7 +9742,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9758,8 +9758,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9771,7 +9771,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9787,8 +9787,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9800,7 +9800,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9816,8 +9816,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9829,7 +9829,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9845,8 +9845,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9858,7 +9858,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9874,8 +9874,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9887,7 +9887,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -9903,8 +9903,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 80gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 80"
         }
      ],
      "price":{
@@ -9916,7 +9916,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -9932,8 +9932,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -9945,7 +9945,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -9961,8 +9961,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -9974,7 +9974,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -9990,8 +9990,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10003,7 +10003,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10019,8 +10019,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10032,7 +10032,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10048,8 +10048,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10061,7 +10061,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10077,8 +10077,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10090,7 +10090,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10106,8 +10106,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10119,7 +10119,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10135,8 +10135,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10148,7 +10148,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10164,8 +10164,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10177,7 +10177,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10193,8 +10193,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10206,7 +10206,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10222,8 +10222,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10235,7 +10235,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10251,8 +10251,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10264,7 +10264,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10280,8 +10280,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10293,7 +10293,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10309,8 +10309,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10322,7 +10322,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10338,8 +10338,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10351,7 +10351,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10367,8 +10367,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10380,7 +10380,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10396,8 +10396,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10409,7 +10409,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10425,8 +10425,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10438,7 +10438,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10454,8 +10454,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10467,7 +10467,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10483,8 +10483,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10496,7 +10496,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10512,8 +10512,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10525,7 +10525,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10541,8 +10541,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10554,7 +10554,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10570,8 +10570,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10583,7 +10583,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10599,8 +10599,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10612,7 +10612,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10628,8 +10628,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10641,7 +10641,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10657,8 +10657,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10670,7 +10670,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10686,8 +10686,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10699,7 +10699,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10715,8 +10715,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10728,7 +10728,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10744,8 +10744,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10757,7 +10757,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10773,8 +10773,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10786,7 +10786,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10802,8 +10802,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10815,7 +10815,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10831,8 +10831,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10844,7 +10844,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10860,8 +10860,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10873,7 +10873,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10889,8 +10889,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10902,7 +10902,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10918,8 +10918,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10931,7 +10931,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10947,8 +10947,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10960,7 +10960,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -10976,8 +10976,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -10989,7 +10989,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11005,8 +11005,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11018,7 +11018,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11034,8 +11034,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11047,7 +11047,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11063,8 +11063,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11076,7 +11076,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11092,8 +11092,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11105,7 +11105,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11121,8 +11121,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11134,7 +11134,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11150,8 +11150,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11163,7 +11163,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11179,8 +11179,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11192,7 +11192,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11208,8 +11208,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11221,7 +11221,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11237,8 +11237,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11250,7 +11250,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11266,8 +11266,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11279,7 +11279,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11295,8 +11295,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11308,7 +11308,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11324,8 +11324,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11337,7 +11337,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11353,8 +11353,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11366,7 +11366,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11382,8 +11382,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11395,7 +11395,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11411,8 +11411,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11424,7 +11424,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11440,8 +11440,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11453,7 +11453,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11469,8 +11469,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11482,7 +11482,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11498,8 +11498,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11511,7 +11511,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11527,8 +11527,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11540,7 +11540,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11556,8 +11556,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11569,7 +11569,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11585,8 +11585,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11598,7 +11598,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11614,8 +11614,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11627,7 +11627,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11643,8 +11643,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11656,7 +11656,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11672,8 +11672,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11685,7 +11685,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11701,8 +11701,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11714,7 +11714,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11730,8 +11730,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11743,7 +11743,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11759,8 +11759,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11772,7 +11772,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11788,8 +11788,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11801,7 +11801,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11817,8 +11817,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11830,7 +11830,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11846,8 +11846,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11859,7 +11859,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11875,8 +11875,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11888,7 +11888,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11904,8 +11904,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11917,7 +11917,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11933,8 +11933,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11946,7 +11946,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11962,8 +11962,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -11975,7 +11975,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -11991,8 +11991,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12004,7 +12004,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12020,8 +12020,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12033,7 +12033,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12049,8 +12049,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12062,7 +12062,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12078,8 +12078,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12091,7 +12091,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12107,8 +12107,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12120,7 +12120,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12136,8 +12136,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12149,7 +12149,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12165,8 +12165,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12178,7 +12178,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12194,8 +12194,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12207,7 +12207,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12223,8 +12223,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12236,7 +12236,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12252,8 +12252,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12265,7 +12265,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12281,8 +12281,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12294,7 +12294,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12310,8 +12310,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12323,7 +12323,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12339,8 +12339,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12352,7 +12352,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12368,8 +12368,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12381,7 +12381,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12397,8 +12397,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12410,7 +12410,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12426,8 +12426,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12439,7 +12439,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12455,8 +12455,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12468,7 +12468,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12484,8 +12484,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12497,7 +12497,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12513,8 +12513,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12526,7 +12526,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12542,8 +12542,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12555,7 +12555,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12571,8 +12571,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12584,7 +12584,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12600,8 +12600,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12613,7 +12613,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12629,8 +12629,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12642,7 +12642,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12658,8 +12658,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12671,7 +12671,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12687,8 +12687,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12700,7 +12700,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12716,8 +12716,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12729,7 +12729,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12745,8 +12745,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12758,7 +12758,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12774,8 +12774,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12787,7 +12787,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12803,8 +12803,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12816,7 +12816,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12832,8 +12832,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12845,7 +12845,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12861,8 +12861,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12874,7 +12874,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12890,8 +12890,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12903,7 +12903,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12919,8 +12919,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12932,7 +12932,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12948,8 +12948,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12961,7 +12961,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -12977,8 +12977,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -12990,7 +12990,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13006,8 +13006,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13019,7 +13019,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13035,8 +13035,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13048,7 +13048,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13064,8 +13064,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13077,7 +13077,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13093,8 +13093,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13106,7 +13106,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13122,8 +13122,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13135,7 +13135,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13151,8 +13151,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13164,7 +13164,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13180,8 +13180,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13193,7 +13193,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13209,8 +13209,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13222,7 +13222,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13238,8 +13238,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13251,7 +13251,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13267,8 +13267,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13280,7 +13280,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13296,8 +13296,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13309,7 +13309,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13325,8 +13325,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13338,7 +13338,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13354,8 +13354,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13367,7 +13367,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13383,8 +13383,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13396,7 +13396,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13412,8 +13412,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13425,7 +13425,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13441,8 +13441,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13454,7 +13454,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13470,8 +13470,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13483,7 +13483,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13499,8 +13499,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13512,7 +13512,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13528,8 +13528,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13541,7 +13541,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13557,8 +13557,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13570,7 +13570,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13586,8 +13586,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13599,7 +13599,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13615,8 +13615,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13628,7 +13628,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13644,8 +13644,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13657,7 +13657,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13673,8 +13673,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13686,7 +13686,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13702,8 +13702,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13715,7 +13715,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13731,8 +13731,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13744,7 +13744,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13760,8 +13760,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13773,7 +13773,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13789,8 +13789,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13802,7 +13802,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13818,8 +13818,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13831,7 +13831,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13847,8 +13847,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13860,7 +13860,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13876,8 +13876,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13889,7 +13889,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13905,8 +13905,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13918,7 +13918,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13934,8 +13934,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13947,7 +13947,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13963,8 +13963,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -13976,7 +13976,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -13992,8 +13992,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14005,7 +14005,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -14021,8 +14021,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14034,7 +14034,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -14050,8 +14050,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14063,7 +14063,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
         {
@@ -14079,8 +14079,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14092,7 +14092,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14108,8 +14108,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14121,7 +14121,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14137,8 +14137,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14150,7 +14150,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14166,8 +14166,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14179,7 +14179,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14195,8 +14195,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14208,7 +14208,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14224,8 +14224,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14237,7 +14237,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14253,8 +14253,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14266,7 +14266,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14282,8 +14282,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14295,7 +14295,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14311,8 +14311,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14324,7 +14324,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14340,8 +14340,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14353,7 +14353,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14369,8 +14369,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14382,7 +14382,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14398,8 +14398,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14411,7 +14411,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14427,8 +14427,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14440,7 +14440,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14456,8 +14456,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14469,7 +14469,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14485,8 +14485,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14498,7 +14498,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14514,8 +14514,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14527,7 +14527,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14543,8 +14543,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14556,7 +14556,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14572,8 +14572,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14585,7 +14585,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14601,8 +14601,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14614,7 +14614,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14630,8 +14630,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14643,7 +14643,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14659,8 +14659,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14672,7 +14672,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14688,8 +14688,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14701,7 +14701,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14717,8 +14717,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14730,7 +14730,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14746,8 +14746,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14759,7 +14759,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14775,8 +14775,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14788,7 +14788,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14804,8 +14804,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14817,7 +14817,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14833,8 +14833,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14846,7 +14846,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14862,8 +14862,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14875,7 +14875,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14891,8 +14891,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14904,7 +14904,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14920,8 +14920,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14933,7 +14933,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14949,8 +14949,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14962,7 +14962,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -14978,8 +14978,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -14991,7 +14991,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15007,8 +15007,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15020,7 +15020,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15036,8 +15036,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15049,7 +15049,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15065,8 +15065,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15078,7 +15078,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15094,8 +15094,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15107,7 +15107,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15123,8 +15123,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15136,7 +15136,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15152,8 +15152,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15165,7 +15165,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15181,8 +15181,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15194,7 +15194,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15210,8 +15210,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15223,7 +15223,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15239,8 +15239,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15252,7 +15252,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15268,8 +15268,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15281,7 +15281,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15297,8 +15297,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15310,7 +15310,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15326,8 +15326,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15339,7 +15339,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15355,8 +15355,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15368,7 +15368,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15384,8 +15384,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15397,7 +15397,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15413,8 +15413,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15426,7 +15426,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15442,8 +15442,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15455,7 +15455,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15471,8 +15471,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15484,7 +15484,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15500,8 +15500,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15513,7 +15513,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15529,8 +15529,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15542,7 +15542,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15558,8 +15558,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15571,7 +15571,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15587,8 +15587,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15600,7 +15600,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15616,8 +15616,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15629,7 +15629,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15645,8 +15645,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15658,7 +15658,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15674,8 +15674,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15687,7 +15687,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15703,8 +15703,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15716,7 +15716,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15732,8 +15732,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15745,7 +15745,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15761,8 +15761,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15774,7 +15774,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15790,8 +15790,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15803,7 +15803,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15819,8 +15819,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15832,7 +15832,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15848,8 +15848,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15861,7 +15861,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15877,8 +15877,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15890,7 +15890,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15906,8 +15906,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15919,7 +15919,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15935,8 +15935,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15948,7 +15948,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15964,8 +15964,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -15977,7 +15977,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -15993,8 +15993,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -16006,7 +16006,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -16022,8 +16022,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -16035,7 +16035,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -16051,8 +16051,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -16064,7 +16064,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -16080,8 +16080,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -16093,7 +16093,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -16109,8 +16109,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -16122,7 +16122,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -16138,8 +16138,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -16151,7 +16151,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
         {
@@ -16167,8 +16167,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Obra Blacno 90gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Obra Blacno 90"
         }
      ],
      "price":{
@@ -16180,7 +16180,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16196,8 +16196,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16209,7 +16209,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16225,8 +16225,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16238,7 +16238,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16254,8 +16254,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16267,7 +16267,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16283,8 +16283,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16296,7 +16296,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16312,8 +16312,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16325,7 +16325,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16341,8 +16341,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16354,7 +16354,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16370,8 +16370,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16383,7 +16383,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16399,8 +16399,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16412,7 +16412,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16428,8 +16428,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16441,7 +16441,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16457,8 +16457,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16470,7 +16470,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16486,8 +16486,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16499,7 +16499,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16515,8 +16515,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16528,7 +16528,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16544,8 +16544,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16557,7 +16557,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16573,8 +16573,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16586,7 +16586,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16602,8 +16602,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16615,7 +16615,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16631,8 +16631,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16644,7 +16644,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16660,8 +16660,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16673,7 +16673,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16689,8 +16689,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16702,7 +16702,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16718,8 +16718,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16731,7 +16731,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16747,8 +16747,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16760,7 +16760,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16776,8 +16776,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16789,7 +16789,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16805,8 +16805,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16818,7 +16818,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16834,8 +16834,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16847,7 +16847,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16863,8 +16863,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16876,7 +16876,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16892,8 +16892,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16905,7 +16905,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16921,8 +16921,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16934,7 +16934,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16950,8 +16950,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16963,7 +16963,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -16979,8 +16979,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -16992,7 +16992,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17008,8 +17008,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17021,7 +17021,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17037,8 +17037,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17050,7 +17050,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17066,8 +17066,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17079,7 +17079,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17095,8 +17095,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17108,7 +17108,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17124,8 +17124,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17137,7 +17137,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17153,8 +17153,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17166,7 +17166,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17182,8 +17182,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17195,7 +17195,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17211,8 +17211,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17224,7 +17224,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17240,8 +17240,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17253,7 +17253,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17269,8 +17269,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17282,7 +17282,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17298,8 +17298,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17311,7 +17311,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17327,8 +17327,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17340,7 +17340,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17356,8 +17356,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17369,7 +17369,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17385,8 +17385,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17398,7 +17398,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17414,8 +17414,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17427,7 +17427,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17443,8 +17443,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17456,7 +17456,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17472,8 +17472,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17485,7 +17485,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17501,8 +17501,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17514,7 +17514,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17530,8 +17530,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17543,7 +17543,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17559,8 +17559,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17572,7 +17572,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17588,8 +17588,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17601,7 +17601,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17617,8 +17617,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17630,7 +17630,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17646,8 +17646,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17659,7 +17659,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17675,8 +17675,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17688,7 +17688,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17704,8 +17704,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17717,7 +17717,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17733,8 +17733,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17746,7 +17746,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17762,8 +17762,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17775,7 +17775,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17791,8 +17791,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17804,7 +17804,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17820,8 +17820,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17833,7 +17833,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17849,8 +17849,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17862,7 +17862,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17878,8 +17878,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17891,7 +17891,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17907,8 +17907,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17920,7 +17920,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17936,8 +17936,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17949,7 +17949,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17965,8 +17965,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -17978,7 +17978,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -17994,8 +17994,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -18007,7 +18007,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -18023,8 +18023,8 @@ var prices2 = [
            "value":1
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -18036,7 +18036,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -18052,8 +18052,8 @@ var prices2 = [
            "value":10
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -18065,7 +18065,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -18081,8 +18081,8 @@ var prices2 = [
            "value":50
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -18094,7 +18094,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -18110,8 +18110,8 @@ var prices2 = [
            "value":100
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -18123,7 +18123,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -18139,8 +18139,8 @@ var prices2 = [
            "value":200
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -18152,7 +18152,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -18168,8 +18168,8 @@ var prices2 = [
            "value":500
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -18181,7 +18181,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -18197,8 +18197,8 @@ var prices2 = [
            "value":1000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -18210,7 +18210,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -18226,8 +18226,8 @@ var prices2 = [
            "value":3000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
@@ -18239,7 +18239,7 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
-           "checkAttribute":"items[1].inks.quantity",
+           "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
         {
@@ -18255,8 +18255,8 @@ var prices2 = [
            "value":10000
         },
         {
-           "checkAttribute":"items[1].materials",
-           "value":"Rayado estándar 70gr."
+           "checkAttribute":"items[1].paper+items[1].gr",
+           "value":"Rayado estándar 70"
         }
      ],
      "price":{
