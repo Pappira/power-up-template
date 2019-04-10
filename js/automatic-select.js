@@ -435,7 +435,7 @@ var createFormButton = function(step,text,next,finish){
       }else{
        var divButton = createElement('div');
        var thisButton = createElement('button','btn ' +'nextBtn ' + 'btn-lg ' + 'pull-right ','',text,'button');
-       thisButton.addEventListener('click',createEstimateAndTrelloCard);
+       thisButton.addEventListener('click',createEstimateAndTrelloCard2);
        var divLoader = createElement('div','','loader');
        divButton.appendChild(thisButton);
        divButton.appendChild(divLoader);
