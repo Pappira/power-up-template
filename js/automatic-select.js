@@ -659,9 +659,12 @@ var getValueFromObjectByCompleteReference = function(currentObjectProp, object){
 
 var getValueFromObjectByReferences = function(object, reference){
   reference = reference.split("+");
-  var returnValue = "";
+  var returnValue = [];
   for (var i = 0; i < reference.length;i++){
-    returnValue += getValueFromObjectByReference(JSON.parse(JSON.stringify(object)),reference[i]) + ((i< reference.length-1)?" ":"");
+    returnValue.push(getValueFromObjectByReference(JSON.parse(JSON.stringify(object)),reference[i]));
+  }
+  if(returnValue.length>1){
+    returnValue = returnValue.join(' ');
   }
   console.log("Value to evaluate: ");
   console.log(returnValue);
