@@ -780,46 +780,48 @@ var createEstimateAndTrelloCard2 = function(){
       var totalPrice = priceFiltered.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
       var currentPrice = convertWorkToPrice(currentWork, currentCombination,totalPrice);
       
-      var possibleExtraPrices = extraPrices.filter(function(v, i) {
-        return (v.workId == currentWork.id);
-      });
-      
-      possibleExtraPrices = possibleExtraPrices.map(function(extraPrice){
-        
-        var isValid = 
-        Object.keys(extraPrice).map(function(key){
-          if (key != "optionalFinishes" && key !="items" && key !="workId"){
-           if(!JSON.stringify(currentWork[key]).includes(JSON.stringify(extraPrice[key]))){
-                 return false; 
-           }
-         }
-         return true;
-         }).every(Boolean);
-
-         if (isValid){
-           var valid = extraPrice.items.map(function(item,index){
-            var isValid = 
-            Object.keys(item).map(function(key){
-              if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="id"){
-               if(!JSON.stringify(currentWork.items[index][key]).includes(JSON.stringify(item[key]))){
-                     return false; 
-               }
-             }
-             return true;
-             }).every(Boolean);
-             return isValid;
-        
-          }).every(Boolean);
-          if(valid){
-            return extraPrice;
-          }
-         }
-
-      }).filter(Boolean);
       
       //hay que ver como agregar la machine, papersize, sheetsize, etc
       work.prices.push(currentPrice); 
     }
+    
+    var possibleExtraPrices = extraPrices.filter(function(v, i) {
+      return (v.workId == currentWork.id);
+    });
+    
+    possibleExtraPrices = possibleExtraPrices.map(function(extraPrice){
+      
+      var isValid = 
+      Object.keys(extraPrice).map(function(key){
+        if (key != "optionalFinishes" && key !="items" && key !="workId"){
+          if(!JSON.stringify(currentWork[key]).includes(JSON.stringify(extraPrice[key]))){
+                return false; 
+          }
+        }
+        return true;
+        }).every(Boolean);
+
+        if (isValid){
+          var valid = extraPrice.items.map(function(item,index){
+          var isValid = 
+          Object.keys(item).map(function(key){
+            if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="id"){
+              if(!JSON.stringify(currentWork.items[index][key]).includes(JSON.stringify(item[key]))){
+                    return false; 
+              }
+            }
+            return true;
+            }).every(Boolean);
+            return isValid;
+      
+        }).every(Boolean);
+        if(valid){
+          return extraPrice;
+        }
+        }
+
+    }).filter(Boolean);
+
     //me deja en possibleExtraPrices general solo los extras que están en work
     possibleExtraPrices.forEach(possibleExtraPrice => possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
       return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
