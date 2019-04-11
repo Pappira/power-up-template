@@ -78,7 +78,7 @@ var works = [
       "image":noImage,
       "name":"Cuaderno",
       "clossedSizes":["150x210mm"],
-      "quantities":[100,200,300,500,1000],
+      "quantities":[50,100,200,300,500,1000],
       "mandatoryFinishGroups":
       [
         {
