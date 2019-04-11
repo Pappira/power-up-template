@@ -457,7 +457,7 @@ var checkMandatoryFieldsSelected = function(){
   return message;
 }
 
-var createEstimateAndTrelloCard = function(){
+/*var createEstimateAndTrelloCard = function(){
   var message = checkMandatoryFieldsSelected();
   if(message.length > 0){
     window.alert('Debe completar todas las opciones solicitadas \n' + message);
@@ -642,7 +642,7 @@ var createEstimateAndTrelloCard = function(){
     createCard(estimate);
     return work;
   }
-}
+}*/
 
 var getValueFromObjectByCompleteReference = function(currentObjectProp, object){
 
@@ -897,98 +897,6 @@ function convertWorkToPrice(work,combination,price){
   }
   return currentWork;
 }
-/*
-
-    
-
-
-    for(var i = 0; i < possibleExtraPrices.length;i++){
-      var possibleExtraPrice = possibleExtraPrices[i];
-      var isPossible = true;
-      for (var prop in possibleExtraPrice) {
-        if (prop != "optionalFinishes" && prop !="items" && prop !="workId"){
-          if(!JSON.stringify(work[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
-            isPossible = false;
-            break;
-          }
-        }else if(prop == "items"){
-          for (var j = 0; j < possibleExtraPrice.items.length; j++){
-            var priceItem = possibleExtraPrice.items[j];
-            var workItem = work.items[j];
-            for (var itemProp in priceItem) {
-              if (itemProp != "optionalFinishes" && itemProp!="id"){
-                if(!JSON.stringify(workItem[itemProp]).includes(JSON.stringify(priceItem[itemProp]))){
-                  isPossible = false;
-                  break;
-                }
-              }
-            }
-          }
-        }
-      }
-      if (isPossible){
-        if (!(work["extraPrices"] && work["extraPrices"].length > 0)){
-          work["extraPrices"] = [];
-        }
-        //tengo que buscar los extra prices que quiero, segun las terminaciones, lo que se hasta ahora es que cumple con las cualidades del trabajo
-        var cutPossibleExtraPrice = JSON.parse(JSON.stringify(possibleExtraPrice)); 
-        var indexToPreserve = [];
-        for (var j = 0; j < work.optionalFinishes.length;j++){
-          for (var k = 0; k < cutPossibleExtraPrice.optionalFinishes.length; k++){
-            if(work.optionalFinishes[j].finish == cutPossibleExtraPrice.optionalFinishes[k].finish){
-              indexToPreserve.push(k);
-              break; 
-            }
-          }
-        }
-        cutPossibleExtraPrice.optionalFinishes = cutArray(cutPossibleExtraPrice.optionalFinishes,indexToPreserve);
-        for(var j= 0; j < work.items.length;j++){
-          indexToPreserve = [];
-          var currentWorkExtraPriceItem = work.items[j];
-          var currentExtraPriceItem;
-          for (var k = 0; k < cutPossibleExtraPrice.items.length;k++){
-            if(currentWorkExtraPriceItem.id == cutPossibleExtraPrice.items[k].id){
-              currentExtraPriceItem = cutPossibleExtraPrice.items[k];
-              break;
-            }
-          }
-          
-          if(currentWorkExtraPriceItem.optionalFinishes && currentExtraPriceItem.optionalFinishes){
-            for (var k = 0; k < currentWorkExtraPriceItem.optionalFinishes.length;k++){
-              for (var q = 0; q < currentExtraPriceItem.optionalFinishes.length;q++){
-                if(currentWorkExtraPriceItem.optionalFinishes[k].finish == currentExtraPriceItem.optionalFinishes[q].finish){
-                  indexToPreserve.push(q);
-                  break; 
-                }
-              }
-            }
-          }
-          if(indexToPreserve && indexToPreserve.length >0){       
-            cutPossibleExtraPrice.items[j].optionalFinishes = cutArray(cutPossibleExtraPrice.items[j].optionalFinishes,indexToPreserve);
-          }
-        }
-        if(!(work["optionalFinishesPrices"] && work["optionalFinishesPrices"].length>0)){
-          work["optionalFinishesPrices"] = [];
-        }
-        work["optionalFinishesPrices"].push(cutPossibleExtraPrice);
-      }
-    }
-
-    estimate = work;
-    delete estimate['image'];
-    delete estimate['quantities'];
-    delete estimate['clossedSizes'];
-    createCard(estimate);
-    return work;
-  }
-}*/
-
-/*var deleteFromArray = function(originalArray,indexToCut){
-  var a =  jQuery.grep(originalArray, function(n, i ) {
-    return indexToCut?indexToCut.indexOf(i)!==1:false;
-  });
-  return a;
-}*/
 
 var getCombinations = function(estimate){
   var items= [];
