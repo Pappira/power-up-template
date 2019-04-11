@@ -69,7 +69,7 @@ var newAddText = function(textToAdd, doc, top){
                 break;
             case 'list':
                 if (Array.isArray(text.value)){
-                    var scale = writeTextNormalWithSeparation(14, fontType, '    •  ' , text.name,top, doc);
+                    var scale = writeTextNormalWithSeparation(12, fontType, '    •  ' , text.name,top, doc);
                     currentIncreaseTop = rowSize*scale;
                     for (var j = 0; j < text.value.length;j++){
                         if(Array.isArray(text.value[j])){
