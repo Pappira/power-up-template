@@ -1,7 +1,7 @@
 var extraPrices = [
   {
     "workId":1,
-    "quantity":100,    
+    "quantity":50,    
     "optionalFinishes":
       [
         {
