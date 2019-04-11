@@ -835,6 +835,9 @@ var createEstimateAndTrelloCard2 = function(){
 
     work.optionalFinishesPrices = possibleExtraPrices;
   }
+  delete work['image'];
+  delete work['quantities'];
+  delete work['clossedSizes'];
   createCard(work);
   return work;
 }
