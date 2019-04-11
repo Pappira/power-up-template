@@ -274,7 +274,12 @@ var generateEstimatePDF = function(estimate){
     
     addHeaderToCurrentPage(doc);
     addFooterToCurrentPage(doc);
-    doc.save('OrdenDeTrabajo.pdf');
+
+    var docName = "Presupuesto";
+    var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
+    contactAndBusinessInfo = contactAndBusinessInfo.filter(Boolean).join(' ');
+    docName += (contactAndBusinessInfo?' ' + contactAndBusinessInfo+".pdf":".pdf");
+    doc.save(docName);
 }
 
 var writeText = function(doc, text, top,extraSpace){
