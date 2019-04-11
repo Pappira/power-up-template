@@ -751,7 +751,7 @@ var createEstimateAndTrelloCard2 = function(){
         }
       }
       if (work.items[i].optionalFinishes){
-        work.items[i].optionalFinishes = cutArray(work.items[i].optionalFinishes,selectedOptions[-1].optionalFinishes);
+        work.items[i].optionalFinishes = cutArray(work.items[i].optionalFinishes,selectedOptions[i].optionalFinishes);
       }
     }
     work['prices'] = [];
