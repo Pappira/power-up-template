@@ -774,7 +774,7 @@ var createEstimateAndTrelloCard2 = function(){
         var filteredPrice = filterPrices(JSON.parse(JSON.stringify(currentCombination)),l);
         priceFiltered.push(filteredPrice);
         if(filteredPrice.length!=1){
-          window.alert('No se encontró precio para la siguiente combinación de trabajo \n' + JSON.stringify(currentCombination));
+         // window.alert('No se encontró precio para la siguiente combinación de trabajo \n' + JSON.stringify(currentCombination));
           allPricesFinded = false;
           break;
         }
