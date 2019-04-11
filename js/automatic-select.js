@@ -754,7 +754,7 @@ var createEstimateAndTrelloCard2 = function(){
         work.items[i].optionalFinishes = cutArray(work.items[i].optionalFinishes,selectedOptions[i].optionalFinishes);
       }
     }
-    work['prices'] = [];
+    work.prices = [];
     
     var allCombinations = getCombinations(work);
     
@@ -831,56 +831,14 @@ var createEstimateAndTrelloCard2 = function(){
         return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
       }):null))
 
-
-
-      if (isPossible){
-        //tengo que buscar los extra prices que quiero, segun las terminaciones, lo que se hasta ahora es que cumple con las cualidades del trabajo
-        var cutPossibleExtraPrice = JSON.parse(JSON.stringify(possibleExtraPrice)); 
-        var indexToPreserve = [];
-        for (var j = 0; j < work.optionalFinishes.length;j++){
-          for (var k = 0; k < cutPossibleExtraPrice.optionalFinishes.length; k++){
-            if(work.optionalFinishes[j].finish == cutPossibleExtraPrice.optionalFinishes[k].finish){
-              indexToPreserve.push(k);
-              break; 
-            }
-          }
-        }
-        cutPossibleExtraPrice.optionalFinishes = cutArray(cutPossibleExtraPrice.optionalFinishes,indexToPreserve);
-        for(var j= 0; j < work.items.length;j++){
-          indexToPreserve = [];
-          var currentWorkExtraPriceItem = work.items[j];
-          var currentExtraPriceItem;
-          for (var k = 0; k < cutPossibleExtraPrice.items.length;k++){
-            if(currentWorkExtraPriceItem.id == cutPossibleExtraPrice.items[k].id){
-              currentExtraPriceItem = cutPossibleExtraPrice.items[k];
-              break;
-            }
-          }
-          
-          if(currentWorkExtraPriceItem.optionalFinishes && currentExtraPriceItem.optionalFinishes){
-            for (var k = 0; k < currentWorkExtraPriceItem.optionalFinishes.length;k++){
-              for (var q = 0; q < currentExtraPriceItem.optionalFinishes.length;q++){
-                if(currentWorkExtraPriceItem.optionalFinishes[k].finish == currentExtraPriceItem.optionalFinishes[q].finish){
-                  indexToPreserve.push(q);
-                  break; 
-                }
-              }
-            }
-          }
-          if(indexToPreserve && indexToPreserve.length >0){       
-            cutPossibleExtraPrice.items[j].optionalFinishes = cutArray(cutPossibleExtraPrice.items[j].optionalFinishes,indexToPreserve);
-          }
-        }
-        if(!(work["optionalFinishesPrices"] && work["optionalFinishesPrices"].length>0)){
-          work["optionalFinishesPrices"] = [];
-        }
-        work["optionalFinishesPrices"].push(cutPossibleExtraPrice);
-      }
+      work.optionalFinishesPrices = possibleExtraPrices;
 
       //hay que ver como agregar la machine, papersize, sheetsize, etc
-      work['prices'].push(currentPrice); 
+      work.prices.push(currentPrice); 
     }
   }
+  createCard(work);
+  return work;
 }
 
 function add(accumulator, a) {
