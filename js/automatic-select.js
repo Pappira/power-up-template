@@ -769,12 +769,14 @@ var createEstimateAndTrelloCard2 = function(){
       }
 
       var priceFiltered = [];
+      var allPricesFinded = true;
       for (var l = -1; l < currentCombination.items.length;l++){
         var filteredPrice = filterPrices(JSON.parse(JSON.stringify(currentCombination)),l);
         priceFiltered.push(filteredPrice);
         if(filteredPrice.length!=1){
           window.alert('No se encontró precio para la siguiente combinación de trabajo \n' + JSON.stringify(currentCombination));
-          return;
+          allPricesFinded = false;
+          break;
         }
         var valuesToAdd = filteredPrice[0].toCheck.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","excess"].indexOf(check.checkAttribute)>-1);
         if(valuesToAdd && valuesToAdd.length > 0){
@@ -785,15 +787,16 @@ var createEstimateAndTrelloCard2 = function(){
           }
         }
       }
-
-      priceFiltered = [].concat.apply([],priceFiltered);
-
-      var totalPrice = priceFiltered.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
-
-      var currentPrice = convertWorkToPrice(currentWork, currentCombination,totalPrice);   
-      
-      //hay que ver como agregar la machine, papersize, sheetsize, etc
-      work.prices.push(currentPrice); 
+      if (allPricesFinded){
+        priceFiltered = [].concat.apply([],priceFiltered);
+  
+        var totalPrice = priceFiltered.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
+  
+        var currentPrice = convertWorkToPrice(currentWork, currentCombination,totalPrice);   
+        
+        //hay que ver como agregar la machine, papersize, sheetsize, etc
+        work.prices.push(currentPrice); 
+      }
     });
 
     var possibleExtraPrices = extraPrices.filter(function(v, i) {
