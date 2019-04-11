@@ -685,7 +685,7 @@ var filterPrices = function(currentCombination,itemNumber){
   })
   
   var checks = generalPrices[0].toCheck.map(a => a.checkAttribute);
-  
+  checks = checks.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","Excess"].indexOf(check)==-1);
 
   for (var t = 0; t < checks.length;t++){
     generalPrices = generalPrices.filter(function(v, i) {
