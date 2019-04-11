@@ -762,9 +762,9 @@ var createEstimateAndTrelloCard2 = function(){
       return (v.workId == work.id);
     })*/
 
+    var currentWork = JSON.parse(JSON.stringify(work));
     for (var i = 0; i < allCombinations.length;i++){
       var currentCombination = allCombinations[i];
-      var quantity = currentCombination.quantity;
       var generalMandatoryFinishGroups = currentCombination.mandatoryFinishGroups;
 
       if(generalMandatoryFinishGroups){
@@ -778,10 +778,10 @@ var createEstimateAndTrelloCard2 = function(){
       }
       priceFiltered = [].concat.apply([],priceFiltered);
       var totalPrice = priceFiltered.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
-      var currentPrice = convertWorkToPrice(work, currentCombination,totalPrice);
+      var currentPrice = convertWorkToPrice(currentWork, currentCombination,totalPrice);
       
       var possibleExtraPrices = extraPrices.filter(function(v, i) {
-        return (v.workId == work.id);
+        return (v.workId == currentWork.id);
       });
       
       possibleExtraPrices = possibleExtraPrices.map(function(extraPrice){
@@ -789,7 +789,7 @@ var createEstimateAndTrelloCard2 = function(){
         var isValid = 
         Object.keys(extraPrice).map(function(key){
           if (key != "optionalFinishes" && key !="items" && key !="workId"){
-           if(!JSON.stringify(work[key]).includes(JSON.stringify(extraPrice[key]))){
+           if(!JSON.stringify(currentWork[key]).includes(JSON.stringify(extraPrice[key]))){
                  return false; 
            }
          }
@@ -801,7 +801,7 @@ var createEstimateAndTrelloCard2 = function(){
             var isValid = 
             Object.keys(item).map(function(key){
               if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="id"){
-               if(!JSON.stringify(work.items[index][key]).includes(JSON.stringify(item[key]))){
+               if(!JSON.stringify(currentWork.items[index][key]).includes(JSON.stringify(item[key]))){
                      return false; 
                }
              }
@@ -817,25 +817,20 @@ var createEstimateAndTrelloCard2 = function(){
 
       }).filter(Boolean);
       
-      if (!(work["extraPrices"] && work["extraPrices"].length > 0)){
-        work["extraPrices"] = [];
-      }
-      
-      //me deja en possibleExtraPrices general solo los extras que están en work
-      possibleExtraPrices.forEach(possibleExtraPrice => possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
-        return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
-      }));
-
-      //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
-      possibleExtraPrices.forEach(possible => possible.items.forEach(item => item.optionalFinishes = item.optionalFinishes?item.optionalFinishes.filter(function(optionalFinish){
-        return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
-      }):null))
-
-      work.optionalFinishesPrices = possibleExtraPrices;
-
       //hay que ver como agregar la machine, papersize, sheetsize, etc
       work.prices.push(currentPrice); 
     }
+    //me deja en possibleExtraPrices general solo los extras que están en work
+    possibleExtraPrices.forEach(possibleExtraPrice => possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
+      return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
+    }));
+
+    //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
+    possibleExtraPrices.forEach(possible => possible.items.forEach(item => item.optionalFinishes = item.optionalFinishes?item.optionalFinishes.filter(function(optionalFinish){
+      return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
+    }):null))
+
+    work.optionalFinishesPrices = possibleExtraPrices;
   }
   createCard(work);
   return work;
