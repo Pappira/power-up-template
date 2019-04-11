@@ -649,9 +649,6 @@ var getValueFromObjectByCompleteReference = function(currentObjectProp, object){
   var props = currentObjectProp.split('.');
   var currentObject = JSON.parse(JSON.stringify(object));
   for (var h=0; h < props.length;h++){
-    console.log("propiedad a evaluar y currentObject");
-    console.log(props[h]);
-    console.log(currentObject);
     currentObject = getValueFromObjectByReferences(currentObject, props[h]);
   }
   return currentObject;
@@ -824,6 +821,18 @@ var createEstimateAndTrelloCard2 = function(){
         work["extraPrices"] = [];
       }
       
+      //me deja en possibleExtraPrices general solo los extras que están en work
+      possibleExtraPrices.forEach(possibleExtraPrice => possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
+        return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
+      }));
+
+      //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
+      possibleExtraPrices.forEach(possible => possible.items.forEach(item => item.optionalFinishes = item.optionalFinishes?item.optionalFinishes.filter(function(optionalFinish){
+        return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
+      }):null))
+
+
+
       if (isPossible){
         //tengo que buscar los extra prices que quiero, segun las terminaciones, lo que se hasta ahora es que cumple con las cualidades del trabajo
         var cutPossibleExtraPrice = JSON.parse(JSON.stringify(possibleExtraPrice)); 
