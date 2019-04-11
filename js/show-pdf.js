@@ -20,7 +20,8 @@ var newGetTotalSpaceNeededForText = function(textToAdd){
     //Filtro todos los types que tiene title (subtitle1, 2, 3 etc) y cada uno ocupa rowSize*medium
     total += textToAdd.map(currentText => currentText.type).filter(type => type.includes('title')).length*rowSize*mediumSpaceFactor;
     //Filtro todos los tipo list y concateno todos los values de esto, de esa forma obtengo un array con todos los values, cada value ocupa rowSize
-    total += [].concat.apply([], textToAdd.filter(currentText => currentText.type == 'list').map(currentText => currentText.value)).length*rowSize;
+    total += textToAdd.filter(currentText => currentText.type == 'list').length*rowSize;
+    total +=[].concat.apply([],textToAdd.filter(currentText => currentText.type == 'list' && Array.isArray(currentText.value)).map(currentText => currentText.value)).length*rowSize;
     return total;
 }
 
