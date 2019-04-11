@@ -180,12 +180,11 @@ var addFooterToCurrentPage = function(doc){
     var currentTop = height-marginBottom+5;
     doc.line(leftMargin,currentTop ,width-leftMargin,currentTop);
     currentTop += rowSize*mediumSpaceFactor;
-    doc.text("Texto de prueba para pie de página",leftMargin,currentTop);
+    doc.text("imprentadiagonal.com.uy | +598 2 901 2151",leftMargin,currentTop);
     currentTop += rowSize;
-    doc.text("Segundo texto de prueba para pie de página",leftMargin,currentTop);
+    doc.text("Nesta Ltda - RUT 21 338291 0014",leftMargin,currentTop);
     currentTop += rowSize;
-    doc.text("Tercer texto de prueba para pie de página",leftMargin,currentTop);
-
+    doc.text("Convención 1319 C.P. 11300, Montevideo, UY",leftMargin,currentTop);
 }
 
 var increaseTop = function(top,add,doc){
