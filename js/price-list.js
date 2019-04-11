@@ -1852,6 +1852,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -1876,6 +1900,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -1902,6 +1950,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -1926,6 +1998,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -1952,6 +2048,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -1976,6 +2096,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2002,6 +2146,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2026,6 +2194,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2052,6 +2244,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2076,6 +2292,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2102,6 +2342,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2126,6 +2390,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2152,6 +2440,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2176,6 +2488,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2202,6 +2538,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2226,6 +2586,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2252,6 +2636,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2276,6 +2684,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2302,6 +2734,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
         },
@@ -2326,6 +2782,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
@@ -2352,6 +2832,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
         },
@@ -2376,6 +2880,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
@@ -2402,6 +2930,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
         },
@@ -2426,6 +2978,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
@@ -2452,6 +3028,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
         },
@@ -2476,6 +3076,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
@@ -2502,6 +3126,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
         },
@@ -2526,6 +3174,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
@@ -2552,6 +3224,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
         },
@@ -2576,6 +3272,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
@@ -2602,6 +3322,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
         },
@@ -2626,6 +3370,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
@@ -2652,6 +3420,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
         },
@@ -2676,6 +3468,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
@@ -2702,6 +3518,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
         },
@@ -2726,6 +3566,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa SemiDura"
@@ -2752,6 +3616,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2776,6 +3664,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2802,6 +3714,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2826,6 +3762,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2852,6 +3812,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2876,6 +3860,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2902,6 +3910,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2926,6 +3958,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -2952,6 +4008,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -2976,6 +4056,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -3002,6 +4106,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -3026,6 +4154,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -3052,6 +4204,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -3076,6 +4252,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -3102,6 +4302,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -3126,6 +4350,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -3152,6 +4400,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
         },
@@ -3176,6 +4448,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Flexible"
@@ -3202,6 +4498,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
         },
@@ -3226,6 +4546,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
@@ -3252,6 +4596,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
         },
@@ -3276,6 +4644,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
@@ -3302,6 +4694,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
         },
@@ -3326,6 +4742,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
@@ -3352,6 +4792,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
         },
@@ -3376,6 +4840,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
@@ -3402,6 +4890,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
         },
@@ -3426,6 +4938,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
@@ -3452,6 +4988,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
         },
@@ -3476,6 +5036,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
@@ -3502,6 +5086,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
         },
@@ -3526,6 +5134,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
@@ -3552,6 +5184,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":1
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":1
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":6
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x102"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"32x33"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 1070"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
         },
@@ -3576,6 +5232,30 @@ var prices2 = [
   {
      "item":0,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
         {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
@@ -3602,6 +5282,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
         },
@@ -3627,6 +5331,30 @@ var prices2 = [
      "item":0,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":200
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"66x96"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"33x48"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 52"
+        },
+        {
            "checkAttribute":"items[0].mandatoryFinishGroups[0].finishes.finish",
            "value":"Tapa Dura"
         },
@@ -3651,6 +5379,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -3681,6 +5433,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -3709,6 +5485,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -3739,6 +5539,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -3767,6 +5591,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -3797,6 +5645,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -3825,6 +5697,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -3855,6 +5751,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -3883,6 +5803,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -3913,6 +5857,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -3941,6 +5909,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -3971,6 +5963,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -3999,6 +6015,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4029,6 +6069,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4057,6 +6121,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4087,6 +6175,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4115,6 +6227,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4145,6 +6281,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4173,6 +6333,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4203,6 +6387,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4231,6 +6439,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4261,6 +6493,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4289,6 +6545,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4319,6 +6599,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4347,6 +6651,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4377,6 +6705,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4405,6 +6757,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4435,6 +6811,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4463,6 +6863,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4493,6 +6917,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4521,6 +6969,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4551,6 +7023,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4579,6 +7075,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4609,6 +7129,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4637,6 +7181,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4667,6 +7235,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4695,6 +7287,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4725,6 +7341,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4753,6 +7393,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4783,6 +7447,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4811,6 +7499,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4841,6 +7553,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4869,6 +7605,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4899,6 +7659,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4927,6 +7711,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -4957,6 +7765,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -4985,6 +7817,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5015,6 +7871,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5043,6 +7923,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5073,6 +7977,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5101,6 +8029,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5131,6 +8083,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5159,6 +8135,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5189,6 +8189,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5217,6 +8241,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5247,6 +8295,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5275,6 +8347,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5305,6 +8401,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5333,6 +8453,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5363,6 +8507,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5391,6 +8559,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5421,6 +8613,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5449,6 +8665,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5479,6 +8719,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5507,6 +8771,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5537,6 +8825,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5565,6 +8877,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5595,6 +8931,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5623,6 +8983,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5653,6 +9037,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5681,6 +9089,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -5711,6 +9143,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -5739,6 +9195,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -5769,6 +9249,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -5797,6 +9301,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -5827,6 +9355,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -5855,6 +9407,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -5885,6 +9461,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -5913,6 +9513,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -5943,6 +9567,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -5971,6 +9619,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6001,6 +9673,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6029,6 +9725,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6059,6 +9779,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6087,6 +9831,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6117,6 +9885,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6145,6 +9937,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6175,6 +9991,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6203,6 +10043,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6233,6 +10097,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6262,6 +10150,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6290,6 +10202,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6320,6 +10256,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6348,6 +10308,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6378,6 +10362,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6406,6 +10414,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6436,6 +10468,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6464,6 +10520,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6494,6 +10574,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6522,6 +10626,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6552,6 +10680,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6580,6 +10732,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6610,6 +10786,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6638,6 +10838,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6668,6 +10892,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6696,6 +10944,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6726,6 +10998,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6754,6 +11050,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6784,6 +11104,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6812,6 +11156,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6842,6 +11210,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6870,6 +11262,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6900,6 +11316,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6928,6 +11368,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -6958,6 +11422,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -6986,6 +11474,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7016,6 +11528,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7044,6 +11580,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7074,6 +11634,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7102,6 +11686,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7132,6 +11740,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7160,6 +11792,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7190,6 +11846,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7218,6 +11898,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7248,6 +11952,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7276,6 +12004,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7306,6 +12058,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7334,6 +12110,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7364,6 +12164,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7392,6 +12216,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7422,6 +12270,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7450,6 +12322,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7480,6 +12376,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7508,6 +12428,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7538,6 +12482,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7566,6 +12534,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7596,6 +12588,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7624,6 +12640,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7654,6 +12694,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7682,6 +12746,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7712,6 +12800,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7740,6 +12852,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7770,6 +12906,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -7798,6 +12958,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -7828,6 +13012,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -7856,6 +13064,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -7886,6 +13118,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -7914,6 +13170,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -7944,6 +13224,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -7972,6 +13276,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8002,6 +13330,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8030,6 +13382,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8060,6 +13436,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8088,6 +13488,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8118,6 +13542,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8146,6 +13594,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8176,6 +13648,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8204,6 +13700,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8234,6 +13754,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8262,6 +13806,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8292,6 +13860,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8320,6 +13912,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8350,6 +13966,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8378,6 +14018,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8408,6 +14072,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8436,6 +14124,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8466,6 +14178,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8494,6 +14230,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8524,6 +14284,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8552,6 +14336,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8582,6 +14390,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8610,6 +14442,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8640,6 +14496,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8668,6 +14548,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8698,6 +14602,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8726,6 +14654,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8756,6 +14708,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8784,6 +14760,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8814,6 +14814,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8842,6 +14866,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8872,6 +14920,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8900,6 +14972,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8930,6 +15026,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -8958,6 +15078,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -8988,6 +15132,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9016,6 +15184,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9046,6 +15238,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9074,6 +15290,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9104,6 +15344,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9132,6 +15396,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9162,6 +15450,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9190,6 +15502,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9220,6 +15556,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9248,6 +15608,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9278,6 +15662,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9306,6 +15714,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9336,6 +15768,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9364,6 +15820,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9394,6 +15874,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9422,6 +15926,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9452,6 +15980,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9480,6 +16032,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9510,6 +16086,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9538,6 +16138,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9568,6 +16192,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9596,6 +16244,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9626,6 +16298,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9654,6 +16350,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9684,6 +16404,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9712,6 +16456,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9742,6 +16510,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9770,6 +16562,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9800,6 +16616,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9828,6 +16668,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9858,6 +16722,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -9886,6 +16774,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -9916,6 +16828,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -9944,6 +16880,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -9974,6 +16934,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10002,6 +16986,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10032,6 +17040,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10060,6 +17092,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10090,6 +17146,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10118,6 +17198,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10148,6 +17252,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10176,6 +17304,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10206,6 +17358,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10234,6 +17410,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10264,6 +17464,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10292,6 +17516,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10322,6 +17570,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10350,6 +17622,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10380,6 +17676,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10408,6 +17728,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10438,6 +17782,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10466,6 +17834,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10496,6 +17888,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10524,6 +17940,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10554,6 +17994,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10582,6 +18046,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10612,6 +18100,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10640,6 +18152,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10670,6 +18206,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10698,6 +18258,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10728,6 +18312,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10756,6 +18364,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10786,6 +18418,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10814,6 +18470,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10844,6 +18524,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10872,6 +18576,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10902,6 +18630,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10930,6 +18682,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -10960,6 +18736,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -10988,6 +18788,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11018,6 +18842,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11046,6 +18894,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11076,6 +18948,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11104,6 +19000,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11134,6 +19054,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11162,6 +19106,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11192,6 +19160,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11220,6 +19212,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11250,6 +19266,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11278,6 +19318,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11308,6 +19372,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11336,6 +19424,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11366,6 +19478,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11394,6 +19530,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11424,6 +19584,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11452,6 +19636,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11482,6 +19690,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11510,6 +19742,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11540,6 +19796,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11568,6 +19848,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11598,6 +19902,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11626,6 +19954,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11656,6 +20008,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11684,6 +20060,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11714,6 +20114,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11742,6 +20166,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11772,6 +20220,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11800,6 +20272,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11830,6 +20326,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11858,6 +20378,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11888,6 +20432,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11916,6 +20484,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -11946,6 +20538,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -11974,6 +20590,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -12004,6 +20644,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12032,6 +20696,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12062,6 +20750,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12090,6 +20802,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12120,6 +20856,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12148,6 +20908,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12178,6 +20962,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12206,6 +21014,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12236,6 +21068,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12264,6 +21120,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12294,6 +21174,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12322,6 +21226,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12352,6 +21280,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12380,6 +21332,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12410,6 +21386,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12438,6 +21438,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12468,6 +21492,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12496,6 +21544,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12526,6 +21598,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12554,6 +21650,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12584,6 +21704,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12612,6 +21756,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12642,6 +21810,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12670,6 +21862,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12700,6 +21916,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12728,6 +21968,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12758,6 +22022,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12786,6 +22074,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12816,6 +22128,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12844,6 +22180,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12874,6 +22234,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12902,6 +22286,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12932,6 +22340,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -12960,6 +22392,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -12990,6 +22446,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13018,6 +22498,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13048,6 +22552,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13076,6 +22604,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13106,6 +22658,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13134,6 +22710,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13164,6 +22764,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13192,6 +22816,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13222,6 +22870,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13250,6 +22922,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13280,6 +22976,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13308,6 +23028,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13338,6 +23082,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13366,6 +23134,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13396,6 +23188,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13424,6 +23240,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13454,6 +23294,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13482,6 +23346,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13512,6 +23400,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13540,6 +23452,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13570,6 +23506,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13598,6 +23558,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13628,6 +23612,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13656,6 +23664,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13686,6 +23718,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13714,6 +23770,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13744,6 +23824,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13772,6 +23876,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13802,6 +23930,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13830,6 +23982,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13860,6 +24036,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13888,6 +24088,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13918,6 +24142,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -13946,6 +24194,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -13976,6 +24248,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -14004,6 +24300,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -14034,6 +24354,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
         },
@@ -14062,6 +24406,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":1
@@ -14092,6 +24460,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14120,6 +24512,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14150,6 +24566,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14178,6 +24618,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14208,6 +24672,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14236,6 +24724,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14266,6 +24778,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14294,6 +24830,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14324,6 +24884,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14352,6 +24936,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14382,6 +24990,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14410,6 +25042,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14440,6 +25096,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14468,6 +25148,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14498,6 +25202,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14526,6 +25254,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14556,6 +25308,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14584,6 +25360,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14614,6 +25414,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14642,6 +25466,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14672,6 +25520,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14700,6 +25572,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14730,6 +25626,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14758,6 +25678,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14788,6 +25732,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14816,6 +25784,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14846,6 +25838,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14874,6 +25890,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14904,6 +25944,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14932,6 +25996,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -14962,6 +26050,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -14990,6 +26102,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15020,6 +26156,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15048,6 +26208,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15078,6 +26262,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15106,6 +26314,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15136,6 +26368,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15164,6 +26420,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15194,6 +26474,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15222,6 +26526,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15252,6 +26580,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15280,6 +26632,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15310,6 +26686,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15338,6 +26738,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15368,6 +26792,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15396,6 +26844,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15426,6 +26898,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15454,6 +26950,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15484,6 +27004,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15512,6 +27056,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15542,6 +27110,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15570,6 +27162,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15600,6 +27216,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15628,6 +27268,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15658,6 +27322,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15686,6 +27374,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15716,6 +27428,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15744,6 +27480,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15774,6 +27534,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15802,6 +27586,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15832,6 +27640,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15860,6 +27692,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15890,6 +27746,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15918,6 +27798,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -15948,6 +27852,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -15976,6 +27904,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -16006,6 +27958,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -16034,6 +28010,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -16064,6 +28064,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -16092,6 +28116,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -16122,6 +28170,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
         },
@@ -16150,6 +28222,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":2
@@ -16180,6 +28276,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16208,6 +28328,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16238,6 +28382,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16266,6 +28434,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16296,6 +28488,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16324,6 +28540,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16354,6 +28594,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16382,6 +28646,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16412,6 +28700,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16440,6 +28752,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16470,6 +28806,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16498,6 +28858,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16528,6 +28912,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16556,6 +28964,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16586,6 +29018,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16614,6 +29070,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16644,6 +29124,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16672,6 +29176,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16702,6 +29230,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16730,6 +29282,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16760,6 +29336,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16788,6 +29388,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16818,6 +29442,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16846,6 +29494,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16876,6 +29548,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16904,6 +29600,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16934,6 +29654,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -16962,6 +29706,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -16992,6 +29760,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17020,6 +29812,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17050,6 +29866,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17078,6 +29918,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17108,6 +29972,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17136,6 +30024,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17166,6 +30078,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17194,6 +30130,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17224,6 +30184,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17252,6 +30236,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17282,6 +30290,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17310,6 +30342,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17340,6 +30396,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17368,6 +30448,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17398,6 +30502,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17426,6 +30554,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17456,6 +30608,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17484,6 +30660,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17514,6 +30714,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17542,6 +30766,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17572,6 +30820,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17600,6 +30872,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17630,6 +30926,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17658,6 +30978,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17688,6 +31032,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17716,6 +31084,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17746,6 +31138,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17774,6 +31190,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17804,6 +31244,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17832,6 +31296,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17862,6 +31350,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17890,6 +31402,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17920,6 +31456,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -17948,6 +31508,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -17978,6 +31562,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -18006,6 +31614,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -18036,6 +31668,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -18064,6 +31720,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":0
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":2
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":9
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"23x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"Konica 951"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -18094,6 +31774,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -18122,6 +31826,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -18152,6 +31880,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -18180,6 +31932,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
@@ -18210,6 +31986,30 @@ var prices2 = [
      "item":1,
      "toCheck":[
         {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
+        {
            "checkAttribute":"items[1].inksQuantity",
            "value":0
         },
@@ -18238,6 +32038,30 @@ var prices2 = [
   {
      "item":1,
      "toCheck":[
+        {
+           "checkAttribute":"Excess",
+           "value":50
+        },
+        {
+           "checkAttribute":"quantityPerPaper",
+           "value":4
+        },
+        {
+           "checkAttribute":"cutsPerSheet",
+           "value":4
+        },
+        {
+           "checkAttribute":"sheetSize",
+           "value":"72x92"
+        },
+        {
+           "checkAttribute":"paperSize",
+           "value":"48x32"
+        },
+        {
+           "checkAttribute":"machine",
+           "value":"GTO 46"
+        },
         {
            "checkAttribute":"items[1].inksQuantity",
            "value":0

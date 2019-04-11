@@ -685,6 +685,7 @@ var filterPrices = function(currentCombination,itemNumber){
   })
   
   var checks = generalPrices[0].toCheck.map(a => a.checkAttribute);
+  
 
   for (var t = 0; t < checks.length;t++){
     generalPrices = generalPrices.filter(function(v, i) {
@@ -758,10 +759,6 @@ var createEstimateAndTrelloCard2 = function(){
     
     var allCombinations = getCombinations(work);
     
-    /*possiblePrices = prices.filter(function(v, i) {
-      return (v.workId == work.id);
-    })*/
-
     var currentWork = JSON.parse(JSON.stringify(work));
 
     allCombinations.forEach(function(currentCombination){
