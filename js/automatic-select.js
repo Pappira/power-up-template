@@ -772,6 +772,10 @@ var createEstimateAndTrelloCard2 = function(){
       for (var l = -1; l < currentCombination.items.length;l++){
         var filteredPrice = filterPrices(JSON.parse(JSON.stringify(currentCombination)),l);
         priceFiltered.push(filteredPrice);
+        if(priceFiltered.length!=1){
+          window.alert('No se encontró precio para la siguiente combinación de trabajo \n' + JSON.stringify(currentCombination));
+          return;
+        }
         var valuesToAdd = filteredPrice[0].toCheck.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","excess"].indexOf(check.checkAttribute)>-1);
         if(valuesToAdd && valuesToAdd.length > 0){
           if (l==-1){
