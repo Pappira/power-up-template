@@ -288,8 +288,8 @@ var writeTextNormalAndBold = function(fontSize, fontType, textNormal, textBold, 
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
     writeText(doc,textNormal,top);
-    doc.setFontType("bold");
     var currentTextWidth = doc.getStringUnitWidth(textNormal, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
+    doc.setFontType("bold");
     var scale = writeText(doc,textBold,top, currentTextWidth);
     doc.setFontType("normal");
     return scale;
