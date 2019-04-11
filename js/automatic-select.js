@@ -773,8 +773,8 @@ var createEstimateAndTrelloCard2 = function(){
         }
       }
       var priceFiltered = [];
-      for (var i = -1; i < currentCombination.items.length;i++){
-        priceFiltered.push(filterPrices(JSON.parse(JSON.stringify(currentCombination)),i));
+      for (var l = -1; l < currentCombination.items.length;l++){
+        priceFiltered.push(filterPrices(JSON.parse(JSON.stringify(currentCombination)),l));
       }
       priceFiltered = [].concat.apply([],priceFiltered);
       var totalPrice = priceFiltered.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
@@ -784,7 +784,7 @@ var createEstimateAndTrelloCard2 = function(){
       //hay que ver como agregar la machine, papersize, sheetsize, etc
       work.prices.push(currentPrice); 
     }
-    
+
     var possibleExtraPrices = extraPrices.filter(function(v, i) {
       return (v.workId == currentWork.id);
     });
