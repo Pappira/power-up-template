@@ -62,6 +62,10 @@ var newAddText = function(textToAdd, doc, top){
                 var scale = writeTextNormalAndBold(fontSize,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*scale;
                 break;
+            case 'subtitle6':
+                var scale = writeTextNormalAndBold(12,fontType,text.name, text.value, top,doc);
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
             case 'list':
                 if (Array.isArray(text.value)){
                     var scale = writeTextNormalWithSeparation(fontSize, fontType, '    •  ' , text.name,top, doc);
