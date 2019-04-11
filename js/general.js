@@ -589,7 +589,7 @@ var createCompletePriceText = function(estimate){
 							+ ((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'');
 
 							if(currentPriceText && currentPriceText.length>0){
-									priceText = ( price.items.length>1?originalItem.name+' ':'')  + currentPriceText;
+									priceText = ( price.items.length>1?originalItem.name:'')  + currentPriceText;
 							}
 					}
 					if (generalFinishesText && generalFinishesText.length>0){
@@ -617,8 +617,12 @@ var createCompletePriceText = function(estimate){
 								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
 							}
 					}else{
-							textToAdd.push(createText('subtitle6', '',(priceText.length>0?priceText:'Sub-Total') + ' (' + price.quantity + ' unidades): ' + '$ ' + price.price.toLocaleString() + ' + IVA'));  
-							lastPriceText = priceText;
+						if(priceText.length>0){
+							textToAdd.push(createText('text', priceText + ' (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
+						}else{
+							textToAdd.push(createText('subtitle6', '','Sub-Total (' + price.quantity + ' unidades): ' + '$ ' + price.price.toLocaleString() + ' + IVA'));  
+						}
+						lastPriceText = priceText;
 					}
 			}
 	}
