@@ -617,7 +617,7 @@ var createCompletePriceText = function(estimate){
 								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
 							}
 					}else{
-							textToAdd.push(createText('subtitle3', (priceText.length>0?priceText:'Sub-Total') + ' (' + price.quantity + ' unidades)','$ ' + price.price.toLocaleString() + ' + IVA'));  
+							textToAdd.push(createText('text', '',(priceText.length>0?priceText:'Sub-Total') + ' (' + price.quantity + ' unidades): ' + '$ ' + price.price.toLocaleString() + ' + IVA'));  
 							lastPriceText = priceText;
 					}
 			}
