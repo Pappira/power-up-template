@@ -685,7 +685,7 @@ var filterPrices = function(currentCombination,itemNumber){
   })
   
   var checks = generalPrices[0].toCheck.map(a => a.checkAttribute);
-  checks = checks.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","Excess"].indexOf(check)==-1);
+  checks = checks.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","excess"].indexOf(check)==-1);
 
   for (var t = 0; t < checks.length;t++){
     generalPrices = generalPrices.filter(function(v, i) {
@@ -772,7 +772,7 @@ var createEstimateAndTrelloCard2 = function(){
       for (var l = -1; l < currentCombination.items.length;l++){
         var filteredPrice = filterPrices(JSON.parse(JSON.stringify(currentCombination)),l);
         priceFiltered.push(filteredPrice);
-        if(priceFiltered.length!=1){
+        if(filteredPrice.length!=1){
           window.alert('No se encontró precio para la siguiente combinación de trabajo \n' + JSON.stringify(currentCombination));
           return;
         }
