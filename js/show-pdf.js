@@ -56,7 +56,7 @@ var newAddText = function(textToAdd, doc, top){
                 break;
             case 'subtitle4':
                 top = increaseTop(top,rowSize/2,doc);
-                var scale = writeUnderlinedText(fontSize,fontType,text.name, top, doc);
+                var scale = writeUnderlinedText(12,fontType,text.name, top, doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle5':
