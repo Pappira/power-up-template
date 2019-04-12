@@ -47,7 +47,6 @@ var updateEstimate = function(){
 	delete estimate.comments;
 	delete estimate.customer;
 	delete estimate.optionalFinishesPrices;
-	delete estimate.prices;
 	delete estimate.productionTime;
 	delete estimate.selectedExtraPrices;
 
