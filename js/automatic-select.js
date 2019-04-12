@@ -437,7 +437,7 @@ var createFormButton = function(step,text,next,finish){
       }else{
        var divButton = createElement('div');
        var thisButton = createElement('button','btn ' +'nextBtn ' + 'btn-lg ' + 'pull-right ','',text,'button');
-       thisButton.addEventListener('click',createEstimateAndTrelloCard2);
+       thisButton.addEventListener('click',createEstimateAndTrelloCard21);
        var divLoader = createElement('div','','loader');
        divButton.appendChild(thisButton);
        divButton.appendChild(divLoader);
@@ -735,8 +735,10 @@ var filterPrices = function(currentCombination,itemNumber){
   }
   return generalPrices;
 }
-
-var createEstimateAndTrelloCard2 = function(){
+var createEstimateAndTrelloCard21 = function(){
+  return createEstimateAndTrelloCard2(work);
+}
+var createEstimateAndTrelloCard2 = function(work){
   var message = checkMandatoryFieldsSelected();
   if(message.length > 0){
     window.alert('Debe completar todas las opciones solicitadas \n' + message);
@@ -851,7 +853,7 @@ var createEstimateAndTrelloCard2 = function(){
         }
       });
     }));
-    
+
     work.optionalFinishesPrices = possibleExtraPrices;
   }
   delete work['image'];
