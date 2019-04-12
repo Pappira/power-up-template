@@ -698,7 +698,7 @@ var filterPrices = function(currentCombination,itemNumber){
     return (generalPrice.item == itemNumber);
   })
 
-  var lowerNearestQuantity = getTheLowerNearestQuantity(generalPrices,currentCombination.length);
+  var lowerNearestQuantity = getTheLowerNearestQuantity(generalPrices,currentCombination.quantity);
 
   generalPrices = filterByQuantity(generalPrices,lowerNearestQuantity);
 
