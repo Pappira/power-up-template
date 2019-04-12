@@ -680,6 +680,16 @@ var getValueFromObjectByReference = function(object, reference){
 
 }
 
+
+var filterExtraPricesByQuantity = function(prices,quantity){
+  return prices.filter(price => price.quantity = quantity);
+}
+
+var getTheLowerNearestQuantityFromExtraPrices = function(prices,quantity){
+  var quantities = prices.filter(price => price.quantity <= quantity).map(price => price.quantity);
+  return Math.max.apply(null, quantities);
+}
+
 var getTheLowerNearestQuantity = function(prices,quantity){
   var quantities = [];
   prices.forEach(function(price){
@@ -782,12 +792,16 @@ var createEstimateAndTrelloCard2 = function(){
     var possibleExtraPrices = extraPrices.filter(function(v, i) {
       return (v.workId == currentWork.id);
     });
+
+      
+    var lowerNearestQuantity = getTheLowerNearestQuantityFromExtraPrices(possibleExtraPrices,currentCombination.quantity);
+
+    possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,lowerNearestQuantity);
     
     possibleExtraPrices = possibleExtraPrices.map(function(extraPrice){
-      
       var isValid = 
       Object.keys(extraPrice).map(function(key){
-        if (key != "optionalFinishes" && key !="items" && key !="workId"){
+        if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="quantity"){
           if(!JSON.stringify(currentWork[key]).includes(JSON.stringify(extraPrice[key]))){
                 return false; 
           }
@@ -799,7 +813,7 @@ var createEstimateAndTrelloCard2 = function(){
           var valid = extraPrice.items.map(function(item,index){
           var isValid = 
           Object.keys(item).map(function(key){
-            if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="id"){
+            if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="id" && key!="quantity"){
               if(!JSON.stringify(currentWork.items[index][key]).includes(JSON.stringify(item[key]))){
                     return false; 
               }
@@ -817,15 +831,27 @@ var createEstimateAndTrelloCard2 = function(){
     }).filter(Boolean);
 
     //me deja en possibleExtraPrices general solo los extras que están en work
-    possibleExtraPrices.forEach(possibleExtraPrice => possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
-      return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
-    }));
+    possibleExtraPrices.forEach(function(possibleExtraPrice){
+      possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
+        return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
+      });
+      possibleExtraPrice.optionalFinishes.forEach(optionalFinish => optionalFinish.price = optionalFinish.price*currentCombination.quantity);
+    });
 
     //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
-    possibleExtraPrices.forEach(possible => possible.items.forEach(item => item.optionalFinishes = item.optionalFinishes?item.optionalFinishes.filter(function(optionalFinish){
-      return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
-    }):null))
-
+    possibleExtraPrices.forEach(possible => possible.items.forEach(function(item){
+      item.optionalFinishes = item.optionalFinishes?
+        item.optionalFinishes.filter(function(optionalFinish){
+          return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
+        }):
+        null;
+      item.optionalFinishes.forEach(function(optionalFinish){
+        if(optionalFinish){
+          optionalFinish.price = optionalFinish.price*currentCombination.quantity;
+        }
+      });
+    }));
+    
     work.optionalFinishesPrices = possibleExtraPrices;
   }
   delete work['image'];
