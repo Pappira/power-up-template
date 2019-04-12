@@ -855,7 +855,7 @@ function convertWorkToPrice(work,combination,price){
   }
   if(combination.clossedSizes){
     currentWork.clossedSizes = combination.clossedSizes;
-  }else{
+  }else if (Array.isArray(currentWork.clossedSizes)){
     currentWork.clossedSizes = currentWork.clossedSizes[0];
   }
   currentWork.workId = currentWork.id;
