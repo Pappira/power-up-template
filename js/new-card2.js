@@ -552,20 +552,21 @@ var createGeneralInformation = function(estimateObject){
 		}
 	}
 
-	if (estimateObject && estimateObject['finishes']){
-		for (var i = 0; i < estimateObject['finishes'].length;i++){
+
+	if (estimateObject && estimateObject.optionalFinishes){
+		for (var i = 0; i < estimateObject.optionalFinishes.length;i++){
       		var finishSelect = document.getElementById('generalfinish' + (i+1));
-      		finishSelect.value = estimateObject['finishes'][i]['finish'];
+      		finishSelect.value = estimateObject.optionalFinishes[i].finish;
       		$('#generalfinish' + (i+1)).material_select();
-      		if (estimateObject['finishes'][i]['finishComment']){
+      		if (estimateObject.optionalFinishes[i].finishComment){
 	      		var finishSelect = document.getElementById('generalfinishComment' + (i+1));
-	      		finishSelect.value = estimateObject['finishes'][i]['finishComment'];
+	      		finishSelect.value = estimateObject.optionalFinishes[i].finishComment;
 				var label = $('label[for="generalfinishComment' + (i+1) + '"]');
 				label[0].setAttribute('class','active');
 			}
-			if (estimateObject['finishes'][i]['showToClientFinish']){
+			if (estimateObject.optionalFinishes[i].showToClientFinish){
 				var showToClientCheck = document.getElementById('generalshowToClientFinish' + (i+1));
-				showToClientCheck.checked = estimateObject['finishes'][i]['showToClientFinish'];
+				showToClientCheck.checked = estimateObject.optionalFinishes[i].showToClientFinish;
 			}
 			addGeneralFinish();
 		}
