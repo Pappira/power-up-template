@@ -437,7 +437,7 @@ var createFormButton = function(step,text,next,finish){
       }else{
        var divButton = createElement('div');
        var thisButton = createElement('button','btn ' +'nextBtn ' + 'btn-lg ' + 'pull-right ','',text,'button');
-       thisButton.addEventListener('click',createEstimateAndTrelloCard21);
+       thisButton.addEventListener('click',createEstimateAndTrelloCard2);
        var divLoader = createElement('div','','loader');
        divButton.appendChild(thisButton);
        divButton.appendChild(divLoader);
@@ -681,7 +681,13 @@ var getValueFromObjectByReference = function(object, reference){
 }
 
 
-var filterExtraPricesByQuantity = function(prices,quantity){
+var filterExtraPricesByQuantity = function(prices,allQuantities){
+  var prices = [];
+  allQuantities.forEach(function(quantity){
+    var lowerNearestQuantity = getTheLowerNearestQuantityFromExtraPrices(possibleExtraPrices,quantity);
+    var currentPrice = prices.filter(price => price.quantity = lowerNearestQuantity);
+    prices.push();
+  });
   return prices.filter(price => price.quantity = quantity);
 }
 
@@ -735,10 +741,8 @@ var filterPrices = function(currentCombination,itemNumber){
   }
   return generalPrices;
 }
-var createEstimateAndTrelloCard21 = function(){
-  return createEstimateAndTrelloCard2(work);
-}
-var createEstimateAndTrelloCard2 = function(work){
+
+var createEstimateAndTrelloCard2 = function(){
   var message = checkMandatoryFieldsSelected();
   if(message.length > 0){
     window.alert('Debe completar todas las opciones solicitadas \n' + message);
@@ -796,16 +800,16 @@ var createEstimateAndTrelloCard2 = function(work){
     });
 
       
-    var lowerNearestQuantity = getTheLowerNearestQuantityFromExtraPrices(possibleExtraPrices,currentCombination.quantity);
+ 
 
-    possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,lowerNearestQuantity);
+    possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,work.quantities);
     
     possibleExtraPrices = possibleExtraPrices.map(function(extraPrice){
       var isValid = 
       Object.keys(extraPrice).map(function(key){
         if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="quantity"){
           if(!JSON.stringify(currentWork[key]).includes(JSON.stringify(extraPrice[key]))){
-                return false; 
+            return false; 
           }
         }
         return true;
@@ -837,7 +841,7 @@ var createEstimateAndTrelloCard2 = function(work){
       possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
         return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
       });
-      possibleExtraPrice.optionalFinishes.forEach(optionalFinish => optionalFinish.price = optionalFinish.price*currentCombination.quantity);
+      possibleExtraPrice.optionalFinishes.forEach(optionalFinish => optionalFinish.price = optionalFinish.price*optionalFinish.quantity);
     });
 
     //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
@@ -849,11 +853,11 @@ var createEstimateAndTrelloCard2 = function(work){
         null;
       item.optionalFinishes.forEach(function(optionalFinish){
         if(optionalFinish){
-          optionalFinish.price = optionalFinish.price*currentCombination.quantity;
+          optionalFinish.price = optionalFinish.price*optionalFinish.quantity;
         }
       });
     }));
-
+    
     work.optionalFinishesPrices = possibleExtraPrices;
   }
   delete work['image'];
