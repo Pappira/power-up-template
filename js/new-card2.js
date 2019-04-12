@@ -14,7 +14,7 @@ var quanatityOfItemFinishes = [0];
 var quantityOfGeneralFinishes = 0;
 var quantityOfItems = 0;
 
-var finishes = ['Laminado Mate', 'Laminado Brillo', 'Puntas redondeadas','Encuadernado HotMelt','Encuadernado con Rulo','Encuadernado con 2 grapas al medio', 'Encuadernado con una grapa','Encolado','Tapa Dura','Tapa SemiDura','Barniz UV Brillo Pleno', 'Barniz UV Brillo Sectorizado','Barniz UV Mate Pleno','Barniz UV Mate Sectorizado','Barniz mate','Barniz Brillo','Intercalado','Marcado', 'Doblado','Troquelado','Pegado'];
+var finishes = ['Cierre Elástico', 'Laminado Mate', 'Laminado Brillo', 'Puntas redondeadas','Encuadernado HotMelt','Encuadernado con Rulo','Encuadernado con 2 grapas al medio', 'Encuadernado con una grapa','Encolado','Tapa Dura','Tapa SemiDura','Barniz UV Brillo Pleno', 'Barniz UV Brillo Sectorizado','Barniz UV Mate Pleno','Barniz UV Mate Sectorizado','Barniz mate','Barniz Brillo','Intercalado','Marcado', 'Doblado','Troquelado','Pegado'];
 var materials = ['Coteado Mate','Coteado Brillo','Obra Blanco','Obra Color','Opalina Lisa','Opalina Texturada']
 var workTypes = ['Revista','Encuadernados','Recetario','Folleto','Volante'];
 var paymentWays = ['Contado','Seña del 50% y saldo contra-entrega','Seña del 40% y saldo contra-entrega','SIIF 30 días','SIIF 60 días'];
