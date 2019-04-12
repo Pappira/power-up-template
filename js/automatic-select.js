@@ -776,7 +776,6 @@ var createEstimateAndTrelloCard2 = function(){
         work.items[i].optionalFinishes = cutArray(work.items[i].optionalFinishes,selectedOptions[i].optionalFinishes);
       }
     }
-    work.prices = [];
     
     addPrices(work);
 
@@ -1016,6 +1015,7 @@ var getCombinations = function(estimate){
 }
 
 var addPrices = function(work){
+  work.prices = [];
   var allCombinations = getCombinations(work);
     
   var currentWork = JSON.parse(JSON.stringify(work));
