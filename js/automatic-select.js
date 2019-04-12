@@ -684,8 +684,8 @@ var getValueFromObjectByReference = function(object, reference){
 var filterExtraPricesByQuantity = function(prices,allQuantities){
   var prices = [];
   allQuantities.forEach(function(quantity){
-    var lowerNearestQuantity = getTheLowerNearestQuantityFromExtraPrices(possibleExtraPrices,quantity);
-    var currentPrice = prices.filter(price => price.quantity = lowerNearestQuantity);
+    var lowerNearestQuantity = getTheLowerNearestQuantityFromExtraPrices(prices,quantity);
+    var currentPrice = prices.filter(price => price.quantity == lowerNearestQuantity);
     prices.push();
   });
   return prices.filter(price => price.quantity = quantity);
@@ -744,16 +744,16 @@ var filterPrices = function(currentCombination,itemNumber){
 
 var addExtraPrices = function(work){
   var possibleExtraPrices = extraPrices.filter(function(v, i) {
-    return (v.workId == currentWork.id);
+    return (v.workId == work.id);
   });
 
-  possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,work.quantities);
+  possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,work.quantity);
   
   possibleExtraPrices = possibleExtraPrices.map(function(extraPrice){
     var isValid = 
     Object.keys(extraPrice).map(function(key){
       if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="quantity"){
-        if(!JSON.stringify(currentWork[key]).includes(JSON.stringify(extraPrice[key]))){
+        if(!JSON.stringify(work[key]).includes(JSON.stringify(extraPrice[key]))){
           return false; 
         }
       }
@@ -765,7 +765,7 @@ var addExtraPrices = function(work){
         var isValid = 
         Object.keys(item).map(function(key){
           if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="id" && key!="quantity"){
-            if(!JSON.stringify(currentWork.items[index][key]).includes(JSON.stringify(item[key]))){
+            if(!JSON.stringify(work.items[index][key]).includes(JSON.stringify(item[key]))){
                   return false; 
             }
           }
