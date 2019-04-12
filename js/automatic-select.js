@@ -682,13 +682,13 @@ var getValueFromObjectByReference = function(object, reference){
 
 
 var filterExtraPricesByQuantity = function(prices,allQuantities){
-  var prices = [];
+  var  currentPrices = [];
   allQuantities.forEach(function(quantity){
     var lowerNearestQuantity = getTheLowerNearestQuantityFromExtraPrices(prices,quantity);
-    var currentPrice = prices.filter(price => price.quantity == lowerNearestQuantity);
-    prices.push();
+    var currentPrice = currentPriceprices.filter(price => price.quantity == lowerNearestQuantity);
+    currentPrices.push();
   });
-  return prices.filter(price => price.quantity = quantity);
+  return currentPrices.filter(price => price.quantity = quantity);
 }
 
 var getTheLowerNearestQuantityFromExtraPrices = function(prices,quantity){
