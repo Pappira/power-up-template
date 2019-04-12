@@ -686,7 +686,7 @@ var filterExtraPricesByQuantity = function(prices,allQuantities){
   allQuantities.forEach(function(quantity){
     var lowerNearestQuantity = getTheLowerNearestQuantityFromExtraPrices(prices,quantity);
     var currentPrice = currentPriceprices.filter(price => price.quantity == lowerNearestQuantity);
-    currentPrices.push();
+    currentPrices.push(currentPrice);
   });
   return currentPrices.filter(price => price.quantity = quantity);
 }
