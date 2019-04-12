@@ -12,7 +12,9 @@ var originalWork;
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
+    if(!t.arg('update')){
       createWorkTypeSelectPanel();
+		}
 	});
 });
 
