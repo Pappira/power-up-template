@@ -40,9 +40,21 @@ var updateEstimate = function(){
 	estimate.clossedSize = newClossedSize;
 
 	estimate.prices = [];    
+
+	var oldEstimate = JSON.parse(JSON.stringify(estimate));
+
+	delete estimate.selectOption;
+	delete estimate.comments;
+	delete estimate.customer;
+	delete estimate.optionalFinishesPrices;
+	delete estimate.prices;
+	delete estimate.productionTime;
+	delete estimate.selectedExtraPrices;
+
 	addPrices(estimate);
 
-	return estimate;
+	oldEstimate.prices = estimate.prices;
+	return oldEstimate;
 };
 
 

@@ -777,20 +777,8 @@ var createEstimateAndTrelloCard2 = function(){
       }
     }
     work.prices = [];
-
-    var estimate = JSON.parse(JSON.stringify(work));
-    delete estimate.selectOption;
-    delete estimate.comments;
-    delete estimate.customer;
-    delete estimate.optionalFinishesPrices;
-    delete estimate.prices;
-    delete estimate.productionTime;
-    delete estimate.selectedExtraPrices;
     
-    
-    addPrices(estimate);
-
-    work.prices = estimate.prices;
+    addPrices(work);
 
     var possibleExtraPrices = extraPrices.filter(function(v, i) {
       return (v.workId == currentWork.id);
