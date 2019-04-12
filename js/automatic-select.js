@@ -678,14 +678,33 @@ var getValueFromObjectByReference = function(object, reference){
 
 }
 
+var getTheLowerNearestQuantity = function(prices,quantity){
+  var quantities = [];
+  prices.forEach(function(price){
+    quantities.push(price.toCheck.filter(toCheck => toCheck.checkAttribute == "quantity" && toCheck.value <= quantity).map(toCheck => toCheck.value));
+  });
+  return Math.max.apply(null, quantities);
+}
+
+var filterByQuantity = function(prices,quantity){
+  return prices.filter(function(price) {
+    return (price.toCheck.filter(toCheck => toCheck.checkAttribute=="quantity" && toCheck.value == quantity)).length>0;
+  });
+}
+
 var filterPrices = function(currentCombination,itemNumber){
 
-  var generalPrices = prices2.filter(function(v, i) {
-    return (v.item == itemNumber);
+  var generalPrices = prices2.filter(function(generalPrice) {
+    return (generalPrice.item == itemNumber);
   })
-  
+
+  var lowerNearestQuantity = getTheLowerNearestQuantity(generalPrices,currentCombination.length);
+
+  generalPrices = filterByQuantity(generalPrices,lowerNearestQuantity);
+
+
   var checks = generalPrices[0].toCheck.map(a => a.checkAttribute);
-  checks = checks.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","excess"].indexOf(check)==-1);
+  checks = checks.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","excess","quantity"].indexOf(check)==-1);
 
   for (var t = 0; t < checks.length;t++){
     generalPrices = generalPrices.filter(function(v, i) {
