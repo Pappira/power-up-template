@@ -33,11 +33,15 @@ var updateEstimate = function(){
 	}
 	estimate.quantity = quantity;
 
-	var newClossedSize = document.getElementById("clossedSize").getValue();
+	var newClossedSize = document.getElementById("clossedSize").value;
 	
 	//cambio los items que tenian el mismo openedSize que el viejo clossedsize
 	estimate.items.filter(item => item.openedSize == estimate.clossedSize).forEach(item => item.openedSize[0] = newClossedSize);
-	estimate.clossedSize[0] = newClossedSize;
+	estimate.clossedSize = newClossedSize;
+
+	estimate.prices = [];    
+	addPrices(estimate);
+
 	return estimate;
 };
 
@@ -117,6 +121,6 @@ var createGeneralInformation = function(estimateObject){
 
 
 var updateEstimateCard = function() {
-	var estimate = createObject(estimate);
+	var estimate = updateEstimate(estimate);
 	updateCard(estimate);
   };
