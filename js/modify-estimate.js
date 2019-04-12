@@ -49,8 +49,8 @@ var updateEstimate = function(){
 	delete estimate.optionalFinishesPrices;
 	delete estimate.productionTime;
 	delete estimate.selectedExtraPrices;
-	
-	createEstimateAndTrelloCard2(estimate);
+
+	addPrices(estimate);
 	addExtraPrices(estimate);
 	oldEstimate.prices = estimate.prices;
 	return oldEstimate;
