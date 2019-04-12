@@ -251,17 +251,17 @@ var cardButtonCallback = function(t){
   });
   */
 };
-var getNewEstimateModalCallback = function(update){
+var getNewEstimateModalCallback = function(){
   return function(t){
     return t.modal(
       {
-        url: './new-card2.html', // The URL to load for the iframe
-        args: { update: update }, // Optional args to access later with t.arg('text') on './modal.html'
-        accentColor: '#F2D600', // Optional color for the modal header 
+        url: './modify-estimate.html', // The URL to load for the iframe
+        //args: { update: update }, // Optional args to access later with t.arg('text') on './modal.html'
+        accentColor: '#303F9F', // Optional color for the modal header 
         height: 500, // Initial height for iframe; not used if fullscreen is true
         fullscreen: false, // Whether the modal should stretch to take up the whole screen
         callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
-        title: update?'Modificar Datos':'Nuevo Presupuesto', // Optional title for modal header
+        title: 'Modificar Datos', // Optional title for modal header
         // You can add up to 3 action buttons on the modal header - max 1 on the right side.
         actions: [{
           icon: GRAY_ICON,
@@ -405,7 +405,7 @@ var getAcceptEstimate = function(){
     return t.modal({
       url: './acceptEstimate.html', // The URL to load for the iframe
       accentColor: '#303F9F', // Optional color for the modal header 
-      height: 500, // Initial height for iframe; not used if fullscreen is true
+      height: 740, // Initial height for iframe; not used if fullscreen is true
       fullscreen: false, // Whether the modal should stretch to take up the whole screen
       callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
       title: 'Aceptar presupuesto', // Optional title for modal header
@@ -510,12 +510,12 @@ TrelloPowerUp.initialize({
     var buttons = [];
   //  buttons.push(pdf());
   //  buttons.push(downloadWorkOrderPdf());
-    buttons.push(
+    /*buttons.push(
         {
           text: 'Nuevo Presupuesto',
           callback: getNewEstimateModalCallback(false)
         }
-    );
+    );*/
     buttons.push(
         {
           text: 'Nuevo Presupuesto Automático',
@@ -576,8 +576,8 @@ TrelloPowerUp.initialize({
           // usually you will provide a callback function to be run on button click
           // we recommend that you use a popup on click generally
           icon: GRAY_ICON, // don't use a colored icon here
-          text: 'Modificar Datos',
-          callback: getNewEstimateModalCallback(true)
+          text: 'Modificar',
+          callback: getNewEstimateModalCallback()
         },/*{
           // usually you will provide a callback function to be run on button click
           // we recommend that you use a popup on click generally
