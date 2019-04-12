@@ -500,7 +500,7 @@ var createGeneralInformation = function(estimateObject){
 	var h1 = createElement('h1','titulo','generalTitle','General');
 	var divRow = createElement('div','row','','');
 
-	var workTypeFinish = createSelect('s4','workType',workTypes,'Tipo de Trabajo',estimateObject?estimateObject['workType']:null);
+	var workTypeFinish = createSelect('s4','workType',workTypes,'Tipo de Trabajo',estimateObject?estimateObject.workType:null);
 	divRow.appendChild(workTypeFinish);
 
 	var divQuantity = createTextInput('s4','quantity','Cantidad','number');
@@ -543,9 +543,9 @@ var createGeneralInformation = function(estimateObject){
 	    }
 	});
 
-	if (estimateObject && estimateObject['quantity']){
-		for (var i = 0; i < estimateObject['quantity'].length;i++){
-			var chip = createChip('quantityChip' + ++quantityOfQuantities,estimateObject['quantity'][i],['quantity'],[estimateObject['quantity'][i]])
+	if (estimateObject && estimateObject.quantities){
+		for (var i = 0; i < estimateObject.quantities.length;i++){
+			var chip = createChip('quantityChip' + ++quantityOfQuantities,estimateObject.quantities[i],['quantity'],[estimateObject.quantities[i]])
 			var quantityChipsDiv = document.getElementById('quantityChipsDiv');	
 			quantityChip.push('quantityChip' + quantityOfQuantities);
 			quantityChipsDiv.appendChild(chip);
