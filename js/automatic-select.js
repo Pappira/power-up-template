@@ -742,6 +742,70 @@ var filterPrices = function(currentCombination,itemNumber){
   return generalPrices;
 }
 
+var addExtraPrices = function(work){
+  var possibleExtraPrices = extraPrices.filter(function(v, i) {
+    return (v.workId == currentWork.id);
+  });
+
+  possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,work.quantities);
+  
+  possibleExtraPrices = possibleExtraPrices.map(function(extraPrice){
+    var isValid = 
+    Object.keys(extraPrice).map(function(key){
+      if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="quantity"){
+        if(!JSON.stringify(currentWork[key]).includes(JSON.stringify(extraPrice[key]))){
+          return false; 
+        }
+      }
+      return true;
+      }).every(Boolean);
+
+      if (isValid){
+        var valid = extraPrice.items.map(function(item,index){
+        var isValid = 
+        Object.keys(item).map(function(key){
+          if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="id" && key!="quantity"){
+            if(!JSON.stringify(currentWork.items[index][key]).includes(JSON.stringify(item[key]))){
+                  return false; 
+            }
+          }
+          return true;
+          }).every(Boolean);
+          return isValid;
+    
+      }).every(Boolean);
+      if(valid){
+        return extraPrice;
+      }
+      }
+
+  }).filter(Boolean);
+
+  //me deja en possibleExtraPrices general solo los extras que están en work
+  possibleExtraPrices.forEach(function(possibleExtraPrice){
+    possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
+      return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
+    });
+    possibleExtraPrice.optionalFinishes.forEach(optionalFinish => optionalFinish.price = optionalFinish.price*optionalFinish.quantity);
+  });
+
+  //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
+  possibleExtraPrices.forEach(possible => possible.items.forEach(function(item){
+    item.optionalFinishes = item.optionalFinishes?
+      item.optionalFinishes.filter(function(optionalFinish){
+        return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
+      }):
+      null;
+    item.optionalFinishes.forEach(function(optionalFinish){
+      if(optionalFinish){
+        optionalFinish.price = optionalFinish.price*optionalFinish.quantity;
+      }
+    });
+  }));
+  
+  work.optionalFinishesPrices = possibleExtraPrices;
+}
+
 var createEstimateAndTrelloCard2 = function(){
   var message = checkMandatoryFieldsSelected();
   if(message.length > 0){
@@ -795,70 +859,7 @@ var createEstimateAndTrelloCard2 = function(){
     
     addPrices(work);
 
-    var possibleExtraPrices = extraPrices.filter(function(v, i) {
-      return (v.workId == currentWork.id);
-    });
-
-      
- 
-
-    possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,work.quantities);
-    
-    possibleExtraPrices = possibleExtraPrices.map(function(extraPrice){
-      var isValid = 
-      Object.keys(extraPrice).map(function(key){
-        if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="quantity"){
-          if(!JSON.stringify(currentWork[key]).includes(JSON.stringify(extraPrice[key]))){
-            return false; 
-          }
-        }
-        return true;
-        }).every(Boolean);
-
-        if (isValid){
-          var valid = extraPrice.items.map(function(item,index){
-          var isValid = 
-          Object.keys(item).map(function(key){
-            if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="id" && key!="quantity"){
-              if(!JSON.stringify(currentWork.items[index][key]).includes(JSON.stringify(item[key]))){
-                    return false; 
-              }
-            }
-            return true;
-            }).every(Boolean);
-            return isValid;
-      
-        }).every(Boolean);
-        if(valid){
-          return extraPrice;
-        }
-        }
-
-    }).filter(Boolean);
-
-    //me deja en possibleExtraPrices general solo los extras que están en work
-    possibleExtraPrices.forEach(function(possibleExtraPrice){
-      possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
-        return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
-      });
-      possibleExtraPrice.optionalFinishes.forEach(optionalFinish => optionalFinish.price = optionalFinish.price*optionalFinish.quantity);
-    });
-
-    //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
-    possibleExtraPrices.forEach(possible => possible.items.forEach(function(item){
-      item.optionalFinishes = item.optionalFinishes?
-        item.optionalFinishes.filter(function(optionalFinish){
-          return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
-        }):
-        null;
-      item.optionalFinishes.forEach(function(optionalFinish){
-        if(optionalFinish){
-          optionalFinish.price = optionalFinish.price*optionalFinish.quantity;
-        }
-      });
-    }));
-    
-    work.optionalFinishesPrices = possibleExtraPrices;
+    addExtraPrices(work);
   }
   delete work['image'];
   delete work['quantities'];
