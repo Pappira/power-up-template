@@ -444,7 +444,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	}
 	return text;
 }
-var createItemText = function(estimate, item, showBBleedPrint, showAllDifferentPages, showOptionalFinishes,dontTakeCareOfSelectedOption){
+var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPages, showOptionalFinishes,dontTakeCareOfSelectedOption,showPrivatePrinterInformation){
 	var texts = [];
 	var selectedItem;
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
@@ -455,7 +455,7 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferentP
 		texts.push(createText('subtitle1',item.name,''));
 		if (selectedItem){
 			texts.push(createText('text','Papel', selectedItem.materials.paper + ' ' + selectedItem.materials.gr + 'gr'));
-			var inks = selectedItem.inks.inksDetails + (showBBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
+			var inks = selectedItem.inks.inksDetails + (showBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
 			inks += ' - ' + selectedItem.faces;
 			texts.push(createText('text','Impresión',inks));
 			if (selectedItem.openedSize != estimate.clossedSize){
@@ -470,6 +470,9 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferentP
 				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
 					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.finish +currentItemMandatoryFinishGroups[k].finishes.finishComment));
 				}
+			}
+			if(showPrivatePrinterInformation && estimate.SelectedOption){
+				
 			}
 			var notTitlePlaced = true;
 			if(showOptionalFinishes){
@@ -501,7 +504,7 @@ var createItemText = function(estimate, item, showBBleedPrint, showAllDifferentP
 			if (item.inks){
 					var inks = item.inks.map(function(ink) {
 						return ink.inksDetails;
-					}).join(' // ') + (showBBleedPrint?' ' + (item.bleedPrint?'(Impresión al Vivo)':''):'');
+					}).join(' // ') + (showBleedPrint?' ' + (item.bleedPrint?'(Impresión al Vivo)':''):'');
 					inks += (item.faces?' - ' + item.faces.join(' // '):'');
 					texts.push(createText('text','Impresión',inks));
 			}

@@ -792,7 +792,7 @@ var addExtraPrices = function(work){
     possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
       return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
     });
-    possibleExtraPrice.optionalFinishes.forEach(optionalFinish => optionalFinish.price = optionalFinish.price*optionalFinish.quantity);
+    possibleExtraPrice.optionalFinishes.forEach(optionalFinish => optionalFinish.price = optionalFinish.price*possibleExtraPrice.quantity);
   });
 
   //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
@@ -813,7 +813,7 @@ var addExtraPrices = function(work){
         });
       }
     }
-  });
+  }); 
   
   work.optionalFinishesPrices = possibleExtraPrices;
 }
