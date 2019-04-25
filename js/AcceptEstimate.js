@@ -70,7 +70,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
           priceText += currentPriceText;
         }
       }
-      text = priceText + "<h6>" + 'Precio: $ ' + price.price + ' + IVA' + '</h6>';
+      text = priceText + "<h6>" + 'Precio: $ ' + price.price.toLocaleString() + ' + IVA' + '</h6>';
 
       var card = createHTMLCard(noImage,'',text,type,i,nextFunction,true);
       divRow.appendChild(card);
