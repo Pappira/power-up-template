@@ -685,13 +685,13 @@ var filterExtraPricesByQuantity = function(prices,allQuantities){
   var  currentPrices = [];
   allQuantities.forEach(function(quantity){
     var lowerNearestQuantity = getTheLowerNearestQuantityFromExtraPrices(prices,quantity);
-    var currentPrice = prices.filter(price => price.quantity == lowerNearestQuantity);
+    var currentPrice = JSON.parse(JSON.stringify(prices.filter(price => price.quantity == lowerNearestQuantity)));
     if(currentPrice.length>0){
       currentPrice[0].quantity = quantity; 
-      currentPrices.push(currentPrice);
+       currentPrices.push(currentPrice);
      }
   });
-  return currentPrices.filter(price => price.quantity == quantity);
+  return currentPrices;
 }
 
 var getTheLowerNearestQuantityFromExtraPrices = function(prices,quantity){
