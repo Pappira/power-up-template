@@ -796,20 +796,24 @@ var addExtraPrices = function(work){
   });
 
   //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
-  possibleExtraPrices.forEach(possible => possible.items.forEach(function(item){
-    item.optionalFinishes = item.optionalFinishes?
-      item.optionalFinishes.filter(function(optionalFinish){
-        return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
-      }):
-      null;
-    if (item.optionalFinishes){
-      item.optionalFinishes.forEach(function(optionalFinish){
-        if(optionalFinish){
-          optionalFinish.price = optionalFinish.price*optionalFinish.quantity;
-        }
-      });
+  possibleExtraPrices.forEach(function(possible){
+    var quantity = possible.quantity;
+    for (var s = 0; s < possible.items.length;s++){
+      item = possible.items[s]; 
+      item.optionalFinishes = item.optionalFinishes?
+        item.optionalFinishes.filter(function(optionalFinish){
+          return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
+        }): 
+        null; 
+      if (item.optionalFinishes){
+        item.optionalFinishes.forEach(function(optionalFinish){
+          if(optionalFinish){ 
+            optionalFinish.price = optionalFinish.price*quantity;
+          }
+        });
+      }
     }
-  }));
+  });
   
   work.optionalFinishesPrices = possibleExtraPrices;
 }
