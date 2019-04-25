@@ -354,7 +354,7 @@ function add(accumulator, a) {
 var createTextForCard = function(estimate){
 	var texts = createGeneralText(estimate,true);
 	for (var i = 0; i < estimate.items.length;i++){
-		texts = texts.concat(createItemText(estimate,estimate.items[i],true,true,true));
+		texts = texts.concat(createItemText(estimate,estimate.items[i],true,true,true,false,true));
 	}
 	texts = texts.concat(createCommentsText(estimate,true,false)); 
 
@@ -465,14 +465,16 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 				var quantityOfPages = selectedItem.quantityOfPages + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''));
 				texts.push(createText('text','Páginas',quantityOfPages));
 			}
+			if(showPrivatePrinterInformation && estimate.SelectedOption){
+				texts.push(createText('text','Hoja', selectedItem.sheetSize + " cortado en " + selectedItem.cutsPerSheet));
+				texts.push(createText('text','Pliego', selectedItem.paperSize + " armado de a " + selectedItem.quantityPerPaper + "(" + selectedItem.excess + " de demasía)"));
+				texts.push(createText('text','Máquina', selectedItem.machine));
+			}
 			if (selectedItem.mandatoryFinishGroups && selectedItem.mandatoryFinishGroups.length >0){
 				currentItemMandatoryFinishGroups = selectedItem.mandatoryFinishGroups;
 				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
 					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.finish +currentItemMandatoryFinishGroups[k].finishes.finishComment));
 				}
-			}
-			if(showPrivatePrinterInformation && estimate.SelectedOption){
-				
 			}
 			var notTitlePlaced = true;
 			if(showOptionalFinishes){
