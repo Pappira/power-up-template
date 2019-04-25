@@ -94,7 +94,7 @@ var newAddText = function(textToAdd, doc, top){
     return top;
 }
 
-var groupFinishes = function(finishesToGroup,itemNumber){
+var groupFinishes = function(finishesToGroup){
     var finishes = [];
     for (var i = 0; i < finishesToGroup.length; i++){
         var currentFinishes = [];

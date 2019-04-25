@@ -390,11 +390,11 @@ var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption)
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	var texts = [];
 	var finishes;
-	if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
+	if (estimate.optionalFinishesPrices && estimate.optionalFinishesPrices.length >0){
 		if(!selectedOption){
-			finishes = groupFinishes(estimate.optionalFinishesPrices,-1);
+			finishes = groupFinishes(estimate.optionalFinishesPrices);
 		}else{
-			finishes = groupFinishes(estimate.selectedExtraPrices,-1);
+			finishes = groupFinishes(estimate.selectedExtraPrices);
 			
 		}
 		texts = [].concat.apply([],finishes.map(finish => [].concat.apply([],[createText('subtitle3','Opcional ' + finish.finish  + (finish.item!=-1?' en ' + estimate.items[finish.item].name:''),''), finish.price.map(price => createText('text','Sub-Total extra (' + price.quantity + ' unidades)', '$ ' +  price.price.toLocaleString() + ' + IVA'))])))
