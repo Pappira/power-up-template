@@ -465,17 +465,17 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 				var quantityOfPages = selectedItem.quantityOfPages + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''));
 				texts.push(createText('text','Páginas',quantityOfPages));
 			}
-			if(showPrivatePrinterInformation && estimate.SelectedOption){
-				texts.push(createText('text','Hoja', selectedItem.sheetSize + " cortado en " + selectedItem.cutsPerSheet));
-				texts.push(createText('text','Pliego', selectedItem.paperSize + " armado de a " + selectedItem.quantityPerPaper + "(" + selectedItem.excess + " de demasía)"));
-				texts.push(createText('text','Máquina', selectedItem.machine));
-			}
 			if (selectedItem.mandatoryFinishGroups && selectedItem.mandatoryFinishGroups.length >0){
 				currentItemMandatoryFinishGroups = selectedItem.mandatoryFinishGroups;
 				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
 					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.finish +currentItemMandatoryFinishGroups[k].finishes.finishComment));
 				}
 			}
+			if(showPrivatePrinterInformation && estimate.SelectedOption){
+				texts.push(createText('text','Hoja', selectedItem.sheetSize + " cortado en " + selectedItem.cutsPerSheet));
+				texts.push(createText('text','Pliego', selectedItem.paperSize + " armado de a " + selectedItem.quantityPerPaper + " (" + selectedItem.excess + " de demasía)"));
+				texts.push(createText('text','Máquina', selectedItem.machine));
+			}  
 			var notTitlePlaced = true;
 			if(showOptionalFinishes){
 				var optionalFinishesPrices = estimate.selectedExtraPrices;
