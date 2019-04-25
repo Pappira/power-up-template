@@ -753,6 +753,9 @@ var addExtraPrices = function(work){
   possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,work.quantity);
   
   possibleExtraPrices = possibleExtraPrices.map(function(extraPrice){
+    if (Array.isArray(extraPrice)){
+      extraPrice = extraPrice[0];
+    }
     var isValid = 
     Object.keys(extraPrice).map(function(key){
       if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="quantity"){
