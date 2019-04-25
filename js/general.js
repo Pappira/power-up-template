@@ -594,7 +594,7 @@ var createCompletePriceText = function(estimate){
 							+ ((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'');
 
 							if(currentPriceText && currentPriceText.length>0){
-									priceText = ( price.items.length>1?originalItem.name:'')  + currentPriceText;
+								priceText += (priceText.length>0?' ':'') + ( price.items.length>1?originalItem.name:'')  + currentPriceText;
 							}
 					}
 					if (generalFinishesText && generalFinishesText.length>0){
