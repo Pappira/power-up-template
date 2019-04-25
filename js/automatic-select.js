@@ -802,11 +802,13 @@ var addExtraPrices = function(work){
         return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
       }):
       null;
-    item.optionalFinishes.forEach(function(optionalFinish){
-      if(optionalFinish){
-        optionalFinish.price = optionalFinish.price*optionalFinish.quantity;
-      }
-    });
+    if (item.optionalFinishes){
+      item.optionalFinishes.forEach(function(optionalFinish){
+        if(optionalFinish){
+          optionalFinish.price = optionalFinish.price*optionalFinish.quantity;
+        }
+      });
+    }
   }));
   
   work.optionalFinishesPrices = possibleExtraPrices;
