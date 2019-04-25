@@ -933,6 +933,24 @@ function convertWorkToPrice(work,combination,price){
         paper: combination.items[i].paper
       }
     }
+    if(combination.items[i].machine){
+      currentWork.items[i].machine = combination.items[i].machine;
+    }
+    if(combination.items[i].paperSize){
+      currentWork.items[i].paperSize = combination.items[i].paperSize;
+    }
+    if(combination.items[i].sheetSize){
+      currentWork.items[i].sheetSize = combination.items[i].sheetSize;
+    }
+    if(combination.items[i].cutsPerSheet){
+      currentWork.items[i].cutsPerSheet = combination.items[i].cutsPerSheet;
+    }
+    if(combination.items[i].quantityPerPaper){
+      currentWork.items[i].quantityPerPaper = combination.items[i].quantityPerPaper;
+    }
+    if(combination.items[i].excess){
+      currentWork.items[i].excess = combination.items[i].excess;
+    }
   }
   return currentWork;
 }
