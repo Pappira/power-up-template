@@ -673,7 +673,7 @@ var createEstimateAndTrelloCard2 = function(){
       if(work.items[i].faces.length>1){
           work.items[i].faces = cutArray(work.items[i].faces,selectedOptions[i].faces);
       }
-      if(work.items[i].openedSize.length>1){
+      if(work.items[i].openedSize && work.items[i].openedSize.length>1){
           work.items[i].openedSize = cutArray(work.items[i].openedSize,selectedOptions[i].openedSize);
       }
       if(work.items[i].mandatoryFinishGroups){
@@ -834,8 +834,10 @@ var getCombinations = function(estimate){
       for (var j = 0; j  < item.faces.length;j++){
           faces.push('"faces": "'+ item.faces[j] + '",');
       }
-      for (var j = 0; j  < item.openedSize.length;j++){
-        openedSize.push('"openedSize": "'+ item.openedSize[j] + '",');
+      if ( item.openedSize){
+        for (var j = 0; j  < item.openedSize.length;j++){
+          openedSize.push('"openedSize": "'+ item.openedSize[j] + '",');
+        }
       }
       for (var j = 0; j  < item.quantityOfVias.length;j++){
         quantityOfVias.push('"quantityOfVias": '+ item.quantityOfVias[j] + ',');
