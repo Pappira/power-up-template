@@ -31709,7 +31709,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":360,
+         "value":7.2,
          "condition":"each"
       }
    },
@@ -31759,7 +31759,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":480,
+         "value":4.8,
          "condition":"each"
       }
    },
@@ -31809,7 +31809,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":680,
+         "value":3.4,
          "condition":"each"
       }
    },
@@ -31859,7 +31859,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":880,
+         "value":2.933333333333333,
          "condition":"each"
       }
    },
@@ -31909,7 +31909,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":1090,
+         "value":2.18,
          "condition":"each"
       }
    },
@@ -31959,7 +31959,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":1690,
+         "value":1.69,
          "condition":"each"
       }
    },
@@ -32009,7 +32009,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":550,
+         "value":11,
          "condition":"each"
       }
    },
@@ -32059,7 +32059,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":745,
+         "value":7.45,
          "condition":"each"
       }
    },
@@ -32109,7 +32109,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":1045,
+         "value":5.225,
          "condition":"each"
       }
    },
@@ -32159,7 +32159,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":1345,
+         "value":4.483333333333333,
          "condition":"each"
       }
    },
@@ -32209,7 +32209,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":1745,
+         "value":3.49,
          "condition":"each"
       }
    },
@@ -32259,7 +32259,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":2890,
+         "value":2.89,
          "condition":"each"
       }
    },
@@ -32309,7 +32309,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":300,
+         "value":6,
          "condition":"each"
       }
    },
@@ -32359,7 +32359,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":380,
+         "value":3.8,
          "condition":"each"
       }
    },
@@ -32409,7 +32409,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":530,
+         "value":2.65,
          "condition":"each"
       }
    },
@@ -32459,7 +32459,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":680,
+         "value":2.2666666666666666,
          "condition":"each"
       }
    },
@@ -32509,7 +32509,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":880,
+         "value":1.76,
          "condition":"each"
       }
    },
@@ -32559,7 +32559,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":1380,
+         "value":1.38,
          "condition":"each"
       }
    },
@@ -32609,7 +32609,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":380,
+         "value":7.6,
          "condition":"each"
       }
    },
@@ -32659,7 +32659,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":530,
+         "value":5.3,
          "condition":"each"
       }
    },
@@ -32709,7 +32709,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":690,
+         "value":3.45,
          "condition":"each"
       }
    },
@@ -32759,7 +32759,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":880,
+         "value":2.933333333333333,
          "condition":"each"
       }
    },
@@ -32809,7 +32809,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":1380,
+         "value":2.76,
          "condition":"each"
       }
    },
@@ -32825,7 +32825,7 @@ var prices2 = [
             "checkAttribute":"quantityPerPaper",
             "value":18
          },
-         { 
+         {
             "checkAttribute":"cutsPerSheet",
             "value":6
          },
@@ -32859,7 +32859,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":1690,
+         "value":1.69,
          "condition":"each"
       }
    }
