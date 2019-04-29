@@ -31448,6 +31448,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31465,6 +31466,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31482,6 +31484,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31499,6 +31502,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31516,6 +31520,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31533,6 +31538,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31550,6 +31556,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31567,6 +31574,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31584,6 +31592,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31601,6 +31610,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31618,6 +31628,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31635,6 +31646,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31684,6 +31696,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31733,6 +31746,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31782,6 +31796,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31831,6 +31846,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31880,6 +31896,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31929,6 +31946,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31978,6 +31996,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32027,6 +32046,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32076,6 +32096,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32125,6 +32146,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32174,6 +32196,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32223,6 +32246,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32272,6 +32296,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32321,6 +32346,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32370,6 +32396,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32419,6 +32446,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32468,6 +32496,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32517,6 +32546,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32566,6 +32596,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32615,6 +32646,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32664,6 +32696,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32713,6 +32746,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32762,6 +32796,7 @@ var prices2 = [
       }
    },
    {
+      "workId":0,
       "item":0,
       "toCheck":[
          {
