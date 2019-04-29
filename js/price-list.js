@@ -31674,7 +31674,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -31724,7 +31724,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -31774,7 +31774,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -31824,7 +31824,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -31874,7 +31874,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -31924,7 +31924,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -31974,7 +31974,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32024,7 +32024,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32074,7 +32074,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32124,7 +32124,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32174,7 +32174,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32224,7 +32224,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32274,7 +32274,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32324,7 +32324,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32374,7 +32374,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32424,7 +32424,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32474,7 +32474,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32524,7 +32524,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32574,7 +32574,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32624,7 +32624,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32674,7 +32674,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32724,7 +32724,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32774,7 +32774,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
@@ -32824,7 +32824,7 @@ var prices2 = [
             "value":"Konica 1070"
          },
          {
-            "checkAttribute":"items[0].inks",
+            "checkAttribute":"ems[0].inksQuantity",
             "value":4
          },
          {
