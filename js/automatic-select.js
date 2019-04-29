@@ -641,7 +641,7 @@ var createEstimateAndTrelloCard2 = function(){
     window.alert('Debe completar todas las opciones solicitadas \n' + message);
   }else{
     if (work.clossedSizes.length > 1){
-      work.clossedSize = cutArray(work.clossedSizes,selectedOptions[-1].clossedSizes[0]);
+      work.clossedSize = cutArray(work.clossedSizes,selectedOptions[-1].clossedSizes);
     }else{
       work.clossedSize = work.clossedSizes[0];
     }
@@ -689,12 +689,12 @@ var createEstimateAndTrelloCard2 = function(){
     addPrices(work);
 
     addExtraPrices(work);
+    delete work['image'];
+    delete work['quantities'];
+    delete work['clossedSizes'];
+    createCard(work);
+    return work;
   }
-  delete work['image'];
-  delete work['quantities'];
-  delete work['clossedSizes'];
-  createCard(work);
-  return work;
 }
 
 function add(accumulator, a) {
