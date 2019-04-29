@@ -31453,6 +31453,24 @@ var prices2 = [
       "toCheck":[
          {
             "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"90x50mm"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
             "value":100
          },
          {
@@ -32275,7 +32293,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":4
+            "value":1
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32291,7 +32309,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":360,
+         "value":300,
          "condition":"each"
       }
    },
@@ -32325,7 +32343,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":4
+            "value":1
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32341,7 +32359,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":480,
+         "value":380,
          "condition":"each"
       }
    },
@@ -32375,7 +32393,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":4
+            "value":1
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32384,6 +32402,56 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":200
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":530,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":300
          },
          {
             "checkAttribute":"items[0].paper+gr",
@@ -32425,11 +32493,261 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":4
+            "value":1
          },
          {
             "checkAttribute":"items[0].faces",
             "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":880,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1380,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":380,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":530,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":690,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -32475,307 +32793,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":4
-         },
-         {
-            "checkAttribute":"items[0].faces",
-            "value":"Simple Faz"
-         },
-         {
-            "checkAttribute":"quantity",
-            "value":500
-         },
-         {
-            "checkAttribute":"items[0].paper+gr",
-            "value":"Coteado 300"
-         }
-      ],
-      "price":{
-         "value":1090,
-         "condition":"each"
-      }
-   },
-   {
-      "workId":0,
-      "item":0,
-      "toCheck":[
-         {
-            "checkAttribute":"excess",
             "value":1
-         },
-         {
-            "checkAttribute":"quantityPerPaper",
-            "value":18
-         },
-         {
-            "checkAttribute":"cutsPerSheet",
-            "value":6
-         },
-         {
-            "checkAttribute":"sheetSize",
-            "value":"70x100"
-         },
-         {
-            "checkAttribute":"paperSize",
-            "value":"32x33"
-         },
-         {
-            "checkAttribute":"machine",
-            "value":"Konica 1070"
-         },
-         {
-            "checkAttribute":"items[0].inksQuantity",
-            "value":4
-         },
-         {
-            "checkAttribute":"items[0].faces",
-            "value":"Simple Faz"
-         },
-         {
-            "checkAttribute":"quantity",
-            "value":1000
-         },
-         {
-            "checkAttribute":"items[0].paper+gr",
-            "value":"Coteado 300"
-         }
-      ],
-      "price":{
-         "value":1690,
-         "condition":"each"
-      }
-   },
-   {
-      "workId":0,
-      "item":0,
-      "toCheck":[
-         {
-            "checkAttribute":"excess",
-            "value":1
-         },
-         {
-            "checkAttribute":"quantityPerPaper",
-            "value":18
-         },
-         {
-            "checkAttribute":"cutsPerSheet",
-            "value":6
-         },
-         {
-            "checkAttribute":"sheetSize",
-            "value":"70x100"
-         },
-         {
-            "checkAttribute":"paperSize",
-            "value":"32x33"
-         },
-         {
-            "checkAttribute":"machine",
-            "value":"Konica 1070"
-         },
-         {
-            "checkAttribute":"items[0].inksQuantity",
-            "value":4
-         },
-         {
-            "checkAttribute":"items[0].faces",
-            "value":"Doble Faz"
-         },
-         {
-            "checkAttribute":"quantity",
-            "value":50
-         },
-         {
-            "checkAttribute":"items[0].paper+gr",
-            "value":"Coteado 300"
-         }
-      ],
-      "price":{
-         "value":550,
-         "condition":"each"
-      }
-   },
-   {
-      "workId":0,
-      "item":0,
-      "toCheck":[
-         {
-            "checkAttribute":"excess",
-            "value":1
-         },
-         {
-            "checkAttribute":"quantityPerPaper",
-            "value":18
-         },
-         {
-            "checkAttribute":"cutsPerSheet",
-            "value":6
-         },
-         {
-            "checkAttribute":"sheetSize",
-            "value":"70x100"
-         },
-         {
-            "checkAttribute":"paperSize",
-            "value":"32x33"
-         },
-         {
-            "checkAttribute":"machine",
-            "value":"Konica 1070"
-         },
-         {
-            "checkAttribute":"items[0].inksQuantity",
-            "value":4
-         },
-         {
-            "checkAttribute":"items[0].faces",
-            "value":"Doble Faz"
-         },
-         {
-            "checkAttribute":"quantity",
-            "value":100
-         },
-         {
-            "checkAttribute":"items[0].paper+gr",
-            "value":"Coteado 300"
-         }
-      ],
-      "price":{
-         "value":745,
-         "condition":"each"
-      }
-   },
-   {
-      "workId":0,
-      "item":0,
-      "toCheck":[
-         {
-            "checkAttribute":"excess",
-            "value":1
-         },
-         {
-            "checkAttribute":"quantityPerPaper",
-            "value":18
-         },
-         {
-            "checkAttribute":"cutsPerSheet",
-            "value":6
-         },
-         {
-            "checkAttribute":"sheetSize",
-            "value":"70x100"
-         },
-         {
-            "checkAttribute":"paperSize",
-            "value":"32x33"
-         },
-         {
-            "checkAttribute":"machine",
-            "value":"Konica 1070"
-         },
-         {
-            "checkAttribute":"items[0].inksQuantity",
-            "value":4
-         },
-         {
-            "checkAttribute":"items[0].faces",
-            "value":"Doble Faz"
-         },
-         {
-            "checkAttribute":"quantity",
-            "value":200
-         },
-         {
-            "checkAttribute":"items[0].paper+gr",
-            "value":"Coteado 300"
-         }
-      ],
-      "price":{
-         "value":1045,
-         "condition":"each"
-      }
-   },
-   {
-      "workId":0,
-      "item":0,
-      "toCheck":[
-         {
-            "checkAttribute":"excess",
-            "value":1
-         },
-         {
-            "checkAttribute":"quantityPerPaper",
-            "value":18
-         },
-         {
-            "checkAttribute":"cutsPerSheet",
-            "value":6
-         },
-         {
-            "checkAttribute":"sheetSize",
-            "value":"70x100"
-         },
-         {
-            "checkAttribute":"paperSize",
-            "value":"32x33"
-         },
-         {
-            "checkAttribute":"machine",
-            "value":"Konica 1070"
-         },
-         {
-            "checkAttribute":"items[0].inksQuantity",
-            "value":4
-         },
-         {
-            "checkAttribute":"items[0].faces",
-            "value":"Doble Faz"
-         },
-         {
-            "checkAttribute":"quantity",
-            "value":300
-         },
-         {
-            "checkAttribute":"items[0].paper+gr",
-            "value":"Coteado 300"
-         }
-      ],
-      "price":{
-         "value":1345,
-         "condition":"each"
-      }
-   },
-   {
-      "workId":0,
-      "item":0,
-      "toCheck":[
-         {
-            "checkAttribute":"excess",
-            "value":1
-         },
-         {
-            "checkAttribute":"quantityPerPaper",
-            "value":18
-         },
-         {
-            "checkAttribute":"cutsPerSheet",
-            "value":6
-         },
-         {
-            "checkAttribute":"sheetSize",
-            "value":"70x100"
-         },
-         {
-            "checkAttribute":"paperSize",
-            "value":"32x33"
-         },
-         {
-            "checkAttribute":"machine",
-            "value":"Konica 1070"
-         },
-         {
-            "checkAttribute":"items[0].inksQuantity",
-            "value":4
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32791,7 +32809,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":1745,
+         "value":1380,
          "condition":"each"
       }
    },
@@ -32825,7 +32843,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":4
+            "value":1
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32841,7 +32859,7 @@ var prices2 = [
          }
       ],
       "price":{
-         "value":2890,
+         "value":1690,
          "condition":"each"
       }
    }
