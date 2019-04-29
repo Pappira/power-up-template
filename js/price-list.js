@@ -32825,7 +32825,7 @@ var prices2 = [
             "checkAttribute":"quantityPerPaper",
             "value":18
          },
-         {
+         { 
             "checkAttribute":"cutsPerSheet",
             "value":6
          },
