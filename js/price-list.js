@@ -31431,7 +31431,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31440,7 +31439,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"9x5"
+            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31449,7 +31448,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31458,7 +31456,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"9x5"
+            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31467,7 +31465,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31476,7 +31473,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"9x5"
+            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31485,7 +31482,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31494,7 +31490,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"9x5"
+            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31503,7 +31499,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31512,7 +31507,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"9x5"
+            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31521,7 +31516,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31530,7 +31524,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"9x5"
+            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31539,7 +31533,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31548,7 +31541,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"8x5"
+            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31557,7 +31550,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31566,7 +31558,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"8x5"
+            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31575,7 +31567,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31584,7 +31575,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"8x5"
+            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31593,7 +31584,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31602,7 +31592,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"8x5"
+            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31611,7 +31601,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31620,7 +31609,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"8x5"
+            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31629,7 +31618,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":-1,
       "toCheck":[
          {
@@ -31638,7 +31626,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"clossedSizes",
-            "value":"8x5"
+            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31647,7 +31635,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31677,10 +31664,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -31701,7 +31684,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31731,10 +31713,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -31755,7 +31733,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31785,10 +31762,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -31809,7 +31782,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31839,10 +31811,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -31863,7 +31831,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31893,10 +31860,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -31917,7 +31880,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -31947,10 +31909,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -31971,7 +31929,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32001,10 +31958,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32025,7 +31978,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32055,10 +32007,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32079,7 +32027,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32109,10 +32056,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32133,7 +32076,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32163,10 +32105,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32187,7 +32125,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32217,10 +32154,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32241,7 +32174,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32271,10 +32203,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"8x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32295,7 +32223,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32325,10 +32252,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32349,7 +32272,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32379,10 +32301,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32403,7 +32321,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32433,10 +32350,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32457,7 +32370,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32487,10 +32399,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32511,7 +32419,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32541,10 +32448,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32565,7 +32468,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32595,10 +32497,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32619,7 +32517,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32649,10 +32546,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32673,7 +32566,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32703,10 +32595,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32727,7 +32615,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32757,10 +32644,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32781,7 +32664,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32811,10 +32693,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32835,7 +32713,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32865,10 +32742,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
@@ -32889,7 +32762,6 @@ var prices2 = [
       }
    },
    {
-      "workId":0,
       "item":0,
       "toCheck":[
          {
@@ -32919,10 +32791,6 @@ var prices2 = [
          {
             "checkAttribute":"items[0].inks",
             "value":4
-         },
-         {
-            "checkAttribute":"items[0].openedSizes",
-            "value":"9x5"
          },
          {
             "checkAttribute":"items[0].faces",
