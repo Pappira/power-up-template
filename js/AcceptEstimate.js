@@ -61,7 +61,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
         var originalItem = estimate['items'][item.id];
         var currentPriceText = (originalItem.materials.length>1?'<strong>papel: </strong>' + item.materials.paper + ' '  + item.materials.gr + 'gr <br>':'')
         + ((originalItem.inks.length>1 || originalItem.faces.length>1)?'<strong>Tintas: </strong>' + item.inks.inksQuantity +' ' + item.faces +'<br>':'')
-        + (originalItem.openedSize.length>1?'<strong>Tamaño Abierto: </strong>' + item.openedSize + '<br>':'') 
+        + ((originalItem.openedSize && originalItem.openedSize.length>1)?'<strong>Tamaño Abierto: </strong>' + item.openedSize + '<br>':'') 
         + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?'<strong>Páginas: </strong>'  + item.quantityOfPages + '<br>':'')
         + ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?'<strong>Vías: </strong>' + item.quantityOfVias + '<br>': '')
         + ((itemsFinishesText && itemsFinishesText.length>0)?'<strong>' + itemsFinishesText + '</strong>':'');;

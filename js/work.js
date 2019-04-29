@@ -23,7 +23,7 @@ var works = [
             }
           ],
           'allTheSame':false,
-          'quantityOfPages':[2],
+          'quantityOfPages':[1],
           'quantityOfVias':[1],
           'faces':['Simple Faz','Doble Faz'],
           'materials':[
