@@ -277,6 +277,13 @@ var createFormButton = function(step,text,next,finish){
   }
   estimate.selectedExtraPrices = extraPrices;
 
+  var currentEstimate = estimate.prices[estimate.SelectedOption];
+  for (var i = 0; i < currentEstimate.items.length;i++){
+   var currentItem = currentEstimate.items[i];
+   if (currentItem.faces == "Doble Faz"){
+     currentItem.quantityOfPages *= 2; 
+   }
+  }
   updateCard(estimate);
  }
 
