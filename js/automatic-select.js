@@ -809,7 +809,7 @@ var getCombinations = function(estimate){
     quantities.push('{"quantity":' + estimate.quantity[i]+',');
   }
   var generalCases;
-  if (estimate.clossedSize &&  estimate.clossedSize.length>1){
+  if (estimate.clossedSize){
     for (var j = 0; j < estimate.clossedSize.length;j++){
       clossedSizes.push('"clossedSizes": "'+ estimate.clossedSize[j] + '",');
     }
