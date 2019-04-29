@@ -7,6 +7,65 @@ var works = [
       'image':noImage,
       'name':'Tarjetas Personales',
       'quantities':[50,100,200,300,500,1000],
+      "mandatoryFinishGroups":
+      [
+        {
+          "groupName": "Variaciones",
+          "finishes":
+          [
+            {
+              "finish":"Todas iguales",
+              "finishComment":"",
+              "showToClientFinish":false
+            },
+            {
+              "finish":"Un cambio de nombre",
+              "finishComment":"",
+              "showToClientFinish":true
+            },
+            {
+              "finish":"Dos cambios de nombre",
+              "finishComment":"",
+              "showToClientFinish":true
+            },
+            {
+              "finish":"Tres cambios de nombre",
+              "finishComment":"",
+              "showToClientFinish":true
+            },
+            {
+              "finish":"Cuatro cambios de nombre",
+              "finishComment":"",
+              "showToClientFinish":true
+            },
+            {
+              "finish":"Cinco cambios de nombre",
+              "finishComment":"",
+              "showToClientFinish":true
+            },
+            {
+              "finish":"Seis cambios de nombre",
+              "finishComment":"",
+              "showToClientFinish":true
+            },
+            {
+              "finish":"Siete cambios de nombre",
+              "finishComment":"",
+              "showToClientFinish":true
+            },
+            {
+              "finish":"Ocho cambios de nombre",
+              "finishComment":"",
+              "showToClientFinish":true
+            },
+            {
+              "finish":"Nueve cambios de nombre",
+              "finishComment":"",
+              "showToClientFinish":true
+            }
+          ]
+        }
+      ],
       'items':[
         {
           'id':0,

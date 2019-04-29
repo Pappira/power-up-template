@@ -31437,6 +31437,10 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":50
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Todas Iguales"
          }
       ],
       "price":{
@@ -31451,6 +31455,10 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":100
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Todas Iguales"
          }
       ],
       "price":{
@@ -31465,6 +31473,10 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":200
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Todas Iguales"
          }
       ],
       "price":{
@@ -31479,6 +31491,10 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":300
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Todas Iguales"
          }
       ],
       "price":{
@@ -31493,6 +31509,10 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":500
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Todas Iguales"
          }
       ],
       "price":{
@@ -31507,10 +31527,500 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":1000
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Todas Iguales"
          }
       ],
       "price":{
          "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Un cambio de nombre"
+         }
+      ],
+      "price":{
+         "value":0.6,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Un cambio de nombre"
+         }
+      ],
+      "price":{
+         "value":0.3,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Un cambio de nombre"
+         }
+      ],
+      "price":{
+         "value":0.2,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Un cambio de nombre"
+         }
+      ],
+      "price":{
+         "value":0.12,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Un cambio de nombre"
+         }
+      ],
+      "price":{
+         "value":0.06,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Dos cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.6,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Dos cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.4,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Dos cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.24,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Dos cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.12,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Tres cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.8999999999999999,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Tres cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.6000000000000001,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Tres cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.36,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Tres cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.18,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Cuatro cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.8,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Cuatro cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.48,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Cuatro cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.24,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Cinco cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":1,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Cinco cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.6,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Cinco cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.3,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Seis cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.72,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Seis cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.36,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Siete cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.84,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Siete cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.42,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Ocho cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.96,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Ocho cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.48,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Nueve cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":1.08,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
+            "value":"Nueve cambios de nombre"
+         }
+      ],
+      "price":{
+         "value":0.54,
          "condition":"each"
       }
    },
