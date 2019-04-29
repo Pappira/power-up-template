@@ -140,14 +140,16 @@ var createPossibilities = function(work){
   var possibilities = [];
   for(var attr in work){
     if(typeof work[attr] == 'object' && attr != "mandatoryFinishGroups"){
-      if((work[attr].length > 1) || (attr == "optionalFinishes" && work[attr].length >0)){
+      if(attr == "optionalFinishes" && work[attr].length >0){
         if (attr != 'items'){
-          var possibility = {};
-          possibility['itemId'] = -1;
-          possibility['itemName'] = 'general';
-          possibility['name'] = attr;
-          possibility['values'] = work[attr];
-          possibilities.push(possibility);
+          if (work[attr].length > 1){
+            var possibility = {};
+            possibility['itemId'] = -1;
+            possibility['itemName'] = 'general';
+            possibility['name'] = attr;
+            possibility['values'] = work[attr];
+            possibilities.push(possibility);
+          }
         }else{
           var items = work.items;
           for (var i = 0; i < items.length;i++){
