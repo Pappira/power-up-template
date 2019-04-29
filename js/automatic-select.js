@@ -810,8 +810,12 @@ var getCombinations = function(estimate){
   }
   var generalCases;
   if (estimate.clossedSize){
-    for (var j = 0; j < estimate.clossedSize.length;j++){
-      clossedSizes.push('"clossedSizes": "'+ estimate.clossedSize[j] + '",');
+    if(Array.isArray(estimate.clossedSize)){
+      for (var j = 0; j < estimate.clossedSize.length;j++){
+        clossedSizes.push('"clossedSizes": "'+ estimate.clossedSize[j] + '",');
+      }
+    }else{
+      clossedSizes.push('"clossedSizes": "'+ estimate.clossedSize + '",');
     }
     generalCases = allPossibleCases([quantities,clossedSizes]);
   }else{
