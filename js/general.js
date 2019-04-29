@@ -452,7 +452,9 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 		if (selectedOption){
 			selectedItem = estimate.prices[estimate.SelectedOption].items[item.id];
 		}
-		texts.push(createText('subtitle1',item.name,''));
+		if (estimate.items.length>1){
+			texts.push(createText('subtitle1',item.name,''));
+		}
 		if (selectedItem){
 			texts.push(createText('text','Papel', selectedItem.materials.paper + ' ' + selectedItem.materials.gr + 'gr'));
 			var inks = selectedItem.inks.inksDetails + (showBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
@@ -588,7 +590,7 @@ var createCompletePriceText = function(estimate){
 							var originalItem = estimate.items[item.id];
 							var currentPriceText = (originalItem.materials.length>1?' en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
 							+ (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') 
-							+ (originalItem.openedSize.length>1?', tamaño abierto ' + item.openedSize + ' ':'') 
+							+ ((originalItem.openedSize && originalItem.openedSize.length>1)?', tamaño abierto ' + item.openedSize + ' ':'') 
 							+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?', '  + item.quantityOfPages + ' páginas ':'')
 							+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?', ' + item.quantityOfVias + ' vías':'')
 							+ ((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'');
