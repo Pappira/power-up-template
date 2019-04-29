@@ -779,7 +779,7 @@ var getCombinations = function(estimate){
   var combinationsObject = [];
   combinations = [];
   var quantities = [];
-
+  var clossedSizes = [];
   var generalMandatoryFinishGroups = [];
   if(estimate.mandatoryFinishGroups){
     for (var j=0; j < estimate.mandatoryFinishGroups.length;j++){
@@ -808,11 +808,20 @@ var getCombinations = function(estimate){
   for (var i = 0; i  < estimate.quantity.length; i++){
     quantities.push('{"quantity":' + estimate.quantity[i]+',');
   }
+  var generalCases;
+  if (estimate.clossedSizes &&  estimate.clossedSizes.length>1){
+    for (var j = 0; j < estimate.clossedSizes.length;j++){
+      clossedSizes.push('"clossedSizes": "'+ estimate.clossedSizes[j] + '",');
+    }
+    generalCases = allPossibleCases([quantities,clossedSizes]);
+  }else{
+    generalCases = quantities;
+  }
 
   if (generalMandatoryFinishGroupsCases && generalMandatoryFinishGroupsCases.length > 0){
-    combinations.push(allPossibleCases([quantities,generalMandatoryFinishGroupsCases]));
+    combinations.push(allPossibleCases([generalCases,generalMandatoryFinishGroupsCases]));
   }else{    
-    combinations.push(quantities);
+    combinations.push(generalCases);
   }
 
   for (var i = 0; i  <  estimate.items.length; i++){
