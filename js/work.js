@@ -3,22 +3,10 @@ var works = [
       'id':0,
       'workTypeId':0,
       'workType':'Tarjetería',
-      'clossedSizes':['90x54mm'],
+      'clossedSizes':['90x50mm','94x50mm','80x50mm'],
       'image':noImage,
       'name':'Tarjetas Personales',
-      'quantities':[100,200,300,500,1000],
-      'finishes':[
-        {
-          'finish':'Tapa SemiDura',
-          'finishComment':'asd',
-          'showToClientFinish':true
-        },
-        {
-          'finish':'Encuadernado HotMelt',
-          'finishComment':'',
-          'showToClientFinish':false
-        }
-      ],
+      'quantities':[50,100,200,300,500,1000],
       'items':[
         {
           'id':0,
@@ -30,25 +18,13 @@ var works = [
               'inksQuantity':4,
             },
             {
-              'inksDetails':'3 Tintas',
-              'inksQuantity':3,
-            },
-            {
-              'inksDetails':'2 Tintas',
-              'inksQuantity':2,
-            },
-            {
-              'inksDetails':'1 Tinta',
-              'inksQuantity':1,
-            },
-            {
               'inksDetails':'1 Tinta negra',
               'inksQuantity':1,
             }
           ],
-          'openedSize':['90x54mm','90x50mm'],
+          'openedSize':['90x50mm','94x50mm','80x50mm'],
           'allTheSame':false,
-          'quantityOfPages':[1,2,3],
+          'quantityOfPages':[2],
           'quantityOfVias':[1],
           'faces':['Simple Faz','Doble Faz'],
           'materials':[
@@ -61,11 +37,27 @@ var works = [
               'gr':'240'
             }
           ],
-          'finishes':[
+          "optionalFinishes":
+          [
             {
-              'finish':'Laminado Mate',
-              'finishComment':'asd',
-              'showToClient':true
+              "finish":"Laminado Mate",
+              "finishComment":"",
+              "showToClient":true
+            },
+            {
+              "finish":"Laminado Brillo",
+              "finishComment":"",
+              "showToClient":true
+            },
+            {
+              "finish":"Laminado Mate o Brillo a definir",
+              "finishComment":"",
+              "showToClient":true
+            },
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true
             }
           ]
         }

@@ -713,11 +713,15 @@ var filterByQuantity = function(prices,quantity){
   });
 }
 
-var filterPrices = function(currentCombination,itemNumber){
+var filterPrices = function(currentCombination,itemNumber,workId){
 
   var generalPrices = prices2.filter(function(generalPrice) {
+    return (generalPrice.workId == workId);
+  });
+
+  generalPrices = generalPrices.filter(function(generalPrice) {
     return (generalPrice.item == itemNumber);
-  })
+  });
 
   var lowerNearestQuantity = getTheLowerNearestQuantity(generalPrices,currentCombination.quantity);
 
@@ -1093,7 +1097,7 @@ var addPrices = function(work){
     var priceFiltered = [];
     var allPricesFinded = true;
     for (var l = -1; l < currentCombination.items.length;l++){
-      var filteredPrice = filterPrices(JSON.parse(JSON.stringify(currentCombination)),l);
+      var filteredPrice = filterPrices(JSON.parse(JSON.stringify(currentCombination)),l,work.id);
       priceFiltered.push(filteredPrice);
       if(filteredPrice.length!=1){
        // window.alert('No se encontró precio para la siguiente combinación de trabajo \n' + JSON.stringify(currentCombination));

@@ -1,4 +1,164 @@
 var extraPrices = [
+   {
+      "workId":0,
+      "quantity":50,    
+      "optionalFinishes":
+        [
+        ],
+      "items":
+      [
+        {
+          "id":0,
+          "optionalFinishes":
+          [
+            {
+              "finish":"Laminado Mate",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 2
+            },
+            {
+              "finish":"Laminado Brillo",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 2
+            },
+            {
+              "finish":"Laminado Mate o Brillo a definir",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 2
+            },
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 1.5
+            }
+          ]
+        }
+      ]
+  },
+  {
+      "workId":0,
+      "quantity":100,    
+      "optionalFinishes":
+        [
+        ],
+      "items":
+      [
+        {
+          "id":0,
+          "optionalFinishes":
+          [
+            {
+              "finish":"Laminado Mate",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 1.5
+            },
+            {
+              "finish":"Laminado Brillo",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 1.5
+            },
+            {
+              "finish":"Laminado Mate o Brillo a definir",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 1.5
+            },
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 0.75
+            }
+          ]
+        }
+      ]
+  },
+  {
+      "workId":0,
+      "quantity":500,    
+      "optionalFinishes":
+        [
+        ],
+      "items":
+      [
+        {
+          "id":0,
+          "optionalFinishes":
+          [
+            {
+              "finish":"Laminado Mate",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 1.3
+            },
+            {
+              "finish":"Laminado Brillo",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 1.3
+            },
+            {
+              "finish":"Laminado Mate o Brillo a definir",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 1.3
+            },
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 0.66
+            }
+          ]
+        }
+      ]
+  },
+  {
+      "workId":0,
+      "quantity":100,    
+      "optionalFinishes":
+        [
+        ],
+      "items":
+      [
+        {
+          "id":0,
+          "optionalFinishes":
+          [
+            {
+              "finish":"Laminado Mate",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 0.99
+            },
+            {
+              "finish":"Laminado Brillo",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 0.99
+            },
+            {
+              "finish":"Laminado Mate o Brillo a definir",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 0.99
+            },
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 0.55
+            }
+          ]
+        }
+      ]
+  },
   {
     "workId":1,
     "quantity":50,    
@@ -101,1418 +261,9 @@ var extraPrices = [
   }
 ]
 
-var prices = [
-    {
-      'workId':0,
-      'quantity':100,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x54mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Simple Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-      }],
-      'price':480
-    },
-    {
-      'workId':0,
-      'quantity':100,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-        {
-          'inksDetails':'Full color',
-          'inksQuantity':4,
-        },
-        'openedSize':'90x50mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Simple Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':480
-    },
-    {
-      'workId':0,
-      'quantity':100,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x54mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Doble Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':745
-    },
-    {
-      'workId':0,
-      'quantity':100,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x50mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Doble Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':745
-    },
-    {
-      'workId':0,
-      'quantity':200,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x54mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Simple Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':680
-    },
-    {
-      'workId':0,
-      'quantity':200,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x50mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Simple Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':680
-    },
-    {
-      'workId':0,
-      'quantity':200,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x54mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Doble Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':1045
-    },
-    {
-      'workId':0,
-      'quantity':200,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x50mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Doble Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':1045
-    },
-    {
-      'workId':0,
-      'quantity':300,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x54mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Simple Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':880
-    },
-    {
-      'workId':0,
-      'quantity':300,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x50mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Simple Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':880
-    },
-    {
-      'workId':0,
-      'quantity':300,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x54mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Doble Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':1345
-    },
-    {
-      'workId':0,
-      'quantity':300,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x50mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Doble Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':1345
-    },
-    {
-      'workId':0,
-      'quantity':500,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x54mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Simple Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':1090
-    },
-    {
-      'workId':0,
-      'quantity':500,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x50mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Simple Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':1090
-    },
-    {
-      'workId':0,
-      'quantity':500,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x54mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Doble Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':1745
-    },
-    {
-      'workId':0,
-      'quantity':500,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x50mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Doble Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':1745
-    },
-    {
-      'workId':0,
-      'quantity':1000,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x54mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Simple Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':1690
-    },
-    {
-      'workId':0,
-      'quantity':1000,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x50mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Simple Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':1690
-    },
-    {
-      'workId':0,
-      'quantity':1000,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x54mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Doble Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':2890
-    },
-    {
-      'workId':0,
-      'quantity':1000,
-      'items':[{
-        'id':0,
-        'bleedPrint':true,
-        'inks':
-          {
-            'inksDetails':'Full color',
-            'inksQuantity':4,
-          },
-        'openedSize':'90x50mm',
-        'quantityOfPages':1,
-        'quantityOfVias':1,
-        'faces':'Doble Faz',
-        'materials':
-          {
-            'paper':'Coteado Mate',
-            'gr':'300'
-          },
-        'machine':'Konica C1070',
-        'paperSize':'320x330mm',
-        'sheetSize':'660x960mm',
-        'cutsPerSheet':6,
-        'quantityPerPaper':15,
-        'excess':1
-        }],
-      'price':2890
-    },
-    {
-      "workId":1,
-      "clossedSizes":"150x210mm",
-      "quantity":100,
-      "mandatoryFinishGroups":
-      [
-        {
-          "groupName": "Encuadernado",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        },
-        {
-          "groupName": "Encuadernado2",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt2",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        }
-      ],
-      "items":
-      [
-        {
-          "id":0,
-          "name":"Tapas",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Full color",
-            "inksQuantity":4
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "mandatoryFinishGroups":
-          [
-            {
-              "groupName": "Tipo de Tapa",
-              "finishes": 
-              {
-                "finish":"Tapa Flexible",
-                "finishComment":"",
-                "showToClientFinish":true
-              }
-            },
-            {
-              "groupName": "Tipo de Tapa 2",
-              "finishes": 
-              {
-                "finish":"Tapa SemiDura 2",
-                "finishComment":"",
-                "showToClientFinish":true,
-              }
-            }
-          ],
-          "quantityOfPages":2,
-          "quantityOfVias":1,
-          "faces":"Simple Faz",
-          "materials":
-          {
-            "paper":"Cartulina Blanca/Blanca",
-            "gr":"250"
-          },
-          'machine':'Konica C1070',
-          'paperSize':'320x330mm',
-          'sheetSize':'660x960mm',
-          'cutsPerSheet':6,
-          'quantityPerPaper':1,
-          'excess':1
-        },
-        {
-          "id":1,
-          "name":"Interior",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Tinta Negra",
-            "inksQuantity":1
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "quantityOfPages":70,
-          "quantityOfVias":1,
-          "faces":"Doble Faz",
-          "materials":
-          {
-          "paper":"Obra Blanco",
-          "gr":"80"
-          },
-          'machine':'NO',
-          'paperSize':'305x230mm',
-          'sheetSize':'720x920mm',
-          'cutsPerSheet':9,
-          'quantityPerPaper':2,
-          'excess':5
-        }
-      ],
-      'price':1790
-    },
-    {
-      "workId":1,
-      "clossedSizes":"150x210mm",
-      "quantity":100,
-      "mandatoryFinishGroups":
-      [
-        {
-          "groupName": "Encuadernado",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        },
-        {
-          "groupName": "Encuadernado2",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt2",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        }
-      ],
-      "items":
-      [
-        {
-          "id":0,
-          "name":"Tapas",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Full color",
-            "inksQuantity":4
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "mandatoryFinishGroups":
-          [
-            {
-              "groupName": "Tipo de Tapa",
-              "finishes": 
-              {
-                "finish":"Tapa Flexible",
-                "finishComment":"",
-                "showToClientFinish":true
-              }
-            },
-            {
-              "groupName": "Tipo de Tapa 2",
-              "finishes": 
-              {
-                "finish":"Tapa SemiDura 2",
-                "finishComment":"",
-                "showToClientFinish":true,
-              }
-            }
-          ],
-          "quantityOfPages":2,
-          "quantityOfVias":1,
-          "faces":"Simple Faz",
-          "materials":
-          {
-            "paper":"Cartulina Blanca/Blanca",
-            "gr":"250"
-          },
-          'machine':'Konica C1070',
-          'paperSize':'320x330mm',
-          'sheetSize':'660x960mm',
-          'cutsPerSheet':6,
-          'quantityPerPaper':1,
-          'excess':1
-        },
-        {
-          "id":1,
-          "name":"Interior",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Tinta Negra",
-            "inksQuantity":1
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "quantityOfPages":70,
-          "quantityOfVias":1,
-          "faces":"Doble Faz",
-          "materials":
-          {
-            "paper":"Obra Blanco",
-            "gr":"90"
-          },
-          'machine':'NO',
-          'paperSize':'305x230mm',
-          'sheetSize':'720x920mm',
-          'cutsPerSheet':9,
-          'quantityPerPaper':2,
-          'excess':5
-        }
-      ],
-      'price':2090
-    },
-
-    {
-      "workId":1,
-      "clossedSizes":"150x210mm",
-      "quantity":100,
-      "mandatoryFinishGroups":
-      [
-        {
-          "groupName": "Encuadernado",
-          "finishes":
-          {
-            "finish":"Encuadernado con Rulo Wire-o",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        },
-        {
-          "groupName": "Encuadernado2",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt2",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        }
-      ],
-      "items":
-      [
-        {
-          "id":0,
-          "name":"Tapas",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Full color",
-            "inksQuantity":4
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "mandatoryFinishGroups":
-          [
-            {
-              "groupName": "Tipo de Tapa",
-              "finishes": 
-              {
-                "finish":"Tapa Flexible",
-                "finishComment":"",
-                "showToClientFinish":true
-              }
-            },
-            {
-              "groupName": "Tipo de Tapa 2",
-              "finishes": 
-              {
-                "finish":"Tapa SemiDura 2",
-                "finishComment":"",
-                "showToClientFinish":true,
-              }
-            }
-          ],
-          "quantityOfPages":2,
-          "quantityOfVias":1,
-          "faces":"Simple Faz",
-          "materials":
-          {
-            "paper":"Cartulina Blanca/Blanca",
-            "gr":"250"
-          },
-          'machine':'Konica C1070',
-          'paperSize':'320x330mm',
-          'sheetSize':'660x960mm',
-          'cutsPerSheet':6,
-          'quantityPerPaper':1,
-          'excess':1
-        },
-        {
-          "id":1,
-          "name":"Interior",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Tinta Negra",
-            "inksQuantity":1
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "quantityOfPages":70,
-          "quantityOfVias":1,
-          "faces":"Doble Faz",
-          "materials":
-          {
-            "paper":"Obra Blanco",
-            "gr":"90"
-          },
-          'machine':'NO',
-          'paperSize':'305x230mm',
-          'sheetSize':'720x920mm',
-          'cutsPerSheet':9,
-          'quantityPerPaper':2,
-          'excess':5
-        }
-      ],
-      'price':2390
-    },
-
-    {
-      "workId":1,
-      "clossedSizes":"150x210mm",
-      "quantity":100,
-      "mandatoryFinishGroups":
-      [
-        {
-          "groupName": "Encuadernado",
-          "finishes":
-          {
-            "finish":"Encuadernado con Rulo Wire-o",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        },
-        {
-          "groupName": "Encuadernado2",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt2",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        }
-      ],
-      "items":
-      [
-        {
-          "id":0,
-          "name":"Tapas",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Full color",
-            "inksQuantity":4
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "mandatoryFinishGroups":
-          [
-            {
-              "groupName": "Tipo de Tapa",
-              "finishes": 
-              {
-                "finish":"Tapa Flexible",
-                "finishComment":"",
-                "showToClientFinish":true
-              }
-            },
-            {
-              "groupName": "Tipo de Tapa 2",
-              "finishes": 
-              {
-                "finish":"Tapa SemiDura 2",
-                "finishComment":"",
-                "showToClientFinish":true,
-              }
-            }
-          ],
-          "quantityOfPages":2,
-          "quantityOfVias":1,
-          "faces":"Simple Faz",
-          "materials":
-          {
-            "paper":"Cartulina Blanca/Blanca",
-            "gr":"250"
-          },
-          'machine':'Konica C1070',
-          'paperSize':'320x330mm',
-          'sheetSize':'660x960mm',
-          'cutsPerSheet':6,
-          'quantityPerPaper':1,
-          'excess':1
-        },
-        {
-          "id":1,
-          "name":"Interior",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Tinta Negra",
-            "inksQuantity":1
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":true,
-          "quantityOfPages":70,
-          "quantityOfVias":1,
-          "faces":"Doble Faz",
-          "materials":
-          {
-            "paper":"Obra Blanco",
-            "gr":"80"
-          },
-          'machine':'NO',
-          'paperSize':'305x230mm',
-          'sheetSize':'720x920mm',
-          'cutsPerSheet':9,
-          'quantityPerPaper':2,
-          'excess':5
-        }
-      ],
-      'price':2690
-    },
-    {
-      "workId":1,
-      "clossedSizes":"150x210mm",
-      "quantity":200,
-      "mandatoryFinishGroups":
-      [
-        {
-          "groupName": "Encuadernado",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        },
-        {
-          "groupName": "Encuadernado2",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt2",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        }
-      ],
-      "items":
-      [
-        {
-          "id":0,
-          "name":"Tapas",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Full color",
-            "inksQuantity":4
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "mandatoryFinishGroups":
-          [
-            {
-              "groupName": "Tipo de Tapa",
-              "finishes": 
-              {
-                "finish":"Tapa Flexible",
-                "finishComment":"",
-                "showToClientFinish":true
-              }
-            },
-            {
-              "groupName": "Tipo de Tapa 2",
-              "finishes": 
-              {
-                "finish":"Tapa SemiDura 2",
-                "finishComment":"",
-                "showToClientFinish":true,
-              }
-            }
-          ],
-          "quantityOfPages":2,
-          "quantityOfVias":1,
-          "faces":"Simple Faz",
-          "materials":
-          {
-            "paper":"Cartulina Blanca/Blanca",
-            "gr":"250"
-          },
-          'machine':'Konica C1070',
-          'paperSize':'320x330mm',
-          'sheetSize':'660x960mm',
-          'cutsPerSheet':6,
-          'quantityPerPaper':1,
-          'excess':1
-        },
-        {
-          "id":1,
-          "name":"Interior",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Tinta Negra",
-            "inksQuantity":1
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "quantityOfPages":70,
-          "quantityOfVias":1,
-          "faces":"Doble Faz",
-          "materials":
-          {
-          "paper":"Obra Blanco",
-          "gr":"80"
-          },
-          'machine':'NO',
-          'paperSize':'305x230mm',
-          'sheetSize':'720x920mm',
-          'cutsPerSheet':9,
-          'quantityPerPaper':2,
-          'excess':5
-        }
-      ],
-      'price':2990
-    },
-    {
-      "workId":1,
-      "clossedSizes":"150x210mm",
-      "quantity":200,
-      "mandatoryFinishGroups":
-      [
-        {
-          "groupName": "Encuadernado",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        },
-        {
-          "groupName": "Encuadernado2",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt2",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        }
-      ],
-      "items":
-      [
-        {
-          "id":0,
-          "name":"Tapas",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Full color",
-            "inksQuantity":4
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "mandatoryFinishGroups":
-          [
-            {
-              "groupName": "Tipo de Tapa",
-              "finishes": 
-              {
-                "finish":"Tapa Flexible",
-                "finishComment":"",
-                "showToClientFinish":true
-              }
-            },
-            {
-              "groupName": "Tipo de Tapa 2",
-              "finishes": 
-              {
-                "finish":"Tapa SemiDura 2",
-                "finishComment":"",
-                "showToClientFinish":true,
-              }
-            }
-          ],
-          "quantityOfPages":2,
-          "quantityOfVias":1,
-          "faces":"Simple Faz",
-          "materials":
-          {
-            "paper":"Cartulina Blanca/Blanca",
-            "gr":"250"
-          },
-          'machine':'Konica C1070',
-          'paperSize':'320x330mm',
-          'sheetSize':'660x960mm',
-          'cutsPerSheet':6,
-          'quantityPerPaper':1,
-          'excess':1
-        },
-        {
-          "id":1,
-          "name":"Interior",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Tinta Negra",
-            "inksQuantity":1
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "quantityOfPages":70,
-          "quantityOfVias":1,
-          "faces":"Doble Faz",
-          "materials":
-          {
-            "paper":"Obra Blanco",
-            "gr":"90"
-          },
-          'machine':'NO',
-          'paperSize':'305x230mm',
-          'sheetSize':'720x920mm',
-          'cutsPerSheet':9,
-          'quantityPerPaper':2,
-          'excess':5
-        }
-      ],
-      'price':3290
-    },
-
-    {
-      "workId":1,
-      "clossedSizes":"150x210mm",
-      "quantity":200,
-      "mandatoryFinishGroups":
-      [
-        {
-          "groupName": "Encuadernado",
-          "finishes":
-          {
-            "finish":"Encuadernado con Rulo Wire-o",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        },
-        {
-          "groupName": "Encuadernado2",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt2",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        }
-      ],
-      "items":
-      [
-        {
-          "id":0,
-          "name":"Tapas",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Full color",
-            "inksQuantity":4
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "mandatoryFinishGroups":
-          [
-            {
-              "groupName": "Tipo de Tapa",
-              "finishes": 
-              {
-                "finish":"Tapa Flexible",
-                "finishComment":"",
-                "showToClientFinish":true
-              }
-            },
-            {
-              "groupName": "Tipo de Tapa 2",
-              "finishes": 
-              {
-                "finish":"Tapa SemiDura 2",
-                "finishComment":"",
-                "showToClientFinish":true,
-              }
-            }
-          ],
-          "quantityOfPages":2,
-          "quantityOfVias":1,
-          "faces":"Simple Faz",
-          "materials":
-          {
-            "paper":"Cartulina Blanca/Blanca",
-            "gr":"250"
-          },
-          'machine':'Konica C1070',
-          'paperSize':'320x330mm',
-          'sheetSize':'660x960mm',
-          'cutsPerSheet':6,
-          'quantityPerPaper':1,
-          'excess':1
-        },
-        {
-          "id":1,
-          "name":"Interior",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Tinta Negra",
-            "inksQuantity":1
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "quantityOfPages":70,
-          "quantityOfVias":1,
-          "faces":"Doble Faz",
-          "materials":
-          {
-            "paper":"Obra Blanco",
-            "gr":"90"
-          },
-          'machine':'NO',
-          'paperSize':'305x230mm',
-          'sheetSize':'720x920mm',
-          'cutsPerSheet':9,
-          'quantityPerPaper':2,
-          'excess':5
-        }
-      ],
-      'price':3590
-    },
-
-    {
-      "workId":1,
-      "clossedSizes":"150x210mm",
-      "quantity":200,
-      "mandatoryFinishGroups":
-      [
-        {
-          "groupName": "Encuadernado",
-          "finishes":
-          {
-            "finish":"Encuadernado con Rulo Wire-o",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        },
-        {
-          "groupName": "Encuadernado2",
-          "finishes":
-          {
-            "finish":"Encuadernado HotMelt2",
-            "finishComment":"",
-            "showToClientFinish":true
-          }
-        }
-      ],
-      "items":
-      [
-        {
-          "id":0,
-          "name":"Tapas",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Full color",
-            "inksQuantity":4
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "mandatoryFinishGroups":
-          [
-            {
-              "groupName": "Tipo de Tapa",
-              "finishes": 
-              {
-                "finish":"Tapa Flexible",
-                "finishComment":"",
-                "showToClientFinish":true
-              }
-            },
-            {
-              "groupName": "Tipo de Tapa 2",
-              "finishes": 
-              {
-                "finish":"Tapa SemiDura 2",
-                "finishComment":"",
-                "showToClientFinish":true,
-              }
-            }
-          ],
-          "quantityOfPages":2,
-          "quantityOfVias":1,
-          "faces":"Simple Faz",
-          "materials":
-          {
-            "paper":"Cartulina Blanca/Blanca",
-            "gr":"250"
-          },
-          'machine':'Konica C1070',
-          'paperSize':'320x330mm',
-          'sheetSize':'660x960mm',
-          'cutsPerSheet':6,
-          'quantityPerPaper':1,
-          'excess':1
-        },
-        {
-          "id":1,
-          "name":"Interior",
-          "bleedPrint":true,
-          "inks":
-          {
-            "inksDetails":"Tinta Negra",
-            "inksQuantity":1
-          },
-          "openedSize":"150x210mm",
-          "allTheSame":false,
-          "quantityOfPages":70,
-          "quantityOfVias":1,
-          "faces":"Doble Faz",
-          "materials":
-          {
-            "paper":"Obra Blanco",
-            "gr":"80"
-          },
-          'machine':'NO',
-          'paperSize':'305x230mm',
-          'sheetSize':'720x920mm',
-          'cutsPerSheet':9,
-          'quantityPerPaper':2,
-          'excess':5
-        }
-      ],
-      'price':3890
-    }
-  ];
 var prices2 = [
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1534,6 +285,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1555,6 +307,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1576,6 +329,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1597,6 +351,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1618,6 +373,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1639,6 +395,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1660,6 +417,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1681,6 +439,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1702,6 +461,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1723,6 +483,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1744,6 +505,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1765,6 +527,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1786,6 +549,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1807,6 +571,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1828,6 +593,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":-1,
       "toCheck":[
          {
@@ -1849,6 +615,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -1898,6 +665,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -1947,6 +715,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -1996,6 +765,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2045,6 +815,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2094,6 +865,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2143,6 +915,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2192,6 +965,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2241,6 +1015,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2290,6 +1065,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2339,6 +1115,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2388,6 +1165,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2437,6 +1215,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2486,6 +1265,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2535,6 +1315,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2584,6 +1365,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2633,6 +1415,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2682,6 +1465,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2731,6 +1515,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2780,6 +1565,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2829,6 +1615,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2878,6 +1665,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2927,6 +1715,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -2976,6 +1765,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3025,6 +1815,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3074,6 +1865,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3123,6 +1915,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3172,6 +1965,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3221,6 +2015,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3270,6 +2065,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3319,6 +2115,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3368,6 +2165,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3417,6 +2215,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3466,6 +2265,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3515,6 +2315,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3564,6 +2365,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3613,6 +2415,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3662,6 +2465,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3711,6 +2515,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3760,6 +2565,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3809,6 +2615,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3858,6 +2665,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3907,6 +2715,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -3956,6 +2765,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4005,6 +2815,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4054,6 +2865,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4103,6 +2915,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4152,6 +2965,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4201,6 +3015,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4250,6 +3065,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4299,6 +3115,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4348,6 +3165,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4397,6 +3215,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4446,6 +3265,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4495,6 +3315,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4544,6 +3365,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4593,6 +3415,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4642,6 +3465,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4691,6 +3515,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4740,6 +3565,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4789,6 +3615,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4838,6 +3665,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4887,6 +3715,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4936,6 +3765,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -4985,6 +3815,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -5034,6 +3865,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -5083,6 +3915,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -5132,6 +3965,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -5181,6 +4015,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -5230,6 +4065,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -5279,6 +4115,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -5328,6 +4165,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":0,
       "toCheck":[
          {
@@ -5377,6 +4215,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5430,6 +4269,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5483,6 +4323,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5536,6 +4377,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5589,6 +4431,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5642,6 +4485,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5695,6 +4539,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5748,6 +4593,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5801,6 +4647,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5854,6 +4701,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5907,6 +4755,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -5960,6 +4809,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6013,6 +4863,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6066,6 +4917,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6119,6 +4971,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6172,6 +5025,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6225,6 +5079,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6278,6 +5133,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6331,6 +5187,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6384,6 +5241,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6437,6 +5295,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6490,6 +5349,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6543,6 +5403,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6596,6 +5457,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6649,6 +5511,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6702,6 +5565,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6755,6 +5619,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6808,6 +5673,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6861,6 +5727,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6914,6 +5781,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -6967,6 +5835,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7020,6 +5889,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7073,6 +5943,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7126,6 +5997,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7179,6 +6051,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7232,6 +6105,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7285,6 +6159,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7338,6 +6213,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7391,6 +6267,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7444,6 +6321,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7497,6 +6375,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7550,6 +6429,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7603,6 +6483,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7656,6 +6537,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7709,6 +6591,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7762,6 +6645,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7815,6 +6699,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7868,6 +6753,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7921,6 +6807,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -7974,6 +6861,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8027,6 +6915,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8080,6 +6969,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8133,6 +7023,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8186,6 +7077,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8239,6 +7131,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8292,6 +7185,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8345,6 +7239,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8398,6 +7293,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8451,6 +7347,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8504,6 +7401,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8557,6 +7455,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8610,6 +7509,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8663,6 +7563,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8716,6 +7617,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8769,6 +7671,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8822,6 +7725,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8875,6 +7779,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8928,6 +7833,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -8981,6 +7887,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9034,6 +7941,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9087,6 +7995,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9140,6 +8049,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9193,6 +8103,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9246,6 +8157,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9299,6 +8211,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9352,6 +8265,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9405,6 +8319,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9458,6 +8373,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9511,6 +8427,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9564,6 +8481,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9617,6 +8535,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9670,6 +8589,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9723,6 +8643,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9776,6 +8697,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9829,6 +8751,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9882,6 +8805,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9935,6 +8859,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -9988,6 +8913,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10041,6 +8967,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10094,6 +9021,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10147,6 +9075,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10200,6 +9129,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10253,6 +9183,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10306,6 +9237,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10359,6 +9291,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10412,6 +9345,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10465,6 +9399,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10518,6 +9453,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10571,6 +9507,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10624,6 +9561,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10677,6 +9615,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10730,6 +9669,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10783,6 +9723,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10836,6 +9777,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10889,6 +9831,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10942,6 +9885,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -10995,6 +9939,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11048,6 +9993,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11101,6 +10047,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11154,6 +10101,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11207,6 +10155,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11260,6 +10209,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11313,6 +10263,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11366,6 +10317,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11419,6 +10371,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11472,6 +10425,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11525,6 +10479,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11578,6 +10533,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11631,6 +10587,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11684,6 +10641,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11737,6 +10695,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11790,6 +10749,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11843,6 +10803,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11896,6 +10857,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -11949,6 +10911,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12002,6 +10965,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12055,6 +11019,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12108,6 +11073,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12161,6 +11127,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12214,6 +11181,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12267,6 +11235,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12320,6 +11289,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12373,6 +11343,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12426,6 +11397,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12479,6 +11451,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12532,6 +11505,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12585,6 +11559,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12638,6 +11613,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12691,6 +11667,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12744,6 +11721,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12797,6 +11775,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12850,6 +11829,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12903,6 +11883,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -12956,6 +11937,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13009,6 +11991,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13062,6 +12045,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13115,6 +12099,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13168,6 +12153,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13221,6 +12207,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13274,6 +12261,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13327,6 +12315,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13380,6 +12369,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13433,6 +12423,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13486,6 +12477,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13539,6 +12531,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13592,6 +12585,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13645,6 +12639,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13698,6 +12693,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13751,6 +12747,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13804,6 +12801,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13857,6 +12855,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13910,6 +12909,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -13963,6 +12963,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14016,6 +13017,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14069,6 +13071,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14122,6 +13125,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14175,6 +13179,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14228,6 +13233,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14281,6 +13287,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14334,6 +13341,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14387,6 +13395,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14440,6 +13449,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14493,6 +13503,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14546,6 +13557,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14599,6 +13611,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14652,6 +13665,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14705,6 +13719,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14758,6 +13773,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14811,6 +13827,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14864,6 +13881,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14917,6 +13935,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -14970,6 +13989,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15023,6 +14043,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15076,6 +14097,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15129,6 +14151,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15182,6 +14205,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15235,6 +14259,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15288,6 +14313,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15341,6 +14367,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15394,6 +14421,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15447,6 +14475,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15500,6 +14529,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15553,6 +14583,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15606,6 +14637,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15659,6 +14691,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15712,6 +14745,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15765,6 +14799,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15818,6 +14853,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15871,6 +14907,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15924,6 +14961,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -15977,6 +15015,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16030,6 +15069,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16083,6 +15123,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16136,6 +15177,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16189,6 +15231,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16242,6 +15285,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16295,6 +15339,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16348,6 +15393,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16401,6 +15447,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16454,6 +15501,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16507,6 +15555,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16560,6 +15609,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16613,6 +15663,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16666,6 +15717,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16719,6 +15771,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16772,6 +15825,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16825,6 +15879,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16878,6 +15933,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16931,6 +15987,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -16984,6 +16041,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17037,6 +16095,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17090,6 +16149,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17143,6 +16203,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17196,6 +16257,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17249,6 +16311,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17302,6 +16365,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17355,6 +16419,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17408,6 +16473,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17461,6 +16527,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17514,6 +16581,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17567,6 +16635,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17620,6 +16689,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17673,6 +16743,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17726,6 +16797,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17779,6 +16851,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17832,6 +16905,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17885,6 +16959,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17938,6 +17013,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -17991,6 +17067,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18044,6 +17121,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18097,6 +17175,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18150,6 +17229,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18203,6 +17283,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18256,6 +17337,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18309,6 +17391,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18362,6 +17445,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18415,6 +17499,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18468,6 +17553,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18521,6 +17607,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18574,6 +17661,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18627,6 +17715,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18680,6 +17769,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18733,6 +17823,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18786,6 +17877,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18839,6 +17931,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18892,6 +17985,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18945,6 +18039,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -18998,6 +18093,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19051,6 +18147,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19104,6 +18201,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19157,6 +18255,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19210,6 +18309,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19263,6 +18363,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19316,6 +18417,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19369,6 +18471,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19422,6 +18525,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19475,6 +18579,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19528,6 +18633,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19581,6 +18687,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19634,6 +18741,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19687,6 +18795,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19740,6 +18849,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19793,6 +18903,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19846,6 +18957,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19899,6 +19011,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -19952,6 +19065,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20005,6 +19119,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20058,6 +19173,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20111,6 +19227,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20164,6 +19281,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20217,6 +19335,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20270,6 +19389,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20323,6 +19443,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20376,6 +19497,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20429,6 +19551,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20482,6 +19605,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20535,6 +19659,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20588,6 +19713,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20641,6 +19767,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20694,6 +19821,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20747,6 +19875,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20800,6 +19929,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20853,6 +19983,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20906,6 +20037,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -20959,6 +20091,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21012,6 +20145,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21065,6 +20199,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21118,6 +20253,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21171,6 +20307,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21224,6 +20361,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21277,6 +20415,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21330,6 +20469,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21383,6 +20523,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21436,6 +20577,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21489,6 +20631,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21542,6 +20685,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21595,6 +20739,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21648,6 +20793,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21701,6 +20847,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21754,6 +20901,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21807,6 +20955,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21860,6 +21009,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21913,6 +21063,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -21966,6 +21117,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22019,6 +21171,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22072,6 +21225,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22125,6 +21279,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22178,6 +21333,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22231,6 +21387,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22284,6 +21441,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22337,6 +21495,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22390,6 +21549,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22443,6 +21603,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22496,6 +21657,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22549,6 +21711,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22602,6 +21765,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22655,6 +21819,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22708,6 +21873,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22761,6 +21927,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22814,6 +21981,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22867,6 +22035,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22920,6 +22089,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -22973,6 +22143,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23026,6 +22197,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23079,6 +22251,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23132,6 +22305,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23185,6 +22359,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23238,6 +22413,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23291,6 +22467,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23344,6 +22521,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23397,6 +22575,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23450,6 +22629,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23503,6 +22683,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23556,6 +22737,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23609,6 +22791,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23662,6 +22845,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23715,6 +22899,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23768,6 +22953,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23821,6 +23007,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23874,6 +23061,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23927,6 +23115,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -23980,6 +23169,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24033,6 +23223,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24086,6 +23277,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24139,6 +23331,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24192,6 +23385,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24245,6 +23439,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24298,6 +23493,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24351,6 +23547,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24404,6 +23601,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24457,6 +23655,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24510,6 +23709,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24563,6 +23763,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24616,6 +23817,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24669,6 +23871,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24722,6 +23925,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24775,6 +23979,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24828,6 +24033,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24881,6 +24087,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24934,6 +24141,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -24987,6 +24195,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25040,6 +24249,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25093,6 +24303,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25146,6 +24357,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25199,6 +24411,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25252,6 +24465,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25305,6 +24519,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25358,6 +24573,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25411,6 +24627,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25464,6 +24681,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25517,6 +24735,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25570,6 +24789,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25623,6 +24843,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25676,6 +24897,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25729,6 +24951,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25782,6 +25005,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25835,6 +25059,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25888,6 +25113,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25941,6 +25167,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -25994,6 +25221,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26047,6 +25275,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26100,6 +25329,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26153,6 +25383,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26206,6 +25437,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26259,6 +25491,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26312,6 +25545,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26365,6 +25599,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26418,6 +25653,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26471,6 +25707,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26524,6 +25761,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26577,6 +25815,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26630,6 +25869,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26683,6 +25923,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26736,6 +25977,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26789,6 +26031,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26842,6 +26085,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26895,6 +26139,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -26948,6 +26193,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27001,6 +26247,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27054,6 +26301,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27107,6 +26355,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27160,6 +26409,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27213,6 +26463,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27266,6 +26517,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27319,6 +26571,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27372,6 +26625,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27425,6 +26679,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27478,6 +26733,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27531,6 +26787,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27584,6 +26841,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27637,6 +26895,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27690,6 +26949,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27743,6 +27003,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27796,6 +27057,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27849,6 +27111,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27902,6 +27165,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -27955,6 +27219,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28008,6 +27273,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28061,6 +27327,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28114,6 +27381,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28167,6 +27435,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28220,6 +27489,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28273,6 +27543,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28326,6 +27597,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28379,6 +27651,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28432,6 +27705,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28485,6 +27759,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28538,6 +27813,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28591,6 +27867,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28644,6 +27921,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28697,6 +27975,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28750,6 +28029,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28803,6 +28083,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28856,6 +28137,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28909,6 +28191,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -28962,6 +28245,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29015,6 +28299,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29068,6 +28353,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29121,6 +28407,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29174,6 +28461,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29227,6 +28515,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29280,6 +28569,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29333,6 +28623,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29386,6 +28677,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29439,6 +28731,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29492,6 +28785,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29545,6 +28839,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29598,6 +28893,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29651,6 +28947,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29704,6 +29001,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29757,6 +29055,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29810,6 +29109,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29863,6 +29163,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29916,6 +29217,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -29969,6 +29271,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30022,6 +29325,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30075,6 +29379,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30128,6 +29433,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30181,6 +29487,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30234,6 +29541,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30287,6 +29595,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30340,6 +29649,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30393,6 +29703,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30446,6 +29757,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30499,6 +29811,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30552,6 +29865,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30605,6 +29919,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30658,6 +29973,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30711,6 +30027,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30764,6 +30081,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30817,6 +30135,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30870,6 +30189,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30923,6 +30243,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -30976,6 +30297,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31029,6 +30351,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31082,6 +30405,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31135,6 +30459,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31188,6 +30513,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31241,6 +30567,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31294,6 +30621,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31347,6 +30675,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31400,6 +30729,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31453,6 +30783,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31506,6 +30837,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31559,6 +30891,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31612,6 +30945,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31665,6 +30999,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31718,6 +31053,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31771,6 +31107,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31824,6 +31161,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31877,6 +31215,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31930,6 +31269,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -31983,6 +31323,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -32036,6 +31377,7 @@ var prices2 = [
       }
    },
    {
+      "workId":1,
       "item":1,
       "toCheck":[
          {
@@ -32085,6 +31427,1518 @@ var prices2 = [
       ],
       "price":{
          "value":2720.5,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"9x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"9x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"9x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"9x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"9x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"9x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"8x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"8x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"8x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"8x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"8x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":-1,
+      "toCheck":[
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"8x5"
+         }
+      ],
+      "price":{
+         "value":0,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":360,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":480,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":680,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":880,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1090,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1690,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":550,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":745,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1045,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1345,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1745,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"8x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":2890,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":360,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":480,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":680,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":880,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1090,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1690,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":550,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":745,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1045,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1345,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":1745,
+         "condition":"each"
+      }
+   },
+   {
+      "workId":0,
+      "item":0,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":18
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"items[0].inks",
+            "value":4
+         },
+         {
+            "checkAttribute":"items[0].openedSizes",
+            "value":"9x5"
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         }
+      ],
+      "price":{
+         "value":2890,
          "condition":"each"
       }
    }

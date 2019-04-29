@@ -4,3 +4,5 @@ var tarjetaImage = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGB
 
 var workTypes = [{'id':0,'name':'Tarjetería','image':tarjetaImage},{'id':1,'name':'Trabajos Encuadernados','description':'prueba','image':noImage},
 {'id':2,'name':'Folletería','image':noImage},{'id':3,'name':'Papelería Institucional','image':noImage}];
+
+
