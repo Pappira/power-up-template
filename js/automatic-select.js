@@ -809,9 +809,9 @@ var getCombinations = function(estimate){
     quantities.push('{"quantity":' + estimate.quantity[i]+',');
   }
   var generalCases;
-  if (estimate.clossedSizes &&  estimate.clossedSizes.length>1){
-    for (var j = 0; j < estimate.clossedSizes.length;j++){
-      clossedSizes.push('"clossedSizes": "'+ estimate.clossedSizes[j] + '",');
+  if (estimate.clossedSize &&  estimate.clossedSize.length>1){
+    for (var j = 0; j < estimate.clossedSize.length;j++){
+      clossedSizes.push('"clossedSizes": "'+ estimate.clossedSize[j] + '",');
     }
     generalCases = allPossibleCases([quantities,clossedSizes]);
   }else{
