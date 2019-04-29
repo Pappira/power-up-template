@@ -3,7 +3,7 @@ var works = [
       'id':0,
       'workTypeId':0,
       'workType':'Tarjetería',
-      'clossedSizes':['90x50mm','94x50mm','80x50mm'],
+      'clossedSizes':['94x50mm'],
       'image':noImage,
       'name':'Tarjetas Personales',
       'quantities':[50,100,200,300,500,1000],

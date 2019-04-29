@@ -31436,10 +31436,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":50
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31454,10 +31450,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":50
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31472,10 +31464,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":100
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31490,10 +31478,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":200
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31508,10 +31492,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":300
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31526,10 +31506,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":500
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31544,10 +31520,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":1000
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"90x50mm"
          }
       ],
       "price":{
@@ -31562,10 +31534,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":50
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31580,10 +31548,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":100
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31598,10 +31562,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":200
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31616,10 +31576,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":300
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31634,10 +31590,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":500
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"80x50mm"
          }
       ],
       "price":{
@@ -31652,10 +31604,6 @@ var prices2 = [
          {
             "checkAttribute":"quantity",
             "value":1000
-         },
-         {
-            "checkAttribute":"clossedSizes",
-            "value":"80x50mm"
          }
       ],
       "price":{
