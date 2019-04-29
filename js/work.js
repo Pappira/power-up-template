@@ -59,7 +59,7 @@ var works = [
               "showToClientFinish":true
             },
             {
-              "finish":"Nueve cambios de nombre",
+              "finish":"Nueve cambios de nombres",
               "finishComment":"",
               "showToClientFinish":true
             }
