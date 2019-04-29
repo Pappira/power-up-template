@@ -28,7 +28,7 @@ var works = [
           'faces':['Simple Faz','Doble Faz'],
           'materials':[
             {
-              'paper':'Coteado Mate',
+              'paper':'Coteado',
               'gr':'300'
             },
             {
