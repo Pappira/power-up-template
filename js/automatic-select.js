@@ -834,7 +834,7 @@ var getCombinations = function(estimate){
       for (var j = 0; j  < item.faces.length;j++){
           faces.push('"faces": "'+ item.faces[j] + '",');
       }
-      if ( item.openedSize){
+      if (item.openedSize){
         for (var j = 0; j  < item.openedSize.length;j++){
           openedSize.push('"openedSize": "'+ item.openedSize[j] + '",');
         }
@@ -872,7 +872,9 @@ var getCombinations = function(estimate){
       if(cases2 && cases2.length>0){
               cases = allPossibleCases([cases,cases2]);
       }
-      cases = allPossibleCases([cases,openedSize]);
+      if(openedSize && openedSize.length >1){
+        cases = allPossibleCases([cases,openedSize]);
+      }
       cases = allPossibleCases([cases,quantityOfVias]);
       cases = allPossibleCases([cases,faces]);
       cases = allPossibleCases([cases,quantityOfMaterials]);
