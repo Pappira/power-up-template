@@ -731,6 +731,8 @@ function convertWorkToPrice(work,combination,price){
     }
     if(combination.items[i].openedSize){
       currentWork.items[i].openedSize = combination.items[i].openedSize;
+    }else if (currentWork.items[i].openedSize == null){
+      currentWork.items[i].openedSize = currentWork.clossedSizes;
     }
     if(combination.items[i].quantityOfVias){
       currentWork.items[i].quantityOfVias = combination.items[i].quantityOfVias;
