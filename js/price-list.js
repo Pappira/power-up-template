@@ -31440,7 +31440,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Todas Iguales"
+            "value":"Todas iguales"
          }
       ],
       "price":{
@@ -31458,7 +31458,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Todas Iguales"
+            "value":"Todas iguales"
          }
       ],
       "price":{
@@ -31476,7 +31476,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Todas Iguales"
+            "value":"Todas iguales"
          }
       ],
       "price":{
@@ -31494,7 +31494,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Todas Iguales"
+            "value":"Todas iguales"
          }
       ],
       "price":{
@@ -31512,7 +31512,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Todas Iguales"
+            "value":"Todas iguales"
          }
       ],
       "price":{
@@ -31530,7 +31530,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Todas Iguales"
+            "value":"Todas iguales"
          }
       ],
       "price":{
