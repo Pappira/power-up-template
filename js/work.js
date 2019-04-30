@@ -19,47 +19,47 @@ var works = [
               "showToClientFinish":false
             },
             {
-              "finish":"Un cambio de nombre",
+              "finish":"1 cambio de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"Dos cambios de nombre",
+              "finish":"2 cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"Tres cambios de nombre",
+              "finish":"3 cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"Cuatro cambios de nombre",
+              "finish":"4 cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"Cinco cambios de nombre",
+              "finish":"5 cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"Seis cambios de nombre",
+              "finish":"6 cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"Siete cambios de nombre",
+              "finish":"7 cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"Ocho cambios de nombre",
+              "finish":"8 cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"Nueve cambios de nombres",
+              "finish":"9 cambios de nombres",
               "finishComment":"",
               "showToClientFinish":true
             }

@@ -31638,7 +31638,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"2cambios de nombre"
+            "value":"2 cambio de nombre"
          }
       ],
       "price":{
@@ -31656,7 +31656,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"2cambios de nombre"
+            "value":"2 cambio de nombre"
          }
       ],
       "price":{
@@ -31674,7 +31674,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"2cambios de nombre"
+            "value":"2 cambio de nombre"
          }
       ],
       "price":{
@@ -31692,7 +31692,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"2cambios de nombre"
+            "value":"2 cambio de nombre"
          }
       ],
       "price":{
@@ -31782,7 +31782,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Cuatro cambios de nombre"
+            "value":"4 cambios de nombre"
          }
       ],
       "price":{
@@ -31800,7 +31800,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Cuatro cambios de nombre"
+            "value":"4 cambios de nombre"
          }
       ],
       "price":{
@@ -31818,7 +31818,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Cuatro cambios de nombre"
+            "value":"4 cambios de nombre"
          }
       ],
       "price":{
@@ -31836,7 +31836,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Cinco cambios de nombre"
+            "value":"5 cambios de nombre"
          }
       ],
       "price":{
@@ -31854,7 +31854,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Cinco cambios de nombre"
+            "value":"5 cambios de nombre"
          }
       ],
       "price":{
@@ -31872,7 +31872,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Cinco cambios de nombre"
+            "value":"5 cambios de nombre"
          }
       ],
       "price":{
@@ -31890,7 +31890,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Seis cambios de nombre"
+            "value":"6 cambios de nombre"
          }
       ],
       "price":{
@@ -31908,7 +31908,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Seis cambios de nombre"
+            "value":"6 cambios de nombre"
          }
       ],
       "price":{
@@ -31926,7 +31926,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Siete cambios de nombre"
+            "value":"7 cambios de nombre"
          }
       ],
       "price":{
@@ -31944,7 +31944,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Siete cambios de nombre"
+            "value":"7 cambios de nombre"
          }
       ],
       "price":{
@@ -31962,7 +31962,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Ocho cambios de nombre"
+            "value":"8 cambios de nombre"
          }
       ],
       "price":{
@@ -31980,7 +31980,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Ocho cambios de nombre"
+            "value":"8 cambios de nombre"
          }
       ],
       "price":{
@@ -31998,7 +31998,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Nueve cambios de nombre"
+            "value":"9 cambios de nombre"
          }
       ],
       "price":{
@@ -32016,7 +32016,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"Nueve cambios de nombre"
+            "value":"9 cambios de nombre"
          }
       ],
       "price":{
