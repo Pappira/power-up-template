@@ -31638,7 +31638,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"2 cambio de nombre"
+            "value":"2 cambios de nombre"
          }
       ],
       "price":{
@@ -31656,7 +31656,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"2 cambio de nombre"
+            "value":"2 cambios de nombre"
          }
       ],
       "price":{
@@ -31674,7 +31674,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"2 cambio de nombre"
+            "value":"2 cambios de nombre"
          }
       ],
       "price":{
@@ -31692,7 +31692,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"mandatoryFinishGroups[0].finishes.finish",
-            "value":"2 cambio de nombre"
+            "value":"2 cambios de nombre"
          }
       ],
       "price":{
