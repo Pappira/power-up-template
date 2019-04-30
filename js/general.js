@@ -397,7 +397,7 @@ var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption)
 			finishes = groupFinishes(estimate.selectedExtraPrices);
 			
 		}
-		texts = [].concat.apply([],finishes.map(finish => [].concat.apply([],[createText('subtitle3','Opcional ' + finish.finish  + (finish.item!=-1?' en ' + estimate.items[finish.item].name:''),''), finish.price.map(price => createText('text','Sub-Total extra (' + price.quantity + ' unidades)', '$ ' +  price.price.toLocaleString() + ' + IVA'))])))
+		texts = [].concat.apply([],finishes.map(finish => [].concat.apply([],[createText('subtitle3','Opcional ' + finish.finish  + ((finish.item!=-1 && estimate.items.length>1)?' en ' + estimate.items[finish.item].name:''),''), finish.price.map(price => createText('text','Sub-Total extra (' + price.quantity + ' unidades)', '$ ' +  price.price.toLocaleString() + ' + IVA'))])))
 	}
 	return texts;
 }
