@@ -15,12 +15,12 @@ var works = [
           [
             {
               "finish":"Todas iguales",
-              "finishComment":"",
+              "finishComment":"Todas las tarjetas personales a imprimir son idénticas, sin ningún tipo de variante",
               "showToClientFinish":false
             },
             {
               "finish":"1 cambio de nombre",
-              "finishComment":"",
+              "finishComment":"Todas las tarjetas personales tienen el mismo diseño base, y la única variante es que se tendrá datos personales de 2 personas",
               "showToClientFinish":true
             },
             {
