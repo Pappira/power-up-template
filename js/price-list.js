@@ -33818,7 +33818,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -33868,7 +33868,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -33918,7 +33918,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -33968,7 +33968,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -34218,7 +34218,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -34268,7 +34268,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -34318,7 +34318,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -34368,7 +34368,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -34618,7 +34618,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -34668,7 +34668,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -34718,7 +34718,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -34768,7 +34768,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35018,7 +35018,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35068,7 +35068,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35118,7 +35118,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35168,7 +35168,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35418,7 +35418,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35468,7 +35468,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35518,7 +35518,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35568,7 +35568,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35818,7 +35818,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35868,7 +35868,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35918,7 +35918,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -35968,7 +35968,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -36218,7 +36218,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -36268,7 +36268,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -36318,7 +36318,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -36368,7 +36368,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -36618,7 +36618,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -36668,7 +36668,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -36718,7 +36718,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -36768,7 +36768,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37018,7 +37018,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37068,7 +37068,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37118,7 +37118,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37168,7 +37168,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37418,7 +37418,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37468,7 +37468,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37518,7 +37518,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37568,7 +37568,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37818,7 +37818,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37868,7 +37868,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37918,7 +37918,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -37968,7 +37968,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -38218,7 +38218,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -38268,7 +38268,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -38318,7 +38318,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -38368,7 +38368,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -38618,7 +38618,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -38668,7 +38668,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -38718,7 +38718,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -38768,7 +38768,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -39018,7 +39018,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -39068,7 +39068,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -39118,7 +39118,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -39168,7 +39168,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -39418,7 +39418,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -39468,7 +39468,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -39518,7 +39518,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
@@ -39568,7 +39568,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].faces",
-            "value":"Doble faz"
+            "value":"Doble Faz"
          },
          {
             "checkAttribute":"quantity",
