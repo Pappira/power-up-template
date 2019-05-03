@@ -356,5 +356,67 @@ var works = [
         } 
       ],
       "optionalFinishes":[]
+    },{
+      'id':1,
+      'workTypeId':0,
+      'workType':'Tarjetería',
+      'clossedSizes':['150x150mm','130x170mm','120x180mm','130x190mm','150x220mm'],
+      'image':noImage,
+      'name':'Tarjetas de invitación',
+      'quantities':[10,50,100,300],
+      'items':[
+        {
+          'id':0,
+          'name':'Tarjeta',
+          'bleedPrint':true, 
+          'inks':[
+            {
+              'inksDetails':'Full color',
+              'inksQuantity':4,
+            }
+          ],
+          'allTheSame':false,
+          'quantityOfPages':[1],
+          'quantityOfVias':[1],
+          'faces':['Simple Faz','Doble Faz'],
+          'materials':[
+            {
+              'paper':'Coteado',
+              'gr':'300'
+            },
+            {
+              'paper':'Magic',
+              'gr':''
+            },
+            {
+              'paper':'Jazmine',
+              'gr':''
+            }
+          ],
+          "optionalFinishes":
+          [
+            {
+              "finish":"Laminado Mate",
+              "finishComment":"",
+              "showToClient":true
+            },
+            {
+              "finish":"Laminado Brillo",
+              "finishComment":"",
+              "showToClient":true
+            },
+            {
+              "finish":"Laminado Mate o Brillo a definir",
+              "finishComment":"",
+              "showToClient":true
+            },
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true
+            }
+          ]
+        }
+      ]
     }
   ];
