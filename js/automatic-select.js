@@ -746,11 +746,6 @@ var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
 
 var convertWorkToPrice = function(work,combination,price){
   var currentWork = JSON.parse(JSON.stringify(work));
-  delete currentWork.workTypeId;
-  delete currentWork.workType;
-  delete currentWork.image;
-  delete currentWork.name;
-  delete currentWork.quantities;
   
   for(var attr in work){
     if (attr != 'items'){
@@ -763,95 +758,36 @@ var convertWorkToPrice = function(work,combination,price){
       }
     }
   }
+  delete currentWork.workTypeId;
+  delete currentWork.workType;
+  delete currentWork.image;
+  delete currentWork.name;
+  delete currentWork.quantities;
+  delete currentWork.clossedSize;
 
-
-  /*if (combination.mandatoryFinishGroups){
-    currentWork.mandatoryFinishGroups = combination.mandatoryFinishGroups;
-  }
-  if (combination.quantity){
-    if(currentWork.quantity )
-    currentWork.quantity = combination.quantity;
-  }*/
-  /*if(combination.clossedSizes){
-    currentWork.clossedSizes = combination.clossedSizes;
-  }else if (Array.isArray(currentWork.clossedSizes)){
-    currentWork.clossedSizes = currentWork.clossedSizes[0];
-  }
-  if (typeof currentWork.clossedSize === 'object' && !Array.isArray(currentWork.clossedSize)){
-    currentWork.clossedSizes = currentWork.clossedSizes.value;
-  }*/
   currentWork.workId = currentWork.id;
   delete currentWork.id;
   currentWork.price = price;
   for(var i =0; i < currentWork.items.length; i++){
-    currentWork.items[i].quantityOfPages = currentWork.items[i].pages;
+    currentWork.items[i].quantityOfPages = JSON.parse(JSON.stringify(currentWork.items[i].pages));
     delete currentWork.items[i].pages;
 
     currentWork.items[i].inks = {
-      inksQuantity: currentWork.items[i].inksQuantity,
-      inksDetails: currentWork.items[i].inksDetails
+      inksQuantity: JSON.parse(JSON.stringify(currentWork.items[i].inksQuantity)),
+      inksDetails: JSON.parse(JSON.stringify(currentWork.items[i].inksDetails))
     }; 
     delete currentWork.items[i].inksQuantity;
     delete currentWork.items[i].inksDetails;
 
     currentWork.items[i].materials = {
-      gr: currentWork.items[i].gr,
-      paper: currentWork.items[i].paper
+      gr: JSON.parse(JSON.stringify(currentWork.items[i].gr)),
+      paper: JSON.parse(JSON.stringify(currentWork.items[i].paper))
     };
     delete currentWork.items[i].gr;
     delete currentWork.items[i].paper;
 
-   /* if(combination.items[i].pages){
-      currentWork.items[i].quantityOfPages = combination.items[i].pages;
-    }
-    if(combination.items[i].faces){
-      currentWork.items[i].faces = combination.items[i].faces;
-    }
-    if(combination.items[i].openedSize){
-      currentWork.items[i].openedSize = combination.items[i].openedSize;
-    }else if (currentWork.items[i].openedSize == null){
-      currentWork.items[i].openedSize = currentWork.clossedSizes;
-      work.items[i].openedSize.push(currentWork.clossedSizes);
-    }
-    if(combination.items[i].quantityOfVias){
-      currentWork.items[i].quantityOfVias = combination.items[i].quantityOfVias;
-    }
-    if (combination.items[i].mandatoryFinishGroups){
-      currentWork.items[i].mandatoryFinishGroups = combination.items[i].mandatoryFinishGroups;
-    }
-    if(combination.items[i].inksDetails){
-      currentWork.items[i].inks = {
-        inksQuantity: combination.items[i].inksQuantity,
-        inksDetails: combination.items[i].inksDetails
-      }
-    }
-    if(combination.items[i].paper){
-      currentWork.items[i].materials = {
-        gr: combination.items[i].gr,
-        paper: combination.items[i].paper
-      }
-    }
-    if(combination.items[i].machine){
-      currentWork.items[i].machine = combination.items[i].machine;
-    }
-    if(combination.items[i].paperSize){
-      currentWork.items[i].paperSize = combination.items[i].paperSize;
-    }
-    if(combination.items[i].sheetSize){
-      currentWork.items[i].sheetSize = combination.items[i].sheetSize;
-    }
-    if(combination.items[i].cutsPerSheet){
-      currentWork.items[i].cutsPerSheet = combination.items[i].cutsPerSheet;
-    }
-    if(combination.items[i].quantityPerPaper){
-      currentWork.items[i].quantityPerPaper = combination.items[i].quantityPerPaper;
-    }
-    if(combination.items[i].excess){
-      currentWork.items[i].excess = combination.items[i].excess;
-    }
-  }*/
   }
-  return currentWork;
+  return JSON.parse(JSON.stringify(currentWork));
 }
 
 var getCombinations = function(estimate){
