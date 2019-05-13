@@ -727,7 +727,7 @@ var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
         if (combinationAttr.includes(eachWorkAttr.value)){
           for (var mandatoryChanges of eachWorkAttr.mandatoryChanges){
             if(mandatoryChanges.itemId!=-1){
-              currentWork[mandatoryChanges.itemId][mandatoryChanges.type] = currentWork[mandatoryChanges.values];
+              currentWork[mandatoryChanges.itemId][mandatoryChanges.type] = mandatoryChanges.values;
             }else{
               currentWork[mandatoryChanges.type] = currentWork[mandatoryChanges.values];  
             }
