@@ -720,7 +720,7 @@ function add(accumulator, a) {
   return accumulator + a;
 }
 
-var convert = function(currentWork, combinationAttr, workAttr){
+var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
   if (combinationAttr){
     if(Array.isArray(workAttr)){
       for (var eachWorkAttr of workAttr){
@@ -749,11 +749,11 @@ var convertWorkToPrice = function(work,combination,price){
   
   for(var attr in work){
     if (attr != 'items'){
-      currentWork[attr] = convert(currentWork,combination[attr],work[attr]);
+      currentWork[attr] = convertEachAttrToPrice(currentWork,combination[attr],work[attr]);
     }else{
       for (var item of work[attr]){
         for(var attrItem in item){
-          currentWork[item][attrItem] = convert(currentWork,combination[item][attrItem],work[item][attrItem]);
+          currentWork[item][attrItem] = convertEachAttrToPrice(currentWork,combination[item][attrItem],work[item][attrItem]);
         }
       }
     }
