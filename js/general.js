@@ -407,7 +407,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	text.push(createText('title',estimate.name,''));
 	text.push(createText('text','Cantidad',(selectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // '))));
-	text.push(createText('text','Tamaño cerrado',estimate.clossedSize.map(currentClossedSize => ((typeof currentClossedSize == 'object')?currentClossedSize.value:currentClossedSize))));
+	text.push(createText('text','Tamaño cerrado',estimate.clossedSize.map(currentClossedSize => ((typeof currentClossedSize == 'object')?currentClossedSize.value:currentClossedSize)).join(' // ')));
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){	
 		//text.push(createText('subtitle2','Terminaciones Generales',''));
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
