@@ -721,11 +721,11 @@ function add(accumulator, a) {
 }
 
 var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
-  if (combinationAttr){
-    if(Array.isArray(workAttr)){
-      for (var eachWorkAttr of workAttr){
-        if(typeof eachWorkAttr == 'object' && !Array.isArray(eachWorkAttr)){
-          if (combinationAttr.includes(eachWorkAttr.value)){
+  if(Array.isArray(workAttr)){
+    for (var eachWorkAttr of workAttr){
+      if(typeof eachWorkAttr == 'object' && !Array.isArray(eachWorkAttr)){
+        if (combinationAttr.includes(eachWorkAttr.value)){
+          for (var mandatoryChanges of eachWorkAttr.mandatoryChanges){
             if(eachWorkAttr.mandatoryChanges.itemId!=-1){
               currentWork[eachWorkAttr.mandatoryChanges.itemId][eachWorkAttr.mandatoryChanges.type] = currentWork[eachWorkAttr.mandatoryChanges.values];
             }else{
@@ -735,8 +735,11 @@ var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
         }
       }
     }
+  }
+  if (combinationAttr){
     return combinationAttr;
   }
+  return workAttr;
 }
 
 var convertWorkToPrice = function(work,combination,price){
