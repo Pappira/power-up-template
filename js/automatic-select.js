@@ -772,7 +772,6 @@ var convertWorkToPrice = function(work,combination,price){
   delete currentWork.id;
   currentWork.price = price;
   for(var i =0; i < currentWork.items.length; i++){
-
     currentWork.items[i].inks = {
       inksQuantity: JSON.parse(JSON.stringify(currentWork.items[i].inksQuantity)),
       inksDetails: JSON.parse(JSON.stringify(currentWork.items[i].inksDetails))

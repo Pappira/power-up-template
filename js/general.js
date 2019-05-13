@@ -512,7 +512,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 					inks += (item.faces?' - ' + item.faces.join(' // '):'');
 					texts.push(createText('text','Impresión',inks));
 			}
-			if (item.openedSize && item.openedSize != estimate.clossedSize){
+			if (item.openedSize && (JSON.stringify(item.openedSize.sort()) != JSON.stringify([...new Set(estimate.prices.map(price => price.clossedSizes))].sort()))){
 				texts.push(createText('text','Tamaño Abierto',item.openedSize.join(' // ')));
 			}
 			if (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1)){
