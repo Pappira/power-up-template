@@ -725,7 +725,7 @@ var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
           if (combinationAttr.includes(eachWorkAttr.value)){
             for (var mandatoryChanges of eachWorkAttr.mandatoryChanges){
               if(mandatoryChanges.itemId!=-1){
-                currentWork.items[mandatoryChanges.itemId][mandatoryChanges.type] = mandatoryChanges.values;
+                currentWork.items[mandatoryChanges.itemId][mandatoryChanges.type] = mandatoryChanges.values[0];
               }else{
                 currentWork[mandatoryChanges.type] = mandatoryChanges.values;  
               }
@@ -748,7 +748,7 @@ var convertWorkToPrice = function(work,combination,price){
     if (attr != 'items'){
       currentWork[attr] = convertEachAttrToPrice(currentWork,combination[attr],work[attr]);
     }else{
-      for (var item of work[attr]){
+      for (var item of combination[attr]){
         for(var attrItem in item){
           currentWork.items[item.id][attrItem] = convertEachAttrToPrice(currentWork,combination.items[item.id][attrItem],item[attrItem]);
         }
@@ -782,6 +782,9 @@ var convertWorkToPrice = function(work,combination,price){
     delete currentWork.items[i].paper;
 
   }
+  
+  delete currentWork.prices;
+  currentWork.items.forEach(item =>delete item.optionalFinishes);
   return JSON.parse(JSON.stringify(currentWork));
 }
 
