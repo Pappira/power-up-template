@@ -146,7 +146,11 @@ var createPossibilities = function(work){
           possibility['itemId'] = -1;
           possibility['itemName'] = 'general';
           possibility['name'] = attr;
-          possibility['values'] = work[attr];
+          if (typeof work[attr] === 'object' && !Array.isArray(work[attr])){
+            possibility['values'] = work[attr].value;
+          }else{
+            possibility['values'] = work[attr];
+          }
           possibilities.push(possibility);
         }
       }else{
@@ -645,6 +649,13 @@ var createEstimateAndTrelloCard2 = function(){
     }else{
       work.clossedSize = work.clossedSizes[0];
     }
+    if (Array.isArray(work.clossedSize)){
+      work.clossedSize.forEach(function(currentClossedSize){
+        if(typeof currentClossedSize === 'object' && !Array.isArray(currentClossedSize)){
+          currentClossedSize = currentClossedSize.value;
+        } 
+      });
+    }
     if (work.quantities.length > 1){
       work.quantity =  cutArray(work.quantities,selectedOptions[-1].quantities);
     }else{
@@ -719,6 +730,9 @@ function convertWorkToPrice(work,combination,price){
   }else if (Array.isArray(currentWork.clossedSizes)){
     currentWork.clossedSizes = currentWork.clossedSizes[0];
   }
+  if (typeof currentWork.clossedSize === 'object' && !Array.isArray(currentWork.clossedSize)){
+    currentWork.clossedSizes = currentWork.clossedSizes.value;
+  }
   currentWork.workId = currentWork.id;
   delete currentWork.id;
   currentWork.price = price;
@@ -733,6 +747,7 @@ function convertWorkToPrice(work,combination,price){
       currentWork.items[i].openedSize = combination.items[i].openedSize;
     }else if (currentWork.items[i].openedSize == null){
       currentWork.items[i].openedSize = currentWork.clossedSizes;
+      work.items[i].openedSize.push(currentWork.clossedSizes);
     }
     if(combination.items[i].quantityOfVias){
       currentWork.items[i].quantityOfVias = combination.items[i].quantityOfVias;
@@ -812,10 +827,10 @@ var getCombinations = function(estimate){
   if (estimate.clossedSize){
     if(Array.isArray(estimate.clossedSize)){
       for (var j = 0; j < estimate.clossedSize.length;j++){
-        clossedSizes.push('"clossedSizes": "'+ estimate.clossedSize[j] + '",');
+        clossedSizes.push('"clossedSizes": "'+ (typeof estimate.clossedSize[j] == 'object'?estimate.clossedSize[j].value:estimate.clossedSize[j]) + '",');
       }
     }else{
-      clossedSizes.push('"clossedSizes": "'+ estimate.clossedSize + '",');
+      clossedSizes.push('"clossedSizes": "'+  (typeof estimate.clossedSize == 'object'?estimate.clossedSize.value:estimate.clossedSize) + '",');
     }
     generalCases = allPossibleCases([quantities,clossedSizes]);
   }else{
@@ -917,7 +932,7 @@ var addPrices = function(work){
   work.prices = [];
   var allCombinations = getCombinations(work);
     
-  var currentWork = JSON.parse(JSON.stringify(work));
+  //var currentWork = JSON.parse(JSON.stringify(work));
 
   allCombinations.forEach(function(currentCombination){
     if(currentCombination.mandatoryFinishGroups){
@@ -950,7 +965,7 @@ var addPrices = function(work){
 
       var totalPrice = priceFiltered.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
 
-      var currentPrice = convertWorkToPrice(currentWork, currentCombination,totalPrice);   
+      var currentPrice = convertWorkToPrice(work, currentCombination,totalPrice);   
       
       //hay que ver como agregar la machine, papersize, sheetsize, etc
       work.prices.push(currentPrice); 
