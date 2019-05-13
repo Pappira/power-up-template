@@ -756,6 +756,7 @@ var convertWorkToPrice = function(work,combination,price){
     }else{
       for (var item of combination[attr]){
         for(var attrItem in item){
+          currentWork.items[item.id][attrItem] = convertEachAttrToPrice(currentWork,combination.items[item.id][attrItem],item[attrItem]);
         }
       }
     }
