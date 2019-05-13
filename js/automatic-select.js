@@ -717,7 +717,7 @@ function add(accumulator, a) {
   return accumulator + a;
 }
 
-var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
+var convertEachAttrToPrice = function(currentWork, combinationAttr, work){
   if(Array.isArray(workAttr)){
     for (var eachWorkAttr of workAttr){
       if(typeof eachWorkAttr == 'object' && !Array.isArray(eachWorkAttr)){
@@ -726,8 +726,14 @@ var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
             for (var mandatoryChanges of eachWorkAttr.mandatoryChanges){
               if(mandatoryChanges.itemId!=-1){
                 currentWork.items[mandatoryChanges.itemId][mandatoryChanges.type] = mandatoryChanges.values[0];
+                if(!work.items[mandatoryChanges.itemId][mandatoryChanges.type].includes(mandatoryChanges.values[0])){
+                  work.items[mandatoryChanges.itemId][mandatoryChanges.type].push(mandatoryChanges.values[0]);
+                }
               }else{
                 currentWork[mandatoryChanges.type] = mandatoryChanges.values;  
+                if(!work[mandatoryChanges.type].includes(mandatoryChanges.values[0])){
+                  work[mandatoryChanges.type].push(mandatoryChanges.values[0]);
+                }
               }
             }
           }
@@ -746,11 +752,11 @@ var convertWorkToPrice = function(work,combination,price){
   
   for(var attr in combination){
     if (attr != 'items'){
-      currentWork[attr] = convertEachAttrToPrice(currentWork,combination[attr],work[attr]);
+      currentWork[attr] = convertEachAttrToPrice(currentWork,combination[attr],work[attr],work);
     }else{
       for (var item of combination[attr]){
         for(var attrItem in item){
-          currentWork.items[item.id][attrItem] = convertEachAttrToPrice(currentWork,combination.items[item.id][attrItem],item[attrItem]);
+          currentWork.items[item.id][attrItem] = convertEachAttrToPrice(currentWork,combination.items[item.id][attrItem],item[attrItem],work);
         }
       }
     }
