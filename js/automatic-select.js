@@ -724,12 +724,14 @@ var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
   if(Array.isArray(workAttr)){
     for (var eachWorkAttr of workAttr){
       if(typeof eachWorkAttr == 'object' && !Array.isArray(eachWorkAttr)){
-        if (combinationAttr.includes(eachWorkAttr.value)){
-          for (var mandatoryChanges of eachWorkAttr.mandatoryChanges){
-            if(mandatoryChanges.itemId!=-1){
-              currentWork.items[mandatoryChanges.itemId][mandatoryChanges.type] = mandatoryChanges.values;
-            }else{
-              currentWork[mandatoryChanges.type] = mandatoryChanges.values;  
+        if(combinationAttr){
+          if (combinationAttr.includes(eachWorkAttr.value)){
+            for (var mandatoryChanges of eachWorkAttr.mandatoryChanges){
+              if(mandatoryChanges.itemId!=-1){
+                currentWork.items[mandatoryChanges.itemId][mandatoryChanges.type] = mandatoryChanges.values;
+              }else{
+                currentWork[mandatoryChanges.type] = mandatoryChanges.values;  
+              }
             }
           }
         }
