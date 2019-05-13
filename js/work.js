@@ -363,60 +363,55 @@ var works = [
       'clossedSizes':[
         {
           'value':'150x150mm',
-          "incidences":
+          "mandatoryChanges":
           [
             {
               "itemId":0,
               "type":"openedSize",
-              "action":"replace",
               "values":['150x150mm']
             },
           ]
         },        
         {
           'value':'130x170mm',
-          "incidences":
+          "mandatoryChanges":
           [
             {
               "itemId":0,
               "type":"openedSize",
-              "action":"replace",
               "values":['130x170mm']
             },
           ]
         },        
         {
           'value':'120x180mm',
-          "incidences":
+          "mandatoryChanges":
           [
             {
               "itemId":0,
               "type":"openedSize",
-              "action":"replace",
               "values":['120x180mm']
             },
           ]
         },        
         {
           'value':'130x190mm',
-          "incidences":
+          "mandatoryChanges":
           [
             {
               "itemId":0,
               "type":"openedSize",
-              "action":"replace",
               "values":['130x190mm']
             },
           ]
         },        
         {
           'value':'150x220mm',
-          "incidences":
+          "mandatoryChanges":
           [
             {
               "itemId":0,
               "type":"openedSize",
-              "action":"replace",
               "values":['150x220mm']
             },
           ]
@@ -438,7 +433,7 @@ var works = [
           ],
           'allTheSame':false,
           'quantityOfPages':[1],
-          'openedSize':['150x150mm','130x170mm','120x180mm','130x190mm','150x220mm'],
+          'openedSize':[],
           'quantityOfVias':[1],
           'faces':['Simple Faz','Doble Faz'],
           'materials':[

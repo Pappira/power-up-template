@@ -657,13 +657,13 @@ var createEstimateAndTrelloCard2 = function(){
     }else{
       work.clossedSize = work.clossedSizes[0];
     }
-    if (Array.isArray(work.clossedSize)){
+    /*if (Array.isArray(work.clossedSize)){
       work.clossedSize.forEach(function(currentClossedSize){
         if(typeof currentClossedSize === 'object' && !Array.isArray(currentClossedSize)){
           currentClossedSize = currentClossedSize.value;
         } 
       });
-    }
+    }*/
     if (work.quantities.length > 1){
       work.quantity =  cutArray(work.quantities,selectedOptions[-1].quantities);
     }else{
@@ -720,32 +720,83 @@ function add(accumulator, a) {
   return accumulator + a;
 }
 
-function convertWorkToPrice(work,combination,price){
+var convert = function(currentWork, combinationAttr, workAttr){
+  if (combinationAttr){
+    if(Array.isArray(workAttr)){
+      for (var eachWorkAttr of workAttr){
+        if(typeof eachWorkAttr == 'object' && !Array.isArray(eachWorkAttr)){
+          if (combinationAttr.includes(eachWorkAttr.value)){
+            if(eachWorkAttr.mandatoryChanges.itemId!=-1){
+              currentWork[eachWorkAttr.mandatoryChanges.itemId][eachWorkAttr.mandatoryChanges.type] = currentWork[eachWorkAttr.mandatoryChanges.values];
+            }else{
+              currentWork[eachWorkAttr.mandatoryChanges.type] = currentWork[eachWorkAttr.mandatoryChanges.values];  
+            }
+          }
+        }
+      }
+    }
+    return combinationAttr;
+  }
+}
+
+var convertWorkToPrice = function(work,combination,price){
   var currentWork = JSON.parse(JSON.stringify(work));
   delete currentWork.workTypeId;
   delete currentWork.workType;
   delete currentWork.image;
   delete currentWork.name;
   delete currentWork.quantities;
-  if (combination.mandatoryFinishGroups){
+  
+  for(var attr in work){
+    if (attr != 'items'){
+      currentWork[attr] = convert(currentWork,combination[attr],work[attr]);
+    }else{
+      for (var item of work[attr]){
+        for(var attrItem in item){
+          currentWork[item][attrItem] = convert(currentWork,combination[item][attrItem],work[item][attrItem]);
+        }
+      }
+    }
+  }
+
+
+  /*if (combination.mandatoryFinishGroups){
     currentWork.mandatoryFinishGroups = combination.mandatoryFinishGroups;
   }
   if (combination.quantity){
+    if(currentWork.quantity )
     currentWork.quantity = combination.quantity;
-  }
-  if(combination.clossedSizes){
+  }*/
+  /*if(combination.clossedSizes){
     currentWork.clossedSizes = combination.clossedSizes;
   }else if (Array.isArray(currentWork.clossedSizes)){
     currentWork.clossedSizes = currentWork.clossedSizes[0];
   }
   if (typeof currentWork.clossedSize === 'object' && !Array.isArray(currentWork.clossedSize)){
     currentWork.clossedSizes = currentWork.clossedSizes.value;
-  }
+  }*/
   currentWork.workId = currentWork.id;
   delete currentWork.id;
   currentWork.price = price;
   for(var i =0; i < currentWork.items.length; i++){
-    if(combination.items[i].pages){
+    currentWork.items[i].quantityOfPages = currentWork.items[i].pages;
+    delete currentWork.items[i].pages;
+
+    currentWork.items[i].inks = {
+      inksQuantity: currentWork.items[i].inksQuantity,
+      inksDetails: currentWork.items[i].inksDetails
+    }; 
+    delete currentWork.items[i].inksQuantity;
+    delete currentWork.items[i].inksDetails;
+
+    currentWork.items[i].materials = {
+      gr: currentWork.items[i].gr,
+      paper: currentWork.items[i].paper
+    };
+    delete currentWork.items[i].gr;
+    delete currentWork.items[i].paper;
+
+   /* if(combination.items[i].pages){
       currentWork.items[i].quantityOfPages = combination.items[i].pages;
     }
     if(combination.items[i].faces){
@@ -793,6 +844,7 @@ function convertWorkToPrice(work,combination,price){
     if(combination.items[i].excess){
       currentWork.items[i].excess = combination.items[i].excess;
     }
+  }*/
   }
   return currentWork;
 }
