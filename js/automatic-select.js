@@ -744,7 +744,7 @@ var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
 var convertWorkToPrice = function(work,combination,price){
   var currentWork = JSON.parse(JSON.stringify(work));
   
-  for(var attr in work){
+  for(var attr in combination){
     if (attr != 'items'){
       currentWork[attr] = convertEachAttrToPrice(currentWork,combination[attr],work[attr]);
     }else{
@@ -766,8 +766,6 @@ var convertWorkToPrice = function(work,combination,price){
   delete currentWork.id;
   currentWork.price = price;
   for(var i =0; i < currentWork.items.length; i++){
-    currentWork.items[i].quantityOfPages = JSON.parse(JSON.stringify(currentWork.items[i].pages));
-    delete currentWork.items[i].pages;
 
     currentWork.items[i].inks = {
       inksQuantity: JSON.parse(JSON.stringify(currentWork.items[i].inksQuantity)),
@@ -852,7 +850,7 @@ var getCombinations = function(estimate){
       var quantityOfVias = [];
       var mandatoryFinishGroup = [];
       for (var j = 0; j  < item.quantityOfPages.length;j++){
-          quantityOfPages.push('"item":{"id":'+i+ ', "name": "'+ item.name +  '", "pages": ' + item.quantityOfPages[j] + ',');
+          quantityOfPages.push('"item":{"id":'+i+ ', "name": "'+ item.name +  '", "quantityOfPages": ' + item.quantityOfPages[j] + ',');
       }
       for (var j = 0; j  < item.inks.length;j++){
           quantityOfInks.push('"inksQuantity":'+ item.inks[j].inksQuantity + ',' + '"inksDetails": "'+ item.inks[j].inksDetails+ '",');
