@@ -727,9 +727,9 @@ var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr){
         if (combinationAttr.includes(eachWorkAttr.value)){
           for (var mandatoryChanges of eachWorkAttr.mandatoryChanges){
             if(mandatoryChanges.itemId!=-1){
-              currentWork[mandatoryChanges.itemId][mandatoryChanges.type] = mandatoryChanges.values;
+              currentWork.items[mandatoryChanges.itemId][mandatoryChanges.type] = mandatoryChanges.values;
             }else{
-              currentWork[mandatoryChanges.type] = currentWork[mandatoryChanges.values];  
+              currentWork[mandatoryChanges.type] = mandatoryChanges.values;  
             }
           }
         }
@@ -756,7 +756,7 @@ var convertWorkToPrice = function(work,combination,price){
     }else{
       for (var item of work[attr]){
         for(var attrItem in item){
-          currentWork[item][attrItem] = convertEachAttrToPrice(currentWork,combination[item][attrItem],work[item][attrItem]);
+          currentWork.items[item.id][attrItem] = convertEachAttrToPrice(currentWork,combination.items[item.id][attrItem],item[attrItem]);
         }
       }
     }
