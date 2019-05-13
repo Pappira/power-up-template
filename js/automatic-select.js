@@ -664,10 +664,8 @@ var createEstimateAndTrelloCard2 = function(){
         } 
       });
     }*/
-    if (work.quantities.length > 1){
-      work.quantity =  cutArray(work.quantities,selectedOptions[-1].quantities);
-    }else{
-      work.quantity = work.quantities;
+    if (work.quantity.length > 1){
+      work.quantity =  cutArray(work.quantity,selectedOptions[-1].quantity);
     }
  
     if(work.mandatoryFinishGroups){
@@ -709,7 +707,6 @@ var createEstimateAndTrelloCard2 = function(){
 
     addExtraPrices(work);
     delete work['image'];
-    delete work['quantities'];
     delete work['clossedSizes'];
     createCard(work);
     return work;

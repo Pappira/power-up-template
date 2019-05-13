@@ -419,7 +419,7 @@ var works = [
       ],
       'image':noImage,
       'name':'Tarjetas de invitación',
-      'quantities':[10,50,100,300],
+      'quantity':[10,50,100,300],
       'items':[
         {
           'id':0,
