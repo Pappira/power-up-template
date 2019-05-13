@@ -146,8 +146,16 @@ var createPossibilities = function(work){
           possibility['itemId'] = -1;
           possibility['itemName'] = 'general';
           possibility['name'] = attr;
-          if (typeof work[attr] === 'object' && !Array.isArray(work[attr])){
-            possibility['values'] = work[attr].value;
+          if (Array.isArray(work[attr])){
+            possibility['values'] = [];
+            work[attr].forEach(function(currentItem){
+              if (typeof currentItem === 'object' && !Array.isArray(currentItem)){
+               possibility['values'].push(currentItem.value);
+              }else{
+               possibility['values'].push(currentItem);
+              }
+            });
+           
           }else{
             possibility['values'] = work[attr];
           }
