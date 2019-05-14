@@ -588,7 +588,7 @@ var createCompletePriceText = function(estimate){
 									}
 							}
 							var originalItem = estimate.items[item.id];
-							var currentPriceText = [(originalItem.materials.length>1?' en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr':''),
+							var currentPriceText = [(originalItem.materials.length>1?'en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr':''),
 							(originalItem.inks.length>1?item.inks.inksDetails:''), (originalItem.faces.length>1?item.faces:'')];
 							currentPriceText = [currentPriceText.filter(Boolean).join(' '),
 							((originalItem.openedSize && originalItem.openedSize.length>1)?'tamaño abierto ' + item.openedSize:'') ,
