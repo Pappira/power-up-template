@@ -3,10 +3,22 @@ var works = [
       'id':0,
       'workTypeId':0,
       'workType':'Tarjetería',
-      'clossedSizes':['94x50mm'],
+      'clossedSizes':[
+        {
+          'value':'94x54cm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['94x54cm']
+            },
+          ]
+        }
+      ],
       'image':tarjetaImage,
       'name':'Tarjetas Personales',
-      'quantities':[50,100,200,300,500,1000],
+      'quantity':[50,100,200,300,500,1000],
       "mandatoryFinishGroups":
       [
         {
@@ -128,7 +140,7 @@ var works = [
       "image":noImage,
       "name":"Cuaderno",
       "clossedSizes":["150x210mm"],
-      "quantities":[50,100,200,300,500,1000],
+      "quantity":[50,100,200,300,500,1000],
       "mandatoryFinishGroups":
       [
         {
