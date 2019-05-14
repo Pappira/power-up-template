@@ -588,12 +588,13 @@ var createCompletePriceText = function(estimate){
 									}
 							}
 							var originalItem = estimate.items[item.id];
-							var currentPriceText = [(originalItem.materials.length>1?' en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr ':'')
-							+ (originalItem.inks.length>1?item.inks.inksDetails + ' ':'') + (originalItem.faces.length>1?item.faces+' ':'') ,
-							+ ((originalItem.openedSize && originalItem.openedSize.length>1)?'tamaño abierto ' + item.openedSize + ' ':'') ,
-							+ ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?item.quantityOfPages + ' páginas ':''),
-							+ ((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?item.quantityOfVias + ' vías':''),
-							+ ((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'')];
+							var currentPriceText = [(originalItem.materials.length>1?' en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr':''),
+							(originalItem.inks.length>1?item.inks.inksDetails:''), (originalItem.faces.length>1?item.faces:'')];
+							currentPriceText = [currentPriceText.filter(Boolean).join(' '),
+							((originalItem.openedSize && originalItem.openedSize.length>1)?'tamaño abierto ' + item.openedSize:'') ,
+							((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?item.quantityOfPages + ' páginas':''),
+							((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?item.quantityOfVias + ' vías':''),
+							((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'')];
 							currentPriceText = currentPriceText.join(", ");
 							if(currentPriceText && currentPriceText.length>0){
 								priceText += (priceText.length>0?' ':'') + ( price.items.length>1?originalItem.name:'')  + currentPriceText;
