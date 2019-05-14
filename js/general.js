@@ -413,12 +413,12 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
 		if(!selectedOption || dontTakeCareOfSelectedOption){
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish + finishes.finishComment).join(" // ")));
+				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish /*+ finishes.finishComment*/).join(" // ")));
 			}
 		}else{
 			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.finish + (currentMandatoryFinishGroups[i].finishes.finishComment!=""?currentMandatoryFinishGroups[i].finishes.finishComment:'')));
+				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.finish /*+ (currentMandatoryFinishGroups[i].finishes.finishComment!=""?currentMandatoryFinishGroups[i].finishes.finishComment:'')*/));
 			}
 		}
 	}
@@ -428,14 +428,14 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 			if(!selectedOption || dontTakeCareOfSelectedOption){
 				var currentOptionalFinish = estimate.optionalFinishes;
 				for(var i = 0; i < currentOptionalFinish.length;i++){
-					text.push(createText('list',currentOptionalFinish[i].finish + (currentOptionalFinish[i].finishComment!=""?currentOptionalFinish[i].finishComment:''),''));
+					text.push(createText('list',currentOptionalFinish[i].finish/* + (currentOptionalFinish[i].finishComment!=""?currentOptionalFinish[i].finishComment:'')*/,''));
 				}
 			}else{
 				var optionalFinishesPrices = estimate.selectedExtraPrices;
 				for (var i = 0; i < optionalFinishesPrices.length; i++){
 					if (optionalFinishesPrices[i].optionalFinishes){
 						for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
-							text.push(createText('list',optionalFinishesPrices[i].optionalFinishes[j].finish + (optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?optionalFinishesPrices[i].optionalFinishes[j].finishComment:'')));
+							text.push(createText('list',optionalFinishesPrices[i].optionalFinishes[j].finish /*+ (optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?optionalFinishesPrices[i].optionalFinishes[j].finishComment:'')*/));
 						}
 					}
 				}
