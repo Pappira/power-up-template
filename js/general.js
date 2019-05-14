@@ -595,7 +595,7 @@ var createCompletePriceText = function(estimate){
 							((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?item.quantityOfPages + ' páginas':''),
 							((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?item.quantityOfVias + ' vías':''),
 							((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'')];
-							currentPriceText = currentPriceText.join(", ");
+							currentPriceText = currentPriceText.filter(Boolean).join(", ");
 							if(currentPriceText && currentPriceText.length>0){
 								priceText += (priceText.length>0?' ':'') + ( price.items.length>1?originalItem.name:'')  + currentPriceText;
 							}
