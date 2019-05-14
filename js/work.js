@@ -96,6 +96,7 @@ var works = [
           'allTheSame':false,
           'quantityOfPages':[1],
           'quantityOfVias':[1],
+          'openedSize':[],
           'faces':['Simple Faz','Doble Faz'],
           'materials':[
             {
