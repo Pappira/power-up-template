@@ -654,14 +654,9 @@ var createEstimateAndTrelloCard2 = function(){
   }else{
     if (work.clossedSizes.length > 1){
       work.clossedSize = cutArray(work.clossedSizes,selectedOptions[-1].clossedSizes);
+    }else{
+      work.clossedSize = work.clossedSizes;
     }
-    /*if (Array.isArray(work.clossedSize)){
-      work.clossedSize.forEach(function(currentClossedSize){
-        if(typeof currentClossedSize === 'object' && !Array.isArray(currentClossedSize)){
-          currentClossedSize = currentClossedSize.value;
-        } 
-      });
-    }*/
     if (work.quantity.length > 1){
       work.quantity =  cutArray(work.quantity,selectedOptions[-1].quantity);
     }
@@ -674,7 +669,6 @@ var createEstimateAndTrelloCard2 = function(){
     if (work.optionalFinishes){
       work.optionalFinishes = cutArray(work.optionalFinishes,selectedOptions[-1].optionalFinishes);
     }
-   // work.finishes = cutArray(work.finishes,selectedOptions[-1].finishes);
     for (var i = 0; i < work.items.length;i++){
       if (work.items[i].quantityOfPages.length>1){
           work.items[i].quantityOfPages = cutArray(work.items[i].quantityOfPages,selectedOptions[i].quantityOfPages);
@@ -934,7 +928,6 @@ var addPrices = function(work){
   work.prices = [];
   var allCombinations = getCombinations(work);
     
-  //var currentWork = JSON.parse(JSON.stringify(work));
 
   allCombinations.forEach(function(currentCombination){
     if(currentCombination.mandatoryFinishGroups){
@@ -949,7 +942,6 @@ var addPrices = function(work){
       var filteredPrice = filterPrices(JSON.parse(JSON.stringify(currentCombination)),l,work.id);
       priceFiltered.push(filteredPrice);
       if(filteredPrice.length!=1){
-       // window.alert('No se encontró precio para la siguiente combinación de trabajo \n' + JSON.stringify(currentCombination));
         allPricesFinded = false;
         break;
       }
