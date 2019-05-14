@@ -654,8 +654,6 @@ var createEstimateAndTrelloCard2 = function(){
   }else{
     if (work.clossedSizes.length > 1){
       work.clossedSize = cutArray(work.clossedSizes,selectedOptions[-1].clossedSizes);
-    }else{
-      work.clossedSize = work.clossedSizes[0];
     }
     /*if (Array.isArray(work.clossedSize)){
       work.clossedSize.forEach(function(currentClossedSize){
