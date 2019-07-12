@@ -40233,9 +40233,7 @@ var prices2 = [
          "value":0,
          "condition":"each"
       }
-   }
-   ],
-   [
+   },
    {
       "item":0,
       "workId":2,
