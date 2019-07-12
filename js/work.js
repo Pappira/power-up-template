@@ -31,47 +31,47 @@ var works = [
               "showToClientFinish":false
             },
             {
-              "finish":"1 cambio de nombre",
+              "finish":"Un cambio de nombre",
               "finishComment":"Todas las tarjetas personales tienen el mismo diseño base, y la única variante es que se tendrá datos personales de 2 personas",
               "showToClientFinish":true
             },
             {
-              "finish":"2 cambios de nombre",
+              "finish":"Dos cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"3 cambios de nombre",
+              "finish":"Tres cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"4 cambios de nombre",
+              "finish":"Cuatro cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"5 cambios de nombre",
+              "finish":"Cinco cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"6 cambios de nombre",
+              "finish":"Seis cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"7 cambios de nombre",
+              "finish":"Siete cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"8 cambios de nombre",
+              "finish":"Ocho cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             },
             {
-              "finish":"9 cambios de nombres",
+              "finish":"Nueve cambios de nombre",
               "finishComment":"",
               "showToClientFinish":true
             }
@@ -89,7 +89,7 @@ var works = [
               'inksQuantity':4,
             },
             {
-              'inksDetails':'1 Tinta negra',
+              'inksDetails':'Tinta negra',
               'inksQuantity':1,
             }
           ],
