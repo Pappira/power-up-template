@@ -104,7 +104,23 @@ var works = [
               'gr':'300'
             },
             {
-              'paper':'Opalina Lisa',
+              'paper':'Opalinas',
+              'gr':'230'
+            },
+            {
+              'paper':'Magic',
+              'gr':'180'
+            },
+            {
+              'paper':'Ecoria Tipo Reciclado',
+              'gr':'240'
+            },
+            {
+              'paper':'Jazmin',
+              'gr':'240'
+            },
+            {
+              'paper':'Milenium Tipo Reciclado',
               'gr':'240'
             }
           ],
