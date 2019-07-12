@@ -5,24 +5,24 @@ var works = [
       'workType':'Tarjetería',
       'clossedSizes':[
         {
-          'value':'94x54cm',
+          'value':'94x54mm',
           "mandatoryChanges":
           [
             {
               "itemId":0,
               "type":"openedSize",
-              "values":['94x54cm']
+              "values":['94x54mm']
             },
           ]
         },
         {
-          'value':'90x50cm',
+          'value':'90x50mm',
           "mandatoryChanges":
           [
             {
               "itemId":0,
               "type":"openedSize",
-              "values":['90x50cm']
+              "values":['90x50mm']
             },
           ]
         }
