@@ -14,6 +14,17 @@ var works = [
               "values":['94x54cm']
             },
           ]
+        },
+        {
+          'value':'90x50cm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['90x50cm']
+            },
+          ]
         }
       ],
       'image':tarjetaImage,
