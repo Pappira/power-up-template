@@ -5,13 +5,13 @@ var works = [
       'workType':'Tarjetería',
       'clossedSizes':[
         {
-          'value':'94x54mm',
+          'value':'90x54mm',
           "mandatoryChanges":
           [
             {
               "itemId":0,
               "type":"openedSize",
-              "values":['94x54mm']
+              "values":['90x54mm']
             },
           ]
         },
@@ -402,6 +402,17 @@ var works = [
       'workType':'Tarjetería',
       'clossedSizes':[
         {
+          'value':'100x150mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['100x150mm']
+            },
+          ]
+        },  
+        {
           'value':'150x150mm',
           "mandatoryChanges":
           [
@@ -482,12 +493,24 @@ var works = [
               'gr':'300'
             },
             {
+              'paper':'Opalinas',
+              'gr':'230'
+            },
+            {
               'paper':'Magic',
-              'gr':''
+              'gr':'180'
+            },
+            {
+              'paper':'Ecoria Tipo Reciclado',
+              'gr':'240'
+            },
+            {
+              'paper':'Milenium Tipo Reciclado',
+              'gr':'240'
             },
             {
               'paper':'Jazmine',
-              'gr':''
+              'gr':'240'
             }
           ],
           "optionalFinishes":
