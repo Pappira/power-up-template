@@ -396,7 +396,8 @@ var works = [
         } 
       ],
       "optionalFinishes":[]
-    },{
+    },
+    {
       'id':2,
       'workTypeId':0,
       'workType':'Tarjetería',
@@ -509,7 +510,113 @@ var works = [
               'gr':'240'
             },
             {
-              'paper':'Jazmine',
+              'paper':'Jazmin',
+              'gr':'240'
+            }
+          ],
+          "optionalFinishes":
+          [
+            {
+              "finish":"Laminado Mate",
+              "finishComment":"",
+              "showToClient":true
+            },
+            {
+              "finish":"Laminado Brillo",
+              "finishComment":"",
+              "showToClient":true
+            },
+            {
+              "finish":"Laminado Mate o Brillo a definir",
+              "finishComment":"",
+              "showToClient":true
+            },
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true
+            }
+          ]
+        }
+      ]
+    },
+
+
+
+
+
+
+
+    {
+      'id':3,
+      'workTypeId':0,
+      'workType':'Tarjetería',
+      'clossedSizes':[
+        {
+          'value':'160x150mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['160x300mm']
+            },
+          ]
+        },  
+        {
+          'value':'200x140mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['200x280mm']
+            },
+          ]
+        }
+      ],
+      'image':noImage,
+      'name':'Tarjetas de invitación díptico',
+      'quantity':[10,50,100,300],
+      'items':[
+        {
+          'id':0,
+          'name':'Tarjeta',
+          'bleedPrint':true, 
+          'inks':[
+            {
+              'inksDetails':'Full color',
+              'inksQuantity':4,
+            }
+          ],
+          'allTheSame':false,
+          'quantityOfPages':[1],
+          'openedSize':[],
+          'quantityOfVias':[1],
+          'faces':['Simple Faz','Doble Faz'],
+          'materials':[
+            {
+              'paper':'Coteado',
+              'gr':'300'
+            },
+            {
+              'paper':'Opalinas',
+              'gr':'230'
+            },
+            {
+              'paper':'Magic',
+              'gr':'180'
+            },
+            {
+              'paper':'Ecoria Tipo Reciclado',
+              'gr':'240'
+            },
+            {
+              'paper':'Milenium Tipo Reciclado',
+              'gr':'240'
+            },
+            {
+              'paper':'Jazmin',
               'gr':'240'
             }
           ],
