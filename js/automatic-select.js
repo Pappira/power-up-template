@@ -958,7 +958,7 @@ var addPrices = function(work){
       priceFiltered.push(filteredPrice);
       if(filteredPrice.length!=1){
         var priceType = filteredPrice.map(filteredPrice => filteredPrice.price.condition);
-        if((new Set(priceType)).size !== priceType.length){
+        if((new Set(priceType)).size !== priceType.length || filteredPrice.length==0){
           allPricesFinded = false;
           break; 
         }
