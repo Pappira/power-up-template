@@ -532,10 +532,24 @@ var getTheLowerNearestQuantity = function(prices,quantity){
   return Math.max.apply(null, quantities);
 }
 
-var filterByQuantity = function(prices,quantity){
-  return prices.filter(function(price) {
-    return (price.toCheck.filter(toCheck => toCheck.checkAttribute=="quantity" && toCheck.value == quantity)).length>0;
+var getTheHigherNearestQuantity = function(prices,quantity){
+  var quantities = [];
+  prices.forEach(function(price){
+    quantities.push(price.toCheck.filter(toCheck => toCheck.checkAttribute == "quantity" && toCheck.value >= quantity).map(toCheck => toCheck.value));
   });
+  return Math.min.apply(null, quantities);
+}
+
+var filterByQuantity = function(prices,quantity1,quantity2){
+  var pricesToReturn = prices.filter(function(price) {
+    return (price.toCheck.filter(toCheck => toCheck.checkAttribute=="quantity" && 
+    toCheck.value == quantity1)).length>0;
+  }).filter(price => price.price.condition == "each");
+  var pricesToReturn2 = prices.filter(function(price) {
+    return (price.toCheck.filter(toCheck => toCheck.checkAttribute=="quantity" && 
+    toCheck.value == quantity2)).length>0;
+  }).filter(price => price.price.condition == "fixed");
+  return pricesToReturn.concat(pricesToReturn2);
 }
 
 var filterPrices = function(currentCombination,itemNumber,workId){
@@ -549,8 +563,9 @@ var filterPrices = function(currentCombination,itemNumber,workId){
   });
 
   var lowerNearestQuantity = getTheLowerNearestQuantity(generalPrices,currentCombination.quantity);
+  var higherNearestQuantity = getTheHigherNearestQuantity(generalPrices,currentCombination.quantity);
 
-  generalPrices = filterByQuantity(generalPrices,lowerNearestQuantity);
+  generalPrices = filterByQuantity(generalPrices,lowerNearestQuantity,higherNearestQuantity);
 
 
   var checks = generalPrices[0].toCheck.map(a => a.checkAttribute);
@@ -957,11 +972,10 @@ var addPrices = function(work){
     if (allPricesFinded){
       priceFiltered = [].concat.apply([],priceFiltered);
 
-      var totalPrice = priceFiltered.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
-
+      var totalPrice = priceFiltered.filter(priceFiltered => priceFiltered.price.condition == "each").map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
+      totalPrice +=priceFiltered.filter(priceFiltered => priceFiltered.price.condition == "fixed").map(priceFiltered => priceFiltered.price.value).reduce(add);
       var currentPrice = convertWorkToPrice(work, currentCombination,totalPrice);   
       
-      //hay que ver como agregar la machine, papersize, sheetsize, etc
       work.prices.push(currentPrice); 
     }
   });

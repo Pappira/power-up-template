@@ -726,5 +726,61 @@ var works = [
           ]
         }
       ]
+    },
+    {
+      'id':5,
+      'workTypeId':0,
+      'workType':'Tarjetería',
+      'clossedSizes':[
+        {
+          'value':'140x180mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['140x180mm']
+            },
+          ]
+        }
+      ],
+      'image':noImage,
+      'name':'Sobres de Invitación ya armados',
+      'quantity':[10,50,100,300,500],
+      'items':[
+        {
+          'id':0,
+          'name':'Tarjeta',
+          'bleedPrint':true, 
+          'inks':[
+            {
+              'inksDetails':'Tinta Negra',
+              'inksQuantity':1,
+            }
+          ],
+          'allTheSame':false,
+          'quantityOfPages':[1],
+          'openedSize':[],
+          'quantityOfVias':[1],
+          'faces':['Simple Faz'],
+          'materials':[
+            {
+              'paper':'Sobre Blanco Gallito',
+              'gr':'110'
+            },
+            {
+              'paper':'Sobre Tarjeta Colores',
+              'gr':'120'
+            },
+            {
+              'paper':'Sobre Tarjeta Colores',
+              'gr':'180'
+            }
+          ],
+          "optionalFinishes":
+          [
+          ]
+        }
+      ]
     }
   ];
