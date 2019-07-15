@@ -972,8 +972,15 @@ var addPrices = function(work){
     if (allPricesFinded){
       priceFiltered = [].concat.apply([],priceFiltered);
 
-      var totalPrice = priceFiltered.filter(priceFiltered => priceFiltered.price.condition == "each").map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
-      totalPrice +=priceFiltered.filter(priceFiltered => priceFiltered.price.condition == "fixed").map(priceFiltered => priceFiltered.price.value).reduce(add);
+      var totalPrice = 0;
+      var pricesEach = priceFiltered.filter(priceFiltered => priceFiltered.price.condition == "each");
+      if(pricesEach.length>0){
+        totalPrice += pricesEach.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
+      }
+      var pricesFixed = priceFiltered.filter(priceFiltered => priceFiltered.price.condition == "fixed");
+      if(pricesFixed.length>0){
+        totalPrice += pricesFixed.map(priceFiltered => priceFiltered.price.value).reduce(add);
+      }
       var currentPrice = convertWorkToPrice(work, currentCombination,totalPrice);   
       
       work.prices.push(currentPrice); 
