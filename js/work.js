@@ -754,6 +754,10 @@ var works = [
           'bleedPrint':true, 
           'inks':[
             {
+              'inksDetails':'Sin Imprimir',
+              'inksQuantity':0,
+            },
+            {
               'inksDetails':'Tinta Negra',
               'inksQuantity':1,
             }
