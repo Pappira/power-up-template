@@ -963,12 +963,14 @@ var addPrices = function(work){
           break; 
         }
       }
-      var valuesToAdd = filteredPrice[0].toCheck.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","excess"].indexOf(check.checkAttribute)>-1);
-      if(valuesToAdd && valuesToAdd.length > 0){
-        if (l==-1){
-          valuesToAdd.forEach(value => currentCombination[value.checkAttribute] = value.value);
-        }else{
-          valuesToAdd.forEach(value => currentCombination.items[l][value.checkAttribute] = value.value);
+      if(filteredPrice.length>0){
+        var valuesToAdd = filteredPrice[0].toCheck.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","excess"].indexOf(check.checkAttribute)>-1);
+        if(valuesToAdd && valuesToAdd.length > 0){
+          if (l==-1){
+            valuesToAdd.forEach(value => currentCombination[value.checkAttribute] = value.value);
+          }else{
+            valuesToAdd.forEach(value => currentCombination.items[l][value.checkAttribute] = value.value);
+          }
         }
       }
     }
