@@ -62102,7 +62102,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].paper+gr",
-            "value":"Sobre Blanco Gallito 110gr,"
+            "value":"Sobre Blanco Gallito 110"
          },
          {
             "checkAttribute":"quantity",
@@ -62152,7 +62152,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].paper+gr",
-            "value":"Sobre Tarjeta Colores 120gr."
+            "value":"Sobre Tarjeta Colores 120"
          },
          {
             "checkAttribute":"quantity",
@@ -62202,7 +62202,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].paper+gr",
-            "value":"Sobre Tarjeta Colores 180gr."
+            "value":"Sobre Tarjeta Colores 180"
          },
          {
             "checkAttribute":"quantity",
@@ -62252,7 +62252,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].paper+gr",
-            "value":"Sobre Blanco Gallito 110gr,"
+            "value":"Sobre Blanco Gallito 110"
          },
          {
             "checkAttribute":"quantity",
@@ -62302,7 +62302,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].paper+gr",
-            "value":"Sobre Blanco Gallito 110gr,"
+            "value":"Sobre Blanco Gallito 110"
          },
          {
             "checkAttribute":"quantity",
@@ -62352,7 +62352,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].paper+gr",
-            "value":"Sobre Tarjeta Colores 120gr."
+            "value":"Sobre Tarjeta Colores 120"
          },
          {
             "checkAttribute":"quantity",
@@ -62402,7 +62402,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].paper+gr",
-            "value":"Sobre Tarjeta Colores 120gr."
+            "value":"Sobre Tarjeta Colores 120"
          },
          {
             "checkAttribute":"quantity",
