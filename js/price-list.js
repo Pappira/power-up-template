@@ -62418,7 +62418,7 @@ var prices2 = [
          "condition":"each"
       }
    },
-   {
+      {
       "item":-1,
       "workId":6,
       "toCheck":[
@@ -62834,7 +62834,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -62888,7 +62888,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -62942,7 +62942,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -63158,7 +63158,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -63212,7 +63212,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -63266,7 +63266,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -63482,7 +63482,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -63536,7 +63536,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -63590,7 +63590,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -63806,7 +63806,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -63860,7 +63860,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -63914,7 +63914,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -64130,7 +64130,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -64184,7 +64184,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -64238,7 +64238,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -64454,7 +64454,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -64508,7 +64508,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -64562,7 +64562,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -64778,7 +64778,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -64832,7 +64832,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -64886,7 +64886,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -65102,7 +65102,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -65156,7 +65156,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -65210,7 +65210,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -65426,7 +65426,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -65480,7 +65480,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -65534,7 +65534,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -65750,7 +65750,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -65804,7 +65804,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -65858,7 +65858,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -66074,7 +66074,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -66128,7 +66128,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -66182,7 +66182,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -66398,7 +66398,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -66452,7 +66452,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -66506,7 +66506,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -66722,7 +66722,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -66776,7 +66776,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -66830,7 +66830,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -67046,7 +67046,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -67100,7 +67100,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -67154,7 +67154,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -67370,7 +67370,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -67424,7 +67424,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -67478,7 +67478,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -67694,7 +67694,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -67748,7 +67748,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -67802,7 +67802,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68018,7 +68018,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68072,7 +68072,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68126,7 +68126,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68342,7 +68342,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68396,7 +68396,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68450,7 +68450,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68504,7 +68504,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68558,7 +68558,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68612,7 +68612,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68666,7 +68666,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68720,7 +68720,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68774,7 +68774,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68828,7 +68828,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68882,7 +68882,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68936,7 +68936,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -68990,7 +68990,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69044,7 +69044,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69098,7 +69098,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69152,7 +69152,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69206,7 +69206,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69260,7 +69260,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69314,7 +69314,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69368,7 +69368,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69422,7 +69422,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69476,7 +69476,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69530,7 +69530,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69584,7 +69584,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69638,7 +69638,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69692,7 +69692,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69746,7 +69746,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69800,7 +69800,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69854,7 +69854,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69908,7 +69908,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -69962,7 +69962,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70016,7 +70016,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70070,7 +70070,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70124,7 +70124,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70178,7 +70178,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70232,7 +70232,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70286,7 +70286,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70340,7 +70340,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70394,7 +70394,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70448,7 +70448,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70502,7 +70502,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70556,7 +70556,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70610,7 +70610,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70664,7 +70664,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70718,7 +70718,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70772,7 +70772,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70826,7 +70826,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70880,7 +70880,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70934,7 +70934,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -70988,7 +70988,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -71042,7 +71042,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -71096,7 +71096,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -71150,7 +71150,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -71204,7 +71204,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -71258,7 +71258,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -71312,7 +71312,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
@@ -71366,7 +71366,7 @@ var prices2 = [
          },
          {
             "checkAttribute":"items[0].inksQuantity",
-            "value":1
+            "value":4
          },
          {
             "checkAttribute":"quantity",
