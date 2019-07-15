@@ -780,9 +780,6 @@ var works = [
               'paper':'Sobre Tarjeta Colores',
               'gr':'180'
             }
-          ],
-          "optionalFinishes":
-          [
           ]
         }
       ]
