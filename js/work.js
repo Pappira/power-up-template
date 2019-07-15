@@ -127,11 +127,11 @@ var works = [
               'gr':'240'
             },
             {
-              'paper':'Jazmin',
+              'paper':'Milenium Tipo Reciclado',
               'gr':'240'
             },
             {
-              'paper':'Milenium Tipo Reciclado',
+              'paper':'Jazmin',
               'gr':'240'
             }
           ],
@@ -779,6 +779,97 @@ var works = [
             {
               'paper':'Sobre Tarjeta Colores',
               'gr':'180'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      'id':6,
+      'workTypeId':0,
+      'workType':'Tarjetería',
+      'clossedSizes':[
+        {
+          'value':'160x160mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['160x160mm']
+            },
+          ]
+        },
+        {
+          'value':'140x200mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['140x200mm']
+            },
+          ]
+        },
+        {
+          'value':'120x160mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['120x160mm']
+            },
+          ]
+        }
+      ],
+      'image':noImage,
+      'name':'Sobres de Invitación troquelados',
+      'quantity':[50,100,300],
+      'items':[
+        {
+          'id':0,
+          'name':'Tarjeta',
+          'bleedPrint':true, 
+          'inks':[
+            {
+              'inksDetails':'Sin Imprimir',
+              'inksQuantity':0,
+            },
+            {
+              'inksDetails':'Full color',
+              'inksQuantity':4,
+            },
+          ],
+          'allTheSame':false,
+          'quantityOfPages':[1],
+          'openedSize':[],
+          'quantityOfVias':[1],
+          'faces':['Simple Faz','Doble Faz'],
+          'materials':[
+            {
+              'paper':'Coteado',
+              'gr':'300'
+            },
+            {
+              'paper':'Opalinas',
+              'gr':'230'
+            },
+            {
+              'paper':'Magic',
+              'gr':'180'
+            },
+            {
+              'paper':'Ecoria Tipo Reciclado',
+              'gr':'240'
+            },
+            {
+              'paper':'Milenium Tipo Reciclado',
+              'gr':'240'
+            },
+            {
+              'paper':'Jazmin',
+              'gr':'240'
             }
           ]
         }
