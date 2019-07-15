@@ -957,8 +957,11 @@ var addPrices = function(work){
       var filteredPrice = filterPrices(JSON.parse(JSON.stringify(currentCombination)),l,work.id);
       priceFiltered.push(filteredPrice);
       if(filteredPrice.length!=1){
-        allPricesFinded = false;
-        break;
+        var priceType = filteredPrice.map(filteredPrice => filteredPrice.price.condition);
+        if((new Set(priceType)).size !== priceType.length){
+          allPricesFinded = false;
+          break; 
+        }
       }
       var valuesToAdd = filteredPrice[0].toCheck.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","excess"].indexOf(check.checkAttribute)>-1);
       if(valuesToAdd && valuesToAdd.length > 0){
