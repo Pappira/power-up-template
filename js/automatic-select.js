@@ -529,7 +529,7 @@ var getTheLowerNearestQuantity = function(prices,quantity){
   prices.forEach(function(price){
     quantities.push(price.toCheck.filter(toCheck => toCheck.checkAttribute == "quantity" && toCheck.value <= quantity).map(toCheck => toCheck.value));
   });
-  return Math.max.apply(null, quantities);
+  return Math.max.apply(null, quantities.filter(Boolean));
 }
 
 var getTheHigherNearestQuantity = function(prices,quantity){
@@ -537,7 +537,7 @@ var getTheHigherNearestQuantity = function(prices,quantity){
   prices.forEach(function(price){
     quantities.push(price.toCheck.filter(toCheck => toCheck.checkAttribute == "quantity" && toCheck.value >= quantity).map(toCheck => toCheck.value));
   });
-  return Math.min.apply(null, quantities);
+  return Math.min.apply(null, quantities.filter(Boolean));
 }
 
 var filterByQuantity = function(prices,quantity1,quantity2){
