@@ -71376,7 +71376,7 @@ var prices2 = [
             "checkAttribute":"items[0].faces",
             "value":"Doble Faz"
          }
-      ],
+      ], 
       "price":{
          "value":102,
          "condition":"each"
