@@ -71784,7 +71784,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":10,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":10,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":10,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -72054,7 +72216,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":12,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":12,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":12,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -72324,7 +72648,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -72594,7 +73080,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -72864,7 +73512,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -73134,7 +73944,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":18,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":18,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":18,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x130mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -73404,7 +74376,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":10,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":10,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":10,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -73674,7 +74808,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":10,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":12,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":12,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -73944,7 +75240,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -74214,7 +75672,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -74484,7 +76104,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -74754,7 +76536,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":18,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":18,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":18,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"140x140mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -75024,7 +76968,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":12,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":12,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":12,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -75294,7 +77400,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":15,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":15,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":15,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -75564,7 +77832,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -75834,7 +78264,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -76104,7 +78696,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -76374,7 +79128,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x32"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"200x150mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -76644,7 +79560,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":14,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -76914,7 +79992,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":18,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":18,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":18,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -77184,7 +80424,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -77454,7 +80856,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -77724,7 +81288,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":22,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -77994,7 +81720,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":30,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":30,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":30,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":6
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"32x33"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"230x155mm"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -78264,7 +82152,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":17,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Coteado 300"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -78534,7 +82584,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":23,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":23,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":23,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Opalinas 230"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -78804,7 +83016,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":29,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":29,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":29,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Magic 180"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -79074,7 +83448,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":29,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":29,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":29,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Ecoria Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -79344,7 +83880,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":29,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":29,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":29,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Milenium Tipo Reciclado 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
@@ -79614,7 +84312,169 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantity",
+            "value":300
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":40,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
             "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":100
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":40,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":50
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":40,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":7,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":4
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"70x100"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"33x48,7"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 1070"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x220"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Jazmin 240"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":0
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":10
          },
          {
             "checkAttribute":"items[0].faces",
