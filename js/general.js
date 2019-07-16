@@ -609,9 +609,9 @@ var createCompletePriceText = function(estimate){
 					if(materialChange){
 						quantityOfTitles++;
 						var putItemName = quantityOfPapersOnOriginalEstimate.filter(v => v).length>1;
-						var paperText = 'Papel ' + price.items.map(currentItem => estimate.items[currentItem.id].materials.length>1?
-																																			(putItemName?'de '+currentItem.name + ' ':'') 
-																																				+ currentItem.materials.paper + ' '  + currentItem.materials.gr + 'gr':'');
+						var paperText = 'Papel' + price.items.map(currentItem => estimate.items[currentItem.id].materials.length>1?
+																																			(putItemName?' de '+currentItem.name:'') 
+																																				+ ' ' + currentItem.materials.paper + ' '  + currentItem.materials.gr + 'gr':'').join(", ");
 						if(paperText && paperText != lastPaperText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles,paperText, ''));  
 						}
@@ -628,10 +628,10 @@ var createCompletePriceText = function(estimate){
 
 							//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos, pongo el cerrado, sino el abierto
 								return (quantityOfOpenedSizesPerItemOnOriginalEstimate.every(val => val == quantityOfOpenedSizesPerItemOnOriginalEstimate[0])?	
-									'Tamaño ' + (putItemName?'de '+currentItem.name + ' ':'') + price.clossedSizes:							
-									'Tamaño abierto ' + (putItemName?'en '+currentItem.name + ' ':'') + item.openedSize);
+									'Tamaño' + (putItemName?' de '+currentItem.name:'') + ' ' + price.clossedSizes:							
+									'Tamaño abierto' + (putItemName?' de '+currentItem.name:'') + ' ' + item.openedSize);
 
-						});
+						}).join(", ");
 						if(sizeText && sizeText != lastsizeText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles,sizeText, ''));  
 						}
@@ -652,20 +652,7 @@ var createCompletePriceText = function(estimate){
 
 							
 							var currentPriceText = [(originalItem.inks.length>1?item.inks.inksDetails:''), (originalItem.faces.length>1?item.faces:'')];
-							
-						/*	var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.clossedSize)).size;
-							var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.openedSize).size);
-							quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);*/
-							
 							currentPriceText = [currentPriceText.filter(Boolean).join(' '),
-							//Si hay más de un tamaño abierto
-							/*((originalItem.openedSize && originalItem.openedSize.length>1)?
-							//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos
-								//(((new Set([].concat.apply([],estimate.prices.map(price => price.clossedSizes)))).size == ((new Set([].concat.apply([],estimate.prices.map(price => price.items.map(item => item.openedSize))))).size))?
-								(quantityOfOpenedSizesPerItemOnOriginalEstimate.every(val => val == quantityOfOpenedSizesPerItemOnOriginalEstimate[0])?	
-									'tamaño ' + price.clossedSizes:							
-									'tamaño abierto ' + item.openedSize):
-								''),*/
 							((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?item.quantityOfPages + ' páginas':''),
 							((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?item.quantityOfVias + ' vías':''),
 							((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'')];
