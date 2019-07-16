@@ -874,5 +874,118 @@ var works = [
           ]
         }
       ]
+    },
+    {
+      'id':7,
+      'workTypeId':0,
+      'workType':'Tarjetería',
+      'clossedSizes':[
+        {
+          'value':'150x130mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['160x320mm']
+            },
+          ]
+        },
+        {
+          'value':'140x140mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['160x320mm']
+            },
+          ]
+        },
+        {
+          'value':'200x150mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['230x150mm']
+            },
+          ]
+        },
+        {
+          'value':'230x155mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['260x320mm']
+            },
+          ]
+        },
+        {
+          'value':'220x220mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['250x480mm']
+            },
+          ]
+        }
+      ],
+      'image':noImage,
+      'name':'Sobres de Invitación pegados (sin troquelar)',
+      'quantity':[10,50,100,300],
+      'items':[
+        {
+          'id':0,
+          'name':'Tarjeta',
+          'bleedPrint':true, 
+          'inks':[
+            {
+              'inksDetails':'Sin Imprimir',
+              'inksQuantity':0,
+            },
+            {
+              'inksDetails':'Full color',
+              'inksQuantity':4,
+            },
+          ],
+          'allTheSame':false,
+          'quantityOfPages':[1],
+          'openedSize':[],
+          'quantityOfVias':[1],
+          'faces':['Simple Faz','Doble Faz'],
+          'materials':[
+            {
+              'paper':'Coteado',
+              'gr':'300'
+            },
+            {
+              'paper':'Opalinas',
+              'gr':'230'
+            },
+            {
+              'paper':'Magic',
+              'gr':'180'
+            },
+            {
+              'paper':'Ecoria Tipo Reciclado',
+              'gr':'240'
+            },
+            {
+              'paper':'Milenium Tipo Reciclado',
+              'gr':'240'
+            },
+            {
+              'paper':'Jazmin',
+              'gr':'240'
+            }
+          ]
+        }
+      ]
     }
   ];
