@@ -701,7 +701,7 @@ var createTrelloCardName = function(estimate){
 }
 
 
-function compareValues(key, order='asc') {
+function compareValues(order='asc') {
     return function(a, b) {
 				let comparison = 0;
 				if(a.mandatoryFinishGroups && b.mandatoryFinishGroups){
