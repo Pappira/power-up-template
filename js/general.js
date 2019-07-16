@@ -593,11 +593,11 @@ var createCompletePriceText = function(estimate){
 							currentPriceText = [currentPriceText.filter(Boolean).join(' '),
 							//Si hay más de un tamaño abierto
 							((originalItem.openedSize && originalItem.openedSize.length>1)?
-										//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos
-										(((new Set(estimate.prices.map(price => price.clossedSizes))).size == 	((new Set(estimate.prices.map(price => price.items.map(item => item.openedSize)))).size))?
-											'tamaño ' + price.clossedSize:							
-											'tamaño abierto ' + item.openedSize):
-										'') ,
+							//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos
+								(((new Set([].concat.apply([],estimate.prices.map(price => price.clossedSizes)))).size == ((new Set([].concat.apply([],estimate.prices.map(price => price.items.map(item => item.openedSize))))).size))?
+									'tamaño ' + price.clossedSizes:							
+									'tamaño abierto ' + item.openedSize):
+								''),
 							((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?item.quantityOfPages + ' páginas':''),
 							((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?item.quantityOfVias + ' vías':''),
 							((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'')];
