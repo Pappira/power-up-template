@@ -590,11 +590,17 @@ var createCompletePriceText = function(estimate){
 							var originalItem = estimate.items[item.id];
 							var currentPriceText = [(originalItem.materials.length>1?'en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr':''),
 							(originalItem.inks.length>1?item.inks.inksDetails:''), (originalItem.faces.length>1?item.faces:'')];
+							
+							var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.clossedSizes)).size;
+							var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.items.map(item => new Set(item.openedSize).size);
+							quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
+							
 							currentPriceText = [currentPriceText.filter(Boolean).join(' '),
 							//Si hay más de un tamaño abierto
 							((originalItem.openedSize && originalItem.openedSize.length>1)?
 							//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos
-								(((new Set([].concat.apply([],estimate.prices.map(price => price.clossedSizes)))).size == ((new Set([].concat.apply([],estimate.prices.map(price => price.items.map(item => item.openedSize))))).size))?
+								//(((new Set([].concat.apply([],estimate.prices.map(price => price.clossedSizes)))).size == ((new Set([].concat.apply([],estimate.prices.map(price => price.items.map(item => item.openedSize))))).size))?
+								(quantityOfOpenedSizesPerItemOnOriginalEstimate.every(val => val == quantityOfOpenedSizesPerItemOnOriginalEstimate[0])?	
 									'tamaño ' + price.clossedSizes:							
 									'tamaño abierto ' + item.openedSize):
 								''),
