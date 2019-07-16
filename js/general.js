@@ -657,7 +657,7 @@ var createCompletePriceText = function(estimate){
 						quantityOfTitles++;
 						var putItemName = quantityOfInksOnOriginalEstimate.filter(v => v).length>1 || quantityOfFacesOnOriginalEstimate.filter(v => v).length>1;
 						var inkText = price.items.map(currentItem => ((quantityOfInksOnOriginalEstimate[currentItem.id] || quantityOfFacesOnOriginalEstimate[currentItem.id])?
-													'Impresión' + (putItemName?' de '+currentItem.name:'') +
+													(putItemName?currentItem.name:'') +
 													 (inksChange?' ' + currentItem.inks.inksDetails:'') + (facesChange?' ' + currentItem.faces:''):'')).join(", ");
 						if(inkText && inkText != lastInkText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles,inkText, ''));  
