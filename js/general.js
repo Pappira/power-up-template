@@ -591,7 +591,13 @@ var createCompletePriceText = function(estimate){
 							var currentPriceText = [(originalItem.materials.length>1?'en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr':''),
 							(originalItem.inks.length>1?item.inks.inksDetails:''), (originalItem.faces.length>1?item.faces:'')];
 							currentPriceText = [currentPriceText.filter(Boolean).join(' '),
-							((originalItem.openedSize && originalItem.openedSize.length>1)?'tamaño abierto ' + item.openedSize:'') ,
+							//Si hay más de un tamaño abierto
+							((originalItem.openedSize && originalItem.openedSize.length>1)?
+										//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos
+										(((new Set(estimate.prices.map(price => price.clossedSizes))).size == 	((new Set(estimate.prices.map(price => price.items.map(item => item.openedSize)))).size))?
+											'tamaño ' + price.clossedSize:							
+											'tamaño abierto ' + item.openedSize):
+										'') ,
 							((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?item.quantityOfPages + ' páginas':''),
 							((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?item.quantityOfVias + ' vías':''),
 							((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'')];
