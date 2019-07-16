@@ -624,7 +624,7 @@ var createCompletePriceText = function(estimate){
 							quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
 
 							//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos, pongo el cerrado, sino el abierto
-								(quantityOfOpenedSizesPerItemOnOriginalEstimate.every(val => val == quantityOfOpenedSizesPerItemOnOriginalEstimate[0])?	
+								return (quantityOfOpenedSizesPerItemOnOriginalEstimate.every(val => val == quantityOfOpenedSizesPerItemOnOriginalEstimate[0])?	
 									'Tamaño ' + (putItemName?'de '+currentItem.name + ' ':'') + price.clossedSizes:							
 									'Tamaño abierto ' + (putItemName?'en '+currentItem.name + ' ':'') + item.openedSize);
 
@@ -650,19 +650,19 @@ var createCompletePriceText = function(estimate){
 							
 							var currentPriceText = [(originalItem.inks.length>1?item.inks.inksDetails:''), (originalItem.faces.length>1?item.faces:'')];
 							
-							var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.clossedSize)).size;
+						/*	var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.clossedSize)).size;
 							var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.openedSize).size);
-							quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
+							quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);*/
 							
 							currentPriceText = [currentPriceText.filter(Boolean).join(' '),
 							//Si hay más de un tamaño abierto
-							((originalItem.openedSize && originalItem.openedSize.length>1)?
+							/*((originalItem.openedSize && originalItem.openedSize.length>1)?
 							//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos
 								//(((new Set([].concat.apply([],estimate.prices.map(price => price.clossedSizes)))).size == ((new Set([].concat.apply([],estimate.prices.map(price => price.items.map(item => item.openedSize))))).size))?
 								(quantityOfOpenedSizesPerItemOnOriginalEstimate.every(val => val == quantityOfOpenedSizesPerItemOnOriginalEstimate[0])?	
 									'tamaño ' + price.clossedSizes:							
 									'tamaño abierto ' + item.openedSize):
-								''),
+								''),*/
 							((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?item.quantityOfPages + ' páginas':''),
 							((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?item.quantityOfVias + ' vías':''),
 							((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'')];
