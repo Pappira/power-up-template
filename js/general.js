@@ -591,8 +591,8 @@ var createCompletePriceText = function(estimate){
 							var currentPriceText = [(originalItem.materials.length>1?'en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr':''),
 							(originalItem.inks.length>1?item.inks.inksDetails:''), (originalItem.faces.length>1?item.faces:'')];
 							
-							var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.clossedSizes)).size;
-							var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.items.map(item => new Set(item.openedSize).size);
+							var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.clossedSize)).size;
+							var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.openedSize).size);
 							quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
 							
 							currentPriceText = [currentPriceText.filter(Boolean).join(' '),
@@ -726,7 +726,7 @@ function compareValues(key, order='asc') {
                 var item1 = a.items[j];
                 var item2 = b.items[j];
                 for (var i = 0; i < key.length;i++){
-                    var currentKey = key;
+                    var currentKey = key[i];
                     const varA = (typeof item1[currentKey] === 'string') ?item1[currentKey].toUpperCase() : item1[currentKey];
                     const varB = (typeof item2[currentKey] === 'string') ?item2[currentKey].toUpperCase() : item2[currentKey];
                     if(typeof varA !='object'){
