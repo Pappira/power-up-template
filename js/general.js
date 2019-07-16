@@ -566,7 +566,26 @@ var createCompletePriceText = function(estimate){
 			var lastPriceText = '';
 			var lastGeneralFinishesText = '';
 			var isList = false;
+			//Hay variación en los papeles?
+			var quantityOfPapersOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.materials).size==1);
+			var materialChange = quantityOfPapersOnOriginalEstimate.filter(v => v).length >0;
+
+			//Hay variación en los tamaños?
+			var quantityOfSizesOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.openedSize).size).length;
+			var sizeChange = quantityOfSizesOnOriginalEstimate == estimate.items.length;
+
+			//Hay variación en tintas?
+			var quantityOfInksOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.inks).size).length;
+			var inksChange = quantityOfInksOnOriginalEstimate == estimate.items.length;
+
+			//Hay variación en fases
+			var quantityOfFacesOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.faces).size).length;
+			var facesChange = quantityOfFacesOnOriginalEstimate == estimate.items.length;
+
+			quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
+			var lastPaperText = '';
 			for (var i = 0; i < estimate.prices.length;i++){
+				var quantityOfTitles = 0;
 					var price = estimate.prices[i];
 					var generalFinishesText = "";
 					if(estimate.mandatoryFinishGroups){
@@ -576,7 +595,26 @@ var createCompletePriceText = function(estimate){
 									}
 							}
 					}
+					if (generalFinishesText && generalFinishesText.length>0){
+						if(generalFinishesText != lastGeneralFinishesText){
+								textToAdd.push(createText('subtitle' + quantityOfTitles,generalFinishesText, ''));  
+						}
+						quantityOfTitles++;
+						lastGeneralFinishesText = generalFinishesText;
+					}
+
 					var priceText = '';
+					if(materialChange){
+						var putItemName = quantityOfPapersOnOriginalEstimate.filter(v => v).length>1;
+						var paperText = 'Papel ' + price.items.map(currentItem => estimate.items[currentItem.id].materials.length>1?
+																																			(putItemName?'en '+currentItem.name + ' ':'') 
+																																				+ currentItem.materials.paper + ' '  + currentItem.materials.gr + 'gr':'');
+						if(paperText && paperText != lastPaperText){
+							textToAdd.push(createText('subtitle' + quantityOfTitles,generalFinishesText, ''));  
+						}
+						lastPaperText = paperText;
+						quantityOfTitles++;
+					}
 					for (var j = 0; j < price.items.length; j++){
 							var item =  price.items[j];
 							var itemsFinishesText = "";
@@ -588,6 +626,9 @@ var createCompletePriceText = function(estimate){
 									}
 							}
 							var originalItem = estimate.items[item.id];
+							paperText += originalItem.materials.length>1?'Papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr':'';
+
+							
 							var currentPriceText = [(originalItem.materials.length>1?'en papel ' + item.materials.paper + ' '  + item.materials.gr + 'gr':''),
 							(originalItem.inks.length>1?item.inks.inksDetails:''), (originalItem.faces.length>1?item.faces:'')];
 							
@@ -612,12 +653,8 @@ var createCompletePriceText = function(estimate){
 								priceText += (priceText.length>0?' ':'') + ( price.items.length>1?originalItem.name:'')  + currentPriceText;
 							}
 					}
-					if (generalFinishesText && generalFinishesText.length>0){
-							if(generalFinishesText != lastGeneralFinishesText){
-									textToAdd.push(createText('subtitle4',generalFinishesText, ''));  
-							}
-					}
-					lastGeneralFinishesText = generalFinishesText;
+
+					
 					//Si hay más de una cantidad
 					if(estimate.quantity.length>1){
 							//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
@@ -713,14 +750,13 @@ function compareValues(order='asc') {
 								if (varA > varB) {
 									return ((order == 'desc') ? -1:1);
 								} else if (varA < varB) {
-										return ((order == 'desc') ? 1:-1);
-										
+									return ((order == 'desc') ? 1:-1);
 								}
 							}
 						}
 					}
 				}
-        key = ['openedSize','quantityOfPages','quantityOfVias','faces','materials','inks'];
+        key = ['materials','openedSize','inks','faces','quantityOfPages','quantityOfVias'];
         if(a.items.length==b.items.length){
             for (var j = 0; j < a.items.length;j++){
                 var item1 = a.items[j];
