@@ -781,9 +781,9 @@ function compareValues(order='asc') {
                             
                         }
                     }else{
-                        for (var key in varA) {
-                            var varAA = (typeof varA[key] === 'string') ? varA[key].toUpperCase() :  varA[key];
-                            var varBA = (typeof varB[key] === 'string') ? varB[key].toUpperCase() :  varB[key];
+                        for (var currentKey in varA) {
+                            var varAA = (typeof varA[currentKey] === 'string') ? varA[currentKey].toUpperCase() :  varA[currentKey];
+                            var varBA = (typeof varB[currentKey] === 'string') ? varB[currentKey].toUpperCase() :  varB[currentKey];
                             if (varAA > varBA) {
                                 return ((order == 'desc') ? -1:1);
                             } else if (varAA < varBA) {
