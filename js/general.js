@@ -563,7 +563,7 @@ var createCompletePriceText = function(estimate){
 			if (estimate.prices.length>1){
 					textToAdd.push(createText('subtitle1','Precios', ''));  
 			}
-			var lastPriceText = '';
+			//var lastPriceText = '';
 			var lastGeneralFinishesText = '';
 			var isList = false;
 			//Hay variación en los papeles?
@@ -575,16 +575,28 @@ var createCompletePriceText = function(estimate){
 			var sizeChange = quantityOfSizesOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en tintas?
-			var quantityOfInksOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.inks).size).length;
-			var inksChange = quantityOfInksOnOriginalEstimate == estimate.items.length;
+			var quantityOfInksOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.inks).size!=1);
+			var inksChange = quantityOfInksOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en fases
-			var quantityOfFacesOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.faces).size).length;
-			var facesChange = quantityOfFacesOnOriginalEstimate == estimate.items.length;
+			var quantityOfFacesOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.faces).size1=1);
+			var facesChange = quantityOfFacesOnOriginalEstimate.filter(v => v).length >0;
+
+			//Hay variación en páginas
+			var quantityOfPagesOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.quantityOfPages).size1=1);
+			var pagesChange = quantityOfPagesOnOriginalEstimate.filter(v => v).length >0;
+
+			//Hay variación en vías
+			var quantityOfViasOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.quantityOfVias).size1=1);
+			var viasChange = quantityOfViasOnOriginalEstimate.filter(v => v).length >0;
 
 		//	quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
 			var lastPaperText = '';
 			var lastsizeText = '';
+			var lastInkText = '';
+			var lasPagesText = '';
+			var lastItemsFinishesText = '';
+			var changeMade = false;
 			for (var i = 0; i < estimate.prices.length;i++){
 				var quantityOfTitles = 2;
 					var price = estimate.prices[i];
@@ -600,6 +612,7 @@ var createCompletePriceText = function(estimate){
 						quantityOfTitles++;
 						if(generalFinishesText != lastGeneralFinishesText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles,generalFinishesText, ''));  
+							changeMade = true;
 						}
 						lastGeneralFinishesText = generalFinishesText;
 					}
@@ -609,11 +622,12 @@ var createCompletePriceText = function(estimate){
 					if(materialChange){
 						quantityOfTitles++;
 						var putItemName = quantityOfPapersOnOriginalEstimate.filter(v => v).length>1;
-						var paperText = 'Papel' + price.items.map(currentItem => estimate.items[currentItem.id].materials.length>1?
+						var paperText = 'Papel' + price.items.map(currentItem => quantityOfPapersOnOriginalEstimate[currentItem.id]?
 																																			(putItemName?' de '+currentItem.name:'') 
 																																				+ ' ' + currentItem.materials.paper + ' '  + currentItem.materials.gr + 'gr':'').join(", ");
 						if(paperText && paperText != lastPaperText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles,paperText, ''));  
+							changeMade = true;
 						}
 						lastPaperText = paperText;
 					}
@@ -622,22 +636,65 @@ var createCompletePriceText = function(estimate){
 						quantityOfTitles++;
 						var putItemName = quantityOfSizesOnOriginalEstimate.filter(v => v).length>1;
 						var sizeText = price.items.map(function(currentItem){
-							var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.clossedSize)).size;
-							var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.items.map(currentItem1 => new Set(currentItem1.openedSize).size);
-							quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
-
-							//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos, pongo el cerrado, sino el abierto
-								return (quantityOfOpenedSizesPerItemOnOriginalEstimate.every(val => val == quantityOfOpenedSizesPerItemOnOriginalEstimate[0])?	
-									'Tamaño' + (putItemName?' de '+currentItem.name:'') + ' ' + price.clossedSizes:							
-									'Tamaño abierto' + (putItemName?' de '+currentItem.name:'') + ' ' + item.openedSize);
-
+							if(quantityOfSizesOnOriginalEstimate[currentItem.id]){
+								var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.clossedSize)).size;
+								var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.items.map(currentItem1 => new Set(currentItem1.openedSize).size);
+								quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
+	
+								//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos, pongo el cerrado, sino el abierto
+									return (quantityOfOpenedSizesPerItemOnOriginalEstimate.every(val => val == quantityOfOpenedSizesPerItemOnOriginalEstimate[0])?	
+										'Tamaño' + (putItemName?' de '+currentItem.name:'') + ' ' + price.clossedSizes:							
+										'Tamaño abierto' + (putItemName?' de '+currentItem.name:'') + ' ' + item.openedSize);
+							}
 						}).join(", ");
 						if(sizeText && sizeText != lastsizeText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles,sizeText, ''));  
+							changeMade = true;
 						}
 						lastsizeText = sizeText;
 					}
-					for (var j = 0; j < price.items.length; j++){
+					if(inksChange || facesChange){
+						quantityOfTitles++;
+						var putItemName = quantityOfInksOnOriginalEstimate.filter(v => v).length>1 || quantityOfFacesOnOriginalEstimate.filter(v => v).length>1;
+						var inkText = price.items.map(currentItem => ((quantityOfInksOnOriginalEstimate[currentItem.id] || quantityOfFacesOnOriginalEstimate[currentItem.id])?
+													'Impresión' + (putItemName?' de '+currentItem.name:'') +
+													 (inksChange?' ' + currentItem.inks.inksDetails:'') + (facesChange?' ' + currentItem.faces:''):'')).join(", ");
+						if(inkText && inkText != lastInkText){
+							textToAdd.push(createText('subtitle' + quantityOfTitles,inkText, ''));  
+						}
+						lastInkText = inkText;
+					}
+					if(viasChange || pagesChange){
+						quantityOfTitles++;
+						var putItemName =  quantityOfPagesOnOriginalEstimate.filter(v => v).length>1 || quantityOfViasOnOriginalEstimate.filter(v => v).length>1;
+						var pagesText = 
+														price.items.map(currentItem => 
+															((quantityOfPagesOnOriginalEstimate[currentItem.id] || quantityOfViasOnOriginalEstimate[currentItem.id])?
+															(putItemName?currentItem.name + ' de ':'') + 
+															(quantityOfPagesOnOriginalEstimate[currentItem.id]?((pagesChange && currentItem.quantityOfPages>1)?item.quantityOfPages + ' páginas ':''):'') + 
+															(quantityOfViasOnOriginalEstimate[currentItem.id]?((viasChange && currentItem.quantityOfVias>1)?item.quantityOfVias + ' vías':''):''):'')
+															
+															
+														).join(", ");
+						if(pagesText && pagesText != lasPagesText){
+							textToAdd.push(createText('subtitle' + quantityOfTitles,pagesText, ''));  
+							changeMade = true;
+						}
+						lasPagesText = pagesText;
+					}
+
+					//mandatoryFinishGroups inside item
+					itemsFinishesText = price.items.map(currentItem => currentItem.mandatoryFinishGroups?currentItem.mandatoryFinishGroups.map(
+						currentMandatoryFinishGroup => currentMandatoryFinishGroup.finishes.length>1?currentMandatoryFinishGroup.finishes.finish:'').join(" "):''
+					).join(' ');
+					if(itemsFinishesText && itemsFinishesText !=lastItemsFinishesText){
+						quantityOfTitles++;
+						textToAdd.push(createText('subtitle' + quantityOfTitles,itemsFinishesText, ''));  
+						changeMade = true;
+						lastItemsFinishesText = itemsFinishesText;
+					}
+
+					/*for (var j = 0; j < price.items.length; j++){
 							var item =  price.items[j];
 							var itemsFinishesText = "";
 							if(estimate.items[j].mandatoryFinishGroups){
@@ -651,22 +708,19 @@ var createCompletePriceText = function(estimate){
 							
 
 							
-							var currentPriceText = [(originalItem.inks.length>1?item.inks.inksDetails:''), (originalItem.faces.length>1?item.faces:'')];
-							currentPriceText = [currentPriceText.filter(Boolean).join(' '),
-							((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?item.quantityOfPages + ' páginas':''),
-							((originalItem.quantityOfVias.length>1 && item.quantityOfVias>1)?item.quantityOfVias + ' vías':''),
+							var currentPriceText = [
 							((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'')];
 							currentPriceText = currentPriceText.filter(Boolean).join(", ");
 							if(currentPriceText && currentPriceText.length>0){
 								priceText += (priceText.length>0?' ':'') + ( price.items.length>1?originalItem.name:'')  + currentPriceText;
 							}
-					}
+					}*/
 
 					
 					//Si hay más de una cantidad
 					if(estimate.quantity.length>1){
 							//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
-							if(lastPriceText !=priceText){
+						/*	if(lastPriceText !=priceText){
 									if ((generalFinishesText && generalFinishesText.length>0)){
 										textToAdd.push(createText('list',priceText, []));  
 										isList = true;
@@ -675,19 +729,26 @@ var createCompletePriceText = function(estimate){
 											isList = false;
 									}
 									lastPriceText = priceText;
+							}*/
+
+							if(changeMade){
+								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
+							}else{
+								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.price.toLocaleString() + ' + IVA']);  
 							}
-							if (isList){
+							/*if (isList){
 								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.price.toLocaleString() + ' + IVA']);  
 							}else{
 								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
-							}
+							}*/
 					}else{
-						if(priceText.length>0){
+						/*if(priceText.length>0){
 							textToAdd.push(createText('text', priceText + ' (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
 						}else{
 							textToAdd.push(createText('subtitle6', '','Sub-Total (' + price.quantity + ' unidades): ' + '$ ' + price.price.toLocaleString() + ' + IVA'));  
 						}
-						lastPriceText = priceText;
+						lastPriceText = priceText;*/
+						textToAdd.push(createText('text', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
 					}
 			}
 	}
