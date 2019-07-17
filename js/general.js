@@ -611,7 +611,7 @@ var createCompletePriceText = function(estimate){
 					if (generalFinishesText && generalFinishesText.length>0){
 						quantityOfTitles++;
 						if(generalFinishesText != lastGeneralFinishesText){
-							textToAdd.push(createText('subtitle' + quantityOfTitles,generalFinishesText, ''));  
+							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",generalFinishesText, ''));  
 							changeMade = true;
 						}
 						lastGeneralFinishesText = generalFinishesText;
@@ -626,7 +626,7 @@ var createCompletePriceText = function(estimate){
 																																			(putItemName?' de '+currentItem.name:'') 
 																																				+ ' ' + currentItem.materials.paper + ' '  + currentItem.materials.gr + 'gr':'').join(", ");
 						if(paperText && paperText != lastPaperText){
-							textToAdd.push(createText('subtitle' + quantityOfTitles,paperText, ''));  
+							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",paperText, ''));  
 							changeMade = true;
 						}
 						lastPaperText = paperText;
@@ -648,7 +648,7 @@ var createCompletePriceText = function(estimate){
 							}
 						}).join(", ");
 						if(sizeText && sizeText != lastsizeText){
-							textToAdd.push(createText('subtitle' + quantityOfTitles,sizeText, ''));  
+							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",sizeText, ''));  
 							changeMade = true;
 						}
 						lastsizeText = sizeText;
@@ -660,7 +660,7 @@ var createCompletePriceText = function(estimate){
 													(putItemName?currentItem.name:'') +
 													 (inksChange?' ' + currentItem.inks.inksDetails:'') + (facesChange?' ' + currentItem.faces:''):'')).join(", ");
 						if(inkText && inkText != lastInkText){
-							textToAdd.push(createText('subtitle' + quantityOfTitles,inkText, ''));  
+							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",inkText, ''));  
 						}
 						lastInkText = inkText;
 					}
@@ -677,7 +677,7 @@ var createCompletePriceText = function(estimate){
 															
 														).join(", ");
 						if(pagesText && pagesText != lasPagesText){
-							textToAdd.push(createText('subtitle' + quantityOfTitles,pagesText, ''));  
+							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",pagesText, ''));  
 							changeMade = true;
 						}
 						lasPagesText = pagesText;

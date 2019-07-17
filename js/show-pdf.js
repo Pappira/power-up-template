@@ -49,7 +49,7 @@ var newAddText = function(textToAdd, doc, top){
                 var scale = writeTextNormalAndBold(16,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
-            case 'subtitle3':
+                case 'subtitle3':
                 top = increaseTop(top,rowSize/2,doc);
                 var scale = writeTextNormalAndBold(14,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
@@ -65,6 +65,28 @@ var newAddText = function(textToAdd, doc, top){
                 break;
             case 'subtitle6':
                 var scale = writeTextNormalAndBold(12,fontType,text.name, text.value, top,doc);
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
+            case 'subtitle3price':
+                top = increaseTop(top,rowSize/2,doc);
+                var scale = writeTextNormalAndBold(14,fontType,text.name, text.value, top,doc);
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
+            case 'subtitle4price':
+                top = increaseTop(top,rowSize/2,doc);
+                var scale = writeUnderlinedText(13,fontType,text.name, top, doc);
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
+            case 'subtitle5price':
+                var scale = writeItalicText(12,fontType,text.name, top,doc);
+                currentIncreaseTop = rowSize*scale;
+                break;
+            case 'subtitle6price':
+                var scale = writeTextNormalAndBold(11,fontType,text.value,text.name, top,doc);
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                break;
+            case 'subtitle7price':
+                var scale = writeUnderlinedText(10,fontType,text.name, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'list':
@@ -328,6 +350,17 @@ var writeUnderlinedText = function(fontSize, fontType, text, top, doc){
     var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * (fontSize / doc.internal.scaleFactor);
     doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
     doc.setFontSize(fontSize);
+    return scale;
+}
+
+var writeItalicText = function(fontSize, fontType, text, top, doc){
+    doc.setFontSize(fontSize);
+    doc.setFontType("italic");
+    var scale = writeText(doc,text,top);
+    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'italic'}) * (fontSize / doc.internal.scaleFactor);
+    doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
+    doc.setFontSize(fontSize);
+    doc.setFontType("Normal");
     return scale;
 }
 
