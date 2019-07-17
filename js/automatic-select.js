@@ -290,7 +290,7 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
             if (name.includes("//")){
               currentElement = item[name.split(" // ")[0]][name.split(" // ")[1]].finishes[selectedOptions[itemId][name][i]];
             }else{
-              currentElement = item[name][selectOption];
+              currentElement = item[name][selectedOption];
             }
             if(currentElement && currentElement.incidences){
               for (var i = 0; i < currentElement.incidences.length;i++){
