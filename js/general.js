@@ -604,7 +604,7 @@ var createCompletePriceText = function(estimate){
 					if(estimate.mandatoryFinishGroups){
 							for (var j = 0; j < estimate.mandatoryFinishGroups.length;j++){
 									if (estimate.mandatoryFinishGroups[j].finishes.length>1){
-											generalFinishesText += (generalFinishesText.length>0?" ":"") + price.mandatoryFinishGroups[j].finishes.finish;
+											generalFinishesText += (generalFinishesText.length >0?" ":"") + price.mandatoryFinishGroups[j].finishes.finish;
 									}
 							}
 					}
