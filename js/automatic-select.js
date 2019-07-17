@@ -281,7 +281,7 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
 
     for (var itemId in selectedOptions) {
       for (var name in selectedOptions[itemId]) {
-          for (var i = 0; i < selectedOptions[itemId][name].length;i++){
+          for (var selectedOption in selectedOptions[itemId][name]){
             var item = work.items[itemId];
             if (itemId == -1){
               item = work;
@@ -290,7 +290,7 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
             if (name.includes("//")){
               currentElement = item[name.split(" // ")[0]][name.split(" // ")[1]].finishes[selectedOptions[itemId][name][i]];
             }else{
-              currentElement = item[name][i];
+              currentElement = item[name][selectOption];
             }
             if(currentElement && currentElement.incidences){
               for (var i = 0; i < currentElement.incidences.length;i++){
