@@ -357,8 +357,8 @@ var writeItalicText = function(fontSize, fontType, text, top, doc){
     doc.setFontSize(fontSize);
     doc.setFontType("italic");
     var scale = writeText(doc,text,top);
-    var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'italic'}) * (fontSize / doc.internal.scaleFactor);
-    doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
+    //var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'italic'}) * (fontSize / doc.internal.scaleFactor);
+    //doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
     doc.setFontSize(fontSize);
     doc.setFontType("Normal");
     return scale;
