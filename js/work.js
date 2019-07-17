@@ -994,7 +994,7 @@ var works = [
     'workType':'Folletería',
     'image':noImage,
     'name':'Volantes',
-    'quantity':[10,50,100,300],
+    'quantity':[200,500,1000,2000,4000],
     'items':
     [
       {
@@ -1011,8 +1011,8 @@ var works = [
             'inksQuantity':4,
           },
           {
-            'inksDetails':'Full color frente / Tinta Negra dorso',
-            'inksQuantity':4, 
+            'inksDetails':'Full color frente - Tinta Negra dorso',
+            'inksQuantity':4/1, 
             "mandatoryChanges":
             [
               {
