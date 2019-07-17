@@ -992,66 +992,8 @@ var works = [
     'id':8,
     'workTypeId':2,
     'workType':'Folletería',
-    'clossedSizes':
-    [
-      {
-        'value':'105x150mm',
-        "mandatoryChanges":
-        [
-          {
-            "itemId":0,
-            "type":"openedSize",
-            "values":['105x150mm']
-          },
-        ]
-      },
-      {
-        'value':'120x190mm',
-        "mandatoryChanges":
-        [
-          {
-            "itemId":0,
-            "type":"openedSize",
-            "values":['120x190mm']
-          },
-        ]
-      },
-      {
-        'value':'130x180mm',
-        "mandatoryChanges":
-        [
-          {
-            "itemId":0,
-            "type":"openedSize",
-            "values":['130x180mm']
-          },
-        ]
-      },
-      {
-        'value':'150x220mm',
-        "mandatoryChanges":
-        [
-          {
-            "itemId":0,
-            "type":"openedSize",
-            "values":['150x220mm']
-          },
-        ]
-      },
-      {
-        'value':'220x310mm',
-        "mandatoryChanges":
-        [
-          {
-            "itemId":0,
-            "type":"openedSize",
-            "values":['220x310mm']
-          },
-        ]
-      }
-    ],
     'image':noImage,
-    'name':'Sobres de Invitación pegados (sin troquelar)',
+    'name':'Volantes',
     'quantity':[10,50,100,300],
     'items':
     [
@@ -1133,6 +1075,64 @@ var works = [
             'paper':'Obra',
             'gr':'90'
           }
+        ]
+      }
+    ],
+    'clossedSizes':
+    [
+      {
+        'value':'105x150mm',
+        "mandatoryChanges":
+        [
+          {
+            "itemId":0,
+            "type":"openedSize",
+            "values":['105x150mm']
+          },
+        ]
+      },
+      {
+        'value':'120x190mm',
+        "mandatoryChanges":
+        [
+          {
+            "itemId":0,
+            "type":"openedSize",
+            "values":['120x190mm']
+          },
+        ]
+      },
+      {
+        'value':'130x180mm',
+        "mandatoryChanges":
+        [
+          {
+            "itemId":0,
+            "type":"openedSize",
+            "values":['130x180mm']
+          },
+        ]
+      },
+      {
+        'value':'150x220mm',
+        "mandatoryChanges":
+        [
+          {
+            "itemId":0,
+            "type":"openedSize",
+            "values":['150x220mm']
+          },
+        ]
+      },
+      {
+        'value':'220x310mm',
+        "mandatoryChanges":
+        [
+          {
+            "itemId":0,
+            "type":"openedSize",
+            "values":['220x310mm']
+          },
         ]
       }
     ]
