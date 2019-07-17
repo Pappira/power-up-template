@@ -1070,10 +1070,36 @@ var works = [
           {
             'paper':'Obra',
             'gr':'80',
+            "incidences":
+            [
+              {
+                "itemId":-1,
+                "type":"clossedSizes",
+                "action":"add",
+                "values":
+                [
+                  {
+                  }
+                ]
+              }
+            ]
           },
           {
             'paper':'Obra',
-            'gr':'90'
+            'gr':'90',
+            "incidences":
+            [
+              {
+                "itemId":-1,
+                "type":"clossedSizes",
+                "action":"add",
+                "values":
+                [
+                  {
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
