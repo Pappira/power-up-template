@@ -281,7 +281,8 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
 
     for (var itemId in selectedOptions) {
       for (var name in selectedOptions[itemId]) {
-          for (var selectedOption in selectedOptions[itemId][name]){
+          for (var selectedOptionId in selectedOptions[itemId][name]){
+            var selectedOption = selectedOptions[itemId][name][selectedOptionId];
             var item = work.items[itemId];
             if (itemId == -1){
               item = work;
