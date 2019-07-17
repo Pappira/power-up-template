@@ -300,7 +300,9 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
                   if (incidence.action == 'add'){
                     for (var j = 0; j < incidence.values.length;j++){
                       if(!work[incidence.type].includes(incidence.values[j])){
-                        work[incidence.type].push(incidence.values[j]);
+                        if (!jQuery.isEmptyObject(incidence.values[j])){
+                          work[incidence.type].push(incidence.values[j]);
+                        }
                       }
                     }
                   }else if(incidence.action == 'replace'){
@@ -310,7 +312,9 @@ var checkIncidences = function(element,currentItem,currentName,currentValue){
                   if (incidence.action == 'add'){
                     for (var j = 0; j < incidence.values.length;j++){
                       if(!work.items[incidence.itemId][incidence.type].includes(incidence.values[j])){
-                        work.items[incidence.itemId][incidence.type].push(incidence.values[j]);
+                        if (!jQuery.isEmptyObject(incidence.values[j])){
+                          work.items[incidence.itemId][incidence.type].push(incidence.values[j]);
+                        }
                       }
                     }
                   }else if(incidence.action == 'replace'){
