@@ -652,7 +652,18 @@ var works = [
               "itemId":0,
               "type":"openedSize",
               "values":['160x310mm']
-            },
+            }
+          ]
+        },
+        {
+          'value':'200x140mm',
+          "mandatoryChanges":
+          [
+            {
+              "itemId":0,
+              "type":"openedSize",
+              "values":['200x290mm']
+            }
           ]
         }
       ],
@@ -801,24 +812,24 @@ var works = [
           ]
         },
         {
-          'value':'140x200mm',
+          'value':'140x180mm',
           "mandatoryChanges":
           [
             {
               "itemId":0,
               "type":"openedSize",
-              "values":['140x200mm']
+              "values":['140x180mm']
             },
           ]
         },
         {
-          'value':'120x160mm',
+          'value':'120x230mm',
           "mandatoryChanges":
           [
             {
               "itemId":0,
               "type":"openedSize",
-              "values":['120x160mm']
+              "values":['120x230mm']
             },
           ]
         }
