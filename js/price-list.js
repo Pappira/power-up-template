@@ -90361,6 +90361,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -90413,6 +90417,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -90469,6 +90477,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -90521,6 +90533,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -90577,6 +90593,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -90629,6 +90649,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -90685,6 +90709,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -90737,6 +90765,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -90793,6 +90825,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -90845,6 +90881,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -90901,6 +90941,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -90953,6 +90997,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -91009,6 +91057,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -91061,6 +91113,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -91117,6 +91173,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -91169,6 +91229,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -91225,6 +91289,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -91277,6 +91345,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -91333,6 +91405,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -91385,6 +91461,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -91439,6 +91519,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -91495,6 +91579,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -91547,6 +91635,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -91603,6 +91695,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -91655,6 +91751,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -91711,6 +91811,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -91763,6 +91867,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -91819,6 +91927,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -91871,6 +91983,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -91927,6 +92043,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -91981,6 +92101,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -92033,6 +92157,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -92089,6 +92217,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -92141,6 +92273,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -92197,6 +92333,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -92249,6 +92389,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -92305,6 +92449,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -92357,6 +92505,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -92413,6 +92565,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -92467,6 +92623,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -92519,6 +92679,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -92575,6 +92739,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -92627,6 +92795,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -92683,6 +92855,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -92735,6 +92911,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -92791,6 +92971,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -92843,6 +93027,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -92899,6 +93087,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -92953,6 +93145,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -93005,6 +93201,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -93061,6 +93261,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -93113,6 +93317,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -93169,6 +93377,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -93221,6 +93433,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -93277,6 +93493,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -93329,6 +93549,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -93385,6 +93609,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -93437,6 +93665,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -93493,6 +93725,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -93545,6 +93781,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -93601,6 +93841,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -93653,6 +93897,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -93709,6 +93957,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -93761,6 +94013,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -93817,6 +94073,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -93869,6 +94129,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -93925,6 +94189,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -93977,6 +94245,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -94033,6 +94305,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -94085,6 +94361,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -94139,6 +94419,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -94195,6 +94479,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -94247,6 +94535,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -94303,6 +94595,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -94355,6 +94651,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -94411,6 +94711,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -94463,6 +94767,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -94519,6 +94827,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -94573,6 +94885,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -94625,6 +94941,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -94681,6 +95001,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -94733,6 +95057,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -94789,6 +95117,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -94841,6 +95173,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -94897,6 +95233,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -94949,6 +95289,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -95005,6 +95349,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -95057,6 +95405,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -95113,6 +95465,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -95167,6 +95523,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -95181,6 +95541,296 @@ var prices2 = [
       ],
       "price":{
          "value":0.6625,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":4
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":2.125,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":4
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":1.1,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":4
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":0.7,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":4
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":2000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":0.4625,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":4
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":4000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":0.33125,
          "condition":"each"
       }
    },
@@ -95219,6 +95869,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -95275,6 +95929,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -95327,6 +95985,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -95383,6 +96045,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -95435,6 +96101,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -95491,6 +96161,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -95543,6 +96217,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -95599,6 +96277,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -95651,6 +96333,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -95707,6 +96393,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -95761,6 +96451,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -95813,6 +96507,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -95869,6 +96567,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -95921,6 +96623,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -95977,6 +96683,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -96029,6 +96739,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -96085,6 +96799,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -96137,6 +96855,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -96193,6 +96915,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -96245,6 +96971,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -96301,6 +97031,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -96353,6 +97087,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -96409,6 +97147,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -96461,6 +97203,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -96517,6 +97263,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -96569,6 +97319,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -96625,6 +97379,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -96677,6 +97435,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -96733,6 +97495,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -96785,6 +97551,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -96839,6 +97609,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -96895,6 +97669,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -96947,6 +97725,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -97003,6 +97785,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -97055,6 +97841,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -97111,6 +97901,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -97163,6 +97957,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -97219,6 +98017,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -97271,6 +98073,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -97327,6 +98133,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -97341,6 +98151,296 @@ var prices2 = [
       ],
       "price":{
          "value":1.725,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":2.625,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":1.55,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":1.075,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":2000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":0.7625,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":4000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":0.58125,
          "condition":"each"
       }
    },
@@ -97379,6 +98479,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -97435,6 +98539,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -97487,6 +98595,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -97543,6 +98655,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -97595,6 +98711,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -97651,6 +98771,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -97703,6 +98827,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -97759,6 +98887,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -97813,6 +98945,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -97865,6 +99001,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -97894,6 +99034,296 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":3.625,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":2.45,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":1.825,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":2000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":1.3625,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":4000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Simple Faz"
+         }
+      ],
+      "price":{
+         "value":1.08125,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
             "value":6
          },
          {
@@ -97919,6 +99349,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -97975,6 +99409,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -98027,6 +99465,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -98083,6 +99525,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -98135,6 +99581,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -98191,6 +99641,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -98243,6 +99697,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -98299,6 +99757,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -98351,6 +99813,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -98407,6 +99873,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -98459,6 +99929,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -98515,6 +99989,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -98567,6 +100045,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -98623,6 +100105,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -98675,6 +100161,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -98731,6 +100221,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -98783,6 +100277,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -98839,6 +100337,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -98891,6 +100393,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -98947,6 +100453,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -99001,6 +100511,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -99053,6 +100567,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -99109,6 +100627,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -99161,6 +100683,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -99217,6 +100743,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -99269,6 +100799,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -99325,6 +100859,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -99377,6 +100915,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -99433,6 +100975,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -99485,6 +101031,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -99541,6 +101091,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -99593,6 +101147,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -99649,6 +101207,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -99701,6 +101263,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -99757,6 +101323,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -99809,6 +101379,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -99865,6 +101439,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -99917,6 +101495,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -99973,6 +101555,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -100025,6 +101611,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -100079,6 +101669,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -100135,6 +101729,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -100187,6 +101785,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -100243,6 +101845,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -100295,6 +101901,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -100351,6 +101961,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -100403,6 +102017,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -100459,6 +102077,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -100511,6 +102133,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -100567,6 +102193,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -100619,6 +102249,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -100675,6 +102309,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -100727,6 +102365,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -100783,6 +102425,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -100835,6 +102481,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -100891,6 +102541,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -100943,6 +102597,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -100999,6 +102657,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -101053,6 +102715,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -101105,6 +102771,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -101159,6 +102829,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -101215,6 +102889,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -101267,6 +102945,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -101323,6 +103005,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -101375,6 +103061,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -101431,6 +103121,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -101483,6 +103177,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -101539,6 +103237,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -101591,6 +103293,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -101647,6 +103353,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -101699,6 +103409,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -101755,6 +103469,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -101807,6 +103525,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x155mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -101863,6 +103585,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -101917,6 +103643,10 @@ var prices2 = [
             "value":"105x155mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -101969,6 +103699,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -102025,6 +103759,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -102077,6 +103815,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -102133,6 +103875,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -102185,6 +103931,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -102241,6 +103991,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -102293,6 +104047,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -102349,6 +104107,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -102401,6 +104163,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -102457,6 +104223,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -102509,6 +104279,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -102565,6 +104339,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -102617,6 +104395,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -102673,6 +104455,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -102727,6 +104513,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -102779,6 +104569,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -102835,6 +104629,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -102887,6 +104685,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -102943,6 +104745,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -102995,6 +104801,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -103051,6 +104861,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -103103,6 +104917,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -103159,6 +104977,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -103211,6 +105033,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -103267,6 +105093,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -103319,6 +105149,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -103375,6 +105209,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -103427,6 +105265,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -103483,6 +105325,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -103535,6 +105381,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -103591,6 +105441,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -103643,6 +105497,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -103699,6 +105557,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -103751,6 +105613,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -103807,6 +105673,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -103859,6 +105729,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -103915,6 +105789,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -103967,6 +105845,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -104023,6 +105905,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -104075,6 +105961,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -104131,6 +106021,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -104183,6 +106077,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -104239,6 +106137,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -104293,6 +106195,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -104345,6 +106251,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -104401,6 +106311,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -104453,6 +106367,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -104509,6 +106427,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -104561,6 +106483,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -104617,6 +106543,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -104669,6 +106599,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -104725,6 +106659,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -104777,6 +106715,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -104833,6 +106775,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -104885,6 +106831,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -104941,6 +106891,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -104993,6 +106947,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -105049,6 +107007,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -105103,6 +107065,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -105155,6 +107121,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -105209,6 +107179,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -105265,6 +107239,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -105317,6 +107295,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -105373,6 +107355,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -105425,6 +107411,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -105481,6 +107471,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -105533,6 +107527,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -105589,6 +107587,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -105641,6 +107643,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -105697,6 +107703,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -105749,6 +107759,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -105805,6 +107819,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -105857,6 +107875,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -105913,6 +107935,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -105965,6 +107991,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -106021,6 +108051,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -106073,6 +108107,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -106129,6 +108167,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -106181,6 +108223,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -106237,6 +108283,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -106289,6 +108339,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -106345,6 +108399,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -106397,6 +108455,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -106453,6 +108515,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -106505,6 +108571,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -106561,6 +108631,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -106613,6 +108687,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -106669,6 +108747,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -106723,6 +108805,10 @@ var prices2 = [
             "value":"155x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -106775,6 +108861,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"155x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -106829,6 +108919,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -106885,6 +108979,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -106937,6 +109035,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -106993,6 +109095,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -107045,6 +109151,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -107101,6 +109211,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -107153,6 +109267,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -107209,6 +109327,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -107261,6 +109383,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -107317,6 +109443,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -107369,6 +109499,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -107425,6 +109559,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -107477,6 +109615,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -107533,6 +109675,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -107585,6 +109731,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -107641,6 +109791,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -107693,6 +109847,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -107749,6 +109907,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -107801,6 +109963,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -107857,6 +110023,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -107909,6 +110079,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -107965,6 +110139,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -108017,6 +110195,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -108073,6 +110255,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -108125,6 +110311,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -108181,6 +110371,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -108233,6 +110427,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -108289,6 +110487,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -108341,6 +110543,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -108397,6 +110603,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -108411,6 +110621,296 @@ var prices2 = [
       ],
       "price":{
          "value":1.3125,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":4
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":2.5,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":4
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":1.4,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":4
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":0.95,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":4
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":2000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":0.6625,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":4
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":4000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":0.53125,
          "condition":"each"
       }
    },
@@ -108449,6 +110949,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -108505,6 +111009,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -108557,6 +111065,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -108613,6 +111125,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -108665,6 +111181,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -108721,6 +111241,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -108773,6 +111297,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -108829,6 +111357,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -108881,6 +111413,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -108937,6 +111473,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -108989,6 +111529,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -109045,6 +111589,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -109097,6 +111645,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -109153,6 +111705,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -109205,6 +111761,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -109261,6 +111821,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -109313,6 +111877,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -109369,6 +111937,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -109421,6 +111993,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -109477,6 +112053,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -109529,6 +112109,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -109585,6 +112169,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -109637,6 +112225,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -109693,6 +112285,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -109745,6 +112341,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -109801,6 +112401,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -109853,6 +112457,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -109909,6 +112517,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -109963,6 +112575,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -110015,6 +112631,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -110071,6 +112691,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -110123,6 +112747,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -110179,6 +112807,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -110231,6 +112863,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -110287,6 +112923,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -110339,6 +112979,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -110395,6 +113039,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -110447,6 +113095,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -110503,6 +113155,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -110555,6 +113211,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -110611,6 +113271,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -110663,6 +113327,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -110719,6 +113387,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -110773,6 +113445,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -110825,6 +113501,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -110879,6 +113559,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -110935,6 +113619,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -110987,6 +113675,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -111043,6 +113735,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -111095,6 +113791,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -111151,6 +113851,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -111203,6 +113907,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -111259,6 +113967,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -111311,6 +114023,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -111367,6 +114083,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -111419,6 +114139,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -111475,6 +114199,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -111527,6 +114255,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -111583,6 +114315,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -111637,6 +114373,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -111651,6 +114391,296 @@ var prices2 = [
       ],
       "price":{
          "value":3.4125,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":3.375,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":2.15,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":1.575,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":2000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":1.1625,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":2
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":4000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":0.98125,
          "condition":"each"
       }
    },
@@ -111689,6 +114719,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -111745,6 +114779,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -111797,6 +114835,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -111853,6 +114895,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -111905,6 +114951,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -111961,6 +115011,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -112013,6 +115067,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -112069,6 +115127,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -112121,6 +115183,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -112177,6 +115243,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -112229,6 +115299,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -112285,6 +115359,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -112337,6 +115415,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -112393,6 +115475,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -112445,6 +115531,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -112474,6 +115564,296 @@ var prices2 = [
          },
          {
             "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":200
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":5.125,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":500
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":3.65,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":1000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":2.825,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":2000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":2.1625,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
+            "value":1
+         },
+         {
+            "checkAttribute":"cutsPerSheet",
+            "value":9
+         },
+         {
+            "checkAttribute":"sheetSize",
+            "value":"72x92"
+         },
+         {
+            "checkAttribute":"paperSize",
+            "value":"23x30,5"
+         },
+         {
+            "checkAttribute":"machine",
+            "value":"Konica 951"
+         },
+         {
+            "checkAttribute":"items[0].paper+gr",
+            "value":"Obra 80"
+         },
+         {
+            "checkAttribute":"clossedSizes",
+            "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra fondo blanco sin grisados"
+         },
+         {
+            "checkAttribute":"items[0].inksQuantity",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantity",
+            "value":4000
+         },
+         {
+            "checkAttribute":"items[0].faces",
+            "value":"Doble Faz"
+         }
+      ],
+      "price":{
+         "value":1.88125,
+         "condition":"each"
+      }
+   },
+   {
+      "item":0,
+      "workId":8,
+      "toCheck":[
+         {
+            "checkAttribute":"excess",
+            "value":1
+         },
+         {
+            "checkAttribute":"quantityPerPaper",
             "value":6
          },
          {
@@ -112499,6 +115879,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -112555,6 +115939,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -112607,6 +115995,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -112663,6 +116055,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -112715,6 +116111,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -112771,6 +116171,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -112823,6 +116227,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -112879,6 +116287,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -112931,6 +116343,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -112987,6 +116403,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -113039,6 +116459,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -113095,6 +116519,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -113147,6 +116575,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -113203,6 +116635,10 @@ var prices2 = [
             "value":"105x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -113255,6 +116691,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"105x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -113311,6 +116751,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -113363,6 +116807,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -113419,6 +116867,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -113471,6 +116923,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -113527,6 +116983,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -113579,6 +117039,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -113635,6 +117099,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -113687,6 +117155,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -113743,6 +117215,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -113795,6 +117271,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -113851,6 +117331,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -113905,6 +117389,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -113957,6 +117445,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -114013,6 +117505,10 @@ var prices2 = [
             "value":"150x150mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -114065,6 +117561,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x150mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -114121,6 +117621,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -114173,6 +117677,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -114229,6 +117737,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -114281,6 +117793,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -114337,6 +117853,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -114389,6 +117909,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -114445,6 +117969,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -114497,6 +118025,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -114553,6 +118085,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -114605,6 +118141,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -114661,6 +118201,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -114713,6 +118257,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -114769,6 +118317,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -114823,6 +118375,10 @@ var prices2 = [
             "value":"120x190mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -114875,6 +118431,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"120x190mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -114931,6 +118491,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -114983,6 +118547,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -115039,6 +118607,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -115091,6 +118663,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -115147,6 +118723,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -115199,6 +118779,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -115255,6 +118839,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -115307,6 +118895,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -115363,6 +118955,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -115415,6 +119011,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -115471,6 +119071,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -115523,6 +119127,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -115579,6 +119187,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -115633,6 +119245,10 @@ var prices2 = [
             "value":"130x180mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -115685,6 +119301,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"130x180mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -115739,6 +119359,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -115795,6 +119419,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -115847,6 +119475,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -115903,6 +119535,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -115955,6 +119591,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -116011,6 +119651,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -116063,6 +119707,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -116119,6 +119767,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -116171,6 +119823,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -116227,6 +119883,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -116279,6 +119939,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -116335,6 +119999,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -116387,6 +120055,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -116443,6 +120115,10 @@ var prices2 = [
             "value":"150x220mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -116495,6 +120171,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"150x220mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -116551,6 +120231,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -116603,6 +120287,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -116659,6 +120347,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -116711,6 +120403,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -116767,6 +120463,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":4
          },
@@ -116819,6 +120519,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -116875,6 +120579,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -116927,6 +120635,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -116983,6 +120695,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":"4/1"
          },
@@ -117035,6 +120751,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Full color frente - Tinta Negra dorso"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -117091,6 +120811,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -117143,6 +120867,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",
@@ -117199,6 +120927,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -117253,6 +120985,10 @@ var prices2 = [
             "value":"220x300mm"
          },
          {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
+         },
+         {
             "checkAttribute":"items[0].inksQuantity",
             "value":1
          },
@@ -117305,6 +121041,10 @@ var prices2 = [
          {
             "checkAttribute":"clossedSizes",
             "value":"220x300mm"
+         },
+         {
+            "checkAttribute":"items[0].inksDetails",
+            "value":"Tinta Negra"
          },
          {
             "checkAttribute":"items[0].inksQuantity",

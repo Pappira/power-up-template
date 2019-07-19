@@ -1016,7 +1016,7 @@ var works = [
           {
             'inksDetails':'Tinta Negra',
             'inksQuantity':1,
-          },
+          },          
           {
             'inksDetails':'Full color',
             'inksQuantity':4,
@@ -1085,11 +1085,13 @@ var works = [
             [
               {
                 "itemId":-1,
-                "type":"clossedSizes",
+                "type":"inks",
                 "action":"add",
                 "values":
                 [
                   {
+                    'inksDetails':'Tinta Negra fondo blanco sin grisados',
+                    'inksQuantity':1,
                   }
                 ]
               }
