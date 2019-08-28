@@ -92,7 +92,9 @@ var nextAfterAcceptedEstimateSelect = function(){
   }
   if (estimate.optionalFinishesPrices && estimate.optionalFinishesPrices.length>0){
       var possibilities = createPossibilities();
+
       deleteWizard();
+
       createWizard(possibilities);
 
   }
@@ -148,8 +150,16 @@ var createPossibilities = function(){
         }
       }
     }
-    
-    return [generalFinishesToShow,itemFinishesToShow];
+    if(generalFinishesToShow.length>0 && itemFinishesToShow.length>0){
+      return [generalFinishesToShow,itemFinishesToShow];
+    }else if(generalFinishesToShow.length > 0){
+      return [generalFinishesToShow];
+    }else if (itemFinishesToShow.length > 0){
+      return [itemFinishesToShow];
+    }else{
+      return null;
+    }
+   
 }
 
 var deleteWizard = function(){
