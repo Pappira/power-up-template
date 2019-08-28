@@ -92,11 +92,12 @@ var nextAfterAcceptedEstimateSelect = function(){
   }
   if (estimate.optionalFinishesPrices && estimate.optionalFinishesPrices.length>0){
       var possibilities = createPossibilities();
-
-      deleteWizard();
-
-      createWizard(possibilities);
-
+      if (possibilities != null){
+        deleteWizard();
+        createWizard(possibilities);
+      }else{
+        updateEstimateAndTrelloCard();
+      }
   }
 }
 
@@ -250,7 +251,7 @@ var createFormButton = function(step,text,next,finish){
      button = createElement('button','btn ' + (next?'nextBtn ':'prevBtn ') + 
        'btn-lg ' + (next?'pull-right ':'pull-left '),'',(next?'Avanzar a ' + text:'Volver a ' + text),'button');
        next?button.addEventListener('click',nextButtonClick):button.addEventListener('click',previuosButtonClick);
-      }else{
+    }else{
        var divButton = createElement('div');
        var thisButton = createElement('button','btn ' +'nextBtn ' + 'btn-lg ' + 'pull-right ','',text,'button');
        thisButton.addEventListener('click',updateEstimateAndTrelloCard);
