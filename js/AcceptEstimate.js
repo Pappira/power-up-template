@@ -109,7 +109,7 @@ var createPossibilities = function(){
         if (prop != "optionalFinishes" && prop !="items" && prop !="workId"){
           if(!JSON.stringify(work[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
             isPossible = false;
-            break;
+            break; 
           }
         }else if(prop == "items"){
           for (var j = 0; j < possibleExtraPrice.items.length; j++){
