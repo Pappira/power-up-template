@@ -354,7 +354,7 @@ var getNewAutomaticEstimateModalCallback = function(){
           }),
           alt: 'Second from left',
           position: 'left',
-        }, 
+        },
         { 
           icon: GRAY_ICON,
           callback: () => console.log('🏎'),
