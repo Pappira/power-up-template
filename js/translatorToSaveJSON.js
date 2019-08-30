@@ -86,14 +86,6 @@ var translate = function(key){
             return 'QPP';
         case 'sheetSize':
             return 'S';
-        /*case '':
-            return '';
-        case '':
-            return '';
-        case '':
-            return '';
-        case '':
-            return '';*/
         default:
             return key;
     }
@@ -187,16 +179,6 @@ var deTranslate = function(key){
             return 'quantityPerPaper';
         case 'S':
             return 'sheetSize';
-        /*case '':
-            return '';
-        case '':
-            return '';
-        case '':
-            return '';
-        case '':
-            return '';
-        case '':
-            return '';*/
         default:
             return key;
     }
