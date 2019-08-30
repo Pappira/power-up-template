@@ -5,24 +5,54 @@
   </head>
   <body>
     <div id="content">
-      <p>Shared - Select a fruit</p>
-      <select id="fruit">
-        <option value="apple">Apple</option>
-        <option value="banana">Banana</option>
-        <option value="date">Date</option>
-        <option value="lemon">Lemon</option>
-        <option value="pineapple">Pineapple</option>
-      </select>
-      <p>Private - Select a vegetable</p>
-      <select id="vegetable">
-        <option value="broccoli">Broccoli</option>
-        <option value="corn">Corn</option>
-        <option value="kale">Kale</option>
-        <option value="onion">Onion</option>
-        <option value="spinach">Spinach</option>
-      </select>
-      <button id="save" class="mod-primary">Save</button>
-    </div>
+      <section>
+        <h3>Generador de números</h3>
+        <label for="idPrefix">Prefijo</label>
+        <input type="text" id="idPrefix"/>
+        <label for="idStartNumber">Comienza desde</label>
+        <input type="number" id="idStartNumber"/>
+        <label for="idSuffix">Sufijo</label>
+        <input type="text" id="idSuffix"/>
+        <input type="hidden" id="idEnabled"/>
+        <button id="idSave" class="mod-primary">Guardar</button>
+        <button id="idEnable" class="mod-primary">Habilitar</button>
+        <button id="idDisable" class="mod-danger">Deshabilitar</button>
+        <button id="idRemove" class="mod-danger">Borrar Numeración</button>
+      </section>
+      <hr/>
+      <section>
+        <h3>Validación de contenido</h3>
+        <label for="validationTitle"><input type="checkbox" id="validationTitle"/> Título no vacío</label>
+        <label for="validationDescription"><input type="checkbox" id="validationDescription"/> Descripción no vacía</label>
+        <label for="validationWorkOrder"><input type="checkbox" id="validationWorkOrder"/> Orden de trabajo</label>
+        <label for="validationEmail"><input type="checkbox" id="validationEmail"/> Email en descripción</label>
+        <label for="validationChecklist">Checklists con nombre</label>
+        <input type="text" id="validationChecklist"/>
+        <input type="hidden" id="validationEnabled"/>
+        <button id="validationSave" class="mod-primary">Guardar</button>
+        <button id="validationEnable" class="mod-primary">Habilitar</button>
+        <button id="validationDisable" class="mod-danger">Deshabilitar</button>
+      </section>
+      <hr/>
+      <section>
+        <h3>Notificación de inactividad</h3>
+        <label for="inactivityShowDays">Mostrar a partir (en días)</label>
+        <input type="number" id="inactivityShowDays"/>
+        <label for="inactivityCriticalDays">Nivel crítico a partir de (en días)</label>
+        <input type="number" id="inactivityCriticalDays"/>
+        <input type="hidden" id="inactivityEnabled"/>
+        <button id="inactivitySave" class="mod-primary">Guardar</button>
+        <button id="inactivityEnable" class="mod-primary">Habilitar</button>
+        <button id="inactivityDisable" class="mod-danger">Deshabilitar</button>
+      </section>
+      <hr/>
+      <section>
+        <h3>Estado en Bibliomanager</h3>
+        <input type="hidden" id="bmgStatusEnabled"/>
+        <button id="bmgStatusEnable" class="mod-primary">Habilitar</button>
+        <button id="bmgStatusDisable" class="mod-danger">Deshabilitar</button>
+      </section>
+    </div> 
     <script src="./js/settings.js"></script>
   </body>
 </html>
