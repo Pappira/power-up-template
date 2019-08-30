@@ -330,29 +330,6 @@ var getNewAutomaticEstimateModalCallback = function(){
         fullscreen: true, // Whether the modal should stretch to take up the whole screen
         callback: () => console.log('Goodbye.'), // optional function called if user closes modal (via `X` or escape)
         title: 'Crear Orden automática', // Optional title for modal header
-        // You can add up to 3 action buttons on the modal header - max 1 on the right side.
-        actions: [{
-          icon: GRAY_ICON,
-          url: 'https://google.com', // Opens the URL passed to it.
-          alt: 'Leftmost',
-          position: 'left',
-        },
-        {
-          icon: GRAY_ICON,
-          callback: (tr) => tr.popup({ // Callback to be called when user clicks the action button.
-            title: 'Settings',
-            url: 'settings.html',
-            height: 164,
-          }),
-          alt: 'Second from left',
-          position: 'left',
-        }, 
-        {
-          icon: GRAY_ICON,
-          callback: () => console.log('🏎'),
-          alt: 'Right side',
-          position: 'right',
-        }],
       }
     );
   }
