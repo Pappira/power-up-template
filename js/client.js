@@ -429,7 +429,8 @@ TrelloPowerUp.initialize({
           icon: GRAY_ICON, // don't use a colored icon here
           text: 'Modificar',
           callback: getNewEstimateModalCallback()
-        }
+        }];
+      }
     );
   },
   'card-from-url': function (t, options) {
