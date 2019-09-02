@@ -409,16 +409,15 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	text.push(createText('text','Cantidad',(selectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // '))));
 	text.push(createText('text','Tamaño cerrado',estimate.clossedSize.map(currentClossedSize => ((typeof currentClossedSize == 'object')?currentClossedSize.value:currentClossedSize)).join(' // ')));
 	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){	
-		//text.push(createText('subtitle2','Terminaciones Generales',''));
 		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
 		if(!selectedOption || dontTakeCareOfSelectedOption){
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish /*+ finishes.finishComment*/).join(" // ")));
+				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish).join(" // ")));
 			}
 		}else{
 			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.finish /*+ (currentMandatoryFinishGroups[i].finishes.finishComment!=""?currentMandatoryFinishGroups[i].finishes.finishComment:'')*/));
+				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.finish));
 			}
 		}
 	}
@@ -428,14 +427,14 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 			if(!selectedOption || dontTakeCareOfSelectedOption){
 				var currentOptionalFinish = estimate.optionalFinishes;
 				for(var i = 0; i < currentOptionalFinish.length;i++){
-					text.push(createText('list',currentOptionalFinish[i].finish/* + (currentOptionalFinish[i].finishComment!=""?currentOptionalFinish[i].finishComment:'')*/,''));
+					text.push(createText('list',currentOptionalFinish[i].finish,''));
 				}
 			}else{
 				var optionalFinishesPrices = estimate.selectedExtraPrices;
 				for (var i = 0; i < optionalFinishesPrices.length; i++){
 					if (optionalFinishesPrices[i].optionalFinishes){
 						for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
-							text.push(createText('list',optionalFinishesPrices[i].optionalFinishes[j].finish /*+ (optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?optionalFinishesPrices[i].optionalFinishes[j].finishComment:'')*/));
+							text.push(createText('list',optionalFinishesPrices[i].optionalFinishes[j].finish));
 						}
 					}
 				}
@@ -693,61 +692,16 @@ var createCompletePriceText = function(estimate){
 						changeMade = true;
 						lastItemsFinishesText = itemsFinishesText;
 					}
-
-					/*for (var j = 0; j < price.items.length; j++){
-							var item =  price.items[j];
-							var itemsFinishesText = "";
-							if(estimate.items[j].mandatoryFinishGroups){
-									for (var k = 0; k < estimate.items[j].mandatoryFinishGroups.length;k++){
-											if (estimate.items[j].mandatoryFinishGroups[k].finishes.length>1){
-													itemsFinishesText += " " + item.mandatoryFinishGroups[k].finishes.finish;
-											}
-									}
-							}
-							var originalItem = estimate.items[item.id];
-							
-
-							
-							var currentPriceText = [
-							((itemsFinishesText && itemsFinishesText.length>0)?itemsFinishesText:'')];
-							currentPriceText = currentPriceText.filter(Boolean).join(", ");
-							if(currentPriceText && currentPriceText.length>0){
-								priceText += (priceText.length>0?' ':'') + ( price.items.length>1?originalItem.name:'')  + currentPriceText;
-							}
-					}*/
-
 					
 					//Si hay más de una cantidad
 					if(estimate.quantity.length>1){
 							//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
-						/*	if(lastPriceText !=priceText){
-									if ((generalFinishesText && generalFinishesText.length>0)){
-										textToAdd.push(createText('list',priceText, []));  
-										isList = true;
-									}else{
-											textToAdd.push(createText('subtitle4', priceText, ''));  
-											isList = false;
-									}
-									lastPriceText = priceText;
-							}*/
-
 							if(changeMade){
 								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
 							}else{
 								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.price.toLocaleString() + ' + IVA']);  
 							}
-							/*if (isList){
-								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.price.toLocaleString() + ' + IVA']);  
-							}else{
-								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
-							}*/
 					}else{
-						/*if(priceText.length>0){
-							textToAdd.push(createText('text', priceText + ' (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
-						}else{
-							textToAdd.push(createText('subtitle6', '','Sub-Total (' + price.quantity + ' unidades): ' + '$ ' + price.price.toLocaleString() + ' + IVA'));  
-						}
-						lastPriceText = priceText;*/
 						textToAdd.push(createText('text', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
 					}
 			}
@@ -758,7 +712,7 @@ var createCompletePriceText = function(estimate){
 var createPriceText = function(estimate,extraPrice){
 	var texts = [];
 	if (estimate.SelectedOption){
-		texts.push(createText('subtitle1','Precio: ' + (estimate.prices[estimate.SelectedOption].price + extraPrice) + ' + IVA' ,''));
+		texts.push(createText('subtitle1','Precio: $' + (estimate.prices[estimate.SelectedOption].price + extraPrice) + ' + IVA' ,''));
 	}
 	return texts;
 }
