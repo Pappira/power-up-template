@@ -4,6 +4,8 @@
 // we can access Bluebird Promises as follows
 var Promise = TrelloPowerUp.Promise;
 
+var cardInfoKey = 'pappira.cardInfo';
+
 var ID_ICON = './images/fingerprint.svg';
 var ERROR_ICON = './images/error.svg';
 var OK_ICON = './images/check.svg';
