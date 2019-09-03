@@ -594,6 +594,7 @@ var filterPrices = function(currentCombination,itemNumber,workId){
   return generalPrices;
 }
 
+
 var filterExtraPrices = function(extraPrice){
   var isValid = 
     Object.keys(extraPrice).map(function(key){
@@ -624,6 +625,32 @@ var filterExtraPrices = function(extraPrice){
     }
 }
 
+var filterGeneralExtraPrices = function(currentPossibleExtraPrice){
+    currentPossibleExtraPrice.optionalFinishes = currentPossibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
+      return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
+    });
+    currentPossibleExtraPrice.optionalFinishes.forEach(optionalFinish => optionalFinish.price = optionalFinish.price*currentPossibleExtraPrice.quantity);
+    return currentPossibleExtraPrice;
+}
+
+var filterItemExtraPrices = function(possible, quantity){
+  for (var s = 0; s < possible.items.length;s++){
+    item = possible.items[s]; 
+    item.optionalFinishes = item.optionalFinishes?
+      item.optionalFinishes.filter(function(optionalFinish){
+        return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
+      }): 
+      null; 
+    if (item.optionalFinishes){
+      item.optionalFinishes.forEach(function(optionalFinish){
+        if(optionalFinish){ 
+          optionalFinish.price = optionalFinish.price*quantity;
+        }
+      });
+    }
+  }
+}
+
 var addExtraPrices = function(work){
   var possibleExtraPrices = extraPrices.filter(function(v, i) {
     return (v.workId == work.id);
@@ -632,7 +659,7 @@ var addExtraPrices = function(work){
   possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,work.quantity);
   
   possibleExtraPrices = possibleExtraPrices.map(function(extraPrices){
-    if (Array.isArray(extraPrice)){
+    if (Array.isArray(extraPrices)){
       return extraPrices.map(function(extraPrice){
         return filterExtraPrices(extraPrice);
       })
@@ -643,29 +670,25 @@ var addExtraPrices = function(work){
 
   //me deja en possibleExtraPrices general solo los extras que están en work
   possibleExtraPrices.forEach(function(possibleExtraPrice){
-    possibleExtraPrice.optionalFinishes = possibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
-      return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
-    });
-    possibleExtraPrice.optionalFinishes.forEach(optionalFinish => optionalFinish.price = optionalFinish.price*possibleExtraPrice.quantity);
+    if(Array.isArray(possibleExtraPrice)){
+       possibleExtraPrice.forEach(function(currentPossibleExtraPrice){
+         currentPossibleExtraPrice = filterGeneralExtraPrices(currentPossibleExtraPrice);
+      });
+    }else{
+      possibleExtraPrice = filterGeneralExtraPrices(possibleExtraPrice);
+    }
   });
 
   //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
   possibleExtraPrices.forEach(function(possible){
-    var quantity = possible.quantity;
-    for (var s = 0; s < possible.items.length;s++){
-      item = possible.items[s]; 
-      item.optionalFinishes = item.optionalFinishes?
-        item.optionalFinishes.filter(function(optionalFinish){
-          return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
-        }): 
-        null; 
-      if (item.optionalFinishes){
-        item.optionalFinishes.forEach(function(optionalFinish){
-          if(optionalFinish){ 
-            optionalFinish.price = optionalFinish.price*quantity;
-          }
-        });
-      }
+    if(Array.isArray(possible)){
+      possible.forEach(function(currentPossibility){
+        var quantity = currentPossibility.quantity;
+        currentPossibility = filterItemExtraPrices(currentPossibility,quantity);
+      });
+    }else{
+      var quantity = possible.quantity;
+      possible = filterItemExtraPrices(possible,quantity);
     }
   }); 
   
