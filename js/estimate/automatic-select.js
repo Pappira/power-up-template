@@ -517,7 +517,7 @@ var filterExtraPricesByQuantity = function(prices,allQuantities){
     var lowerNearestQuantity = getTheLowerNearestQuantityFromExtraPrices(prices,quantity);
     var currentPrice = JSON.parse(JSON.stringify(prices.filter(price => price.quantity == lowerNearestQuantity)));
     if(currentPrice.length>0){
-      currentPrice[0].quantity = quantity; 
+      currentPrice.forEach(current => current.quantity = quantity);
        currentPrices.push(currentPrice);
      }
   });
@@ -594,18 +594,8 @@ var filterPrices = function(currentCombination,itemNumber,workId){
   return generalPrices;
 }
 
-var addExtraPrices = function(work){
-  var possibleExtraPrices = extraPrices.filter(function(v, i) {
-    return (v.workId == work.id);
-  });
-
-  possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,work.quantity);
-  
-  possibleExtraPrices = possibleExtraPrices.map(function(extraPrice){
-    if (Array.isArray(extraPrice)){
-      extraPrice = extraPrice[0];
-    }
-    var isValid = 
+var filterExtraPrices = function(extraPrice){
+  var isValid = 
     Object.keys(extraPrice).map(function(key){
       if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="quantity"){
         if(!JSON.stringify(work[key]).includes(JSON.stringify(extraPrice[key]))){
@@ -615,8 +605,8 @@ var addExtraPrices = function(work){
       return true;
       }).every(Boolean);
 
-      if (isValid){
-        var valid = extraPrice.items.map(function(item,index){
+    if (isValid){
+      var valid = extraPrice.items.map(function(item,index){
         var isValid = 
         Object.keys(item).map(function(key){
           if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="id" && key!="quantity"){
@@ -625,15 +615,30 @@ var addExtraPrices = function(work){
             }
           }
           return true;
-          }).every(Boolean);
-          return isValid;
-    
+        }).every(Boolean);
+        return isValid;
       }).every(Boolean);
       if(valid){
         return extraPrice;
       }
-      }
+    }
+}
 
+var addExtraPrices = function(work){
+  var possibleExtraPrices = extraPrices.filter(function(v, i) {
+    return (v.workId == work.id);
+  });
+
+  possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,work.quantity);
+  
+  possibleExtraPrices = possibleExtraPrices.map(function(extraPrices){
+    if (Array.isArray(extraPrice)){
+      return extraPrices.map(function(extraPrice){
+        return filterExtraPrices(extraPrice);
+      })
+    }else{
+      return filterExtraPrices(extraPrices);
+    }
   }).filter(Boolean);
 
   //me deja en possibleExtraPrices general solo los extras que están en work
