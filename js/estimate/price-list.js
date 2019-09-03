@@ -120,6 +120,46 @@ var extraPrices = [
       ]
   },
   {
+   "workId":0,
+   "quantity":1000,    
+   "optionalFinishes":
+     [
+     ],
+   "items":
+   [
+     {
+       "id":0,
+       "optionalFinishes":
+       [
+         {
+           "finish":"Laminado Mate",
+           "finishComment":"",
+           "showToClient":true,
+           "price": 0.99
+         },
+         {
+           "finish":"Laminado Brillo",
+           "finishComment":"",
+           "showToClient":true,
+           "price": 0.99
+         },
+         {
+           "finish":"Laminado Mate o Brillo a definir",
+           "finishComment":"",
+           "showToClient":true,
+           "price": 0.99
+         },
+         {
+           "finish":"Puntas redondeadas",
+           "finishComment":"",
+           "showToClient":true,
+           "price": 0.55
+         }
+       ]
+     }
+   ]
+},
+  {
    "workId":2,
    "quantity":1,    
    "clossedSizes":"100x150mm",
@@ -365,9 +405,10 @@ var extraPrices = [
         }
       ]
    },
-  {
-      "workId":0,
-      "quantity":1000,    
+   {
+      "workId":3,
+      "quantity":1,    
+      "clossedSizes":"160x150mm",
       "optionalFinishes":
         [
         ],
@@ -381,30 +422,153 @@ var extraPrices = [
               "finish":"Laminado Mate",
               "finishComment":"",
               "showToClient":true,
-              "price": 0.99
+              "price": 9
             },
             {
               "finish":"Laminado Brillo",
               "finishComment":"",
               "showToClient":true,
-              "price": 0.99
+              "price": 9
             },
             {
               "finish":"Laminado Mate o Brillo a definir",
               "finishComment":"",
               "showToClient":true,
-              "price": 0.99
+              "price": 9
             },
             {
               "finish":"Puntas redondeadas",
               "finishComment":"",
               "showToClient":true,
-              "price": 0.55
+              "price": 1
             }
           ]
         }
       ]
-  },
+   },
+   {
+      "workId":3,
+      "quantity":1,    
+      "clossedSizes":"200x140mm",
+      "optionalFinishes":
+        [
+        ],
+      "items":
+      [
+        {
+          "id":0,
+          "optionalFinishes":
+          [
+            {
+              "finish":"Laminado Mate",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 11
+            },
+            {
+              "finish":"Laminado Brillo",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 11
+            },
+            {
+              "finish":"Laminado Mate o Brillo a definir",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 11
+            },
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 1
+            }
+          ]
+        }
+      ]
+   },
+   {
+      "workId":4,
+      "quantity":1,    
+      "clossedSizes":"160x150mm",
+      "optionalFinishes":
+        [
+        ],
+      "items":
+      [
+        {
+          "id":0,
+          "optionalFinishes":
+          [
+            {
+              "finish":"Laminado Mate",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 9
+            },
+            {
+              "finish":"Laminado Brillo",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 9
+            },
+            {
+              "finish":"Laminado Mate o Brillo a definir",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 9
+            },
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 1
+            }
+          ]
+        }
+      ]
+   },
+   {
+      "workId":4,
+      "quantity":1,    
+      "clossedSizes":"200x140mm",
+      "optionalFinishes":
+        [
+        ],
+      "items":
+      [
+        {
+          "id":0,
+          "optionalFinishes":
+          [
+            {
+              "finish":"Laminado Mate",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 11
+            },
+            {
+              "finish":"Laminado Brillo",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 11
+            },
+            {
+              "finish":"Laminado Mate o Brillo a definir",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 11
+            },
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true,
+              "price": 1
+            }
+          ]
+        }
+      ]
+   },
   {
     "workId":1,
     "quantity":50,    
