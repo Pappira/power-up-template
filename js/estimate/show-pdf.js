@@ -116,79 +116,91 @@ var newAddText = function(textToAdd, doc, top){
     return top;
 }
 
+
 var groupFinishes = function(finishesToGroup){
     var finishes = [];
     for (var i = 0; i < finishesToGroup.length; i++){
-        var currentFinishes = [];
-        var finish = {};
-        var price = {};
-        finish.price = [];
-        for (var key in finishesToGroup[i]) {
-            if(key != "workId" && key!= "optionalFinishes" && key !="items"){
-                price[key] = finishesToGroup[i][key];
+        finishesToGroup[i].forEach(function(currentFinishesToGroup){
+            var currentFinishes = [];
+            var price = {};
+            var finish = {};
+            finish.price = [];
+            var name = '';
+            for (var key in currentFinishesToGroup) {
+                if(key != "workId" && key!= "optionalFinishes" && key !="items"){
+                    //price[key] = currentFinishesToGroup[key];
+                    name += ' ' + currentFinishesToGroup[key];
+                }
             }
-        }
-        var optionalFinishPrice = finishesToGroup[i].optionalFinishes;
-        if (optionalFinishPrice){
-            for (var j = 0; j < optionalFinishPrice.length;j++){
-                finish.item = -1;
-                var currentFinish = JSON.parse(JSON.stringify(finish));
-                var currentPrice = JSON.parse(JSON.stringify(price));
-                var currentOptionalFinish = optionalFinishPrice[j];
-                for (var key in currentOptionalFinish) {
-                    if (key !="price"){
-                        currentFinish[key] = currentOptionalFinish[key];
-                    }else{
-                        currentPrice[key] = currentOptionalFinish[key];
+            if(name.length>0){
+                name = ' en' + name;
+            }
+            var optionalFinishPrice = currentFinishesToGroup.optionalFinishes;
+            if (optionalFinishPrice){
+                for (var j = 0; j < optionalFinishPrice.length;j++){
+                    finish.item = -1;
+                    var currentFinish = JSON.parse(JSON.stringify(finish));
+                    var currentPrice = JSON.parse(JSON.stringify(price));
+                    var currentOptionalFinish = optionalFinishPrice[j];
+                    for (var key in currentOptionalFinish) {
+                        if (key !="price"){
+                            currentFinish[key] = currentOptionalFinish[key];
+                        }else{
+                            currentPrice[key] = currentOptionalFinish[key];
+                        }
+                    }
+                    currentFinish.finish = currentOptionalFinish.finish + name; 
+                    currentFinish.price.push(currentPrice);
+                    currentFinishes.push(currentFinish);
+                }
+            }
+            if (currentFinishesToGroup.items){
+                for (var j = 0; j < currentFinishesToGroup.items.length;j++){
+                    if(finish.item = currentFinishesToGroup.items[j]){
+                        finish.item = currentFinishesToGroup.items[j].id;
+                        var optionalFinishPrice = currentFinishesToGroup.items[j].optionalFinishes;
+                        if (optionalFinishPrice){
+                            for (var k = 0; k < optionalFinishPrice.length;k++){
+                                var currentFinish = JSON.parse(JSON.stringify(finish));
+                                var currentPrice = JSON.parse(JSON.stringify(price));
+                                var currentOptionalFinish = optionalFinishPrice[k];
+                                for (var key in currentOptionalFinish) {
+                                    if (key !="price"){
+                                        currentFinish[key] = currentOptionalFinish[key];
+                                    }else{
+                                        currentPrice[key] = currentOptionalFinish[key];
+                                    }
+                                }
+                                currentFinish.finish = currentOptionalFinish.finish + name; 
+                                currentFinish.price.push(currentPrice);
+                                currentFinishes.push(currentFinish);
+                            }
+                        }  
                     }
                 }
-                currentFinish.price.push(currentPrice);
-                currentFinishes.push(currentFinish);
             }
-        }
-        if (finishesToGroup[i].items){
-            for (var j = 0; j < finishesToGroup[i].items.length;j++){
-                if(finish.item = finishesToGroup[i].items[j]){
-                    finish.item = finishesToGroup[i].items[j].id;
-                    var optionalFinishPrice = finishesToGroup[i].items[j].optionalFinishes;
-                    if (optionalFinishPrice){
-                        for (var k = 0; k < optionalFinishPrice.length;k++){
-                            var currentFinish = JSON.parse(JSON.stringify(finish));
-                            var currentPrice = JSON.parse(JSON.stringify(price));
-                            var currentOptionalFinish = optionalFinishPrice[k];
-                            for (var key in currentOptionalFinish) {
-                                if (key !="price"){
-                                    currentFinish[key] = currentOptionalFinish[key];
-                                }else{
-                                    currentPrice[key] = currentOptionalFinish[key];
-                                }
-                            }
-                            currentFinish.price.push(currentPrice);
-                            currentFinishes.push(currentFinish);
-                        }
-                    }  
+            //reviso si hay algún finish así ya agregado
+            var alreadyExist = false;
+            for (var k = 0; k < currentFinishes.length;k++){
+                var currentFinish = currentFinishes[k];
+                for (var j = 0; j < finishes.length; j++){
+                    if (finishes[j].item == currentFinish.item && finishes[j].finish == currentFinish.finish && finishes[j].finishComment == currentFinish.finishComment &&
+                        finishes[j].showToClientFinish == currentFinish.showToClientFinish){
+                        finishes[j].price.push(currentFinish.price[0]);
+                        alreadyExist = true;
+                        break;
+                    }
+                }
+                if (!alreadyExist){
+                    finishes.push(currentFinish);
                 }
             }
-        }
-        //reviso si hay algún finish así ya agregado
-        var alreadyExist = false;
-        for (var k = 0; k < currentFinishes.length;k++){
-            var currentFinish = currentFinishes[k];
-            for (var j = 0; j < finishes.length; j++){
-                if (finishes[j].item == currentFinish.item && finishes[j].finish == currentFinish.finish && finishes[j].finishComment == currentFinish.finishComment &&
-                    finishes[j].showToClientFinish == currentFinish.showToClientFinish){
-                    finishes[j].price.push(currentFinish.price[0]);
-                    alreadyExist = true;
-                    break;
-                }
-            }
-            if (!alreadyExist){
-                finishes.push(currentFinish);
-            }
-        }
+        });
+        
     }
     return finishes;
 }
+
 
 var addHeaderToCurrentPage = function(doc){
     doc.addImage(diagonalLogo, 'JPEG', leftMargin, rowSize, 48, 13); 
