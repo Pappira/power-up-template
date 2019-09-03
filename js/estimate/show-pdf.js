@@ -128,8 +128,11 @@ var groupFinishes = function(finishesToGroup){
             var name = '';
             for (var key in currentFinishesToGroup) {
                 if(key != "workId" && key!= "optionalFinishes" && key !="items"){
-                    //price[key] = currentFinishesToGroup[key];
-                    name += ' ' + currentFinishesToGroup[key];
+                    if (key == "quantity"){
+                        price[key] = currentFinishesToGroup[key];
+                    }else{
+                        name += ' ' + currentFinishesToGroup[key];
+                    }
                 }
             }
             if(name.length>0){
