@@ -529,46 +529,68 @@ var extraPrices = [
       ]
    },
    {
-      "workId":4,
-      "quantity":1,    
-      "clossedSizes":"200x140mm",
-      "optionalFinishes":
-        [
-        ],
-      "items":
+    "workId":4,
+    "quantity":1,    
+    "clossedSizes":"200x140mm",
+    "optionalFinishes":
       [
-        {
-          "id":0,
-          "optionalFinishes":
-          [
-            {
-              "finish":"Laminado Mate",
-              "finishComment":"",
-              "showToClient":true,
-              "price": 11
-            },
-            {
-              "finish":"Laminado Brillo",
-              "finishComment":"",
-              "showToClient":true,
-              "price": 11
-            },
-            {
-              "finish":"Laminado Mate o Brillo a definir",
-              "finishComment":"",
-              "showToClient":true,
-              "price": 11
-            },
-            {
-              "finish":"Puntas redondeadas",
-              "finishComment":"",
-              "showToClient":true,
-              "price": 1
-            }
-          ]
-        }
-      ]
-   },
+      ],
+    "items":
+    [
+      {
+        "id":0,
+        "optionalFinishes":
+        [
+          {
+            "finish":"Laminado Mate",
+            "finishComment":"",
+            "showToClient":true,
+            "price": 11
+          },
+          {
+            "finish":"Laminado Brillo",
+            "finishComment":"",
+            "showToClient":true,
+            "price": 11
+          },
+          {
+            "finish":"Laminado Mate o Brillo a definir",
+            "finishComment":"",
+            "showToClient":true,
+            "price": 11
+          },
+          {
+            "finish":"Puntas redondeadas",
+            "finishComment":"",
+            "showToClient":true,
+            "price": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "workId":7,
+    "quantity":1,    
+    "optionalFinishes":
+      [
+      ],
+    "items":
+    [
+      {
+        "id":0,
+        "optionalFinishes":
+        [
+          {
+            "finish":"Puntas redondeadas",
+            "finishComment":"",
+            "showToClient":true,
+            "price": 1
+          }
+        ]
+      }
+    ]
+  },
   {
     "workId":1,
     "quantity":50,    

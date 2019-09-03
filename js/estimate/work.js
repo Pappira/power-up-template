@@ -995,6 +995,14 @@ var works = [
               'paper':'Jazmin',
               'gr':'240'
             }
+          ],
+          "optionalFinishes":
+          [
+            {
+              "finish":"Puntas redondeadas",
+              "finishComment":"",
+              "showToClient":true
+            }
           ]
         }
       ]
