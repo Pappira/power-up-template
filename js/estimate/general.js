@@ -795,12 +795,12 @@ var createTrelloCardName = function(estimate){
 function compareValues(order='asc') {
     return function(a, b) {
 				let comparison = 0;
-				if(a.mandatoryFinishGroups && b.mandatoryFinishGroups){
-					if (a.mandatoryFinishGroups.length == b.mandatoryFinishGroups.length){
-						for (var j = 0; j < a.mandatoryFinishGroups.length;j++){
-							const varA = (typeof a.mandatoryFinishGroups[j].finishes.finish === 'string') ?a.mandatoryFinishGroups[j].finishes.finish.toUpperCase() : a.mandatoryFinishGroups[j].finishes.finish;
-							const varB = (typeof b.mandatoryFinishGroups[j].finishes.finish === 'string') ?b.mandatoryFinishGroups[j].finishes.finish.toUpperCase() : b.mandatoryFinishGroups[j].finishes.finish;
-							if (a.mandatoryFinishGroups[j].finishes.finish != b.mandatoryFinishGroups[j].finishes.finish){
+				if(a.mandatoryFinish && b.mandatoryFinish){
+					if (a.mandatoryFinish.length == b.mandatoryFinish.length){
+						for (var j = 0; j < a.mandatoryFinish.length;j++){
+							const varA = (typeof a.mandatoryFinish[j].finishes.finish === 'string') ?a.mandatoryFinish[j].finishes.finish.toUpperCase() : a.mandatoryFinish[j].finishes.finish;
+							const varB = (typeof b.mandatoryFinish[j].finishes.finish === 'string') ?b.mandatoryFinish[j].finishes.finish.toUpperCase() : b.mandatoryFinish[j].finishes.finish;
+							if (a.mandatoryFinish[j].finishes.finish != b.mandatoryFinish[j].finishes.finish){
 								if (varA > varB) {
 									return ((order == 'desc') ? -1:1);
 								} else if (varA < varB) {
@@ -810,7 +810,7 @@ function compareValues(order='asc') {
 						}
 					}
 				}
-        key = ['materials','openedSize','inks','faces','quantityOfPages','quantityOfVias'];
+        key = ['material','openedSize','ink','faces','quantityOfPages','quantityOfSheets','quantityOfVias'];
         if(a.items.length==b.items.length){
             for (var j = 0; j < a.items.length;j++){
                 var item1 = a.items[j];
