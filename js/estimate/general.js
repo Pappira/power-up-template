@@ -631,10 +631,10 @@ var createCompletePriceText = function(estimate){
 				var quantityOfTitles = 2;
 					var price = estimate.prices[i];
 					var generalFinishesText = "";
-					if(estimate.work.mandatoryFinishGroups){
-							for (var j = 0; j < estimate.work.mandatoryFinishGroups.length;j++){
-									if (estimate.work.mandatoryFinishGroups[j].finishes.length>1){
-											generalFinishesText += (generalFinishesText.length >0?" ":"") + price.mandatoryFinishGroups[j].finishes.finish;
+					if(estimate.work.mandatoryFinish){
+							for (var j = 0; j < estimate.work.mandatoryFinish.length;j++){
+									if (estimate.work.mandatoryFinish[j].finishes.length>1){
+											generalFinishesText += (generalFinishesText.length >0?" ":"") + price.mandatoryFinish[j].finishes.finish;
 									}
 							}
 					}
@@ -714,8 +714,8 @@ var createCompletePriceText = function(estimate){
 					}
 
 					//mandatoryFinishGroups inside item
-					itemsFinishesText = price.items.map(currentItem => currentItem.mandatoryFinishGroups?currentItem.mandatoryFinishGroups.map(
-						currentMandatoryFinishGroup => currentMandatoryFinishGroup.finishes.length>1?currentMandatoryFinishGroup.finishes.finish:'').join(" "):''
+					itemsFinishesText = price.items.map(currentItem => currentItem.mandatoryFinish?currentItem.mandatoryFinish.map(
+						currentMandatoryFinish => currentMandatoryFinish.finishes.length>1?currentMandatoryFinish.finishes.finish:'').join(" "):''
 					).join(' ');
 					if(itemsFinishesText && itemsFinishesText !=lastItemsFinishesText){
 						quantityOfTitles++;
