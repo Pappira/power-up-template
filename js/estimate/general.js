@@ -359,8 +359,8 @@ function add(accumulator, a) {
 
 var createTextForCard = function(estimate){
 	var texts = createGeneralText(estimate,true);
-	for (var i = 0; i < estimate.items.length;i++){
-		texts = texts.concat(createItemText(estimate,estimate.items[i],true,true,true,false,true));
+	for (var i = 0; i < estimate.work.items.length;i++){
+		texts = texts.concat(createItemText(estimate,estimate.work.items[i],true,true,true,false,true));
 	}
 	texts = texts.concat(createCommentsText(estimate,true,false)); 
 
