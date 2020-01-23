@@ -589,7 +589,7 @@ var createCommentsText = function(estimate, showInternalComments, showCustomerCo
 var createCompletePriceText = function(estimate){
 	textToAdd = [];
 	if(estimate.prices){
-			estimate.prices.map(price => price.items.sort(orderItems()));
+			estimate.prices.forEach(price => price.items.sort(orderItems()));
 			estimate.prices.sort(compareValues());
 			if (estimate.prices.length>1){
 					textToAdd.push(createText('subtitle1','Precios', ''));  
@@ -632,10 +632,10 @@ var createCompletePriceText = function(estimate){
 				var quantityOfTitles = 2;
 					var price = estimate.prices[i];
 					var generalFinishesText = "";
-					if(estimate.work.mandatoryFinish){
-							for (var j = 0; j < estimate.work.mandatoryFinish.length;j++){
-									if (estimate.work.mandatoryFinish[j].finishes.length>1){
-											generalFinishesText += (generalFinishesText.length >0?" ":"") + price.mandatoryFinish[j].finishes.finish;
+					if(estimate.work.mandatoryFinishes){
+						if (estimate.work.mandatoryFinishes.length>1){
+							for (var j = 0; j < estimate.work.mandatoryFinishes.length;j++){
+											generalFinishesText += (generalFinishesText.length >0?" ":"") + price.mandatoryFinishes[j].name;
 									}
 							}
 					}
@@ -653,9 +653,9 @@ var createCompletePriceText = function(estimate){
 					if(materialChange){
 						quantityOfTitles++;
 						var putItemName = quantityOfPapersOnOriginalEstimate.filter(v => v).length>1;
-						var paperText = 'Papel' + price.items.map(currentItem => quantityOfPapersOnOriginalEstimate[currentItem.id]?
+						var paperText = 'Papel' + price.items.map(currentItem => quantityOfPapersOnOriginalEstimate[currentItem.ordinal]?
 																																			(putItemName?' de '+currentItem.name:'') 
-																																				+ ' ' + currentItem.material.paper + ' '  + currentItem.material.gr + 'gr':'').join(", ");
+																																				+ ' ' + currentItem.material.name + ' '  + currentItem.material.gr + 'gr':'').join(", ");
 						if(paperText && paperText != lastPaperText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",paperText, ''));  
 							changeMade = true;
@@ -804,7 +804,7 @@ function orderItems(order = 'asc'){
 
 function compareValues(order='asc') {
     return function(a, b) {
-				let comparison = 0;
+				let comparison = a.quantity - b.quantity;
 				if(a.mandatoryFinish && b.mandatoryFinish){
 					if (a.mandatoryFinish.length == b.mandatoryFinish.length){
 						for (var j = 0; j < a.mandatoryFinish.length;j++){
