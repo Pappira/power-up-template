@@ -22,7 +22,7 @@ t.render(function(){
 		    addCardButton.addEventListener('click', createEstimateAndUpdateCard);
 		}
 	  if(cardInfo){
-			estimate = deTranslateEstimate(JSON.parse( LZString.decompress(cardInfo)));
+			estimate = getEstimate(cardInfo);
 		}
 		createComments(estimate);
 		createCustomer(estimate);

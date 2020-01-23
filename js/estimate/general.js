@@ -109,6 +109,25 @@ var createCheckListObject = function(name, cardId){
 	};
 }
 
+
+
+var getEstimate = function(estimate, functionCallBack){
+	prices = httpGetAsync("http://localhost:8080//api2/googlesheet/estimateid/" + estimate.id,functionCallBack,estimate)
+}
+
+function httpGetAsync(theUrl, functionCallBack,estimate)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+			estimate.prices = JSON.parse(xmlHttp.responseText).prices;
+			functionCallBack(estimate);
+		}
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
+
 var updateCard = function(estimate) {
 	startLoader();
 	if(estimate.deliveryDelay){
@@ -118,8 +137,8 @@ var updateCard = function(estimate) {
 	var checkLists = createCheckListsForCard(estimate);
 	var trelloCheckList = [];
 	var trelloCheckListItems = [];
-	var estimateToSave = translateEstimate(JSON.parse(JSON.stringify(estimate)));
-	var estimateToSave = LZString.compress(JSON.stringify(estimateToSave));
+	var estimateToSave = JSON.parse(JSON.stringify(estimate));
+	delete estimateToSave.prices;
 	t.card('all')
 	.then(function(card) {
 	  t.set('card', 'shared', cardInfoKey, estimateToSave)

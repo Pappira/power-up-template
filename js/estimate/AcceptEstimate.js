@@ -11,7 +11,7 @@ var estimate;
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
-    estimate = deTranslateEstimate(JSON.parse( LZString.decompress(cardInfo)));
+    estimate = getEstimate(cardInfo);
     createWorkTypeSelectPanel();
 	});
 });

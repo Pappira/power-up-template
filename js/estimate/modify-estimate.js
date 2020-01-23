@@ -16,7 +16,7 @@ t.render(function(){
 	.then(function(cardInfo){
 		modifyCardButton.addEventListener('click', updateEstimateCard);
 	  if(cardInfo){
-			estimate = deTranslateEstimate(JSON.parse( LZString.decompress(cardInfo)));
+			estimate = getEstimate(cardInfo);
 			createGeneralInformation(estimate);
 		}
 	});
