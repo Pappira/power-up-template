@@ -12,7 +12,7 @@ var translate = function(key){
             return 'CS';
         case 'quantities':
             return 'Qs';
-        case 'mandatoryFinishGroups':
+        case 'mandatoryFinishes':
             return 'MFG';
         case 'groupName':
             return 'GN';
@@ -20,7 +20,7 @@ var translate = function(key){
             return 'F';
         case 'finish':
             return 'f';
-        case 'finishComment':
+        case 'comment':
             return 'FC';
         case 'showToClientFinish':
             return 'SCF';
@@ -40,7 +40,7 @@ var translate = function(key){
             return 'I';
         case 'bleedPrint':
             return 'BP';
-        case 'inks':
+        case 'ink':
             return 'Ik';
         case 'inksDetails':
             return 'ID';
@@ -54,9 +54,11 @@ var translate = function(key){
             return 'QP';
         case 'quantityOfVias':
             return 'QV';
+        case 'quantityOfSheets':
+            return 'QT';
         case 'faces':
             return 'Fa';
-        case 'materials':
+        case 'material':
             return 'M';
         case 'paper':
             return 'P';
@@ -86,6 +88,16 @@ var translate = function(key){
             return 'QPP';
         case 'sheetSize':
             return 'S';
+        case 'totalPrice':
+            return 'TP';
+        case 'internalInformation':
+            return 'II';
+        case 'Ordinal':
+            return 'O';
+        case 'processDetails':
+            return 'PD';
+        case 'priceWithFinishes':
+            return 'PF';
         default:
             return key;
     }
@@ -106,7 +118,7 @@ var deTranslate = function(key){
         case 'Qs':
             return 'quantities';
         case 'MFG':
-            return 'mandatoryFinishGroups';
+            return 'mandatoryFinishes';
         case 'GN':
             return 'groupName';
         case 'F':
@@ -114,7 +126,7 @@ var deTranslate = function(key){
         case 'f':
             return 'finish';
         case 'FC':
-            return 'finishComment';
+            return 'comment';
         case 'SCF':
             return 'showToClientFinish';
         case 'SC':
@@ -134,7 +146,7 @@ var deTranslate = function(key){
         case 'BP':
             return 'bleedPrint';
         case 'Ik':
-            return 'inks';
+            return 'ink';
         case 'ID':
             return 'inksDetails';
         case 'OZ':
@@ -147,10 +159,12 @@ var deTranslate = function(key){
             return 'quantityOfPages';
         case 'QV':
             return 'quantityOfVias';
+        case 'QT':
+            return 'quantityOfSheets';
         case 'Fa':
             return 'faces';
         case 'M':
-            return 'materials';
+            return 'material';
         case 'P':
             return 'paper';
         case 'Pr':
@@ -179,6 +193,16 @@ var deTranslate = function(key){
             return 'quantityPerPaper';
         case 'S':
             return 'sheetSize';
+        case 'TP':
+            return 'totalPrice';
+        case 'II':
+            return 'internalInformation';
+        case 'O':
+            return 'Ordinal';
+        case 'PD':
+            return 'processDetails';
+        case 'PF':
+            return 'priceWithFinishes';
         default:
             return key;
     }
