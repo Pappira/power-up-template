@@ -539,7 +539,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 							texts.push(createText('subtitle2','Terminaciones',''));
 							notTitlePlaced = false;
 						}
-						texts.push(createText('list',currentItemOptionalFinish[k].name + (currentItemOptionalFinish[k].comment!=""?currentItemOptionalFinish[k].comment:''),''));
+						texts.push(createText('list',currentItemOptionalFinish[k].name + " (" + (currentItemOptionalFinish[k].comment!=""?currentItemOptionalFinish[k].comment + ")":''),''));
 					}
 				}
 			}
