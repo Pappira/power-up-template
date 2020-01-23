@@ -482,8 +482,8 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 			texts.push(createText('subtitle1',item.name,''));
 		}
 		if (selectedItem){
-			texts.push(createText('text','Papel', selectedItem.materials.paper + ' ' + selectedItem.materials.gr + 'gr'));
-			var inks = selectedItem.inks.inksDetails + (showBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
+			texts.push(createText('text','Papel', selectedItem.material.paper + ' ' + selectedItem.material.gr + 'gr'));
+			var inks = selectedItem.ink.inksDetails + (showBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
 			inks += ' - ' + (selectedItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz');
 			texts.push(createText('text','Impresión',inks));
 			if (selectedItem.openedSize != estimate.clossedSize){
@@ -525,7 +525,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 
 
 		}else{
-			if (item.materials){
+			if (item.material){
 				var materials = item.material.map(function(material) {
 					return material.name + " " + material.gr + 'gr';
 				}).join(' // ');
@@ -597,7 +597,7 @@ var createCompletePriceText = function(estimate){
 			var lastGeneralFinishesText = '';
 			var isList = false;
 			//Hay variación en los papeles?
-			var quantityOfPapersOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.materials).size!=1);
+			var quantityOfPapersOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.material).size!=1);
 			var materialChange = quantityOfPapersOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en los tamaños?
@@ -605,7 +605,7 @@ var createCompletePriceText = function(estimate){
 			var sizeChange = quantityOfSizesOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en tintas?
-			var quantityOfInksOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.inks).size!=1);
+			var quantityOfInksOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.ink).size!=1);
 			var inksChange = quantityOfInksOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en fases
@@ -654,7 +654,7 @@ var createCompletePriceText = function(estimate){
 						var putItemName = quantityOfPapersOnOriginalEstimate.filter(v => v).length>1;
 						var paperText = 'Papel' + price.items.map(currentItem => quantityOfPapersOnOriginalEstimate[currentItem.id]?
 																																			(putItemName?' de '+currentItem.name:'') 
-																																				+ ' ' + currentItem.materials.paper + ' '  + currentItem.materials.gr + 'gr':'').join(", ");
+																																				+ ' ' + currentItem.material.paper + ' '  + currentItem.material.gr + 'gr':'').join(", ");
 						if(paperText && paperText != lastPaperText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",paperText, ''));  
 							changeMade = true;
@@ -688,7 +688,7 @@ var createCompletePriceText = function(estimate){
 						var putItemName = quantityOfInksOnOriginalEstimate.filter(v => v).length>1 || quantityOfFacesOnOriginalEstimate.filter(v => v).length>1;
 						var inkText = price.items.map(currentItem => ((quantityOfInksOnOriginalEstimate[currentItem.id] || quantityOfFacesOnOriginalEstimate[currentItem.id])?
 													(putItemName?currentItem.name:'') +
-													 (inksChange?' ' + currentItem.inks.inksDetails:'') + (facesChange?' ' + (currentItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz'):''):'')).join(", ");
+													 (inksChange?' ' + currentItem.ink.inksDetails:'') + (facesChange?' ' + (currentItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz'):''):'')).join(", ");
 						if(inkText && inkText != lastInkText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",inkText, ''));  
 						}
