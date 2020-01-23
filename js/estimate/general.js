@@ -112,7 +112,7 @@ var createCheckListObject = function(name, cardId){
 
 
 var getEstimate = function(estimate, functionCallBack){
-	prices = httpGetAsync("http://localhost:8080//api2/googlesheet/estimateid/" + estimate.id,functionCallBack,estimate)
+	prices = httpGetAsync("http://localhost:8080/api2/googlesheet/estimateid/" + estimate.id,functionCallBack,estimate)
 }
 
 function httpGetAsync(theUrl, functionCallBack,estimate)
@@ -452,7 +452,9 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 		if(!(!selectedOption || dontTakeCareOfSelectedOption)){
 			currentMandatoryFinish = estimate.prices[estimate.SelectedOption].mandatoryFinishes;
 		}
-		text = createMandatoryFinishText(currentMandatoryFinish[i],text);
+		for(var i = 0; i < currentMandatoryFinish.length;i++){
+			text = createMandatoryFinishText(currentMandatoryFinish[i],text);
+		}
 	}
 	if (includeOptionalFinishes){
 		if (estimate.work.optionalFinishes && estimate.work.optionalFinishes.length >0){
