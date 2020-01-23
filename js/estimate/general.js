@@ -177,7 +177,7 @@ var createCard = function(estimate){
 	createNewTrelloCard(t, cardToSave, function(card) {
 	  setTimeout(function () {
 		var estimateToSave = JSON.parse(JSON.stringify(translateEstimate(estimate)));
-		var estimateToSave = LZString.compress(JSON.stringify(estimate));
+		estimateToSave = LZString.compress(JSON.stringify(estimateToSave));
 		t.set(card.id, 'shared', cardInfoKey, estimateToSave)
 		  .then(function(){
 			t.showCard(card.id);
