@@ -598,27 +598,27 @@ var createCompletePriceText = function(estimate){
 			var lastGeneralFinishesText = '';
 			var isList = false;
 			//Hay variación en los papeles?
-			var quantityOfPapersOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.material).size!=1);
+			var quantityOfPapersOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.material).size>1);
 			var materialChange = quantityOfPapersOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en los tamaños?
-			var quantityOfSizesOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.openedSize).size!=1);
+			var quantityOfSizesOnOriginalEstimate = estimate.work.items.map(currentItem =>  typeof currentItem.openedSize =='object' && new Set(currentItem.openedSize).size>1);
 			var sizeChange = quantityOfSizesOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en tintas?
-			var quantityOfInksOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.ink).size!=1);
+			var quantityOfInksOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.ink).size>1);
 			var inksChange = quantityOfInksOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en fases
-			var quantityOfFacesOnOriginalEstimate = estimate.work.items.map(currentItem => new Set((currentItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz')).size1=1);
+			var quantityOfFacesOnOriginalEstimate = estimate.work.items.map(currentItem =>  typeof currentItem.faces =='object' && new Set(currentItem.faces).size>1);
 			var facesChange = quantityOfFacesOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en páginas
-			var quantityOfPagesOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.quantityOfPages).size1=1);
+			var quantityOfPagesOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.quantityOfPages).size>1);
 			var pagesChange = quantityOfPagesOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en vías
-			var quantityOfViasOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.quantityOfVias).size1=1);
+			var quantityOfViasOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.quantityOfVias).size>1);
 			var viasChange = quantityOfViasOnOriginalEstimate.filter(v => v).length >0;
 
 		//	quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
@@ -667,7 +667,7 @@ var createCompletePriceText = function(estimate){
 						quantityOfTitles++;
 						var putItemName = quantityOfSizesOnOriginalEstimate.filter(v => v).length>1;
 						var sizeText = price.items.map(function(currentItem){
-							if(quantityOfSizesOnOriginalEstimate[currentItem.id]){
+							if(quantityOfSizesOnOriginalEstimate[currentItem.ordinal]){
 								var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.work.clossedSize)).size;
 								var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.work.items.map(currentItem1 => new Set(currentItem1.openedSize).size);
 								quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
@@ -687,7 +687,7 @@ var createCompletePriceText = function(estimate){
 					if(inksChange || facesChange){
 						quantityOfTitles++;
 						var putItemName = quantityOfInksOnOriginalEstimate.filter(v => v).length>1 || quantityOfFacesOnOriginalEstimate.filter(v => v).length>1;
-						var inkText = price.items.map(currentItem => ((quantityOfInksOnOriginalEstimate[currentItem.id] || quantityOfFacesOnOriginalEstimate[currentItem.id])?
+						var inkText = price.items.map(currentItem => ((quantityOfInksOnOriginalEstimate[currentItem.ordinal] || quantityOfFacesOnOriginalEstimate[currentItem.ordinal])?
 													(putItemName?currentItem.name:'') +
 													 (inksChange?' ' + currentItem.ink.inksDetails:'') + (facesChange?' ' + (currentItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz'):''):'')).join(", ");
 						if(inkText && inkText != lastInkText){
@@ -700,10 +700,10 @@ var createCompletePriceText = function(estimate){
 						var putItemName =  quantityOfPagesOnOriginalEstimate.filter(v => v).length>1 || quantityOfViasOnOriginalEstimate.filter(v => v).length>1;
 						var pagesText = 
 														price.items.map(currentItem => 
-															((quantityOfPagesOnOriginalEstimate[currentItem.id] || quantityOfViasOnOriginalEstimate[currentItem.id])?
+															((quantityOfPagesOnOriginalEstimate[currentItem.ordinal] || quantityOfViasOnOriginalEstimate[currentItem.ordinal])?
 															(putItemName?currentItem.name + ' de ':'') + 
-															(quantityOfPagesOnOriginalEstimate[currentItem.id]?((pagesChange && currentItem.quantityOfPages>1)?item.quantityOfPages + ' páginas ':''):'') + 
-															(quantityOfViasOnOriginalEstimate[currentItem.id]?((viasChange && currentItem.quantityOfVias>1)?item.quantityOfVias + ' vías':''):''):'')
+															(quantityOfPagesOnOriginalEstimate[currentItem.ordinal]?((pagesChange && currentItem.quantityOfPages>1)?item.quantityOfPages + ' páginas ':''):'') + 
+															(quantityOfViasOnOriginalEstimate[currentItem.ordinal]?((viasChange && currentItem.quantityOfVias>1)?item.quantityOfVias + ' vías':''):''):'')
 															
 															
 														).join(", ");
