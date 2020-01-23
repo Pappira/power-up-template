@@ -98,6 +98,10 @@ var translate = function(key){
             return 'PD';
         case 'priceWithFinishes':
             return 'PF';
+        case 'propertiesToSelectByCustomer':
+            return 'PT';
+        case 'work':
+            return 'W';
         default:
             return key;
     }
@@ -203,6 +207,10 @@ var deTranslate = function(key){
             return 'processDetails';
         case 'PF':
             return 'priceWithFinishes';
+        case 'PT':
+            return 'propertiesToSelectByCustomer';
+        case 'W':
+            return 'work';
         default:
             return key;
     }
