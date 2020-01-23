@@ -589,7 +589,7 @@ var createCommentsText = function(estimate, showInternalComments, showCustomerCo
 var createCompletePriceText = function(estimate){
 	textToAdd = [];
 	if(estimate.prices){
-			estimate.prices.map(price => price.items.sort(orderItems));
+			estimate.prices.map(price => price.items.sort(orderItems()));
 			estimate.prices.sort(compareValues());
 			if (estimate.prices.length>1){
 					textToAdd.push(createText('subtitle1','Precios', ''));  
@@ -796,7 +796,7 @@ function orderItems(order = 'asc'){
 		let comparison = 0;
 		if(a.ordinal > b.ordinal){
 			return ((order == 'desc') ? -1:1);
-		} else if (varA < varB) {
+		} else if (a.ordinal <  b.ordinal) {
 			return ((order == 'desc') ? 1:-1);
 		}
 	}
