@@ -408,14 +408,14 @@ var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption)
 	return texts;
 }
 
-var createMandatoryFinishText = function(currentMandatoryFinishGroups, text){
-	var group = currentMandatoryFinishGroups[i].name.split(" ")[0];
-	var name = currentMandatoryFinishGroups[i].name.split(" ");
+var createMandatoryFinishText = function(currentMandatoryFinish, text){
+	var group = currentMandatoryFinish.name.split(" ")[0];
+	var name = currentMandatoryFinish.name.split(" ");
 	delete name[0];
 	name = name.filter(Boolean).join(" ");
 	var currentText = text.filter(currentText => currentText.name == group);
 	if (currentText && currentText.length>0){
-		currentText.value = currentText.value + " // " + name;
+		currentText[0].value = currentText[0].value + " // " + name;
 	}else{
 		text.push(createText('text',group,name));
 	}
@@ -429,17 +429,11 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	text.push(createText('text','Cantidad',(selectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.work.quantity.join(' // '))));
 	text.push(createText('text','Tamaño cerrado',estimate.work.clossedSize));
 	if (estimate.work.mandatoryFinishes && estimate.work.mandatoryFinishes.length >0){	
-		var currentMandatoryFinishGroups = estimate.work.mandatoryFinishes;
-		if(!selectedOption || dontTakeCareOfSelectedOption){
-			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text = createMandatoryFinishText(currentMandatoryFinishGroups[i],text);
-			}
-		}else{
-			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishes;
-			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text = createMandatoryFinishText(currentMandatoryFinishGroups[i],text);
-			}
+		var currentMandatoryFinish  = estimate.work.mandatoryFinishes;
+		if(!(!selectedOption || dontTakeCareOfSelectedOption)){
+			currentMandatoryFinish = estimate.prices[estimate.SelectedOption].mandatoryFinishes;
 		}
+		text = createMandatoryFinishText(currentMandatoryFinish[i],text);
 	}
 	if (includeOptionalFinishes){
 		if (estimate.work.optionalFinishes && estimate.work.optionalFinishes.length >0){
