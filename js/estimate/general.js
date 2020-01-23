@@ -589,6 +589,7 @@ var createCommentsText = function(estimate, showInternalComments, showCustomerCo
 var createCompletePriceText = function(estimate){
 	textToAdd = [];
 	if(estimate.prices){
+			estimate.prices.map(price => price.items.sort(orderItems));
 			estimate.prices.sort(compareValues());
 			if (estimate.prices.length>1){
 					textToAdd.push(createText('subtitle1','Precios', ''));  
@@ -790,7 +791,16 @@ var createTrelloCardName = function(estimate){
 	}
 	return quantity + " " + estimate.work.name + " - " + contactAndBusinessInfo.filter(Boolean).join(' - ');
 }
-
+function orderItems(order = 'asc'){
+	return function(a,b){
+		let comparison = 0;
+		if(a.ordinal > b.ordinal){
+			return ((order == 'desc') ? -1:1);
+		} else if (varA < varB) {
+			return ((order == 'desc') ? 1:-1);
+		}
+	}
+}
 
 function compareValues(order='asc') {
     return function(a, b) {
