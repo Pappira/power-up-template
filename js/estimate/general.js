@@ -438,16 +438,12 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	if (includeOptionalFinishes){
 		if (estimate.work.optionalFinishes && estimate.work.optionalFinishes.length >0){
 			text.push(createText('subtitle2','Terminaciones',''));
-			if(!selectedOption || dontTakeCareOfSelectedOption){
-				var currentOptionalFinish = estimate.work.optionalFinishes;
-				for(var i = 0; i < currentOptionalFinish.length;i++){
-					text.push(createText('list',currentOptionalFinish[i].name,''));
-				}
-			}else{
-				var optionalFinishes = estimate.prices[estimate.SelectedOption].optionalFinishes;
-				for (var i = 0; i < optionalFinishes.length; i++){
-					text.push(createText('list',optionalFinishes[i].name));
-				}
+			var currentOptionalFinish = estimate.work.optionalFinishes;
+			if(!(!selectedOption || dontTakeCareOfSelectedOption)){
+				currentOptionalFinish = estimate.prices[estimate.SelectedOption].optionalFinishes;
+			}
+			for(var i = 0; i < currentOptionalFinish.length;i++){
+				texts.push(createText('list',currentItemOptionalFinish[k].name + (currentItemOptionalFinish[k].comment!=""?" (" + currentItemOptionalFinish[k].comment + ")":''),''));
 			}
 		}
 	}
@@ -532,10 +528,10 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 				var quantityOfSheets = item.quantityOfSheets.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
 				texts.push(createText('text','Hojas',quantityOfSheets));
 			}
-			if (item.mandatoryFinishGroups && item.mandatoryFinishGroups.length >0){
-				var currentItemMandatoryFinishGroups = item.mandatoryFinishGroups;
-				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.map(finishes => finishes.name + finishes.comment).join(" // ")));
+			if (item.mandatoryFinish && item.mandatoryFinish.length >0){
+				var currentItemMandatoryFinish = item.mandatoryFinish;
+				for (var k = 0; k < currentItemMandatoryFinish.length;k++){
+					text = createMandatoryFinishText(currentMandatoryFinish[k],text);
 				}
 			}
 			var notTitlePlaced = true;
@@ -547,7 +543,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 							texts.push(createText('subtitle2','Terminaciones',''));
 							notTitlePlaced = false;
 						}
-						texts.push(createText('list',currentItemOptionalFinish[k].name + " (" + (currentItemOptionalFinish[k].comment!=""?currentItemOptionalFinish[k].comment + ")":''),''));
+						texts.push(createText('list',currentItemOptionalFinish[k].name + (currentItemOptionalFinish[k].comment!=""?" ("  + currentItemOptionalFinish[k].comment + ")":''),''));
 					}
 				}
 			}
