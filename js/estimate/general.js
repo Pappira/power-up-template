@@ -408,22 +408,36 @@ var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption)
 	return texts;
 }
 
+var createMandatoryFinishText = function(currentMandatoryFinishGroups, text){
+	var group = currentMandatoryFinishGroups[i].name.split(" ")[0];
+	var name = currentMandatoryFinishGroups[i].name.split(" ");
+	delete name[0];
+	name = name.filter(Boolean).join(" ");
+	var currentText = text.filter(currentText => currentText.name == group);
+	if (currentText && currentText.length>0){
+		currentText.value = currentText.value + " // " + name;
+	}else{
+		text.push(createText('text',group,name));
+	}
+	return text;
+}
+
 var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOfSelectedOption){  
 	var text = [];
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	text.push(createText('title',estimate.work.name,''));
 	text.push(createText('text','Cantidad',(selectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.work.quantity.join(' // '))));
 	text.push(createText('text','Tamaño cerrado',estimate.work.clossedSize));
-	if (estimate.work.mandatoryFinishGroups && estimate.work.mandatoryFinishGroups.length >0){	
-		var currentMandatoryFinishGroups = estimate.work.mandatoryFinishGroups;
+	if (estimate.work.mandatoryFinishes && estimate.work.mandatoryFinishes.length >0){	
+		var currentMandatoryFinishGroups = estimate.work.mandatoryFinishes;
 		if(!selectedOption || dontTakeCareOfSelectedOption){
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.name).join(" // ")));
+				text = createMandatoryFinishText(currentMandatoryFinishGroups[i],text);
 			}
 		}else{
-			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
+			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishes;
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.name));
+				text = createMandatoryFinishText(currentMandatoryFinishGroups[i],text);
 			}
 		}
 	}
