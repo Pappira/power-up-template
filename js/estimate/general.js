@@ -418,12 +418,12 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 		var currentMandatoryFinishGroups = estimate.work.mandatoryFinishGroups;
 		if(!selectedOption || dontTakeCareOfSelectedOption){
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish).join(" // ")));
+				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.name).join(" // ")));
 			}
 		}else{
 			currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.finish));
+				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.name));
 			}
 		}
 	}
@@ -433,7 +433,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 			if(!selectedOption || dontTakeCareOfSelectedOption){
 				var currentOptionalFinish = estimate.work.optionalFinishes;
 				for(var i = 0; i < currentOptionalFinish.length;i++){
-					text.push(createText('list',currentOptionalFinish[i].finish,''));
+					text.push(createText('list',currentOptionalFinish[i].name,''));
 				}
 			}else{
 				var optionalFinishes = estimate.prices[estimate.SelectedOption].optionalFinishes;
@@ -459,7 +459,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 		if (selectedItem){
 			texts.push(createText('text','Papel', selectedItem.materials.paper + ' ' + selectedItem.materials.gr + 'gr'));
 			var inks = selectedItem.inks.inksDetails + (showBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
-			inks += ' - ' + selectedItem.faces;
+			inks += ' - ' + (selectedItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz');
 			texts.push(createText('text','Impresión',inks));
 			if (selectedItem.openedSize != estimate.clossedSize){
 				texts.push(createText('text','Tamaño Abierto',selectedItem.openedSize));
@@ -510,7 +510,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 					var inks = item.ink.map(function(ink) {
 						return ink.inksDetails;
 					}).join(' // ') + (showBleedPrint?' ' + (item.bleedPrint?'(Impresión al Vivo)':''):'');
-					inks += (item.faces?' - ' + item.faces.join(' // '):'');
+					inks += (item.faces?' - ' + item.faces.map(faz => faz=='DOBLE_FAZ'?'Doble faz':'Simple faz').join(' // '):'');
 					texts.push(createText('text','Impresión',inks));
 			}
 			if (item.openedSize && (JSON.stringify(item.openedSize.sort()) != JSON.stringify([...new Set(estimate.prices.map(price => price.clossedSizes))].sort()))){
@@ -584,7 +584,7 @@ var createCompletePriceText = function(estimate){
 			var inksChange = quantityOfInksOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en fases
-			var quantityOfFacesOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.faces).size1=1);
+			var quantityOfFacesOnOriginalEstimate = estimate.items.map(currentItem => new Set((currentItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz')).size1=1);
 			var facesChange = quantityOfFacesOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en páginas
@@ -663,7 +663,7 @@ var createCompletePriceText = function(estimate){
 						var putItemName = quantityOfInksOnOriginalEstimate.filter(v => v).length>1 || quantityOfFacesOnOriginalEstimate.filter(v => v).length>1;
 						var inkText = price.items.map(currentItem => ((quantityOfInksOnOriginalEstimate[currentItem.id] || quantityOfFacesOnOriginalEstimate[currentItem.id])?
 													(putItemName?currentItem.name:'') +
-													 (inksChange?' ' + currentItem.inks.inksDetails:'') + (facesChange?' ' + currentItem.faces:''):'')).join(", ");
+													 (inksChange?' ' + currentItem.inks.inksDetails:'') + (facesChange?' ' + (currentItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz'):''):'')).join(", ");
 						if(inkText && inkText != lastInkText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",inkText, ''));  
 						}
