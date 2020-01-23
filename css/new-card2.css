@@ -106,6 +106,45 @@ body {
   width: 100%;
 }
 
+.chips.input-field{
+  text-align: left;
+}
+
+.input::placeholder{
+  color: #9e9e9e;
+  line-height: 3rem;
+  left: 1.5rem;
+  padding-left: 1.5rem;
+  position: absolute;
+  padding-top:-10.5rem;
+  font-size: .8rem;
+  cursor: text;
+}
+
+.input:-ms-input-placeholder {
+  color: #9e9e9e;
+  line-height: 3rem;
+  font-size: 16px;
+  left: 1.5rem;
+  padding-left: 1.5rem;
+  position: absolute;
+  top: -26px;
+  font-size: .8rem;
+  cursor: text;
+ }
+ 
+ .input::-ms-input-placeholder {
+  color: #9e9e9e;
+  line-height: 3rem;
+  font-size: 16px;
+  left: 1rem;
+  padding-left: 1rem;
+  position: absolute;
+  top: -26px;
+  font-size: .8rem;
+  cursor: text;
+ }
+
 .stepwizard-step p {
     margin-top: 10px;
 }
@@ -224,4 +263,36 @@ h6 {
 
 .card .card-content p{
   margin-top: 0.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+  border-bottom: none!important;
+  max-width: none;
+}
+input[type=text] {
+  max-width: none;
+}
+
+
+.input-field {
+  width: 45%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  float: left;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: .8rem;
+  color: #9e9e9e;
+  display: block;
+  font-weight: 700;
+  margin-left: 120px;
 }

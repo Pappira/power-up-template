@@ -1,13 +1,9 @@
 var t = TrelloPowerUp.iframe();
 var cardInfoKey = 'pappira.cardInfo';
 var listId = '5a9ef0ce024c776a21220836';
-
-var selectedWorkTypeId;
-var selectedWorkId;
-var selectedOptions = {};
-var haveToCheckIncidences = true;
+var wizardForm =  document.getElementById('wizardForm');
 var work;
-var originalWork;
+var finalWorkOptions;
 
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
@@ -19,13 +15,11 @@ t.render(function(){
 });
 
 var createWorkTypeSelectPanel = function(){
-  var wizardForm =  document.getElementById('wizardForm');
   var wizardElement = createScreen('workType','Tipo de trabajo',workTypes,nextAfterWorkTypeSelect);
   wizardForm.appendChild(wizardElement);
 }
 
 var createWorkSelectPanel = function(works){
-  var wizardForm =  document.getElementById('wizardForm');
   var wizardElement = createScreen('work','Trabajo',works,nextAfterWorkSelect);
   wizardForm.appendChild(wizardElement);
 }
@@ -45,352 +39,177 @@ var createScreen = function(type,titulo,possibilities,nextFunction){
 }
 
 var nextAfterWorkTypeSelect = function(){
-  var elementId = $(this).attr('id');
-  var id = elementId.substring(elementId.indexOf('-')+1);
-  selectedWorkTypeId = id;
-  var possibleWorks = [];
-  for (var i = 0; i < works.length;i++){
-    if (works[i].workTypeId == id){
-      possibleWorks.push(works[i]);
-    }
-  }
+  selectedWorkTypeId = $(this).attr('id').substring($(this).attr('id').indexOf('-')+1);
+  var possibleWorks = works.filter(work => work.workTypeId == selectedWorkTypeId);
   deleteWizard();
   createWorkSelectPanel(possibleWorks);
 }
 
 var deleteWizard = function(){
-  var wizardForm =  document.getElementById('wizardForm');
   while(wizardForm.firstChild){
     wizardForm.removeChild(wizardForm.firstChild);
   }
   $(".stepwizard-step").remove();
 }
 
-var createWizard = function(combinations){
-  var divContainer = createElement('div','stepwizard-row setup-panel','wizardRow');
-  var wizardForm =  document.getElementById('wizardForm');
-  for(var i = 0; i < combinations.length; i++){
-    var combination = combinations[i];
-    var wizardButton = createWizardButton(i+1,combination.name);
-    divContainer.appendChild(wizardButton);
-    var wizardElement = createWizardElement(i+1,combination,i==combinations.length-1?true:false,combinations);
-    wizardForm.appendChild(wizardElement);
-  }
-  var wizardContainer = document.getElementById('wizardContainer');
-  wizardContainer.appendChild(divContainer);
-  startFunction();
-}
-
-var createWizardElement = function(step,combination,last,combinations){
-  var div = createElement('div','setup-content','step-' + step); 
-  var divRow = createElement('div','row'); 
-  var title = createElement('h3','','',combination.itemName + ' ' + combination.name+''); 
-  divRow.appendChild(title);
-
-  for (var i = 0; i < combination.values.length;i++){
-    var value = combination.values[i]+'';
-    if (typeof combination.values[i] == 'object'){
-      if(combination.name == 'optionalFinishes'){
-        value = combination.values[i].finish;
-      }else if(combination.name.includes('mandatoryFinishGroups')){
-        
-        value = combination.values[i].finish;
-      }else if (combination.name == 'materials'){
-        value = combination.values[i].paper + ' ' + combination.values[i].gr + 'gr.';
-      }else if (combination.name == 'inks'){
-            value = combination.values[i].inksQuantity + ' / ' + combination.values[i].inksDetails; 
-      }
-    }
-    var card = createRevealCard(noImage,value,combination.itemId + '-' + combination.name,i);
-    divRow.appendChild(card);
-  }
- 
-  var divButton = createElement('div','div-button'); 
-
-  if(step!=1){
-    var buttonPreviuos = createFormButton(step,combinations[step-2].name,false);
-    divButton.appendChild(buttonPreviuos);
-  }
-  if(!last){
-    var buttonNext = createFormButton(step,combinations[step].name,true);
-    divButton.appendChild(buttonNext);
-  }else{
-    var buttonNext = createFormButton(step,'Finalizar',true,true);
-    divButton.appendChild(buttonNext);
-  }
-  div.appendChild(divRow);
-  div.appendChild(divButton);
-
-  return div;
-}
 
 var nextAfterWorkSelect = function(){
   var elementId = $(this).attr('id');
   var id = elementId.substring(elementId.indexOf('-')+1);
   selectedWorkId = id;
   work = works[id];
-  originalWork = works[id];
-  var possibilities = createPossibilities(work);
-
   deleteWizard();
-  createWizard(possibilities);
+  
+  work.options.forEach(function(option){
+    if(option.values!=null){
+      var subDiv = createMultipleSelect(option);
+      wizardForm.appendChild(subDiv);
+    }else{
+      var subDiv = createChips(option);
+      wizardForm.appendChild(subDiv);
+    }
+  });
+  var div = createElement('div','chips');
+  var input = createElement('input','','','','number');
+  div.appendChild(input);
+  var divLoader = createElement('div','','loader');
+  wizardForm.appendChild(divLoader);
+  var a = createElement('a','waves-effect waves-light btn','button-generate-estimate','Presupuestar');
+  wizardForm.appendChild(a);
+  
+  document.getElementById('button-generate-estimate').addEventListener('click', createEstimateAndUpdateCard);
+
+  $('.chips').each(function() {
+    var currentElement = $(this);
+    var id = currentElement.attr('id');
+    currentElement.chips({
+      placeholder: id,
+      secondaryPlaceholder: '+' + id
+    });
+  });
+
+  $('select').formSelect();
+  $('select').each(function() {
+    var currentElement = $(this);
+    currentElement.on('change', function(){
+      checkIncidences($(this));
+    });
+  });
 }
 
-var createPossibilities = function(work){
-  var possibilities = [];
-  for(var attr in work){
-    if(typeof work[attr] == 'object' && attr != "mandatoryFinishGroups"){
-      if (attr != 'items'){
-        if((work[attr].length > 1) || (attr == "optionalFinishes" && work[attr].length >0)){
-          var possibility = {};
-          possibility['itemId'] = -1;
-          possibility['itemName'] = 'general';
-          possibility['name'] = attr;
-          if (Array.isArray(work[attr])){
-            possibility['values'] = [];
-            work[attr].forEach(function(currentItem){
-              if (typeof currentItem === 'object' && !Array.isArray(currentItem)){
-               possibility['values'].push(currentItem.value);
+var createEstimateAndUpdateCard = function(){
+  startLoader();
+  var workRequest = createRequest();
+  var estimate = sendRequest(workRequest);
+  createCard(estimate);
+}
+
+var createRequest = function(){
+  finalWorkOptions = JSON.parse(JSON.stringify(work));
+  var cellsInformation = [];
+  $('.chips').each(function() {
+    var currentElement = $(this);
+    var id = currentElement.attr('id');
+    for (i = 0; i < work.options.length;i++){
+      var option = work.options[i];
+      if (option.name==id){
+        var cellInformation = {};
+        cellInformation.range = option.cell;
+        cellInformation.values = M.Chips.getInstance(currentElement).chipsData.map(chip => chip.tag);
+        finalWorkOptions.options[i].values = cellInformation.values;
+        cellsInformation.push(cellInformation);
+        break;
+      }
+    }
+  });
+  $('select').each(function() {
+    var currentElement = $(this);
+    var id = currentElement.parent().parent().attr('id');
+    for (i = 0; i < work.options.length;i++){
+      var option = work.options[i];
+      if (option.name==id){
+        var materializeSelect = M.FormSelect.getInstance(currentElement);
+        if (!materializeSelect.input.disabled){
+          var cellInformation = {};
+          cellInformation.range = option.cell;
+          cellInformation.values = materializeSelect.getSelectedValues();
+          finalWorkOptions.options[i].values = cellInformation.values;
+          cellsInformation.push(cellInformation);
+        }
+        break;
+      }
+    }
+  });
+  workRequest = {};
+  workRequest.spreadSheetId = work.spreadSheetId;
+  workRequest.sheetName = work.sheetName;
+  workRequest.cellsInformation = cellsInformation;
+  return workRequest;
+}
+
+var createChips = function(option){
+  var div = createElement('div','chips',option.name);
+  var input = createElement('input','','','','number');
+  div.appendChild(input);
+  
+  return div;
+}
+var createMultipleSelect = function(option){
+  var div = createElement('div','input-field col s12',option.name);
+  var attirbuteName = ['multiple'];
+  var attributeValue = [true];
+  if(option.disabled){
+    attirbuteName.push('disabled');
+    attributeValue.push(true);
+  }
+  var select = createElement('select','','','', '','','','','',attirbuteName,attributeValue);
+  var label = createElement('label','','',option.name);
+  for(j=0; j < option.values.length; j++){
+    var value = option.values[j];
+    var optionHtml = createElement('option','','',value, '','',j+1,'',true);
+    select.appendChild(optionHtml);
+  }
+  div.appendChild(select);
+  div.appendChild(label);
+  return div;
+
+}
+
+var checkIncidences = function(element){
+  var option =  work.options.filter(option => option.name == element.parent().parent().attr('id'))[0];
+  if (option !=null){
+    if (option.incidences !=null){
+      for (k = 0; k < option.incidences.length; k++){
+        var incidence = option.incidences[k];
+        $('select').each(function() {
+          var currentElement = $(this).parents().children('input');
+          var currentElement2 = $(this);
+          var id = currentElement.parent().parent().attr('id');
+          if(id == incidence.name){
+            if(M.FormSelect.getInstance(element).getSelectedValues().some(selectedValue => incidence.selected.includes(selectedValue))){
+              if(incidence.active){
+                currentElement.removeAttr('disabled');
+                currentElement2.removeAttr('disabled');
               }else{
-               possibility['values'].push(currentItem);
+                currentElement.attr('disabled',true);
+                currentElement2.attr('disabled',true);
               }
-            });
-           
-          }else{
-            possibility['values'] = work[attr];
-          }
-          possibilities.push(possibility);
-        }
-      }else{
-        var items = work.items;
-        for (var i = 0; i < items.length;i++){
-          var item = items[i];
-          for(var itemAttr in item){
-            if(typeof item[itemAttr] == 'object' && itemAttr != "mandatoryFinishGroups"){
-              if ((item[itemAttr].length > 1) || (itemAttr == "optionalFinishes" && work[attr].length >0)){
-                var possibility = {};
-                possibility['itemId'] = i;
-                possibility['itemName'] = item.name;
-                possibility['name'] = itemAttr;
-                possibility['values'] = item[itemAttr];
-                possibilities.push(possibility);
-              }
-            }else if(itemAttr == "mandatoryFinishGroups"){
-              for (var j = 0; j < item[itemAttr].length ; j++){
-                  var possibility = {};
-                  possibility['itemId'] = i;
-                  possibility['itemName'] =  item.name;
-                  possibility['name'] = itemAttr + " // " + j;
-                  possibility['values'] = item[itemAttr][j].finishes;
-                  possibilities.push(possibility);
-              }
-            }
-          }
-        }
-      }
-    }else if(attr == "mandatoryFinishGroups"){
-      for (var i = 0; i < work[attr].length ; i++){
-          var possibility = {};
-          possibility['itemId'] = -1;
-          possibility['itemName'] = 'general';
-          possibility['name'] = attr + " // " + i;
-          possibility['values'] = work[attr][i].finishes;
-          possibilities.push(possibility);
-      }
-    }
-  }
-
-  
-  return possibilities;
-}
-
-var selectOption = function(){ 
-  var elementId = $(this).attr('id');
-  var item;
-  if (elementId.charAt(0)=='-'){
-    item = -1;
-    elementId = elementId.substring(3);
-  }else{
-    var item = elementId.substring(0,elementId.indexOf('-'));
-    elementId = elementId.substring(elementId.indexOf('-')+1);
-  }
-  var name = elementId.substring(0,elementId.indexOf('-'));
-  var value = parseInt(elementId.substring(elementId.indexOf('-')+1));
-
-  if (!selectedOptions[item]){
-    selectedOptions[item] = {};
-  }
-  if (selectedOptions[item][name]){
-    if(selectedOptions[item][name].indexOf(value) == -1){
-      selectedOptions[item][name].push(value);
-    }else{
-      removeItem = value;
-      selectedOptions[item][name] = jQuery.grep(selectedOptions[item][name],function(value1) {
-        return value1 != removeItem;
-      });
-    }
-  }else{
-    selectedOptions[item][name] = [value];
-  }
-  checkIncidences(this,item,name,value);
-}
-
-var startFunction = function(){
-var navListItems = $('div.setup-panel div a'),
-          allWells = $('.setup-content'),
-          allNextBtn = $('.nextBtn'),
-        allPrevBtn = $('.prevBtn');
-
-  allWells.hide();
-
-  navListItems.click(function (e) {
-      e.preventDefault();
-      var $target = $($(this).attr('href')),
-              $item = $(this);
-
-      if (!$item.hasClass('disabled')) {
-          navListItems.removeClass('btn-primary').addClass('btn-default');
-          $item.addClass('btn-primary');
-          allWells.hide();
-          $target.show();
-          $target.find('input:eq(0)').focus();
-      }
-  });  
-  $('div.setup-panel div a.btn-primary').trigger('click');
-};
-
-var checkIncidences = function(element,currentItem,currentName,currentValue){
-  
-  if(haveToCheckIncidences){
-    var currentPositionText = element.parentElement.parentElement.parentElement.getElementsByTagName("h3")[0].innerText;
-    var currentElementHaveIncidences = false;
-    var item = work.items[currentItem];
-    if (currentItem == -1){
-      item = work;
-    }  
-    var currentElement;
-    if (currentName.includes("//")){
-      currentElement = item[currentName.split(" // ")[0]][currentName.split(" // ")[1]].finishes[currentValue];
-    }else{
-      currentElement = item[currentName][currentValue];
-    }
-    if(currentElement.incidences){
-      currentElementHaveIncidences = true;
-    }
-    work = JSON.parse(JSON.stringify(originalWork)); 
-
-    for (var itemId in selectedOptions) {
-      for (var name in selectedOptions[itemId]) {
-          for (var selectedOptionId in selectedOptions[itemId][name]){
-            var selectedOption = selectedOptions[itemId][name][selectedOptionId];
-            var item = work.items[itemId];
-            if (itemId == -1){
-              item = work;
-            }  
-            var currentElement;
-            if (name.includes("//")){
-              currentElement = item[name.split(" // ")[0]][name.split(" // ")[1]].finishes[selectedOptions[itemId][name][i]];
             }else{
-              currentElement = item[name][selectedOption];
-            }
-            if(currentElement && currentElement.incidences){
-              for (var i = 0; i < currentElement.incidences.length;i++){
-                var incidence = currentElement.incidences[i];
-                if (incidence.itemId==-1){
-                  if (incidence.action == 'add'){
-                    for (var j = 0; j < incidence.values.length;j++){
-                      if(!work[incidence.type].includes(incidence.values[j])){
-                        if (!jQuery.isEmptyObject(incidence.values[j])){
-                          work[incidence.type].push(incidence.values[j]);
-                        }
-                      }
-                    }
-                  }else if(incidence.action == 'replace'){
-                    work[incidence.type] = incidence.values;
-                  }
-                }else{
-                  if (incidence.action == 'add'){
-                    for (var j = 0; j < incidence.values.length;j++){
-                      if(!work.items[incidence.itemId][incidence.type].includes(incidence.values[j])){
-                        if (!jQuery.isEmptyObject(incidence.values[j])){
-                          work.items[incidence.itemId][incidence.type].push(incidence.values[j]);
-                        }
-                      }
-                    }
-                  }else if(incidence.action == 'replace'){
-                    work.items[incidence.itemId][incidence.type] = incidence.values;
-                  }
-                }
+              if(incidence.active){
+                currentElement.attr('disabled',true);
+                currentElement2.attr('disabled',true);
+              }else{
+                currentElement.removeAttr('disabled');
+                currentElement2.removeAttr('disabled');
               }
             }
+            currentElement2.formSelect();
           }
-        }
-      }
-      if(currentElementHaveIncidences){
-        var possibilities = createPossibilities(work);
-        deleteWizard();
-        createWizard(possibilities);
-        var allH3 = document.getElementsByTagName("h3")
-        var currentPositionElement;
-        for (var i = 0; i < allH3.length;i++){
-          if(allH3[i].innerText == currentPositionText){
-            currentPositionElement = allH3[i];
-            break;
-          }
-        }
-        currentPositionElement = $('a[href="#' + currentPositionElement.parentElement.parentElement.getAttribute("id") + '"]')[0];
-        checkAlreadySelectedPossibilities(currentPositionElement);
-      }
-
-    }
-  } 
-
-var checkAlreadySelectedPossibilities = function(currentPosition){
-  haveToCheckIncidences = false;
-  var lastSelectedOptions = selectedOptions;
-  selectedOptions = {};
-  for (var itemId in lastSelectedOptions) {
-    for (var name in lastSelectedOptions[itemId]) {
-      for (var i = 0; i < lastSelectedOptions[itemId][name].length;i++){
-        var id = itemId + "-" + name + "-" + lastSelectedOptions[itemId][name][i] ;
-        var htmlItem = document.getElementById(id);
-        if(htmlItem){
-          eventFire(htmlItem.getElementsByTagName('span')[0], 'click');
-        }
+        });
       }
     }
   }
-  eventFire(currentPosition, 'click');
-  haveToCheckIncidences = true;
-}
-
-var createRevealCard = function(image,title,type,id,functionOnClick){
-  var divCol = createElement('div','col m4','','');
-  var divCard = createElement('div','card',type + '-' + id,'');
-  var divCardImage = createElement('div','card-image waves-effect waves-block waves-light','','');
-  var img = createElement('img','activator','','','','','','','',['src'],[image]);
-  var span = createElement('span','card-title activator grey-text text-darken-4','',title);
-
-  divCardImage.appendChild(img);
-  divCardImage.appendChild(span);
-
-  var divCardReveal = createElement('div','card-reveal','','');
-  var spanReveal = createElement('span','card-title grey-text text-darken-4');
-  var iClose = createElement('i','material-icons right',type + '-' + title);
-
-  spanReveal.appendChild(iClose);
-  divCardReveal.appendChild(spanReveal);
-  divCard.addEventListener('click',selectOption);
-  divCard.appendChild(divCardImage);
-  divCard.appendChild(divCardReveal);
-
-  divCol.appendChild(divCard);
-
-  if (functionOnClick){
-    divCard.addEventListener('click',functionOnClick)
-  }
-  return divCol;
-}
+} 
 
 var createHTMLCard = function(image,title,type,id,functionOnClick){
   var divCol = createElement('div','col m4','','');
@@ -409,646 +228,8 @@ var createHTMLCard = function(image,title,type,id,functionOnClick){
   return divCol;
 }
 
-var previuosButtonClick = function(){
-  var curStep = $(this).closest(".setup-content"),
-  curStepBtn = curStep.attr("id"),
-  prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
-
-  prevStepWizard.removeAttr('disabled').trigger('click');
-}
-
-var nextButtonClick = function(){
-  var curStep = $(this).closest(".setup-content"),
-    curStepBtn = curStep.attr("id"),
-    nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-    curInputs = curStep.find("input[type='text'],input[type='url']"),
-    isValid = true;
-
-  $(".form-group").removeClass("has-error");
-  for(var i=0; i<curInputs.length; i++){
-    if (!curInputs[i].validity.valid){
-      isValid = false;
-      $(curInputs[i]).closest(".form-group").addClass("has-error");
-    }
-  }
-
-  if (isValid)
-    nextStepWizard.removeAttr('disabled').trigger('click');
-};
-
-var createWizardButton = function(step,name){
-  var div = createElement('div','stepwizard-step'); 
-  var a = createElement('a','btn ' + (step==1?'btn-primary':'btn-default') +' btn-circle','',step,'button','','','#step-'+step,(step==1?'':'disabled'));
-  var p = createElement('p','','',name);
-  div.appendChild(a);
-  div.appendChild(p);
-  return div;
-}  
-
-var createFormButton = function(step,text,next,finish){
-  var button;
-   if(!finish){
-     button = createElement('button','btn ' + (next?'nextBtn ':'prevBtn ') + 
-       'btn-lg ' + (next?'pull-right ':'pull-left '),'',(next?'Avanzar a ' + text:'Volver a ' + text),'button');
-       next?button.addEventListener('click',nextButtonClick):button.addEventListener('click',previuosButtonClick);
-      }else{
-       var divButton = createElement('div');
-       var thisButton = createElement('button','btn ' +'nextBtn ' + 'btn-lg ' + 'pull-right ','',text,'button');
-       thisButton.addEventListener('click',createEstimateAndTrelloCard2);
-       var divLoader = createElement('div','','loader');
-       divButton.appendChild(thisButton);
-       divButton.appendChild(divLoader);
-       button = divButton;
-   }
-   return button;
- } 
-
-var checkMandatoryFieldsSelected = function(){
-  var possibilities = createPossibilities(work);
-  var message = "";
-  for (var i = 0; i < possibilities.length; i++){
-    if (!(selectedOptions && selectedOptions[possibilities[i].itemId] && selectedOptions[possibilities[i].itemId][possibilities[i].name] && selectedOptions[possibilities[i].itemId][possibilities[i].name].length >=1)){
-      if(possibilities[i].name.indexOf('optional')==-1){
-        message += possibilities[i].itemName + " " + possibilities[i].name +  '\n';
-      }
-    }
-  }
-  return message;
-}
-
-var getValueFromObjectByCompleteReference = function(currentObjectProp, object){
-
-  var props = currentObjectProp.split('.');
-  var currentObject = JSON.parse(JSON.stringify(object));
-  for (var h=0; h < props.length;h++){
-    currentObject = getValueFromObjectByReferences(currentObject, props[h]);
-  }
-  return currentObject;
-}
-
-var getValueFromObjectByReferences = function(object, reference){
-  reference = reference.split("+");
-  var returnValue = [];
-  for (var i = 0; i < reference.length;i++){
-    returnValue.push(getValueFromObjectByReference(JSON.parse(JSON.stringify(object)),reference[i]));
-  }
-  if(returnValue.length>1){
-    return returnValue.join(' ');
-  }else{
-    return returnValue[0];
-  }
-}
-
-var getValueFromObjectByReference = function(object, reference){
-  if(reference.indexOf("[")>-1){
-    var index = reference.substring(reference.indexOf("[")+1, reference.indexOf("]"));
-    var reference = reference.substring(0,reference.indexOf("["));
-    return object[reference][index];
-  }else{    
-    return object[reference];
-  }
-
-}
-
-
-var filterExtraPricesByQuantity = function(prices,allQuantities){
-  var  currentPrices = [];
-  allQuantities.forEach(function(quantity){
-    var lowerNearestQuantity = getTheLowerNearestQuantityFromExtraPrices(prices,quantity);
-    var currentPrice = JSON.parse(JSON.stringify(prices.filter(price => price.quantity == lowerNearestQuantity)));
-    if(currentPrice.length>0){
-      currentPrice.forEach(current => current.quantity = quantity);
-       currentPrices.push(currentPrice);
-     }
-  });
-  return currentPrices;
-}
-
-var getTheLowerNearestQuantityFromExtraPrices = function(prices,quantity){
-  var quantities = prices.filter(price => price.quantity <= quantity).map(price => price.quantity);
-  return Math.max.apply(null, quantities);
-}
-
-var getTheLowerNearestQuantity = function(prices,quantity){
-  var quantities = [];
-  prices.forEach(function(price){
-    quantities.push(price.toCheck.filter(toCheck => toCheck.checkAttribute == "quantity" && toCheck.value <= quantity).map(toCheck => toCheck.value));
-  });
-  return Math.max.apply(null,[].concat.apply([],quantities).filter(Boolean));
-}
-
-var getTheHigherNearestQuantity = function(prices,quantity){
-  var quantities = [];
-  prices.forEach(function(price){
-    quantities.push(price.toCheck.filter(toCheck => toCheck.checkAttribute == "quantity" && toCheck.value >= quantity).map(toCheck => toCheck.value));
-  });
-  return Math.min.apply(null,[].concat.apply([],quantities).filter(Boolean));
-}
-
-var filterByQuantity = function(prices,quantity1,quantity2){
-  var pricesToReturn = prices.filter(function(price) {
-    return (price.toCheck.filter(toCheck => toCheck.checkAttribute=="quantity" && 
-    toCheck.value == quantity1)).length>0;
-  }).filter(price => price.price.condition == "each");
-  var pricesToReturn2 = prices.filter(function(price) {
-    return (price.toCheck.filter(toCheck => toCheck.checkAttribute=="quantity" && 
-    toCheck.value == quantity2)).length>0;
-  }).filter(price => price.price.condition == "fixed");
-  return pricesToReturn.concat(pricesToReturn2);
-}
-
-var filterPrices = function(currentCombination,itemNumber,workId){
-
-  var generalPrices = prices2.filter(function(generalPrice) {
-    return (generalPrice.workId == workId);
-  });
-
-  generalPrices = generalPrices.filter(function(generalPrice) {
-    return (generalPrice.item == itemNumber);
-  });
-
-  var lowerNearestQuantity = getTheLowerNearestQuantity(generalPrices,currentCombination.quantity);
-  var higherNearestQuantity = getTheHigherNearestQuantity(generalPrices,currentCombination.quantity);
-
-  generalPrices = filterByQuantity(generalPrices,lowerNearestQuantity,higherNearestQuantity);
-
-
-  var checks = generalPrices[0].toCheck.map(a => a.checkAttribute);
-  checks = checks.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","excess","quantity"].indexOf(check)==-1);
-
-  for (var t = 0; t < checks.length;t++){
-    generalPrices = generalPrices.filter(function(v, i) {
-      var insideCurrentWork = getValueFromObjectByCompleteReference(checks[t], JSON.parse(JSON.stringify(currentCombination)));
-
-      var priceToCheckValue = v.toCheck.filter(
-        function(toCheck){
-          return toCheck.checkAttribute == checks[t];
-        })[0].value;
-
-      if(insideCurrentWork!=priceToCheckValue){
-        return false;       
-      }
-      return true;
-    });
-  }
-  return generalPrices;
-}
-
-
-var filterExtraPrices = function(extraPrice){
-  var isValid = 
-    Object.keys(extraPrice).map(function(key){
-      if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="quantity"){
-        if(!JSON.stringify(work[key]).includes(JSON.stringify(extraPrice[key]))){
-          return false; 
-        }
-      }
-      return true;
-      }).every(Boolean);
-
-    if (isValid){
-      var valid = extraPrice.items.map(function(item,index){
-        var isValid = 
-        Object.keys(item).map(function(key){
-          if (key != "optionalFinishes" && key !="items" && key !="workId" && key!="id" && key!="quantity"){
-            if(!JSON.stringify(work.items[index][key]).includes(JSON.stringify(item[key]))){
-                  return false; 
-            }
-          }
-          return true;
-        }).every(Boolean);
-        return isValid;
-      }).every(Boolean);
-      if(valid){
-        return extraPrice;
-      }
-    }
-}
-
-var filterGeneralExtraPrices = function(currentPossibleExtraPrice){
-    currentPossibleExtraPrice.optionalFinishes = currentPossibleExtraPrice.optionalFinishes.filter(function(optionalFinish){
-      return work.optionalFinishes.map(finishes => finishes.finish).indexOf(optionalFinish.finish)>-1
-    });
-    currentPossibleExtraPrice.optionalFinishes.forEach(optionalFinish => optionalFinish.price = optionalFinish.price*currentPossibleExtraPrice.quantity);
-    return currentPossibleExtraPrice;
-}
-
-var filterItemExtraPrices = function(possible, quantity){
-  for (var s = 0; s < possible.items.length;s++){
-    item = possible.items[s]; 
-    item.optionalFinishes = item.optionalFinishes?
-      item.optionalFinishes.filter(function(optionalFinish){
-        return [].concat.apply([],work.items.filter(workItem => workItem.id == item.id).map(workItem => workItem.optionalFinishes.map(optional => optional.finish))).indexOf(optionalFinish.finish)>-1;
-      }): 
-      null; 
-    if (item.optionalFinishes){
-      item.optionalFinishes.forEach(function(optionalFinish){
-        if(optionalFinish){ 
-          optionalFinish.price = optionalFinish.price*quantity;
-        }
-      });
-    }
-  }
-}
-
-var addExtraPrices = function(work){
-  var possibleExtraPrices = extraPrices.filter(function(v, i) {
-    return (v.workId == work.id);
-  });
-
-  possibleExtraPrices = filterExtraPricesByQuantity(possibleExtraPrices,work.quantity);
-  
-  possibleExtraPrices = possibleExtraPrices.map(function(extraPrices){
-    if (Array.isArray(extraPrices)){
-      return extraPrices.map(function(extraPrice){
-        return filterExtraPrices(extraPrice);
-      })
-    }else{
-      return filterExtraPrices(extraPrices);
-    }
-  }).filter(Boolean);
-
-  //me deja en possibleExtraPrices general solo los extras que están en work
-  possibleExtraPrices.forEach(function(possibleExtraPrice){
-    if(Array.isArray(possibleExtraPrice)){
-       possibleExtraPrice.forEach(function(currentPossibleExtraPrice){
-         currentPossibleExtraPrice = filterGeneralExtraPrices(currentPossibleExtraPrice);
-      });
-    }else{
-      possibleExtraPrice = filterGeneralExtraPrices(possibleExtraPrice);
-    }
-  });
-
-  //me deja en possibleExtraPrices de cada item solo los extras que están en cada item del work
-  possibleExtraPrices.forEach(function(possible){
-    if(Array.isArray(possible)){
-      possible.forEach(function(currentPossibility){
-        var quantity = currentPossibility.quantity;
-        currentPossibility = filterItemExtraPrices(currentPossibility,quantity);
-      });
-    }else{
-      var quantity = possible.quantity;
-      possible = filterItemExtraPrices(possible,quantity);
-    }
-  }); 
-  
-  work.optionalFinishesPrices = possibleExtraPrices;
-}
-
-var createEstimateAndTrelloCard2 = function(){
-  var message = checkMandatoryFieldsSelected();
-  if(message.length > 0){
-    window.alert('Debe completar todas las opciones solicitadas \n' + message);
-  }else{
-    if (work.clossedSizes.length > 1){
-      work.clossedSize = cutArray(work.clossedSizes,selectedOptions[-1].clossedSizes);
-    }else{
-      work.clossedSize = work.clossedSizes;
-    }
-    if (work.quantity.length > 1){
-      work.quantity =  cutArray(work.quantity,selectedOptions[-1].quantity);
-    }
- 
-    if(work.mandatoryFinishGroups){
-      for(var i = 0; i < work.mandatoryFinishGroups.length;i++){
-        work.mandatoryFinishGroups[i].finishes = cutArray(work.mandatoryFinishGroups[i].finishes,selectedOptions[-1]["mandatoryFinishGroups " + "// " + i]);
-      }
-    }
-    if (work.optionalFinishes){
-      work.optionalFinishes = cutArray(work.optionalFinishes,selectedOptions[-1].optionalFinishes);
-    }
-    for (var i = 0; i < work.items.length;i++){
-      if (work.items[i].quantityOfPages.length>1){
-          work.items[i].quantityOfPages = cutArray(work.items[i].quantityOfPages,selectedOptions[i].quantityOfPages);
-      }
-      if(work.items[i].materials.length>1){
-          work.items[i].materials = cutArray(work.items[i].materials,selectedOptions[i].materials);
-      }
-      if(work.items[i].inks.length>1){
-          work.items[i].inks = cutArray(work.items[i].inks,selectedOptions[i].inks);
-      }
-      if(work.items[i].faces.length>1){
-          work.items[i].faces = cutArray(work.items[i].faces,selectedOptions[i].faces);
-      }
-      if(work.items[i].openedSize && work.items[i].openedSize.length>1){
-          work.items[i].openedSize = cutArray(work.items[i].openedSize,selectedOptions[i].openedSize);
-      }
-      if(work.items[i].mandatoryFinishGroups){
-        for(var j = 0; j < work.items[i].mandatoryFinishGroups.length;j++){
-          work.items[i].mandatoryFinishGroups[j].finishes = cutArray(work.items[i].mandatoryFinishGroups[j].finishes,selectedOptions[i]["mandatoryFinishGroups " + "// " + j]);
-        }
-      }
-      if (work.items[i].optionalFinishes){
-        work.items[i].optionalFinishes = cutArray(work.items[i].optionalFinishes,selectedOptions[i].optionalFinishes);
-      }
-    }
-    
-    addPrices(work);
-
-    addExtraPrices(work);
-    delete work['image'];
-    delete work['clossedSizes'];
-    createCard(work);
-    return work;
-  }
-}
-
-function add(accumulator, a) {
-  return accumulator + a;
-}
-
-var convertEachAttrToPrice = function(currentWork, combinationAttr, workAttr,work){
-  if(Array.isArray(workAttr)){
-    for (var eachWorkAttr of workAttr){
-      if(typeof eachWorkAttr == 'object' && !Array.isArray(eachWorkAttr)){
-        if(combinationAttr){
-          if (combinationAttr.includes(eachWorkAttr.value)){
-            for (var mandatoryChanges of eachWorkAttr.mandatoryChanges){
-              if(mandatoryChanges.itemId!=-1){
-                currentWork.items[mandatoryChanges.itemId][mandatoryChanges.type] = mandatoryChanges.values[0];
-                if(!work.items[mandatoryChanges.itemId][mandatoryChanges.type].includes(mandatoryChanges.values[0])){
-                  work.items[mandatoryChanges.itemId][mandatoryChanges.type].push(mandatoryChanges.values[0]);
-                }
-              }else{
-                currentWork[mandatoryChanges.type] = mandatoryChanges.values;  
-                if(!work[mandatoryChanges.type].includes(mandatoryChanges.values[0])){
-                  work[mandatoryChanges.type].push(mandatoryChanges.values[0]);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  if (combinationAttr){
-    return combinationAttr;
-  }
-  return workAttr;
-}
-
-var convertWorkToPrice = function(work,combination,price){
-  var currentWork = JSON.parse(JSON.stringify(work));
-  
-  for(var attr in combination){
-    if (attr != 'items'){
-      currentWork[attr] = convertEachAttrToPrice(currentWork,combination[attr],work[attr],work);
-    }else{
-      for (var item of combination[attr]){
-        for(var attrItem in item){
-          currentWork.items[item.id][attrItem] = convertEachAttrToPrice(currentWork,combination.items[item.id][attrItem],item[attrItem]);
-        }
-      }
-    }
-  }
-  delete currentWork.workTypeId;
-  delete currentWork.workType;
-  delete currentWork.image;
-  delete currentWork.name;
-  delete currentWork.quantities;
-  delete currentWork.clossedSize;
-
-  currentWork.workId = currentWork.id;
-  delete currentWork.id;
-  currentWork.price = price;
-  for(var i =0; i < currentWork.items.length; i++){
-    currentWork.items[i].inks = {
-      inksQuantity: JSON.parse(JSON.stringify(currentWork.items[i].inksQuantity)),
-      inksDetails: JSON.parse(JSON.stringify(currentWork.items[i].inksDetails))
-    }; 
-    delete currentWork.items[i].inksQuantity;
-    delete currentWork.items[i].inksDetails;
-
-    currentWork.items[i].materials = {
-      gr: JSON.parse(JSON.stringify(currentWork.items[i].gr)),
-      paper: JSON.parse(JSON.stringify(currentWork.items[i].paper))
-    };
-    delete currentWork.items[i].gr;
-    delete currentWork.items[i].paper;
-
-  }
-  
-  delete currentWork.prices;
-  currentWork.items.forEach(item =>delete item.optionalFinishes);
-  return JSON.parse(JSON.stringify(currentWork));
-}
-
-var getCombinations = function(estimate){
-  var items= [];
-  var combinationsObject = [];
-  combinations = [];
-  var quantities = [];
-  var clossedSizes = [];
-  var generalMandatoryFinishGroups = [];
-  if(estimate.mandatoryFinishGroups){
-    for (var j=0; j < estimate.mandatoryFinishGroups.length;j++){
-      var lastOfLasts = j == estimate.mandatoryFinishGroups.length -1; 
-      var generalMandatoryFinish = [];
-      for(var k = 0; k < estimate.mandatoryFinishGroups[j].finishes.length;k++){
-        generalMandatoryFinish.push('"' + j + '-' + k + (lastOfLasts?'"':'",'));
-      }
-      generalMandatoryFinishGroups.push(generalMandatoryFinish);
-    }
-  }
-
-  var generalMandatoryFinishGroupsCases = allPossibleCases(generalMandatoryFinishGroups);
-  for (var j = 0; j < generalMandatoryFinishGroupsCases.length;j++){
-    var mandatoryFinishGroupsString = '"mandatoryFinishGroups":[';
-    var separated = generalMandatoryFinishGroupsCases[j].split(",");
-    for (var k = 0; k  < separated.length;k++){
-      var currentSeparated = separated[k].substring(1,separated[0].length-1);
-      var mandatoryFinishGroups = JSON.parse(JSON.stringify(estimate.mandatoryFinishGroups[currentSeparated.split("-")[0]]));
-      var finishes = cutArray(mandatoryFinishGroups.finishes,currentSeparated.split("-")[1]);
-      mandatoryFinishGroups.finishes = finishes[0]; 
-      mandatoryFinishGroupsString += JSON.stringify(mandatoryFinishGroups) + (k==separated.length-1?'':',')
-    }
-    generalMandatoryFinishGroupsCases[j] = mandatoryFinishGroupsString + "],";
-  }
-  for (var i = 0; i  < estimate.quantity.length; i++){
-    quantities.push('{"quantity":' + estimate.quantity[i]+',');
-  }
-  var generalCases;
-  if (estimate.clossedSize){
-    if(Array.isArray(estimate.clossedSize)){
-      for (var j = 0; j < estimate.clossedSize.length;j++){
-        clossedSizes.push('"clossedSizes": "'+ (typeof estimate.clossedSize[j] == 'object'?estimate.clossedSize[j].value:estimate.clossedSize[j]) + '",');
-      }
-    }else{
-      clossedSizes.push('"clossedSizes": "'+  (typeof estimate.clossedSize == 'object'?estimate.clossedSize.value:estimate.clossedSize) + '",');
-    }
-    generalCases = allPossibleCases([quantities,clossedSizes]);
-  }else{
-    generalCases = quantities;
-  }
-
-  if (generalMandatoryFinishGroupsCases && generalMandatoryFinishGroupsCases.length > 0){
-    combinations.push(allPossibleCases([generalCases,generalMandatoryFinishGroupsCases]));
-  }else{    
-    combinations.push(generalCases);
-  }
-
-  for (var i = 0; i  <  estimate.items.length; i++){
-      var item = estimate.items[i];
-      items.push(item.name);
-      var quantityOfPages = [];
-      var quantityOfMaterials = [];
-      var quantityOfInks = [];
-      var faces = [];
-      var openedSize = [];
-      var quantityOfVias = [];
-      var mandatoryFinishGroup = [];
-      for (var j = 0; j  < item.quantityOfPages.length;j++){
-          quantityOfPages.push('"item":{"id":'+i+ ', "name": "'+ item.name +  '", "quantityOfPages": ' + item.quantityOfPages[j] + ',');
-      }
-      for (var j = 0; j  < item.inks.length;j++){
-          quantityOfInks.push('"inksQuantity":'+ item.inks[j].inksQuantity + ',' + '"inksDetails": "'+ item.inks[j].inksDetails+ '",');
-      }
-      for (var j = 0; j  < item.faces.length;j++){
-          faces.push('"faces": "'+ item.faces[j] + '",');
-      }
-      if (item.openedSize){
-        for (var j = 0; j  < item.openedSize.length;j++){
-          openedSize.push('"openedSize": "'+ item.openedSize[j] + '",');
-        }
-      }
-      for (var j = 0; j  < item.quantityOfVias.length;j++){
-        quantityOfVias.push('"quantityOfVias": '+ item.quantityOfVias[j] + ',');
-      }
-      if(item.mandatoryFinishGroups){
-        for (var j=0; j < item.mandatoryFinishGroups.length;j++){
-          var lastOfLasts = j == item.mandatoryFinishGroups.length -1; 
-          var mandatoryFinish = [];
-          for(var k = 0; k < item.mandatoryFinishGroups[j].finishes.length;k++){
-            mandatoryFinish.push('"' + j + '-' + k + (lastOfLasts?'"':'",'));
-          }
-          mandatoryFinishGroup.push(mandatoryFinish);
-        }
-      }
-      for (var j = 0; j < item.materials.length; j++){
-          quantityOfMaterials.push(' "paper": "' + item.materials[j].paper + '", "gr": ' + item.materials[j].gr + '}' + (i==(estimate.items.length-1)?']':','));
-      }
-      var cases = allPossibleCases([quantityOfPages,quantityOfInks]);
-      var cases2 = allPossibleCases(mandatoryFinishGroup);
-      for (var j = 0; j < cases2.length;j++){
-        var mandatoryFinishGroupsString = '"mandatoryFinishGroups":[';
-        var separated = cases2[j].split(",");
-        for (var k = 0; k  < separated.length;k++){
-          var currentSeparated = separated[k].substring(1,separated[0].length-1);
-          var mandatoryFinishGroups = JSON.parse(JSON.stringify(item.mandatoryFinishGroups[currentSeparated.split("-")[0]]));
-          var finishes = cutArray(mandatoryFinishGroups.finishes,currentSeparated.split("-")[1]);
-          mandatoryFinishGroups.finishes = finishes[0]; 
-          mandatoryFinishGroupsString += JSON.stringify(mandatoryFinishGroups) + (k==separated.length-1?'':',')
-        }
-        cases2[j] = mandatoryFinishGroupsString + "],";
-      }
-      if(cases2 && cases2.length>0){
-              cases = allPossibleCases([cases,cases2]);
-      }
-      if(openedSize && openedSize.length >1){
-        cases = allPossibleCases([cases,openedSize]);
-      }
-      cases = allPossibleCases([cases,quantityOfVias]);
-      cases = allPossibleCases([cases,faces]);
-      cases = allPossibleCases([cases,quantityOfMaterials]);
-      combinations.push(cases);
-  }
-  combinations = allPossibleCases(combinations);
-  var newCombinations = [];
-  for (i = 0 ; i < combinations.length; i++){
-      var stringToFind = '"item":{';
-      var text = combinations[i];
-      var stringToReturn = text.substr(0,text.indexOf(stringToFind)) +  '"items":[';
-      text = text.substr(text.indexOf(stringToFind)+stringToFind.length);
-      while(text.indexOf(stringToFind)>0){
-          stringToReturn += '{' + text.substr(0,text.indexOf(stringToFind));
-          text = text.substr(text.indexOf(stringToFind)+stringToFind.length);
-      }
-      stringToReturn += '{' + text + '}';
-      newCombinations.push(stringToReturn);
-  }
-  for (var i = 0; i < newCombinations.length;i++){
-      combinationsObject.push($.parseJSON(newCombinations[i]));
-  };
-  return combinationsObject;
-}
-
-var addPrices = function(work){
-  work.prices = [];
-  var allCombinations = getCombinations(work);
-    
-
-  allCombinations.forEach(function(currentCombination){
-    if(currentCombination.mandatoryFinishGroups){
-      currentCombination.mandatoryFinishGroups.forEach(function(mandatory){
-        delete mandatory.finishes.incidences;
-      });
-    }
-
-    var priceFiltered = [];
-    var allPricesFinded = true;
-    for (var l = -1; l < currentCombination.items.length;l++){
-      var filteredPrice = filterPrices(JSON.parse(JSON.stringify(currentCombination)),l,work.id);
-      priceFiltered.push(filteredPrice);
-      if(filteredPrice.length!=1){
-        var priceType = filteredPrice.map(filteredPrice => filteredPrice.price.condition);
-        if((new Set(priceType)).size !== priceType.length || filteredPrice.length==0){
-          allPricesFinded = false;
-          break; 
-        }
-      }
-      if(filteredPrice.length>0){
-        var valuesToAdd = filteredPrice[0].toCheck.filter(check => ["machine","paperSize","sheetSize","cutsPerSheet","quantityPerPaper","excess"].indexOf(check.checkAttribute)>-1);
-        if(valuesToAdd && valuesToAdd.length > 0){
-          if (l==-1){
-            valuesToAdd.forEach(value => currentCombination[value.checkAttribute] = value.value);
-          }else{
-            valuesToAdd.forEach(value => currentCombination.items[l][value.checkAttribute] = value.value);
-          }
-        }
-      }
-    }
-    if (allPricesFinded){
-      priceFiltered = [].concat.apply([],priceFiltered);
-
-      var totalPrice = 0;
-      var pricesEach = priceFiltered.filter(priceFiltered => priceFiltered.price.condition == "each");
-      if(pricesEach.length>0){
-        totalPrice += pricesEach.map(priceFiltered => priceFiltered.price.value).reduce(add)*currentCombination.quantity;
-      }
-      var pricesFixed = priceFiltered.filter(priceFiltered => priceFiltered.price.condition == "fixed");
-      if(pricesFixed.length>0){
-        totalPrice += pricesFixed.map(priceFiltered => priceFiltered.price.value).reduce(add);
-      }
-      var currentPrice = convertWorkToPrice(work, currentCombination,totalPrice);   
-      
-      work.prices.push(currentPrice); 
-    }
-  });
-}
-
-var allPossibleCases = function (arr) {
-  if (arr.length === 0) {
-    return [];
-  }else if (arr.length ===1){
-    return arr[0];
-  }else {
-    var result = [];
-    var allCasesOfRest = allPossibleCases(arr.slice(1));  // recur with the rest of array
-    for (var c in allCasesOfRest) {
-      for (var i = 0; i < arr[0].length; i++) {
-        result.push(arr[0][i] + allCasesOfRest[c]);
-      }
-    }
-    return result;
-  }
-}
-
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
+var sendRequest = function(workRequest){
+  var estimate = JSON.parse('{"id": 16591,"prices": [{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"price": 2009.00,"priceWithFinishes": 4034.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 7034.00,"priceWithFinishes": 7034.00}],"price": 1350.00,"totalPrice": 15626.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"price": 772.00,"priceWithFinishes": 1522.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 2960.00,"priceWithFinishes": 2960.00}],"price": 1000.00,"totalPrice": 6670.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 7034.00,"priceWithFinishes": 7034.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"price": 2009.00,"priceWithFinishes": 4034.00}],"price": 1350.00,"totalPrice": 19676.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"},{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"items": [{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 2960.00,"priceWithFinishes": 2960.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"price": 772.00,"priceWithFinishes": 1522.00}],"price": 1000.00,"totalPrice": 8170.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"},{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"optionalFinishes": [{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 3146.00,"priceWithFinishes": 3146.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"price": 772.00,"priceWithFinishes": 1522.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1000.00,"totalPrice": 8356.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 8775.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 8775.00}],"price": 1758.00,"priceWithFinishes": 11402.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 869.00,"priceWithFinishes": 869.00}},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 6485.00,"priceWithFinishes": 6485.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1350.00,"totalPrice": 22829.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"price": 772.00,"priceWithFinishes": 1522.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 3046.00,"priceWithFinishes": 3046.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1000.00,"totalPrice": 6756.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"},{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"items": [{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 6485.00,"priceWithFinishes": 6485.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"price": 2009.00,"priceWithFinishes": 4034.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1350.00,"totalPrice": 19127.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 3250.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 3250.00}],"price": 676.00,"priceWithFinishes": 4272.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 346.00,"priceWithFinishes": 346.00}},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 3046.00,"priceWithFinishes": 3046.00}],"price": 1000.00,"totalPrice": 9648.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"},{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"optionalFinishes": [{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 3250.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 3250.00}],"price": 676.00,"priceWithFinishes": 4272.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 346.00,"priceWithFinishes": 346.00}},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 2840.00,"priceWithFinishes": 2840.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1000.00,"totalPrice": 10942.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"},{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"optionalFinishes": [{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 7025.00,"priceWithFinishes": 7025.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 8775.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 8775.00}],"price": 1758.00,"priceWithFinishes": 11402.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 869.00,"priceWithFinishes": 869.00}}],"price": 1350.00,"totalPrice": 27419.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 7025.00,"priceWithFinishes": 7025.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 8775.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 8775.00}],"price": 1758.00,"priceWithFinishes": 11402.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 869.00,"priceWithFinishes": 869.00}}],"price": 1350.00,"totalPrice": 23369.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 3146.00,"priceWithFinishes": 3146.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 3250.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 3250.00}],"price": 676.00,"priceWithFinishes": 4272.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 346.00,"priceWithFinishes": 346.00}}],"price": 1000.00,"totalPrice": 9748.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"},{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"},{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"items": [{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 3250.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 3250.00}],"price": 676.00,"priceWithFinishes": 4272.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 346.00,"priceWithFinishes": 346.00}},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 2960.00,"priceWithFinishes": 2960.00}],"price": 1000.00,"totalPrice": 11062.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"},{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"},{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"items": [{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"price": 2009.00,"priceWithFinishes": 4034.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 7025.00,"priceWithFinishes": 7025.00}],"price": 1350.00,"totalPrice": 19667.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 2960.00,"priceWithFinishes": 2960.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 3250.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 3250.00}],"price": 676.00,"priceWithFinishes": 4272.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 346.00,"priceWithFinishes": 346.00}}],"price": 1000.00,"totalPrice": 9562.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"},{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"optionalFinishes": [{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"price": 2009.00,"priceWithFinishes": 4034.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 6548.00,"priceWithFinishes": 6548.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1350.00,"totalPrice": 19190.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 8775.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 8775.00}],"price": 1758.00,"priceWithFinishes": 11402.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 869.00,"priceWithFinishes": 869.00}},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 6548.00,"priceWithFinishes": 6548.00}],"price": 1350.00,"totalPrice": 22892.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"price": 2009.00,"priceWithFinishes": 4034.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 7025.00,"priceWithFinishes": 7025.00}],"price": 1350.00,"totalPrice": 15617.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"},{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"},{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"items": [{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 3046.00,"priceWithFinishes": 3046.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"price": 772.00,"priceWithFinishes": 1522.00}],"price": 1000.00,"totalPrice": 8256.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 3250.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 3250.00}],"price": 676.00,"priceWithFinishes": 4272.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 346.00,"priceWithFinishes": 346.00}},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 2840.00,"priceWithFinishes": 2840.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1000.00,"totalPrice": 9442.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"},{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 8775.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 8775.00}],"price": 1758.00,"priceWithFinishes": 11402.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 869.00,"priceWithFinishes": 869.00}},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 6548.00,"priceWithFinishes": 6548.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1350.00,"totalPrice": 26942.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 3146.00,"priceWithFinishes": 3146.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"price": 772.00,"priceWithFinishes": 1522.00}],"price": 1000.00,"totalPrice": 6856.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 3250.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 3250.00}],"price": 676.00,"priceWithFinishes": 4272.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 346.00,"priceWithFinishes": 346.00}},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 3146.00,"priceWithFinishes": 3146.00}],"price": 1000.00,"totalPrice": 11248.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 8775.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 8775.00}],"price": 1758.00,"priceWithFinishes": 11402.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 869.00,"priceWithFinishes": 869.00}},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 6485.00,"priceWithFinishes": 6485.00}],"price": 1350.00,"totalPrice": 26879.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"},{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"optionalFinishes": [{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 1330.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 3046.00,"priceWithFinishes": 3046.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 3250.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 3250.00}],"price": 676.00,"priceWithFinishes": 4272.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 346.00,"priceWithFinishes": 346.00}}],"price": 1000.00,"totalPrice": 11148.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"price": 2009.00,"priceWithFinishes": 4034.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 6548.00,"priceWithFinishes": 6548.00}],"price": 1350.00,"totalPrice": 15140.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 8775.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 8775.00}],"price": 1758.00,"priceWithFinishes": 11402.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 869.00,"priceWithFinishes": 869.00}},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 7034.00,"priceWithFinishes": 7034.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1350.00,"totalPrice": 23378.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"},{"name": "Cierre Elástico","price": 1500.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"items": [{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 2840.00,"priceWithFinishes": 2840.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"price": 772.00,"priceWithFinishes": 1522.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1000.00,"totalPrice": 8050.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]},{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3592.00,"internalInformation": "Rulo 19"},{"name": "Cierre Elástico","price": 4050.00,"propertiesToSelectByCustomer": ["negro","blanco"]}],"items": [{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "42x27","material": {"gr": 150,"name": "Coteado"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Dura","price": 8775.00}],"optionalFinishes": [{"name": "Tapa Dura","price": 8775.00}],"price": 1758.00,"priceWithFinishes": 11402.00,"subItem": {"name": "Retiro de Tapa","ink": {"inksQuantity": 4,"inksDetails": "Full Color CMYK"},"allTheSame": false,"bleedPrint": true,"quantityOfPages": 1,"quantityOfVias": 1,"openedSize": "30x21","faces": "SIMPLE_FAZ","material": {"gr": 120,"name": "#VALUE!"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 2,"machine": "Konica 1070 Color","excess": 4},"price": 869.00,"priceWithFinishes": 869.00}},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},"allTheSame": true,"bleedPrint": false,"openedSize": "15x21","material": {"gr": 90,"name": "Obra"},"processDetails": {"sheetSize": "72x92","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "GTO46","excess": 50},"price": 7034.00,"priceWithFinishes": 7034.00}],"price": 1350.00,"totalPrice": 27428.00},{"quantity": 50,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 1188.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 2840.00,"priceWithFinishes": 2840.00},{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 750.00}],"price": 772.00,"priceWithFinishes": 1522.00}],"price": 1000.00,"totalPrice": 6550.00},{"quantity": 100,"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"optionalFinishes": [{"name": "Encuadernado Rulo","price": 3208.00,"internalInformation": "Rulo 16"}],"items": [{"ordinal": 1,"name": "Tapa","allTheSame": false,"bleedPrint": true,"openedSize": "33x21","material": {"gr": 250,"name": "Cartulina"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "33x48","quantityPerPaper": 1,"machine": "Konica 1070 Color","excess": 4},"mandatoryFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"optionalFinishes": [{"name": "Tapa Semi-Dura","price": 2025.00}],"price": 2009.00,"priceWithFinishes": 4034.00},{"ordinal": 0,"name": "Interior","ink": {"inksQuantity": 1,"inksDetails": "Tinta Negra"},"allTheSame": true,"bleedPrint": true,"openedSize": "15x21","material": {"gr": 80,"name": "Obra"},"processDetails": {"sheetSize": "72x102","cutsPerSheet": 4,"paperSize": "36x51","quantityPerPaper": 4,"machine": "GTO52 Cromo","excess": 50},"price": 6485.00,"priceWithFinishes": 6485.00},{"ordinal": 2,"name": "Inserto - Tinta Negra fondo blanco sin grisados","allTheSame": false,"bleedPrint": false,"openedSize": "15x21","processDetails": {"sheetSize": "66x96","cutsPerSheet": 4,"paperSize": "32x46","quantityPerPaper": 4,"machine": "Konica 951","excess": 3},"price": 0.00,"priceWithFinishes": 0.00}],"price": 1350.00,"totalPrice": 15077.00}],"work": {"id": 16592,"quantity": [50,100],"clossedSize": "15x21","openedSize": "15x21","mandatoryFinishes": [{"name": "Encuadernado Rulo","comment": "Rulo metálico de doble espiral","showToClient": true},{"name": "Cierre Elástico","showToClient": true,"propertiesToSelectByCustomer": ["negro","blanco"]}],"optionalFinishes": [{"name": "Encuadernado Rulo","comment": "Rulo metálico de doble espiral","showToClient": true},{"name": "Cierre Elástico","showToClient": true,"propertiesToSelectByCustomer": ["negro","blanco"]}],"items": [{"name": "Interior","ink": [{"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"},{"inksQuantity": 1,"inksDetails": "Tinta Negra"}],"allTheSame": true,"bleedPrint": true,"quantityOfSheets": [80],"quantityOfVias": [1],"faces": ["DOBLE_FAZ"],"material": [{"gr": 80,"name": "Obra"},{"gr": 90,"name": "Obra"}]},{"name": "Tapa","ink": [{"inksQuantity": 4,"inksDetails": "Full Color CMYK"}],"allTheSame": false,"bleedPrint": true,"quantityOfPages": [1],"quantityOfVias": [1],"faces": ["SIMPLE_FAZ"],"material": [{"gr": 150,"name": "Coteado"},{"gr": 250,"name": "Cartulina"}],"mandatoryFinishes": [{"name": "Tapa Dura","comment": "La tapa dura es una tapa rígida hecha con suela forrada.","showToClient": true},{"name": "Tapa Semi-Dura","comment": "La tapa semidura es una tapa hecha con dos cartulinas de 250gr. contraencoladas formando un material semi rígido de más de 500gr.","showToClient": true}],"optionalFinishes": [{"name": "Tapa Dura","comment": "La tapa dura es una tapa rígida hecha con suela forrada.","showToClient": true},{"name": "Tapa Semi-Dura","comment": "La tapa semidura es una tapa hecha con dos cartulinas de 250gr. contraencoladas formando un material semi rígido de más de 500gr.","showToClient": true}]},{"name": "Inserto - Tinta Negra fondo blanco sin grisados","ink": [{"inksQuantity": 1,"inksDetails": "Tinta Negra fondo blanco sin grisados"}],"allTheSame": false,"bleedPrint": false,"quantityOfSheets": [2],"quantityOfVias": [1],"faces": ["DOBLE_FAZ"],"material": [{"gr": 130,"name": "Coteado"}]}]}}');
+  estimate.work.name = 'Cuadernos';
+  return estimate;
 }

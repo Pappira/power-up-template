@@ -111,6 +111,10 @@ var createCheckListObject = function(name, cardId){
 
 var updateCard = function(estimate) {
 	startLoader();
+	if(estimate.deliveryDelay){
+		//TODO Agregar due date a la tarjeta
+		// due: mm/dd/yyy
+	  }
 	var checkLists = createCheckListsForCard(estimate);
 	var trelloCheckList = [];
 	var trelloCheckListItems = [];
@@ -169,10 +173,6 @@ var updateCard = function(estimate) {
 
 var createCard = function(estimate){
 	var cardToSave = {idList: listId, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)};
-	if(estimate.deliveryDelay){
-	  //TODO Agregar due date a la tarjeta
-	  // due: mm/dd/yyy
-	}
 	startLoader();
 	createNewTrelloCard(t, cardToSave, function(card) {
 	  setTimeout(function () {
@@ -411,11 +411,11 @@ var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption)
 var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOfSelectedOption){  
 	var text = [];
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
-	text.push(createText('title',estimate.name,''));
-	text.push(createText('text','Cantidad',(selectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.quantity.join(' // '))));
-	text.push(createText('text','Tamaño cerrado',estimate.clossedSize.map(currentClossedSize => ((typeof currentClossedSize == 'object')?currentClossedSize.value:currentClossedSize)).join(' // ')));
-	if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){	
-		var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
+	text.push(createText('title',estimate.work.name,''));
+	text.push(createText('text','Cantidad',(selectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.work.quantity.join(' // '))));
+	text.push(createText('text','Tamaño cerrado',estimate.work.clossedSize));
+	if (estimate.work.mandatoryFinishGroups && estimate.work.mandatoryFinishGroups.length >0){	
+		var currentMandatoryFinishGroups = estimate.work.mandatoryFinishGroups;
 		if(!selectedOption || dontTakeCareOfSelectedOption){
 			for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
 				text.push(createText('text',currentMandatoryFinishGroups[i].groupName,currentMandatoryFinishGroups[i].finishes.map(finishes => finishes.finish).join(" // ")));
@@ -428,21 +428,17 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 		}
 	}
 	if (includeOptionalFinishes){
-		if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
+		if (estimate.work.optionalFinishes && estimate.work.optionalFinishes.length >0){
 			text.push(createText('subtitle2','Terminaciones',''));
 			if(!selectedOption || dontTakeCareOfSelectedOption){
-				var currentOptionalFinish = estimate.optionalFinishes;
+				var currentOptionalFinish = estimate.work.optionalFinishes;
 				for(var i = 0; i < currentOptionalFinish.length;i++){
 					text.push(createText('list',currentOptionalFinish[i].finish,''));
 				}
 			}else{
-				var optionalFinishesPrices = estimate.selectedExtraPrices;
-				for (var i = 0; i < optionalFinishesPrices.length; i++){
-					if (optionalFinishesPrices[i].optionalFinishes){
-						for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
-							text.push(createText('list',optionalFinishesPrices[i].optionalFinishes[j].finish));
-						}
-					}
+				var optionalFinishes = estimate.prices[estimate.SelectedOption].optionalFinishes;
+				for (var i = 0; i < optionalFinishes.length; i++){
+					text.push(createText('list',optionalFinishes[i].name));
 				}
 			}
 		}
@@ -457,7 +453,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 		if (selectedOption){
 			selectedItem = estimate.prices[estimate.SelectedOption].items[item.id];
 		}
-		if (estimate.items.length>1){
+		if (estimate.work.items.length>1){
 			texts.push(createText('subtitle1',item.name,''));
 		}
 		if (selectedItem){
@@ -505,13 +501,13 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 
 		}else{
 			if (item.materials){
-				var materials = item.materials.map(function(material) {
-					return material.paper + " " + material.gr + 'gr';
+				var materials = item.material.map(function(material) {
+					return material.name + " " + material.gr + 'gr';
 				}).join(' // ');
 				texts.push(createText('text','Papel',materials));
 			}
-			if (item.inks){
-					var inks = item.inks.map(function(ink) {
+			if (item.ink){
+					var inks = item.ink.map(function(ink) {
 						return ink.inksDetails;
 					}).join(' // ') + (showBleedPrint?' ' + (item.bleedPrint?'(Impresión al Vivo)':''):'');
 					inks += (item.faces?' - ' + item.faces.join(' // '):'');
@@ -520,14 +516,18 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 			if (item.openedSize && (JSON.stringify(item.openedSize.sort()) != JSON.stringify([...new Set(estimate.prices.map(price => price.clossedSizes))].sort()))){
 				texts.push(createText('text','Tamaño Abierto',item.openedSize.join(' // ')));
 			}
-			if (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1)){
+			if (item.quantityOfPages && (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1))){
 				var quantityOfPages = item.quantityOfPages.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
 				texts.push(createText('text','Páginas',quantityOfPages));
+			}
+			if (item.quantityOfSheets && (item.quantityOfSheets.length>1 || (item.quantityOfSheets.length==1 && item.quantityOfSheets!=1))){
+				var quantityOfSheets = item.quantityOfSheets.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
+				texts.push(createText('text','Hojas',quantityOfSheets));
 			}
 			if (item.mandatoryFinishGroups && item.mandatoryFinishGroups.length >0){
 				var currentItemMandatoryFinishGroups = item.mandatoryFinishGroups;
 				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.map(finishes => finishes.finish + finishes.finishComment).join(" // ")));
+					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.map(finishes => finishes.name + finishes.comment).join(" // ")));
 				}
 			}
 			var notTitlePlaced = true;
@@ -539,7 +539,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 							texts.push(createText('subtitle2','Terminaciones',''));
 							notTitlePlaced = false;
 						}
-						texts.push(createText('list',currentItemOptionalFinish[k].finish + (currentItemOptionalFinish[k].finishComment!=""?currentItemOptionalFinish[k].finishComment:''),''));
+						texts.push(createText('list',currentItemOptionalFinish[k].name + (currentItemOptionalFinish[k].comment!=""?currentItemOptionalFinish[k].comment:''),''));
 					}
 				}
 			}
@@ -759,11 +759,11 @@ var createCustomerText = function(estimate){
 
 var createTrelloCardName = function(estimate){
 	var contactAndBusinessInfo = estimate.customer?[estimate.customer.comercialName, estimate.customer.businessName, estimate.customer.contactName]:[];
-	var quantity = estimate.quantity.join(' // ');
+	var quantity = estimate.work.quantity.join(' // ');
 	if (estimate.SelectedOption){
 		quantity = estimate.prices[estimate.SelectedOption].quantity;
 	}
-	return quantity + " " + estimate.name + " - " + contactAndBusinessInfo.filter(Boolean).join(' - ');
+	return quantity + " " + estimate.work.name + " - " + contactAndBusinessInfo.filter(Boolean).join(' - ');
 }
 
 
