@@ -279,16 +279,16 @@ var generateEstimatePDF = function(estimate){
     top = newAddTextToDoc(textToAdd,doc,top);
 
     textToAdd = createGeneralText(estimate,false,true);
-    for (var i = 0; i < estimate.items.length;i++){
-        textToAdd = textToAdd.concat(createItemText(estimate, estimate.items[i], false, false, false,true));
+    for (var i = 0; i < estimate.work.items.length;i++){
+        textToAdd = textToAdd.concat(createItemText(estimate, estimate.work.items[i], false, false, false,true));
     }
     top = newAddTextToDoc(textToAdd,doc,top);
    
     textToAdd = createCompletePriceText(estimate);
     top = newAddTextToDoc(textToAdd,doc,top);
 
-    textToAdd = createOptionalFinishesText(estimate,true);
-    top = newAddTextToDoc(textToAdd,doc,top);
+    //textToAdd = createOptionalFinishesText(estimate,true);
+    //top = newAddTextToDoc(textToAdd,doc,top);
 
     /*if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5,doc)){
         top = addNewPage(doc);
