@@ -597,27 +597,27 @@ var createCompletePriceText = function(estimate){
 			var lastGeneralFinishesText = '';
 			var isList = false;
 			//Hay variación en los papeles?
-			var quantityOfPapersOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.materials).size!=1);
+			var quantityOfPapersOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.materials).size!=1);
 			var materialChange = quantityOfPapersOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en los tamaños?
-			var quantityOfSizesOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.openedSize).size!=1);
+			var quantityOfSizesOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.openedSize).size!=1);
 			var sizeChange = quantityOfSizesOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en tintas?
-			var quantityOfInksOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.inks).size!=1);
+			var quantityOfInksOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.inks).size!=1);
 			var inksChange = quantityOfInksOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en fases
-			var quantityOfFacesOnOriginalEstimate = estimate.items.map(currentItem => new Set((currentItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz')).size1=1);
+			var quantityOfFacesOnOriginalEstimate = estimate.work.items.map(currentItem => new Set((currentItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz')).size1=1);
 			var facesChange = quantityOfFacesOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en páginas
-			var quantityOfPagesOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.quantityOfPages).size1=1);
+			var quantityOfPagesOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.quantityOfPages).size1=1);
 			var pagesChange = quantityOfPagesOnOriginalEstimate.filter(v => v).length >0;
 
 			//Hay variación en vías
-			var quantityOfViasOnOriginalEstimate = estimate.items.map(currentItem => new Set(currentItem.quantityOfVias).size1=1);
+			var quantityOfViasOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.quantityOfVias).size1=1);
 			var viasChange = quantityOfViasOnOriginalEstimate.filter(v => v).length >0;
 
 		//	quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
@@ -631,9 +631,9 @@ var createCompletePriceText = function(estimate){
 				var quantityOfTitles = 2;
 					var price = estimate.prices[i];
 					var generalFinishesText = "";
-					if(estimate.mandatoryFinishGroups){
-							for (var j = 0; j < estimate.mandatoryFinishGroups.length;j++){
-									if (estimate.mandatoryFinishGroups[j].finishes.length>1){
+					if(estimate.work.mandatoryFinishGroups){
+							for (var j = 0; j < estimate.work.mandatoryFinishGroups.length;j++){
+									if (estimate.work.mandatoryFinishGroups[j].finishes.length>1){
 											generalFinishesText += (generalFinishesText.length >0?" ":"") + price.mandatoryFinishGroups[j].finishes.finish;
 									}
 							}
@@ -667,8 +667,8 @@ var createCompletePriceText = function(estimate){
 						var putItemName = quantityOfSizesOnOriginalEstimate.filter(v => v).length>1;
 						var sizeText = price.items.map(function(currentItem){
 							if(quantityOfSizesOnOriginalEstimate[currentItem.id]){
-								var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.clossedSize)).size;
-								var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.items.map(currentItem1 => new Set(currentItem1.openedSize).size);
+								var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.work.clossedSize)).size;
+								var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.work.items.map(currentItem1 => new Set(currentItem1.openedSize).size);
 								quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
 	
 								//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos, pongo el cerrado, sino el abierto
@@ -725,7 +725,7 @@ var createCompletePriceText = function(estimate){
 					}
 					
 					//Si hay más de una cantidad
-					if(estimate.quantity.length>1){
+					if(estimate.work.quantity.length>1){
 							//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
 							if(changeMade){
 								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
