@@ -464,7 +464,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 				currentOptionalFinish = estimate.prices[estimate.SelectedOption].optionalFinishes;
 			}
 			for(var i = 0; i < currentOptionalFinish.length;i++){
-				texts.push(createText('list',currentItemOptionalFinish[k].name + (currentItemOptionalFinish[k].comment!=""?" (" + currentItemOptionalFinish[k].comment + ")":''),''));
+				text.push(createText('list',currentOptionalFinish[i].name + (currentOptionalFinish[i].comment && currentOptionalFinish[i].comment!=""?" (" + currentOptionalFinish[i].comment + ")":''),''));
 			}
 		}
 	}
@@ -484,12 +484,13 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 		if (selectedItem){
 			texts.push(createText('text','Papel', selectedItem.material.paper + ' ' + selectedItem.material.gr + 'gr'));
 			var inks = selectedItem.ink.inksDetails + (showBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
+
 			inks += ' - ' + (selectedItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz');
 			texts.push(createText('text','Impresión',inks));
 			if (selectedItem.openedSize != estimate.clossedSize){
 				texts.push(createText('text','Tamaño Abierto',selectedItem.openedSize));
 			}
-			if (selectedItem.quantityOfPages !=1){
+			if (selectedItem.quantityOfPages && selectedItem.quantityOfPages !=1){
 				var quantityOfPages = selectedItem.quantityOfPages + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''));
 				texts.push(createText('text','Páginas',quantityOfPages));
 			}
