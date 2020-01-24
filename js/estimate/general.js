@@ -423,7 +423,7 @@ var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption)
 				return names.indexOf(item) == pos;
 			});
 			uniqueNames.forEach(name => {
-				var currentFinishes = estimate.optionalFinishes.filter(optionalFinish => optionalFinish.name = name);
+				var currentFinishes = estimate.optionalFinishes.filter(optionalFinish => optionalFinish.name == name);
 				texts.push(createText('subtitle3','Opcional ' + currentFinishes[0].name  + ((currentFinishes[0].itemOrdinal!=-1 && estimate.work.items.length>1)?' en ' + estimate.work.items.filter(item => item.ordinal == currentFinishes[0].itemOrdinal)[0].name:''),''));
 				currentFinishes.forEach(currentFinish => {
 					texts.push(createText('text','Sub-Total extra (' + currentFinish.quantity + ' unidades)', '$ ' +  currentFinish.price.toLocaleString() + ' + IVA'));
