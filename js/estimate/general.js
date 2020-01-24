@@ -558,6 +558,13 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 					text = createMandatoryFinishText(currentMandatoryFinish[k],text);
 				}
 			}
+			if (item.mandatoryFinishes && item.mandatoryFinishes.length >0){	
+				var currentMandatoryFinish  = item.mandatoryFinishes;
+				for(var i = 0; i < currentMandatoryFinish.length;i++){
+					text = createMandatoryFinishText(currentMandatoryFinish[i],text);
+				}
+			}
+
 			var notTitlePlaced = true;
 			if(showOptionalFinishes){
 				if (item.optionalFinishes && item. optionalFinishes.length >0){
