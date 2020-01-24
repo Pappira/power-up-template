@@ -415,9 +415,20 @@ var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption)
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	var texts = [];
 	var finishes;
-	if (estimate.optionalFinishesPrices && estimate.optionalFinishesPrices.length >0){
+	if (estimate.optionalFinishes && estimate.optionalFinishes.length >0){
 		if(!selectedOption){
-			finishes = groupFinishes(estimate.optionalFinishesPrices);
+			estimate.optionalFinishes.sort(sortOptionalFinishes());
+			var names = estimate.optionalFinishes.map(optionalFinish => optionalFinish.name);
+			var uniqueNames = names.filter(function(item, pos) {
+				return a.indexOf(item) == pos;
+			});
+			uniqueNames.forEach(name => {
+				var currentFinishes = estimate.optionalFinishes.filter(optionalFinish => optionalFinish.name = name);
+				text.push(createText('subtitle3','Opcional ' + currentFinishes[0].name  + ((currentFinishes[0].itemOrdinal!=-1 && estimate.work.items.length>1)?' en ' + estimate.work.items.filter(item => item.ordinal == currentFinishes[0].itemOrdinal)[0].name:''),''));
+				currentFinishes.forEach(currentFinish => {
+					text.push(createText('text','Sub-Total extra (' + currentFinish.quantity + ' unidades)', '$ ' +  currentFinish.price.toLocaleString() + ' + IVA'));
+				});
+			});
 		}else{
 			finishes = groupFinishes(estimate.selectedExtraPrices);
 			
@@ -670,7 +681,7 @@ var createCompletePriceText = function(estimate){
 						var putItemName = quantityOfPapersOnOriginalEstimate.filter(v => v).length>1;
 						var paperText = 'Papel' + price.items.map(currentItem => quantityOfPapersOnOriginalEstimate[currentItem.ordinal]?
 														(putItemName?' de '+currentItem.name:'') + ' ' + currentItem.material.name + ' '  + 
-														currentItem.material.gr + 'gr':'').filetr(Boolean).join(", ");
+														currentItem.material.gr + 'gr':'').filter(Boolean).join(", ");
 						if(paperText && paperText != lastPaperText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",paperText, ''));  
 							changeMade = true;
@@ -730,8 +741,8 @@ var createCompletePriceText = function(estimate){
 					}
 
 					//mandatoryFinishGroups inside item
-					itemsFinishesText = price.items.map(currentItem => currentItem.mandatoryFinish?currentItem.mandatoryFinish.map(
-						currentMandatoryFinish => currentMandatoryFinish.name).filter(Boolean).join(" "):''
+					itemsFinishesText = price.items.map(currentItem => currentItem.mandatoryFinishes?currentItem.mandatoryFinishes.map(
+						currentMandatoryFinish => currentItem.name + " " + currentMandatoryFinish.name).filter(Boolean).join(" "):''
 					).filter(Boolean).join(' ');
 					if(itemsFinishesText && itemsFinishesText !=lastItemsFinishesText){
 						quantityOfTitles++;
@@ -806,7 +817,8 @@ var createTrelloCardName = function(estimate){
 	}
 	return quantity + " " + estimate.work.name + " - " + contactAndBusinessInfo.filter(Boolean).join(' - ');
 }
-function orderItems(order = 'asc'){
+
+function sortOptionalFinishes(order = 'asc'){
 	return function(a,b){
 		let comparison = 0;
 		if(a.ordinal > b.ordinal){
@@ -814,6 +826,26 @@ function orderItems(order = 'asc'){
 		} else if (a.ordinal <  b.ordinal) {
 			return ((order == 'desc') ? 1:-1);
 		}
+	}
+} 
+
+function orderItems(order = 'asc'){
+	return function(a,b){
+		let comparison = 0;
+		if(a.itemOrdinal > b.itemOrdinal){
+			return ((order == 'desc') ? -1:1);
+		} else if (a.itemOrdinal <  b.itemOrdinal) {
+			return ((order == 'desc') ? 1:-1);
+		}else if(a.name > b.name){
+			return ((order == 'desc') ? -1:1);
+		} else if (a.name <  b.name) {
+			return ((order == 'desc') ? 1:-1);
+		}else if (a.quantity > b.quantity){
+			return ((order == 'desc') ? -1:1);
+		} else if (a.quantity <  b.quantity) {
+			return ((order == 'desc') ? 1:-1);
+		}
+		return 0;
 	}
 }
 

@@ -117,7 +117,7 @@ var newAddText = function(textToAdd, doc, top){
 }
 
 
-var groupFinishes = function(finishesToGroup){
+/*var groupFinishes = function(finishesToGroup){
     var finishes = [];
     for (var i = 0; i < finishesToGroup.length; i++){
         finishesToGroup[i].forEach(function(currentFinishesToGroup){
@@ -203,7 +203,7 @@ var groupFinishes = function(finishesToGroup){
     }
     return finishes;
 }
-
+*/
 
 var addHeaderToCurrentPage = function(doc){
     doc.addImage(diagonalLogo, 'JPEG', leftMargin, rowSize, 48, 13); 
@@ -305,8 +305,8 @@ var generateEstimatePDF = function(receivedEstimate){
     textToAdd = createCompletePriceText(estimate);
     top = newAddTextToDoc(textToAdd,doc,top);
 
-    //textToAdd = createOptionalFinishesText(estimate,true);
-    //top = newAddTextToDoc(textToAdd,doc,top);
+    textToAdd = createOptionalFinishesText(estimate,true);
+    top = newAddTextToDoc(textToAdd,doc,top);
 
     /*if(!checkIfEnoughSpace(top,rowSize*mediumSpaceFactor + rowSize*5,doc)){
         top = addNewPage(doc);
