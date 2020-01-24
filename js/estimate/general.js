@@ -437,14 +437,14 @@ var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption)
 	return texts;
 }
 
-var createMandatoryFinishText = function(currentMandatoryFinish, text){
+var createMandatoryFinishText = function(currentMandatoryFinish, text, includeOpcional){
 	var group = currentMandatoryFinish.name.split(" ")[0];
 	var name = currentMandatoryFinish.name.split(" ");
 	delete name[0];
 	name = name.filter(Boolean).join(" ");
 	var currentText = text.filter(currentText => currentText.name == group);
 	if (currentText && currentText.length>0){
-		currentText[0].value = currentText[0].value + " // " + name;
+		currentText[0].value = currentText[0].value.substr(0,currentText[0].value.indexOf(" (opcional)")>0?currentText[0].value.indexOf(" (opcional)"):currentText[0].value.length) + " // " + name + (includeOpcional?" (opcional)":"");
 	}else{
 		text.push(createText('text',group,name));
 	}
@@ -478,11 +478,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 			if (includeOptionalFinishes){
 				text.push(createText('list',currentOptionalFinish[i].name + (currentOptionalFinish[i].comment && currentOptionalFinish[i].comment!=""?" (" + currentOptionalFinish[i].comment + ")":''),''));
 			}else{
-				var group = currentOptionalFinish[i].name.split(" ")[0];
-				var name = currentOptionalFinish[i].name.split(" ");
-				delete name[0];
-				name = name.filter(Boolean).join(" ");
-				text.push(createText('text',group,name));
+				text = createMandatoryFinishText(currentOptionalFinish[i],text,true);
 			}
 		}
 	}
@@ -574,12 +570,6 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 					texts.push(createText('text','Hojas',quantityOfSheets));
 				}
 			}
-			if (item.mandatoryFinish && item.mandatoryFinish.length >0){
-				var currentItemMandatoryFinish = item.mandatoryFinish;
-				for (var k = 0; k < currentItemMandatoryFinish.length;k++){
-					texts = createMandatoryFinishText(currentMandatoryFinish[k],texts);
-				}
-			}
 			if (item.mandatoryFinishes && item.mandatoryFinishes.length >0){	
 				var currentMandatoryFinish  = item.mandatoryFinishes;
 				for(var i = 0; i < currentMandatoryFinish.length;i++){
@@ -589,7 +579,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 
 			var notTitlePlaced = true;
 			if (item.optionalFinishes && item. optionalFinishes.length >0 >0){
-				if (includeOptionalFinishes){
+				if (showOptionalFinishes){
 					if (notTitlePlaced){
 						texts.push(createText('subtitle2','Terminaciones',''));
 						notTitlePlaced = false;
@@ -597,14 +587,10 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 				}
 				var currentOptionalFinish = item.optionalFinishes;				
 				for(var i = 0; i < currentOptionalFinish.length;i++){
-					if (includeOptionalFinishes){
-						text.push(createText('list',currentOptionalFinish[i].name + (currentOptionalFinish[i].comment && currentOptionalFinish[i].comment!=""?" (" + currentOptionalFinish[i].comment + ")":''),''));
+					if (showOptionalFinishes){
+						texts.push(createText('list',currentOptionalFinish[i].name + (currentOptionalFinish[i].comment && currentOptionalFinish[i].comment!=""?" (" + currentOptionalFinish[i].comment + ")":''),''));
 					}else{
-						var group = currentOptionalFinish[i].name.split(" ")[0];
-						var name = currentOptionalFinish[i].name.split(" ");
-						delete name[0];
-						name = name.filter(Boolean).join(" ");
-						text.push(createText('text',group,name));
+						texts = createMandatoryFinishText(currentOptionalFinish[i],texts,true);
 					}
 				}
 			}
