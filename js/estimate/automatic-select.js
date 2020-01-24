@@ -101,6 +101,7 @@ var createEstimateAndUpdateCard = function(){
   startLoader();
   var workRequest = createRequest();
   var estimate = sendRequest(workRequest);
+  estimate.work.items.sort(orderItems());
   createCard(estimate);
 }
 
