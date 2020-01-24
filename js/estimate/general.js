@@ -544,14 +544,14 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 			}
 			if (item.quantityOfPages){
 				item.quantityOfPages = item.quantityOfPages.filter(Boolean);
-				if (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1))){
+				if (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1)){
 					var quantityOfPages = item.quantityOfPages.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
 					texts.push(createText('text','Páginas',quantityOfPages));
 				}
 			}
 			if (item.quantityOfSheets){
 				item.quantityOfSheets = item.quantityOfSheets.filter(Boolean);
-				if(item.quantityOfSheets.length>1 || (item.quantityOfSheets.length==1 && item.quantityOfSheets!=1))){
+				if(item.quantityOfSheets.length>1 || (item.quantityOfSheets.length==1 && item.quantityOfSheets!=1)){
 					var quantityOfSheets = item.quantityOfSheets.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
 					texts.push(createText('text','Hojas',quantityOfSheets));
 				}
