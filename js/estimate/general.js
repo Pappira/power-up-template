@@ -446,7 +446,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	text.push(createText('title',estimate.work.name,''));
 	text.push(createText('text','Cantidad',(selectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.work.quantity.join(' // '))));
-	text.push(createText('text','Tamaño cerrado',estimate.work.clossedSize));
+	text.push(createText('text','Tamaño cerrado',estimate.work.closedSize));
 	if (estimate.work.mandatoryFinishes && estimate.work.mandatoryFinishes.length >0){	
 		var currentMandatoryFinish  = estimate.work.mandatoryFinishes;
 		if(!(!selectedOption || dontTakeCareOfSelectedOption)){
@@ -487,7 +487,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 
 			inks += ' - ' + (selectedItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz');
 			texts.push(createText('text','Impresión',inks));
-			if (selectedItem.openedSize != estimate.clossedSize){
+			if (selectedItem.openedSize != estimate.closedSize){
 				texts.push(createText('text','Tamaño Abierto',selectedItem.openedSize));
 			}
 			if (selectedItem.quantityOfPages && selectedItem.quantityOfPages !=1){
@@ -539,9 +539,11 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 					inks += (item.faces?' - ' + item.faces.map(faz => faz=='DOBLE_FAZ'?'Doble faz':'Simple faz').join(' // '):'');
 					texts.push(createText('text','Impresión',inks));
 			}
-			if (item.openedSize && (JSON.stringify(item.openedSize.sort()) != JSON.stringify([...new Set(estimate.prices.map(price => price.clossedSizes))].sort()))){
+			if (item.openedSize && (JSON.stringify(item.openedSize.sort()) != JSON.stringify([...new Set(estimate.prices.map(price => price.closedSizes))].sort()))){
 				texts.push(createText('text','Tamaño Abierto',item.openedSize.join(' // ')));
 			}
+			item.quantityOfPages = item.quantityOfPages.filter(Boolean);
+			item.quantityOfSheets = item.quantityOfSheets.filter(Boolean);
 			if (item.quantityOfPages && (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1))){
 				var quantityOfPages = item.quantityOfPages.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
 				texts.push(createText('text','Páginas',quantityOfPages));
@@ -622,7 +624,7 @@ var createCompletePriceText = function(estimate){
 			var quantityOfViasOnOriginalEstimate = estimate.work.items.map(currentItem => new Set(currentItem.quantityOfVias).size>1);
 			var viasChange = quantityOfViasOnOriginalEstimate.filter(v => v).length >0;
 
-		//	quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
+		//	quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClosedSizesOnOriginalEstimate);
 			var lastPaperText = '';
 			var lastsizeText = '';
 			var lastInkText = '';
@@ -669,13 +671,13 @@ var createCompletePriceText = function(estimate){
 						var putItemName = quantityOfSizesOnOriginalEstimate.filter(v => v).length>1;
 						var sizeText = price.items.map(function(currentItem){
 							if(quantityOfSizesOnOriginalEstimate[currentItem.ordinal]){
-								var quantityOfClossedSizesOnOriginalEstimate = (new Set(estimate.work.clossedSize)).size;
+								var quantityOfClosedSizesOnOriginalEstimate = (new Set(estimate.work.closedSize)).size;
 								var quantityOfOpenedSizesPerItemOnOriginalEstimate = estimate.work.items.map(currentItem1 => new Set(currentItem1.openedSize).size);
-								quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClossedSizesOnOriginalEstimate);
+								quantityOfOpenedSizesPerItemOnOriginalEstimate.push(quantityOfClosedSizesOnOriginalEstimate);
 	
 								//Si hay la misma cantidad de diferentes tamaños cerrados que abiertos, pongo el cerrado, sino el abierto
 									return (quantityOfOpenedSizesPerItemOnOriginalEstimate.every(val => val == quantityOfOpenedSizesPerItemOnOriginalEstimate[0])?	
-										'Tamaño' + (putItemName?' de '+currentItem.name:'') + ' ' + price.clossedSizes:							
+										'Tamaño' + (putItemName?' de '+currentItem.name:'') + ' ' + price.closedSizes:							
 										'Tamaño abierto' + (putItemName?' de '+currentItem.name:'') + ' ' + item.openedSize);
 							}
 						}).join(", ");

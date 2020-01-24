@@ -8,7 +8,7 @@ var translate = function(key){
             return 'C';
         case 'name':
             return 'D';
-        case 'clossedSizes':
+        case 'closedSizes':
             return 'E';
         case 'quantities':
             return 'F';
@@ -66,7 +66,7 @@ var translate = function(key){
             return 'f';
         case 'inksQuantity':
             return 'g';
-        case 'clossedSize':
+        case 'closedSize':
             return 'h';
         case 'optionalFinishesPrices':
             return 'i';
@@ -118,7 +118,7 @@ var deTranslate = function(key){
         case 'D':
             return 'name';
         case 'E':
-            return 'clossedSizes';
+            return 'closedSizes';
         case 'F':
             return 'quantities';
         case 'G':
@@ -176,7 +176,7 @@ var deTranslate = function(key){
         case 'g':
             return 'inksQuantity';
         case 'h':
-            return 'clossedSize';
+            return 'closedSize';
         case 'i':
             return 'optionalFinishesPrices';
         case 'j':
