@@ -264,6 +264,7 @@ var generateEstimatePDF = function(receivedEstimate){
         if(price.dontShow && price.dontShow.length>0){
             price.dontShow.forEach(currentDontShow => {
                 delete price[currentDontShow];
+                delete estimate.work[currentDontShow];
             });
         }
         price.items.forEach(item => {
@@ -271,6 +272,8 @@ var generateEstimatePDF = function(receivedEstimate){
                 item.dontShow.forEach(currentDontShow => {
                     delete item[currentDontShow];
                 });
+                var workItem = estimate.work.items.filter(currentWorkItem => currentWorkItem.name == item.name)[0];
+                delete workItem[currentDontShow];
             }
         });
     });

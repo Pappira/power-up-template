@@ -559,13 +559,13 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 			if (item.mandatoryFinish && item.mandatoryFinish.length >0){
 				var currentItemMandatoryFinish = item.mandatoryFinish;
 				for (var k = 0; k < currentItemMandatoryFinish.length;k++){
-					text = createMandatoryFinishText(currentMandatoryFinish[k],text);
+					texts = createMandatoryFinishText(currentMandatoryFinish[k],texts);
 				}
 			}
 			if (item.mandatoryFinishes && item.mandatoryFinishes.length >0){	
 				var currentMandatoryFinish  = item.mandatoryFinishes;
 				for(var i = 0; i < currentMandatoryFinish.length;i++){
-					text = createMandatoryFinishText(currentMandatoryFinish[i],text);
+					texts = createMandatoryFinishText(currentMandatoryFinish[i],texts);
 				}
 			}
 
