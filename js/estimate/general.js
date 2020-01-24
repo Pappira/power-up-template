@@ -542,15 +542,19 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 			if (item.openedSize && (JSON.stringify(item.openedSize.sort()) != JSON.stringify([...new Set(estimate.prices.map(price => price.closedSizes))].sort()))){
 				texts.push(createText('text','Tamaño Abierto',item.openedSize.join(' // ')));
 			}
-			item.quantityOfPages = item.quantityOfPages.filter(Boolean);
-			item.quantityOfSheets = item.quantityOfSheets.filter(Boolean);
-			if (item.quantityOfPages && (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1))){
-				var quantityOfPages = item.quantityOfPages.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
-				texts.push(createText('text','Páginas',quantityOfPages));
+			if (item.quantityOfPages){
+				item.quantityOfPages = item.quantityOfPages.filter(Boolean);
+				if (item.quantityOfPages.length>1 || (item.quantityOfPages.length==1 && item.quantityOfPages!=1))){
+					var quantityOfPages = item.quantityOfPages.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
+					texts.push(createText('text','Páginas',quantityOfPages));
+				}
 			}
-			if (item.quantityOfSheets && (item.quantityOfSheets.length>1 || (item.quantityOfSheets.length==1 && item.quantityOfSheets!=1))){
-				var quantityOfSheets = item.quantityOfSheets.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
-				texts.push(createText('text','Hojas',quantityOfSheets));
+			if (item.quantityOfSheets){
+				item.quantityOfSheets = item.quantityOfSheets.filter(Boolean);
+				if(item.quantityOfSheets.length>1 || (item.quantityOfSheets.length==1 && item.quantityOfSheets!=1))){
+					var quantityOfSheets = item.quantityOfSheets.join(' // ') + (item.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''))
+					texts.push(createText('text','Hojas',quantityOfSheets));
+				}
 			}
 			if (item.mandatoryFinish && item.mandatoryFinish.length >0){
 				var currentItemMandatoryFinish = item.mandatoryFinish;
