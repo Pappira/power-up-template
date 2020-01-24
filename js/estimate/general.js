@@ -446,7 +446,7 @@ var createMandatoryFinishText = function(currentMandatoryFinish, text, includeOp
 	if (currentText && currentText.length>0){
 		currentText[0].value = currentText[0].value.substr(0,currentText[0].value.indexOf(" (opcional)")>0?currentText[0].value.indexOf(" (opcional)"):currentText[0].value.length) + " // " + name + (includeOpcional?" (opcional)":"");
 	}else{
-		text.push(createText('text',group,name));
+		text.push(createText('text',group,name + (includeOpcional?" (opcional)":"")));
 	}
 	return text;
 }
