@@ -649,9 +649,10 @@ var createCompletePriceText = function(estimate){
 					if(estimate.work.mandatoryFinishes){
 						if (estimate.work.mandatoryFinishes.length>1){
 							for (var j = 0; j < estimate.work.mandatoryFinishes.length;j++){
-											generalFinishesText += (generalFinishesText.length >0?" ":"") + price.mandatoryFinishes[j].name;
-									}
+								var mandatoryFinish = price.mandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.name = estimate.work.mandatoryFinishes[j].name)[0];
+								generalFinishesText += (generalFinishesText.length >0?" ":"") + mandatoryFinish.name;
 							}
+						}
 					}
 					if (generalFinishesText && generalFinishesText.length>0){
 						quantityOfTitles++;
@@ -668,8 +669,8 @@ var createCompletePriceText = function(estimate){
 						quantityOfTitles++;
 						var putItemName = quantityOfPapersOnOriginalEstimate.filter(v => v).length>1;
 						var paperText = 'Papel' + price.items.map(currentItem => quantityOfPapersOnOriginalEstimate[currentItem.ordinal]?
-																																			(putItemName?' de '+currentItem.name:'') 
-																																				+ ' ' + currentItem.material.name + ' '  + currentItem.material.gr + 'gr':'').join(", ");
+														(putItemName?' de '+currentItem.name:'') + ' ' + currentItem.material.name + ' '  + 
+														currentItem.material.gr + 'gr':'').filetr(Boolean).join(", ");
 						if(paperText && paperText != lastPaperText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",paperText, ''));  
 							changeMade = true;
@@ -730,8 +731,8 @@ var createCompletePriceText = function(estimate){
 
 					//mandatoryFinishGroups inside item
 					itemsFinishesText = price.items.map(currentItem => currentItem.mandatoryFinish?currentItem.mandatoryFinish.map(
-						currentMandatoryFinish => currentMandatoryFinish.finishes.length>1?currentMandatoryFinish.finishes.finish:'').join(" "):''
-					).join(' ');
+						currentMandatoryFinish => currentMandatoryFinish.name).filter(Boolean).join(" "):''
+					).filter(Boolean).join(' ');
 					if(itemsFinishesText && itemsFinishesText !=lastItemsFinishesText){
 						quantityOfTitles++;
 						textToAdd.push(createText('subtitle' + quantityOfTitles,itemsFinishesText, ''));  

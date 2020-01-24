@@ -271,9 +271,9 @@ var generateEstimatePDF = function(receivedEstimate){
             if (item.dontShow && item.dontShow.length>0){
                 item.dontShow.forEach(currentDontShow => {
                     delete item[currentDontShow];
+                    var workItem = estimate.work.items.filter(currentWorkItem => currentWorkItem.name == item.name)[0];
+                    delete workItem[currentDontShow];
                 });
-                var workItem = estimate.work.items.filter(currentWorkItem => currentWorkItem.name == item.name)[0];
-                delete workItem[currentDontShow];
             }
         });
     });
