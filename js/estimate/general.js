@@ -420,13 +420,13 @@ var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption)
 			estimate.optionalFinishes.sort(sortOptionalFinishes());
 			var names = estimate.optionalFinishes.map(optionalFinish => optionalFinish.name);
 			var uniqueNames = names.filter(function(item, pos) {
-				return a.indexOf(item) == pos;
+				return names.indexOf(item) == pos;
 			});
 			uniqueNames.forEach(name => {
 				var currentFinishes = estimate.optionalFinishes.filter(optionalFinish => optionalFinish.name = name);
-				text.push(createText('subtitle3','Opcional ' + currentFinishes[0].name  + ((currentFinishes[0].itemOrdinal!=-1 && estimate.work.items.length>1)?' en ' + estimate.work.items.filter(item => item.ordinal == currentFinishes[0].itemOrdinal)[0].name:''),''));
+				texts.push(createText('subtitle3','Opcional ' + currentFinishes[0].name  + ((currentFinishes[0].itemOrdinal!=-1 && estimate.work.items.length>1)?' en ' + estimate.work.items.filter(item => item.ordinal == currentFinishes[0].itemOrdinal)[0].name:''),''));
 				currentFinishes.forEach(currentFinish => {
-					text.push(createText('text','Sub-Total extra (' + currentFinish.quantity + ' unidades)', '$ ' +  currentFinish.price.toLocaleString() + ' + IVA'));
+					texts.push(createText('text','Sub-Total extra (' + currentFinish.quantity + ' unidades)', '$ ' +  currentFinish.price.toLocaleString() + ' + IVA'));
 				});
 			});
 		}else{
@@ -821,17 +821,6 @@ var createTrelloCardName = function(estimate){
 function sortOptionalFinishes(order = 'asc'){
 	return function(a,b){
 		let comparison = 0;
-		if(a.ordinal > b.ordinal){
-			return ((order == 'desc') ? -1:1);
-		} else if (a.ordinal <  b.ordinal) {
-			return ((order == 'desc') ? 1:-1);
-		}
-	}
-} 
-
-function orderItems(order = 'asc'){
-	return function(a,b){
-		let comparison = 0;
 		if(a.itemOrdinal > b.itemOrdinal){
 			return ((order == 'desc') ? -1:1);
 		} else if (a.itemOrdinal <  b.itemOrdinal) {
@@ -843,6 +832,17 @@ function orderItems(order = 'asc'){
 		}else if (a.quantity > b.quantity){
 			return ((order == 'desc') ? -1:1);
 		} else if (a.quantity <  b.quantity) {
+			return ((order == 'desc') ? 1:-1);
+		}
+	}
+} 
+
+function orderItems(order = 'asc'){
+	return function(a,b){
+		let comparison = 0;
+		if(a.ordinal > b.ordinal){
+			return ((order == 'desc') ? -1:1);
+		} else if (a.ordinal <  b.ordinal) {
 			return ((order == 'desc') ? 1:-1);
 		}
 		return 0;
