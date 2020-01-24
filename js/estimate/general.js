@@ -689,7 +689,7 @@ var createCompletePriceText = function(estimate){
 						var putItemName = quantityOfInksOnOriginalEstimate.filter(v => v).length>1 || quantityOfFacesOnOriginalEstimate.filter(v => v).length>1;
 						var inkText = price.items.map(currentItem => ((quantityOfInksOnOriginalEstimate[currentItem.ordinal] || quantityOfFacesOnOriginalEstimate[currentItem.ordinal])?
 													(putItemName?currentItem.name:'') +
-													 (inksChange?' ' + currentItem.ink.inksDetails:'') + (facesChange?' ' + (currentItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz'):''):'')).join(", ");
+													 (inksChange?' ' + currentItem.ink.inksDetails:'') + (facesChange?' ' + (currentItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz'):''):'')).filter(Boolean).join(" // ")
 						if(inkText && inkText != lastInkText){
 							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",inkText, ''));  
 						}
@@ -729,12 +729,12 @@ var createCompletePriceText = function(estimate){
 					if(estimate.work.quantity.length>1){
 							//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
 							if(changeMade){
-								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
+								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA'));  
 							}else{
-								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.price.toLocaleString() + ' + IVA']);  
+								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.totalPrice.toLocaleString() + ' + IVA']);  
 							}
 					}else{
-						textToAdd.push(createText('text', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.price.toLocaleString() + ' + IVA'));  
+						textToAdd.push(createText('text', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA'));  
 					}
 			}
 	}
