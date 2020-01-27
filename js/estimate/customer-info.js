@@ -21,23 +21,24 @@ t.render(function(){
 		if (addCardButton){
 		    addCardButton.addEventListener('click', createEstimateAndUpdateCard);
 		}
-	  if(cardInfo){
-			estimate = getEstimate(cardInfo);
+	  	if(cardInfo){
+			estimate = getEstimate(cardInfo, initCustomerInfo);
 		}
-		createComments(estimate);
-		createCustomer(estimate);
-		createProductionTime(estimate);
-	}).then(function(){
-		var select = document.getElementById('paymentWay');
-		select.value = (estimate && estimate.customer)?estimate.customer.paymentWay:'';
-		$('select#paymentWay').material_select();
-
-		select = document.getElementById('productionTime');
-		select.value = (estimate && estimate.productionTime)?estimate.productionTime:'';
-		$('select#productionTime').material_select();
-		
 	});
 });
+
+var initCustomerInfo = function(estimate){
+	createComments(estimate);
+	createCustomer(estimate);
+	createProductionTime(estimate);
+	var select = document.getElementById('paymentWay');
+	select.value = (estimate && estimate.customer)?estimate.customer.paymentWay:'';
+	$('select#paymentWay').material_select();
+
+	select = document.getElementById('productionTime');
+	select.value = (estimate && estimate.productionTime)?estimate.productionTime:'';
+	$('select#productionTime').material_select();
+}
 
 var createObject = function(){
 	commentsObject = {};
