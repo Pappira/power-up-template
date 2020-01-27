@@ -510,11 +510,9 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 		if(!(!selectedOption || dontTakeCareOfSelectedOption)){
 			currentOptionalFinish = estimate.selectedExtraPrices;
 		}
-		if (currentOptionalFinish && currentOptionalFinish.length>0){
-			text.push(createText('subtitle2','Terminaciones',''));
-		}
 		for(var i = 0; i < currentOptionalFinish.length;i++){
 			if (includeOptionalFinishes){
+				text.push(createText('subtitle2','Terminaciones',''));
 				text.push(createText('list',currentOptionalFinish[i].name + (currentOptionalFinish[i].comment && currentOptionalFinish[i].comment!=""?" (" + currentOptionalFinish[i].comment + ")":''),''));
 			}else{
 				text = createMandatoryFinishText(currentOptionalFinish[i],text,true);
@@ -536,7 +534,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 			}
 		}
 		if (estimate.work.items.length>1){
-			texts.push(createText('subtitle1',item.name,''));
+			texts.push(createText('subtitle1',item.name + (item.comment?' con ' + item.comment:''),''));
 			if(item.comment){
 				texts.push(createText('subtitle4',item.comment,''));
 			}
