@@ -499,7 +499,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 		}
 		if (selectedItem){
 			if(selectedItem.material){
-				texts.push(createText('text','Papel', selectedItem.material.paper + ' ' + selectedItem.material.gr + 'gr'));
+				texts.push(createText('text','Papel', selectedItem.material.name + ' ' + selectedItem.material.gr + 'gr'));
 			}
 			if(selectedItem.ink){
 				var inks = selectedItem.ink.inksDetails + (showBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
