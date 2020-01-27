@@ -132,6 +132,9 @@ var createRequest = function(){
           var cellInformation = {};
           cellInformation.range = option.cell;
           cellInformation.values = materializeSelect.getSelectedValues();
+          if (cellInformation.values && cellInformation.values.length==0){
+            cellInformation.values = option.default;
+          }
           finalWorkOptions.options[i].values = cellInformation.values;
           cellsInformation.push(cellInformation);
         }else{
