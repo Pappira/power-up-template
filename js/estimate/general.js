@@ -270,17 +270,16 @@ var createCheckListsForCard = function(estimate){
 				var optionalFinishesPrices = estimate.selectedExtraPrices;
 				for (var i = 0; i < optionalFinishesPrices.length; i++){
 					if (optionalFinishesPrices[i]){
-							var item = optionalFinishesPrices[i].name + 
-							(optionalFinishesPrices[i].comment!=""?' - ' +optionalFinishesPrices[i].comment:'');
-							generalCheckList.checkItems.push(
-								{
-									checkListName: "Terminaciones Generales",
-									checked:false,
-									name:item,
-									pos:'bottom'
-								}
-							);
-						}
+						var item = optionalFinishesPrices[i].name + 
+						(optionalFinishesPrices[i].comment!=""?' - ' +optionalFinishesPrices[i].comment:'');
+						generalCheckList.checkItems.push(
+							{
+								checkListName: "Terminaciones Generales",
+								checked:false,
+								name:item,
+								pos:'bottom'
+							}
+						);
 					}
 				}
 			}
