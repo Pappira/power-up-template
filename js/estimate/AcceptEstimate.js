@@ -178,7 +178,7 @@ var createWizard = function(combinations){
 
   var wizardButton = createWizardButton(1,"Terminaciones opcionales");
   divContainer.appendChild(wizardButton);
-  var wizardElement = createWizardElement(1,combinations,"Terminaciones opcionales");
+  var wizardElement = createWizardElement(1,combinations,"Terminaciones opcionales",true);
   wizardForm.appendChild(wizardElement);
 
   var wizardContainer = document.getElementById('wizardContainer');
@@ -237,37 +237,11 @@ var createFormButton = function(step,text,next,finish){
  } 
 
  var updateEstimateAndTrelloCard = function(){
-  var extraPrices = JSON.parse(JSON.stringify(estimate.optionalFinishesPrices));
-  for (var extraPriceId = 0; extraPriceId < estimate.optionalFinishesPrices.length;extraPriceId++){
-    if (estimate.optionalFinishesPrices[extraPriceId].optionalFinishes){
-      if(selectedOptions[-1] && selectedOptions[-1][extraPriceId]){
-        extraPrices[extraPriceId].optionalFinishes = cutArray(extraPrices[extraPriceId].optionalFinishes,selectedOptions[-1][extraPriceId]);
-      }else{
-        delete extraPrices[extraPriceId].optionalFinishes;
-      }
-    }
-    for(var elementId = 0; elementId < estimate.optionalFinishesPrices[extraPriceId].items.length; elementId++ ){
-      if (estimate.optionalFinishesPrices[extraPriceId].items[elementId]){
-        if(selectedOptions[elementId] && selectedOptions[elementId][extraPriceId]){
-          extraPrices[extraPriceId].items[elementId].optionalFinishes = cutArray(extraPrices[extraPriceId].items[elementId].optionalFinishes,selectedOptions[elementId][extraPriceId]);
-        }else{
-          delete extraPrices[extraPriceId].items[elementId];
-        }
-      }
-    }
-    if (extraPrices[extraPriceId].items.every(element => element === null)){
-      delete extraPrices[extraPriceId].items;
-    }
+  var extraPrices = [];
+  for (var i = 0; i < selectedOptions.length;i++){
+    extraPrices.push(estimate.optionalFinishes[selectedOptions[i]]);
   }
   estimate.selectedExtraPrices = extraPrices;
-
-  var currentEstimate = estimate.prices[estimate.SelectedOption];
-  for (var i = 0; i < currentEstimate.items.length;i++){
-   var currentItem = currentEstimate.items[i];
-   if (currentItem.faces == "Doble Faz"){
-     currentItem.quantityOfPages *= 2; 
-   }
-  }
   updateCard(estimate);
  }
 
@@ -310,31 +284,13 @@ var createRevealCard = function(image,title,type,id,functionOnClick){
 
 var selectOption = function(){ 
   var elementId = $(this).attr('id');
-  var item;
-  if (elementId.charAt(0)=='-'){
-    item = -1;
-    elementId = elementId.substring(3);
+  if(selectedOptions.indexOf(elementId) == -1){
+    selectedOptions.push(elementId);
   }else{
-    var item = elementId.substring(0,elementId.indexOf('-'));
-    elementId = elementId.substring(elementId.indexOf('-')+1);
-  }
-  var extraPriceId = elementId.substring(0,elementId.indexOf('-'));
-  var finishId = parseInt(elementId.substring(elementId.indexOf('-')+1));
-
-  if (!selectedOptions[item]){
-    selectedOptions[item] = {};
-  }
-  if (selectedOptions[item][extraPriceId]){
-    if(selectedOptions[item][extraPriceId].indexOf(finishId) == -1){
-      selectedOptions[item][extraPriceId].push(finishId);
-    }else{
-      removeItem = finishId;
-      selectedOptions[item][extraPriceId] = jQuery.grep(selectedOptions[item][extraPriceId],function(value1) {
-        return value1 != removeItem;
-      });
+    const index = selectedOptions.indexOf(elementId);
+    if (index > -1) {
+      selectedOptions.splice(index, 1);
     }
-  }else{
-    selectedOptions[item][extraPriceId] = [finishId];
   }
 }
 
