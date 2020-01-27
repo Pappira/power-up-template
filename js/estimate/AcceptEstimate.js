@@ -118,7 +118,6 @@ var nextAfterAcceptedEstimateSelect = function(){
 
 var createPossibilities = function(){
   var generalFinishesToShow = [];
-  var itemFinishesToShow = [];
   var exclude = ["name", "price", "propertiesToSelectByCustomer", "showToClient", "itemOrdinal"];
   for (var i = 0; i < estimate.optionalFinishes.length;i++){
     var possibleExtraPrice = estimate.optionalFinishes[i];
@@ -126,7 +125,7 @@ var createPossibilities = function(){
     var work = estimate.prices[estimate.SelectedOption];
     var item = work;
     if (possibleExtraPrice.itemOrdinal !=-1){
-      item = work.items.map(currentItem => currentItem.ordinal == possibleExtraPrice.itemOrdinal);
+      item = work.items.map(currentItem => currentItem.ordinal == possibleExtraPrice.itemOrdinal)[0];
     }
     for (var prop in possibleExtraPrice) {
       if (!exclude.includes(prop)){
@@ -137,37 +136,13 @@ var createPossibilities = function(){
       }
     }
     if (isPossible){
-      for(var j = 0; j <possibleExtraPrice.optionalFinishes.length;j++ ){
-        var possibility = {};
-        possibility['itemId'] = "-1-" + i + "-" + j;
-        possibility['values'] = possibleExtraPrice.optionalFinishes[j].finish;
-        generalFinishesToShow.push(possibility);
-      }
-      for(var j = 0; j < possibleExtraPrice.items.length;j++){
-        if(possibleExtraPrice.items[j] && possibleExtraPrice.items[j].optionalFinishes){
-          for (var k = 0; k < possibleExtraPrice.items[j].optionalFinishes.length;k++){
-            var possibility = {};
-            possibility['itemId'] = j + "-" + i + "-" + k;
-            possibility['values'] = possibleExtraPrice.items[j].optionalFinishes[k].finish;
-            if(!itemFinishesToShow[j] || itemFinishesToShow[j].length==0){
-              itemFinishesToShow[j] = [];
-            }
-            itemFinishesToShow[j].push(possibility);
-          }
-        }
-      }
+      var possibility = {};
+      possibility['itemId'] = i;
+      possibility['values'] = possibleExtraPrice.name;
+      generalFinishesToShow.push(possibility);
     }
   }
-  if(generalFinishesToShow.length>0 && itemFinishesToShow.length>0){
-    return [generalFinishesToShow,itemFinishesToShow];
-  }else if(generalFinishesToShow.length > 0){
-    return [generalFinishesToShow];
-  }else if (itemFinishesToShow.length > 0){
-    return [itemFinishesToShow];
-  }else{
-    return null;
-  }
-
+  return generalFinishesToShow;
 }
 
 var deleteWizard = function(){
@@ -201,19 +176,10 @@ var createWizard = function(combinations){
   var divContainer = createElement('div','stepwizard-row setup-panel','wizardRow');
   var wizardForm =  document.getElementById('wizardForm');
 
-  var wizardButton = createWizardButton(1,"Terminaciones generales opcionales");
+  var wizardButton = createWizardButton(1,"Terminaciones opcionales");
   divContainer.appendChild(wizardButton);
-  var wizardElement = createWizardElement(1,combinations[0],"Terminaciones generales opcionales");
+  var wizardElement = createWizardElement(1,combinations,"Terminaciones opcionales");
   wizardForm.appendChild(wizardElement);
-
-  
-  for(var i = 0; i < combinations[1].length; i++){
-    var combination = combinations[1][i];
-    var wizardButton = createWizardButton(i+2,"Terminaciones de " + estimate.items[i].name + " opcionales");
-    divContainer.appendChild(wizardButton);
-    var wizardElement = createWizardElement(i+2 ,combination,"Terminaciones de " + estimate.items[i].name + " opcionales",i==combinations[1].length-1?true:false);
-    wizardForm.appendChild(wizardElement);
-  }
 
   var wizardContainer = document.getElementById('wizardContainer');
   wizardContainer.appendChild(divContainer);
