@@ -116,7 +116,7 @@ var getEstimate = function(estimate, functionCallBack){
 }
 
 var generateEstimate = function(workRequest,functionCallBack){
-	httpPostAsync("http://localhost:8080/api2/",functionCallBack,workRequest);
+	httpPostAsync("http://localhost:8080/api2/googlesheet",functionCallBack,workRequest);
 }
 
 

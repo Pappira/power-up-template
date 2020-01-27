@@ -134,6 +134,12 @@ var createRequest = function(){
           cellInformation.values = materializeSelect.getSelectedValues();
           finalWorkOptions.options[i].values = cellInformation.values;
           cellsInformation.push(cellInformation);
+        }else{
+          var cellInformation = {};
+          cellInformation.range = option.cell;
+          cellInformation.values = [];
+          finalWorkOptions.options[i].values = cellInformation.values;
+          cellsInformation.push(cellInformation);
         }
         break;
       }
