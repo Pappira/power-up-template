@@ -137,7 +137,7 @@ var createRequest = function(){
         }else{
           var cellInformation = {};
           cellInformation.range = option.cell;
-          cellInformation.values = [];
+          cellInformation.values = option.default;
           finalWorkOptions.options[i].values = cellInformation.values;
           cellsInformation.push(cellInformation);
         }

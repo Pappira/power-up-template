@@ -15,12 +15,12 @@ var works = [
       },
       {
         "name":"Encuadernado",
-        "values": ["rulo","lomo"],
+        "values": ["Rulo","Lomo"],
         "cell": "B3",
         "incidences":
         [
           {
-            "selected": ["lomo"],
+            "selected": ["Lomo"],
             "name": "Cinta-marcapaginas",
             "active": true
           }
@@ -31,14 +31,16 @@ var works = [
         "values": ["Si", "No"],
         "cell": "C3",
         "active": false,
-        "disabled": true
+        "disabled": true,
+        "default":["No"]
       },
       {
         "name": "Cinta-marcapaginas",
         "values": ["Si", "No"],
         "cell": "D3",
         "active": false,
-        "disabled": true
+        "disabled": true,
+        "default":["No"]
       },
       {
         "name": "Interior--Cantidad de hojas",
