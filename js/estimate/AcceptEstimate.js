@@ -16,7 +16,7 @@ t.render(function(){
 });
 
 var createWorkTypeSelectPanel = function(currentEstimate){
-  estimate = JSON.parse(JSON.stringify(receivedEstimate));
+  estimate = JSON.parse(JSON.stringify(currentEstimate));
   estimate.prices.forEach(price => {
       if(price.dontShow && price.dontShow.length>0){
           price.dontShow.forEach(currentDontShow => {
@@ -24,7 +24,7 @@ var createWorkTypeSelectPanel = function(currentEstimate){
               delete estimate.work[currentDontShow];
           });
       }
-      price.items.forEach(item => {
+      price.items.forEach(item => { 
           if (item.dontShow && item.dontShow.length>0){
               item.dontShow.forEach(currentDontShow => {
                   delete item[currentDontShow];
