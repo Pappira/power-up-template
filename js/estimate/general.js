@@ -493,17 +493,20 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	if(item){
 		if (selectedOption){
-			selectedItem = estimate.prices[estimate.SelectedOption].items.map(currentItem => currentItem.ordinal == item.ordinal);
+			selectedItem = estimate.prices[estimate.SelectedOption].items.filter(currentItem => currentItem.ordinal == item.ordinal)[0];
 		}
 		if (estimate.work.items.length>1){
 			texts.push(createText('subtitle1',item.name,''));
 		}
 		if (selectedItem){
-			texts.push(createText('text','Papel', selectedItem.material.paper + ' ' + selectedItem.material.gr + 'gr'));
-			var inks = selectedItem.ink.inksDetails + (showBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
-
-			inks += ' - ' + (selectedItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz');
-			texts.push(createText('text','Impresión',inks));
+			if(selectedItem.material){
+				texts.push(createText('text','Papel', selectedItem.material.paper + ' ' + selectedItem.material.gr + 'gr'));
+			}
+			if(selectedItem.ink){
+				var inks = selectedItem.ink.inksDetails + (showBleedPrint?(selectedItem.bleedPrint?'(Impresión al Vivo)':''):'');
+    			inks += ' - ' + (selectedItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz');
+	    		texts.push(createText('text','Impresión',inks));
+			}
 			if (selectedItem.openedSize && selectedItem.openedSize != estimate.closedSize){
 				texts.push(createText('text','Tamaño Abierto',selectedItem.openedSize));
 			}
@@ -511,10 +514,11 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 				var quantityOfPages = selectedItem.quantityOfPages + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''));
 				texts.push(createText('text','Páginas',quantityOfPages));
 			}
-			if (selectedItem.quantityOfsheets && selectedItem.quantityOfsheets !=1){
-				var quantityOfsheets = selectedItem.quantityOfsheets + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''));
-				texts.push(createText('text','Páginas',quantityOfsheets));
+			if (selectedItem.quantityOfSheets && selectedItem.quantityOfSheets !=1){
+				var quantityOfSheets = selectedItem.quantityOfSheets + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''));
+				texts.push(createText('text','Hojas',quantityOfSheets));
 			}
+
 
 
 			if (selectedItem.mandatoryFinishes && selectedItem.mandatoryFinishes.length >0){	
@@ -526,18 +530,20 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 
 			var notTitlePlaced = true;
 			if (estimate.selectedExtraPrices){
-				if (showOptionalFinishes){
-					if (notTitlePlaced){
-						texts.push(createText('subtitle2','Terminaciones',''));
-						notTitlePlaced = false;
-					}
-				}
-				var currentOptionalFinish = estimate.selectedExtraPrices;				
-				for(var i = 0; i < currentOptionalFinish.length;i++){
-					if (showOptionalFinishes){
-						texts.push(createText('list',currentOptionalFinish[i].name + (currentOptionalFinish[i].comment && currentOptionalFinish[i].comment!=""?" (" + currentOptionalFinish[i].comment + ")":''),''));
-					}else{
-						texts = createMandatoryFinishText(currentOptionalFinish[i],texts,true);
+				var currentOptionalFinish = estimate.selectedExtraPrices;	
+				for(var i = 0; i < currentOptionalFinish.length;i++){	
+				    if(currentOptionalFinish[i].ordinal == selectedItem.ordinal){
+						if (showOptionalFinishes){
+							if (notTitlePlaced){
+								texts.push(createText('subtitle2','Terminaciones',''));
+								notTitlePlaced = false;
+							}
+						}
+						if (showOptionalFinishes){
+							texts.push(createText('list',currentOptionalFinish[i].name + (currentOptionalFinish[i].comment && currentOptionalFinish[i].comment!=""?" (" + currentOptionalFinish[i].comment + ")":''),''));
+						}else{
+							texts = createMandatoryFinishText(currentOptionalFinish[i],texts,true);
+						}
 					}
 				}
 			}
