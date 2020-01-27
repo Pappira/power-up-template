@@ -517,6 +517,9 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 		}
 		if (estimate.work.items.length>1){
 			texts.push(createText('subtitle1',item.name,''));
+			if(item.comment){
+				texts.push(createText('subtitle4',item.comment,''));
+			}
 		}
 		if (selectedItem){
 			if(selectedItem.material){
