@@ -466,12 +466,12 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 		}
 	}
 	if (estimate.work.optionalFinishes && estimate.work.optionalFinishes.length >0){
-		if (includeOptionalFinishes){
-			text.push(createText('subtitle2','Terminaciones',''));
-		}
 		var currentOptionalFinish = estimate.work.optionalFinishes;
 		if(!(!selectedOption || dontTakeCareOfSelectedOption)){
 			currentOptionalFinish = estimate.selectedExtraPrices;
+		}
+		if (currentOptionalFinish && currentOptionalFinish.length>0){
+			text.push(createText('subtitle2','Terminaciones',''));
 		}
 		for(var i = 0; i < currentOptionalFinish.length;i++){
 			if (includeOptionalFinishes){
@@ -489,7 +489,11 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	if(item){
 		if (selectedOption){
-			selectedItem = estimate.prices[estimate.SelectedOption].items.filter(currentItem => currentItem.ordinal == item.ordinal)[0];
+			if(item.ordinal){
+				selectedItem = estimate.prices[estimate.SelectedOption].items.filter(currentItem => currentItem.ordinal == item.ordinal)[0];
+			}else{
+				selectedItem = item;
+			}
 		}
 		if (estimate.work.items.length>1){
 			texts.push(createText('subtitle1',item.name,''));
@@ -503,7 +507,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
     			inks += ' - ' + (selectedItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz');
 	    		texts.push(createText('text','Impresión',inks));
 			}
-			if (selectedItem.openedSize && selectedItem.openedSize != estimate.closedSize){
+			if (selectedItem.openedSize && selectedItem.openedSize != estimate.work.closedSize){
 				texts.push(createText('text','Tamaño Abierto',selectedItem.openedSize));
 			}
 			if (selectedItem.quantityOfPages && selectedItem.quantityOfPages !=1){
@@ -548,17 +552,16 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 				texts.push(createText('text','Pliego', selectedItem.processDetails.paperSize + " armado de a " + selectedItem.processDetails.quantityPerPaper + " (" + selectedItem.processDetails.excess + " de demasía)"));
 				texts.push(createText('text','Máquina', selectedItem.processDetails.machine));
 			}  
+			if(selectedItem.subItem){
+				texts.concat(createItemText(estimate,selectedItem.subItem,true,true,true,false,true));
+			}
 		}else{
 			if (item.material){
-				var materials = item.material.map(function(material) {
-					return material.name + " " + material.gr + 'gr';
-				}).join(' // ');
+				var materials = item.material.map(material => material.name + " " + material.gr + 'gr').join(' // ');
 				texts.push(createText('text','Papel',materials));
 			}
 			if (item.ink){
-					var inks = item.ink.map(function(ink) {
-						return ink.inksDetails;
-					}).join(' // ') + (showBleedPrint?' ' + (item.bleedPrint?'(Impresión al Vivo)':''):'');
+					var inks = item.ink.map(ink => ink.inksDetails).join(' // ') + (showBleedPrint?' ' + (item.bleedPrint?'(Impresión al Vivo)':''):'');
 					inks += (item.faces?' - ' + item.faces.map(faz => faz=='DOBLE_FAZ'?'Doble faz':'Simple faz').join(' // '):'');
 					texts.push(createText('text','Impresión',inks));
 			}
