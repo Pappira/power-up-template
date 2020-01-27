@@ -34,28 +34,22 @@ var createScreen = function(type,titulo,estimate,nextFunction){
     var divLoader = createElement('div','','loader');
     div.appendChild(divLoader);
     estimate.prices.sort(compareValues());
-    for (var i = 0; i < estimate.prices.length;i++){
-      var price = estimate.prices[i];
+    estimate.prices.forEach(function(price){
       var text;
       var priceText = "<strong>Cantidad: </strong>" + price.quantity + '<br>';
       var generalFinishesText = "";
       if(estimate.work.mandatoryFinishes){
         if (estimate.work.mandatoryFinishes.length>1){
-            for (var j = 0; j < price.mandatoryFinishes.length;j++){
-                generalFinishesText += (generalFinishesText.length>0?" ":"") + price.mandatoryFinishes[j].name;
-            }
+          generalFinishesText = price.mandatoryFinishes.map(mandatoryFinish => mandatoryFinish.name).join(" ");
         }
       }
       priceText += "<strong>" + generalFinishesText +"</strong>" + '<br>';
-      for (var j = 0; j < price.items.length; j++){
-        var item =  price.items[j];
+      price.items.forEach(function(item){
         var originalItem = estimate.work.items.filter(currentItem => currentItem.ordinal == item.ordinal)[0];
         var itemsFinishesText  = "";
         if(originalItem.mandatoryFinishes){
           if (originalItem.mandatoryFinishes.length>1){
-              for (var j = 0; j < item.mandatoryFinishes.length;j++){
-                  itemsFinishesText += " " + item.mandatoryFinishes[j].name;
-              }
+            itemsFinishesText = item.mandatoryFinishes.map(mandatoryFinish => mandatoryFinish.name).join(" ");
           }
         }
         var currentPriceText = (originalItem.material.length>1?'<strong>papel: </strong>' + item.material.name + ' '  + item.material.gr + 'gr <br>':'')
@@ -69,12 +63,12 @@ var createScreen = function(type,titulo,estimate,nextFunction){
           currentPriceText = (price.items.length>1?'<p style="text-align: center;font-size: 1.3em;text-decoration: underline;margin: 0.5em;">' + originalItem.name+'</p>':'') + currentPriceText;
           priceText += currentPriceText;
         }
-      }
+      });
       text = priceText + "<h6>" + 'Precio: $ ' + price.price.toLocaleString() + ' + IVA' + '</h6>';
 
       var card = createHTMLCard(noImage,'',text,type,i,nextFunction,true);
       divRow.appendChild(card);
-    }
+    });
     div.appendChild(divRow);
     return div;
   }else{
