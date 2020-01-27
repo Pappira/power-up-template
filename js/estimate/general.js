@@ -123,6 +123,7 @@ var generateEstimate = function(workRequest,functionCallBack){
 function httpPostAsync(theUrl, functionCallBack,workRequest)
 {
 	var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("POST", theUrl, true); // true for asynchronous 
 	xmlHttp.setRequestHeader("Content-Type", "application/json");
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && (xmlHttp.status == 200 || xmlHttp.status == 201)){
@@ -130,7 +131,6 @@ function httpPostAsync(theUrl, functionCallBack,workRequest)
 			functionCallBack(estimate);
 		}
     }
-    xmlHttp.open("POST", theUrl, true); // true for asynchronous 
     xmlHttp.send(JSON.stringify(workRequest));
 }
 
