@@ -82,7 +82,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
           priceText += currentPriceText;
         }
       });
-      text = priceText + "<h6>" + 'Precio: $ ' + price.price.toLocaleString() + ' + IVA' + '</h6>';
+      text = priceText + "<h6>" + 'Precio: $ ' + price.totalPrice.toLocaleString() + ' + IVA' + '</h6>';
 
       var card = createHTMLCard(noImage,'',text,type,index,nextFunction,true);
       divRow.appendChild(card);
@@ -103,7 +103,7 @@ var nextAfterAcceptedEstimateSelect = function(){
   }else{
     estimate["SelectedOption"] = 0;
   }
-  if (estimate.optionalFinishesPrices && estimate.optionalFinishesPrices.length>0){
+  if (estimate.optionalFinishes && estimate.optionalFinishes.length>0){
     var possibilities = createPossibilities();
     if (possibilities != null){
       deleteWizard();
@@ -119,8 +119,8 @@ var nextAfterAcceptedEstimateSelect = function(){
 var createPossibilities = function(){
   var generalFinishesToShow = [];
     var itemFinishesToShow = [];
-    for (var i = 0; i < estimate.optionalFinishesPrices.length;i++){
-      var possibleExtraPrice = estimate.optionalFinishesPrices[i];
+    for (var i = 0; i < estimate.optionalFinishes.length;i++){
+      var possibleExtraPrice = estimate.optionalFinishes[i];
       var isPossible = true;
       var work = estimate.prices[estimate.SelectedOption];
       for (var prop in possibleExtraPrice) {
