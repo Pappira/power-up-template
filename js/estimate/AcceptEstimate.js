@@ -118,64 +118,56 @@ var nextAfterAcceptedEstimateSelect = function(){
 
 var createPossibilities = function(){
   var generalFinishesToShow = [];
-    var itemFinishesToShow = [];
-    for (var i = 0; i < estimate.optionalFinishes.length;i++){
-      var possibleExtraPrice = estimate.optionalFinishes[i];
-      var isPossible = true;
-      var work = estimate.prices[estimate.SelectedOption];
-      for (var prop in possibleExtraPrice) {
-        if (prop != "optionalFinishes" && prop !="items" && prop !="workId"){
-          if(!JSON.stringify(work[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
-            isPossible = false;
-            break; 
-          }
-        }else if(prop == "items"){
-          for (var j = 0; j < possibleExtraPrice.items.length; j++){
-            var priceItem = possibleExtraPrice.items[j];
-            var workItem = work.items[j];
-            for (var itemProp in priceItem) {
-              if (itemProp != "optionalFinishes" && itemProp!="id"){
-                if(!JSON.stringify(workItem[itemProp]).includes(JSON.stringify(priceItem[itemProp]))){
-                  isPossible = false;
-                  break;
-                }
-              }
-            }
-          }
+  var itemFinishesToShow = [];
+  var exclude = ["name", "price", "propertiesToSelectByCustomer", "showToClient", "itemOrdinal"];
+  for (var i = 0; i < estimate.optionalFinishes.length;i++){
+    var possibleExtraPrice = estimate.optionalFinishes[i];
+    var isPossible = true;
+    var work = estimate.prices[estimate.SelectedOption];
+    var item = work;
+    if (possibleExtraPrice.itemOrdinal !=-1){
+      item = work.items.map(currentItem => currentItem.ordinal == possibleExtraPrice.itemOrdinal);
+    }
+    for (var prop in possibleExtraPrice) {
+      if (!exclude.includes(prop)){
+        if(!JSON.stringify(item[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
+          isPossible = false;
+          break; 
         }
       }
-      if (isPossible){
-        for(var j = 0; j <possibleExtraPrice.optionalFinishes.length;j++ ){
-          var possibility = {};
-          possibility['itemId'] = "-1-" + i + "-" + j;
-          possibility['values'] = possibleExtraPrice.optionalFinishes[j].finish;
-          generalFinishesToShow.push(possibility);
-        }
-        for(var j = 0; j < possibleExtraPrice.items.length;j++){
-          if(possibleExtraPrice.items[j] && possibleExtraPrice.items[j].optionalFinishes){
-            for (var k = 0; k < possibleExtraPrice.items[j].optionalFinishes.length;k++){
-              var possibility = {};
-              possibility['itemId'] = j + "-" + i + "-" + k;
-              possibility['values'] = possibleExtraPrice.items[j].optionalFinishes[k].finish;
-              if(!itemFinishesToShow[j] || itemFinishesToShow[j].length==0){
-                itemFinishesToShow[j] = [];
-              }
-              itemFinishesToShow[j].push(possibility);
+    }
+    if (isPossible){
+      for(var j = 0; j <possibleExtraPrice.optionalFinishes.length;j++ ){
+        var possibility = {};
+        possibility['itemId'] = "-1-" + i + "-" + j;
+        possibility['values'] = possibleExtraPrice.optionalFinishes[j].finish;
+        generalFinishesToShow.push(possibility);
+      }
+      for(var j = 0; j < possibleExtraPrice.items.length;j++){
+        if(possibleExtraPrice.items[j] && possibleExtraPrice.items[j].optionalFinishes){
+          for (var k = 0; k < possibleExtraPrice.items[j].optionalFinishes.length;k++){
+            var possibility = {};
+            possibility['itemId'] = j + "-" + i + "-" + k;
+            possibility['values'] = possibleExtraPrice.items[j].optionalFinishes[k].finish;
+            if(!itemFinishesToShow[j] || itemFinishesToShow[j].length==0){
+              itemFinishesToShow[j] = [];
             }
+            itemFinishesToShow[j].push(possibility);
           }
         }
       }
     }
-    if(generalFinishesToShow.length>0 && itemFinishesToShow.length>0){
-      return [generalFinishesToShow,itemFinishesToShow];
-    }else if(generalFinishesToShow.length > 0){
-      return [generalFinishesToShow];
-    }else if (itemFinishesToShow.length > 0){
-      return [itemFinishesToShow];
-    }else{
-      return null;
-    }
-   
+  }
+  if(generalFinishesToShow.length>0 && itemFinishesToShow.length>0){
+    return [generalFinishesToShow,itemFinishesToShow];
+  }else if(generalFinishesToShow.length > 0){
+    return [generalFinishesToShow];
+  }else if (itemFinishesToShow.length > 0){
+    return [itemFinishesToShow];
+  }else{
+    return null;
+  }
+
 }
 
 var deleteWizard = function(){
