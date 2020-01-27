@@ -141,5 +141,5 @@ var createCustomer = function(estimateObject){
 
 var createEstimateAndUpdateCard = function() {
 	estimate = createObject();
-	updateCard(estimate);
-	};
+	updateCard(removeDontUse(estimate));
+};
