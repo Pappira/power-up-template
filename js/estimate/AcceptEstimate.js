@@ -7,6 +7,7 @@ var selectedWorkTypeId;
 var selectedWorkId;
 var selectedOptions = [];
 var estimate; 
+var originalEstimate;
 
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
@@ -16,6 +17,7 @@ t.render(function(){
 });
 
 var createWorkTypeSelectPanel = function(currentEstimate){
+  originalEstimate = currentEstimate;
   estimate = JSON.parse(JSON.stringify(currentEstimate));
   estimate.prices.forEach(price => {
       if(price.dontShow && price.dontShow.length>0){
@@ -241,6 +243,8 @@ var createFormButton = function(step,text,next,finish){
     extraPrices.push(estimate.optionalFinishes[selectedOptions[i].substr(0,selectedOptions[i].indexOf("-"))]);
   }
   estimate.selectedExtraPrices = extraPrices;
+  originalEstimate.selectedExtraPrices = extraPrices;
+  originalEstimate.SelectedOption = estimate.SelectedOption;
   updateCard(estimate);
  }
 
