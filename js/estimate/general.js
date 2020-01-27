@@ -408,8 +408,7 @@ var createText = function(type,name,value){
 var getExtraPricesFromEstimate = function(estimate){
 	var extraPrice = 0;
 	if(estimate.selectedExtraPrices && estimate.selectedExtraPrices.length > 0){
-		extraPrice += estimate.selectedExtraPrices.map(optionalFinishes => optionalFinishes.optionalFinishes?optionalFinishes.optionalFinishes.map(optionalFinish => optionalFinish.price).reduce(add):0).reduce(add);
-		extraPrice += estimate.selectedExtraPrices.map(optionalFinishes => optionalFinishes.items?optionalFinishes.items.filter(Boolean).map(item => item.optionalFinishes?item.optionalFinishes.filter(Boolean).map(optionalFinish => optionalFinish.price).reduce(add):0).reduce(add):0).reduce(add);
+		return estimate.selectedExtraPrices.map(extraPrice => extraPrice.price).reduce(add);
 	}
 	return extraPrice;
 }
@@ -783,7 +782,7 @@ var createCompletePriceText = function(estimate){
 var createPriceText = function(estimate,extraPrice){
 	var texts = [];
 	if (estimate.SelectedOption){
-		texts.push(createText('subtitle1','Precio: $' + (estimate.prices[estimate.SelectedOption].price + extraPrice) + ' + IVA' ,''));
+		texts.push(createText('subtitle1','Precio: $' + (estimate.prices[estimate.SelectedOption].totalPrice + extraPrice) + ' + IVA' ,''));
 	}
 	return texts;
 }
