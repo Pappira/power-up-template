@@ -409,17 +409,23 @@ TrelloPowerUp.initialize({
     return t.get('card', 'shared', cardInfoKey).then(
       function(estimate){
         var acceptEstimte ={};
+
         //estimate = deTranslateEstimate(JSON.parse( LZString.decompress(estimate)));
-        if (estimate['prices']){
-          acceptEstimte = {
+        //if (estimate['prices']){
+          //acceptEstimte = {
             // usually you will provide a callback function to be run on button click
             // we recommend that you use a popup on click generally
             //icon: GRAY_ICON, // don't use a colored icon here
+            //text: 'Aceptar',
+            //callback: getAcceptEstimate()
+          //}
+        //}
+        return [
+          {
             text: 'Aceptar',
             callback: getAcceptEstimate()
-          }
-        }
-        return [{
+          },
+          {
           // usually you will provide a callback function to be run on button click
           // we recommend that you use a popup on click generally
           //icon: GRAY_ICON, // don't use a colored icon here
