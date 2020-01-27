@@ -248,13 +248,12 @@ var createCheckListsForCard = function(estimate){
 			name:"Terminaciones Generales",
 			checkItems:[]
 		};
-		if (estimate.mandatoryFinishGroups && estimate.mandatoryFinishGroups.length >0){
-			var currentMandatoryFinishGroups = estimate.mandatoryFinishGroups;
+		if (estimate.work.mandatoryFinishes && estimate.work.mandatoryFinishes.length >0){
+			var currentMandatoryFinishGroups = estimate.work.mandatoryFinishes;
 			if(estimate.SelectedOption!=null){
-				currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishGroups;
+				currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishes;
 				for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-					var item = currentMandatoryFinishGroups[i].groupName + " - " + currentMandatoryFinishGroups[i].finishes.finish + 
-					(currentMandatoryFinishGroups[i].finishes.finishComment!=""?' - ' +currentMandatoryFinishGroups[i].finishes.finishComment:'');
+					var item = currentMandatoryFinishGroups[i].name + (currentMandatoryFinishGroups[i].comment!=""?' - ' +currentMandatoryFinishGroups[i].comment:'');
 					generalCheckList.checkItems.push(
 						{
 							checkListName: "Terminaciones Generales",
@@ -270,10 +269,9 @@ var createCheckListsForCard = function(estimate){
 			if(estimate.SelectedOption!=null){
 				var optionalFinishesPrices = estimate.selectedExtraPrices;
 				for (var i = 0; i < optionalFinishesPrices.length; i++){
-					if (optionalFinishesPrices[i].optionalFinishes){
-						for (var j = 0; j < optionalFinishesPrices[i].optionalFinishes.length;j++){
-							var item = optionalFinishesPrices[i].optionalFinishes[j].finish + 
-							(optionalFinishesPrices[i].optionalFinishes[j].finishComment!=""?' - ' +optionalFinishesPrices[i].optionalFinishes[j].finishComment:'');
+					if (optionalFinishesPrices[i]){
+							var item = optionalFinishesPrices[i].name + 
+							(optionalFinishesPrices[i].comment!=""?' - ' +optionalFinishesPrices[i].comment:'');
 							generalCheckList.checkItems.push(
 								{
 									checkListName: "Terminaciones Generales",
@@ -290,7 +288,7 @@ var createCheckListsForCard = function(estimate){
 		if(generalCheckList.checkItems.length>0){
 			checkLists.push(generalCheckList);
 		}
-		for (var i = 0; i< estimate.items.length;i++){
+		for (var i = 0; i< estimate.work.items.length;i++){
 			var currentCheckList = {
 				name:"Terminaciones de " + estimate.items[i].name,
 				checkItems:[]
