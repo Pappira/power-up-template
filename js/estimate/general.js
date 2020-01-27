@@ -269,7 +269,7 @@ var createCheckListsForCard = function(estimate){
 			if(estimate.SelectedOption!=null){
 				var optionalFinishesPrices = estimate.selectedExtraPrices;
 				for (var i = 0; i < optionalFinishesPrices.length; i++){
-					if (optionalFinishesPrices[i]){
+					if (optionalFinishesPrices[i].itemOrdinal == -1){
 						var item = optionalFinishesPrices[i].name + 
 						(optionalFinishesPrices[i].comment!=""?' - ' +optionalFinishesPrices[i].comment:'');
 						generalCheckList.checkItems.push(
@@ -289,19 +289,19 @@ var createCheckListsForCard = function(estimate){
 		}
 		for (var i = 0; i< estimate.work.items.length;i++){
 			var currentCheckList = {
-				name:"Terminaciones de " + estimate.items[i].name,
+				name:"Terminaciones de " + estimate.work.items[i].name,
 				checkItems:[]
 			};
-			if (estimate.items[i].mandatoryFinishGroups && estimate.items[i].mandatoryFinishGroups.length >0){
-				var currentItemMandatoryFinishGroups = estimate.items[i].mandatoryFinishGroups;
+			if (estimate.work.items[i].mandatoryFinishes && estimate.work.items[i].mandatoryFinishes.length >0){
+				var currentItemMandatoryFinishGroups = estimate.work.items[i].mandatoryFinishes;
 				if(estimate.SelectedOption!=null){
-					currentItemMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].items[i].mandatoryFinishGroups;
+					currentItemMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].items.filter(currentItem => currentItem.ordinal = estimate.work.items[i].ordinal)[0].mandatoryFinishes;
 					for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-						var item = currentItemMandatoryFinishGroups[k].groupName + ' - ' + currentItemMandatoryFinishGroups[k].finishes.finish + 
-						(currentItemMandatoryFinishGroups[k].finishes.finishComment?' - ' +currentItemMandatoryFinishGroups[k].finishes.finishComment:'');
+						var item = currentItemMandatoryFinishGroups[k].name +
+						(currentItemMandatoryFinishGroups[k].comment?' - ' +currentItemMandatoryFinishGroups[k].comment:'');
 						currentCheckList.checkItems.push(
 							{
-								checkListName: "Terminaciones de " + estimate.items[i].name,
+								checkListName: "Terminaciones de " + estimate.work.items[i].name,
 								checked:false,
 								name:item,
 								pos:'bottom'
@@ -310,23 +310,22 @@ var createCheckListsForCard = function(estimate){
 					}
 				}
 			}
-			if (estimate.items[i].optionalFinishes && estimate.items[i].optionalFinishes.length >0){
+			if (estimate.work.items[i].optionalFinishes && estimate.work.items[i].optionalFinishes.length >0){
 				if(estimate.SelectedOption!=null){
 					var optionalFinishesPrices = estimate.selectedExtraPrices;
 					for (var j = 0; j < optionalFinishesPrices.length; j++){
-						if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[i] && optionalFinishesPrices[j].items[i].optionalFinishes){
-							for (var k = 0; k < optionalFinishesPrices[j].items[i].optionalFinishes.length;k++){
-								var item = optionalFinishesPrices[j].items[i].optionalFinishes[k].finish +  
-								(optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment!=""?' - ' + optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'');
-								currentCheckList.checkItems.push(
-									{
-										checkListName: "Terminaciones de " + estimate.items[i].name,
-										checked:false,
-										name:item,
-										pos:'bottom'
-									}
-								);
-							}
+						if(optionalFinishesPrices[j].itemOrdinal == estimate.work.items[i].ordinal){
+							var item = optionalFinishesPrices[j].name +  
+							(optionalFinishesPrices[j].items[i].comment!=""?' - ' + optionalFinishesPrices[j].comment:'');
+							currentCheckList.checkItems.push(
+								{
+									checkListName: "Terminaciones de " + estimate.items[i].name,
+									checked:false,
+									name:item,
+									pos:'bottom'
+								}
+							);
+							
 						}
 					}
 				}
