@@ -96,7 +96,8 @@ body {
  }
 
 .row .col.s6 {
- 	min-height: 61px;
+   min-height: 61px;
+   width: 47%;
 }
 
 .row .col.s4 {
