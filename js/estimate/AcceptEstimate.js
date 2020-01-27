@@ -39,8 +39,8 @@ var createScreen = function(type,titulo,estimate,nextFunction){
       var text;
       var priceText = "<strong>Cantidad: </strong>" + price.quantity + '<br>';
       var generalFinishesText = "";
-      if(price.mandatoryFinishes){
-        if (price.mandatoryFinishes.length>1){
+      if(estimate.work.mandatoryFinishes){
+        if (estimate.work.mandatoryFinishes.length>1){
             for (var j = 0; j < price.mandatoryFinishes.length;j++){
                 generalFinishesText += (generalFinishesText.length>0?" ":"") + price.mandatoryFinishes[j].name;
             }
@@ -49,18 +49,17 @@ var createScreen = function(type,titulo,estimate,nextFunction){
       priceText += "<strong>" + generalFinishesText +"</strong>" + '<br>';
       for (var j = 0; j < price.items.length; j++){
         var item =  price.items[j];
+        var originalItem = estimate.work.items.filter(currentItem => currentItem.ordinal == item.ordinal)[0];
         var itemsFinishesText  = "";
-        if(item.mandatoryFinishes){
-          if (item.mandatoryFinishes.length>1){
+        if(originalItem.mandatoryFinishes){
+          if (originalItem.mandatoryFinishes.length>1){
               for (var j = 0; j < item.mandatoryFinishes.length;j++){
                   itemsFinishesText += " " + item.mandatoryFinishes[j].name;
               }
           }
         }
-
-        var originalItem = estimate.work.items.filter(currentItem => currentItem.ordinal == item.ordinal)[0];
-        var currentPriceText = (originalItem.materials.length>1?'<strong>papel: </strong>' + item.materials.paper + ' '  + item.materials.gr + 'gr <br>':'')
-        + ((originalItem.ink.length>1 || originalItem.faces.length>1)?'<strong>Tintas: </strong>' + item.ink.inksQuantity +' ' + item.faces +'<br>':'')
+        var currentPriceText = (originalItem.material.length>1?'<strong>papel: </strong>' + item.material.name + ' '  + item.material.gr + 'gr <br>':'')
+        + ((originalItem.ink.length>1 || originalItem.faces.length>1)?'<strong>Tintas: </strong>' + item.ink.inksDetails +' ' + item.faces +'<br>':'')
         + ((originalItem.openedSize && originalItem.openedSize.length>1)?'<strong>Tamaño Abierto: </strong>' + item.openedSize + '<br>':'') 
         + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?'<strong>Páginas: </strong>'  + item.quantityOfPages + '<br>':'')
         + ((originalItem.quantityOfSheets.length>1 && item.quantityOfSheets>1)?'<strong>Hojas: </strong>'  + item.quantityOfSheets + '<br>':'')
