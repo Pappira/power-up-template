@@ -5,7 +5,7 @@ var listId = '5a9ef0ce024c776a21220836';
 
 var selectedWorkTypeId;
 var selectedWorkId;
-var selectedOptions = {};
+var selectedOptions = [];
 var estimate; 
 
 t.render(function(){
