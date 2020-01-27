@@ -51,6 +51,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
     
     var divLoader = createElement('div','','loader');
     div.appendChild(divLoader);
+    var index = 0;
     estimate.prices.forEach(function(price){
       var text;
       var priceText = "<strong>Cantidad: </strong>" + price.quantity + '<br>';
@@ -69,7 +70,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
             itemsFinishesText = item.mandatoryFinishes.map(mandatoryFinish => mandatoryFinish.name).join(" ");
           }
         }
-        var currentPriceText = ((originalItem.material.length>1 && item.material)?'<strong>papel: </strong>' + item.material.name + ' '  + item.material.gr + 'gr <br>':'')
+        var currentPriceText = ((originalItem.material && originalItem.material.length>1 && item.material)?'<strong>papel: </strong>' + item.material.name + ' '  + item.material.gr + 'gr <br>':'')
         + (((originalItem.ink.length>1 || originalItem.faces.length>1) && item.ink && item.faces)?'<strong>Tintas: </strong>' + item.ink.inksDetails +' ' + item.faces +'<br>':'')
         + ((originalItem.openedSize && originalItem.openedSize.length>1)?'<strong>Tamaño Abierto: </strong>' + item.openedSize + '<br>':'') 
         + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?'<strong>Páginas: </strong>'  + item.quantityOfPages + '<br>':'')
@@ -83,8 +84,9 @@ var createScreen = function(type,titulo,estimate,nextFunction){
       });
       text = priceText + "<h6>" + 'Precio: $ ' + price.price.toLocaleString() + ' + IVA' + '</h6>';
 
-      var card = createHTMLCard(noImage,'',text,type,i,nextFunction,true);
+      var card = createHTMLCard(noImage,'',text,type,index,nextFunction,true);
       divRow.appendChild(card);
+      index++;
     });
     div.appendChild(divRow);
     return div;
