@@ -548,10 +548,9 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 				}
 			}
 			if(showPrivatePrinterInformation && estimate.SelectedOption){
-				texts.push(createText('text','Hoja', selectedItem.sheetSize + " cortado en " + selectedItem.cutsPerSheet));
-				texts.push(createText('text','Pliego', selectedItem.paperSize + " armado de a " + selectedItem.quantityPerPaper + " (" + selectedItem.excess + " de demasía)"));
-				texts.push(createText('text','Máquina', selectedItem.machine));
-				texts.push(createText('text','Demasía', selectedItem.excess));
+				texts.push(createText('text','Hoja', selectedItem.processDetails.sheetSize + " cortado en " + selectedItem.processDetails.cutsPerSheet));
+				texts.push(createText('text','Pliego', selectedItem.processDetails.paperSize + " armado de a " + selectedItem.processDetails.quantityPerPaper + " (" + selectedItem.processDetails.excess + " de demasía)"));
+				texts.push(createText('text','Máquina', selectedItem.processDetails.machine));
 			}  
 		}else{
 			if (item.material){
