@@ -295,7 +295,7 @@ var createCheckListsForCard = function(estimate){
 			if (estimate.work.items[i].mandatoryFinishes && estimate.work.items[i].mandatoryFinishes.length >0){
 				var currentItemMandatoryFinishGroups = estimate.work.items[i].mandatoryFinishes;
 				if(estimate.SelectedOption!=null){
-					currentItemMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].items.filter(currentItem => currentItem.ordinal = estimate.work.items[i].ordinal)[0].mandatoryFinishes;
+					currentItemMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].items.filter(currentItem => currentItem.ordinal == estimate.work.items[i].ordinal)[0].mandatoryFinishes;
 					for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
 						var item = currentItemMandatoryFinishGroups[k].name +
 						(currentItemMandatoryFinishGroups[k].comment && currentItemMandatoryFinishGroups[k].comment!=''?' - ' +currentItemMandatoryFinishGroups[k].comment:'');
