@@ -239,7 +239,7 @@ var createFormButton = function(step,text,next,finish){
  var updateEstimateAndTrelloCard = function(){
   var extraPrices = [];
   for (var i = 0; i < selectedOptions.length;i++){
-    extraPrices.push(estimate.optionalFinishes[selectedOptions[i]]);
+    extraPrices.push(estimate.optionalFinishes[selectedOptions[i].substr(0,selectedOptions[i].indexOf("-"))]);
   }
   estimate.selectedExtraPrices = extraPrices;
   updateCard(estimate);
