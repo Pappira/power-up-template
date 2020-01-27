@@ -69,8 +69,8 @@ var createScreen = function(type,titulo,estimate,nextFunction){
             itemsFinishesText = item.mandatoryFinishes.map(mandatoryFinish => mandatoryFinish.name).join(" ");
           }
         }
-        var currentPriceText = (originalItem.material.length>1?'<strong>papel: </strong>' + item.material.name + ' '  + item.material.gr + 'gr <br>':'')
-        + ((originalItem.ink.length>1 || originalItem.faces.length>1)?'<strong>Tintas: </strong>' + item.ink.inksDetails +' ' + item.faces +'<br>':'')
+        var currentPriceText = ((originalItem.material.length>1 && item.material)?'<strong>papel: </strong>' + item.material.name + ' '  + item.material.gr + 'gr <br>':'')
+        + (((originalItem.ink.length>1 || originalItem.faces.length>1) && item.ink && item.faces)?'<strong>Tintas: </strong>' + item.ink.inksDetails +' ' + item.faces +'<br>':'')
         + ((originalItem.openedSize && originalItem.openedSize.length>1)?'<strong>Tamaño Abierto: </strong>' + item.openedSize + '<br>':'') 
         + ((originalItem.quantityOfPages.length>1 && item.quantityOfPages>1)?'<strong>Páginas: </strong>'  + item.quantityOfPages + '<br>':'')
         + ((originalItem.quantityOfSheets.length>1 && item.quantityOfSheets>1)?'<strong>Hojas: </strong>'  + item.quantityOfSheets + '<br>':'')
