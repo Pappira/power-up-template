@@ -489,7 +489,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	if(item){
 		if (selectedOption){
-			if(item.ordinal){
+			if(item.ordinal!=null){
 				selectedItem = estimate.prices[estimate.SelectedOption].items.filter(currentItem => currentItem.ordinal == item.ordinal)[0];
 			}else{
 				selectedItem = item;
@@ -532,7 +532,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 			if (estimate.selectedExtraPrices){
 				var currentOptionalFinish = estimate.selectedExtraPrices;	
 				for(var i = 0; i < currentOptionalFinish.length;i++){	
-				    if(currentOptionalFinish[i].ordinal == selectedItem.ordinal){
+				    if(currentOptionalFinish[i].itemOrdinal == selectedItem.ordinal){
 						if (showOptionalFinishes){
 							if (notTitlePlaced){
 								texts.push(createText('subtitle2','Terminaciones',''));
@@ -553,7 +553,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 				texts.push(createText('text','Máquina', selectedItem.processDetails.machine));
 			}  
 			if(selectedItem.subItem){
-				texts.concat(createItemText(estimate,selectedItem.subItem,true,true,true,false,true));
+				texts = texts.concat(createItemText(estimate,selectedItem.subItem,true,true,true,false,true));
 			}
 		}else{
 			if (item.material){
