@@ -18,7 +18,7 @@ t.render(function(){
 
 var createWorkTypeSelectPanel = function(currentEstimate){
   originalEstimate = currentEstimate;
-  estimate = removeDontShow(JSON.parse(JSON.stringify(currentEstimate)));
+  estimate = removeDontUse(JSON.parse(JSON.stringify(currentEstimate)));
   var wizardForm =  document.getElementById('wizardForm');
   var wizardElement = createScreen('AcceptEstimate','Aceptar Presupuesto',estimate,nextAfterAcceptedEstimateSelect);
   if(wizardElement){
