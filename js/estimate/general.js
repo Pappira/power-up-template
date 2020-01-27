@@ -493,7 +493,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	if(item){
 		if (selectedOption){
-			selectedItem = estimate.prices[estimate.SelectedOption].items[item.id];
+			selectedItem = estimate.prices[estimate.SelectedOption].items.map(currentItem => currentItem.ordinal == item.ordinal);
 		}
 		if (estimate.work.items.length>1){
 			texts.push(createText('subtitle1',item.name,''));
@@ -504,44 +504,49 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 
 			inks += ' - ' + (selectedItem.faces=='DOBLE_FAZ'?'Doble faz':'Simple faz');
 			texts.push(createText('text','Impresión',inks));
-			if (selectedItem.openedSize != estimate.closedSize){
+			if (selectedItem.openedSize && selectedItem.openedSize != estimate.closedSize){
 				texts.push(createText('text','Tamaño Abierto',selectedItem.openedSize));
 			}
 			if (selectedItem.quantityOfPages && selectedItem.quantityOfPages !=1){
 				var quantityOfPages = selectedItem.quantityOfPages + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''));
 				texts.push(createText('text','Páginas',quantityOfPages));
 			}
-			if (selectedItem.mandatoryFinishGroups && selectedItem.mandatoryFinishGroups.length >0){
-				currentItemMandatoryFinishGroups = selectedItem.mandatoryFinishGroups;
-				for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
-					texts.push(createText('text',currentItemMandatoryFinishGroups[k].groupName,currentItemMandatoryFinishGroups[k].finishes.finish +currentItemMandatoryFinishGroups[k].finishes.finishComment));
+			if (selectedItem.quantityOfsheets && selectedItem.quantityOfsheets !=1){
+				var quantityOfsheets = selectedItem.quantityOfsheets + (selectedItem.allTheSame?' (Todas iguales)':(showAllDifferentPages?' (Todas diferentes)':''));
+				texts.push(createText('text','Páginas',quantityOfsheets));
+			}
+
+
+			if (selectedItem.mandatoryFinishes && selectedItem.mandatoryFinishes.length >0){	
+				var currentMandatoryFinish  = selectedItem.mandatoryFinishes;
+				for(var i = 0; i < currentMandatoryFinish.length;i++){
+					texts = createMandatoryFinishText(currentMandatoryFinish[i],texts);
+				}
+			}
+
+			var notTitlePlaced = true;
+			if (estimate.selectedExtraPrices){
+				if (showOptionalFinishes){
+					if (notTitlePlaced){
+						texts.push(createText('subtitle2','Terminaciones',''));
+						notTitlePlaced = false;
+					}
+				}
+				var currentOptionalFinish = estimate.selectedExtraPrices;				
+				for(var i = 0; i < currentOptionalFinish.length;i++){
+					if (showOptionalFinishes){
+						texts.push(createText('list',currentOptionalFinish[i].name + (currentOptionalFinish[i].comment && currentOptionalFinish[i].comment!=""?" (" + currentOptionalFinish[i].comment + ")":''),''));
+					}else{
+						texts = createMandatoryFinishText(currentOptionalFinish[i],texts,true);
+					}
 				}
 			}
 			if(showPrivatePrinterInformation && estimate.SelectedOption){
 				texts.push(createText('text','Hoja', selectedItem.sheetSize + " cortado en " + selectedItem.cutsPerSheet));
 				texts.push(createText('text','Pliego', selectedItem.paperSize + " armado de a " + selectedItem.quantityPerPaper + " (" + selectedItem.excess + " de demasía)"));
 				texts.push(createText('text','Máquina', selectedItem.machine));
+				texts.push(createText('text','Demasía', selectedItem.excess));
 			}  
-			var notTitlePlaced = true;
-			if(showOptionalFinishes){
-				var optionalFinishesPrices = estimate.selectedExtraPrices;
-				if (optionalFinishesPrices){
-					for (var j = 0; j < optionalFinishesPrices.length; j++){
-						if(optionalFinishesPrices[j].items && optionalFinishesPrices[j].items[selectedItem.id] && optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes){
-							for (var k = 0; k < optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes.length;k++){
-								if (notTitlePlaced){
-									texts.push(createText('subtitle2','Terminaciones',''));
-									notTitlePlaced = false;
-								}
-								texts.push(createText('list',optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finish + (optionalFinishesPrices[j].items[selectedItem.id].optionalFinishes[k].finishComment!=""?optionalFinishesPrices[j].items[i].optionalFinishes[k].finishComment:'')));
-							}
-						}
-					}
-				}
-			}
-
-
-
 		}else{
 			if (item.material){
 				var materials = item.material.map(function(material) {
@@ -581,7 +586,7 @@ var createItemText = function(estimate, item, showBleedPrint, showAllDifferentPa
 			}
 
 			var notTitlePlaced = true;
-			if (item.optionalFinishes && item. optionalFinishes.length >0 >0){
+			if (item.optionalFinishes && item. optionalFinishes.length >0){
 				if (showOptionalFinishes){
 					if (notTitlePlaced){
 						texts.push(createText('subtitle2','Terminaciones',''));
