@@ -58,7 +58,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
           }
         }
 
-        var originalItem = estimate.work.items[item.id];
+        var originalItem = estimate.work.items.filter(currentItem => currentItem.ordinal == item.ordinal)[0];
         var currentPriceText = (originalItem.materials.length>1?'<strong>papel: </strong>' + item.materials.paper + ' '  + item.materials.gr + 'gr <br>':'')
         + ((originalItem.ink.length>1 || originalItem.faces.length>1)?'<strong>Tintas: </strong>' + item.ink.inksQuantity +' ' + item.faces +'<br>':'')
         + ((originalItem.openedSize && originalItem.openedSize.length>1)?'<strong>Tamaño Abierto: </strong>' + item.openedSize + '<br>':'') 
