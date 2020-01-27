@@ -243,7 +243,7 @@ var rename = function(objectToRename, newKey, oldKey){
 }
 var createCheckListsForCard = function(estimate){
 	var checkLists = [];
-	if(estimate.selectedOption){
+	if(estimate.SelectedOption){
 		var generalCheckList = {
 			name:"Terminaciones Generales",
 			checkItems:[]
@@ -253,7 +253,7 @@ var createCheckListsForCard = function(estimate){
 			if(estimate.SelectedOption!=null){
 				currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishes;
 				for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-					var item = currentMandatoryFinishGroups[i].name + (currentMandatoryFinishGroups[i].comment!=""?' - ' +currentMandatoryFinishGroups[i].comment:'');
+					var item = currentMandatoryFinishGroups[i].name + (currentMandatoryFinishGroups[i].comment && currentMandatoryFinishGroups[i].comment!=""?' - ' +currentMandatoryFinishGroups[i].comment:'');
 					generalCheckList.checkItems.push(
 						{
 							checkListName: "Terminaciones Generales",
@@ -271,7 +271,7 @@ var createCheckListsForCard = function(estimate){
 				for (var i = 0; i < optionalFinishesPrices.length; i++){
 					if (optionalFinishesPrices[i].itemOrdinal == -1){
 						var item = optionalFinishesPrices[i].name + 
-						(optionalFinishesPrices[i].comment!=""?' - ' +optionalFinishesPrices[i].comment:'');
+						(optionalFinishesPrices[i].comment && optionalFinishesPrices[i].comment!=""?' - ' +optionalFinishesPrices[i].comment:'');
 						generalCheckList.checkItems.push(
 							{
 								checkListName: "Terminaciones Generales",
@@ -298,7 +298,7 @@ var createCheckListsForCard = function(estimate){
 					currentItemMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].items.filter(currentItem => currentItem.ordinal = estimate.work.items[i].ordinal)[0].mandatoryFinishes;
 					for (var k = 0; k < currentItemMandatoryFinishGroups.length;k++){
 						var item = currentItemMandatoryFinishGroups[k].name +
-						(currentItemMandatoryFinishGroups[k].comment?' - ' +currentItemMandatoryFinishGroups[k].comment:'');
+						(currentItemMandatoryFinishGroups[k].comment && currentItemMandatoryFinishGroups[k].comment!=''?' - ' +currentItemMandatoryFinishGroups[k].comment:'');
 						currentCheckList.checkItems.push(
 							{
 								checkListName: "Terminaciones de " + estimate.work.items[i].name,
@@ -316,7 +316,7 @@ var createCheckListsForCard = function(estimate){
 					for (var j = 0; j < optionalFinishesPrices.length; j++){
 						if(optionalFinishesPrices[j].itemOrdinal == estimate.work.items[i].ordinal){
 							var item = optionalFinishesPrices[j].name +  
-							(optionalFinishesPrices[j].items[i].comment!=""?' - ' + optionalFinishesPrices[j].comment:'');
+							(optionalFinishesPrices[j].items[i].comment && optionalFinishesPrices[j].items[i].comment!=""?' - ' + optionalFinishesPrices[j].comment:'');
 							currentCheckList.checkItems.push(
 								{
 									checkListName: "Terminaciones de " + estimate.items[i].name,
