@@ -22,12 +22,13 @@ t.render(function(){
 		    addCardButton.addEventListener('click', createEstimateAndUpdateCard);
 		}
 	  	if(cardInfo){
-			estimate = getEstimate(cardInfo, initCustomerInfo);
+			getEstimate(cardInfo, initCustomerInfo);
 		}
 	});
 });
 
-var initCustomerInfo = function(estimate){
+var initCustomerInfo = function(currentEstimate){
+	estimate = currentEstimate;
 	createComments(estimate);
 	createCustomer(estimate);
 	createProductionTime(estimate);
