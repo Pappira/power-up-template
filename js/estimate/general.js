@@ -211,15 +211,35 @@ var updateCard = function(estimate) {
 	});
 };
 
+var removeDontUse = function(estimate){
+	estimate.prices.forEach(price => {
+		if(price.dontShow && price.dontShow.length>0){
+			price.dontShow.forEach(currentDontShow => {
+				delete price[currentDontShow];
+				delete estimate.work[currentDontShow];
+			});
+		}
+		price.items.forEach(item => { 
+			if (item.dontShow && item.dontShow.length>0){
+				item.dontShow.forEach(currentDontShow => {
+					delete item[currentDontShow];
+					var workItem = estimate.work.items.filter(currentWorkItem => currentWorkItem.name == item.name)[0];
+					delete workItem[currentDontShow];
+				});
+			}
+		});
+	});
+	return estimate;
+}
 
-var createCard = function(estimate){
+var createCard = function(receivedEstimate){
+	var estimate = removeDontUse(receivedEstimate);
 	var cardToSave = {idList: listId, desc: createTextForCard(estimate), name: createTrelloCardName(estimate)};
 	startLoader();
 	createNewTrelloCard(t, cardToSave, function(card) {
 	  setTimeout(function () {
-		var estimateToSave = JSON.parse(JSON.stringify(estimate));
-		delete estimateToSave.prices;
-		t.set(card.id, 'shared', cardInfoKey, estimateToSave)
+		delete estimate.prices;
+		t.set(card.id, 'shared', cardInfoKey, estimate)
 		  .then(function(){
 			t.showCard(card.id);
 			t.closeModal();

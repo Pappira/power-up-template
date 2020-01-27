@@ -259,24 +259,7 @@ var newAddTextToDoc = function(textToAdd,doc,top){
 }
 
 var generateEstimatePDF = function(receivedEstimate){
-    var estimate = JSON.parse(JSON.stringify(receivedEstimate));
-    estimate.prices.forEach(price => {
-        if(price.dontShow && price.dontShow.length>0){
-            price.dontShow.forEach(currentDontShow => {
-                delete price[currentDontShow];
-                delete estimate.work[currentDontShow];
-            });
-        }
-        price.items.forEach(item => {
-            if (item.dontShow && item.dontShow.length>0){
-                item.dontShow.forEach(currentDontShow => {
-                    delete item[currentDontShow];
-                    var workItem = estimate.work.items.filter(currentWorkItem => currentWorkItem.name == item.name)[0];
-                    delete workItem[currentDontShow];
-                });
-            }
-        });
-    });
+    estimate = removeDontUse(JSON.parse(JSON.stringify(receivedEstimate)));
     var doc = new jsPDF();
     var top = marginTop;
     doc.setFont(fontType);
