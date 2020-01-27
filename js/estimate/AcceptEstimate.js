@@ -16,7 +16,24 @@ t.render(function(){
 });
 
 var createWorkTypeSelectPanel = function(currentEstimate){
-  estimate = currentEstimate;
+  estimate = JSON.parse(JSON.stringify(receivedEstimate));
+  estimate.prices.forEach(price => {
+      if(price.dontShow && price.dontShow.length>0){
+          price.dontShow.forEach(currentDontShow => {
+              delete price[currentDontShow];
+              delete estimate.work[currentDontShow];
+          });
+      }
+      price.items.forEach(item => {
+          if (item.dontShow && item.dontShow.length>0){
+              item.dontShow.forEach(currentDontShow => {
+                  delete item[currentDontShow];
+                  var workItem = estimate.work.items.filter(currentWorkItem => currentWorkItem.name == item.name)[0];
+                  delete workItem[currentDontShow];
+              });
+          }
+      });
+  });
   var wizardForm =  document.getElementById('wizardForm');
   var wizardElement = createScreen('AcceptEstimate','Aceptar Presupuesto',estimate,nextAfterAcceptedEstimateSelect);
   if(wizardElement){
