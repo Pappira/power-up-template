@@ -782,7 +782,7 @@ var createCompletePriceText = function(estimate){
 var createPriceText = function(estimate,extraPrice){
 	var texts = [];
 	if (estimate.SelectedOption){
-		texts.push(createText('subtitle1','Precio: $' + (estimate.prices[estimate.SelectedOption].totalPrice + extraPrice) + ' + IVA' ,''));
+		texts.push(createText('subtitle1','Precio: $' + (estimate.prices[estimate.SelectedOption].totalPrice + extraPrice).toLocaleString() + ' + IVA' ,''));
 	}
 	return texts;
 }
