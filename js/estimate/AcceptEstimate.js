@@ -17,7 +17,6 @@ t.render(function(){
 
 var createWorkTypeSelectPanel = function(currentEstimate){
   estimate = JSON.parse(JSON.stringify(currentEstimate));
-  estimate.prices.sort(compareValues());
   estimate.prices.forEach(price => {
       if(price.dontShow && price.dontShow.length>0){
           price.dontShow.forEach(currentDontShow => {

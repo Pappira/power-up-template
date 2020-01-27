@@ -120,7 +120,8 @@ function httpGetAsync(theUrl, functionCallBack,estimate)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
-			estimate.prices = JSON.parse(xmlHttp.responseText).prices;
+			estimate.prices = JSON.parse(xmlHttp.responseText).prices;	
+			estimate = order(estimate);
 			functionCallBack(estimate);
 		}
     }
@@ -474,7 +475,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 		}
 		var currentOptionalFinish = estimate.work.optionalFinishes;
 		if(!(!selectedOption || dontTakeCareOfSelectedOption)){
-			currentOptionalFinish = estimate.prices[estimate.SelectedOption].optionalFinishes;
+			currentOptionalFinish = estimate.selectedExtraPrices;
 		}
 		for(var i = 0; i < currentOptionalFinish.length;i++){
 			if (includeOptionalFinishes){
@@ -618,8 +619,6 @@ var createCommentsText = function(estimate, showInternalComments, showCustomerCo
 var createCompletePriceText = function(estimate){
 	textToAdd = [];
 	if(estimate.prices){
-			estimate.prices.forEach(price => price.items.sort(orderItems()));
-			estimate.prices.sort(compareValues());
 			if (estimate.prices.length>1){
 					textToAdd.push(createText('subtitle1','Precios', ''));  
 			}
@@ -841,6 +840,12 @@ function sortOptionalFinishes(order = 'asc'){
 	}
 } 
 
+var order = function(estimate){
+	estimate.prices.forEach(price => price.items.sort(orderItems()));
+	estimate.prices.sort(compareValues());
+	return estimate;
+}
+
 function orderItems(order = 'asc'){
 	return function(a,b){
 		let comparison = 0;
@@ -855,22 +860,22 @@ function orderItems(order = 'asc'){
 
 function compareValues(order='asc') {
     return function(a, b) {
-				let comparison = a.quantity - b.quantity;
-				if(a.mandatoryFinish && b.mandatoryFinish){
-					if (a.mandatoryFinish.length == b.mandatoryFinish.length){
-						for (var j = 0; j < a.mandatoryFinish.length;j++){
-							const varA = (typeof a.mandatoryFinish[j].finishes.finish === 'string') ?a.mandatoryFinish[j].finishes.finish.toUpperCase() : a.mandatoryFinish[j].finishes.finish;
-							const varB = (typeof b.mandatoryFinish[j].finishes.finish === 'string') ?b.mandatoryFinish[j].finishes.finish.toUpperCase() : b.mandatoryFinish[j].finishes.finish;
-							if (a.mandatoryFinish[j].finishes.finish != b.mandatoryFinish[j].finishes.finish){
-								if (varA > varB) {
-									return ((order == 'desc') ? -1:1);
-								} else if (varA < varB) {
-									return ((order == 'desc') ? 1:-1);
-								}
-							}
+		let comparison = a.quantity - b.quantity;
+		if(a.mandatoryFinish && b.mandatoryFinish){
+			if (a.mandatoryFinish.length == b.mandatoryFinish.length){
+				for (var j = 0; j < a.mandatoryFinish.length;j++){
+					const varA = (typeof a.mandatoryFinish[j].finishes.finish === 'string') ?a.mandatoryFinish[j].finishes.finish.toUpperCase() : a.mandatoryFinish[j].finishes.finish;
+					const varB = (typeof b.mandatoryFinish[j].finishes.finish === 'string') ?b.mandatoryFinish[j].finishes.finish.toUpperCase() : b.mandatoryFinish[j].finishes.finish;
+					if (a.mandatoryFinish[j].finishes.finish != b.mandatoryFinish[j].finishes.finish){
+						if (varA > varB) {
+							return ((order == 'desc') ? -1:1);
+						} else if (varA < varB) {
+							return ((order == 'desc') ? 1:-1);
 						}
 					}
 				}
+			}
+		}
         key = ['material','openedSize','ink','faces','quantityOfPages','quantityOfSheets','quantityOfVias'];
         if(a.items.length==b.items.length){
             for (var j = 0; j < a.items.length;j++){
