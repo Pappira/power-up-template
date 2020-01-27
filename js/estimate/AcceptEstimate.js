@@ -11,12 +11,12 @@ var estimate;
 t.render(function(){
 	return t.get('card', 'shared', cardInfoKey)
 	.then(function(cardInfo){
-    estimate = getEstimate(cardInfo);
-    createWorkTypeSelectPanel();
+    getEstimate(cardInfo,createWorkTypeSelectPanel);
 	});
 });
 
-var createWorkTypeSelectPanel = function(){
+var createWorkTypeSelectPanel = function(currentEstimate){
+  estimate = currentEstimate;
   var wizardForm =  document.getElementById('wizardForm');
   var wizardElement = createScreen('AcceptEstimate','Aceptar Presupuesto',estimate,nextAfterAcceptedEstimateSelect);
   if(wizardElement){
