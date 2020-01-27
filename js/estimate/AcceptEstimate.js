@@ -245,7 +245,7 @@ var createFormButton = function(step,text,next,finish){
   estimate.selectedExtraPrices = extraPrices;
   originalEstimate.selectedExtraPrices = extraPrices;
   originalEstimate.SelectedOption = estimate.SelectedOption;
-  updateCard(estimate);
+  updateCard(originalEstimate);
  }
 
  var createWizardButton = function(step,name){
