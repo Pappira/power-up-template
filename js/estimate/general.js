@@ -174,6 +174,7 @@ var updateCard = function(estimate) {
 								})
 								trelloCheckList.push(checkListToCard);
 							}
+						}).then(function(){
 							return TrelloPowerUp.Promise.all(trelloCheckList)
 							.then(function(){
 								return TrelloPowerUp.Promise.all(trelloCheckListItems)
