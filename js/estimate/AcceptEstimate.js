@@ -17,6 +17,7 @@ t.render(function(){
 
 var createWorkTypeSelectPanel = function(currentEstimate){
   estimate = JSON.parse(JSON.stringify(currentEstimate));
+  estimate.prices.sort(compareValues());
   estimate.prices.forEach(price => {
       if(price.dontShow && price.dontShow.length>0){
           price.dontShow.forEach(currentDontShow => {
@@ -50,7 +51,6 @@ var createScreen = function(type,titulo,estimate,nextFunction){
     
     var divLoader = createElement('div','','loader');
     div.appendChild(divLoader);
-    estimate.prices.sort(compareValues());
     estimate.prices.forEach(function(price){
       var text;
       var priceText = "<strong>Cantidad: </strong>" + price.quantity + '<br>';
