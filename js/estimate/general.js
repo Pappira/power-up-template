@@ -112,8 +112,28 @@ var createCheckListObject = function(name, cardId){
 
 
 var getEstimate = function(estimate, functionCallBack){
-	prices = httpGetAsync("http://localhost:8080/api2/googlesheet/estimateid/" + estimate.id,functionCallBack,estimate)
+	httpGetAsync("http://localhost:8080/api2/googlesheet/estimateid/" + estimate.id,functionCallBack,estimate);
 }
+
+var generateEstimate = function(workRequest,functionCallBack){
+	httpPostAsync("http://localhost:8080/api2/",functionCallBack,workRequest);
+}
+
+
+function httpPostAsync(theUrl, functionCallBack,workRequest)
+{
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.setRequestHeader("Content-Type", "application/json");
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && (xmlHttp.status == 200 || xmlHttp.status == 201)){
+			estimate = JSON.parse(xmlHttp.responseText);	
+			functionCallBack(estimate);
+		}
+    }
+    xmlHttp.open("POST", theUrl, true); // true for asynchronous 
+    xmlHttp.send(JSON.stringify(workRequest));
+}
+
 
 function httpGetAsync(theUrl, functionCallBack,estimate)
 {
