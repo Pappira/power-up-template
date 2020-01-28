@@ -488,9 +488,8 @@ var createMandatoryFinishText = function(currentMandatoryFinish, text, includeOp
 		}else{
 			text.push(createText('text',group,name + (includeOpcional?" (opcional)":"")));
 		}
-		return text;
 	}
-	return '';
+	return text;
 }
 
 var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOfSelectedOption){  
