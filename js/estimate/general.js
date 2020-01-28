@@ -712,8 +712,10 @@ var createCompletePriceText = function(estimate){
 					if(estimate.work.mandatoryFinishes){
 						if (estimate.work.mandatoryFinishes.length>1){
 							for (var j = 0; j < estimate.work.mandatoryFinishes.length;j++){
-								var mandatoryFinish = price.mandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.name = estimate.work.mandatoryFinishes[j].name)[0];
-								generalFinishesText += (generalFinishesText.length >0?" ":"") + mandatoryFinish.name;
+								if(estimate.work.mandatoryFinishes.showToClient){
+									var mandatoryFinish = price.mandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.name = estimate.work.mandatoryFinishes[j].name)[0];
+									generalFinishesText += (generalFinishesText.length >0?" ":"") + mandatoryFinish.name;
+								}
 							}
 						}
 					}
