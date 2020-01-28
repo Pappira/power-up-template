@@ -795,7 +795,7 @@ var createCompletePriceText = function(estimate){
 					}
 
 					//mandatoryFinishGroups inside item
-					itemsFinishesText = price.items.map(currentItem => currentItem.mandatoryFinishes?currentItem.mandatoryFinishes.map(
+					itemsFinishesText = price.items.map(currentItem => (currentItem.mandatoryFinishes && currentItem.mandatoryFinishes.showToClient)?currentItem.mandatoryFinishes.map(
 						currentMandatoryFinish => currentItem.name + " " + currentMandatoryFinish.name).filter(Boolean).join(" "):''
 					).filter(Boolean).join(' ');
 					if(itemsFinishesText && itemsFinishesText !=lastItemsFinishesText){
