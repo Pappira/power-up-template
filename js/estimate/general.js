@@ -477,17 +477,20 @@ var createOptionalFinishesText = function(estimate,dontTakeCareOfSelectedOption)
 }
 
 var createMandatoryFinishText = function(currentMandatoryFinish, text, includeOpcional){
-	var group = currentMandatoryFinish.name.split(" ")[0];
-	var name = currentMandatoryFinish.name.split(" ");
-	delete name[0];
-	name = name.filter(Boolean).join(" ");
-	var currentText = text.filter(currentText => currentText.name == group);
-	if (currentText && currentText.length>0){
-		currentText[0].value = currentText[0].value.substr(0,currentText[0].value.indexOf(" (opcional)")>0?currentText[0].value.indexOf(" (opcional)"):currentText[0].value.length) + " // " + name + (includeOpcional?" (opcional)":"");
-	}else{
-		text.push(createText('text',group,name + (includeOpcional?" (opcional)":"")));
+	if (currentMandatoryFinish.showToClient){
+		var group = currentMandatoryFinish.name.split(" ")[0];
+		var name = currentMandatoryFinish.name.split(" ");
+		delete name[0];
+		name = name.filter(Boolean).join(" ");
+		var currentText = text.filter(currentText => currentText.name == group);
+		if (currentText && currentText.length>0){
+			currentText[0].value = currentText[0].value.substr(0,currentText[0].value.indexOf(" (opcional)")>0?currentText[0].value.indexOf(" (opcional)"):currentText[0].value.length) + " // " + name + (includeOpcional?" (opcional)":"");
+		}else{
+			text.push(createText('text',group,name + (includeOpcional?" (opcional)":"")));
+		}
+		return text;
 	}
-	return text;
+	return '';
 }
 
 var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOfSelectedOption){  
