@@ -51,7 +51,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
         var itemsFinishesText  = "";
         if(originalItem.mandatoryFinishes){
           if (originalItem.mandatoryFinishes.length>1){
-            itemsFinishesText = item.mandatoryFinishes.map(mandatoryFinish => mandatoryFinish.name).join(" ");
+            itemsFinishesText = item.mandatoryFinishes.map( mandatoryFinish.showToClient?mandatoryFinish.name:null).filter(Boolean).join(" ");
           }
         }
         var currentPriceText = ((originalItem.material && originalItem.material.length>1 && item.material)?'<strong>papel: </strong>' + item.material.name + ' '  + item.material.gr + 'gr <br>':'')
@@ -104,26 +104,28 @@ var createPossibilities = function(){
   var generalFinishesToShow = [];
   var exclude = ["name", "price", "propertiesToSelectByCustomer", "showToClient", "itemOrdinal"];
   for (var i = 0; i < estimate.optionalFinishes.length;i++){
-    var possibleExtraPrice = estimate.optionalFinishes[i];
-    var isPossible = true;
-    var work = estimate.prices[estimate.SelectedOption];
-    var item = work;
-    if (possibleExtraPrice.itemOrdinal !=-1){
-      item = work.items.map(currentItem => currentItem.ordinal == possibleExtraPrice.itemOrdinal)[0];
-    }
-    for (var prop in possibleExtraPrice) {
-      if (!exclude.includes(prop)){
-        if(!JSON.stringify(item[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
-          isPossible = false;
-          break; 
+    if(estimate.optionalFinishes[i].showToClient){
+      var possibleExtraPrice = estimate.optionalFinishes[i];
+      var isPossible = true;
+      var work = estimate.prices[estimate.SelectedOption];
+      var item = work;
+      if (possibleExtraPrice.itemOrdinal !=-1){
+        item = work.items.map(currentItem => currentItem.ordinal == possibleExtraPrice.itemOrdinal)[0];
+      }
+      for (var prop in possibleExtraPrice) {
+        if (!exclude.includes(prop)){
+          if(!JSON.stringify(item[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
+            isPossible = false;
+            break; 
+          }
         }
       }
-    }
-    if (isPossible){
-      var possibility = {};
-      possibility['itemId'] = i;
-      possibility['values'] = possibleExtraPrice.name;
-      generalFinishesToShow.push(possibility);
+      if (isPossible){
+        var possibility = {};
+        possibility['itemId'] = i;
+        possibility['values'] = possibleExtraPrice.name;
+        generalFinishesToShow.push(possibility);
+      }
     }
   }
   return generalFinishesToShow;
