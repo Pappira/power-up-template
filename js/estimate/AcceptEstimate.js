@@ -42,7 +42,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
       var generalFinishesText = "";
       if(estimate.work.mandatoryFinishes){
         if (estimate.work.mandatoryFinishes.length>1){
-          generalFinishesText = price.mandatoryFinishes.map(mandatoryFinish => mandatoryFinish.name).join(" ");
+          generalFinishesText = price.mandatoryFinishes.map(mandatoryFinish => mandatoryFinish.showToClient?mandatoryFinish.name:null).filter(Boolean).join(" ");
         }
       }
       priceText += "<strong>" + generalFinishesText +"</strong>" + '<br>';
