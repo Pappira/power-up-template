@@ -186,7 +186,10 @@ var updateCard = function(estimate) {
 									for (var i = 0; i < checkLists.length;i++){
 										if(checkLists[i].name == checkList.name){
 											for (var j = 0; j < checkLists[i].checkItems.length;j++){ 
-												trelloCheckListItems.push(addCheckListItemToCheckList(t,checkLists[i].checkItems[j],checkList.id));
+											    var item = addCheckListItemToCheckList(t,checkLists[i].checkItems[j],checkList.id).then(function(){
+											    	return TrelloPowerUp.Promise.all(item);
+											    })
+												trelloCheckListItems.push();
 											}
 											break;
 										}
@@ -294,15 +297,17 @@ var createCheckListsForCard = function(estimate){
 			if(estimate.SelectedOption!=null){
 				currentMandatoryFinishGroups = estimate.prices[estimate.SelectedOption].mandatoryFinishes;
 				for (var i = 0; i < currentMandatoryFinishGroups.length;i++){
-					var item = currentMandatoryFinishGroups[i].name + (currentMandatoryFinishGroups[i].comment && currentMandatoryFinishGroups[i].comment!=""?' - ' +currentMandatoryFinishGroups[i].comment:'');
-					generalCheckList.checkItems.push(
-						{
-							checkListName: "Terminaciones Generales",
-							checked:false,
-							name:item,
-							pos:'bottom'
-						}
-					);
+					if(currentMandatoryFinishGroups[i].ordinal && currentMandatoryFinishGroups[i].ordinal>0){
+						var item = currentMandatoryFinishGroups[i].name + (currentMandatoryFinishGroups[i].comment && currentMandatoryFinishGroups[i].comment!=""?' - ' +currentMandatoryFinishGroups[i].comment:'');
+						generalCheckList.checkItems.push(
+							{
+								checkListName: "Terminaciones Generales",
+								checked:false,
+								name:item,
+								pos:currentMandatoryFinishGroups[i].ordinal
+							}
+						);
+					}
 				}
 			}
 		}
@@ -796,9 +801,9 @@ var createCompletePriceText = function(estimate){
 
 					//mandatoryFinishGroups inside item
 					itemsFinishesText = price.items.map(currentItem => 
-						(currentItem.mandatoryFinishes)?currentItem.mandatoryFinishes.map(
-							currentMandatoryFinish => (currentMandatoryFinish.showToClient?currentItem.name + " " + currentMandatoryFinish.name:null)).filter(Boolean).join(" "):''
-						).filter(Boolean).join(' ');
+					(currentItem.mandatoryFinishes)?currentItem.mandatoryFinishes.map(
+						currentMandatoryFinish => (currentMandatoryFinish.showToClient?currentItem.name + " " + currentMandatoryFinish.name:null)).filter(Boolean).join(" "):''
+					).filter(Boolean).join(' ');
 					if(itemsFinishesText && itemsFinishesText !=lastItemsFinishesText){
 						quantityOfTitles++;
 						textToAdd.push(createText('subtitle' + quantityOfTitles,itemsFinishesText, ''));  
