@@ -537,12 +537,12 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 		if(!(!selectedOption || dontTakeCareOfSelectedOption)){
 			currentOptionalFinish = estimate.selectedExtraPrices;
 		}
-		var title = true;
+		var notTitlePlaced = true;
 		for(var i = 0; i < currentOptionalFinish.length;i++){
 			if (includeOptionalFinishes){
-				if(title){
+				if(notTitlePlaced){
 					text.push(createText('subtitle2','Terminaciones',''));
-					title = false;
+					notTitlePlaced = false;
 				}
 				text.push(createText('list',currentOptionalFinish[i].name + (currentOptionalFinish[i].comment && currentOptionalFinish[i].comment!=""?" (" + currentOptionalFinish[i].comment + ")":''),''));
 			}else{
