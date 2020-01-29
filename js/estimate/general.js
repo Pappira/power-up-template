@@ -537,9 +537,13 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 		if(!(!selectedOption || dontTakeCareOfSelectedOption)){
 			currentOptionalFinish = estimate.selectedExtraPrices;
 		}
+		var title = true;
 		for(var i = 0; i < currentOptionalFinish.length;i++){
 			if (includeOptionalFinishes){
-				text.push(createText('subtitle2','Terminaciones',''));
+				if(title){
+					text.push(createText('subtitle2','Terminaciones',''));
+					title = false;
+				}
 				text.push(createText('list',currentOptionalFinish[i].name + (currentOptionalFinish[i].comment && currentOptionalFinish[i].comment!=""?" (" + currentOptionalFinish[i].comment + ")":''),''));
 			}else{
 				text = createMandatoryFinishText(currentOptionalFinish[i],text,true);
