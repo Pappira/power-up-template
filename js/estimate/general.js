@@ -140,6 +140,7 @@ function httpGetAsync(theUrl, functionCallBack,estimate)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+			estimate = deTranslateEstimate(JSON.parse(LZString.decompress(estimate)))
 			estimate.prices = JSON.parse(xmlHttp.responseText).prices;	
 			estimate = order(estimate);
 			functionCallBack(estimate);
@@ -160,6 +161,7 @@ var updateCard = function(estimate) {
 	var trelloCheckListItems = [];
 	var estimateToSave = JSON.parse(JSON.stringify(estimate));
 	delete estimateToSave.prices;
+	estimateToSave = LZString.compress(JSON.stringify(translateEstimate(estimateToSave)));
 	t.card('all')
 	.then(function(card) {
 	  t.set('card', 'shared', cardInfoKey, estimateToSave)
@@ -234,6 +236,7 @@ var createCard = function(receivedEstimate){
 	createNewTrelloCard(t, cardToSave, function(card) {
 	  setTimeout(function () {
 		delete estimate.prices;
+		estimate = LZString.compress(JSON.stringify(translateEstimate(estimate)));
 		t.set(card.id, 'shared', cardInfoKey, estimate)
 		  .then(function(){
 			t.showCard(card.id);
