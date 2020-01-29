@@ -151,7 +151,7 @@ function httpGetAsync(theUrl, functionCallBack,estimate)
 			functionCallBack(estimate);
 		}
     }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 1234
     xmlHttp.send(null);
 }
 
