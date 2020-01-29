@@ -287,7 +287,7 @@ var createCheckListsForCard = function(estimate){
 			if(finish.ordinal && finish.ordinal>0){
 				var item = finish.name + (finish.comment && finish.comment!=""?' - ' +finish.comment:'');
 				var name = finish.itemOrdinal==-1?"Terminaciones Generales":"Terminaciones de " + estimate.work.items[finish.itemOrdinal].name;
-				var checkList = checkLists.filter(currentCheckList => currentCheckList.name = name);
+				var checkList = checkLists.filter(currentCheckList => currentCheckList.name == name);
 				if(checkList && checkList.length==1){
 					checkList = checkList[0];
 				}else{
