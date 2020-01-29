@@ -183,18 +183,8 @@ var updateCard = function(estimate) {
 								var currentCheckList = createCheckListObject(checkLists[i].name, card.id);
 								var checkListToCard = addCheckListToCard(t, currentCheckList,checkLists[i].checkItems)
 								.then(function(checkList){
-									for (var i = 0; i < checkLists.length;i++){
-										if(checkLists[i].name == checkList.name){
-											for (var j = 0; j < checkLists[i].checkItems.length;j++){ 
-											    var item = addCheckListItemToCheckList(t,checkLists[i].checkItems[j],checkList.id).then(function(){
-											    	return TrelloPowerUp.Promise.all(item);
-											    })
-												trelloCheckListItems.push();
-											}
-											break;
-										}
-									}
-								})
+									checkLists.filter(currentCheckList => currentCheckList.name == checkList.name)[0].checkItems.forEach(checkItem => addCheckListItemToCheckList(t,checkItem,checkList.id));
+								});
 								trelloCheckList.push(checkListToCard);
 							}
 						}).then(function(){
