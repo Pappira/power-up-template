@@ -141,11 +141,11 @@ function httpGetAsync(theUrl, functionCallBack,estimate)
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
 			try{
-				estimate = LZString.decompress(estimate);
+				estimate = JSON.parse(LZString.decompress(estimate));
 			}catch(err){
 				console.log('estimate was not compressed'); 
 			}
-			estimate = deTranslateEstimate(JSON.parse(estimate));
+			estimate = deTranslateEstimate(estimate);
 			estimate.prices = JSON.parse(xmlHttp.responseText).prices;	
 			estimate = order(estimate);
 			functionCallBack(estimate);
