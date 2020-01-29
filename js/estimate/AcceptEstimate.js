@@ -110,7 +110,7 @@ var createPossibilities = function(){
       var work = estimate.prices[estimate.SelectedOption];
       var item = work;
       if (possibleExtraPrice.itemOrdinal !=-1){
-        item = work.items.map(currentItem => currentItem.ordinal == possibleExtraPrice.itemOrdinal)[0];
+        item = work.items.filter(currentItem => currentItem.ordinal == possibleExtraPrice.itemOrdinal)[0];
       }
       for (var prop in possibleExtraPrice) {
         if (!exclude.includes(prop)){
