@@ -102,7 +102,7 @@ var nextAfterAcceptedEstimateSelect = function(){
 
 var createPossibilities = function(){
   var generalFinishesToShow = [];
-  var exclude = ["name", "price", "propertiesToSelectByCustomer", "showToClient", "itemOrdinal"];
+  var exclude = ["name", "price", "propertiesToSelectByCustomer", "showToClient", "itemOrdinal","ordinal"];
   for (var i = 0; i < estimate.optionalFinishes.length;i++){
     if(estimate.optionalFinishes[i].showToClient){
       var possibleExtraPrice = estimate.optionalFinishes[i];
