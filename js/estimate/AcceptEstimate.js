@@ -114,9 +114,16 @@ var createPossibilities = function(){
       }
       for (var prop in possibleExtraPrice) {
         if (!exclude.includes(prop)){
-          if(!JSON.stringify(item[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
-            isPossible = false;
-            break; 
+          if(item[prop]){
+            if(!JSON.stringify(item[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
+              isPossible = false;
+              break; 
+            }
+          }else{
+            if(!JSON.stringify(work[prop]).includes(JSON.stringify(possibleExtraPrice[prop]))){
+              isPossible = false;
+              break; 
+            }
           }
         }
       }

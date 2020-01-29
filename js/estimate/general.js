@@ -362,10 +362,10 @@ var createCheckListsForCard = function(estimate){
 					for (var j = 0; j < optionalFinishesPrices.length; j++){
 						if(optionalFinishesPrices[j].itemOrdinal == estimate.work.items[i].ordinal){
 							var item = optionalFinishesPrices[j].name +  
-							(optionalFinishesPrices[j].items[i].comment && optionalFinishesPrices[j].items[i].comment!=""?' - ' + optionalFinishesPrices[j].comment:'');
+							(optionalFinishesPrices[j].comment && optionalFinishesPrices[j].comment!=""?' - ' + optionalFinishesPrices[j].comment:'');
 							currentCheckList.checkItems.push(
 								{
-									checkListName: "Terminaciones de " + estimate.items[i].name,
+									checkListName: "Terminaciones de " + estimate.work.items[i].name,
 									checked:false,
 									name:item,
 									pos:'bottom'
