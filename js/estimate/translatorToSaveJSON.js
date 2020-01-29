@@ -101,7 +101,7 @@ var translate = function(key){
         case 'propertiesToSelectByCustomer':
             return 'x';
         case 'work':
-            return '';
+            return 'y';
         default:
             return key;
     }
