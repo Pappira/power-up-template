@@ -323,7 +323,7 @@ var createCheckListsForCard = function(estimate){
 								checkListName: "Terminaciones Generales",
 								checked:false,
 								name:item,
-								pos:'bottom'
+								pos:optionalFinishesPrices[i].ordinal
 							}
 						);
 					}
@@ -350,7 +350,7 @@ var createCheckListsForCard = function(estimate){
 								checkListName: "Terminaciones de " + estimate.work.items[i].name,
 								checked:false,
 								name:item,
-								pos:'bottom'
+								pos:currentItemMandatoryFinishGroups[k].ordinal
 							}
 						);
 					}
@@ -368,7 +368,7 @@ var createCheckListsForCard = function(estimate){
 									checkListName: "Terminaciones de " + estimate.work.items[i].name,
 									checked:false,
 									name:item,
-									pos:'bottom'
+									pos:optionalFinishesPrices[j].ordinal
 								}
 							);
 							
