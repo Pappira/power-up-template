@@ -140,7 +140,12 @@ function httpGetAsync(theUrl, functionCallBack,estimate)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
-			estimate = deTranslateEstimate(JSON.parse(LZString.decompress(estimate)))
+			try{
+				estimate = LZString.decompress(estimate);
+			}catch(err){
+				Log.console('estimate was not compressed');
+			}
+			estimate = deTranslateEstimate(JSON.parse(estimate));
 			estimate.prices = JSON.parse(xmlHttp.responseText).prices;	
 			estimate = order(estimate);
 			functionCallBack(estimate);
