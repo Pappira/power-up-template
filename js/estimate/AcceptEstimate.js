@@ -51,7 +51,7 @@ var createScreen = function(type,titulo,estimate,nextFunction){
         var itemsFinishesText  = "";
         if(originalItem.mandatoryFinishes){
           if (originalItem.mandatoryFinishes.length>1){
-            itemsFinishesText = item.mandatoryFinishes.map( mandatoryFinish.showToClient?mandatoryFinish.name:null).filter(Boolean).join(" ");
+            itemsFinishesText = item.mandatoryFinishes.map(mandatoryFinish => mandatoryFinish.showToClient?mandatoryFinish.name:null).filter(Boolean).join(" ");
           }
         }
         var currentPriceText = ((originalItem.material && originalItem.material.length>1 && item.material)?'<strong>papel: </strong>' + item.material.name + ' '  + item.material.gr + 'gr <br>':'')
