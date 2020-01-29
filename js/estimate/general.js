@@ -283,7 +283,7 @@ var createCheckListsForCard = function(estimate){
 		var finishes = estimate.prices[estimate.SelectedOption].mandatoryFinishes;
 		finishes = finishes.concat(estimate.selectedExtraPrices);
 		finishes = finishes.concat(estimate.prices[estimate.SelectedOption].items.map(item => item.mandatoryFinishes).flat(1));
-		finishes.forEach(finish => {
+		finishes.filter(Boolean).forEach(finish => {
 			if(finish.ordinal && finish.ordinal>0){
 				var item = finish.name + (finish.comment && finish.comment!=""?' - ' +finish.comment:'');
 				var name = finish.itemOrdinal==-1?"Terminaciones Generales":"Terminaciones de " + estimate.work.items[finish.itemOrdinal].name;
