@@ -143,7 +143,7 @@ function httpGetAsync(theUrl, functionCallBack,estimate)
 			try{
 				estimate = LZString.decompress(estimate);
 			}catch(err){
-				Log.console('estimate was not compressed');
+				console.log('estimate was not compressed');
 			}
 			estimate = deTranslateEstimate(JSON.parse(estimate));
 			estimate.prices = JSON.parse(xmlHttp.responseText).prices;	
