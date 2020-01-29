@@ -112,6 +112,12 @@ var createCheckListObject = function(name, cardId){
 
 
 var getEstimate = function(estimate, functionCallBack){
+	try{
+		estimate = JSON.parse(LZString.decompress(estimate));
+	}catch(err){
+		console.log('estimate was not compressed'); 
+	}
+	estimate = deTranslateEstimate(estimate);
 	httpGetAsync("http://localhost:8080/api2/googlesheet/estimateid/" + estimate.id,functionCallBack,estimate);
 }
 
@@ -140,12 +146,6 @@ function httpGetAsync(theUrl, functionCallBack,estimate)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
-			try{
-				estimate = JSON.parse(LZString.decompress(estimate));
-			}catch(err){
-				console.log('estimate was not compressed'); 
-			}
-			estimate = deTranslateEstimate(estimate);
 			estimate.prices = JSON.parse(xmlHttp.responseText).prices;	
 			estimate = order(estimate);
 			functionCallBack(estimate);
