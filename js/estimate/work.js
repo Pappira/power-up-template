@@ -5,8 +5,8 @@ var works = [
     "workType":"Encuadernados",
     "image":noImage,
     "name":"Cuaderno",
-    "spreadSheetId": "1NdKz7iBnzowQdC2_fED9KX5DieGz242moRMGXZ0fZms",
-    "sheetName": "Copia de Cuadernos",
+    "spreadSheetId": "1J9ozhrfyeVinbhNq-DgauFzJxwTkODg14cVNraQ3TKc",
+    "sheetName": "Hoja 2",
     "options":
     [
       {
