@@ -14,6 +14,10 @@ var works = [
         "cell":"A3"
       },
       {
+        "name":"Tamaño",
+        "cell":"E3"
+      },
+      {
         "name":"Encuadernado",
         "values": ["Rulo","Lomo"],
         "cell": "B3",
@@ -25,6 +29,18 @@ var works = [
             "active": true
           }
         ]
+      },      
+      {
+        "name": "Armado cruzado",
+        "values": ["Si", "No"],
+        "cell": "F3",
+        "default":["No"]
+      },
+      {
+        "name": "Corto cruzado",
+        "values": ["Si", "No"],
+        "cell": "G3",
+        "default":["No"]
       },
       {
         "name": "Cierre-elastico",
