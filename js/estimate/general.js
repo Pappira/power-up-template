@@ -781,7 +781,7 @@ var createCompletePriceText = function(estimate){
 				var currentMandatoryFinishes = JSON.parse(JSON.stringify(estimate.work.mandatoryFinishes));
 				currentMandatoryFinishes = currentMandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.showToClient);
 				while (currentMandatoryFinishes.length>0){
-					var similarMandatoryFinishes = currentMandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.name.indexOf(currentMandatoryFinishes[0].name.substr(0,currentMandatoryFinishes[0].indexOf(" "))))
+					var similarMandatoryFinishes = currentMandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.name.indexOf(currentMandatoryFinishes[0].name.substr(0,currentMandatoryFinishes[0].name.indexOf(" "))))
 					if(similarMandatoryFinishes.length>1){
 						similarMandatoryFinishes.forEach(currentSimilarMandatoryFinish =>
 						{
