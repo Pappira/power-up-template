@@ -797,7 +797,7 @@ var createCompletePriceText = function(estimate){
 							quantityOfViasVariants, mandatoryFinishItemVariants];
 			variants = variants.filter(n => n!=null && n!="" && n.length>0);
 
-			var combinations = cartesian(varaints);
+			var combinations = cartesian(variants);
 			var lastTitle = [];
 			var textToAdd = [];
 			combinations.forEach(combination =>
