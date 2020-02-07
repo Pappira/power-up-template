@@ -67,28 +67,36 @@ var newAddText = function(textToAdd, doc, top){
                 var scale = writeTextNormalAndBold(12,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
-            case 'subtitle3price':
+            case 'subtitle1price':
                 top = increaseTop(top,rowSize/2,doc);
                 var scale = writeTextNormalAndBold(14,fontType,text.name, text.value, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
-            case 'subtitle4price':
+            case 'subtitle2price':
                 top = increaseTop(top,rowSize/2,doc);
                 var scale = writeTextNormalAndBold(13,fontType,text.name, text.value, top, doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
-            case 'subtitle5price':
+            case 'subtitle3price':
                 var scale = writeItalicText(12,fontType,text.name, top,doc);
                 currentIncreaseTop = rowSize*scale;
                 break;
-            case 'subtitle6price':
+            case 'subtitle4price':
                 var scale = writeTextNormalAndBold(11,fontType,text.value,text.name, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
-            case 'subtitle7price':
+            case 'subtitle5price':
                 var scale = writeUnderlinedText(10,fontType,text.name, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
+            case 'subtitle6price':
+                    var scale = writeUnderlinedText(10,fontType,text.name, top,doc);
+                    currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                    break;
+            case 'subtitle7price':
+                    var scale = writeUnderlinedText(10,fontType,text.name, top,doc);
+                    currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                    break;
             case 'list':
                 if (Array.isArray(text.value)){
                     var scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType, '    •  ' , '',text.name,top, doc);
