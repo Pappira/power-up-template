@@ -834,21 +834,6 @@ var createCompletePriceText = function(estimate){
 					}
 				})
 			});
-
-			for (var i = 0; i < estimate.prices.length;i++){
-				var price = estimate.prices[i];
-				//Si hay más de una cantidad
-				if(estimate.work.quantity.length>1){
-						//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
-						if(changeMade){
-							textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA'));  
-						}else{
-							textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.totalPrice.toLocaleString() + ' + IVA']);  
-						}
-				}else{
-					textToAdd.push(createText('text', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA'));  
-				}
-			}
 	}
 	return textToAdd;
 }
