@@ -797,7 +797,7 @@ var createCompletePriceText = function(estimate){
 							quantityOfViasVariants, mandatoryFinishItemVariants];
 			variants = variants.filter(n => n!=null && n!="" && n.length>0);
 
-			var combinations = cartesian(variants);
+			var combinations = cartesian.apply(null,variants); //este apply null se hace para separar el array, que es como cartesian necesita recibirlo
 			var lastTitle = [];
 			var textToAdd = [];
 			combinations.forEach(combination =>
