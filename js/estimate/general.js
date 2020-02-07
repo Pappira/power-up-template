@@ -726,7 +726,7 @@ var createVariant = function(currentItem, originalValue, route, relatedVariants,
 
 }
 
-var createCompletePriceText1 = function(estimate){
+var createCompletePriceText = function(estimate){
 	textToAdd = [];
 	if(estimate.prices){
 			if (estimate.prices.length>1){
@@ -974,7 +974,7 @@ var createCompletePriceText1 = function(estimate){
 }
 
 
-var createCompletePriceText = function(estimate){
+var createCompletePriceText1 = function(estimate){
 	textToAdd = [];
 	if(estimate.prices){
 			if (estimate.prices.length>1){
