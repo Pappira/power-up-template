@@ -530,7 +530,7 @@ var createGeneralText = function(estimate,includeOptionalFinishes,dontTakeCareOf
 	var selectedOption = estimate.SelectedOption!=null && !dontTakeCareOfSelectedOption;
 	text.push(createText('title',estimate.work.name,''));
 	text.push(createText('text','Cantidad',(selectedOption?estimate.prices[estimate.SelectedOption].quantity:estimate.work.quantity.join(' // '))));
-	text.push(createText('text','Tamaño cerrado',estimate.work.closedSize));
+	text.push(createText('text','Tamaño cerrado',(selectedOption?estimate.prices[estimate.SelectedOption].closedSize:estimate.work.closedSize.join(' // '))));
 	if (estimate.work.mandatoryFinishes && estimate.work.mandatoryFinishes.length >0){	
 		var currentMandatoryFinish  = estimate.work.mandatoryFinishes;
 		if(!(!selectedOption || dontTakeCareOfSelectedOption)){
@@ -741,7 +741,9 @@ var createCompletePriceText = function(estimate){
 			var lastInkText = '';
 			var lasPagesText = '';
 			var lastItemsFinishesText = '';
+			var lastClosedSizeText = '';
 			var changeMade = false;
+
 			for (var i = 0; i < estimate.prices.length;i++){
 				var quantityOfTitles = 2;
 					var price = estimate.prices[i];
@@ -766,6 +768,16 @@ var createCompletePriceText = function(estimate){
 					}
 
 					var priceText = '';
+
+					if(estimate.closedSize.length>1){
+						quantityOfTitles++;
+						var closedSizeText = 'Tamaño ' + price.closedSize;
+						if(closedSizeText && closedSizeText != lastClosedSizeText){
+							textToAdd.push(createText('subtitle' + quantityOfTitles + "price",closedSizeText, ''));  
+							changeMade = true;
+						}
+						lastClosedSizeText = closedSizeText;
+					}
 
 					if(materialChange){
 						quantityOfTitles++;
