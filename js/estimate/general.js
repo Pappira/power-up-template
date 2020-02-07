@@ -754,8 +754,9 @@ var createCompletePriceText = function(estimate){
 				}
 				if(currentItem.mandatoryFinishes && currentItem.mandatoryFinishes.length>1){
 					var currentMandatoryFinishes = JSON.parse(JSON.stringify(currentItem.mandatoryFinishes));
-					while (currentMandatoryFinishes.length>0){
-						var similarMandatoryFinishes = currentMandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.name.indexOf(currentMandatoryFinishes[0].substr(0,currentMandatoryFinishes[0].indexOf(" "))))
+					currentMandatoryFinishes = currentMandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.showToClient);
+					while (currentMandatoryFinishes.length>1){
+						var similarMandatoryFinishes = currentMandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.name.indexOf(currentMandatoryFinishes[0].name.substr(0,currentMandatoryFinishes[0].name.indexOf(" "))))
 						if(similarMandatoryFinishes.length>1){
 							similarMandatoryFinishes.forEach(currentSimilarMandatoryFinish =>
 							{
@@ -778,8 +779,9 @@ var createCompletePriceText = function(estimate){
 
 			if(estimate.work.mandatoryFinishes && estimate.work.mandatoryFinishes.length>1){
 				var currentMandatoryFinishes = JSON.parse(JSON.stringify(estimate.work.mandatoryFinishes));
+				currentMandatoryFinishes = currentMandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.showToClient);
 				while (currentMandatoryFinishes.length>0){
-					var similarMandatoryFinishes = currentMandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.name.indexOf(currentMandatoryFinishes[0].substr(0,currentMandatoryFinishes[0].indexOf(" "))))
+					var similarMandatoryFinishes = currentMandatoryFinishes.filter(currentMandatoryFinish => currentMandatoryFinish.name.indexOf(currentMandatoryFinishes[0].name.substr(0,currentMandatoryFinishes[0].indexOf(" "))))
 					if(similarMandatoryFinishes.length>1){
 						similarMandatoryFinishes.forEach(currentSimilarMandatoryFinish =>
 						{
@@ -791,7 +793,6 @@ var createCompletePriceText = function(estimate){
 					}
 				}	
 			}
-			//TODO ver el orden
 			var variants = [mandatoryFinishVariants, closedSizeVariants, sizeVariants, materialVariants, inksVariants, facesVariants, quantityOfPagesVariants, quantityOfSheetsVariants, 
 							quantityOfViasVariants, mandatoryFinishItemVariants];
 			variants = variants.filter(n => n!=null && n!="" && n.length>0);
