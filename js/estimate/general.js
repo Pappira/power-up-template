@@ -977,6 +977,13 @@ function compareValues(order='asc') {
 				}
 			}
 		}
+		if(a.closedSize && b.closedSize){
+			if (a.closedSize > b.closedSize) {
+				return ((order == 'desc') ? -1:1);
+			} else if (a.closedSize < b.closedSize) {
+				return ((order == 'desc') ? 1:-1);
+			}
+		}
         key = ['material','openedSize','ink','faces','quantityOfPages','quantityOfSheets','quantityOfVias'];
         if(a.items.length==b.items.length){
             for (var j = 0; j < a.items.length;j++){
