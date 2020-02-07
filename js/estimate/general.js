@@ -769,7 +769,7 @@ var createCompletePriceText = function(estimate){
 
 					var priceText = '';
 
-					if(estimate.closedSize.length>1){
+					if(estimate.work.closedSize.length>1){
 						quantityOfTitles++;
 						var closedSizeText = 'Tamaño ' + price.closedSize;
 						if(closedSizeText && closedSizeText != lastClosedSizeText){
