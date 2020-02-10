@@ -1,4 +1,4 @@
-var fontType = "arial";
+var fontType = "Cambria Math";
 var fontSize = 10;
 var leftMargin = 10;
 var normalBoxLength = 28;
