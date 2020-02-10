@@ -640,19 +640,19 @@ var getInsidePriceObjectByRoute = function(price,route){
 		var number;
 		var name;
 		if(currentRoute.indexOf("[")>-1){
-			number = currentRoute.match('\\[([0-9]*?)\\]');
-			name = currentRoute.match('\(.*?)\[[0-9]*?\]');
+			number = currentRoute.match('\\[([0-9]*?)\\]')[1];
+			name = currentRoute.match('\(.*?)\[[0-9]*?\]')[1];
 		}else{
 			name = currentRoute;
 		}
 		if (number !=null){
-			number = number[1];
 			currentItem = currentItem[name][number];
 		}else{
 			currentItem = currentItem[name];
 		}
 		return currentItem;
 	});
+	return currentItem;
 }
 
 var createCompletePriceText = function(estimate){
@@ -703,14 +703,14 @@ var createCompletePriceText = function(estimate){
 					var putItemName = quantityOfInksOnOriginalEstimate.filter(v => v).length>1 || quantityOfFacesOnOriginalEstimate.filter(v => v).length>1;
 					currentItem.ink.forEach(currentInk => 
 					{
-						inksVariants.push(createVariant(currentItem,currentInk,"item[" + currentItem.ordinal + "].ink",null,currentInk.inksDetails,putItemName));
+						inksVariants.push(createVariant(currentItem,currentInk,"items[" + currentItem.ordinal + "].ink",null,currentInk.inksDetails,putItemName));
 					});
 				}
 				if(new Set(currentItem.faces).size>1){
 					var putItemName = quantityOfInksOnOriginalEstimate.filter(v => v).length>1 || quantityOfFacesOnOriginalEstimate.filter(v => v).length>1;
 					currentItem.faces.forEach(currentFace =>
 					{
-						facesVariants.push(createVariant(currentItem, currentFace, "item[" + currentItem.ordinal + "].faces", inksVariants, (currentFace =='DOBLE_FAZ'?'Doble faz':'Simple faz'),putItemName));
+						facesVariants.push(createVariant(currentItem, currentFace, "items[" + currentItem.ordinal + "].faces", inksVariants, (currentFace =='DOBLE_FAZ'?'Doble faz':'Simple faz'),putItemName));
 					});
 					inksVariants = [];
 				}
@@ -718,7 +718,7 @@ var createCompletePriceText = function(estimate){
 					var putItemName = quantityOfSizesOnOriginalEstimate.filter(v => v).length>1;
 					currentItem.openedSize.forEach(currentOpenedSize =>
 					{
-						sizeVariants.push(createVariant(currentItem, currentOpenedSize, "item[" + currentItem.ordinal + "].openedSize", null, currentOpenedSize,putItemName));
+						sizeVariants.push(createVariant(currentItem, currentOpenedSize, "items[" + currentItem.ordinal + "].openedSize", null, currentOpenedSize,putItemName));
 					
 					});
 				}
@@ -726,28 +726,28 @@ var createCompletePriceText = function(estimate){
 					var putItemName = quantityOfPapersOnOriginalEstimate.filter(v => v).length>1;
 					currentItem.material.forEach(currentMaterial =>
 					{
-						materialVariants.push(createVariant(currentItem, currentMaterial, "item[" + currentItem.ordinal + "].material", null, currentMaterial.name + ' '  + currentMaterial.gr + 'gr' ,putItemName));
+						materialVariants.push(createVariant(currentItem, currentMaterial, "items[" + currentItem.ordinal + "].material", null, currentMaterial.name + ' '  + currentMaterial.gr + 'gr' ,putItemName));
 					});
 				}
 				if(new Set(currentItem.quantityOfPages).size>1){
 					var putItemName =  quantityOfPagesOnOriginalEstimate.filter(v => v).length>1 || quantityOfViasOnOriginalEstimate.filter(v => v).length>1;
 					currentItem.quantityOfPages.forEach(currentQuantityOfPages =>
 					{
-						quantityOfPagesVariants.push(createVariant(currentItem, currentQuantityOfPages, "item[" + currentItem.ordinal + "].quantityOfPages", null,  currentQuantityOfPages + ' páginas ',putItemName));
+						quantityOfPagesVariants.push(createVariant(currentItem, currentQuantityOfPages, "items[" + currentItem.ordinal + "].quantityOfPages", null,  currentQuantityOfPages + ' páginas ',putItemName));
 					});
 				}
 				if(new Set(currentItem.quantityOfSheets).size>1){
 					var putItemName =  quantityOfSheetsOnOriginalEstimate.filter(v => v).length>1 || quantityOfViasOnOriginalEstimate.filter(v => v).length>1;
 					currentItem.quantityOfSheets.forEach(currentQuantityOfSheets =>
 					{
-						quantityOfSheetsVariants.push(createVariant(currentItem, currentQuantityOfSheets, "item[" + currentItem.ordinal + "].quantityOfSheets", null, currentQuantityOfSheets + ' páginas ',putItemName));
+						quantityOfSheetsVariants.push(createVariant(currentItem, currentQuantityOfSheets, "items[" + currentItem.ordinal + "].quantityOfSheets", null, currentQuantityOfSheets + ' páginas ',putItemName));
 					});
 				}
 				if (new Set(currentItem.quantityOfVias).size>1){
 					var putItemName =  quantityOfSheetsOnOriginalEstimate.filter(v => v).length>1 || quantityOfPagesOnOriginalEstimate.filter(v => v).length>1 || quantityOfViasOnOriginalEstimate.filter(v => v).length>1;
 					currentItem.quantityOfVias.forEach(currentQuantityOfVias =>
 					{
-						quantityOfViasVariants.push(createVariant(currentItem, currentQuantityOfVias, "item[" + currentItem.ordinal + "].quantityOfVias", (quantityOfSheetsVariants.length>0?quantityOfSheetsVariants:(quantityOfSheetsVariants.length>0?quantityOfSheetsVariants:null)), currentQuantityOfVias + ' vías ',putItemName));
+						quantityOfViasVariants.push(createVariant(currentItem, currentQuantityOfVias, "items[" + currentItem.ordinal + "].quantityOfVias", (quantityOfSheetsVariants.length>0?quantityOfSheetsVariants:(quantityOfSheetsVariants.length>0?quantityOfSheetsVariants:null)), currentQuantityOfVias + ' vías ',putItemName));
 					});
 					quantityOfSheetsVariants = [];
 					quantityOfPagesVariants = [];
@@ -760,7 +760,7 @@ var createCompletePriceText = function(estimate){
 						if(similarMandatoryFinishes.length>1){
 							similarMandatoryFinishes.forEach(currentSimilarMandatoryFinish =>
 							{
-								mandatoryFinishItemVariants.push(createVariant(null, currentSimilarMandatoryFinish, "item[" + currentItem.ordinal + "]mandatoryFinishes", null, currentSimilarMandatoryFinish.name,false));
+								mandatoryFinishItemVariants.push(createVariant(null, currentSimilarMandatoryFinish, "items[" + currentItem.ordinal + "]mandatoryFinishes", null, currentSimilarMandatoryFinish.name,false));
 								currentMandatoryFinishes.splice(currentMandatoryFinishes.indexOf(currentSimilarMandatoryFinish),1); //borra el primer elemento con el que acabo de trabajar
 							});
 						}else{
@@ -808,31 +808,39 @@ var createCompletePriceText = function(estimate){
 				var firstTitleNumber = 7 - combination.length + 1;
 				combination.forEach(currentVariants =>
 				{
-					if(lastTitle[i] != currentVariants.text || titleChanged){
-						titleChanged = true;
-						lastTitle[i] = currentVariants.tex;
-						textToAdd.push(createText('subtitle' + (firstTitleNumber + i) + "price",currentVariants.text, ''));  
-						currentVariants.variant.forEach(variant =>{
-							prices = prices.filter(price => getInsidePriceObjectByRoute(price,variant.route) == variant.originalValue);
-						});
-					}
-					i++;
+					currentVariants.variant.forEach(variant =>{
+						prices = prices.filter(price => JSON.stringify(getInsidePriceObjectByRoute(price,variant.route)) == JSON.stringify(variant.originalValue));
+					});
 				});
-				var isFirst = true;
-				prices.forEach(price =>
-				{
-					if(estimate.work.quantity.length>1){
-						//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
-						if(isFirst){
-							textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA'));  
-							isFirst = false;
-						}else{
-							textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.totalPrice.toLocaleString() + ' + IVA']);  
+				if (prices.length>0){
+				    combination.forEach(currentVariants =>
+				    {
+					
+						if(lastTitle[i] != currentVariants.text || titleChanged){
+							titleChanged = true;
+							lastTitle[i] = currentVariants.text;
+							textToAdd.push(createText('subtitle' + (firstTitleNumber + i) + "price",currentVariants.text, ''));  
 						}
-					}else{
-						textToAdd.push(createText('text', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA'));  
-					}
-				})
+
+					    i++;
+					});
+				
+					var isFirst = true;
+					prices.forEach(price =>
+					{
+						if(estimate.work.quantity.length>1){
+							//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
+							if(isFirst){
+								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA'));  
+								isFirst = false;
+							}else{
+								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.totalPrice.toLocaleString() + ' + IVA']);  
+							}
+						}else{
+							textToAdd.push(createText('text', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA'));  
+						}
+					})
+				}
 			});
 	}
 	return textToAdd;
