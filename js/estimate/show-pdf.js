@@ -86,15 +86,15 @@ var newAddText = function(textToAdd, doc, top){
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle5price':
-                var scale = writeUnderlinedText(10,fontType,text.name, top,doc);
+                var scale =  writeTextNormalAndBoldWithSeparation(10, fontType, text.value , '',text.name,top, doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle6price':
-                    var scale = writeUnderlinedText(10,fontType,text.name, top,doc);
+                    var scale =  writeTextNormalAndBoldWithSeparation(10, fontType, text.value , '',text.name,top, doc);
                     currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                     break;
             case 'subtitle7price':
-                    var scale = writeUnderlinedText(10,fontType,text.name, top,doc);
+                    var scale = writeTextNormalAndBoldWithSeparation(10, fontType, text.value , '',text.name,top, doc);
                     currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                     break;
             case 'list':
