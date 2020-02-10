@@ -95,7 +95,7 @@ var newAddText = function(textToAdd, doc, top){
                     break;
             case 'subtitle7price':
                     var scale = writeTextNormalAndBoldWithSeparation(10, fontType, text.value , '',text.name,top, doc);
-                    currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                    currentIncreaseTop = rowSize*scale;
                     break;
             case 'list':
                 if (Array.isArray(text.value)){

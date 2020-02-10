@@ -799,7 +799,6 @@ var createCompletePriceText = function(estimate){
 
 			var combinations = cartesian.apply(null,variants); //este apply null se hace para separar el array, que es como cartesian necesita recibirlo
 			var lastTitle = [];
-			var textToAdd = [];
 			combinations.forEach(combination =>
 			{
 				var i = 0;
@@ -835,7 +834,6 @@ var createCompletePriceText = function(estimate){
 					var isFirst = true;
 					prices.forEach(price =>
 					{
-						if(estimate.work.quantity.length>1){
 							//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
 							if(isFirst){
 								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA'));  
@@ -843,9 +841,6 @@ var createCompletePriceText = function(estimate){
 							}else{
 								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.totalPrice.toLocaleString() + ' + IVA']);  
 							}
-						}else{
-							textToAdd.push(createText('text', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA'));  
-						}
 					})
 				}
 			});
