@@ -812,18 +812,23 @@ var createCompletePriceText = function(estimate){
 						prices = prices.filter(price => JSON.stringify(getInsidePriceObjectByRoute(price,variant.route)) == JSON.stringify(variant.originalValue));
 					});
 				});
+				var extraForPrice = '';
 				if (prices.length>0){
 				    combination.forEach(currentVariants =>
 				    {
 					
 						if(lastTitle[i] != currentVariants.text || titleChanged){
-							var arrow = '';
-							if(i==combination.length-2){
-								arrow = '» ';
+							if(prices.length==1 && i == combination.length-1){
+								extraForPrice = currentVariants.text;
+							}else{
+								var arrow = '';
+								if(i==combination.length-2){
+									arrow = '» ';
+								}
+								textToAdd.push(createText('subtitle' + (firstTitleNumber + i) + "price", currentVariants.text, "   ".repeat(i) + arrow));  
+								titleChanged = true;
+								lastTitle[i] = currentVariants.text;
 							}
-							textToAdd.push(createText('subtitle' + (firstTitleNumber + i) + "price", currentVariants.text, "   ".repeat(i) + arrow));  
-							titleChanged = true;
-							lastTitle[i] = currentVariants.text;
 						}
 					    i++;
 					});
@@ -833,10 +838,10 @@ var createCompletePriceText = function(estimate){
 					{
 							//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
 							if(isFirst){
-								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA',"   ".repeat(combination.length+1)));  
+								textToAdd.push(createText('list', 'Sub-Total '+(extraForPrice.length==0?'(' + price.quantity + ' unidades)':extraForPrice), '$ ' + price.totalPrice.toLocaleString() + ' + IVA',"   ".repeat(combination.length+1-(extraForPrice.length==0?0:1))));  
 								isFirst = false;
 							}else{
-								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.totalPrice.toLocaleString() + ' + IVA',"   ".repeat(combination.length+1)]);  
+								textToAdd[textToAdd.length-1].value.push(['Sub-Total '+(extraForPrice.length==0?'(' + price.quantity + ' unidades)':extraForPrice),'$ ' + price.totalPrice.toLocaleString() + ' + IVA',"   ".repeat(combination.length+1-(extraForPrice.length==0?0:1))]);  
 							}
 					})
 				}

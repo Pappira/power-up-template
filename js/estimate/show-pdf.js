@@ -94,7 +94,7 @@ var newAddText = function(textToAdd, doc, top){
                     currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                     break;
             case 'subtitle7price':
-                    var scale = writeItalicText(10, fontType, '',text.value + text.name, top, doc);
+                    var scale = writeItalicText(10, fontType ,text.value + text.name, top, doc);
                     currentIncreaseTop = rowSize*scale;
                     break;
             case 'list':
