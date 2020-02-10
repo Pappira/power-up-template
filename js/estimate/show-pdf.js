@@ -86,35 +86,35 @@ var newAddText = function(textToAdd, doc, top){
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle5price':
-                var scale =  writeUnderlinedTextWithSeparation(10, fontType, text.value , '',text.name,top, doc);
-                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
+                    var scale =  writeTextNormalAndBold(10, fontType, '',text.value + text.name,top, doc);
+                    currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle6price':
-                    var scale =  writeTextNormalAndBoldWithSeparation(10, fontType, text.value , '',text.name,top, doc);
+                    var scale =  writeTextNormalAndBold(10, fontType, '',text.value + text.name,top, doc);
                     currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                     break;
             case 'subtitle7price':
-                    var scale = writeTextNormalAndBoldWithSeparation(10, fontType, text.value , '',text.name,top, doc);
+                    var scale = writeItalicText(10, fontType, '',text.value + text.name, top, doc);
                     currentIncreaseTop = rowSize*scale;
                     break;
             case 'list':
                 if (Array.isArray(text.value)){
-                    var scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType, '    •  ' , '',text.name,top, doc);
+                    var scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType, (text.separation?text.separation:'    ') + '•  ' , '',text.name,top, doc);
                     currentIncreaseTop = rowSize*scale;
                     for (var j = 0; j < text.value.length;j++){
                         if(Array.isArray(text.value[j])){
-                            scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'        »  ', text.value[j][0] + ':',text.value[j][1],top + currentIncreaseTop, doc);
+                            scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType, (text.separation?text.separation:'        ') + ' »  ', text.value[j][0] + ':',text.value[j][1],top + currentIncreaseTop, doc);
                             currentIncreaseTop += rowSize*scale;
                         }else{
-                            scale = writeTextNormalWithSeparation(fontSize, fontType,'        »  ', text.value[j],top + currentIncreaseTop, doc);
+                            scale = writeTextNormalWithSeparation(fontSize, fontType,(text.separation?text.separation:'        ') + '»  ', text.value[j],top + currentIncreaseTop, doc);
                             currentIncreaseTop += rowSize*scale;
                         }
                     }
                 }else if (text.value && text.value.length>0){
-                    var scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,'    •  ', text.name +  ":", text.value, top, doc);
+                    var scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType,(text.separation?text.separation:'    ')+'•  ', text.name +  ":", text.value, top, doc);
                     currentIncreaseTop = rowSize*scale;
                 }else{
-                    var scale = writeTextNormalWithSeparation(fontSize, fontType, '    •  ' , text.name,top, doc);
+                    var scale = writeTextNormalWithSeparation(fontSize, fontType, (text.separation?text.separation:'    ')+'•  ' , text.name,top, doc);
                     currentIncreaseTop = rowSize*scale;
                 }
                 break;
@@ -391,8 +391,6 @@ var writeItalicText = function(fontSize, fontType, text, top, doc){
     doc.setFontSize(fontSize);
     doc.setFontType("italic");
     var scale = writeText(doc,text,top);
-    //var currentTextWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'italic'}) * (fontSize / doc.internal.scaleFactor);
-    //doc.line(leftMargin,top+1,leftMargin+currentTextWidth,top+1);
     doc.setFontSize(fontSize);
     doc.setFontType("Normal");
     return scale;
