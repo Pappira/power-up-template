@@ -270,6 +270,7 @@ var generateEstimatePDF = function(receivedEstimate){
     estimate = removeDontUse(JSON.parse(JSON.stringify(receivedEstimate)));
     var doc = new jsPDF();
     var top = marginTop;
+    doc.addFont(fontType);
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
 
