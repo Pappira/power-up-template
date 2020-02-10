@@ -1,4 +1,4 @@
-var fontType = "Cambria Math";
+var fontType = "arial";
 var fontSize = 10;
 var leftMargin = 10;
 var normalBoxLength = 28;
@@ -79,14 +79,14 @@ var newAddText = function(textToAdd, doc, top){
                 break;
             case 'subtitle3price':
                 var scale = writeItalicText(12,fontType,text.name, top,doc);
-                currentIncreaseTop = rowSize*scale;
+                currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle4price':
                 var scale = writeTextNormalAndBold(11,fontType,text.value,text.name, top,doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle5price':
-                var scale =  writeTextNormalAndBoldWithSeparation(10, fontType, text.value , '',text.name,top, doc);
+                var scale =  writeUnderlinedTextWithSeparation(10, fontType, text.value , '',text.name,top, doc);
                 currentIncreaseTop = rowSize*mediumSpaceFactor*scale;
                 break;
             case 'subtitle6price':
@@ -270,7 +270,6 @@ var generateEstimatePDF = function(receivedEstimate){
     estimate = removeDontUse(JSON.parse(JSON.stringify(receivedEstimate)));
     var doc = new jsPDF();
     var top = marginTop;
-    doc.addFont(fontType);
     doc.setFont(fontType);
     doc.setFontSize(fontSize);
 
@@ -352,6 +351,16 @@ var writeTextNormalWithSeparation = function(fontSize, fontType, textSeparator, 
     doc.setFontSize(fontSize);
     writeText(doc,textSeparator,top);
     var currentTextWidth = doc.getStringUnitWidth(textSeparator, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
+    return writeText(doc,text,top, currentTextWidth);
+}
+
+var writeUnderlinedTextWithSeparation = function(fontSize, fontType, textSeparator, text, top, doc){
+    doc.setFont(fontType);
+    doc.setFontSize(fontSize);
+    writeText(doc,textSeparator,top);
+    var textSeparationWidth = doc.getStringUnitWidth(textSeparator, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
+    var textWidth = doc.getStringUnitWidth(text, {fontName: fontType, fontStyle:'Normal'}) * fontSize / doc.internal.scaleFactor;
+    doc.line(leftMargin + textSeparationWidth,top+1,leftMargin+textSeparationWidth+textWidth,top+1);
     return writeText(doc,text,top, currentTextWidth);
 }
 

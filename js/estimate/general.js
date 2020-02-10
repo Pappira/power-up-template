@@ -817,12 +817,11 @@ var createCompletePriceText = function(estimate){
 					
 						if(lastTitle[i] != currentVariants.text || titleChanged){
 							var arrow = '';
-							if (i>0){
-								if(titleChanged){
-									arrow = String.fromCharCode("8618");
-								}else{
-									arrow = '↳';
-								}
+							if (i==combination.length-1){
+									arrow = String.fromCharCode("→ ");
+							}
+							if(i==combination.length-2){
+								arrow = '» ';
 							}
 							textToAdd.push(createText('subtitle' + (firstTitleNumber + i) + "price", currentVariants.text, "  ".repeat(i) + arrow));  
 							titleChanged = true;
