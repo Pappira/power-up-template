@@ -378,7 +378,7 @@ var createText = function(type,name,value,separation){
 	return {
 		type: type,
 		name: name?name+'':name,
-		value: (!value || Array.isArray(value))?value:value+''.originalValue,
+		value: (!value || Array.isArray(value))?value:value+'',
 		separation: separation
 	};
 }
@@ -821,7 +821,7 @@ var createCompletePriceText = function(estimate){
 							if(i==combination.length-2){
 								arrow = '» ';
 							}
-							textToAdd.push(createText('subtitle' + (firstTitleNumber + i) + "price", currentVariants.text, "  ".repeat(i) + arrow));  
+							textToAdd.push(createText('subtitle' + (firstTitleNumber + i) + "price", currentVariants.text, "   ".repeat(i) + arrow));  
 							titleChanged = true;
 							lastTitle[i] = currentVariants.text;
 						}
@@ -833,10 +833,10 @@ var createCompletePriceText = function(estimate){
 					{
 							//Si estoy agregando una variante nueva (que no solo cambia en la cantidad)
 							if(isFirst){
-								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA',"  ".repeat(combination.length+1)));  
+								textToAdd.push(createText('list', 'Sub-Total (' + price.quantity + ' unidades)', '$ ' + price.totalPrice.toLocaleString() + ' + IVA',"   ".repeat(combination.length+1)));  
 								isFirst = false;
 							}else{
-								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.totalPrice.toLocaleString() + ' + IVA',"  ".repeat(combination.length+1)]);  
+								textToAdd[textToAdd.length-1].value.push(['Sub-Total (' + price.quantity + ' unidades)','$ ' + price.totalPrice.toLocaleString() + ' + IVA',"   ".repeat(combination.length+1)]);  
 							}
 					})
 				}

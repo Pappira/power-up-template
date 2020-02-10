@@ -103,11 +103,11 @@ var newAddText = function(textToAdd, doc, top){
                     currentIncreaseTop = rowSize*scale;
                     for (var j = 0; j < text.value.length;j++){
                         if(Array.isArray(text.value[j])){
-                            scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType, (text.separation?text.separation:'        ') + ' »  ', text.value[j][0] + ':',text.value[j][1],top + currentIncreaseTop, doc);
-                            currentIncreaseTop += rowSize*scale;
+                            scale = writeTextNormalAndBoldWithSeparation(fontSize, fontType, (text.separation?text.separation:'        ') + '»  ', text.value[j][0] + ':',text.value[j][1],top + currentIncreaseTop, doc);
+                            currentIncreaseTop += rowSize*scale*(j==text.value.length-1?mediumSpaceFactor:1);
                         }else{
                             scale = writeTextNormalWithSeparation(fontSize, fontType,(text.separation?text.separation:'        ') + '»  ', text.value[j],top + currentIncreaseTop, doc);
-                            currentIncreaseTop += rowSize*scale;
+                            currentIncreaseTop += rowSize*scale*(j==text.value.length-1?mediumSpaceFactor:1);
                         }
                     }
                 }else if (text.value && text.value.length>0){
